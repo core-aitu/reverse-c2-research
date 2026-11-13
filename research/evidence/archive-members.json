@@ -1,0 +1,463 @@
+[
+  {
+    "id": "ART-f7fa92f07a8835f50f3e",
+    "path": "dependencies/pwsh-benign-templates/31AEA25A02EE0AED018DF7C76AB9AEAA3B460BF863D8B5571E04BE76868BC1A3",
+    "members": [
+      {
+        "name": "commands.ps1",
+        "size": 584,
+        "sha256": "031c18585a11971976733f533b89540bf150d4d89f0830748f634dac009611f6"
+      },
+      {
+        "name": "Notes-UsingTagsInPester.ps1",
+        "size": 685,
+        "sha256": "2c71afbae057ae00f3e77d1299fdf6f31e1f466b5a6e1bac34ad4c7fdc8a384d"
+      },
+      {
+        "name": "UsingTagsInPester.tests.ps1",
+        "size": 784,
+        "sha256": "17df58dce7073d3c1703903011a9579bb1d6651bfdd2ccd98769495d6c9f5252"
+      }
+    ]
+  },
+  {
+    "id": "ART-bbba6757b9159a1a27b5",
+    "path": "dependencies/pwsh-benign-templates/99CEE112D153000B9F8CCE03B38F823B25FBC6A480E23A8319B71299C999B9A9",
+    "members": [
+      {
+        "name": "DelegateCreateUsers.ps1",
+        "size": 212,
+        "sha256": "2f162e469a641dfd1ba7980543e0c99f32125c7a8cb8e768d10d29448ad86e6a"
+      },
+      {
+        "name": "Prepare.ps1",
+        "size": 446,
+        "sha256": "811e413efc3cf4c33dd5922a5e43f1f6c24e4a5c88c4ed94cc1b3c6875df26c7"
+      }
+    ]
+  },
+  {
+    "id": "ART-ad1ebdc73ff27043f99d",
+    "path": "dependencies/pwsh-benign-templates/DF957F642595BF71EE6F368D277D1E735B24776834ADFF2FA0702B5C3B5FA1BC",
+    "members": [
+      {
+        "name": "INBoAqaUQT2W7ptRm1ud_demo-1-main.tf",
+        "size": 410,
+        "sha256": "40e34ab47b64fe16a3558ebb6a35ab4b13acd08d18d1743b48a400cc1f9a9731"
+      },
+      {
+        "name": "LGslO7P6QVa2vCdmnBwP_sub.ps1",
+        "size": 89,
+        "sha256": "560f26e90f7bd86ac07c8fe448ae55497d28c8271ceb85b5fe505073c343a05e"
+      },
+      {
+        "name": "hwI3sweORRf67sWI6YMQ_demo-2-main.tf",
+        "size": 136,
+        "sha256": "95194f430d78123f21126b4198b480f63568ef4ee31cf2debdb6e28a8c7ca023"
+      },
+      {
+        "name": "ihIJ1OFROScpm21HZJtQ_var_values.tfvars",
+        "size": 87,
+        "sha256": "125f52663f329aaaffe870c8ab0b066b5f38d5f1a0e1b00f936e3a6f1bb034e2"
+      },
+      {
+        "name": "gqDW2szETU2YXLGDsBuI_variables.tf",
+        "size": 555,
+        "sha256": "c89d7411af9cbe014ef8d984e2decc2ca94c7d50ecaf94df41dbdc26f7670b21"
+      }
+    ]
+  },
+  {
+    "id": "ART-a0c97fed51bb35391561",
+    "path": "dependencies/specter-ppt-template.pptm",
+    "members": [
+      {
+        "name": "[Content_Types].xml",
+        "size": 3201,
+        "sha256": "f4327689792cf60baf8b559d969426df9ddfad24c5eb6642d6139b52939e72e5"
+      },
+      {
+        "name": "_rels/.rels",
+        "size": 738,
+        "sha256": "de11af9d3b354316b50c10ceff7203f24686fe9cbd4202a5e4655398a4c5004f"
+      },
+      {
+        "name": "ppt/presentation.xml",
+        "size": 3212,
+        "sha256": "cf59bb648bc9ebbec7ad62c6e53683b8db2090efe62a245b89068b93f498c937"
+      },
+      {
+        "name": "ppt/slides/slide1.xml",
+        "size": 757,
+        "sha256": "747930a23ac7667dd04d04dc3ba2e088b095c88b22ad7e6fb4b95162e0237d6b"
+      },
+      {
+        "name": "ppt/_rels/presentation.xml.rels",
+        "size": 1098,
+        "sha256": "9b824bd20962aceb9c10767f6298212bc0689d7f366e6c136fd29a59158add61"
+      },
+      {
+        "name": "ppt/slides/_rels/slide1.xml.rels",
+        "size": 311,
+        "sha256": "7292c00299a5db5eae73709bfa416a25777759adec25c72d50b0e3d5d40ec91a"
+      },
+      {
+        "name": "ppt/slideMasters/slideMaster1.xml",
+        "size": 13873,
+        "sha256": "2c2d79cc1e8430ffc9e8d14a98175e97f07d622a41dc9deabab80bf10d7e6b3e"
+      },
+      {
+        "name": "ppt/slideLayouts/slideLayout1.xml",
+        "size": 4676,
+        "sha256": "a07edda59bc1070535cb1bab0dec94cb7668bc88dd419ab06a5ed5ea5bfb8110"
+      },
+      {
+        "name": "ppt/slideLayouts/slideLayout2.xml",
+        "size": 3919,
+        "sha256": "1193f4c78e6ddc165b85e5019317a3e2f6c851eaa0541fa2cef7bc5ca494ec9c"
+      },
+      {
+        "name": "ppt/slideLayouts/slideLayout3.xml",
+        "size": 5440,
+        "sha256": "d12ddb8b0e1901777ea27e0e8c0f3ef467e74593f61aeb0f71b19dd1a3f95afe"
+      },
+      {
+        "name": "ppt/slideLayouts/slideLayout4.xml",
+        "size": 4973,
+        "sha256": "af6a00926b2a1a341489d699b0481cb10c6c1079045cf1e3ec70eeb0cf8dd192"
+      },
+      {
+        "name": "ppt/slideLayouts/slideLayout5.xml",
+        "size": 7935,
+        "sha256": "20d9085f8836533a116d198a435c0f55721f4dc4bf29f29db7c8c3ed60affbf5"
+      },
+      {
+        "name": "ppt/slideLayouts/slideLayout6.xml",
+        "size": 3062,
+        "sha256": "142b4333678418909a794b90e89f95e9a79a607c69a19828977fef1f234d8ebc"
+      },
+      {
+        "name": "ppt/slideLayouts/slideLayout7.xml",
+        "size": 2548,
+        "sha256": "50b35fde2df150777ba973360d94162a26e6e9b5177dc057770440d8ec67e9f3"
+      },
+      {
+        "name": "ppt/slideLayouts/slideLayout8.xml",
+        "size": 5950,
+        "sha256": "fbae4d5b504728ea04a1fab0f281550648551c13a67fb623e4be0d1851a10e7f"
+      },
+      {
+        "name": "ppt/slideLayouts/slideLayout9.xml",
+        "size": 5897,
+        "sha256": "6718ac46cb47ebcf50feac1d89f6be0836311217313aa498e9d5cb69405d293a"
+      },
+      {
+        "name": "ppt/slideLayouts/slideLayout10.xml",
+        "size": 3974,
+        "sha256": "62f7dd4ccd8898adbb578fb11f44b51c30df487da065dad41ce9f33a6409e681"
+      },
+      {
+        "name": "ppt/slideLayouts/slideLayout11.xml",
+        "size": 4198,
+        "sha256": "d8ea43101a3c861d330c877e33e2762e7ac8b23c4781ee594949f5437d2d4b94"
+      },
+      {
+        "name": "ppt/slideMasters/_rels/slideMaster1.xml.rels",
+        "size": 1991,
+        "sha256": "e9e503158ddaff4d9afa825a3d1048ffa1c1275291d9ab818812ff8e061ea8fd"
+      },
+      {
+        "name": "ppt/slideLayouts/_rels/slideLayout1.xml.rels",
+        "size": 311,
+        "sha256": "8246d333bf3764cd35563e3df1828c26bbc28890815a2987caf3e592791ba60d"
+      },
+      {
+        "name": "ppt/slideLayouts/_rels/slideLayout2.xml.rels",
+        "size": 311,
+        "sha256": "8246d333bf3764cd35563e3df1828c26bbc28890815a2987caf3e592791ba60d"
+      },
+      {
+        "name": "ppt/slideLayouts/_rels/slideLayout3.xml.rels",
+        "size": 311,
+        "sha256": "8246d333bf3764cd35563e3df1828c26bbc28890815a2987caf3e592791ba60d"
+      },
+      {
+        "name": "ppt/slideLayouts/_rels/slideLayout4.xml.rels",
+        "size": 311,
+        "sha256": "8246d333bf3764cd35563e3df1828c26bbc28890815a2987caf3e592791ba60d"
+      },
+      {
+        "name": "ppt/slideLayouts/_rels/slideLayout5.xml.rels",
+        "size": 311,
+        "sha256": "8246d333bf3764cd35563e3df1828c26bbc28890815a2987caf3e592791ba60d"
+      },
+      {
+        "name": "ppt/slideLayouts/_rels/slideLayout6.xml.rels",
+        "size": 311,
+        "sha256": "8246d333bf3764cd35563e3df1828c26bbc28890815a2987caf3e592791ba60d"
+      },
+      {
+        "name": "ppt/slideLayouts/_rels/slideLayout7.xml.rels",
+        "size": 311,
+        "sha256": "8246d333bf3764cd35563e3df1828c26bbc28890815a2987caf3e592791ba60d"
+      },
+      {
+        "name": "ppt/slideLayouts/_rels/slideLayout8.xml.rels",
+        "size": 311,
+        "sha256": "8246d333bf3764cd35563e3df1828c26bbc28890815a2987caf3e592791ba60d"
+      },
+      {
+        "name": "ppt/slideLayouts/_rels/slideLayout9.xml.rels",
+        "size": 311,
+        "sha256": "8246d333bf3764cd35563e3df1828c26bbc28890815a2987caf3e592791ba60d"
+      },
+      {
+        "name": "ppt/slideLayouts/_rels/slideLayout10.xml.rels",
+        "size": 311,
+        "sha256": "8246d333bf3764cd35563e3df1828c26bbc28890815a2987caf3e592791ba60d"
+      },
+      {
+        "name": "ppt/slideLayouts/_rels/slideLayout11.xml.rels",
+        "size": 311,
+        "sha256": "8246d333bf3764cd35563e3df1828c26bbc28890815a2987caf3e592791ba60d"
+      },
+      {
+        "name": "ppt/theme/theme1.xml",
+        "size": 8723,
+        "sha256": "b3d77e0bc8b68d1b8aa69c2f44fc1708555190efc68544ab94834647ab4ca584"
+      },
+      {
+        "name": "docProps/thumbnail.jpeg",
+        "size": 1203,
+        "sha256": "cf79992f4b3fea92f7d0937e4dbb0e83d877665f99990ca69bb8cb0e01306859"
+      },
+      {
+        "name": "ppt/vbaProject.bin",
+        "size": 7168,
+        "sha256": "d543dba7f119a35b231706b302dd1aa83d263b264c26a4c1ed94292821774560"
+      },
+      {
+        "name": "ppt/presProps.xml",
+        "size": 818,
+        "sha256": "cd12d22ac9a3825ff6772a707cd1e67f9ce26eb2aaf316023469a16b02852f85"
+      },
+      {
+        "name": "ppt/viewProps.xml",
+        "size": 770,
+        "sha256": "017a290c7cfe28a9f1d53f9ff272ef477f79e7394ea7bba03d49d855f9a5c35f"
+      },
+      {
+        "name": "ppt/tableStyles.xml",
+        "size": 182,
+        "sha256": "0e7ac03251337ecbaf6c8ca13619db1caeda5c90c4e3210d45d6c3f5df4de103"
+      },
+      {
+        "name": "docProps/app.xml",
+        "size": 1297,
+        "sha256": "deceba16638cd453b54438fbf751cb8c56fb9ac609c7f93f9dfea9f36d80c72b"
+      },
+      {
+        "name": "docProps/core.xml",
+        "size": 670,
+        "sha256": "e7366c3882f7857fe0c70a5a7eb9bd21125e2eca6beef7033fac03146fe8417f"
+      }
+    ]
+  },
+  {
+    "id": "ART-5266d2426bb16d73e914",
+    "path": "notebooks/3f8a9c2e-7d4b-4f1a-b6e8-5c0d9a2e3f7b/files/National_Security_Commission_Meeting_Agenda_2025.zip",
+    "members": [
+      {
+        "name": "National_Security_Commission_Meeting_Agenda_2025.xlsm",
+        "size": 7496,
+        "status": "encrypted",
+        "sha256": null
+      }
+    ]
+  },
+  {
+    "id": "ART-e702782e3c6918452020",
+    "path": "notebooks/d4f2a8c6-3b7e-4d9a-b1c5-8e6f0a2d4c7b/files/Court_Summons_Notice_UA_2026.zip",
+    "members": [
+      {
+        "name": "Court_Summons_Notice_UA_2026.xlsm",
+        "size": 6795,
+        "status": "encrypted",
+        "sha256": null
+      }
+    ]
+  },
+  {
+    "id": "ART-5d02a445f1cc1da6dbc0",
+    "path": "notebooks/f4e3d2c1-b0a9-4837-a6b5-c4d3e2f1a0b9/files/Joint_NATO_Training_Program_2026_Invitation.zip",
+    "members": [
+      {
+        "name": "Joint_NATO_Training_Program_2026_Invitation.docm",
+        "size": 21893,
+        "status": "encrypted",
+        "sha256": null
+      }
+    ]
+  },
+  {
+    "id": "ART-f04e890cf80e7d432094",
+    "path": "server/runtimes/android/native/onnxruntime.aar",
+    "members": [
+      {
+        "name": "META-INF/",
+        "size": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "META-INF/com/",
+        "size": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "META-INF/com/android/",
+        "size": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "META-INF/com/android/build/",
+        "size": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "META-INF/com/android/build/gradle/",
+        "size": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "headers/",
+        "size": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "jni/",
+        "size": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "jni/arm64-v8a/",
+        "size": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "jni/armeabi-v7a/",
+        "size": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "jni/x86/",
+        "size": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "jni/x86_64/",
+        "size": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "AndroidManifest.xml",
+        "size": 196,
+        "sha256": "678aff589fe9dca653428aef86596a4e3806e67e9f4c4f43c64e54e241605fdc"
+      },
+      {
+        "name": "META-INF/com/android/build/gradle/aar-metadata.properties",
+        "size": 121,
+        "sha256": "1a8a8d22989d9e2cc01fc939068f7f96dad91b3d2630715d070cefc57be53809"
+      },
+      {
+        "name": "R.txt",
+        "size": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "classes.jar",
+        "size": 102562,
+        "sha256": "2cdf4a2884360520cc241ccff9343721b3d275685bf754d46acdbf4994f99204"
+      },
+      {
+        "name": "headers/cpu_provider_factory.h",
+        "size": 397,
+        "sha256": "0de52d129c718c07ee71a16b4953d8d483df019746a11caad77a0650a2f4ed47"
+      },
+      {
+        "name": "headers/nnapi_provider_factory.h",
+        "size": 2646,
+        "sha256": "49f7e0952e57b7e2942f69d8df61a9d99836f05b49a89700e1f5a16278c945e2"
+      },
+      {
+        "name": "headers/onnxruntime_c_api.h",
+        "size": 206358,
+        "sha256": "7e47eb78563da119f740dc0ddfda96800e779e0bcbd169a9a49e9c10746c4cd5"
+      },
+      {
+        "name": "headers/onnxruntime_cxx_api.h",
+        "size": 107925,
+        "sha256": "5cfb60c7222086b89724d3168267ab25af9951e15864bf54a8fdf7429b771021"
+      },
+      {
+        "name": "headers/onnxruntime_cxx_inline.h",
+        "size": 76150,
+        "sha256": "d8b059c29ef378eee31c0b4d54347489a0e3abe1a4135c7a19c49b32661bfbc3"
+      },
+      {
+        "name": "headers/onnxruntime_float16.h",
+        "size": 18154,
+        "sha256": "ecdcb4a53176c8b3bbcf674788fcf5ec923fb2b5c762c3f6cfb56fdb6c259aa1"
+      },
+      {
+        "name": "headers/onnxruntime_run_options_config_keys.h",
+        "size": 1622,
+        "sha256": "25b0d8e767fc72d560532541537ac07d404a8bf94dffaf78f3069fc20240b76e"
+      },
+      {
+        "name": "headers/onnxruntime_session_options_config_keys.h",
+        "size": 16702,
+        "sha256": "dacc5b8a417f9fe9dc9452255dabad408772e94d6d981d5fc463f90cf52f0438"
+      },
+      {
+        "name": "jni/arm64-v8a/libonnxruntime.so",
+        "size": 16033728,
+        "sha256": "5bc468a1e22151153a2f27e9898216492c4e8847bf54117055f46c5830912f3a"
+      },
+      {
+        "name": "jni/arm64-v8a/libonnxruntime4j_jni.so",
+        "size": 760104,
+        "sha256": "358b868371f26e50b25998c4c63164a54fcf78b5d350d25e07004fa9b5527a7e"
+      },
+      {
+        "name": "jni/armeabi-v7a/libonnxruntime.so",
+        "size": 10736812,
+        "sha256": "f1c90589da777a0fe757341f050c6ab457555be75fb4c3ce9f0f8e96acf0683d"
+      },
+      {
+        "name": "jni/armeabi-v7a/libonnxruntime4j_jni.so",
+        "size": 620088,
+        "sha256": "41af30caa324e78ab1f15c2c02afc85120388b85b171c134dd2e70fc21dc3a40"
+      },
+      {
+        "name": "jni/x86/libonnxruntime.so",
+        "size": 18007944,
+        "sha256": "cd0b253957ffeec04d2634b124fb15503a4f2957b8e06d189a0915a32bc642a8"
+      },
+      {
+        "name": "jni/x86/libonnxruntime4j_jni.so",
+        "size": 604204,
+        "sha256": "68ea52eee8d910bc428e6dba894ee52aa08c3a3adc61a080c58555a887dbe9b5"
+      },
+      {
+        "name": "jni/x86_64/libonnxruntime.so",
+        "size": 17798640,
+        "sha256": "f82cbe1f762e33b6dbb3c423f42832558ca9c341b372fe222d3a61806f0e1e9b"
+      },
+      {
+        "name": "jni/x86_64/libonnxruntime4j_jni.so",
+        "size": 744104,
+        "sha256": "833e3cb19ab4cbb0774bd25fb760f6885afdf79c51a121e370efa824fce3c0d4"
+      }
+    ]
+  }
+]

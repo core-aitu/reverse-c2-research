@@ -1,0 +1,265 @@
+{
+  "dependencies": [
+    {
+      "manifest": "client/SpecterInsight.UI.deps.json",
+      "targets": [
+        {
+          "target": ".NETCoreApp,Version=v10.0",
+          "packages": 156,
+          "edges": {
+            "exact": 281
+          },
+          "assets": {
+            "runtime": {
+              "package-relative": 4,
+              "top-level-basename": 125
+            },
+            "runtimeTargets": {
+              "package-relative": 141
+            },
+            "resources": {
+              "locale-and-basename": 92
+            }
+          },
+          "exceptions": []
+        }
+      ]
+    },
+    {
+      "manifest": "server/SpecterInsight.Server.Host.deps.json",
+      "targets": [
+        {
+          "target": ".NETCoreApp,Version=v10.0",
+          "packages": 163,
+          "edges": {
+            "exact": 284
+          },
+          "assets": {
+            "runtime": {
+              "package-relative": 7,
+              "top-level-basename": 126
+            },
+            "resources": {
+              "locale-and-basename": 91
+            },
+            "runtimeTargets": {
+              "package-relative": 136
+            }
+          },
+          "exceptions": []
+        }
+      ]
+    },
+    {
+      "manifest": "server/SpecterInsight.Server.deps.json",
+      "targets": [
+        {
+          "target": ".NETCoreApp,Version=v8.0",
+          "packages": 155,
+          "edges": {
+            "exact": 265
+          },
+          "assets": {
+            "runtime": {
+              "package-relative": 5,
+              "top-level-basename": 86,
+              "no-filename-match": 8,
+              "unique-nested-basename": 1
+            },
+            "resources": {
+              "locale-and-basename": 52
+            },
+            "runtimeTargets": {
+              "ambiguous-basename": 19,
+              "package-relative": 39,
+              "top-level-basename": 26
+            }
+          },
+          "exceptions": [
+            {
+              "package": "AutoMapper/12.0.1",
+              "group": "runtime",
+              "name": "AutoMapper.dll",
+              "classification": "no-filename-match"
+            },
+            {
+              "package": "AutoMapper.Extensions.Microsoft.DependencyInjection/12.0.1",
+              "group": "runtime",
+              "name": "AutoMapper.Extensions.Microsoft.DependencyInjection.dll",
+              "classification": "no-filename-match"
+            },
+            {
+              "package": "Microsoft.AspNetCore.Connections.Abstractions/8.0.6",
+              "group": "runtime",
+              "name": "Microsoft.AspNetCore.Connections.Abstractions.dll",
+              "classification": "no-filename-match"
+            },
+            {
+              "package": "Microsoft.AspNetCore.SignalR.Common/8.0.6",
+              "group": "runtime",
+              "name": "Microsoft.AspNetCore.SignalR.Common.dll",
+              "classification": "no-filename-match"
+            },
+            {
+              "package": "Microsoft.Extensions.Features/8.0.6",
+              "group": "runtime",
+              "name": "Microsoft.Extensions.Features.dll",
+              "classification": "no-filename-match"
+            },
+            {
+              "package": "Microsoft.Extensions.ObjectPool/8.0.6",
+              "group": "runtime",
+              "name": "Microsoft.Extensions.ObjectPool.dll",
+              "classification": "no-filename-match"
+            },
+            {
+              "package": "Microsoft.Extensions.Options/8.0.2",
+              "group": "runtime",
+              "name": "Microsoft.Extensions.Options.dll",
+              "classification": "no-filename-match"
+            },
+            {
+              "package": "Microsoft.Management.Infrastructure.CimCmdlets/7.4.3",
+              "group": "runtimeTargets",
+              "name": "Microsoft.Management.Infrastructure.CimCmdlets.dll",
+              "classification": "ambiguous-basename"
+            },
+            {
+              "package": "Microsoft.PowerShell.Commands.Diagnostics/7.4.3",
+              "group": "runtimeTargets",
+              "name": "Microsoft.PowerShell.Commands.Diagnostics.dll",
+              "classification": "ambiguous-basename"
+            },
+            {
+              "package": "Microsoft.PowerShell.Commands.Management/7.4.3",
+              "group": "runtimeTargets",
+              "name": "Microsoft.PowerShell.Commands.Management.dll",
+              "classification": "ambiguous-basename"
+            },
+            {
+              "package": "Microsoft.PowerShell.Commands.Management/7.4.3",
+              "group": "runtimeTargets",
+              "name": "Microsoft.PowerShell.Commands.Management.dll",
+              "classification": "ambiguous-basename"
+            },
+            {
+              "package": "Microsoft.PowerShell.Commands.Utility/7.4.3",
+              "group": "runtimeTargets",
+              "name": "Microsoft.PowerShell.Commands.Utility.dll",
+              "classification": "ambiguous-basename"
+            },
+            {
+              "package": "Microsoft.PowerShell.Commands.Utility/7.4.3",
+              "group": "runtimeTargets",
+              "name": "Microsoft.PowerShell.Commands.Utility.dll",
+              "classification": "ambiguous-basename"
+            },
+            {
+              "package": "Microsoft.PowerShell.ConsoleHost/7.4.3",
+              "group": "runtimeTargets",
+              "name": "Microsoft.PowerShell.ConsoleHost.dll",
+              "classification": "ambiguous-basename"
+            },
+            {
+              "package": "Microsoft.PowerShell.ConsoleHost/7.4.3",
+              "group": "runtimeTargets",
+              "name": "Microsoft.PowerShell.ConsoleHost.dll",
+              "classification": "ambiguous-basename"
+            },
+            {
+              "package": "Microsoft.PowerShell.CoreCLR.Eventing/7.4.3",
+              "group": "runtimeTargets",
+              "name": "Microsoft.PowerShell.CoreCLR.Eventing.dll",
+              "classification": "ambiguous-basename"
+            },
+            {
+              "package": "Microsoft.PowerShell.SDK/7.4.3",
+              "group": "runtimeTargets",
+              "name": "Microsoft.PowerShell.SDK.dll",
+              "classification": "ambiguous-basename"
+            },
+            {
+              "package": "Microsoft.PowerShell.SDK/7.4.3",
+              "group": "runtimeTargets",
+              "name": "Microsoft.PowerShell.SDK.dll",
+              "classification": "ambiguous-basename"
+            },
+            {
+              "package": "Microsoft.PowerShell.Security/7.4.3",
+              "group": "runtimeTargets",
+              "name": "Microsoft.PowerShell.Security.dll",
+              "classification": "ambiguous-basename"
+            },
+            {
+              "package": "Microsoft.PowerShell.Security/7.4.3",
+              "group": "runtimeTargets",
+              "name": "Microsoft.PowerShell.Security.dll",
+              "classification": "ambiguous-basename"
+            },
+            {
+              "package": "Microsoft.Security.Extensions/1.2.0",
+              "group": "runtimeTargets",
+              "name": "getfilesiginforedistwrapper.dll",
+              "classification": "ambiguous-basename"
+            },
+            {
+              "package": "Microsoft.Security.Extensions/1.2.0",
+              "group": "runtimeTargets",
+              "name": "getfilesiginforedist.dll",
+              "classification": "ambiguous-basename"
+            },
+            {
+              "package": "Microsoft.WSMan.Management/7.4.3",
+              "group": "runtimeTargets",
+              "name": "Microsoft.WSMan.Management.dll",
+              "classification": "ambiguous-basename"
+            },
+            {
+              "package": "Microsoft.WSMan.Runtime/7.4.3",
+              "group": "runtimeTargets",
+              "name": "Microsoft.WSMan.Runtime.dll",
+              "classification": "ambiguous-basename"
+            },
+            {
+              "package": "System.Management.Automation/7.4.3",
+              "group": "runtimeTargets",
+              "name": "System.Management.Automation.dll",
+              "classification": "ambiguous-basename"
+            },
+            {
+              "package": "System.Management.Automation/7.4.3",
+              "group": "runtimeTargets",
+              "name": "System.Management.Automation.dll",
+              "classification": "ambiguous-basename"
+            },
+            {
+              "package": "System.Security.Cryptography.Xml/8.0.1",
+              "group": "runtime",
+              "name": "System.Security.Cryptography.Xml.dll",
+              "classification": "no-filename-match"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "elastic": {
+    "path": "elastic/elastic/dashboards.ndjson",
+    "objects": 43,
+    "unique": 43,
+    "references": {
+      "resolved": 101
+    },
+    "panels": {
+      "resolved": 35
+    },
+    "types": {
+      "index-pattern": 2,
+      "visualization": 28,
+      "search": 5,
+      "dashboard": 6,
+      "map": 2
+    },
+    "metadata_records": 1
+  }
+}

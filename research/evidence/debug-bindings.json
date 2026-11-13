@@ -1,0 +1,554 @@
+{
+  "pdb_files": 378,
+  "portable_files": 362,
+  "bindings": [
+    {
+      "hash": "5c658f03289e5804a692ee66ca7beff3883631f4a3d81b301bdade0e7fa45422",
+      "paths": [
+        "client/SpecterInsight.ApiClient.dll"
+      ],
+      "guid": "be6b642c-72a5-4a03-9b2b-09a32d0734f5",
+      "stamp": 4255860002,
+      "Age": 1,
+      "portable": true,
+      "matches": [
+        {
+          "Path": "client/SpecterInsight.ApiClient.pdb",
+          "fileHash": "aefbfe13f5e45cca347635ee3bf5c826954b808b3bc4ee52d331c28e14b76305",
+          "Documents": 9,
+          "MethodRows": 2465,
+          "checks": [
+            {
+              "algorithm": "SHA256",
+              "matches": true
+            }
+          ],
+          "source_leaf_matches": 0,
+          "source_content_matches": 0
+        }
+      ]
+    },
+    {
+      "hash": "7c48d7c851c4ef4c531d616699366e307b155099a84f31bb8b9e8596db57fb4b",
+      "paths": [
+        "client/SpecterInsight.Obfuscation.dll",
+        "server/SpecterInsight.Obfuscation.dll"
+      ],
+      "guid": "8bb5b916-8f83-4fbb-bc73-4a834a8d8785",
+      "stamp": 2494009768,
+      "Age": 1,
+      "portable": true,
+      "matches": [
+        {
+          "Path": "client/SpecterInsight.Obfuscation.pdb",
+          "fileHash": "61e6bc4f8086b4f93386be5bf47327692efa8228a31b46c391201739b847aa8d",
+          "Documents": 278,
+          "MethodRows": 7673,
+          "checks": [
+            {
+              "algorithm": "SHA256",
+              "matches": true
+            }
+          ],
+          "source_leaf_matches": 1,
+          "source_content_matches": 0
+        },
+        {
+          "Path": "server/SpecterInsight.Obfuscation.pdb",
+          "fileHash": "61e6bc4f8086b4f93386be5bf47327692efa8228a31b46c391201739b847aa8d",
+          "Documents": 278,
+          "MethodRows": 7673,
+          "checks": [
+            {
+              "algorithm": "SHA256",
+              "matches": true
+            }
+          ],
+          "source_leaf_matches": 1,
+          "source_content_matches": 0
+        }
+      ]
+    },
+    {
+      "hash": "b26312d15a0a8d2743ef50069874567ef768d64e1eed0a9e82a410976fbe10d6",
+      "paths": [
+        "client/SpecterInsight.UI.dll"
+      ],
+      "guid": "b9a2e734-0790-ace2-6a2a-218c72ad713f",
+      "stamp": 3483125434,
+      "Age": 1,
+      "portable": true,
+      "matches": [
+        {
+          "Path": "client/SpecterInsight.UI.pdb",
+          "fileHash": "3ea1d171d36245f4c8a55d5eb876ac29a315a171452647e0f7354d7b1404f9c2",
+          "Documents": 418,
+          "MethodRows": 6642,
+          "checks": [
+            {
+              "algorithm": "SHA256",
+              "matches": true
+            }
+          ],
+          "source_leaf_matches": 2,
+          "source_content_matches": 0
+        }
+      ]
+    },
+    {
+      "hash": "012b5fa1889c2099338f7799739898bac2ab10306fcd68eda7ab3060c8140bb2",
+      "paths": [
+        "modules/AD.dll"
+      ],
+      "guid": "af7106d1-ce53-4c38-8ad0-99ab7ea5dbf1",
+      "stamp": 3059167764,
+      "Age": 1,
+      "portable": false,
+      "matches": []
+    },
+    {
+      "hash": "694a871f5a3bdf1151cfadc965394e8f30fc1fe6fc96361062df20b4e7f022d1",
+      "paths": [
+        "modules/CredentialManager.dll"
+      ],
+      "guid": "28ba03b4-3f4d-485a-9213-ef33e120ced5",
+      "stamp": 1465568075,
+      "Age": 1,
+      "portable": false,
+      "matches": []
+    },
+    {
+      "hash": "c30f24cfceac505e226a671138a9d75610b03d161ee323b21020307c2db1fbfa",
+      "paths": [
+        "modules/Direct.dll"
+      ],
+      "guid": "8ef525d3-8e88-4d40-95dd-36c9eb4c8f6e",
+      "stamp": 3785212170,
+      "Age": 1,
+      "portable": false,
+      "matches": []
+    },
+    {
+      "hash": "a9e0fc749eda0ed29e6074926cb2ef07d6864ebe1367d8a66cd0ef6a66e344a0",
+      "paths": [
+        "modules/Dumper.dll"
+      ],
+      "guid": "e7ed2885-6d62-40f7-9b73-df2ac4a75c46",
+      "stamp": 2279686956,
+      "Age": 1,
+      "portable": false,
+      "matches": []
+    },
+    {
+      "hash": "094531ab90bf68cd100d50f95340d24b7aeccc604df76cfff1109b180a08a823",
+      "paths": [
+        "modules/EventLog.dll"
+      ],
+      "guid": "905cf0ce-c41c-4acb-98c8-3fc60beaac14",
+      "stamp": 2908644906,
+      "Age": 1,
+      "portable": false,
+      "matches": []
+    },
+    {
+      "hash": "2de374ab0116ae1a8f32c274dcbd876acf0ab4ed47bb5e03e4a61d63b026f9ba",
+      "paths": [
+        "modules/Firewall.dll"
+      ],
+      "guid": "939a7a6e-4c2e-4929-a287-0ee5220e484d",
+      "stamp": 2362583294,
+      "Age": 1,
+      "portable": false,
+      "matches": []
+    },
+    {
+      "hash": "bb600a86192f23cba4f3e91b2658454c652f4979e224dd41a85b9ab685c0886a",
+      "paths": [
+        "modules/GPO.dll"
+      ],
+      "guid": "1b4b10dc-268e-4947-ba90-cc5c4264b225",
+      "stamp": 3161391293,
+      "Age": 1,
+      "portable": false,
+      "matches": []
+    },
+    {
+      "hash": "9fd9e20b06253d040d6e2ae3afe930a013fc4199fc844d6543a54c1c49c60331",
+      "paths": [
+        "modules/Microsoft.GroupPolicy.Management.dll"
+      ],
+      "guid": "869bec58-177c-4a87-b5ab-5aa1a88fa2e4",
+      "stamp": 1702957271,
+      "Age": 1,
+      "portable": false,
+      "matches": []
+    },
+    {
+      "hash": "43ca6c1c63cf8177b67b526f39352ed9c2c56fadbe6a227de0fc27df0c36e4c9",
+      "paths": [
+        "modules/PSCredentialManager.Api.dll"
+      ],
+      "guid": "d0285703-93e1-4a18-82eb-1099c2ea11e6",
+      "stamp": 1465568075,
+      "Age": 1,
+      "portable": false,
+      "matches": []
+    },
+    {
+      "hash": "ade4d3af0d0437eb9f00b1c594c8dc1a528a0dd41fc1c1f19034181455bd44fc",
+      "paths": [
+        "modules/PSCredentialManager.Common.dll"
+      ],
+      "guid": "ed1f1527-e1b6-4adb-ada5-41a28c1847de",
+      "stamp": 1465568075,
+      "Age": 1,
+      "portable": false,
+      "matches": []
+    },
+    {
+      "hash": "9a3f0b7727247962c18981e2924f59ff6b01ff6a6ddf2fd74d3129f5b098bb26",
+      "paths": [
+        "modules/common.dll",
+        "server/common.dll"
+      ],
+      "guid": "f7b12d1e-0ebd-4b21-a067-4d7c03d71c68",
+      "stamp": 2366089686,
+      "Age": 1,
+      "portable": false,
+      "matches": []
+    },
+    {
+      "hash": "7582cabd4291d45dfafdf1125fe79d4dab07e3076994d7505aa167c60da0cec6",
+      "paths": [
+        "modules/credentials.dll"
+      ],
+      "guid": "2039f3f8-01d2-4d73-b14c-6b8821bc3ad6",
+      "stamp": 3661908280,
+      "Age": 1,
+      "portable": false,
+      "matches": []
+    },
+    {
+      "hash": "f119919c3c5979a205ee4569580976e9fac37a9922eb31e349f2500acdafbcdf",
+      "paths": [
+        "modules/inveigh.dll"
+      ],
+      "guid": "123dde70-05d4-48f5-9572-0877e52c43cb",
+      "stamp": 2212618227,
+      "Age": 1,
+      "portable": true,
+      "matches": []
+    },
+    {
+      "hash": "f877efafec959d731f88057dd06b981ee9482985ec21d72e7eb52cab8c67e76c",
+      "paths": [
+        "modules/lateral.dll"
+      ],
+      "guid": "eafa81dc-f2f7-4a15-9be9-4994ef4d2158",
+      "stamp": 3260548388,
+      "Age": 1,
+      "portable": false,
+      "matches": []
+    },
+    {
+      "hash": "9f75f8de371d26e5143dc254109a80434072bb1811a34e305e793d6c930754b9",
+      "paths": [
+        "modules/levelup.dll"
+      ],
+      "guid": "39297d5b-c522-4a46-908c-687e3c79ed6e",
+      "stamp": 3148061588,
+      "Age": 1,
+      "portable": false,
+      "matches": []
+    },
+    {
+      "hash": "230ae977abba3f0d1188ed79405cd33771e6eba2acacabcf56c200dfd59c2b9c",
+      "paths": [
+        "modules/persistence.dll"
+      ],
+      "guid": "c6e9f920-b937-4ed7-a761-54928879ad02",
+      "stamp": 3338412946,
+      "Age": 1,
+      "portable": false,
+      "matches": []
+    },
+    {
+      "hash": "5e481dc2ebc2a6476e0f778f86f44943075a3920c157c0f0728332f8c4df45d1",
+      "paths": [
+        "modules/reach.dll"
+      ],
+      "guid": "9694fc95-6dcd-4d48-9657-52f066a70d3e",
+      "stamp": 3082590410,
+      "Age": 1,
+      "portable": false,
+      "matches": []
+    },
+    {
+      "hash": "c1079fd338765e3842a5f95b9fc66406d2eb7fc4126b4ab8e8d8920f010f67d9",
+      "paths": [
+        "modules/recon.dll"
+      ],
+      "guid": "9b51732c-c4a8-40a0-80b7-3180aeb39a9b",
+      "stamp": 3690585389,
+      "Age": 1,
+      "portable": false,
+      "matches": []
+    },
+    {
+      "hash": "b73c2d2a1912f4bad56055bae21f1ba95a51a96363ac86c38eadd6caece7e9d1",
+      "paths": [
+        "modules/smb.dll"
+      ],
+      "guid": "09aecd1a-e575-4057-bc9b-c5ddbfaa7656",
+      "stamp": 2880806717,
+      "Age": 1,
+      "portable": false,
+      "matches": []
+    },
+    {
+      "hash": "5a04275085e3fc64197f8dbb55b96a89736445fc490a674675959163ba5a58a0",
+      "paths": [
+        "server/SpecterInsight.Server.Host.dll"
+      ],
+      "guid": "aee5fc62-90e7-4046-a8dd-80859e41fb2c",
+      "stamp": 3967924179,
+      "Age": 1,
+      "portable": true,
+      "matches": [
+        {
+          "Path": "server/SpecterInsight.Server.Host.pdb",
+          "fileHash": "3b27393b99556cd1dd1d43c794113f1cbdf0957bebd1889ff972abf650f7242b",
+          "Documents": 4,
+          "MethodRows": 5,
+          "checks": [
+            {
+              "algorithm": "SHA256",
+              "matches": true
+            }
+          ],
+          "source_leaf_matches": 1,
+          "source_content_matches": 0
+        }
+      ]
+    },
+    {
+      "hash": "a6c454cdfc80e5d9bd3906747d30edbe4fcf69ab2e3c2b52b301b6f4b60e46a5",
+      "paths": [
+        "server/SpecterInsight.Server.dll"
+      ],
+      "guid": "021364eb-c43f-48af-a5bc-4dfd5058a992",
+      "stamp": 4031689958,
+      "Age": 1,
+      "portable": true,
+      "matches": [
+        {
+          "Path": "server/SpecterInsight.Server.pdb",
+          "fileHash": "633bbcda31b8c0972dc3b35519def5b949db7ae4d3a9f63ec2e2e415da6be431",
+          "Documents": 687,
+          "MethodRows": 10567,
+          "checks": [
+            {
+              "algorithm": "SHA256",
+              "matches": true
+            }
+          ],
+          "source_leaf_matches": 1,
+          "source_content_matches": 0
+        }
+      ]
+    },
+    {
+      "hash": "d5e7e80c6e67939caa244f9f1b8736cafb4d1e5e906ee2668c34387c8067569d",
+      "paths": [
+        "server/SpecterInsight.exe",
+        "templates/any/specter-dotnet-exe.exe"
+      ],
+      "guid": "02f203d1-8a24-4d3d-826b-d3cbacbc2996",
+      "stamp": 2629479585,
+      "Age": 1,
+      "portable": true,
+      "matches": [
+        {
+          "Path": "server/SpecterInsight.pdb",
+          "fileHash": "3fc9e470652342d34a5a0f5cc4c75d25703e91d2d65e58ffdc9e2a7c4451b174",
+          "Documents": 65,
+          "MethodRows": 710,
+          "checks": [
+            {
+              "algorithm": "SHA256",
+              "matches": true
+            }
+          ],
+          "source_leaf_matches": 65,
+          "source_content_matches": 65
+        }
+      ]
+    },
+    {
+      "hash": "44b88633520b501f999290c462581a5e35ee3eadf507c00caf9f828778701595",
+      "paths": [
+        "templates/any/SpecterInsight.exe"
+      ],
+      "guid": "3386373a-cf8e-4fe8-895b-328e4a2530ed",
+      "stamp": 3788972177,
+      "Age": 1,
+      "portable": true,
+      "matches": []
+    },
+    {
+      "hash": "85fb4c9ac4ee295efbb907d37d5a066726bda8c35a8ddd67890325680d540f95",
+      "paths": [
+        "templates/any/specter-dotnet-exe.exe.bak"
+      ],
+      "guid": "e5d0c809-883c-478b-8ed0-a2866eb9aee1",
+      "stamp": 2170107207,
+      "Age": 1,
+      "portable": true,
+      "matches": []
+    },
+    {
+      "hash": "3fff31bed46cb2957c89b1cd662735877c0b173ada977b101c88939020a833f6",
+      "paths": [
+        "templates/any/specter-dotnet-exe.exe.bak2"
+      ],
+      "guid": "e3113cb4-a0a3-4f13-bc35-60d968a744c2",
+      "stamp": 4002587931,
+      "Age": 1,
+      "portable": true,
+      "matches": []
+    },
+    {
+      "hash": "0c8aaa733148ecffe88457b24b4e474113a9e2eba06a4c1e30c5ab7ba920a9d4",
+      "paths": [
+        "templates/any/specter-dotnet-exe.exe.bak3"
+      ],
+      "guid": "84d315a9-d3f2-4f36-b7b6-5bd6870053c1",
+      "stamp": 3445325096,
+      "Age": 1,
+      "portable": true,
+      "matches": []
+    }
+  ],
+  "native_templates": [
+    {
+      "path": "templates/x64/specter-win-x64-dll.dll",
+      "sha": "776f63b2ca58b7647b100bf5818c32e3d0fd46c35b004e7f4e678a177a576837",
+      "machine": "Amd64",
+      "magic": "PE32Plus",
+      "sections": 7,
+      "subsystem": "WindowsGui",
+      "is_dll": true,
+      "clr_header": false
+    },
+    {
+      "path": "templates/x64/specter-win-x64-dll.dll.bak",
+      "sha": "7c2dc2ca5680fa4fa85bab343593c45ce1030bdd0a22f8c54076a02a7e2cdbf6",
+      "machine": "Amd64",
+      "magic": "PE32Plus",
+      "sections": 7,
+      "subsystem": "WindowsGui",
+      "is_dll": true,
+      "clr_header": false
+    },
+    {
+      "path": "templates/x64/specter-win-x64-dll.dll.new_bak",
+      "sha": "7c2dc2ca5680fa4fa85bab343593c45ce1030bdd0a22f8c54076a02a7e2cdbf6",
+      "machine": "Amd64",
+      "magic": "PE32Plus",
+      "sections": 7,
+      "subsystem": "WindowsGui",
+      "is_dll": true,
+      "clr_header": false
+    },
+    {
+      "path": "templates/x64/specter-win-x64-exe.exe",
+      "sha": "09f401e0b3ee33eaa2da8e5660d99294b41506ee1b2f22758f4c257a5828f498",
+      "machine": "Amd64",
+      "magic": "PE32Plus",
+      "sections": 7,
+      "subsystem": "WindowsGui",
+      "is_dll": false,
+      "clr_header": false
+    },
+    {
+      "path": "templates/x64/specter-win-x64-exe.exe.bak",
+      "sha": "9423f68bd2b594347f3b8368496add0a343f8569385d56af65618c921cd1895a",
+      "machine": "Amd64",
+      "magic": "PE32Plus",
+      "sections": 7,
+      "subsystem": "WindowsGui",
+      "is_dll": false,
+      "clr_header": false
+    },
+    {
+      "path": "templates/x64/specter-win-x64-exe.exe.new_bak",
+      "sha": "9423f68bd2b594347f3b8368496add0a343f8569385d56af65618c921cd1895a",
+      "machine": "Amd64",
+      "magic": "PE32Plus",
+      "sections": 7,
+      "subsystem": "WindowsGui",
+      "is_dll": false,
+      "clr_header": false
+    },
+    {
+      "path": "templates/x86/specter-win-x86-dll.dll",
+      "sha": "1720f539a01cda00ca0cdc66035c2fb2cb45e2d986f6c2416651ce1386bf507b",
+      "machine": "I386",
+      "magic": "PE32",
+      "sections": 6,
+      "subsystem": "WindowsGui",
+      "is_dll": true,
+      "clr_header": false
+    },
+    {
+      "path": "templates/x86/specter-win-x86-dll.dll.bak",
+      "sha": "3980257c4c9344b98b4c9f00e6a9282e79c7f9e31f9a577e95492a834c612976",
+      "machine": "I386",
+      "magic": "PE32",
+      "sections": 6,
+      "subsystem": "WindowsGui",
+      "is_dll": true,
+      "clr_header": false
+    },
+    {
+      "path": "templates/x86/specter-win-x86-dll.dll.new_bak",
+      "sha": "3980257c4c9344b98b4c9f00e6a9282e79c7f9e31f9a577e95492a834c612976",
+      "machine": "I386",
+      "magic": "PE32",
+      "sections": 6,
+      "subsystem": "WindowsGui",
+      "is_dll": true,
+      "clr_header": false
+    },
+    {
+      "path": "templates/x86/specter-win-x86-exe.exe",
+      "sha": "a9ae90d261bae95932b8617f2334047ebfbb968f1791a24ce8008c14e98f4675",
+      "machine": "I386",
+      "magic": "PE32",
+      "sections": 6,
+      "subsystem": "WindowsGui",
+      "is_dll": false,
+      "clr_header": false
+    },
+    {
+      "path": "templates/x86/specter-win-x86-exe.exe.bak",
+      "sha": "ae889f0085a0f141b961f7059bc1034e4135364f66f069659f1b96dfe741d8fe",
+      "machine": "I386",
+      "magic": "PE32",
+      "sections": 6,
+      "subsystem": "WindowsGui",
+      "is_dll": false,
+      "clr_header": false
+    },
+    {
+      "path": "templates/x86/specter-win-x86-exe.exe.new_bak",
+      "sha": "ae889f0085a0f141b961f7059bc1034e4135364f66f069659f1b96dfe741d8fe",
+      "machine": "I386",
+      "magic": "PE32",
+      "sections": 6,
+      "subsystem": "WindowsGui",
+      "is_dll": false,
+      "clr_header": false
+    }
+  ]
+}

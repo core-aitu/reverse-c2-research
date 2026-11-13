@@ -1,0 +1,5364 @@
+[
+  {
+    "id": "ART-2b1454cf99d7226ab10c",
+    "path": "client/SpecterInsight.ApiClient.dll",
+    "sha256": "5c658f03289e5804a692ee66ca7beff3883631f4a3d81b301bdade0e7fa45422",
+    "mvid": "25208fa6-b62b-46bd-b864-eea28025b41e",
+    "methods": [
+      {
+        "declaring_type": "SpecterInsight.ApiClient.SpecterInsightClientGenerated+<DocumentationAsync>d__107",
+        "name": "MoveNext",
+        "token": "0x06000860",
+        "signature_ecma335": "200001",
+        "parameters": [],
+        "rva": 110028,
+        "body_size": 1368,
+        "il_code_size": 1205,
+        "il_sha256": "c0f5e2bce86a09c3c91f0503095b0467b95661f5a2b81b198cbb3c91e6a1eb8c",
+        "exception_regions": 6,
+        "calls": [
+          {
+            "il": 54,
+            "op": "call",
+            "token": "0x6000041",
+            "callee": "SpecterInsight.ApiClient.SpecterInsightClientBase::CreateHttpRequestMessageAsync"
+          },
+          {
+            "il": 60,
+            "op": "callvirt",
+            "token": "0xa00019b",
+            "callee": "<TypeSpec/other>::ConfigureAwait"
+          },
+          {
+            "il": 69,
+            "op": "call",
+            "token": "0xa00019c",
+            "callee": "<TypeSpec/other>::GetAwaiter"
+          },
+          {
+            "il": 78,
+            "op": "call",
+            "token": "0xa00019d",
+            "callee": "<TypeSpec/other>::get_IsCompleted"
+          },
+          {
+            "il": 111,
+            "op": "call",
+            "token": "0x2b0001b5",
+            "callee": "<TypeSpec/other>::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 152,
+            "op": "call",
+            "token": "0xa00019f",
+            "callee": "<TypeSpec/other>::GetResult"
+          },
+          {
+            "il": 193,
+            "op": "newobj",
+            "token": "0xa0001fd",
+            "callee": "System.Net.Http.HttpMethod::.ctor"
+          },
+          {
+            "il": 198,
+            "op": "callvirt",
+            "token": "0xa0001a1",
+            "callee": "System.Net.Http.HttpRequestMessage::set_Method"
+          },
+          {
+            "il": 209,
+            "op": "callvirt",
+            "token": "0xa000056",
+            "callee": "System.Net.Http.HttpRequestMessage::get_Headers"
+          },
+          {
+            "il": 214,
+            "op": "callvirt",
+            "token": "0xa0001cb",
+            "callee": "System.Net.Http.Headers.HttpRequestHeaders::get_Accept"
+          },
+          {
+            "il": 224,
+            "op": "call",
+            "token": "0xa0001fe",
+            "callee": "System.Net.Http.Headers.MediaTypeWithQualityHeaderValue::Parse"
+          },
+          {
+            "il": 229,
+            "op": "callvirt",
+            "token": "0xa0001cd",
+            "callee": "<TypeSpec/other>::Add"
+          },
+          {
+            "il": 234,
+            "op": "newobj",
+            "token": "0xa0001ff",
+            "callee": "System.Text.StringBuilder::.ctor"
+          },
+          {
+            "il": 247,
+            "op": "call",
+            "token": "0xa00005b",
+            "callee": "System.String::IsNullOrEmpty"
+          },
+          {
+            "il": 262,
+            "op": "callvirt",
+            "token": "0xa000200",
+            "callee": "System.Text.StringBuilder::Append"
+          },
+          {
+            "il": 275,
+            "op": "callvirt",
+            "token": "0xa000200",
+            "callee": "System.Text.StringBuilder::Append"
+          },
+          {
+            "il": 283,
+            "op": "callvirt",
+            "token": "0xa000028",
+            "callee": "System.Object::ToString"
+          },
+          {
+            "il": 299,
+            "op": "newobj",
+            "token": "0xa0001a2",
+            "callee": "System.Uri::.ctor"
+          },
+          {
+            "il": 304,
+            "op": "callvirt",
+            "token": "0xa0001a3",
+            "callee": "System.Net.Http.HttpRequestMessage::set_RequestUri"
+          },
+          {
+            "il": 328,
+            "op": "callvirt",
+            "token": "0xa0001ac",
+            "callee": "System.Net.Http.HttpClient::SendAsync"
+          },
+          {
+            "il": 334,
+            "op": "callvirt",
+            "token": "0xa0001a5",
+            "callee": "<TypeSpec/other>::ConfigureAwait"
+          },
+          {
+            "il": 343,
+            "op": "call",
+            "token": "0xa0001a6",
+            "callee": "<TypeSpec/other>::GetAwaiter"
+          },
+          {
+            "il": 352,
+            "op": "call",
+            "token": "0xa0001a7",
+            "callee": "<TypeSpec/other>::get_IsCompleted"
+          },
+          {
+            "il": 385,
+            "op": "call",
+            "token": "0x2b0001b6",
+            "callee": "<TypeSpec/other>::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 426,
+            "op": "call",
+            "token": "0xa0001a8",
+            "callee": "<TypeSpec/other>::GetResult"
+          },
+          {
+            "il": 464,
+            "op": "newobj",
+            "token": "0xa0001d3",
+            "callee": "<TypeSpec/other>::.ctor"
+          },
+          {
+            "il": 480,
+            "op": "callvirt",
+            "token": "0xa000201",
+            "callee": "System.Net.Http.HttpResponseMessage::get_Headers"
+          },
+          {
+            "il": 485,
+            "op": "callvirt",
+            "token": "0xa000202",
+            "callee": "System.Net.Http.Headers.HttpHeaders::GetEnumerator"
+          },
+          {
+            "il": 496,
+            "op": "callvirt",
+            "token": "0xa000203",
+            "callee": "<TypeSpec/other>::get_Current"
+          },
+          {
+            "il": 511,
+            "op": "call",
+            "token": "0xa000204",
+            "callee": "<TypeSpec/other>::get_Key"
+          },
+          {
+            "il": 518,
+            "op": "call",
+            "token": "0xa000205",
+            "callee": "<TypeSpec/other>::get_Value"
+          },
+          {
+            "il": 523,
+            "op": "callvirt",
+            "token": "0xa000206",
+            "callee": "<TypeSpec/other>::set_Item"
+          },
+          {
+            "il": 530,
+            "op": "callvirt",
+            "token": "0xa000207",
+            "callee": "System.Collections.IEnumerator::MoveNext"
+          },
+          {
+            "il": 549,
+            "op": "callvirt",
+            "token": "0xa000171",
+            "callee": "System.IDisposable::Dispose"
+          },
+          {
+            "il": 561,
+            "op": "callvirt",
+            "token": "0xa0001ae",
+            "callee": "System.Net.Http.HttpResponseMessage::get_Content"
+          },
+          {
+            "il": 574,
+            "op": "callvirt",
+            "token": "0xa0001ae",
+            "callee": "System.Net.Http.HttpResponseMessage::get_Content"
+          },
+          {
+            "il": 579,
+            "op": "callvirt",
+            "token": "0xa000208",
+            "callee": "System.Net.Http.HttpContent::get_Headers"
+          },
+          {
+            "il": 592,
+            "op": "callvirt",
+            "token": "0xa0001ae",
+            "callee": "System.Net.Http.HttpResponseMessage::get_Content"
+          },
+          {
+            "il": 597,
+            "op": "callvirt",
+            "token": "0xa000208",
+            "callee": "System.Net.Http.HttpContent::get_Headers"
+          },
+          {
+            "il": 602,
+            "op": "callvirt",
+            "token": "0xa000202",
+            "callee": "System.Net.Http.Headers.HttpHeaders::GetEnumerator"
+          },
+          {
+            "il": 613,
+            "op": "callvirt",
+            "token": "0xa000203",
+            "callee": "<TypeSpec/other>::get_Current"
+          },
+          {
+            "il": 628,
+            "op": "call",
+            "token": "0xa000204",
+            "callee": "<TypeSpec/other>::get_Key"
+          },
+          {
+            "il": 635,
+            "op": "call",
+            "token": "0xa000205",
+            "callee": "<TypeSpec/other>::get_Value"
+          },
+          {
+            "il": 640,
+            "op": "callvirt",
+            "token": "0xa000206",
+            "callee": "<TypeSpec/other>::set_Item"
+          },
+          {
+            "il": 647,
+            "op": "callvirt",
+            "token": "0xa000207",
+            "callee": "System.Collections.IEnumerator::MoveNext"
+          },
+          {
+            "il": 666,
+            "op": "callvirt",
+            "token": "0xa000171",
+            "callee": "System.IDisposable::Dispose"
+          },
+          {
+            "il": 679,
+            "op": "callvirt",
+            "token": "0xa0001d0",
+            "callee": "System.Net.Http.HttpResponseMessage::get_StatusCode"
+          },
+          {
+            "il": 724,
+            "op": "callvirt",
+            "token": "0x2b0001b7",
+            "callee": "SpecterInsight.ApiClient.SpecterInsightClientGenerated::ReadObjectResponseAsync"
+          },
+          {
+            "il": 730,
+            "op": "callvirt",
+            "token": "0xa0002a7",
+            "callee": "<TypeSpec/other>::ConfigureAwait"
+          },
+          {
+            "il": 739,
+            "op": "call",
+            "token": "0xa0002a8",
+            "callee": "<TypeSpec/other>::GetAwaiter"
+          },
+          {
+            "il": 748,
+            "op": "call",
+            "token": "0xa0002a9",
+            "callee": "<TypeSpec/other>::get_IsCompleted"
+          },
+          {
+            "il": 781,
+            "op": "call",
+            "token": "0x2b0001b8",
+            "callee": "<TypeSpec/other>::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 822,
+            "op": "call",
+            "token": "0xa0002aa",
+            "callee": "<TypeSpec/other>::GetResult"
+          },
+          {
+            "il": 831,
+            "op": "call",
+            "token": "0xa0002ab",
+            "callee": "<TypeSpec/other>::get_Object"
+          },
+          {
+            "il": 851,
+            "op": "call",
+            "token": "0xa0002ac",
+            "callee": "<TypeSpec/other>::get_Text"
+          },
+          {
+            "il": 863,
+            "op": "newobj",
+            "token": "0x60007d4",
+            "callee": "SpecterInsight.ApiClient.ApiException::.ctor"
+          },
+          {
+            "il": 871,
+            "op": "call",
+            "token": "0xa0002ab",
+            "callee": "<TypeSpec/other>::get_Object"
+          },
+          {
+            "il": 888,
+            "op": "callvirt",
+            "token": "0xa0001ae",
+            "callee": "System.Net.Http.HttpResponseMessage::get_Content"
+          },
+          {
+            "il": 906,
+            "op": "callvirt",
+            "token": "0xa0001ae",
+            "callee": "System.Net.Http.HttpResponseMessage::get_Content"
+          },
+          {
+            "il": 917,
+            "op": "call",
+            "token": "0x60001dd",
+            "callee": "SpecterInsight.ApiClient.SpecterInsightClientGenerated::ReadAsStringAsync"
+          },
+          {
+            "il": 923,
+            "op": "callvirt",
+            "token": "0xa0001bd",
+            "callee": "<TypeSpec/other>::ConfigureAwait"
+          },
+          {
+            "il": 932,
+            "op": "call",
+            "token": "0xa0001be",
+            "callee": "<TypeSpec/other>::GetAwaiter"
+          },
+          {
+            "il": 941,
+            "op": "call",
+            "token": "0xa0001bf",
+            "callee": "<TypeSpec/other>::get_IsCompleted"
+          },
+          {
+            "il": 974,
+            "op": "call",
+            "token": "0x2b0001b9",
+            "callee": "<TypeSpec/other>::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 1015,
+            "op": "call",
+            "token": "0xa0001c0",
+            "callee": "<TypeSpec/other>::GetResult"
+          },
+          {
+            "il": 1037,
+            "op": "call",
+            "token": "0xa000172",
+            "callee": "System.Int32::ToString"
+          },
+          {
+            "il": 1047,
+            "op": "call",
+            "token": "0xa00020f",
+            "callee": "System.String::Concat"
+          },
+          {
+            "il": 1067,
+            "op": "newobj",
+            "token": "0x60007d4",
+            "callee": "SpecterInsight.ApiClient.ApiException::.ctor"
+          },
+          {
+            "il": 1091,
+            "op": "callvirt",
+            "token": "0xa0001b5",
+            "callee": "System.Net.Http.HttpResponseMessage::Dispose"
+          },
+          {
+            "il": 1115,
+            "op": "callvirt",
+            "token": "0xa000171",
+            "callee": "System.IDisposable::Dispose"
+          },
+          {
+            "il": 1139,
+            "op": "callvirt",
+            "token": "0xa00004b",
+            "callee": "System.Net.Http.HttpMessageInvoker::Dispose"
+          },
+          {
+            "il": 1170,
+            "op": "call",
+            "token": "0xa0002ad",
+            "callee": "<TypeSpec/other>::SetException"
+          },
+          {
+            "il": 1199,
+            "op": "call",
+            "token": "0xa0002ae",
+            "callee": "<TypeSpec/other>::SetResult"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [
+          {
+            "il": 188,
+            "value": "GET"
+          },
+          {
+            "il": 219,
+            "value": "application/json"
+          },
+          {
+            "il": 270,
+            "value": "Documentation"
+          }
+        ],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.ApiClient.DocumentationEntry",
+        "name": "get_Name",
+        "token": "0x06000385",
+        "signature_ecma335": "20000e",
+        "parameters": [],
+        "rva": 34789,
+        "body_size": 8,
+        "il_code_size": 7,
+        "il_sha256": "036512aea70a61499508b2476db07e6e1606265e8e285bb9cfe1f072e800ff7f",
+        "exception_regions": 0,
+        "calls": [],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [],
+        "fields_selected": [
+          {
+            "il": 1,
+            "op": "ldfld",
+            "field": "<Name>k__BackingField"
+          }
+        ]
+      },
+      {
+        "declaring_type": "SpecterInsight.ApiClient.DocumentationEntry",
+        "name": "set_Name",
+        "token": "0x06000386",
+        "signature_ecma335": "2001010e",
+        "parameters": [
+          "value"
+        ],
+        "rva": 34797,
+        "body_size": 9,
+        "il_code_size": 8,
+        "il_sha256": "6f4488b9bc5967c3681b1e9125fc26e412e73e3d5f3590632586cee9f820f68c",
+        "exception_regions": 0,
+        "calls": [],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [],
+        "fields_selected": [
+          {
+            "il": 2,
+            "op": "stfld",
+            "field": "<Name>k__BackingField"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ART-815201a636f4dc226d32",
+    "path": "client/SpecterInsight.UI.dll",
+    "sha256": "b26312d15a0a8d2743ef50069874567ef768d64e1eed0a9e82a410976fbe10d6",
+    "mvid": "ec17b4c7-9015-4373-9b10-8081bc59e9a9",
+    "methods": [
+      {
+        "declaring_type": "SpecterInsight.UI.Program",
+        "name": "Main",
+        "token": "0x0600004b",
+        "signature_ecma335": "0001011d0e",
+        "parameters": [
+          "args"
+        ],
+        "rva": 16004,
+        "body_size": 92,
+        "il_code_size": 61,
+        "il_sha256": "3b3a305bcc1e55a5bd022daed15f86f4c637543134c4a94401150c6d7651d72a",
+        "exception_regions": 1,
+        "calls": [
+          {
+            "il": 47,
+            "op": "call",
+            "token": "0x600004c",
+            "callee": "SpecterInsight.UI.Program::BuildAvaloniaApp"
+          },
+          {
+            "il": 54,
+            "op": "call",
+            "token": "0xa00008f",
+            "callee": "Avalonia.ClassicDesktopStyleApplicationLifetimeExtensions::StartWithClassicDesktopLifetime"
+          }
+        ],
+        "call_selection": "framework-markers",
+        "strings_selected": [],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.UI.Program",
+        "name": "BuildAvaloniaApp",
+        "token": "0x0600004c",
+        "signature_ecma335": "00001281ad",
+        "parameters": [],
+        "rva": 16096,
+        "body_size": 28,
+        "il_code_size": 27,
+        "il_sha256": "51dc3dda2eea4886f811a9124066a1b0e6f1362a84470064987bb85c31f19045",
+        "exception_regions": 0,
+        "calls": [
+          {
+            "il": 0,
+            "op": "call",
+            "token": "0x2b000021",
+            "callee": "Avalonia.AppBuilder::Configure"
+          },
+          {
+            "il": 5,
+            "op": "call",
+            "token": "0xa000092",
+            "callee": "Avalonia.AppBuilderDesktopExtensions::UsePlatformDetect"
+          },
+          {
+            "il": 21,
+            "op": "call",
+            "token": "0xa000095",
+            "callee": "Avalonia.ReactiveUI.AppBuilderExtensions::UseReactiveUI"
+          }
+        ],
+        "call_selection": "framework-markers",
+        "strings_selected": [],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.UI.ViewModels.DocumentationViewModel+<<UpdateDocumentation>b__5_0>d",
+        "name": "MoveNext",
+        "token": "0x06000919",
+        "signature_ecma335": "200001",
+        "parameters": [],
+        "rva": 598336,
+        "body_size": 300,
+        "il_code_size": 260,
+        "il_sha256": "b5f66294b44a6cb0b17eaa41257e7007c371014a62f00f0524d4184c8b7a64f8",
+        "exception_regions": 2,
+        "calls": [
+          {
+            "il": 21,
+            "op": "newobj",
+            "token": "0x600091b",
+            "callee": "SpecterInsight.UI.ViewModels.DocumentationViewModel+<>c__DisplayClass5_0::.ctor"
+          },
+          {
+            "il": 43,
+            "op": "call",
+            "token": "0x6000027",
+            "callee": "SpecterInsight.UI.Globals::get_Client"
+          },
+          {
+            "il": 58,
+            "op": "callvirt",
+            "token": "0xa0008f5",
+            "callee": "SpecterInsight.ApiClient.SpecterInsightClientGenerated::DocumentationAsync"
+          },
+          {
+            "il": 63,
+            "op": "callvirt",
+            "token": "0xa0008f6",
+            "callee": "<TypeSpec/other>::GetAwaiter"
+          },
+          {
+            "il": 72,
+            "op": "call",
+            "token": "0xa0008f7",
+            "callee": "<TypeSpec/other>::get_IsCompleted"
+          },
+          {
+            "il": 105,
+            "op": "call",
+            "token": "0x2b0002d5",
+            "callee": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 146,
+            "op": "call",
+            "token": "0xa0008f8",
+            "callee": "<TypeSpec/other>::GetResult"
+          },
+          {
+            "il": 159,
+            "op": "call",
+            "token": "0x2b0002d6",
+            "callee": "System.Linq.Enumerable::ToArray"
+          },
+          {
+            "il": 169,
+            "op": "call",
+            "token": "0xa000007",
+            "callee": "Avalonia.Threading.Dispatcher::get_UIThread"
+          },
+          {
+            "il": 180,
+            "op": "ldftn",
+            "token": "0x600091c",
+            "callee": "SpecterInsight.UI.ViewModels.DocumentationViewModel+<>c__DisplayClass5_0::<UpdateDocumentation>b__1"
+          },
+          {
+            "il": 186,
+            "op": "newobj",
+            "token": "0xa0001f5",
+            "callee": "System.Action::.ctor"
+          },
+          {
+            "il": 191,
+            "op": "callvirt",
+            "token": "0xa00049f",
+            "callee": "Avalonia.Threading.Dispatcher::InvokeAsync"
+          },
+          {
+            "il": 206,
+            "op": "call",
+            "token": "0x600159c",
+            "callee": "SpecterInsight.UI.Services.NotificationService::NotifyAll"
+          },
+          {
+            "il": 233,
+            "op": "call",
+            "token": "0xa000058",
+            "callee": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetException"
+          },
+          {
+            "il": 254,
+            "op": "call",
+            "token": "0xa000059",
+            "callee": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetResult"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.UI.ViewModels.Controls.DocumentationViewModel+<LoadAsync>d__33",
+        "name": "MoveNext",
+        "token": "0x0600122a",
+        "signature_ecma335": "200001",
+        "parameters": [],
+        "rva": 756292,
+        "body_size": 480,
+        "il_code_size": 391,
+        "il_sha256": "146ee560d77632bc33b30fe57d8cd253870e34b9981fc3573d92b431f58ccf2c",
+        "exception_regions": 3,
+        "calls": [
+          {
+            "il": 19,
+            "op": "newobj",
+            "token": "0x6001213",
+            "callee": "SpecterInsight.UI.ViewModels.Controls.DocumentationViewModel+<>c__DisplayClass33_0::.ctor"
+          },
+          {
+            "il": 46,
+            "op": "call",
+            "token": "0x6000027",
+            "callee": "SpecterInsight.UI.Globals::get_Client"
+          },
+          {
+            "il": 73,
+            "op": "call",
+            "token": "0x6001206",
+            "callee": "SpecterInsight.UI.ViewModels.Controls.DocumentationViewModel::set_IsLoading"
+          },
+          {
+            "il": 79,
+            "op": "callvirt",
+            "token": "0xa0008f5",
+            "callee": "SpecterInsight.ApiClient.SpecterInsightClientGenerated::DocumentationAsync"
+          },
+          {
+            "il": 85,
+            "op": "callvirt",
+            "token": "0xa000d83",
+            "callee": "<TypeSpec/other>::ConfigureAwait"
+          },
+          {
+            "il": 94,
+            "op": "call",
+            "token": "0xa000d84",
+            "callee": "<TypeSpec/other>::GetAwaiter"
+          },
+          {
+            "il": 103,
+            "op": "call",
+            "token": "0xa000d85",
+            "callee": "<TypeSpec/other>::get_IsCompleted"
+          },
+          {
+            "il": 136,
+            "op": "call",
+            "token": "0x2b0005f1",
+            "callee": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 177,
+            "op": "call",
+            "token": "0xa000d86",
+            "callee": "<TypeSpec/other>::GetResult"
+          },
+          {
+            "il": 195,
+            "op": "call",
+            "token": "0xa000007",
+            "callee": "Avalonia.Threading.Dispatcher::get_UIThread"
+          },
+          {
+            "il": 206,
+            "op": "ldftn",
+            "token": "0x6001214",
+            "callee": "SpecterInsight.UI.ViewModels.Controls.DocumentationViewModel+<>c__DisplayClass33_0::<LoadAsync>b__0"
+          },
+          {
+            "il": 212,
+            "op": "newobj",
+            "token": "0xa0001f5",
+            "callee": "System.Action::.ctor"
+          },
+          {
+            "il": 217,
+            "op": "callvirt",
+            "token": "0xa00049f",
+            "callee": "Avalonia.Threading.Dispatcher::InvokeAsync"
+          },
+          {
+            "il": 222,
+            "op": "callvirt",
+            "token": "0xa0004a0",
+            "callee": "Avalonia.Threading.DispatcherOperation::GetAwaiter"
+          },
+          {
+            "il": 231,
+            "op": "call",
+            "token": "0xa00004e",
+            "callee": "System.Runtime.CompilerServices.TaskAwaiter::get_IsCompleted"
+          },
+          {
+            "il": 264,
+            "op": "call",
+            "token": "0x2b0005f2",
+            "callee": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 302,
+            "op": "call",
+            "token": "0xa000050",
+            "callee": "System.Runtime.CompilerServices.TaskAwaiter::GetResult"
+          },
+          {
+            "il": 309,
+            "op": "call",
+            "token": "0x600159c",
+            "callee": "SpecterInsight.UI.Services.NotificationService::NotifyAll"
+          },
+          {
+            "il": 324,
+            "op": "call",
+            "token": "0x6001206",
+            "callee": "SpecterInsight.UI.ViewModels.Controls.DocumentationViewModel::set_IsLoading"
+          },
+          {
+            "il": 357,
+            "op": "call",
+            "token": "0xa000058",
+            "callee": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetException"
+          },
+          {
+            "il": 385,
+            "op": "call",
+            "token": "0xa000059",
+            "callee": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetResult"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.UI.ViewModels.Controls.DocumentationViewModel",
+        "name": "FindEntryByPath",
+        "token": "0x0600120d",
+        "signature_ecma335": "20011287650e",
+        "parameters": [
+          "path"
+        ],
+        "rva": 754460,
+        "body_size": 152,
+        "il_code_size": 140,
+        "il_sha256": "f8a60595353bc79f24a4173a7bde845bd38e4db6baf8a6667206fd8a6b31a9df",
+        "exception_regions": 0,
+        "calls": [
+          {
+            "il": 0,
+            "op": "newobj",
+            "token": "0x6001219",
+            "callee": "SpecterInsight.UI.ViewModels.Controls.DocumentationViewModel+<>c__DisplayClass38_0::.ctor"
+          },
+          {
+            "il": 7,
+            "op": "call",
+            "token": "0xa0002a5",
+            "callee": "System.String::IsNullOrEmpty"
+          },
+          {
+            "il": 22,
+            "op": "callvirt",
+            "token": "0xa0009de",
+            "callee": "System.String::Replace"
+          },
+          {
+            "il": 29,
+            "op": "callvirt",
+            "token": "0xa000d6d",
+            "callee": "System.String::Trim"
+          },
+          {
+            "il": 37,
+            "op": "callvirt",
+            "token": "0xa00097f",
+            "callee": "System.String::Split"
+          },
+          {
+            "il": 59,
+            "op": "call",
+            "token": "0x60011f7",
+            "callee": "SpecterInsight.UI.ViewModels.Controls.DocumentationViewModel::get_RootEntries"
+          },
+          {
+            "il": 65,
+            "op": "ldftn",
+            "token": "0x600121a",
+            "callee": "SpecterInsight.UI.ViewModels.Controls.DocumentationViewModel+<>c__DisplayClass38_0::<FindEntryByPath>b__0"
+          },
+          {
+            "il": 71,
+            "op": "newobj",
+            "token": "0xa000d6e",
+            "callee": "<TypeSpec/other>::.ctor"
+          },
+          {
+            "il": 76,
+            "op": "call",
+            "token": "0x2b0005eb",
+            "callee": "System.Linq.Enumerable::FirstOrDefault"
+          },
+          {
+            "il": 83,
+            "op": "call",
+            "token": "0x60011f7",
+            "callee": "SpecterInsight.UI.ViewModels.Controls.DocumentationViewModel::get_RootEntries"
+          },
+          {
+            "il": 89,
+            "op": "ldftn",
+            "token": "0x600121b",
+            "callee": "SpecterInsight.UI.ViewModels.Controls.DocumentationViewModel+<>c__DisplayClass38_0::<FindEntryByPath>b__1"
+          },
+          {
+            "il": 95,
+            "op": "newobj",
+            "token": "0xa000d6e",
+            "callee": "<TypeSpec/other>::.ctor"
+          },
+          {
+            "il": 100,
+            "op": "call",
+            "token": "0x2b0005eb",
+            "callee": "System.Linq.Enumerable::FirstOrDefault"
+          },
+          {
+            "il": 111,
+            "op": "call",
+            "token": "0xa000d6f",
+            "callee": "SpecterInsight.ApiClient.DocumentationEntry::get_Children"
+          },
+          {
+            "il": 123,
+            "op": "ldftn",
+            "token": "0x600121c",
+            "callee": "SpecterInsight.UI.ViewModels.Controls.DocumentationViewModel+<>c__DisplayClass38_0::<FindEntryByPath>b__2"
+          },
+          {
+            "il": 129,
+            "op": "newobj",
+            "token": "0xa000d6e",
+            "callee": "<TypeSpec/other>::.ctor"
+          },
+          {
+            "il": 134,
+            "op": "call",
+            "token": "0x2b0005eb",
+            "callee": "System.Linq.Enumerable::FirstOrDefault"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.UI.ViewModels.Controls.DocumentationViewModel",
+        "name": ".ctor",
+        "token": "0x06001207",
+        "signature_ecma335": "200001",
+        "parameters": [],
+        "rva": 754024,
+        "body_size": 147,
+        "il_code_size": 135,
+        "il_sha256": "21102d38023e2e006d365a33395adb6bea3283e14e2191d437ee7524759d94f3",
+        "exception_regions": 0,
+        "calls": [
+          {
+            "il": 1,
+            "op": "newobj",
+            "token": "0xa000d68",
+            "callee": "<TypeSpec/other>::.ctor"
+          },
+          {
+            "il": 6,
+            "op": "call",
+            "token": "0x60011f8",
+            "callee": "SpecterInsight.UI.ViewModels.Controls.DocumentationViewModel::set_RootEntries"
+          },
+          {
+            "il": 17,
+            "op": "call",
+            "token": "0x60011fc",
+            "callee": "SpecterInsight.UI.ViewModels.Controls.DocumentationViewModel::set_SearchQuery"
+          },
+          {
+            "il": 28,
+            "op": "call",
+            "token": "0x6001200",
+            "callee": "SpecterInsight.UI.ViewModels.Controls.DocumentationViewModel::set_MarkdownContent"
+          },
+          {
+            "il": 34,
+            "op": "newobj",
+            "token": "0xa000d69",
+            "callee": "<TypeSpec/other>::.ctor"
+          },
+          {
+            "il": 39,
+            "op": "call",
+            "token": "0x6001202",
+            "callee": "SpecterInsight.UI.ViewModels.Controls.DocumentationViewModel::set_SearchResults"
+          },
+          {
+            "il": 65,
+            "op": "newobj",
+            "token": "0xa000d47",
+            "callee": "System.Timers.Timer::.ctor"
+          },
+          {
+            "il": 76,
+            "op": "call",
+            "token": "0x6000eb5",
+            "callee": "SpecterInsight.UI.ViewModels.ViewModelBase::.ctor"
+          },
+          {
+            "il": 88,
+            "op": "ldftn",
+            "token": "0x600120a",
+            "callee": "SpecterInsight.UI.ViewModels.Controls.DocumentationViewModel::OnSearchTimerElapsed"
+          },
+          {
+            "il": 94,
+            "op": "newobj",
+            "token": "0xa000cd3",
+            "callee": "System.Timers.ElapsedEventHandler::.ctor"
+          },
+          {
+            "il": 99,
+            "op": "callvirt",
+            "token": "0xa000cd4",
+            "callee": "System.Timers.Timer::add_Elapsed"
+          },
+          {
+            "il": 111,
+            "op": "callvirt",
+            "token": "0xa000cd5",
+            "callee": "System.Timers.Timer::set_AutoReset"
+          },
+          {
+            "il": 118,
+            "op": "ldftn",
+            "token": "0x600120e",
+            "callee": "SpecterInsight.UI.ViewModels.Controls.DocumentationViewModel::OnPropertyChanged"
+          },
+          {
+            "il": 124,
+            "op": "newobj",
+            "token": "0xa0006a1",
+            "callee": "System.ComponentModel.PropertyChangedEventHandler::.ctor"
+          },
+          {
+            "il": 129,
+            "op": "call",
+            "token": "0xa0006a2",
+            "callee": "ReactiveUI.ReactiveObject::add_PropertyChanged"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.UI.Converters.BoolToBrushConverter",
+        "name": "Convert",
+        "token": "0x060017f3",
+        "signature_ecma335": "20041c1c12791c1282a5",
+        "parameters": [
+          "value",
+          "targetType",
+          "parameter",
+          "culture"
+        ],
+        "rva": 848724,
+        "body_size": 51,
+        "il_code_size": 39,
+        "il_sha256": "9ebd774e236aa28587b946c133041d379b3fe2d8834aeb8efd55d855e009ea78",
+        "exception_regions": 0,
+        "calls": [
+          {
+            "il": 19,
+            "op": "call",
+            "token": "0x60017f1",
+            "callee": "SpecterInsight.UI.Converters.BoolToBrushConverter::get_FalseBrush"
+          },
+          {
+            "il": 26,
+            "op": "call",
+            "token": "0x60017ef",
+            "callee": "SpecterInsight.UI.Converters.BoolToBrushConverter::get_TrueBrush"
+          },
+          {
+            "il": 33,
+            "op": "call",
+            "token": "0x60017f1",
+            "callee": "SpecterInsight.UI.Converters.BoolToBrushConverter::get_FalseBrush"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.UI.Converters.BoolToBrushConverter",
+        "name": "ConvertBack",
+        "token": "0x060017f4",
+        "signature_ecma335": "20041c1c12791c1282a5",
+        "parameters": [
+          "value",
+          "targetType",
+          "parameter",
+          "culture"
+        ],
+        "rva": 705512,
+        "body_size": 7,
+        "il_code_size": 6,
+        "il_sha256": "790252a1bf2d2b579bebb973ee25801d7fce3afbbcc4bc4975d303a9e72ef5fc",
+        "exception_regions": 0,
+        "calls": [
+          {
+            "il": 0,
+            "op": "newobj",
+            "token": "0xa000b96",
+            "callee": "System.NotSupportedException::.ctor"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.UI.Converters.BoolToGridLengthConverter",
+        "name": "Convert",
+        "token": "0x060017fa",
+        "signature_ecma335": "20041c1c12791c1282a5",
+        "parameters": [
+          "value",
+          "targetType",
+          "parameter",
+          "culture"
+        ],
+        "rva": 848840,
+        "body_size": 62,
+        "il_code_size": 50,
+        "il_sha256": "ae6ea628e5e10a4699c20701948dca629ff2e8fb7f28d1d82c7c5f2f5d6e614a",
+        "exception_regions": 0,
+        "calls": [
+          {
+            "il": 19,
+            "op": "call",
+            "token": "0x60017f8",
+            "callee": "SpecterInsight.UI.Converters.BoolToGridLengthConverter::get_FalseLength"
+          },
+          {
+            "il": 27,
+            "op": "call",
+            "token": "0x60017f6",
+            "callee": "SpecterInsight.UI.Converters.BoolToGridLengthConverter::get_TrueLength"
+          },
+          {
+            "il": 39,
+            "op": "call",
+            "token": "0x60017f8",
+            "callee": "SpecterInsight.UI.Converters.BoolToGridLengthConverter::get_FalseLength"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.UI.Converters.BoolToGridLengthConverter",
+        "name": "ConvertBack",
+        "token": "0x060017fb",
+        "signature_ecma335": "20041c1c12791c1282a5",
+        "parameters": [
+          "value",
+          "targetType",
+          "parameter",
+          "culture"
+        ],
+        "rva": 705512,
+        "body_size": 7,
+        "il_code_size": 6,
+        "il_sha256": "790252a1bf2d2b579bebb973ee25801d7fce3afbbcc4bc4975d303a9e72ef5fc",
+        "exception_regions": 0,
+        "calls": [
+          {
+            "il": 0,
+            "op": "newobj",
+            "token": "0xa000b96",
+            "callee": "System.NotSupportedException::.ctor"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.UI.Converters.EventOutcomeToForegroundConverter",
+        "name": "Convert",
+        "token": "0x060017fe",
+        "signature_ecma335": "20041c1c12791c1282a5",
+        "parameters": [
+          "value",
+          "targetType",
+          "parameter",
+          "culture"
+        ],
+        "rva": 848944,
+        "body_size": 106,
+        "il_code_size": 94,
+        "il_sha256": "bb75615e899302b2b6a775f96a089424e6bb594968b29bd03ab435887a811ccc",
+        "exception_regions": 0,
+        "calls": [
+          {
+            "il": 24,
+            "op": "call",
+            "token": "0xa0007eb",
+            "callee": "Avalonia.Media.Color::Parse"
+          },
+          {
+            "il": 38,
+            "op": "newobj",
+            "token": "0xa000526",
+            "callee": "Avalonia.Media.SolidColorBrush::.ctor"
+          },
+          {
+            "il": 49,
+            "op": "call",
+            "token": "0xa0007eb",
+            "callee": "Avalonia.Media.Color::Parse"
+          },
+          {
+            "il": 63,
+            "op": "newobj",
+            "token": "0xa000526",
+            "callee": "Avalonia.Media.SolidColorBrush::.ctor"
+          },
+          {
+            "il": 74,
+            "op": "call",
+            "token": "0xa0007eb",
+            "callee": "Avalonia.Media.Color::Parse"
+          },
+          {
+            "il": 88,
+            "op": "newobj",
+            "token": "0xa000526",
+            "callee": "Avalonia.Media.SolidColorBrush::.ctor"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [
+          {
+            "il": 19,
+            "value": "#52C27A"
+          },
+          {
+            "il": 44,
+            "value": "#E05C5C"
+          },
+          {
+            "il": 69,
+            "value": "#c8d0d0"
+          }
+        ],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.UI.Converters.EventOutcomeToForegroundConverter",
+        "name": "ConvertBack",
+        "token": "0x060017ff",
+        "signature_ecma335": "20041c1c12791c1282a5",
+        "parameters": [
+          "value",
+          "targetType",
+          "parameter",
+          "culture"
+        ],
+        "rva": 705512,
+        "body_size": 7,
+        "il_code_size": 6,
+        "il_sha256": "790252a1bf2d2b579bebb973ee25801d7fce3afbbcc4bc4975d303a9e72ef5fc",
+        "exception_regions": 0,
+        "calls": [
+          {
+            "il": 0,
+            "op": "newobj",
+            "token": "0xa000b96",
+            "callee": "System.NotSupportedException::.ctor"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.UI.Converters.EventOutcomeToBadgeBackgroundConverter",
+        "name": "Convert",
+        "token": "0x06001801",
+        "signature_ecma335": "20041c1c12791c1282a5",
+        "parameters": [
+          "value",
+          "targetType",
+          "parameter",
+          "culture"
+        ],
+        "rva": 849052,
+        "body_size": 106,
+        "il_code_size": 94,
+        "il_sha256": "0a82c49cc085f7871af8aa04189b78c4f95865f64c5bf3c72c211f3feb8f7d79",
+        "exception_regions": 0,
+        "calls": [
+          {
+            "il": 24,
+            "op": "call",
+            "token": "0xa0007eb",
+            "callee": "Avalonia.Media.Color::Parse"
+          },
+          {
+            "il": 38,
+            "op": "newobj",
+            "token": "0xa000526",
+            "callee": "Avalonia.Media.SolidColorBrush::.ctor"
+          },
+          {
+            "il": 49,
+            "op": "call",
+            "token": "0xa0007eb",
+            "callee": "Avalonia.Media.Color::Parse"
+          },
+          {
+            "il": 63,
+            "op": "newobj",
+            "token": "0xa000526",
+            "callee": "Avalonia.Media.SolidColorBrush::.ctor"
+          },
+          {
+            "il": 74,
+            "op": "call",
+            "token": "0xa0007eb",
+            "callee": "Avalonia.Media.Color::Parse"
+          },
+          {
+            "il": 88,
+            "op": "newobj",
+            "token": "0xa000526",
+            "callee": "Avalonia.Media.SolidColorBrush::.ctor"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [
+          {
+            "il": 19,
+            "value": "#132A1E"
+          },
+          {
+            "il": 44,
+            "value": "#2A1313"
+          },
+          {
+            "il": 69,
+            "value": "#1e2424"
+          }
+        ],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.UI.Converters.EventOutcomeToBadgeBackgroundConverter",
+        "name": "ConvertBack",
+        "token": "0x06001802",
+        "signature_ecma335": "20041c1c12791c1282a5",
+        "parameters": [
+          "value",
+          "targetType",
+          "parameter",
+          "culture"
+        ],
+        "rva": 705512,
+        "body_size": 7,
+        "il_code_size": 6,
+        "il_sha256": "790252a1bf2d2b579bebb973ee25801d7fce3afbbcc4bc4975d303a9e72ef5fc",
+        "exception_regions": 0,
+        "calls": [
+          {
+            "il": 0,
+            "op": "newobj",
+            "token": "0xa000b96",
+            "callee": "System.NotSupportedException::.ctor"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.UI.Converters.EventTypeToAccentConverter",
+        "name": "Convert",
+        "token": "0x06001804",
+        "signature_ecma335": "20041c1c12791c1282a5",
+        "parameters": [
+          "value",
+          "targetType",
+          "parameter",
+          "culture"
+        ],
+        "rva": 849160,
+        "body_size": 164,
+        "il_code_size": 152,
+        "il_sha256": "dc88a0c9570ec1fdaa0775c538975a41a510509a4ce29a68fe712be5ce99114b",
+        "exception_regions": 0,
+        "calls": [
+          {
+            "il": 17,
+            "op": "callvirt",
+            "token": "0xa000676",
+            "callee": "System.String::StartsWith"
+          },
+          {
+            "il": 29,
+            "op": "call",
+            "token": "0xa0007eb",
+            "callee": "Avalonia.Media.Color::Parse"
+          },
+          {
+            "il": 43,
+            "op": "newobj",
+            "token": "0xa000526",
+            "callee": "Avalonia.Media.SolidColorBrush::.ctor"
+          },
+          {
+            "il": 56,
+            "op": "callvirt",
+            "token": "0xa000676",
+            "callee": "System.String::StartsWith"
+          },
+          {
+            "il": 68,
+            "op": "call",
+            "token": "0xa0007eb",
+            "callee": "Avalonia.Media.Color::Parse"
+          },
+          {
+            "il": 82,
+            "op": "newobj",
+            "token": "0xa000526",
+            "callee": "Avalonia.Media.SolidColorBrush::.ctor"
+          },
+          {
+            "il": 95,
+            "op": "callvirt",
+            "token": "0xa000676",
+            "callee": "System.String::StartsWith"
+          },
+          {
+            "il": 107,
+            "op": "call",
+            "token": "0xa0007eb",
+            "callee": "Avalonia.Media.Color::Parse"
+          },
+          {
+            "il": 121,
+            "op": "newobj",
+            "token": "0xa000526",
+            "callee": "Avalonia.Media.SolidColorBrush::.ctor"
+          },
+          {
+            "il": 132,
+            "op": "call",
+            "token": "0xa0007eb",
+            "callee": "Avalonia.Media.Color::Parse"
+          },
+          {
+            "il": 146,
+            "op": "newobj",
+            "token": "0xa000526",
+            "callee": "Avalonia.Media.SolidColorBrush::.ctor"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [
+          {
+            "il": 11,
+            "value": "session-"
+          },
+          {
+            "il": 24,
+            "value": "#4A90D9"
+          },
+          {
+            "il": 50,
+            "value": "payload-"
+          },
+          {
+            "il": 63,
+            "value": "#E8944A"
+          },
+          {
+            "il": 89,
+            "value": "user-"
+          },
+          {
+            "il": 102,
+            "value": "#9E68C8"
+          },
+          {
+            "il": 127,
+            "value": "#6A8080"
+          }
+        ],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.UI.Converters.EventTypeToAccentConverter",
+        "name": "ConvertBack",
+        "token": "0x06001805",
+        "signature_ecma335": "20041c1c12791c1282a5",
+        "parameters": [
+          "value",
+          "targetType",
+          "parameter",
+          "culture"
+        ],
+        "rva": 705512,
+        "body_size": 7,
+        "il_code_size": 6,
+        "il_sha256": "790252a1bf2d2b579bebb973ee25801d7fce3afbbcc4bc4975d303a9e72ef5fc",
+        "exception_regions": 0,
+        "calls": [
+          {
+            "il": 0,
+            "op": "newobj",
+            "token": "0xa000b96",
+            "callee": "System.NotSupportedException::.ctor"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.UI.Converters.EventTypeToRowBackgroundConverter",
+        "name": "Convert",
+        "token": "0x06001807",
+        "signature_ecma335": "20041c1c12791c1282a5",
+        "parameters": [
+          "value",
+          "targetType",
+          "parameter",
+          "culture"
+        ],
+        "rva": 849324,
+        "body_size": 164,
+        "il_code_size": 152,
+        "il_sha256": "1106e7a3c0953bed613f029e9386b9a09c13e76d25175ef9bd9e93323b82e2d9",
+        "exception_regions": 0,
+        "calls": [
+          {
+            "il": 17,
+            "op": "callvirt",
+            "token": "0xa000676",
+            "callee": "System.String::StartsWith"
+          },
+          {
+            "il": 29,
+            "op": "call",
+            "token": "0xa0007eb",
+            "callee": "Avalonia.Media.Color::Parse"
+          },
+          {
+            "il": 43,
+            "op": "newobj",
+            "token": "0xa000526",
+            "callee": "Avalonia.Media.SolidColorBrush::.ctor"
+          },
+          {
+            "il": 56,
+            "op": "callvirt",
+            "token": "0xa000676",
+            "callee": "System.String::StartsWith"
+          },
+          {
+            "il": 68,
+            "op": "call",
+            "token": "0xa0007eb",
+            "callee": "Avalonia.Media.Color::Parse"
+          },
+          {
+            "il": 82,
+            "op": "newobj",
+            "token": "0xa000526",
+            "callee": "Avalonia.Media.SolidColorBrush::.ctor"
+          },
+          {
+            "il": 95,
+            "op": "callvirt",
+            "token": "0xa000676",
+            "callee": "System.String::StartsWith"
+          },
+          {
+            "il": 107,
+            "op": "call",
+            "token": "0xa0007eb",
+            "callee": "Avalonia.Media.Color::Parse"
+          },
+          {
+            "il": 121,
+            "op": "newobj",
+            "token": "0xa000526",
+            "callee": "Avalonia.Media.SolidColorBrush::.ctor"
+          },
+          {
+            "il": 132,
+            "op": "call",
+            "token": "0xa0007eb",
+            "callee": "Avalonia.Media.Color::Parse"
+          },
+          {
+            "il": 146,
+            "op": "newobj",
+            "token": "0xa000526",
+            "callee": "Avalonia.Media.SolidColorBrush::.ctor"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [
+          {
+            "il": 11,
+            "value": "session-"
+          },
+          {
+            "il": 24,
+            "value": "#162235"
+          },
+          {
+            "il": 50,
+            "value": "payload-"
+          },
+          {
+            "il": 63,
+            "value": "#2D1B0A"
+          },
+          {
+            "il": 89,
+            "value": "user-"
+          },
+          {
+            "il": 102,
+            "value": "#241533"
+          },
+          {
+            "il": 127,
+            "value": "#1A2424"
+          }
+        ],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.UI.Converters.EventTypeToRowBackgroundConverter",
+        "name": "ConvertBack",
+        "token": "0x06001808",
+        "signature_ecma335": "20041c1c12791c1282a5",
+        "parameters": [
+          "value",
+          "targetType",
+          "parameter",
+          "culture"
+        ],
+        "rva": 705512,
+        "body_size": 7,
+        "il_code_size": 6,
+        "il_sha256": "790252a1bf2d2b579bebb973ee25801d7fce3afbbcc4bc4975d303a9e72ef5fc",
+        "exception_regions": 0,
+        "calls": [
+          {
+            "il": 0,
+            "op": "newobj",
+            "token": "0xa000b96",
+            "callee": "System.NotSupportedException::.ctor"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.UI.ViewModels.EventLogViewModel",
+        "name": ".ctor",
+        "token": "0x06000936",
+        "signature_ecma335": "200001",
+        "parameters": [],
+        "rva": 599160,
+        "body_size": 637,
+        "il_code_size": 625,
+        "il_sha256": "b59ac44b4a87d5c3e2c17c20350c65fb32071f48b61f60d81d189c91fdaacb07",
+        "exception_regions": 0,
+        "calls": [
+          {
+            "il": 1,
+            "op": "newobj",
+            "token": "0xa0008fa",
+            "callee": "<TypeSpec/other>::.ctor"
+          },
+          {
+            "il": 17,
+            "op": "call",
+            "token": "0x6000929",
+            "callee": "SpecterInsight.UI.ViewModels.EventLogViewModel::set_DraftSearchFilter"
+          },
+          {
+            "il": 36,
+            "op": "call",
+            "token": "0xa00075f",
+            "callee": "System.TimeSpan::FromHours"
+          },
+          {
+            "il": 41,
+            "op": "call",
+            "token": "0x600092d",
+            "callee": "SpecterInsight.UI.ViewModels.EventLogViewModel::set_DraftTimeSpanFilter"
+          },
+          {
+            "il": 49,
+            "op": "call",
+            "token": "0xa00075f",
+            "callee": "System.TimeSpan::FromHours"
+          },
+          {
+            "il": 61,
+            "op": "call",
+            "token": "0x6000932",
+            "callee": "SpecterInsight.UI.ViewModels.EventLogViewModel::set_IsApplyButtonEnabled"
+          },
+          {
+            "il": 67,
+            "op": "newobj",
+            "token": "0xa0008fb",
+            "callee": "<TypeSpec/other>::.ctor"
+          },
+          {
+            "il": 78,
+            "op": "newobj",
+            "token": "0xa0008fc",
+            "callee": "<TypeSpec/other>::.ctor"
+          },
+          {
+            "il": 89,
+            "op": "newobj",
+            "token": "0x600123f",
+            "callee": "SpecterInsight.UI.ViewModels.Controls.EventTypeSelectorViewModel::.ctor"
+          },
+          {
+            "il": 94,
+            "op": "callvirt",
+            "token": "0xa0008fd",
+            "callee": "<TypeSpec/other>::Add"
+          },
+          {
+            "il": 105,
+            "op": "newobj",
+            "token": "0x600123f",
+            "callee": "SpecterInsight.UI.ViewModels.Controls.EventTypeSelectorViewModel::.ctor"
+          },
+          {
+            "il": 110,
+            "op": "callvirt",
+            "token": "0xa0008fd",
+            "callee": "<TypeSpec/other>::Add"
+          },
+          {
+            "il": 121,
+            "op": "newobj",
+            "token": "0x600123f",
+            "callee": "SpecterInsight.UI.ViewModels.Controls.EventTypeSelectorViewModel::.ctor"
+          },
+          {
+            "il": 126,
+            "op": "callvirt",
+            "token": "0xa0008fd",
+            "callee": "<TypeSpec/other>::Add"
+          },
+          {
+            "il": 137,
+            "op": "newobj",
+            "token": "0x600123f",
+            "callee": "SpecterInsight.UI.ViewModels.Controls.EventTypeSelectorViewModel::.ctor"
+          },
+          {
+            "il": 142,
+            "op": "callvirt",
+            "token": "0xa0008fd",
+            "callee": "<TypeSpec/other>::Add"
+          },
+          {
+            "il": 153,
+            "op": "newobj",
+            "token": "0x600123f",
+            "callee": "SpecterInsight.UI.ViewModels.Controls.EventTypeSelectorViewModel::.ctor"
+          },
+          {
+            "il": 158,
+            "op": "callvirt",
+            "token": "0xa0008fd",
+            "callee": "<TypeSpec/other>::Add"
+          },
+          {
+            "il": 169,
+            "op": "newobj",
+            "token": "0x600123f",
+            "callee": "SpecterInsight.UI.ViewModels.Controls.EventTypeSelectorViewModel::.ctor"
+          },
+          {
+            "il": 174,
+            "op": "callvirt",
+            "token": "0xa0008fd",
+            "callee": "<TypeSpec/other>::Add"
+          },
+          {
+            "il": 185,
+            "op": "newobj",
+            "token": "0x600123f",
+            "callee": "SpecterInsight.UI.ViewModels.Controls.EventTypeSelectorViewModel::.ctor"
+          },
+          {
+            "il": 190,
+            "op": "callvirt",
+            "token": "0xa0008fd",
+            "callee": "<TypeSpec/other>::Add"
+          },
+          {
+            "il": 201,
+            "op": "newobj",
+            "token": "0x600123f",
+            "callee": "SpecterInsight.UI.ViewModels.Controls.EventTypeSelectorViewModel::.ctor"
+          },
+          {
+            "il": 206,
+            "op": "callvirt",
+            "token": "0xa0008fd",
+            "callee": "<TypeSpec/other>::Add"
+          },
+          {
+            "il": 217,
+            "op": "newobj",
+            "token": "0x600123f",
+            "callee": "SpecterInsight.UI.ViewModels.Controls.EventTypeSelectorViewModel::.ctor"
+          },
+          {
+            "il": 222,
+            "op": "callvirt",
+            "token": "0xa0008fd",
+            "callee": "<TypeSpec/other>::Add"
+          },
+          {
+            "il": 233,
+            "op": "newobj",
+            "token": "0x600123f",
+            "callee": "SpecterInsight.UI.ViewModels.Controls.EventTypeSelectorViewModel::.ctor"
+          },
+          {
+            "il": 238,
+            "op": "callvirt",
+            "token": "0xa0008fd",
+            "callee": "<TypeSpec/other>::Add"
+          },
+          {
+            "il": 249,
+            "op": "newobj",
+            "token": "0x600123f",
+            "callee": "SpecterInsight.UI.ViewModels.Controls.EventTypeSelectorViewModel::.ctor"
+          },
+          {
+            "il": 254,
+            "op": "callvirt",
+            "token": "0xa0008fd",
+            "callee": "<TypeSpec/other>::Add"
+          },
+          {
+            "il": 265,
+            "op": "newobj",
+            "token": "0x600123f",
+            "callee": "SpecterInsight.UI.ViewModels.Controls.EventTypeSelectorViewModel::.ctor"
+          },
+          {
+            "il": 270,
+            "op": "callvirt",
+            "token": "0xa0008fd",
+            "callee": "<TypeSpec/other>::Add"
+          },
+          {
+            "il": 281,
+            "op": "newobj",
+            "token": "0x600123f",
+            "callee": "SpecterInsight.UI.ViewModels.Controls.EventTypeSelectorViewModel::.ctor"
+          },
+          {
+            "il": 286,
+            "op": "callvirt",
+            "token": "0xa0008fd",
+            "callee": "<TypeSpec/other>::Add"
+          },
+          {
+            "il": 297,
+            "op": "newobj",
+            "token": "0x600123f",
+            "callee": "SpecterInsight.UI.ViewModels.Controls.EventTypeSelectorViewModel::.ctor"
+          },
+          {
+            "il": 302,
+            "op": "callvirt",
+            "token": "0xa0008fd",
+            "callee": "<TypeSpec/other>::Add"
+          },
+          {
+            "il": 313,
+            "op": "newobj",
+            "token": "0x600123f",
+            "callee": "SpecterInsight.UI.ViewModels.Controls.EventTypeSelectorViewModel::.ctor"
+          },
+          {
+            "il": 318,
+            "op": "callvirt",
+            "token": "0xa0008fd",
+            "callee": "<TypeSpec/other>::Add"
+          },
+          {
+            "il": 329,
+            "op": "newobj",
+            "token": "0x600123f",
+            "callee": "SpecterInsight.UI.ViewModels.Controls.EventTypeSelectorViewModel::.ctor"
+          },
+          {
+            "il": 334,
+            "op": "callvirt",
+            "token": "0xa0008fd",
+            "callee": "<TypeSpec/other>::Add"
+          },
+          {
+            "il": 345,
+            "op": "newobj",
+            "token": "0x600123f",
+            "callee": "SpecterInsight.UI.ViewModels.Controls.EventTypeSelectorViewModel::.ctor"
+          },
+          {
+            "il": 350,
+            "op": "callvirt",
+            "token": "0xa0008fd",
+            "callee": "<TypeSpec/other>::Add"
+          },
+          {
+            "il": 361,
+            "op": "newobj",
+            "token": "0x600123f",
+            "callee": "SpecterInsight.UI.ViewModels.Controls.EventTypeSelectorViewModel::.ctor"
+          },
+          {
+            "il": 366,
+            "op": "callvirt",
+            "token": "0xa0008fd",
+            "callee": "<TypeSpec/other>::Add"
+          },
+          {
+            "il": 377,
+            "op": "newobj",
+            "token": "0x600123f",
+            "callee": "SpecterInsight.UI.ViewModels.Controls.EventTypeSelectorViewModel::.ctor"
+          },
+          {
+            "il": 382,
+            "op": "callvirt",
+            "token": "0xa0008fd",
+            "callee": "<TypeSpec/other>::Add"
+          },
+          {
+            "il": 393,
+            "op": "newobj",
+            "token": "0x600123f",
+            "callee": "SpecterInsight.UI.ViewModels.Controls.EventTypeSelectorViewModel::.ctor"
+          },
+          {
+            "il": 398,
+            "op": "callvirt",
+            "token": "0xa0008fd",
+            "callee": "<TypeSpec/other>::Add"
+          },
+          {
+            "il": 409,
+            "op": "newobj",
+            "token": "0x600123f",
+            "callee": "SpecterInsight.UI.ViewModels.Controls.EventTypeSelectorViewModel::.ctor"
+          },
+          {
+            "il": 414,
+            "op": "callvirt",
+            "token": "0xa0008fd",
+            "callee": "<TypeSpec/other>::Add"
+          },
+          {
+            "il": 425,
+            "op": "newobj",
+            "token": "0x600123f",
+            "callee": "SpecterInsight.UI.ViewModels.Controls.EventTypeSelectorViewModel::.ctor"
+          },
+          {
+            "il": 430,
+            "op": "callvirt",
+            "token": "0xa0008fd",
+            "callee": "<TypeSpec/other>::Add"
+          },
+          {
+            "il": 441,
+            "op": "newobj",
+            "token": "0xa000411",
+            "callee": "Avalonia.Threading.DispatcherTimer::.ctor"
+          },
+          {
+            "il": 452,
+            "op": "newobj",
+            "token": "0xa0008fe",
+            "callee": "<TypeSpec/other>::.ctor"
+          },
+          {
+            "il": 463,
+            "op": "newobj",
+            "token": "0xa0008ff",
+            "callee": "<TypeSpec/other>::.ctor"
+          },
+          {
+            "il": 474,
+            "op": "call",
+            "token": "0x6000eb5",
+            "callee": "SpecterInsight.UI.ViewModels.ViewModelBase::.ctor"
+          },
+          {
+            "il": 481,
+            "op": "ldftn",
+            "token": "0x6000938",
+            "callee": "SpecterInsight.UI.ViewModels.EventLogViewModel::Refresh"
+          },
+          {
+            "il": 487,
+            "op": "newobj",
+            "token": "0xa00003f",
+            "callee": "<TypeSpec/other>::.ctor"
+          },
+          {
+            "il": 494,
+            "op": "call",
+            "token": "0x2b000180",
+            "callee": "ReactiveUI.ReactiveCommand::Create"
+          },
+          {
+            "il": 506,
+            "op": "call",
+            "token": "0x600093c",
+            "callee": "SpecterInsight.UI.ViewModels.EventLogViewModel::GetEventTypeHashtable"
+          },
+          {
+            "il": 517,
+            "op": "call",
+            "token": "0x600093d",
+            "callee": "SpecterInsight.UI.ViewModels.EventLogViewModel::BuildEventCategories"
+          },
+          {
+            "il": 524,
+            "op": "call",
+            "token": "0x6000926",
+            "callee": "SpecterInsight.UI.ViewModels.EventLogViewModel::get_Events"
+          },
+          {
+            "il": 529,
+            "op": "newobj",
+            "token": "0xa00048a",
+            "callee": "Avalonia.Collections.DataGridCollectionView::.ctor"
+          },
+          {
+            "il": 540,
+            "op": "call",
+            "token": "0x6000927",
+            "callee": "SpecterInsight.UI.ViewModels.EventLogViewModel::get_EventsView"
+          },
+          {
+            "il": 545,
+            "op": "callvirt",
+            "token": "0xa000843",
+            "callee": "Avalonia.Collections.DataGridCollectionView::get_SortDescriptions"
+          },
+          {
+            "il": 557,
+            "op": "call",
+            "token": "0xa000844",
+            "callee": "Avalonia.Collections.DataGridSortDescription::FromPath"
+          },
+          {
+            "il": 562,
+            "op": "callvirt",
+            "token": "0xa000845",
+            "callee": "<TypeSpec/other>::Add"
+          },
+          {
+            "il": 568,
+            "op": "ldftn",
+            "token": "0x600093e",
+            "callee": "SpecterInsight.UI.ViewModels.EventLogViewModel::OnConnected"
+          },
+          {
+            "il": 574,
+            "op": "newobj",
+            "token": "0x6000015",
+            "callee": "SpecterInsight.UI.SpecterClientEventHandler::.ctor"
+          },
+          {
+            "il": 579,
+            "op": "call",
+            "token": "0x6000021",
+            "callee": "SpecterInsight.UI.Globals::add_Connected"
+          },
+          {
+            "il": 585,
+            "op": "ldftn",
+            "token": "0x600093f",
+            "callee": "SpecterInsight.UI.ViewModels.EventLogViewModel::OnDisconnected"
+          },
+          {
+            "il": 591,
+            "op": "newobj",
+            "token": "0x600001d",
+            "callee": "SpecterInsight.UI.SpecterClientDisconnectedEventHandler::.ctor"
+          },
+          {
+            "il": 596,
+            "op": "call",
+            "token": "0x6000025",
+            "callee": "SpecterInsight.UI.Globals::add_Disconnected"
+          },
+          {
+            "il": 608,
+            "op": "ldftn",
+            "token": "0x6000937",
+            "callee": "SpecterInsight.UI.ViewModels.EventLogViewModel::OnTimerTick"
+          },
+          {
+            "il": 614,
+            "op": "newobj",
+            "token": "0xa0001cf",
+            "callee": "System.EventHandler::.ctor"
+          },
+          {
+            "il": 619,
+            "op": "callvirt",
+            "token": "0xa000414",
+            "callee": "Avalonia.Threading.DispatcherTimer::add_Tick"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.UI.ViewModels.EventLogViewModel",
+        "name": "ApplyFilter",
+        "token": "0x0600093a",
+        "signature_ecma335": "2004151282d901128449151283690112844915128601010e1183b5128615",
+        "parameters": [
+          "events",
+          "eventTypes",
+          "timeFilter",
+          "searchFilter"
+        ],
+        "rva": 600048,
+        "body_size": 92,
+        "il_code_size": 64,
+        "il_sha256": "888fca41eb728e994cd36ae3645acbb41dc0de3d9350b39da8b8240854d8a405",
+        "exception_regions": 1,
+        "calls": [
+          {
+            "il": 0,
+            "op": "newobj",
+            "token": "0xa000903",
+            "callee": "<TypeSpec/other>::.ctor"
+          },
+          {
+            "il": 7,
+            "op": "callvirt",
+            "token": "0xa000904",
+            "callee": "<TypeSpec/other>::GetEnumerator"
+          },
+          {
+            "il": 16,
+            "op": "callvirt",
+            "token": "0xa000905",
+            "callee": "<TypeSpec/other>::get_Current"
+          },
+          {
+            "il": 28,
+            "op": "call",
+            "token": "0x600093b",
+            "callee": "SpecterInsight.UI.ViewModels.EventLogViewModel::IsMatch"
+          },
+          {
+            "il": 37,
+            "op": "callvirt",
+            "token": "0xa000906",
+            "callee": "<TypeSpec/other>::Add"
+          },
+          {
+            "il": 43,
+            "op": "callvirt",
+            "token": "0xa00012f",
+            "callee": "System.Collections.IEnumerator::MoveNext"
+          },
+          {
+            "il": 56,
+            "op": "callvirt",
+            "token": "0xa000130",
+            "callee": "System.IDisposable::Dispose"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.UI.ViewModels.EventLogViewModel",
+        "name": "IsMatch",
+        "token": "0x0600093b",
+        "signature_ecma335": "20040212844915128601010e1183b5128615",
+        "parameters": [
+          "evt",
+          "eventTypes",
+          "timeFilter",
+          "searchFilter"
+        ],
+        "rva": 600140,
+        "body_size": 133,
+        "il_code_size": 121,
+        "il_sha256": "ecfa0f117562b4794fd32d4a4dbaf44b4eb5548eb1656824643b314b7fdb6603",
+        "exception_regions": 0,
+        "calls": [
+          {
+            "il": 1,
+            "op": "callvirt",
+            "token": "0xa000900",
+            "callee": "SpecterInsight.ApiClient.Event::get_Timestamp"
+          },
+          {
+            "il": 7,
+            "op": "call",
+            "token": "0x6000930",
+            "callee": "SpecterInsight.UI.ViewModels.EventLogViewModel::get_AppliedMinimumTimestamp"
+          },
+          {
+            "il": 12,
+            "op": "call",
+            "token": "0xa000300",
+            "callee": "System.DateTimeOffset::op_Implicit"
+          },
+          {
+            "il": 17,
+            "op": "call",
+            "token": "0xa000901",
+            "callee": "System.DateTimeOffset::op_LessThan"
+          },
+          {
+            "il": 29,
+            "op": "callvirt",
+            "token": "0xa000907",
+            "callee": "SpecterInsight.ApiClient.Event::get_Type"
+          },
+          {
+            "il": 34,
+            "op": "callvirt",
+            "token": "0xa000908",
+            "callee": "System.Text.RegularExpressions.Regex::IsMatch"
+          },
+          {
+            "il": 44,
+            "op": "callvirt",
+            "token": "0xa000909",
+            "callee": "SpecterInsight.ApiClient.Event::get_System"
+          },
+          {
+            "il": 49,
+            "op": "callvirt",
+            "token": "0xa000908",
+            "callee": "System.Text.RegularExpressions.Regex::IsMatch"
+          },
+          {
+            "il": 59,
+            "op": "callvirt",
+            "token": "0xa00090a",
+            "callee": "SpecterInsight.ApiClient.Event::get_Source"
+          },
+          {
+            "il": 64,
+            "op": "callvirt",
+            "token": "0xa000908",
+            "callee": "System.Text.RegularExpressions.Regex::IsMatch"
+          },
+          {
+            "il": 74,
+            "op": "callvirt",
+            "token": "0xa00090b",
+            "callee": "SpecterInsight.ApiClient.Event::get_Message"
+          },
+          {
+            "il": 79,
+            "op": "callvirt",
+            "token": "0xa000908",
+            "callee": "System.Text.RegularExpressions.Regex::IsMatch"
+          },
+          {
+            "il": 89,
+            "op": "callvirt",
+            "token": "0xa00090c",
+            "callee": "SpecterInsight.ApiClient.Event::get_Details"
+          },
+          {
+            "il": 94,
+            "op": "callvirt",
+            "token": "0xa000908",
+            "callee": "System.Text.RegularExpressions.Regex::IsMatch"
+          },
+          {
+            "il": 105,
+            "op": "callvirt",
+            "token": "0xa000907",
+            "callee": "SpecterInsight.ApiClient.Event::get_Type"
+          },
+          {
+            "il": 110,
+            "op": "callvirt",
+            "token": "0xa000497",
+            "callee": "<TypeSpec/other>::Contains"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [],
+        "fields_selected": []
+      }
+    ]
+  },
+  {
+    "id": "ART-26e15294ad05cbb25ad2",
+    "path": "server/SpecterInsight.Server.Host.dll",
+    "sha256": "5a04275085e3fc64197f8dbb55b96a89736445fc490a674675959163ba5a58a0",
+    "mvid": "a7323df4-c701-43a6-aac0-0b59c502a573",
+    "methods": [
+      {
+        "declaring_type": "SpecterInsight.Server.Host.Program",
+        "name": "Main",
+        "token": "0x06000001",
+        "signature_ecma335": "000112551d0e",
+        "parameters": [
+          "args"
+        ],
+        "rva": 8272,
+        "body_size": 67,
+        "il_code_size": 55,
+        "il_sha256": "4c9908a92f7e98d525598bf4c09f7822a33fd867c0cb3e83b701cbf6421558e9",
+        "exception_regions": 0,
+        "calls": [
+          {
+            "il": 2,
+            "op": "call",
+            "token": "0xa000018",
+            "callee": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::Create"
+          },
+          {
+            "il": 37,
+            "op": "call",
+            "token": "0x2b000001",
+            "callee": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::Start"
+          },
+          {
+            "il": 49,
+            "op": "call",
+            "token": "0xa00001a",
+            "callee": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::get_Task"
+          }
+        ],
+        "call_selection": "framework-markers",
+        "strings_selected": [],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.Server.Host.Program",
+        "name": "<Main>",
+        "token": "0x06000003",
+        "signature_ecma335": "0001011d0e",
+        "parameters": [
+          "args"
+        ],
+        "rva": 8348,
+        "body_size": 32,
+        "il_code_size": 20,
+        "il_sha256": "718cd08a76724860f6d6a656c261a815b4164d14d56d8699c2e7dea8673af7b1",
+        "exception_regions": 0,
+        "calls": [
+          {
+            "il": 1,
+            "op": "call",
+            "token": "0x6000001",
+            "callee": "SpecterInsight.Server.Host.Program::Main"
+          },
+          {
+            "il": 6,
+            "op": "callvirt",
+            "token": "0xa00001c",
+            "callee": "System.Threading.Tasks.Task::GetAwaiter"
+          },
+          {
+            "il": 14,
+            "op": "call",
+            "token": "0xa00001d",
+            "callee": "System.Runtime.CompilerServices.TaskAwaiter::GetResult"
+          }
+        ],
+        "call_selection": "framework-markers",
+        "strings_selected": [],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.Server.Host.Program+<Main>d__0",
+        "name": "MoveNext",
+        "token": "0x06000004",
+        "signature_ecma335": "200001",
+        "parameters": [],
+        "rva": 8380,
+        "body_size": 276,
+        "il_code_size": 246,
+        "il_sha256": "f1cf03b58c104dfad719b7105ee30494d71bbe6bfcc4be7b0edfd52df0ac2619",
+        "exception_regions": 1,
+        "calls": [
+          {
+            "il": 23,
+            "op": "call",
+            "token": "0xa00001e",
+            "callee": "SpecterInsight.Server.KestrelManagementServer::Build"
+          },
+          {
+            "il": 28,
+            "op": "callvirt",
+            "token": "0xa00001f",
+            "callee": "<TypeSpec/other>::GetAwaiter"
+          },
+          {
+            "il": 108,
+            "op": "call",
+            "token": "0xa000022",
+            "callee": "<TypeSpec/other>::GetResult"
+          },
+          {
+            "il": 114,
+            "op": "callvirt",
+            "token": "0xa000023",
+            "callee": "Microsoft.AspNetCore.Builder.WebApplication::RunAsync"
+          },
+          {
+            "il": 119,
+            "op": "callvirt",
+            "token": "0xa00001c",
+            "callee": "System.Threading.Tasks.Task::GetAwaiter"
+          },
+          {
+            "il": 196,
+            "op": "call",
+            "token": "0xa00001d",
+            "callee": "System.Runtime.CompilerServices.TaskAwaiter::GetResult"
+          },
+          {
+            "il": 219,
+            "op": "call",
+            "token": "0xa000025",
+            "callee": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetException"
+          },
+          {
+            "il": 240,
+            "op": "call",
+            "token": "0xa000026",
+            "callee": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetResult"
+          }
+        ],
+        "call_selection": "framework-markers",
+        "strings_selected": [],
+        "fields_selected": []
+      }
+    ]
+  },
+  {
+    "id": "ART-91d2f15300146c3e7783",
+    "path": "server/SpecterInsight.Server.dll",
+    "sha256": "a6c454cdfc80e5d9bd3906747d30edbe4fcf69ab2e3c2b52b301b6f4b60e46a5",
+    "mvid": "1323c471-66a2-40e3-a048-50e1f9d4dcfb",
+    "methods": [
+      {
+        "declaring_type": "SpecterInsight.Server.Startup",
+        "name": "ConfigureServices",
+        "token": "0x0600003b",
+        "signature_ecma335": "2001011280e9",
+        "parameters": [
+          "services"
+        ],
+        "rva": 11172,
+        "body_size": 256,
+        "il_code_size": 244,
+        "il_sha256": "1ca66b3c095672215ec23bb9a8cd3ec30551b6d19b4d0193fe86b3a5bf4431e7",
+        "exception_regions": 0,
+        "calls": [
+          {
+            "il": 25,
+            "op": "call",
+            "token": "0x2b00000e",
+            "callee": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 32,
+            "op": "call",
+            "token": "0x2b00000f",
+            "callee": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 39,
+            "op": "call",
+            "token": "0x2b000010",
+            "callee": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 46,
+            "op": "call",
+            "token": "0x2b000011",
+            "callee": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 53,
+            "op": "call",
+            "token": "0x2b000012",
+            "callee": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 60,
+            "op": "call",
+            "token": "0x2b000013",
+            "callee": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 67,
+            "op": "call",
+            "token": "0x2b000014",
+            "callee": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 74,
+            "op": "call",
+            "token": "0x2b000015",
+            "callee": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 81,
+            "op": "call",
+            "token": "0x2b000016",
+            "callee": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 88,
+            "op": "call",
+            "token": "0x2b000017",
+            "callee": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 95,
+            "op": "call",
+            "token": "0x2b000018",
+            "callee": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 102,
+            "op": "call",
+            "token": "0x2b000019",
+            "callee": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 109,
+            "op": "call",
+            "token": "0x2b00001a",
+            "callee": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 116,
+            "op": "call",
+            "token": "0x2b00001b",
+            "callee": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 123,
+            "op": "call",
+            "token": "0x2b00001c",
+            "callee": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 130,
+            "op": "call",
+            "token": "0x2b000015",
+            "callee": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 137,
+            "op": "call",
+            "token": "0x2b00001d",
+            "callee": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 144,
+            "op": "call",
+            "token": "0xa0000c8",
+            "callee": "Microsoft.Extensions.DependencyInjection.SignalRDependencyInjectionExtensions::AddSignalR"
+          },
+          {
+            "il": 156,
+            "op": "call",
+            "token": "0xa0000ca",
+            "callee": "Microsoft.Extensions.DependencyInjection.MvcServiceCollectionExtensions::AddControllers"
+          }
+        ],
+        "call_selection": "framework-markers",
+        "strings_selected": [],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.Server.Startup",
+        "name": "Configure",
+        "token": "0x0600003c",
+        "signature_ecma335": "2002011280ed1280f1",
+        "parameters": [
+          "app",
+          "env"
+        ],
+        "rva": 11428,
+        "body_size": 218,
+        "il_code_size": 206,
+        "il_sha256": "3d6a6d061b537da7c674d57cc334be4eebc0c62b88e9ded64993889edf006131",
+        "exception_regions": 0,
+        "calls": [
+          {
+            "il": 69,
+            "op": "call",
+            "token": "0xa0000d4",
+            "callee": "System.Threading.Tasks.Task::Run"
+          },
+          {
+            "il": 76,
+            "op": "call",
+            "token": "0xa0000d5",
+            "callee": "Microsoft.AspNetCore.Builder.EndpointRoutingApplicationBuilderExtensions::UseRouting"
+          },
+          {
+            "il": 83,
+            "op": "call",
+            "token": "0xa0000d6",
+            "callee": "Microsoft.AspNetCore.Builder.AuthorizationAppBuilderExtensions::UseAuthorization"
+          },
+          {
+            "il": 161,
+            "op": "call",
+            "token": "0xa0000dc",
+            "callee": "Microsoft.AspNetCore.Builder.EndpointRoutingApplicationBuilderExtensions::UseEndpoints"
+          },
+          {
+            "il": 199,
+            "op": "call",
+            "token": "0xa0000dc",
+            "callee": "Microsoft.AspNetCore.Builder.EndpointRoutingApplicationBuilderExtensions::UseEndpoints"
+          }
+        ],
+        "call_selection": "framework-markers",
+        "strings_selected": [],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.Server.Controllers.DocumentationController",
+        "name": "GetDocumentation",
+        "token": "0x0600199b",
+        "signature_ecma335": "0000151275011d128a68",
+        "parameters": [],
+        "rva": 312916,
+        "body_size": 59,
+        "il_code_size": 47,
+        "il_sha256": "5a76a3292c0bd1bac3bb2d46ce9fc6388761ca5af716e3330e4e0173b0c75a08",
+        "exception_regions": 0,
+        "calls": [
+          {
+            "il": 2,
+            "op": "call",
+            "token": "0xa000a85",
+            "callee": "<TypeSpec/other>::Create"
+          },
+          {
+            "il": 29,
+            "op": "call",
+            "token": "0x2b0004c3",
+            "callee": "<TypeSpec/other>::Start"
+          },
+          {
+            "il": 41,
+            "op": "call",
+            "token": "0xa000a87",
+            "callee": "<TypeSpec/other>::get_Task"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.Server.Controllers.DocumentationController",
+        "name": "Load",
+        "token": "0x0600199d",
+        "signature_ecma335": "0001151275011d128a680e",
+        "parameters": [
+          "path"
+        ],
+        "rva": 312984,
+        "body_size": 67,
+        "il_code_size": 55,
+        "il_sha256": "1a368d522a71c219f74429485cfee3c6058b2fa119cd77d7d0e1f9eb4c8760a2",
+        "exception_regions": 0,
+        "calls": [
+          {
+            "il": 2,
+            "op": "call",
+            "token": "0xa000a85",
+            "callee": "<TypeSpec/other>::Create"
+          },
+          {
+            "il": 37,
+            "op": "call",
+            "token": "0x2b0004c4",
+            "callee": "<TypeSpec/other>::Start"
+          },
+          {
+            "il": 49,
+            "op": "call",
+            "token": "0xa000a87",
+            "callee": "<TypeSpec/other>::get_Task"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.Server.Controllers.DocumentationController",
+        "name": "GetAllDocumentation",
+        "token": "0x0600199e",
+        "signature_ecma335": "200015127501151289a101151280e101128a68",
+        "parameters": [],
+        "rva": 313052,
+        "body_size": 67,
+        "il_code_size": 55,
+        "il_sha256": "b28cb883d44aebf4e0471f222a04e438dee13d3a67a86471d0650f43436b26c0",
+        "exception_regions": 0,
+        "calls": [
+          {
+            "il": 2,
+            "op": "call",
+            "token": "0xa000a88",
+            "callee": "<TypeSpec/other>::Create"
+          },
+          {
+            "il": 37,
+            "op": "call",
+            "token": "0x2b0004c5",
+            "callee": "<TypeSpec/other>::Start"
+          },
+          {
+            "il": 49,
+            "op": "call",
+            "token": "0xa000a8a",
+            "callee": "<TypeSpec/other>::get_Task"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.Server.Controllers.DocumentationController+<GetAllDocumentation>d__7",
+        "name": "MoveNext",
+        "token": "0x06002725",
+        "signature_ecma335": "200001",
+        "parameters": [],
+        "rva": 901368,
+        "body_size": 200,
+        "il_code_size": 169,
+        "il_sha256": "96ff57b838f9469df85da78a1203b5fe2e65aed8a4d4c30a60029a2d0c71dedd",
+        "exception_regions": 1,
+        "calls": [
+          {
+            "il": 17,
+            "op": "call",
+            "token": "0x600199b",
+            "callee": "SpecterInsight.Server.Controllers.DocumentationController::GetDocumentation"
+          },
+          {
+            "il": 22,
+            "op": "callvirt",
+            "token": "0xa001625",
+            "callee": "<TypeSpec/other>::GetAwaiter"
+          },
+          {
+            "il": 31,
+            "op": "call",
+            "token": "0xa001626",
+            "callee": "<TypeSpec/other>::get_IsCompleted"
+          },
+          {
+            "il": 64,
+            "op": "call",
+            "token": "0x2b000c92",
+            "callee": "<TypeSpec/other>::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 102,
+            "op": "call",
+            "token": "0xa001628",
+            "callee": "<TypeSpec/other>::GetResult"
+          },
+          {
+            "il": 110,
+            "op": "callvirt",
+            "token": "0xa000a51",
+            "callee": "Microsoft.AspNetCore.Mvc.ControllerBase::Ok"
+          },
+          {
+            "il": 115,
+            "op": "call",
+            "token": "0xa001629",
+            "callee": "<TypeSpec/other>::op_Implicit"
+          },
+          {
+            "il": 141,
+            "op": "call",
+            "token": "0xa00162a",
+            "callee": "<TypeSpec/other>::SetException"
+          },
+          {
+            "il": 163,
+            "op": "call",
+            "token": "0xa00162b",
+            "callee": "<TypeSpec/other>::SetResult"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.Server.Controllers.DocumentationController+<GetDocumentation>d__3",
+        "name": "MoveNext",
+        "token": "0x06002727",
+        "signature_ecma335": "200001",
+        "parameters": [],
+        "rva": 901584,
+        "body_size": 196,
+        "il_code_size": 166,
+        "il_sha256": "8740cc4caa957b40a2a01551b707a91c198d0919d6aff3498418a3ba75175dd5",
+        "exception_regions": 1,
+        "calls": [
+          {
+            "il": 17,
+            "op": "call",
+            "token": "0x60018ee",
+            "callee": "SpecterInsight.Server.IO.ServerPaths::get_DocumentationFolder"
+          },
+          {
+            "il": 22,
+            "op": "call",
+            "token": "0x600199d",
+            "callee": "SpecterInsight.Server.Controllers.DocumentationController::Load"
+          },
+          {
+            "il": 27,
+            "op": "callvirt",
+            "token": "0xa001625",
+            "callee": "<TypeSpec/other>::GetAwaiter"
+          },
+          {
+            "il": 35,
+            "op": "call",
+            "token": "0xa001626",
+            "callee": "<TypeSpec/other>::get_IsCompleted"
+          },
+          {
+            "il": 67,
+            "op": "call",
+            "token": "0x2b000c93",
+            "callee": "<TypeSpec/other>::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 104,
+            "op": "call",
+            "token": "0xa001628",
+            "callee": "<TypeSpec/other>::GetResult"
+          },
+          {
+            "il": 138,
+            "op": "call",
+            "token": "0xa00162e",
+            "callee": "<TypeSpec/other>::SetException"
+          },
+          {
+            "il": 160,
+            "op": "call",
+            "token": "0xa00162f",
+            "callee": "<TypeSpec/other>::SetResult"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.Server.Controllers.DocumentationController+<Load>d__6",
+        "name": "MoveNext",
+        "token": "0x06002729",
+        "signature_ecma335": "200001",
+        "parameters": [],
+        "rva": 901796,
+        "body_size": 1068,
+        "il_code_size": 1026,
+        "il_sha256": "07c1ddc0c15f5570032dceea3bfda267923e7fa520bf95f06f5f2bd256bc295e",
+        "exception_regions": 1,
+        "calls": [
+          {
+            "il": 31,
+            "op": "call",
+            "token": "0xa00011d",
+            "callee": "System.IO.Directory::Exists"
+          },
+          {
+            "il": 38,
+            "op": "call",
+            "token": "0x2b000c94",
+            "callee": "System.Array::Empty"
+          },
+          {
+            "il": 56,
+            "op": "newobj",
+            "token": "0xa000116",
+            "callee": "System.IO.DirectoryInfo::.ctor"
+          },
+          {
+            "il": 67,
+            "op": "newobj",
+            "token": "0xa001631",
+            "callee": "<TypeSpec/other>::.ctor"
+          },
+          {
+            "il": 78,
+            "op": "newobj",
+            "token": "0xa001631",
+            "callee": "<TypeSpec/other>::.ctor"
+          },
+          {
+            "il": 95,
+            "op": "callvirt",
+            "token": "0xa001632",
+            "callee": "System.IO.DirectoryInfo::GetDirectories"
+          },
+          {
+            "il": 137,
+            "op": "newobj",
+            "token": "0x600197c",
+            "callee": "SpecterInsight.Server.Controllers.DocumentationEntry::.ctor"
+          },
+          {
+            "il": 159,
+            "op": "callvirt",
+            "token": "0xa000117",
+            "callee": "System.IO.FileSystemInfo::get_Name"
+          },
+          {
+            "il": 164,
+            "op": "callvirt",
+            "token": "0x6001977",
+            "callee": "SpecterInsight.Server.Controllers.DocumentationEntry::set_Name"
+          },
+          {
+            "il": 187,
+            "op": "callvirt",
+            "token": "0xa000a3a",
+            "callee": "System.IO.FileSystemInfo::get_FullName"
+          },
+          {
+            "il": 192,
+            "op": "call",
+            "token": "0x600199d",
+            "callee": "SpecterInsight.Server.Controllers.DocumentationController::Load"
+          },
+          {
+            "il": 197,
+            "op": "callvirt",
+            "token": "0xa001625",
+            "callee": "<TypeSpec/other>::GetAwaiter"
+          },
+          {
+            "il": 206,
+            "op": "call",
+            "token": "0xa001626",
+            "callee": "<TypeSpec/other>::get_IsCompleted"
+          },
+          {
+            "il": 239,
+            "op": "call",
+            "token": "0x2b000c95",
+            "callee": "<TypeSpec/other>::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 280,
+            "op": "call",
+            "token": "0xa001628",
+            "callee": "<TypeSpec/other>::GetResult"
+          },
+          {
+            "il": 293,
+            "op": "callvirt",
+            "token": "0x600197b",
+            "callee": "SpecterInsight.Server.Controllers.DocumentationEntry::set_Children"
+          },
+          {
+            "il": 311,
+            "op": "callvirt",
+            "token": "0xa000a3a",
+            "callee": "System.IO.FileSystemInfo::get_FullName"
+          },
+          {
+            "il": 321,
+            "op": "call",
+            "token": "0xa00011c",
+            "callee": "System.IO.Path::Combine"
+          },
+          {
+            "il": 326,
+            "op": "newobj",
+            "token": "0xa000414",
+            "callee": "System.IO.FileInfo::.ctor"
+          },
+          {
+            "il": 345,
+            "op": "callvirt",
+            "token": "0xa001633",
+            "callee": "System.IO.FileSystemInfo::get_Exists"
+          },
+          {
+            "il": 353,
+            "op": "callvirt",
+            "token": "0xa000a3a",
+            "callee": "System.IO.FileSystemInfo::get_FullName"
+          },
+          {
+            "il": 368,
+            "op": "call",
+            "token": "0xa000ce0",
+            "callee": "System.IO.File::ReadAllTextAsync"
+          },
+          {
+            "il": 373,
+            "op": "callvirt",
+            "token": "0xa0003fe",
+            "callee": "<TypeSpec/other>::GetAwaiter"
+          },
+          {
+            "il": 382,
+            "op": "call",
+            "token": "0xa000b90",
+            "callee": "<TypeSpec/other>::get_IsCompleted"
+          },
+          {
+            "il": 415,
+            "op": "call",
+            "token": "0x2b000c96",
+            "callee": "<TypeSpec/other>::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 456,
+            "op": "call",
+            "token": "0xa0003ff",
+            "callee": "<TypeSpec/other>::GetResult"
+          },
+          {
+            "il": 480,
+            "op": "callvirt",
+            "token": "0x6001979",
+            "callee": "SpecterInsight.Server.Controllers.DocumentationEntry::set_Contents"
+          },
+          {
+            "il": 504,
+            "op": "callvirt",
+            "token": "0xa001634",
+            "callee": "<TypeSpec/other>::Add"
+          },
+          {
+            "il": 575,
+            "op": "callvirt",
+            "token": "0xa001635",
+            "callee": "System.IO.DirectoryInfo::GetFiles"
+          },
+          {
+            "il": 613,
+            "op": "newobj",
+            "token": "0x600197c",
+            "callee": "SpecterInsight.Server.Controllers.DocumentationEntry::.ctor"
+          },
+          {
+            "il": 631,
+            "op": "callvirt",
+            "token": "0xa000117",
+            "callee": "System.IO.FileSystemInfo::get_Name"
+          },
+          {
+            "il": 636,
+            "op": "call",
+            "token": "0xa000206",
+            "callee": "System.IO.Path::GetFileNameWithoutExtension"
+          },
+          {
+            "il": 641,
+            "op": "callvirt",
+            "token": "0x6001977",
+            "callee": "SpecterInsight.Server.Controllers.DocumentationEntry::set_Name"
+          },
+          {
+            "il": 660,
+            "op": "callvirt",
+            "token": "0xa000a3a",
+            "callee": "System.IO.FileSystemInfo::get_FullName"
+          },
+          {
+            "il": 675,
+            "op": "call",
+            "token": "0xa000ce0",
+            "callee": "System.IO.File::ReadAllTextAsync"
+          },
+          {
+            "il": 680,
+            "op": "callvirt",
+            "token": "0xa0003fe",
+            "callee": "<TypeSpec/other>::GetAwaiter"
+          },
+          {
+            "il": 689,
+            "op": "call",
+            "token": "0xa000b90",
+            "callee": "<TypeSpec/other>::get_IsCompleted"
+          },
+          {
+            "il": 722,
+            "op": "call",
+            "token": "0x2b000c96",
+            "callee": "<TypeSpec/other>::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 763,
+            "op": "call",
+            "token": "0xa0003ff",
+            "callee": "<TypeSpec/other>::GetResult"
+          },
+          {
+            "il": 778,
+            "op": "callvirt",
+            "token": "0x6001979",
+            "callee": "SpecterInsight.Server.Controllers.DocumentationEntry::set_Contents"
+          },
+          {
+            "il": 802,
+            "op": "callvirt",
+            "token": "0x600197b",
+            "callee": "SpecterInsight.Server.Controllers.DocumentationEntry::set_Children"
+          },
+          {
+            "il": 819,
+            "op": "callvirt",
+            "token": "0xa001634",
+            "callee": "<TypeSpec/other>::Add"
+          },
+          {
+            "il": 891,
+            "op": "ldftn",
+            "token": "0x6002722",
+            "callee": "SpecterInsight.Server.Controllers.DocumentationController+<>c::<Load>b__6_0"
+          },
+          {
+            "il": 897,
+            "op": "newobj",
+            "token": "0xa001636",
+            "callee": "<TypeSpec/other>::.ctor"
+          },
+          {
+            "il": 908,
+            "op": "callvirt",
+            "token": "0xa001637",
+            "callee": "<TypeSpec/other>::Sort"
+          },
+          {
+            "il": 925,
+            "op": "call",
+            "token": "0x2b000c97",
+            "callee": "System.Linq.Enumerable::Concat"
+          },
+          {
+            "il": 930,
+            "op": "call",
+            "token": "0x2b000c98",
+            "callee": "System.Linq.Enumerable::ToArray"
+          },
+          {
+            "il": 977,
+            "op": "call",
+            "token": "0xa00162e",
+            "callee": "<TypeSpec/other>::SetException"
+          },
+          {
+            "il": 1020,
+            "op": "call",
+            "token": "0xa00162f",
+            "callee": "<TypeSpec/other>::SetResult"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [
+          {
+            "il": 316,
+            "value": "Overview.md"
+          },
+          {
+            "il": 570,
+            "value": "*.md"
+          }
+        ],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.Server.Services.Database.DatabaseService+<CreateDocumentationChunksTableAsync>d__95",
+        "name": "MoveNext",
+        "token": "0x06002294",
+        "signature_ecma335": "200001",
+        "parameters": [],
+        "rva": 652684,
+        "body_size": 296,
+        "il_code_size": 255,
+        "il_sha256": "ab72e0bbb0d8aabd4dbf150867396239966ced8eb2850f042ceefb11e74f6649",
+        "exception_regions": 2,
+        "calls": [
+          {
+            "il": 27,
+            "op": "call",
+            "token": "0xa00011e",
+            "callee": "System.String::Format"
+          },
+          {
+            "il": 41,
+            "op": "callvirt",
+            "token": "0xa00080b",
+            "callee": "Npgsql.NpgsqlDataSource::CreateCommand"
+          },
+          {
+            "il": 61,
+            "op": "callvirt",
+            "token": "0xa001305",
+            "callee": "System.Data.Common.DbCommand::ExecuteNonQueryAsync"
+          },
+          {
+            "il": 67,
+            "op": "callvirt",
+            "token": "0xa000d9c",
+            "callee": "<TypeSpec/other>::ConfigureAwait"
+          },
+          {
+            "il": 76,
+            "op": "call",
+            "token": "0xa000d9d",
+            "callee": "<TypeSpec/other>::GetAwaiter"
+          },
+          {
+            "il": 84,
+            "op": "call",
+            "token": "0xa000d9e",
+            "callee": "<TypeSpec/other>::get_IsCompleted"
+          },
+          {
+            "il": 116,
+            "op": "call",
+            "token": "0x2b00098b",
+            "callee": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 156,
+            "op": "call",
+            "token": "0xa000d9f",
+            "callee": "<TypeSpec/other>::GetResult"
+          },
+          {
+            "il": 169,
+            "op": "newobj",
+            "token": "0xa00011f",
+            "callee": "System.Exception::.ctor"
+          },
+          {
+            "il": 195,
+            "op": "callvirt",
+            "token": "0xa000037",
+            "callee": "System.IDisposable::Dispose"
+          },
+          {
+            "il": 228,
+            "op": "call",
+            "token": "0xa000b9c",
+            "callee": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetException"
+          },
+          {
+            "il": 249,
+            "op": "call",
+            "token": "0xa000b9d",
+            "callee": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetResult"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [
+          {
+            "il": 17,
+            "value": "CREATE TABLE IF NOT EXISTS {0} (\n    id         SERIAL PRIMARY KEY,\n    Path       TEXT NOT NULL,\n    Title      TEXT NOT NULL,\n    Content    TEXT NOT NULL,\n    Embedding  real[],\n    ChunkIndex INTEGER NOT NULL DEFAULT 0,\n    IndexedAt  TIMESTAMPTZ NOT NULL DEFAULT NOW()\n);\nCREATE UNIQUE INDEX IF NOT EXISTS ix_doc_chunks_path_idx ON {0} (Path, ChunkIndex);"
+          },
+          {
+            "il": 22,
+            "value": "DocumentationChunks"
+          }
+        ],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService",
+        "name": ".ctor",
+        "token": "0x06000fad",
+        "signature_ecma335": "20010115128829020e0e",
+        "parameters": [
+          "vendors"
+        ],
+        "rva": 226280,
+        "body_size": 25,
+        "il_code_size": 24,
+        "il_sha256": "23ed800f4ef8dae5a22fa020e46757232596e691159dba34d363d924ab6e4999",
+        "exception_regions": 0,
+        "calls": [
+          {
+            "il": 1,
+            "op": "call",
+            "token": "0xa000087",
+            "callee": "System.Object::.ctor"
+          },
+          {
+            "il": 8,
+            "op": "call",
+            "token": "0xa0002f7",
+            "callee": "System.StringComparer::get_OrdinalIgnoreCase"
+          },
+          {
+            "il": 13,
+            "op": "newobj",
+            "token": "0xa000857",
+            "callee": "<TypeSpec/other>::.ctor"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService",
+        "name": "TryLookupVendor",
+        "token": "0x06000fb1",
+        "signature_ecma335": "2002020e100e",
+        "parameters": [
+          "value",
+          "vendor"
+        ],
+        "rva": 226648,
+        "body_size": 58,
+        "il_code_size": 46,
+        "il_sha256": "69af66c2d77c15c7160bfccdebc4b2623b9f4f08422b580931b83769694a83c1",
+        "exception_regions": 0,
+        "calls": [
+          {
+            "il": 4,
+            "op": "call",
+            "token": "0xa0002fc",
+            "callee": "System.String::IsNullOrWhiteSpace"
+          },
+          {
+            "il": 15,
+            "op": "call",
+            "token": "0x6000fb2",
+            "callee": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService::NormalizeOui"
+          },
+          {
+            "il": 22,
+            "op": "callvirt",
+            "token": "0xa0000e6",
+            "callee": "System.String::get_Length"
+          },
+          {
+            "il": 40,
+            "op": "callvirt",
+            "token": "0xa0000ff",
+            "callee": "<TypeSpec/other>::TryGetValue"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService",
+        "name": "NormalizeOui",
+        "token": "0x06000fb2",
+        "signature_ecma335": "20010e0e",
+        "parameters": [
+          "mac"
+        ],
+        "rva": 226708,
+        "body_size": 54,
+        "il_code_size": 42,
+        "il_sha256": "fe97a9fb8699c17ccdff4957137b4bac8d2486bc4d1f76a068e9bdde0e78d36b",
+        "exception_regions": 0,
+        "calls": [
+          {
+            "il": 11,
+            "op": "callvirt",
+            "token": "0xa000859",
+            "callee": "System.Text.RegularExpressions.Regex::Replace"
+          },
+          {
+            "il": 16,
+            "op": "callvirt",
+            "token": "0xa0003c0",
+            "callee": "System.String::ToUpperInvariant"
+          },
+          {
+            "il": 23,
+            "op": "callvirt",
+            "token": "0xa0000e6",
+            "callee": "System.String::get_Length"
+          },
+          {
+            "il": 36,
+            "op": "callvirt",
+            "token": "0xa0000e7",
+            "callee": "System.String::Substring"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService",
+        "name": "LoadVendors",
+        "token": "0x06000fb4",
+        "signature_ecma335": "2001151280d9020e0e0e",
+        "parameters": [
+          "path"
+        ],
+        "rva": 226872,
+        "body_size": 296,
+        "il_code_size": 265,
+        "il_sha256": "dde482907db7cc4d6669fd883a38e8ec47d97ee320958a60f4d512024133621d",
+        "exception_regions": 1,
+        "calls": [
+          {
+            "il": 0,
+            "op": "call",
+            "token": "0xa0002f7",
+            "callee": "System.StringComparer::get_OrdinalIgnoreCase"
+          },
+          {
+            "il": 5,
+            "op": "newobj",
+            "token": "0xa000792",
+            "callee": "<TypeSpec/other>::.ctor"
+          },
+          {
+            "il": 12,
+            "op": "call",
+            "token": "0xa00013f",
+            "callee": "System.IO.File::Exists"
+          },
+          {
+            "il": 24,
+            "op": "call",
+            "token": "0xa00085a",
+            "callee": "System.IO.File::ReadLines"
+          },
+          {
+            "il": 29,
+            "op": "callvirt",
+            "token": "0xa00003c",
+            "callee": "<TypeSpec/other>::GetEnumerator"
+          },
+          {
+            "il": 41,
+            "op": "callvirt",
+            "token": "0xa000039",
+            "callee": "<TypeSpec/other>::get_Current"
+          },
+          {
+            "il": 58,
+            "op": "call",
+            "token": "0xa0002fc",
+            "callee": "System.String::IsNullOrWhiteSpace"
+          },
+          {
+            "il": 71,
+            "op": "callvirt",
+            "token": "0xa00038e",
+            "callee": "System.String::IndexOf"
+          },
+          {
+            "il": 93,
+            "op": "callvirt",
+            "token": "0xa000616",
+            "callee": "System.String::IndexOf"
+          },
+          {
+            "il": 104,
+            "op": "callvirt",
+            "token": "0xa0000e7",
+            "callee": "System.String::Substring"
+          },
+          {
+            "il": 109,
+            "op": "callvirt",
+            "token": "0xa00036c",
+            "callee": "System.String::Trim"
+          },
+          {
+            "il": 127,
+            "op": "callvirt",
+            "token": "0xa0002c1",
+            "callee": "System.String::Substring"
+          },
+          {
+            "il": 132,
+            "op": "callvirt",
+            "token": "0xa00036c",
+            "callee": "System.String::Trim"
+          },
+          {
+            "il": 139,
+            "op": "callvirt",
+            "token": "0xa00085b",
+            "callee": "System.String::Trim"
+          },
+          {
+            "il": 158,
+            "op": "callvirt",
+            "token": "0xa0000e7",
+            "callee": "System.String::Substring"
+          },
+          {
+            "il": 163,
+            "op": "callvirt",
+            "token": "0xa00036c",
+            "callee": "System.String::Trim"
+          },
+          {
+            "il": 170,
+            "op": "callvirt",
+            "token": "0xa00085b",
+            "callee": "System.String::Trim"
+          },
+          {
+            "il": 179,
+            "op": "call",
+            "token": "0xa000179",
+            "callee": "System.String::IsNullOrEmpty"
+          },
+          {
+            "il": 188,
+            "op": "call",
+            "token": "0xa000179",
+            "callee": "System.String::IsNullOrEmpty"
+          },
+          {
+            "il": 207,
+            "op": "callvirt",
+            "token": "0xa000859",
+            "callee": "System.Text.RegularExpressions.Regex::Replace"
+          },
+          {
+            "il": 212,
+            "op": "callvirt",
+            "token": "0xa0003c0",
+            "callee": "System.String::ToUpperInvariant"
+          },
+          {
+            "il": 221,
+            "op": "callvirt",
+            "token": "0xa0000e6",
+            "callee": "System.String::get_Length"
+          },
+          {
+            "il": 234,
+            "op": "callvirt",
+            "token": "0xa00085c",
+            "callee": "<TypeSpec/other>::TryAdd"
+          },
+          {
+            "il": 241,
+            "op": "callvirt",
+            "token": "0xa000038",
+            "callee": "System.Collections.IEnumerator::MoveNext"
+          },
+          {
+            "il": 257,
+            "op": "callvirt",
+            "token": "0xa000037",
+            "callee": "System.IDisposable::Dispose"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.Server.Services.Database.DatabaseService",
+        "name": ".ctor",
+        "token": "0x06000c7e",
+        "signature_ecma335": "2001011287e9",
+        "parameters": [
+          "npgsql"
+        ],
+        "rva": 193190,
+        "body_size": 15,
+        "il_code_size": 14,
+        "il_sha256": "cffec911085824412bc3835be5064daf69af428a90c066ed4b4dcaafc21fdc34",
+        "exception_regions": 0,
+        "calls": [
+          {
+            "il": 1,
+            "op": "call",
+            "token": "0xa000087",
+            "callee": "System.Object::.ctor"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.Server.Services.Database.DatabaseService",
+        "name": "UpsertDocumentationChunkAsync",
+        "token": "0x06000cd2",
+        "signature_ecma335": "200212791285c01180c1",
+        "parameters": [
+          "chunk",
+          "ct"
+        ],
+        "rva": 199584,
+        "body_size": 83,
+        "il_code_size": 71,
+        "il_sha256": "fea86130a2ff86d4b815a3e586975d62493555821c6518ccbff292c7650208dc",
+        "exception_regions": 0,
+        "calls": [
+          {
+            "il": 2,
+            "op": "call",
+            "token": "0xa0000a8",
+            "callee": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::Create"
+          },
+          {
+            "il": 53,
+            "op": "call",
+            "token": "0x2b0002e0",
+            "callee": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::Start"
+          },
+          {
+            "il": 65,
+            "op": "call",
+            "token": "0xa0000aa",
+            "callee": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::get_Task"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.Server.Services.Database.DatabaseService",
+        "name": "GetDocumentationChunkCountAsync",
+        "token": "0x06000cd4",
+        "signature_ecma335": "200115127501081180c1",
+        "parameters": [
+          "ct"
+        ],
+        "rva": 199744,
+        "body_size": 75,
+        "il_code_size": 63,
+        "il_sha256": "a3a19474e5062053ccef7949ee5c346fd8b07d90951dc751c9f9e4e4deec9966",
+        "exception_regions": 0,
+        "calls": [
+          {
+            "il": 2,
+            "op": "call",
+            "token": "0xa0007c0",
+            "callee": "<TypeSpec/other>::Create"
+          },
+          {
+            "il": 45,
+            "op": "call",
+            "token": "0x2b0002e2",
+            "callee": "<TypeSpec/other>::Start"
+          },
+          {
+            "il": 57,
+            "op": "call",
+            "token": "0xa0007c2",
+            "callee": "<TypeSpec/other>::get_Task"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.Server.Services.Database.DatabaseService",
+        "name": "GetDocumentationChunkWithEmbeddingCountAsync",
+        "token": "0x06000cd5",
+        "signature_ecma335": "200115127501081180c1",
+        "parameters": [
+          "ct"
+        ],
+        "rva": 199820,
+        "body_size": 75,
+        "il_code_size": 63,
+        "il_sha256": "2757465a0a9ff1392d8ebc905588f6fd3779192da487df00b61a7c25ade9d909",
+        "exception_regions": 0,
+        "calls": [
+          {
+            "il": 2,
+            "op": "call",
+            "token": "0xa0007c0",
+            "callee": "<TypeSpec/other>::Create"
+          },
+          {
+            "il": 45,
+            "op": "call",
+            "token": "0x2b0002e3",
+            "callee": "<TypeSpec/other>::Start"
+          },
+          {
+            "il": 57,
+            "op": "call",
+            "token": "0xa0007c2",
+            "callee": "<TypeSpec/other>::get_Task"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.Server.Services.Database.DatabaseService",
+        "name": "ClearDocumentationChunksAsync",
+        "token": "0x06000cd6",
+        "signature_ecma335": "200112791180c1",
+        "parameters": [
+          "ct"
+        ],
+        "rva": 199896,
+        "body_size": 75,
+        "il_code_size": 63,
+        "il_sha256": "e218088a1eb3644f16931d1a7b2a2ed18d023eef455a9cc771e70677f28be3fd",
+        "exception_regions": 0,
+        "calls": [
+          {
+            "il": 2,
+            "op": "call",
+            "token": "0xa0000a8",
+            "callee": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::Create"
+          },
+          {
+            "il": 45,
+            "op": "call",
+            "token": "0x2b0002e4",
+            "callee": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::Start"
+          },
+          {
+            "il": 57,
+            "op": "call",
+            "token": "0xa0000aa",
+            "callee": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::get_Task"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.Server.Services.Events.EventLoggingService",
+        "name": "LogAsync",
+        "token": "0x06000b56",
+        "signature_ecma335": "200212791285181180c1",
+        "parameters": [
+          "evt",
+          "ct"
+        ],
+        "rva": 178260,
+        "body_size": 83,
+        "il_code_size": 71,
+        "il_sha256": "0375d60dc1c7b442341d2b12a503819721b3f5506a1b7514935ae0eb75dde7fb",
+        "exception_regions": 0,
+        "calls": [
+          {
+            "il": 2,
+            "op": "call",
+            "token": "0xa0000a8",
+            "callee": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::Create"
+          },
+          {
+            "il": 53,
+            "op": "call",
+            "token": "0x2b00023a",
+            "callee": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::Start"
+          },
+          {
+            "il": 65,
+            "op": "call",
+            "token": "0xa0000aa",
+            "callee": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::get_Task"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.Server.Services.Events.EventLoggingService+<LogAsync>d__3",
+        "name": "MoveNext",
+        "token": "0x060021d1",
+        "signature_ecma335": "200001",
+        "parameters": [],
+        "rva": 612516,
+        "body_size": 496,
+        "il_code_size": 406,
+        "il_sha256": "a8e32b9ca6e66c48eca6ed1c653476ce38886ea43d160caeb3c6aa6cbe9ce1df",
+        "exception_regions": 3,
+        "calls": [
+          {
+            "il": 46,
+            "op": "callvirt",
+            "token": "0x6000ce0",
+            "callee": "SpecterInsight.Server.Services.Database.DatabaseService::InsertEventAsync"
+          },
+          {
+            "il": 52,
+            "op": "callvirt",
+            "token": "0xa000b91",
+            "callee": "System.Threading.Tasks.Task::ConfigureAwait"
+          },
+          {
+            "il": 60,
+            "op": "call",
+            "token": "0xa000b92",
+            "callee": "System.Runtime.CompilerServices.ConfiguredTaskAwaitable::GetAwaiter"
+          },
+          {
+            "il": 68,
+            "op": "call",
+            "token": "0xa000b93",
+            "callee": "ConfiguredTaskAwaiter::get_IsCompleted"
+          },
+          {
+            "il": 100,
+            "op": "call",
+            "token": "0x2b000919",
+            "callee": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 140,
+            "op": "call",
+            "token": "0xa000b94",
+            "callee": "ConfiguredTaskAwaiter::GetResult"
+          },
+          {
+            "il": 162,
+            "op": "call",
+            "token": "0x2b000022",
+            "callee": "System.Array::Empty"
+          },
+          {
+            "il": 167,
+            "op": "call",
+            "token": "0xa000177",
+            "callee": "Microsoft.Extensions.Logging.LoggerExtensions::LogError"
+          },
+          {
+            "il": 185,
+            "op": "callvirt",
+            "token": "0xa000c8c",
+            "callee": "<TypeSpec/other>::get_Clients"
+          },
+          {
+            "il": 203,
+            "op": "callvirt",
+            "token": "0xa000c8d",
+            "callee": "<TypeSpec/other>::get_All"
+          },
+          {
+            "il": 234,
+            "op": "callvirt",
+            "token": "0xa000e63",
+            "callee": "Microsoft.AspNetCore.SignalR.IClientProxy::SendCoreAsync"
+          },
+          {
+            "il": 240,
+            "op": "callvirt",
+            "token": "0xa000b91",
+            "callee": "System.Threading.Tasks.Task::ConfigureAwait"
+          },
+          {
+            "il": 248,
+            "op": "call",
+            "token": "0xa000b92",
+            "callee": "System.Runtime.CompilerServices.ConfiguredTaskAwaitable::GetAwaiter"
+          },
+          {
+            "il": 256,
+            "op": "call",
+            "token": "0xa000b93",
+            "callee": "ConfiguredTaskAwaiter::get_IsCompleted"
+          },
+          {
+            "il": 288,
+            "op": "call",
+            "token": "0x2b000919",
+            "callee": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 325,
+            "op": "call",
+            "token": "0xa000b94",
+            "callee": "ConfiguredTaskAwaiter::GetResult"
+          },
+          {
+            "il": 347,
+            "op": "call",
+            "token": "0x2b000022",
+            "callee": "System.Array::Empty"
+          },
+          {
+            "il": 352,
+            "op": "call",
+            "token": "0xa000177",
+            "callee": "Microsoft.Extensions.Logging.LoggerExtensions::LogError"
+          },
+          {
+            "il": 379,
+            "op": "call",
+            "token": "0xa000b9c",
+            "callee": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetException"
+          },
+          {
+            "il": 400,
+            "op": "call",
+            "token": "0xa000b9d",
+            "callee": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetResult"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.Server.Services.Database.DatabaseService+<CreateEventsTableAsync>d__111",
+        "name": "MoveNext",
+        "token": "0x0600229a",
+        "signature_ecma335": "200001",
+        "parameters": [],
+        "rva": 654332,
+        "body_size": 296,
+        "il_code_size": 255,
+        "il_sha256": "fa5ca48c0dc76a128fb42776708e09f4f14d9dbd8bc6fa0d4ee428a21550eaae",
+        "exception_regions": 2,
+        "calls": [
+          {
+            "il": 27,
+            "op": "call",
+            "token": "0xa00011e",
+            "callee": "System.String::Format"
+          },
+          {
+            "il": 41,
+            "op": "callvirt",
+            "token": "0xa00080b",
+            "callee": "Npgsql.NpgsqlDataSource::CreateCommand"
+          },
+          {
+            "il": 61,
+            "op": "callvirt",
+            "token": "0xa001305",
+            "callee": "System.Data.Common.DbCommand::ExecuteNonQueryAsync"
+          },
+          {
+            "il": 67,
+            "op": "callvirt",
+            "token": "0xa000d9c",
+            "callee": "<TypeSpec/other>::ConfigureAwait"
+          },
+          {
+            "il": 76,
+            "op": "call",
+            "token": "0xa000d9d",
+            "callee": "<TypeSpec/other>::GetAwaiter"
+          },
+          {
+            "il": 84,
+            "op": "call",
+            "token": "0xa000d9e",
+            "callee": "<TypeSpec/other>::get_IsCompleted"
+          },
+          {
+            "il": 116,
+            "op": "call",
+            "token": "0x2b00098f",
+            "callee": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 156,
+            "op": "call",
+            "token": "0xa000d9f",
+            "callee": "<TypeSpec/other>::GetResult"
+          },
+          {
+            "il": 169,
+            "op": "newobj",
+            "token": "0xa00011f",
+            "callee": "System.Exception::.ctor"
+          },
+          {
+            "il": 195,
+            "op": "callvirt",
+            "token": "0xa000037",
+            "callee": "System.IDisposable::Dispose"
+          },
+          {
+            "il": 228,
+            "op": "call",
+            "token": "0xa000b9c",
+            "callee": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetException"
+          },
+          {
+            "il": 249,
+            "op": "call",
+            "token": "0xa000b9d",
+            "callee": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetResult"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [
+          {
+            "il": 17,
+            "value": "CREATE TABLE IF NOT EXISTS {0} (\r\n    id SERIAL PRIMARY KEY,\r\n    Identifier TEXT NOT NULL,\r\n    Timestamp TIMESTAMP WITH TIME ZONE NOT NULL,\r\n    Type TEXT NOT NULL,\r\n    Source TEXT NOT NULL,\r\n    Outcome TEXT NOT NULL,\r\n    System TEXT NOT NULL,\r\n    Message TEXT NOT NULL,\r\n    Details TEXT NOT NULL\r\n);"
+          }
+        ],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.Server.Services.Database.DatabaseService+<DeleteEventsByTypeAsync>d__117",
+        "name": "MoveNext",
+        "token": "0x0600230e",
+        "signature_ecma335": "200001",
+        "parameters": [],
+        "rva": 673880,
+        "body_size": 308,
+        "il_code_size": 268,
+        "il_sha256": "150e4755746fe8f7316d0bffdb5227653143b204f349c3cfaf6bc3a5ffb00d85",
+        "exception_regions": 2,
+        "calls": [
+          {
+            "il": 31,
+            "op": "callvirt",
+            "token": "0xa00080b",
+            "callee": "Npgsql.NpgsqlDataSource::CreateCommand"
+          },
+          {
+            "il": 51,
+            "op": "callvirt",
+            "token": "0xa00080c",
+            "callee": "Npgsql.NpgsqlCommand::get_Parameters"
+          },
+          {
+            "il": 67,
+            "op": "newobj",
+            "token": "0xa00080d",
+            "callee": "Npgsql.NpgsqlParameter::.ctor"
+          },
+          {
+            "il": 72,
+            "op": "callvirt",
+            "token": "0xa00080e",
+            "callee": "Npgsql.NpgsqlParameterCollection::Add"
+          },
+          {
+            "il": 90,
+            "op": "callvirt",
+            "token": "0xa001304",
+            "callee": "System.Data.Common.DbCommand::ExecuteNonQueryAsync"
+          },
+          {
+            "il": 96,
+            "op": "callvirt",
+            "token": "0xa000d9c",
+            "callee": "<TypeSpec/other>::ConfigureAwait"
+          },
+          {
+            "il": 105,
+            "op": "call",
+            "token": "0xa000d9d",
+            "callee": "<TypeSpec/other>::GetAwaiter"
+          },
+          {
+            "il": 113,
+            "op": "call",
+            "token": "0xa000d9e",
+            "callee": "<TypeSpec/other>::get_IsCompleted"
+          },
+          {
+            "il": 145,
+            "op": "call",
+            "token": "0x2b0009ca",
+            "callee": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 182,
+            "op": "call",
+            "token": "0xa000d9f",
+            "callee": "<TypeSpec/other>::GetResult"
+          },
+          {
+            "il": 208,
+            "op": "callvirt",
+            "token": "0xa000037",
+            "callee": "System.IDisposable::Dispose"
+          },
+          {
+            "il": 241,
+            "op": "call",
+            "token": "0xa000b9c",
+            "callee": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetException"
+          },
+          {
+            "il": 262,
+            "op": "call",
+            "token": "0xa000b9d",
+            "callee": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetResult"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.Server.Services.Database.DatabaseService+<GetAllEventsFromStartDateAsync>d__114",
+        "name": "MoveNext",
+        "token": "0x0600236e",
+        "signature_ecma335": "200001",
+        "parameters": [],
+        "rva": 705416,
+        "body_size": 692,
+        "il_code_size": 602,
+        "il_sha256": "bdcb28fc0abb773495fa3126e7d1054b42fb2a095f7e5fc372758341babd696f",
+        "exception_regions": 3,
+        "calls": [
+          {
+            "il": 19,
+            "op": "newobj",
+            "token": "0xa00137f",
+            "callee": "<TypeSpec/other>::.ctor"
+          },
+          {
+            "il": 43,
+            "op": "callvirt",
+            "token": "0xa00080b",
+            "callee": "Npgsql.NpgsqlDataSource::CreateCommand"
+          },
+          {
+            "il": 70,
+            "op": "callvirt",
+            "token": "0xa00080c",
+            "callee": "Npgsql.NpgsqlCommand::get_Parameters"
+          },
+          {
+            "il": 91,
+            "op": "callvirt",
+            "token": "0xa00130f",
+            "callee": "Npgsql.NpgsqlParameterCollection::AddWithValue"
+          },
+          {
+            "il": 113,
+            "op": "callvirt",
+            "token": "0xa001308",
+            "callee": "Npgsql.NpgsqlCommand::ExecuteReaderAsync"
+          },
+          {
+            "il": 119,
+            "op": "callvirt",
+            "token": "0xa001309",
+            "callee": "<TypeSpec/other>::ConfigureAwait"
+          },
+          {
+            "il": 128,
+            "op": "call",
+            "token": "0xa00130a",
+            "callee": "<TypeSpec/other>::GetAwaiter"
+          },
+          {
+            "il": 137,
+            "op": "call",
+            "token": "0xa00130b",
+            "callee": "<TypeSpec/other>::get_IsCompleted"
+          },
+          {
+            "il": 170,
+            "op": "call",
+            "token": "0x2b000a1c",
+            "callee": "<TypeSpec/other>::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 211,
+            "op": "call",
+            "token": "0xa00130c",
+            "callee": "<TypeSpec/other>::GetResult"
+          },
+          {
+            "il": 249,
+            "op": "callvirt",
+            "token": "0xa0007f6",
+            "callee": "System.Data.Common.DbDataReader::GetString"
+          },
+          {
+            "il": 261,
+            "op": "callvirt",
+            "token": "0xa0007f6",
+            "callee": "System.Data.Common.DbDataReader::GetString"
+          },
+          {
+            "il": 273,
+            "op": "callvirt",
+            "token": "0xa0007f9",
+            "callee": "System.Data.Common.DbDataReader::GetDateTime"
+          },
+          {
+            "il": 285,
+            "op": "callvirt",
+            "token": "0xa0007f6",
+            "callee": "System.Data.Common.DbDataReader::GetString"
+          },
+          {
+            "il": 297,
+            "op": "callvirt",
+            "token": "0xa0007f6",
+            "callee": "System.Data.Common.DbDataReader::GetString"
+          },
+          {
+            "il": 309,
+            "op": "callvirt",
+            "token": "0xa0007f6",
+            "callee": "System.Data.Common.DbDataReader::GetString"
+          },
+          {
+            "il": 314,
+            "op": "call",
+            "token": "0x2b000a1a",
+            "callee": "System.Enum::Parse"
+          },
+          {
+            "il": 326,
+            "op": "callvirt",
+            "token": "0xa0007f6",
+            "callee": "System.Data.Common.DbDataReader::GetString"
+          },
+          {
+            "il": 338,
+            "op": "callvirt",
+            "token": "0xa0007f6",
+            "callee": "System.Data.Common.DbDataReader::GetString"
+          },
+          {
+            "il": 343,
+            "op": "newobj",
+            "token": "0x6000b52",
+            "callee": "SpecterInsight.Server.Services.Events.Event::.ctor"
+          },
+          {
+            "il": 348,
+            "op": "callvirt",
+            "token": "0xa001380",
+            "callee": "<TypeSpec/other>::Add"
+          },
+          {
+            "il": 359,
+            "op": "callvirt",
+            "token": "0xa001325",
+            "callee": "System.Data.Common.DbDataReader::ReadAsync"
+          },
+          {
+            "il": 365,
+            "op": "callvirt",
+            "token": "0xa0010a3",
+            "callee": "<TypeSpec/other>::ConfigureAwait"
+          },
+          {
+            "il": 374,
+            "op": "call",
+            "token": "0xa0010a4",
+            "callee": "<TypeSpec/other>::GetAwaiter"
+          },
+          {
+            "il": 383,
+            "op": "call",
+            "token": "0xa0010a5",
+            "callee": "<TypeSpec/other>::get_IsCompleted"
+          },
+          {
+            "il": 416,
+            "op": "call",
+            "token": "0x2b000a1d",
+            "callee": "<TypeSpec/other>::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 457,
+            "op": "call",
+            "token": "0xa0010a6",
+            "callee": "<TypeSpec/other>::GetResult"
+          },
+          {
+            "il": 487,
+            "op": "callvirt",
+            "token": "0xa000037",
+            "callee": "System.IDisposable::Dispose"
+          },
+          {
+            "il": 520,
+            "op": "callvirt",
+            "token": "0xa000037",
+            "callee": "System.IDisposable::Dispose"
+          },
+          {
+            "il": 567,
+            "op": "call",
+            "token": "0xa00128e",
+            "callee": "<TypeSpec/other>::SetException"
+          },
+          {
+            "il": 596,
+            "op": "call",
+            "token": "0xa00128f",
+            "callee": "<TypeSpec/other>::SetResult"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.Server.Services.Database.DatabaseService+<GetEventsByTypeAsync>d__116",
+        "name": "MoveNext",
+        "token": "0x06002390",
+        "signature_ecma335": "200001",
+        "parameters": [],
+        "rva": 716152,
+        "body_size": 692,
+        "il_code_size": 604,
+        "il_sha256": "b8bb1e6c4a3738a38da43865e5808c433d15717c4ed83016e9e0c7ec46382a24",
+        "exception_regions": 3,
+        "calls": [
+          {
+            "il": 19,
+            "op": "newobj",
+            "token": "0xa00137f",
+            "callee": "<TypeSpec/other>::.ctor"
+          },
+          {
+            "il": 43,
+            "op": "callvirt",
+            "token": "0xa00080b",
+            "callee": "Npgsql.NpgsqlDataSource::CreateCommand"
+          },
+          {
+            "il": 70,
+            "op": "callvirt",
+            "token": "0xa00080c",
+            "callee": "Npgsql.NpgsqlCommand::get_Parameters"
+          },
+          {
+            "il": 86,
+            "op": "newobj",
+            "token": "0xa00080d",
+            "callee": "Npgsql.NpgsqlParameter::.ctor"
+          },
+          {
+            "il": 91,
+            "op": "callvirt",
+            "token": "0xa00080e",
+            "callee": "Npgsql.NpgsqlParameterCollection::Add"
+          },
+          {
+            "il": 109,
+            "op": "callvirt",
+            "token": "0xa001308",
+            "callee": "Npgsql.NpgsqlCommand::ExecuteReaderAsync"
+          },
+          {
+            "il": 115,
+            "op": "callvirt",
+            "token": "0xa001309",
+            "callee": "<TypeSpec/other>::ConfigureAwait"
+          },
+          {
+            "il": 124,
+            "op": "call",
+            "token": "0xa00130a",
+            "callee": "<TypeSpec/other>::GetAwaiter"
+          },
+          {
+            "il": 133,
+            "op": "call",
+            "token": "0xa00130b",
+            "callee": "<TypeSpec/other>::get_IsCompleted"
+          },
+          {
+            "il": 166,
+            "op": "call",
+            "token": "0x2b000a3d",
+            "callee": "<TypeSpec/other>::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 207,
+            "op": "call",
+            "token": "0xa00130c",
+            "callee": "<TypeSpec/other>::GetResult"
+          },
+          {
+            "il": 245,
+            "op": "callvirt",
+            "token": "0xa0007f6",
+            "callee": "System.Data.Common.DbDataReader::GetString"
+          },
+          {
+            "il": 257,
+            "op": "callvirt",
+            "token": "0xa0007f6",
+            "callee": "System.Data.Common.DbDataReader::GetString"
+          },
+          {
+            "il": 269,
+            "op": "callvirt",
+            "token": "0xa0007f9",
+            "callee": "System.Data.Common.DbDataReader::GetDateTime"
+          },
+          {
+            "il": 281,
+            "op": "callvirt",
+            "token": "0xa0007f6",
+            "callee": "System.Data.Common.DbDataReader::GetString"
+          },
+          {
+            "il": 293,
+            "op": "callvirt",
+            "token": "0xa0007f6",
+            "callee": "System.Data.Common.DbDataReader::GetString"
+          },
+          {
+            "il": 305,
+            "op": "callvirt",
+            "token": "0xa0007f6",
+            "callee": "System.Data.Common.DbDataReader::GetString"
+          },
+          {
+            "il": 310,
+            "op": "call",
+            "token": "0x2b000a1a",
+            "callee": "System.Enum::Parse"
+          },
+          {
+            "il": 322,
+            "op": "callvirt",
+            "token": "0xa0007f6",
+            "callee": "System.Data.Common.DbDataReader::GetString"
+          },
+          {
+            "il": 334,
+            "op": "callvirt",
+            "token": "0xa0007f6",
+            "callee": "System.Data.Common.DbDataReader::GetString"
+          },
+          {
+            "il": 339,
+            "op": "newobj",
+            "token": "0x6000b52",
+            "callee": "SpecterInsight.Server.Services.Events.Event::.ctor"
+          },
+          {
+            "il": 344,
+            "op": "callvirt",
+            "token": "0xa001380",
+            "callee": "<TypeSpec/other>::Add"
+          },
+          {
+            "il": 361,
+            "op": "callvirt",
+            "token": "0xa00130d",
+            "callee": "System.Data.Common.DbDataReader::ReadAsync"
+          },
+          {
+            "il": 367,
+            "op": "callvirt",
+            "token": "0xa0010a3",
+            "callee": "<TypeSpec/other>::ConfigureAwait"
+          },
+          {
+            "il": 376,
+            "op": "call",
+            "token": "0xa0010a4",
+            "callee": "<TypeSpec/other>::GetAwaiter"
+          },
+          {
+            "il": 385,
+            "op": "call",
+            "token": "0xa0010a5",
+            "callee": "<TypeSpec/other>::get_IsCompleted"
+          },
+          {
+            "il": 418,
+            "op": "call",
+            "token": "0x2b000a3e",
+            "callee": "<TypeSpec/other>::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 459,
+            "op": "call",
+            "token": "0xa0010a6",
+            "callee": "<TypeSpec/other>::GetResult"
+          },
+          {
+            "il": 489,
+            "op": "callvirt",
+            "token": "0xa000037",
+            "callee": "System.IDisposable::Dispose"
+          },
+          {
+            "il": 522,
+            "op": "callvirt",
+            "token": "0xa000037",
+            "callee": "System.IDisposable::Dispose"
+          },
+          {
+            "il": 569,
+            "op": "call",
+            "token": "0xa00128e",
+            "callee": "<TypeSpec/other>::SetException"
+          },
+          {
+            "il": 598,
+            "op": "call",
+            "token": "0xa00128f",
+            "callee": "<TypeSpec/other>::SetResult"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.Server.Services.Database.DatabaseService+<InsertEventAsync>d__112",
+        "name": "MoveNext",
+        "token": "0x060023e2",
+        "signature_ecma335": "200001",
+        "parameters": [],
+        "rva": 746444,
+        "body_size": 588,
+        "il_code_size": 524,
+        "il_sha256": "fea77bfb2cb5684bef4d1e8a16e3d15240bb196595800786ffff25ba1138e021",
+        "exception_regions": 2,
+        "calls": [
+          {
+            "il": 31,
+            "op": "callvirt",
+            "token": "0xa00080b",
+            "callee": "Npgsql.NpgsqlDataSource::CreateCommand"
+          },
+          {
+            "il": 54,
+            "op": "callvirt",
+            "token": "0xa00080c",
+            "callee": "Npgsql.NpgsqlCommand::get_Parameters"
+          },
+          {
+            "il": 70,
+            "op": "callvirt",
+            "token": "0x6000b49",
+            "callee": "SpecterInsight.Server.Services.Events.Event::get_Id"
+          },
+          {
+            "il": 75,
+            "op": "callvirt",
+            "token": "0xa00130f",
+            "callee": "Npgsql.NpgsqlParameterCollection::AddWithValue"
+          },
+          {
+            "il": 87,
+            "op": "callvirt",
+            "token": "0xa00080c",
+            "callee": "Npgsql.NpgsqlCommand::get_Parameters"
+          },
+          {
+            "il": 103,
+            "op": "callvirt",
+            "token": "0x6000b4b",
+            "callee": "SpecterInsight.Server.Services.Events.Event::get_Timestamp"
+          },
+          {
+            "il": 113,
+            "op": "callvirt",
+            "token": "0xa00130f",
+            "callee": "Npgsql.NpgsqlParameterCollection::AddWithValue"
+          },
+          {
+            "il": 125,
+            "op": "callvirt",
+            "token": "0xa00080c",
+            "callee": "Npgsql.NpgsqlCommand::get_Parameters"
+          },
+          {
+            "il": 141,
+            "op": "callvirt",
+            "token": "0x6000b4a",
+            "callee": "SpecterInsight.Server.Services.Events.Event::get_Type"
+          },
+          {
+            "il": 146,
+            "op": "callvirt",
+            "token": "0xa00130f",
+            "callee": "Npgsql.NpgsqlParameterCollection::AddWithValue"
+          },
+          {
+            "il": 158,
+            "op": "callvirt",
+            "token": "0xa00080c",
+            "callee": "Npgsql.NpgsqlCommand::get_Parameters"
+          },
+          {
+            "il": 174,
+            "op": "callvirt",
+            "token": "0x6000b4c",
+            "callee": "SpecterInsight.Server.Services.Events.Event::get_Source"
+          },
+          {
+            "il": 179,
+            "op": "callvirt",
+            "token": "0xa00130f",
+            "callee": "Npgsql.NpgsqlParameterCollection::AddWithValue"
+          },
+          {
+            "il": 191,
+            "op": "callvirt",
+            "token": "0xa00080c",
+            "callee": "Npgsql.NpgsqlCommand::get_Parameters"
+          },
+          {
+            "il": 207,
+            "op": "callvirt",
+            "token": "0x6000b4d",
+            "callee": "SpecterInsight.Server.Services.Events.Event::get_System"
+          },
+          {
+            "il": 212,
+            "op": "callvirt",
+            "token": "0xa00130f",
+            "callee": "Npgsql.NpgsqlParameterCollection::AddWithValue"
+          },
+          {
+            "il": 224,
+            "op": "callvirt",
+            "token": "0xa00080c",
+            "callee": "Npgsql.NpgsqlCommand::get_Parameters"
+          },
+          {
+            "il": 240,
+            "op": "callvirt",
+            "token": "0x6000b4e",
+            "callee": "SpecterInsight.Server.Services.Events.Event::get_Outcome"
+          },
+          {
+            "il": 254,
+            "op": "callvirt",
+            "token": "0xa00008b",
+            "callee": "System.Object::ToString"
+          },
+          {
+            "il": 259,
+            "op": "callvirt",
+            "token": "0xa00130f",
+            "callee": "Npgsql.NpgsqlParameterCollection::AddWithValue"
+          },
+          {
+            "il": 271,
+            "op": "callvirt",
+            "token": "0xa00080c",
+            "callee": "Npgsql.NpgsqlCommand::get_Parameters"
+          },
+          {
+            "il": 287,
+            "op": "callvirt",
+            "token": "0x6000b4f",
+            "callee": "SpecterInsight.Server.Services.Events.Event::get_Message"
+          },
+          {
+            "il": 292,
+            "op": "callvirt",
+            "token": "0xa00130f",
+            "callee": "Npgsql.NpgsqlParameterCollection::AddWithValue"
+          },
+          {
+            "il": 304,
+            "op": "callvirt",
+            "token": "0xa00080c",
+            "callee": "Npgsql.NpgsqlCommand::get_Parameters"
+          },
+          {
+            "il": 320,
+            "op": "callvirt",
+            "token": "0x6000b50",
+            "callee": "SpecterInsight.Server.Services.Events.Event::get_Details"
+          },
+          {
+            "il": 325,
+            "op": "callvirt",
+            "token": "0xa00130f",
+            "callee": "Npgsql.NpgsqlParameterCollection::AddWithValue"
+          },
+          {
+            "il": 343,
+            "op": "callvirt",
+            "token": "0xa001304",
+            "callee": "System.Data.Common.DbCommand::ExecuteNonQueryAsync"
+          },
+          {
+            "il": 349,
+            "op": "callvirt",
+            "token": "0xa000d9c",
+            "callee": "<TypeSpec/other>::ConfigureAwait"
+          },
+          {
+            "il": 358,
+            "op": "call",
+            "token": "0xa000d9d",
+            "callee": "<TypeSpec/other>::GetAwaiter"
+          },
+          {
+            "il": 367,
+            "op": "call",
+            "token": "0xa000d9e",
+            "callee": "<TypeSpec/other>::get_IsCompleted"
+          },
+          {
+            "il": 400,
+            "op": "call",
+            "token": "0x2b000a9b",
+            "callee": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 438,
+            "op": "call",
+            "token": "0xa000d9f",
+            "callee": "<TypeSpec/other>::GetResult"
+          },
+          {
+            "il": 464,
+            "op": "callvirt",
+            "token": "0xa000037",
+            "callee": "System.IDisposable::Dispose"
+          },
+          {
+            "il": 497,
+            "op": "call",
+            "token": "0xa000b9c",
+            "callee": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetException"
+          },
+          {
+            "il": 518,
+            "op": "call",
+            "token": "0xa000b9d",
+            "callee": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetResult"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.Server.Services.Database.DatabaseService+<UpsertDocumentationChunkAsync>d__96",
+        "name": "MoveNext",
+        "token": "0x06002446",
+        "signature_ecma335": "200001",
+        "parameters": [],
+        "rva": 776524,
+        "body_size": 624,
+        "il_code_size": 558,
+        "il_sha256": "f6f195e20a17deaa4d2470c586a985da674f770375216cd949f84b0340d5cdeb",
+        "exception_regions": 2,
+        "calls": [
+          {
+            "il": 27,
+            "op": "call",
+            "token": "0xa00011e",
+            "callee": "System.String::Format"
+          },
+          {
+            "il": 41,
+            "op": "callvirt",
+            "token": "0xa00080b",
+            "callee": "Npgsql.NpgsqlDataSource::CreateCommand"
+          },
+          {
+            "il": 64,
+            "op": "callvirt",
+            "token": "0xa00080c",
+            "callee": "Npgsql.NpgsqlCommand::get_Parameters"
+          },
+          {
+            "il": 80,
+            "op": "callvirt",
+            "token": "0x6000dbe",
+            "callee": "SpecterInsight.Server.Services.Database.Entities.DocumentationChunk::get_Path"
+          },
+          {
+            "il": 85,
+            "op": "newobj",
+            "token": "0xa00080d",
+            "callee": "Npgsql.NpgsqlParameter::.ctor"
+          },
+          {
+            "il": 90,
+            "op": "callvirt",
+            "token": "0xa00080e",
+            "callee": "Npgsql.NpgsqlParameterCollection::Add"
+          },
+          {
+            "il": 102,
+            "op": "callvirt",
+            "token": "0xa00080c",
+            "callee": "Npgsql.NpgsqlCommand::get_Parameters"
+          },
+          {
+            "il": 118,
+            "op": "callvirt",
+            "token": "0x6000dc0",
+            "callee": "SpecterInsight.Server.Services.Database.Entities.DocumentationChunk::get_Title"
+          },
+          {
+            "il": 123,
+            "op": "newobj",
+            "token": "0xa00080d",
+            "callee": "Npgsql.NpgsqlParameter::.ctor"
+          },
+          {
+            "il": 128,
+            "op": "callvirt",
+            "token": "0xa00080e",
+            "callee": "Npgsql.NpgsqlParameterCollection::Add"
+          },
+          {
+            "il": 140,
+            "op": "callvirt",
+            "token": "0xa00080c",
+            "callee": "Npgsql.NpgsqlCommand::get_Parameters"
+          },
+          {
+            "il": 156,
+            "op": "callvirt",
+            "token": "0x6000dc2",
+            "callee": "SpecterInsight.Server.Services.Database.Entities.DocumentationChunk::get_Content"
+          },
+          {
+            "il": 161,
+            "op": "newobj",
+            "token": "0xa00080d",
+            "callee": "Npgsql.NpgsqlParameter::.ctor"
+          },
+          {
+            "il": 166,
+            "op": "callvirt",
+            "token": "0xa00080e",
+            "callee": "Npgsql.NpgsqlParameterCollection::Add"
+          },
+          {
+            "il": 178,
+            "op": "callvirt",
+            "token": "0xa00080c",
+            "callee": "Npgsql.NpgsqlCommand::get_Parameters"
+          },
+          {
+            "il": 194,
+            "op": "callvirt",
+            "token": "0x6000dc6",
+            "callee": "SpecterInsight.Server.Services.Database.Entities.DocumentationChunk::get_ChunkIndex"
+          },
+          {
+            "il": 204,
+            "op": "newobj",
+            "token": "0xa00080d",
+            "callee": "Npgsql.NpgsqlParameter::.ctor"
+          },
+          {
+            "il": 209,
+            "op": "callvirt",
+            "token": "0xa00080e",
+            "callee": "Npgsql.NpgsqlParameterCollection::Add"
+          },
+          {
+            "il": 221,
+            "op": "callvirt",
+            "token": "0xa00080c",
+            "callee": "Npgsql.NpgsqlCommand::get_Parameters"
+          },
+          {
+            "il": 237,
+            "op": "callvirt",
+            "token": "0x6000dc8",
+            "callee": "SpecterInsight.Server.Services.Database.Entities.DocumentationChunk::get_IndexedAt"
+          },
+          {
+            "il": 247,
+            "op": "newobj",
+            "token": "0xa00080d",
+            "callee": "Npgsql.NpgsqlParameter::.ctor"
+          },
+          {
+            "il": 252,
+            "op": "callvirt",
+            "token": "0xa00080e",
+            "callee": "Npgsql.NpgsqlParameterCollection::Add"
+          },
+          {
+            "il": 264,
+            "op": "callvirt",
+            "token": "0x6000dc4",
+            "callee": "SpecterInsight.Server.Services.Database.Entities.DocumentationChunk::get_Embedding"
+          },
+          {
+            "il": 277,
+            "op": "callvirt",
+            "token": "0x6000dc4",
+            "callee": "SpecterInsight.Server.Services.Database.Entities.DocumentationChunk::get_Embedding"
+          },
+          {
+            "il": 291,
+            "op": "callvirt",
+            "token": "0xa00080c",
+            "callee": "Npgsql.NpgsqlCommand::get_Parameters"
+          },
+          {
+            "il": 306,
+            "op": "newobj",
+            "token": "0xa001393",
+            "callee": "Npgsql.NpgsqlParameter::.ctor"
+          },
+          {
+            "il": 318,
+            "op": "callvirt",
+            "token": "0x6000dc4",
+            "callee": "SpecterInsight.Server.Services.Database.Entities.DocumentationChunk::get_Embedding"
+          },
+          {
+            "il": 323,
+            "op": "callvirt",
+            "token": "0xa001394",
+            "callee": "System.Data.Common.DbParameter::set_Value"
+          },
+          {
+            "il": 328,
+            "op": "callvirt",
+            "token": "0xa00080e",
+            "callee": "Npgsql.NpgsqlParameterCollection::Add"
+          },
+          {
+            "il": 342,
+            "op": "callvirt",
+            "token": "0xa00080c",
+            "callee": "Npgsql.NpgsqlCommand::get_Parameters"
+          },
+          {
+            "il": 357,
+            "op": "newobj",
+            "token": "0xa00080d",
+            "callee": "Npgsql.NpgsqlParameter::.ctor"
+          },
+          {
+            "il": 362,
+            "op": "callvirt",
+            "token": "0xa00080e",
+            "callee": "Npgsql.NpgsqlParameterCollection::Add"
+          },
+          {
+            "il": 380,
+            "op": "callvirt",
+            "token": "0xa001304",
+            "callee": "System.Data.Common.DbCommand::ExecuteNonQueryAsync"
+          },
+          {
+            "il": 386,
+            "op": "callvirt",
+            "token": "0xa000d9c",
+            "callee": "<TypeSpec/other>::ConfigureAwait"
+          },
+          {
+            "il": 395,
+            "op": "call",
+            "token": "0xa000d9d",
+            "callee": "<TypeSpec/other>::GetAwaiter"
+          },
+          {
+            "il": 403,
+            "op": "call",
+            "token": "0xa000d9e",
+            "callee": "<TypeSpec/other>::get_IsCompleted"
+          },
+          {
+            "il": 435,
+            "op": "call",
+            "token": "0x2b000ae1",
+            "callee": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 472,
+            "op": "call",
+            "token": "0xa000d9f",
+            "callee": "<TypeSpec/other>::GetResult"
+          },
+          {
+            "il": 498,
+            "op": "callvirt",
+            "token": "0xa000037",
+            "callee": "System.IDisposable::Dispose"
+          },
+          {
+            "il": 531,
+            "op": "call",
+            "token": "0xa000b9c",
+            "callee": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetException"
+          },
+          {
+            "il": 552,
+            "op": "call",
+            "token": "0xa000b9d",
+            "callee": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetResult"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [
+          {
+            "il": 22,
+            "value": "DocumentationChunks"
+          }
+        ],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.Server.Services.Documentation.DocumentationService",
+        "name": "ChunkByHeadings",
+        "token": "0x06000c59",
+        "signature_ecma335": "0002151281710115118401020e0e0e0e",
+        "parameters": [
+          "",
+          "markdown",
+          "fallbackTitle"
+        ],
+        "rva": 191508,
+        "body_size": 372,
+        "il_code_size": 329,
+        "il_sha256": "7d147cc6cfc4ffc11d82660d7c1372a47cf91a4b760b22cbde83c25f03aee4e6",
+        "exception_regions": 2,
+        "calls": [
+          {
+            "il": 0,
+            "op": "newobj",
+            "token": "0xa0007ac",
+            "callee": "<TypeSpec/other>::.ctor"
+          },
+          {
+            "il": 10,
+            "op": "callvirt",
+            "token": "0xa00036a",
+            "callee": "System.String::Split"
+          },
+          {
+            "il": 17,
+            "op": "newobj",
+            "token": "0xa0001dd",
+            "callee": "<TypeSpec/other>::.ctor"
+          },
+          {
+            "il": 47,
+            "op": "callvirt",
+            "token": "0xa000142",
+            "callee": "System.Text.RegularExpressions.Regex::IsMatch"
+          },
+          {
+            "il": 57,
+            "op": "call",
+            "token": "0x2b00027f",
+            "callee": "System.String::Join"
+          },
+          {
+            "il": 62,
+            "op": "callvirt",
+            "token": "0xa00036c",
+            "callee": "System.String::Trim"
+          },
+          {
+            "il": 71,
+            "op": "callvirt",
+            "token": "0xa0000e6",
+            "callee": "System.String::get_Length"
+          },
+          {
+            "il": 82,
+            "op": "call",
+            "token": "0x6000c5a",
+            "callee": "SpecterInsight.Server.Services.Documentation.DocumentationService::SplitLongChunk"
+          },
+          {
+            "il": 87,
+            "op": "callvirt",
+            "token": "0xa000057",
+            "callee": "<TypeSpec/other>::GetEnumerator"
+          },
+          {
+            "il": 98,
+            "op": "callvirt",
+            "token": "0xa000056",
+            "callee": "<TypeSpec/other>::get_Current"
+          },
+          {
+            "il": 123,
+            "op": "newobj",
+            "token": "0xa00038f",
+            "callee": "<TypeSpec/other>::.ctor"
+          },
+          {
+            "il": 128,
+            "op": "callvirt",
+            "token": "0xa0007ae",
+            "callee": "<TypeSpec/other>::Add"
+          },
+          {
+            "il": 135,
+            "op": "callvirt",
+            "token": "0xa000038",
+            "callee": "System.Collections.IEnumerator::MoveNext"
+          },
+          {
+            "il": 150,
+            "op": "callvirt",
+            "token": "0xa000037",
+            "callee": "System.IDisposable::Dispose"
+          },
+          {
+            "il": 160,
+            "op": "callvirt",
+            "token": "0xa00041e",
+            "callee": "System.String::TrimStart"
+          },
+          {
+            "il": 165,
+            "op": "callvirt",
+            "token": "0xa00036c",
+            "callee": "System.String::Trim"
+          },
+          {
+            "il": 172,
+            "op": "callvirt",
+            "token": "0xa0004df",
+            "callee": "<TypeSpec/other>::Clear"
+          },
+          {
+            "il": 180,
+            "op": "callvirt",
+            "token": "0xa0001e0",
+            "callee": "<TypeSpec/other>::Add"
+          },
+          {
+            "il": 205,
+            "op": "call",
+            "token": "0x2b00027f",
+            "callee": "System.String::Join"
+          },
+          {
+            "il": 210,
+            "op": "callvirt",
+            "token": "0xa00036c",
+            "callee": "System.String::Trim"
+          },
+          {
+            "il": 217,
+            "op": "callvirt",
+            "token": "0xa0000e6",
+            "callee": "System.String::get_Length"
+          },
+          {
+            "il": 227,
+            "op": "call",
+            "token": "0x6000c5a",
+            "callee": "SpecterInsight.Server.Services.Documentation.DocumentationService::SplitLongChunk"
+          },
+          {
+            "il": 232,
+            "op": "callvirt",
+            "token": "0xa000057",
+            "callee": "<TypeSpec/other>::GetEnumerator"
+          },
+          {
+            "il": 243,
+            "op": "callvirt",
+            "token": "0xa000056",
+            "callee": "<TypeSpec/other>::get_Current"
+          },
+          {
+            "il": 268,
+            "op": "newobj",
+            "token": "0xa00038f",
+            "callee": "<TypeSpec/other>::.ctor"
+          },
+          {
+            "il": 273,
+            "op": "callvirt",
+            "token": "0xa0007ae",
+            "callee": "<TypeSpec/other>::Add"
+          },
+          {
+            "il": 280,
+            "op": "callvirt",
+            "token": "0xa000038",
+            "callee": "System.Collections.IEnumerator::MoveNext"
+          },
+          {
+            "il": 295,
+            "op": "callvirt",
+            "token": "0xa000037",
+            "callee": "System.IDisposable::Dispose"
+          },
+          {
+            "il": 302,
+            "op": "callvirt",
+            "token": "0xa0007ab",
+            "callee": "<TypeSpec/other>::get_Count"
+          },
+          {
+            "il": 312,
+            "op": "callvirt",
+            "token": "0xa00036c",
+            "callee": "System.String::Trim"
+          },
+          {
+            "il": 317,
+            "op": "newobj",
+            "token": "0xa00038f",
+            "callee": "<TypeSpec/other>::.ctor"
+          },
+          {
+            "il": 322,
+            "op": "callvirt",
+            "token": "0xa0007ae",
+            "callee": "<TypeSpec/other>::Add"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.Server.Services.Documentation.DocumentationService",
+        "name": "SplitLongChunk",
+        "token": "0x06000c5a",
+        "signature_ecma335": "000215127d0115118401020e0e0e0e",
+        "parameters": [
+          "",
+          "title",
+          "body"
+        ],
+        "rva": 191880,
+        "body_size": 23,
+        "il_code_size": 22,
+        "il_sha256": "5b623754f8169338e06d5298ca97b1a25af3116368592fcc635ec14ab70af665",
+        "exception_regions": 0,
+        "calls": [
+          {
+            "il": 2,
+            "op": "newobj",
+            "token": "0x6002259",
+            "callee": "SpecterInsight.Server.Services.Documentation.DocumentationService+<SplitLongChunk>d__12::.ctor"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [],
+        "fields_selected": []
+      },
+      {
+        "declaring_type": "SpecterInsight.Server.Services.Documentation.DocumentationService",
+        "name": "CosineSimilarity",
+        "token": "0x06000c5b",
+        "signature_ecma335": "00020c1d0c1d0c",
+        "parameters": [
+          "a",
+          "b"
+        ],
+        "rva": 191904,
+        "body_size": 116,
+        "il_code_size": 104,
+        "il_sha256": "baa1e8c84981b880812a70b7be7b920c447078b6f1d813b1de361b21391a2986",
+        "exception_regions": 0,
+        "calls": [
+          {
+            "il": 73,
+            "op": "call",
+            "token": "0xa0007af",
+            "callee": "System.MathF::Sqrt"
+          },
+          {
+            "il": 79,
+            "op": "call",
+            "token": "0xa0007af",
+            "callee": "System.MathF::Sqrt"
+          }
+        ],
+        "call_selection": "all-direct-operands",
+        "strings_selected": [],
+        "fields_selected": []
+      }
+    ]
+  }
+]

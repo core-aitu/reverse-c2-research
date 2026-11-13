@@ -1,0 +1,17 @@
+
+  Could not find an entry for this IP address (192.0.2.1)
+
+
+  Database metadata
+    Node count:    3973755
+    Record size:   28 bits
+    IP version:    IPv6
+    Binary format: 2.0
+    Build epoch:   1721405189 (2024-07-19 16:06:29 UTC)
+    Type:          GeoLite2-City
+    Languages:     de en es fr ja pt-BR ru zh-CN
+    Description:
+      en:   GeoLite2City database
+
+
+  Record prefix length: 120

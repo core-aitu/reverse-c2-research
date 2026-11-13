@@ -1,0 +1,330 @@
+{
+  "settings": [
+    {
+      "path": "settings/settings.json",
+      "id": "ART-53d9aa1c8ecf1c2eb168",
+      "keys": {
+        "Database": [
+          "Database",
+          "Host",
+          "Password",
+          "Username"
+        ],
+        "Elastic": [
+          "Index",
+          "MaxDepth",
+          "Password",
+          "Uri",
+          "Username",
+          "ValidateServerCertificate"
+        ]
+      }
+    },
+    {
+      "path": "vm/settings.json",
+      "id": "ART-ad679d497983234e2c05",
+      "keys": {
+        "Database": [
+          "Database",
+          "Host",
+          "Password",
+          "Username"
+        ],
+        "Elastic": [
+          "Index",
+          "MaxDepth",
+          "Password",
+          "Uri",
+          "Username",
+          "ValidateServerCertificate"
+        ]
+      }
+    }
+  ],
+  "runtime": [
+    {
+      "path": "client/SpecterInsight.UI.runtimeconfig.json",
+      "id": "ART-c0e461a74714168cde83",
+      "tfm": "net10.0",
+      "frameworks": [
+        {
+          "name": "Microsoft.NETCore.App",
+          "version": "10.0.0"
+        }
+      ],
+      "property_names": [
+        "MVVMTOOLKIT_ENABLE_INOTIFYPROPERTYCHANGING_SUPPORT",
+        "System.Reflection.Metadata.MetadataUpdater.IsSupported",
+        "System.Runtime.InteropServices.BuiltInComInterop.IsSupported",
+        "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization",
+        "AvaloniaUI.Licensing.RuntimeKey_0"
+      ]
+    },
+    {
+      "path": "server/SpecterInsight.Server.Host.runtimeconfig.json",
+      "id": "ART-7e67c698c011ea5261a1",
+      "tfm": "net10.0",
+      "frameworks": [
+        {
+          "name": "Microsoft.NETCore.App",
+          "version": "10.0.0"
+        },
+        {
+          "name": "Microsoft.AspNetCore.App",
+          "version": "10.0.0"
+        }
+      ],
+      "property_names": [
+        "System.Reflection.Metadata.MetadataUpdater.IsSupported",
+        "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization"
+      ]
+    },
+    {
+      "path": "server/SpecterInsight.Server.runtimeconfig.json",
+      "id": "ART-244bfe9a0062117b3f6f",
+      "tfm": "net8.0",
+      "frameworks": [
+        {
+          "name": "Microsoft.NETCore.App",
+          "version": "8.0.0"
+        },
+        {
+          "name": "Microsoft.AspNetCore.App",
+          "version": "8.0.0"
+        }
+      ],
+      "property_names": [
+        "System.Reflection.Metadata.MetadataUpdater.IsSupported",
+        "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization"
+      ]
+    }
+  ],
+  "deployment": {
+    "path": "vm/docker-compose.yml",
+    "id": "ART-393a8b06a9945f9a9a5d",
+    "services": {
+      "setup": {
+        "image": "docker.elastic.co/elasticsearch/elasticsearch:${STACK_VERSION}",
+        "depends_on": []
+      },
+      "es01": {
+        "image": "docker.elastic.co/elasticsearch/elasticsearch:${STACK_VERSION}",
+        "depends_on": []
+      },
+      "kibana": {
+        "image": "docker.elastic.co/kibana/kibana:${STACK_VERSION}",
+        "depends_on": [
+          "es01"
+        ]
+      },
+      "postgres": {
+        "image": "postgres:16.4",
+        "depends_on": []
+      }
+    }
+  },
+  "launch": [
+    {
+      "path": "vm/specter-insight.service",
+      "id": "ART-d4443058bf76f1f3d318",
+      "line": 9,
+      "value": "ExecStart=dotnet /home/kali/SpecterInsight/server/SpecterInsight.Server.Host.dll"
+    },
+    {
+      "path": "vm/SpecterInsight.desktop",
+      "id": "ART-081806d5964e9147a6be",
+      "line": 4,
+      "value": "Exec=dotnet /home/kali/SpecterInsight/client/SpecterInsight.UI.dll"
+    }
+  ],
+  "roots": {
+    "assets": {
+      "files": 1,
+      "formats": {
+        "extension:.svg": 1
+      }
+    },
+    "client": {
+      "files": 638,
+      "formats": {
+        "PE/CLI": 500,
+        "portable PDB / CLI metadata": 3,
+        "extension:.json": 2,
+        "PE": 32,
+        "ELF": 38,
+        "extension:.manifest": 7,
+        "extension:.sig": 7,
+        "Mach-O": 8,
+        "Mach-O universal": 5,
+        "extension:.psd1": 24,
+        "extension:.ps1xml": 10,
+        "extension:.psm1": 2
+      }
+    },
+    "dependencies": {
+      "files": 142286,
+      "formats": {
+        "PE/CLI": 754,
+        "PE": 17,
+        "extension:.txt": 27,
+        "MSF/PDB": 15,
+        "ELF": 57,
+        "portable PDB / CLI metadata": 355,
+        "archive": 130,
+        "extension:.a": 1,
+        "extension:.so": 6,
+        "extension:.obj": 7,
+        "extension:.json": 7,
+        "text sample (no extension)": 119050,
+        "extension:(none)": 2114,
+        "script": 346,
+        "ZIP container": 4,
+        "extension:.bin": 3,
+        "extension:.bak": 1,
+        "extension:.md": 1,
+        "extension:.html": 3,
+        "extension:.zig": 968,
+        "extension:.js": 2,
+        "extension:.css": 2,
+        "extension:.h": 13265,
+        "extension:.modulemap": 1,
+        "extension:.zon": 1,
+        "extension:.tbd": 1,
+        "extension:.c": 1878,
+        "extension:.s": 301,
+        "extension:.dlg": 8,
+        "extension:.rh": 4,
+        "extension:.ver": 2,
+        "extension:.inl": 3,
+        "extension:.hxx": 2,
+        "extension:.h16": 1,
+        "extension:.x": 23,
+        "extension:.def": 2653,
+        "extension:.in": 25,
+        "extension:.cpp": 201,
+        "extension:.ipp": 11,
+        "extension:.inc": 25,
+        "extension:.hpp": 9,
+        "extension:.der": 2
+      }
+    },
+    "documentation": {
+      "files": 53,
+      "formats": {
+        "extension:.md": 53
+      }
+    },
+    "elastic": {
+      "files": 1,
+      "formats": {
+        "extension:.ndjson": 1
+      }
+    },
+    "modules": {
+      "files": 22,
+      "formats": {
+        "PE/CLI": 22
+      }
+    },
+    "notebooks": {
+      "files": 5,
+      "formats": {
+        "ZIP container": 3,
+        "extension:.ps1": 2
+      }
+    },
+    "resources": {
+      "files": 2,
+      "formats": {
+        "extension:.mmdb": 1,
+        "extension:.csv": 1
+      }
+    },
+    "server": {
+      "files": 635,
+      "formats": {
+        "PE/CLI": 496,
+        "extension:.onnx": 1,
+        "extension:.txt": 1,
+        "portable PDB / CLI metadata": 4,
+        "extension:.json": 4,
+        "PE": 24,
+        "extension:.config": 1,
+        "MSF/PDB": 1,
+        "ZIP container": 1,
+        "ELF": 18,
+        "extension:.plist": 3,
+        "extension:.h": 16,
+        "extension:(none)": 2,
+        "extension:.manifest": 7,
+        "extension:.sig": 7,
+        "Mach-O": 6,
+        "Mach-O universal": 1,
+        "extension:.psd1": 24,
+        "extension:.ps1xml": 10,
+        "extension:.psm1": 2,
+        "archive": 6
+      }
+    },
+    "settings": {
+      "files": 1,
+      "formats": {
+        "extension:.json": 1
+      }
+    },
+    "templates": {
+      "files": 88,
+      "formats": {
+        "PE/CLI": 5,
+        "extension:.ps1": 4,
+        "extension:.cs": 67,
+        "PE": 12
+      }
+    },
+    "vm": {
+      "files": 9,
+      "formats": {
+        "text sample (no extension)": 1,
+        "extension:.desktop": 1,
+        "extension:.yml": 1,
+        "extension:.sh": 1,
+        "script": 1,
+        "extension:.json": 1,
+        "extension:.service": 1,
+        "extension:.ps1": 2
+      }
+    },
+    "webdav": {
+      "files": 0,
+      "formats": {}
+    }
+  },
+  "elastic_saved_objects": {
+    "path": "elastic/elastic/dashboards.ndjson",
+    "id": "ART-c458fe08865ff5707e0e",
+    "records": {
+      "index-pattern": 2,
+      "visualization": 28,
+      "search": 5,
+      "dashboard": 6,
+      "map": 2,
+      "(export metadata)": 1
+    }
+  },
+  "capture_candidates": [],
+  "database_candidates": [],
+  "backup_paths": [
+    "dependencies/specter-word-vba-template.bin.bak",
+    "templates/any/specter-dotnet-exe.exe.bak",
+    "templates/any/specter-dotnet-exe.exe.bak2",
+    "templates/any/specter-dotnet-exe.exe.bak3",
+    "templates/x64/specter-win-x64-dll.dll.bak",
+    "templates/x64/specter-win-x64-dll.dll.new_bak",
+    "templates/x64/specter-win-x64-exe.exe.bak",
+    "templates/x64/specter-win-x64-exe.exe.new_bak",
+    "templates/x86/specter-win-x86-dll.dll.bak",
+    "templates/x86/specter-win-x86-dll.dll.new_bak",
+    "templates/x86/specter-win-x86-exe.exe.bak",
+    "templates/x86/specter-win-x86-exe.exe.new_bak"
+  ]
+}

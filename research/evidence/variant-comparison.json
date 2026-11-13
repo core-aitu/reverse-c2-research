@@ -1,0 +1,208 @@
+{
+  "PE/CLI": {
+    "variants": [
+      {
+        "sha256": "d5e7e80c6e67939caa244f9f1b8736cafb4d1e5e906ee2668c34387c8067569d",
+        "paths": [
+          "server/SpecterInsight.exe",
+          "templates/any/specter-dotnet-exe.exe"
+        ],
+        "count_il_bodies": 656
+      },
+      {
+        "sha256": "44b88633520b501f999290c462581a5e35ee3eadf507c00caf9f828778701595",
+        "paths": [
+          "templates/any/SpecterInsight.exe"
+        ],
+        "count_il_bodies": 653
+      },
+      {
+        "sha256": "85fb4c9ac4ee295efbb907d37d5a066726bda8c35a8ddd67890325680d540f95",
+        "paths": [
+          "templates/any/specter-dotnet-exe.exe.bak"
+        ],
+        "count_il_bodies": 652
+      },
+      {
+        "sha256": "3fff31bed46cb2957c89b1cd662735877c0b173ada977b101c88939020a833f6",
+        "paths": [
+          "templates/any/specter-dotnet-exe.exe.bak2"
+        ],
+        "count_il_bodies": 653
+      },
+      {
+        "sha256": "0c8aaa733148ecffe88457b24b4e474113a9e2eba06a4c1e30c5ab7ba920a9d4",
+        "paths": [
+          "templates/any/specter-dotnet-exe.exe.bak3"
+        ],
+        "count_il_bodies": 651
+      }
+    ],
+    "pairs": [
+      {
+        "a": "d5e7e80c6e67939caa244f9f1b8736cafb4d1e5e906ee2668c34387c8067569d",
+        "b": "44b88633520b501f999290c462581a5e35ee3eadf507c00caf9f828778701595",
+        "identical_il_multiset_intersection": 191
+      },
+      {
+        "a": "d5e7e80c6e67939caa244f9f1b8736cafb4d1e5e906ee2668c34387c8067569d",
+        "b": "85fb4c9ac4ee295efbb907d37d5a066726bda8c35a8ddd67890325680d540f95",
+        "identical_il_multiset_intersection": 193
+      },
+      {
+        "a": "d5e7e80c6e67939caa244f9f1b8736cafb4d1e5e906ee2668c34387c8067569d",
+        "b": "3fff31bed46cb2957c89b1cd662735877c0b173ada977b101c88939020a833f6",
+        "identical_il_multiset_intersection": 191
+      },
+      {
+        "a": "d5e7e80c6e67939caa244f9f1b8736cafb4d1e5e906ee2668c34387c8067569d",
+        "b": "0c8aaa733148ecffe88457b24b4e474113a9e2eba06a4c1e30c5ab7ba920a9d4",
+        "identical_il_multiset_intersection": 191
+      },
+      {
+        "a": "44b88633520b501f999290c462581a5e35ee3eadf507c00caf9f828778701595",
+        "b": "85fb4c9ac4ee295efbb907d37d5a066726bda8c35a8ddd67890325680d540f95",
+        "identical_il_multiset_intersection": 317
+      },
+      {
+        "a": "44b88633520b501f999290c462581a5e35ee3eadf507c00caf9f828778701595",
+        "b": "3fff31bed46cb2957c89b1cd662735877c0b173ada977b101c88939020a833f6",
+        "identical_il_multiset_intersection": 436
+      },
+      {
+        "a": "44b88633520b501f999290c462581a5e35ee3eadf507c00caf9f828778701595",
+        "b": "0c8aaa733148ecffe88457b24b4e474113a9e2eba06a4c1e30c5ab7ba920a9d4",
+        "identical_il_multiset_intersection": 274
+      },
+      {
+        "a": "85fb4c9ac4ee295efbb907d37d5a066726bda8c35a8ddd67890325680d540f95",
+        "b": "3fff31bed46cb2957c89b1cd662735877c0b173ada977b101c88939020a833f6",
+        "identical_il_multiset_intersection": 317
+      },
+      {
+        "a": "85fb4c9ac4ee295efbb907d37d5a066726bda8c35a8ddd67890325680d540f95",
+        "b": "0c8aaa733148ecffe88457b24b4e474113a9e2eba06a4c1e30c5ab7ba920a9d4",
+        "identical_il_multiset_intersection": 262
+      },
+      {
+        "a": "3fff31bed46cb2957c89b1cd662735877c0b173ada977b101c88939020a833f6",
+        "b": "0c8aaa733148ecffe88457b24b4e474113a9e2eba06a4c1e30c5ab7ba920a9d4",
+        "identical_il_multiset_intersection": 273
+      }
+    ]
+  },
+  "PE": {
+    "variants": [
+      {
+        "sha256": "776f63b2ca58b7647b100bf5818c32e3d0fd46c35b004e7f4e678a177a576837",
+        "paths": [
+          "templates/x64/specter-win-x64-dll.dll"
+        ],
+        "machine": "0x8664",
+        "is_dll": true,
+        "section_count": 7,
+        "certificate_directory_present": false
+      },
+      {
+        "sha256": "7c2dc2ca5680fa4fa85bab343593c45ce1030bdd0a22f8c54076a02a7e2cdbf6",
+        "paths": [
+          "templates/x64/specter-win-x64-dll.dll.bak",
+          "templates/x64/specter-win-x64-dll.dll.new_bak"
+        ],
+        "machine": "0x8664",
+        "is_dll": true,
+        "section_count": 7,
+        "certificate_directory_present": false
+      },
+      {
+        "sha256": "09f401e0b3ee33eaa2da8e5660d99294b41506ee1b2f22758f4c257a5828f498",
+        "paths": [
+          "templates/x64/specter-win-x64-exe.exe"
+        ],
+        "machine": "0x8664",
+        "is_dll": false,
+        "section_count": 7,
+        "certificate_directory_present": false
+      },
+      {
+        "sha256": "9423f68bd2b594347f3b8368496add0a343f8569385d56af65618c921cd1895a",
+        "paths": [
+          "templates/x64/specter-win-x64-exe.exe.bak",
+          "templates/x64/specter-win-x64-exe.exe.new_bak"
+        ],
+        "machine": "0x8664",
+        "is_dll": false,
+        "section_count": 7,
+        "certificate_directory_present": false
+      },
+      {
+        "sha256": "1720f539a01cda00ca0cdc66035c2fb2cb45e2d986f6c2416651ce1386bf507b",
+        "paths": [
+          "templates/x86/specter-win-x86-dll.dll"
+        ],
+        "machine": "0x14c",
+        "is_dll": true,
+        "section_count": 6,
+        "certificate_directory_present": false
+      },
+      {
+        "sha256": "3980257c4c9344b98b4c9f00e6a9282e79c7f9e31f9a577e95492a834c612976",
+        "paths": [
+          "templates/x86/specter-win-x86-dll.dll.bak",
+          "templates/x86/specter-win-x86-dll.dll.new_bak"
+        ],
+        "machine": "0x14c",
+        "is_dll": true,
+        "section_count": 6,
+        "certificate_directory_present": false
+      },
+      {
+        "sha256": "a9ae90d261bae95932b8617f2334047ebfbb968f1791a24ce8008c14e98f4675",
+        "paths": [
+          "templates/x86/specter-win-x86-exe.exe"
+        ],
+        "machine": "0x14c",
+        "is_dll": false,
+        "section_count": 6,
+        "certificate_directory_present": false
+      },
+      {
+        "sha256": "ae889f0085a0f141b961f7059bc1034e4135364f66f069659f1b96dfe741d8fe",
+        "paths": [
+          "templates/x86/specter-win-x86-exe.exe.bak",
+          "templates/x86/specter-win-x86-exe.exe.new_bak"
+        ],
+        "machine": "0x14c",
+        "is_dll": false,
+        "section_count": 6,
+        "certificate_directory_present": false
+      }
+    ],
+    "pairs": [
+      {
+        "a": "776f63b2ca58b7647b100bf5818c32e3d0fd46c35b004e7f4e678a177a576837",
+        "b": "7c2dc2ca5680fa4fa85bab343593c45ce1030bdd0a22f8c54076a02a7e2cdbf6",
+        "equal_section_groups": 3,
+        "total_section_names": 7
+      },
+      {
+        "a": "09f401e0b3ee33eaa2da8e5660d99294b41506ee1b2f22758f4c257a5828f498",
+        "b": "9423f68bd2b594347f3b8368496add0a343f8569385d56af65618c921cd1895a",
+        "equal_section_groups": 3,
+        "total_section_names": 7
+      },
+      {
+        "a": "1720f539a01cda00ca0cdc66035c2fb2cb45e2d986f6c2416651ce1386bf507b",
+        "b": "3980257c4c9344b98b4c9f00e6a9282e79c7f9e31f9a577e95492a834c612976",
+        "equal_section_groups": 3,
+        "total_section_names": 6
+      },
+      {
+        "a": "a9ae90d261bae95932b8617f2334047ebfbb968f1791a24ce8008c14e98f4675",
+        "b": "ae889f0085a0f141b961f7059bc1034e4135364f66f069659f1b96dfe741d8fe",
+        "equal_section_groups": 3,
+        "total_section_names": 6
+      }
+    ]
+  }
+}

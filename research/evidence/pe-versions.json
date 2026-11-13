@@ -1,0 +1,272 @@
+[
+  {
+    "id": "ART-2b1454cf99d7226ab10c",
+    "path": "client/SpecterInsight.ApiClient.dll",
+    "CompanyName": "Practical Security Analytics LLC",
+    "FileVersion": "7.0.0",
+    "ProductName": "SpecterInsight",
+    "ProductVersion": "7.0.0"
+  },
+  {
+    "id": "ART-79d6f1eca4cf2285db14",
+    "path": "client/SpecterInsight.Obfuscation.dll",
+    "CompanyName": "Practical Security Analytics LLC",
+    "FileVersion": "7.0.0",
+    "ProductName": "SpecterInsight",
+    "ProductVersion": "7.0.0"
+  },
+  {
+    "id": "ART-815201a636f4dc226d32",
+    "path": "client/SpecterInsight.UI.dll",
+    "CompanyName": "Practical Security Analytics LLC",
+    "FileVersion": "7.0.0",
+    "ProductName": "SpecterInsight",
+    "ProductVersion": "7.0.0"
+  },
+  {
+    "id": "ART-f64ac49398fd3a129d68",
+    "path": "modules/AD.dll",
+    "CompanyName": "",
+    "FileVersion": "7.0.0",
+    "ProductName": "AD",
+    "ProductVersion": "7.0.0"
+  },
+  {
+    "id": "ART-66b81ea283e71f6895b8",
+    "path": "modules/CredentialManager.dll",
+    "CompanyName": "",
+    "FileVersion": "1.0.0.0",
+    "ProductName": "CredentialManager",
+    "ProductVersion": "1.0.0.0"
+  },
+  {
+    "id": "ART-a0b474bc8594d397a7d4",
+    "path": "modules/Direct.dll",
+    "CompanyName": "",
+    "FileVersion": "7.0.0",
+    "ProductName": "Direct",
+    "ProductVersion": "7.0.0"
+  },
+  {
+    "id": "ART-433ba028b1162b83b154",
+    "path": "modules/Dumper.dll",
+    "CompanyName": "",
+    "FileVersion": "7.0.0",
+    "ProductName": "Dumper",
+    "ProductVersion": "7.0.0"
+  },
+  {
+    "id": "ART-7f6533d2d979d4a10220",
+    "path": "modules/EventLog.dll",
+    "CompanyName": "",
+    "FileVersion": "7.0.0",
+    "ProductName": "EventLog",
+    "ProductVersion": "7.0.0"
+  },
+  {
+    "id": "ART-41866cb9cc446b315240",
+    "path": "modules/Firewall.dll",
+    "CompanyName": "",
+    "FileVersion": "7.0.0",
+    "ProductName": "Firewall",
+    "ProductVersion": "7.0.0"
+  },
+  {
+    "id": "ART-84cb056278b482db808e",
+    "path": "modules/GPO.dll",
+    "CompanyName": "",
+    "FileVersion": "7.0.0",
+    "ProductName": "GPO",
+    "ProductVersion": "7.0.0"
+  },
+  {
+    "id": "ART-d9ee3a29643ffbe6e335",
+    "path": "modules/Interop.NetFwTypeLib.dll",
+    "CompanyName": " ",
+    "FileVersion": "1.0.0.0",
+    "ProductName": " ",
+    "ProductVersion": " "
+  },
+  {
+    "id": "ART-1fbb4f61db8a557f4fed",
+    "path": "modules/Interop.TaskScheduler.dll",
+    "CompanyName": " ",
+    "FileVersion": "1.0.0.0",
+    "ProductName": "Assembly imported from type library 'TaskScheduler'.",
+    "ProductVersion": "1.0.0.0"
+  },
+  {
+    "id": "ART-dd5b2adeffd42b924f05",
+    "path": "modules/Microsoft.GroupPolicy.Management.dll",
+    "CompanyName": "Microsoft Corporation",
+    "FileVersion": "10.0.14393.6611",
+    "ProductName": "Microsoft (R) Windows (R) Operating System",
+    "ProductVersion": "10.0.14393.6611"
+  },
+  {
+    "id": "ART-d88f3038dc1bfcf926d7",
+    "path": "modules/PSCredentialManager.Api.dll",
+    "CompanyName": "",
+    "FileVersion": "1.0.0.0",
+    "ProductName": "PSCredentialManager.Api",
+    "ProductVersion": "1.0.0.0"
+  },
+  {
+    "id": "ART-ed049cf9b022a5a7dd0c",
+    "path": "modules/PSCredentialManager.Common.dll",
+    "CompanyName": "",
+    "FileVersion": "1.0.0.0",
+    "ProductName": "PSCredentialManager.Object",
+    "ProductVersion": "1.0.0.0"
+  },
+  {
+    "id": "ART-39a1d10c641dd27780d2",
+    "path": "modules/System.DirectoryServices.AccountManagement.dll",
+    "CompanyName": "Microsoft Corporation",
+    "FileVersion": "4.8.3761.0 built by: NET48REL1",
+    "ProductName": "Microsoft® .NET Framework",
+    "ProductVersion": "4.8.3761.0"
+  },
+  {
+    "id": "ART-ae50c0ec65b6107f2f85",
+    "path": "modules/common.dll",
+    "CompanyName": "",
+    "FileVersion": "7.0.0",
+    "ProductName": "common",
+    "ProductVersion": "7.0.0"
+  },
+  {
+    "id": "ART-ef1f7b7d402f2b656fea",
+    "path": "modules/credentials.dll",
+    "CompanyName": "",
+    "FileVersion": "7.0.0",
+    "ProductName": "Credentials",
+    "ProductVersion": "7.0.0"
+  },
+  {
+    "id": "ART-48202ea84b8be533bb5c",
+    "path": "modules/inveigh.dll",
+    "CompanyName": "inveigh",
+    "FileVersion": "1.0.0.0",
+    "ProductName": "inveigh",
+    "ProductVersion": "1.0.0+89c930a333d50b2e255fd2290de932d7fa3990c5"
+  },
+  {
+    "id": "ART-a543e921a8fcb61a22d9",
+    "path": "modules/lateral.dll",
+    "CompanyName": "",
+    "FileVersion": "7.0.0",
+    "ProductName": "lateral",
+    "ProductVersion": "7.0.0"
+  },
+  {
+    "id": "ART-181abe8ac5b670035d07",
+    "path": "modules/levelup.dll",
+    "FileVersion": "7.0.0",
+    "ProductName": "LevelUp",
+    "ProductVersion": "7.0.0"
+  },
+  {
+    "id": "ART-274e7c91c79075ba0c02",
+    "path": "modules/persistence.dll",
+    "CompanyName": "",
+    "FileVersion": "7.0.0",
+    "ProductName": "persistence",
+    "ProductVersion": "7.0.0"
+  },
+  {
+    "id": "ART-26c300deff4bc27c4184",
+    "path": "modules/reach.dll",
+    "FileVersion": "7.0.0",
+    "ProductName": "Reach",
+    "ProductVersion": "7.0.0"
+  },
+  {
+    "id": "ART-c36eef3798770932e7a9",
+    "path": "modules/recon.dll",
+    "CompanyName": "",
+    "FileVersion": "7.0.0",
+    "ProductName": "recon",
+    "ProductVersion": "7.0.0"
+  },
+  {
+    "id": "ART-8f058b29fbb36cf6a3bd",
+    "path": "modules/smb.dll",
+    "CompanyName": "",
+    "FileVersion": "7.0.0",
+    "ProductName": "smb",
+    "ProductVersion": "7.0.0"
+  },
+  {
+    "id": "ART-db7ea48ff45f6e6e3cfa",
+    "path": "server/SpecterInsight.Obfuscation.dll",
+    "CompanyName": "Practical Security Analytics LLC",
+    "FileVersion": "7.0.0",
+    "ProductName": "SpecterInsight",
+    "ProductVersion": "7.0.0"
+  },
+  {
+    "id": "ART-26e15294ad05cbb25ad2",
+    "path": "server/SpecterInsight.Server.Host.dll",
+    "CompanyName": "Practical Security Analytics LLC",
+    "FileVersion": "7.0.0",
+    "ProductName": "SpecterInsight",
+    "ProductVersion": "7.0.0"
+  },
+  {
+    "id": "ART-91d2f15300146c3e7783",
+    "path": "server/SpecterInsight.Server.dll",
+    "CompanyName": "Practical Security Analytics LLC",
+    "FileVersion": "7.0.0",
+    "ProductName": "SpecterInsight",
+    "ProductVersion": "7.0.0"
+  },
+  {
+    "id": "ART-c69d218e91f5989dc005",
+    "path": "server/SpecterInsight.exe",
+    "CompanyName": "SpecterInsight",
+    "FileVersion": "1.0.0.0",
+    "ProductName": "SpecterInsight",
+    "ProductVersion": "1.0.0+89c930a333d50b2e255fd2290de932d7fa3990c5"
+  },
+  {
+    "id": "ART-e459716803996d0a2bef",
+    "path": "templates/any/SpecterInsight.exe",
+    "CompanyName": "SpecterInsight",
+    "FileVersion": "1.0.0.0",
+    "ProductName": "SpecterInsight",
+    "ProductVersion": "1.0.0+3263242625c96da7efe3153a93c9f8f8f33bec59"
+  },
+  {
+    "id": "ART-166e269ca6e0b21b4032",
+    "path": "templates/any/specter-dotnet-exe.exe",
+    "CompanyName": "SpecterInsight",
+    "FileVersion": "1.0.0.0",
+    "ProductName": "SpecterInsight",
+    "ProductVersion": "1.0.0+89c930a333d50b2e255fd2290de932d7fa3990c5"
+  },
+  {
+    "id": "ART-f523dfbb1a8a160e52fb",
+    "path": "templates/any/specter-dotnet-exe.exe.bak",
+    "CompanyName": "SpecterInsight",
+    "FileVersion": "1.0.0.0",
+    "ProductName": "SpecterInsight",
+    "ProductVersion": "1.0.0+3263242625c96da7efe3153a93c9f8f8f33bec59"
+  },
+  {
+    "id": "ART-50b9f7ef4eb4a1138dd4",
+    "path": "templates/any/specter-dotnet-exe.exe.bak2",
+    "CompanyName": "SpecterInsight",
+    "FileVersion": "1.0.0.0",
+    "ProductName": "SpecterInsight",
+    "ProductVersion": "1.0.0+3263242625c96da7efe3153a93c9f8f8f33bec59"
+  },
+  {
+    "id": "ART-5921030b392ab20a5d73",
+    "path": "templates/any/specter-dotnet-exe.exe.bak3",
+    "CompanyName": "SpecterInsight",
+    "FileVersion": "1.0.0.0",
+    "ProductName": "SpecterInsight",
+    "ProductVersion": "1.0.0+3263242625c96da7efe3153a93c9f8f8f33bec59"
+  }
+]

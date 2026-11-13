@@ -1,0 +1,10 @@
+{"scenario":"dimension","passed":true,"dimensions":384}
+{"scenario":"finite","passed":true,"dimensions":384}
+{"scenario":"identical-input","passed":true,"dimensions":384}
+{"scenario":"changed-input","passed":true,"dimensions":384}
+{"scenario":"server-cosine-self","passed":true,"dimensions":384}
+{"scenario":"server-cosine-change","passed":true,"dimensions":384}
+{"scenario":"server-cosine-orthogonal","passed":true,"dimensions":384}
+{"scenario":"markdown-empty","passed":true,"dimensions":384}
+{"scenario":"markdown-fallback","passed":true,"dimensions":384}
+{"scenario":"markdown-headings","passed":true,"dimensions":384}

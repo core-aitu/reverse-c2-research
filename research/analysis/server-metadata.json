@@ -1,0 +1,103 @@
+{
+  "candidate_controller_types": 39,
+  "criterion": "SpecterInsight.Server namespace and type suffix Controller",
+  "entity_namespace_type_counts": {
+    "SpecterInsight.Server.Services.Database.Entities": 33
+  },
+  "audit_and_storage_type_markers": [
+    {
+      "namespace": "SpecterInsight.Server.Services.Events",
+      "type": "EventLoggingService",
+      "token": "0x2000147"
+    },
+    {
+      "namespace": "SpecterInsight.Server.Services.Documentation",
+      "type": "DocumentationService",
+      "token": "0x2000162"
+    },
+    {
+      "namespace": "SpecterInsight.Server.Services.Database",
+      "type": "DatabaseService",
+      "token": "0x2000168"
+    },
+    {
+      "namespace": "SpecterInsight.Server.Controllers",
+      "type": "DocumentationController",
+      "token": "0x200029e"
+    },
+    {
+      "namespace": "SpecterInsight.Server.Controllers",
+      "type": "SpecterEventHub",
+      "token": "0x20002bd"
+    }
+  ],
+  "selected_attribute_counts": {
+    "ApiControllerAttribute": 36,
+    "RouteAttribute": 38,
+    "HttpPostAttribute": 62,
+    "AuthorizeAttribute": 182,
+    "HttpGetAttribute": 91
+  },
+  "documentation_attributes": [
+    {
+      "scope": "type",
+      "attribute": "ApiControllerAttribute",
+      "argument": null
+    },
+    {
+      "scope": "type",
+      "attribute": "RouteAttribute",
+      "argument": "[controller]"
+    },
+    {
+      "scope": "GetAllDocumentation",
+      "attribute": "AuthorizeAttribute",
+      "argument": null
+    },
+    {
+      "scope": "GetAllDocumentation",
+      "attribute": "HttpGetAttribute",
+      "argument": null
+    },
+    {
+      "scope": "SearchDocumentation",
+      "attribute": "AuthorizeAttribute",
+      "argument": null
+    },
+    {
+      "scope": "SearchDocumentation",
+      "attribute": "HttpPostAttribute",
+      "argument": "search"
+    },
+    {
+      "scope": "GetIndexStatus",
+      "attribute": "AuthorizeAttribute",
+      "argument": null
+    },
+    {
+      "scope": "GetIndexStatus",
+      "attribute": "HttpGetAttribute",
+      "argument": "index-status"
+    },
+    {
+      "scope": "GetEmbeddingProviders",
+      "attribute": "AuthorizeAttribute",
+      "argument": null
+    },
+    {
+      "scope": "GetEmbeddingProviders",
+      "attribute": "HttpGetAttribute",
+      "argument": "embedding-providers"
+    },
+    {
+      "scope": "StartIndexing",
+      "attribute": "AuthorizeAttribute",
+      "argument": null
+    },
+    {
+      "scope": "StartIndexing",
+      "attribute": "HttpPostAttribute",
+      "argument": "index"
+    }
+  ]
+}

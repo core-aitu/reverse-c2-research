@@ -1,0 +1,41 @@
+{"scenario":"vendor-colon","actual":"Example Vendor","expected":"Example Vendor","passed":true}
+{"scenario":"vendor-compact","actual":"Example Vendor","expected":"Example Vendor","passed":true}
+{"scenario":"vendor-unknown","actual":null,"expected":null,"passed":true}
+{"scenario":"vendor-empty","actual":null,"expected":null,"passed":true}
+{"scenario":"vendor-null","actual":null,"expected":null,"passed":true}
+{"scenario":"vendor-missing-file","actual":0,"expected":0,"passed":true}
+{"scenario":"vendor-plain","actual":"Plain Vendor","expected":"Plain Vendor","passed":true}
+{"scenario":"vendor-quoted-comma","actual":"Example","expected":"Example","passed":true}
+{"scenario":"vendor-empty-organization","actual":false,"expected":false,"passed":true}
+{"scenario":"catalog-comparison","shortRows":39527,"longRows":17927,"unique_short":39527,"product_keys":39492,"exact":22829,"missingPrefix":35,"different":16663,"commaPrefix":16662,"emptyMissing":35,"independent_parser":"TextFieldParser"}
+{"scenario":"outcome-foreground-Success","actual":"#52c27a","expected":"#52c27a","passed":true}
+{"scenario":"outcome-background-Success","actual":"#132a1e","expected":"#132a1e","passed":true}
+{"scenario":"outcome-foreground-Failure","actual":"#e05c5c","expected":"#e05c5c","passed":true}
+{"scenario":"outcome-background-Failure","actual":"#2a1313","expected":"#2a1313","passed":true}
+{"scenario":"outcome-unknown","actual":"#c8d0d0","expected":"#c8d0d0","passed":true}
+{"scenario":"event-accent-user-example","actual":"#9e68c8","expected":"#9e68c8","passed":true}
+{"scenario":"event-row-user-example","actual":"#241533","expected":"#241533","passed":true}
+{"scenario":"event-accent-other","actual":"#6a8080","expected":"#6a8080","passed":true}
+{"scenario":"event-row-other","actual":"#1a2424","expected":"#1a2424","passed":true}
+{"scenario":"BoolToGridLengthConverter-Boolean-True","actual":true,"expected":true,"passed":true}
+{"scenario":"BoolToGridLengthConverter-Boolean-False","actual":true,"expected":true,"passed":true}
+{"scenario":"BoolToGridLengthConverter-String-true","actual":true,"expected":true,"passed":true}
+{"scenario":"BoolToGridLengthConverter-null-","actual":true,"expected":true,"passed":true}
+{"scenario":"BoolToBrushConverter-Boolean-True","actual":true,"expected":true,"passed":true}
+{"scenario":"BoolToBrushConverter-Boolean-False","actual":true,"expected":true,"passed":true}
+{"scenario":"BoolToBrushConverter-String-true","actual":true,"expected":true,"passed":true}
+{"scenario":"BoolToBrushConverter-null-","actual":true,"expected":true,"passed":true}
+{"scenario":"BoolToGridLengthConverter-reverse","exception":"System.NotSupportedException"}
+{"scenario":"BoolToBrushConverter-reverse","exception":"System.NotSupportedException"}
+{"scenario":"EventOutcomeToForegroundConverter-reverse","exception":"System.NotSupportedException"}
+{"scenario":"EventOutcomeToBadgeBackgroundConverter-reverse","exception":"System.NotSupportedException"}
+{"scenario":"EventTypeToAccentConverter-reverse","exception":"System.NotSupportedException"}
+{"scenario":"EventTypeToRowBackgroundConverter-reverse","exception":"System.NotSupportedException"}
+{"scenario":"stored-event-client-id","actual":"fixture-2","expected":"fixture-2","passed":true}
+{"scenario":"stored-event-client-brush","actual":"#e05c5c","expected":"#e05c5c","passed":true}
+{"scenario":"audit-filter-message","actual":true,"expected":true,"passed":true}
+{"scenario":"audit-filter-source","actual":true,"expected":true,"passed":true}
+{"scenario":"audit-filter-details","actual":true,"expected":true,"passed":true}
+{"scenario":"audit-filter-different-type","actual":false,"expected":false,"passed":true}
+{"scenario":"audit-filter-no-text-match","actual":false,"expected":false,"passed":true}
+{"scenario":"audit-filter-outside-time-window","actual":false,"expected":false,"passed":true}

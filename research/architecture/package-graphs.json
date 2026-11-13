@@ -1,0 +1,5161 @@
+[
+  {
+    "id": "ART-836f56fc924979444150",
+    "manifest": "client/SpecterInsight.UI.deps.json",
+    "target": ".NETCoreApp,Version=v10.0",
+    "nodes": {
+      "SpecterInsight.UI/1.0.0": {
+        "dependencies": {
+          "Avalonia": "11.3.12",
+          "Avalonia.AvaloniaEdit": "11.4.1",
+          "Avalonia.Controls.DataGrid": "11.3.12",
+          "Avalonia.Controls.Markdown": "11.3.5",
+          "Avalonia.Desktop": "11.3.12",
+          "Avalonia.ReactiveUI": "11.3.8",
+          "Avalonia.Themes.Fluent": "11.3.12",
+          "AvaloniaEdit.TextMate": "11.4.1",
+          "Dock.Avalonia": "11.3.12",
+          "Dock.Avalonia.Themes.Fluent": "11.3.12",
+          "Dock.Model.Mvvm": "11.3.12",
+          "File.TypeChecker": "4.4.0",
+          "Material.Icons.Avalonia": "2.1.9",
+          "MessageBox.Avalonia": "3.3.1.1",
+          "Microsoft.AspNetCore.WebUtilities": "10.0.5",
+          "Microsoft.CodeAnalysis.CSharp": "5.3.0",
+          "Microsoft.CodeAnalysis.Common": "5.3.0",
+          "Microsoft.PowerShell.SDK": "7.6.0",
+          "ReactiveUI.Fody": "19.5.41",
+          "SpecterInsight.ApiClient": "1.0.0",
+          "SpecterInsight.Obfuscation": "1.0.0"
+        },
+        "runtime_assets": [
+          "SpecterInsight.UI.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "AmsiScanner.Common/2.3.5": {
+        "dependencies": {
+          "Microsoft.PowerShell.SDK": "7.6.0"
+        },
+        "runtime_assets": [
+          "lib/net6.0/AmsiScanner.Common.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Antlr4.Runtime.Standard/4.13.1": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/netstandard2.0/Antlr4.Runtime.Standard.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Avalonia/11.3.12": {
+        "dependencies": {
+          "Avalonia.Remote.Protocol": "11.3.12",
+          "MicroCom.Runtime": "0.11.0"
+        },
+        "runtime_assets": [
+          "lib/net8.0/Avalonia.Base.dll",
+          "lib/net8.0/Avalonia.Controls.dll",
+          "lib/net8.0/Avalonia.DesignerSupport.dll",
+          "lib/net8.0/Avalonia.Dialogs.dll",
+          "lib/net8.0/Avalonia.Markup.Xaml.dll",
+          "lib/net8.0/Avalonia.Markup.dll",
+          "lib/net8.0/Avalonia.Metal.dll",
+          "lib/net8.0/Avalonia.MicroCom.dll",
+          "lib/net8.0/Avalonia.OpenGL.dll",
+          "lib/net8.0/Avalonia.Vulkan.dll",
+          "lib/net8.0/Avalonia.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Avalonia.Angle.Windows.Natives/2.1.25547.20250602": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win-arm64/native/av_libglesv2.dll",
+          "runtimes/win-x64/native/av_libglesv2.dll",
+          "runtimes/win-x86/native/av_libglesv2.dll"
+        ]
+      },
+      "Avalonia.AvaloniaEdit/11.4.1": {
+        "dependencies": {
+          "Avalonia": "11.3.12"
+        },
+        "runtime_assets": [
+          "lib/net6.0/AvaloniaEdit.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Avalonia.Controls.DataGrid/11.3.12": {
+        "dependencies": {
+          "Avalonia": "11.3.12"
+        },
+        "runtime_assets": [
+          "lib/net8.0/Avalonia.Controls.DataGrid.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Avalonia.Controls.Markdown/11.3.5": {
+        "dependencies": {
+          "Avalonia": "11.3.12",
+          "Markdig.Signed": "1.0.0"
+        },
+        "runtime_assets": [
+          "lib/net8.0/Avalonia.Controls.Documents.dll",
+          "lib/net8.0/Avalonia.Controls.Markdown.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Avalonia.Desktop/11.3.12": {
+        "dependencies": {
+          "Avalonia": "11.3.12",
+          "Avalonia.Native": "11.3.12",
+          "Avalonia.Skia": "11.3.12",
+          "Avalonia.Win32": "11.3.12",
+          "Avalonia.X11": "11.3.12"
+        },
+        "runtime_assets": [
+          "lib/net8.0/Avalonia.Desktop.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Avalonia.FreeDesktop/11.3.12": {
+        "dependencies": {
+          "Avalonia": "11.3.12",
+          "Tmds.DBus.Protocol": "0.21.2"
+        },
+        "runtime_assets": [
+          "lib/net8.0/Avalonia.FreeDesktop.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Avalonia.Native/11.3.12": {
+        "dependencies": {
+          "Avalonia": "11.3.12"
+        },
+        "runtime_assets": [
+          "lib/net8.0/Avalonia.Native.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/osx/native/libAvaloniaNative.dylib"
+        ]
+      },
+      "Avalonia.ReactiveUI/11.3.8": {
+        "dependencies": {
+          "Avalonia": "11.3.12",
+          "ReactiveUI": "20.1.1",
+          "System.Reactive": "6.0.1"
+        },
+        "runtime_assets": [
+          "lib/net8.0/Avalonia.ReactiveUI.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Avalonia.Remote.Protocol/11.3.12": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net8.0/Avalonia.Remote.Protocol.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Avalonia.Skia/11.3.12": {
+        "dependencies": {
+          "Avalonia": "11.3.12",
+          "HarfBuzzSharp": "8.3.1.1",
+          "HarfBuzzSharp.NativeAssets.Linux": "8.3.1.1",
+          "SkiaSharp": "2.88.9",
+          "SkiaSharp.NativeAssets.Linux": "2.88.9"
+        },
+        "runtime_assets": [
+          "lib/net8.0/Avalonia.Skia.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Avalonia.Themes.Fluent/11.3.12": {
+        "dependencies": {
+          "Avalonia": "11.3.12"
+        },
+        "runtime_assets": [
+          "lib/net8.0/Avalonia.Themes.Fluent.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Avalonia.Win32/11.3.12": {
+        "dependencies": {
+          "Avalonia": "11.3.12",
+          "Avalonia.Angle.Windows.Natives": "2.1.25547.20250602"
+        },
+        "runtime_assets": [
+          "lib/net8.0/Avalonia.Win32.Automation.dll",
+          "lib/net8.0/Avalonia.Win32.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Avalonia.X11/11.3.12": {
+        "dependencies": {
+          "Avalonia": "11.3.12",
+          "Avalonia.FreeDesktop": "11.3.12",
+          "Avalonia.Skia": "11.3.12"
+        },
+        "runtime_assets": [
+          "lib/net8.0/Avalonia.X11.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "AvaloniaEdit.TextMate/11.4.1": {
+        "dependencies": {
+          "Avalonia": "11.3.12",
+          "Avalonia.AvaloniaEdit": "11.4.1",
+          "TextMateSharp": "2.0.2",
+          "TextMateSharp.Grammars": "2.0.2"
+        },
+        "runtime_assets": [
+          "lib/net6.0/AvaloniaEdit.TextMate.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "CommunityToolkit.Mvvm/8.4.0": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net8.0/CommunityToolkit.Mvvm.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "DialogHost.Avalonia/0.8.1": {
+        "dependencies": {
+          "Avalonia": "11.3.12"
+        },
+        "runtime_assets": [
+          "lib/netstandard2.0/DialogHost.Avalonia.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Dock.Avalonia/11.3.12": {
+        "dependencies": {
+          "Avalonia": "11.3.12",
+          "Dock.Controls.DeferredContentControl": "11.3.12",
+          "Dock.Controls.ProportionalStackPanel": "11.3.12",
+          "Dock.Controls.Recycling": "11.3.12",
+          "Dock.MarkupExtension": "11.3.12",
+          "Dock.Model": "11.3.12",
+          "Dock.Settings": "11.3.12"
+        },
+        "runtime_assets": [
+          "lib/net10.0/Dock.Avalonia.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Dock.Avalonia.Themes.Fluent/11.3.12": {
+        "dependencies": {
+          "Avalonia": "11.3.12",
+          "Dock.Avalonia": "11.3.12"
+        },
+        "runtime_assets": [
+          "lib/net10.0/Dock.Avalonia.Themes.Fluent.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Dock.Controls.DeferredContentControl/11.3.12": {
+        "dependencies": {
+          "Avalonia": "11.3.12"
+        },
+        "runtime_assets": [
+          "lib/net10.0/Dock.Controls.DeferredContentControl.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Dock.Controls.ProportionalStackPanel/11.3.12": {
+        "dependencies": {
+          "Avalonia": "11.3.12"
+        },
+        "runtime_assets": [
+          "lib/net10.0/Dock.Controls.ProportionalStackPanel.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Dock.Controls.Recycling/11.3.12": {
+        "dependencies": {
+          "Avalonia": "11.3.12",
+          "Dock.Controls.Recycling.Model": "11.3.12"
+        },
+        "runtime_assets": [
+          "lib/net10.0/Dock.Controls.Recycling.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Dock.Controls.Recycling.Model/11.3.12": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/Dock.Controls.Recycling.Model.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Dock.MarkupExtension/11.3.12": {
+        "dependencies": {
+          "Avalonia": "11.3.12"
+        },
+        "runtime_assets": [
+          "lib/net10.0/Dock.MarkupExtension.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Dock.Model/11.3.12": {
+        "dependencies": {
+          "Dock.Controls.Recycling.Model": "11.3.12"
+        },
+        "runtime_assets": [
+          "lib/net10.0/Dock.Model.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Dock.Model.Mvvm/11.3.12": {
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "Dock.Model": "11.3.12"
+        },
+        "runtime_assets": [
+          "lib/net10.0/Dock.Model.Mvvm.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Dock.Settings/11.3.12": {
+        "dependencies": {
+          "Avalonia": "11.3.12",
+          "Dock.Model": "11.3.12"
+        },
+        "runtime_assets": [
+          "lib/net10.0/Dock.Settings.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "DynamicData/8.4.1": {
+        "dependencies": {
+          "System.Reactive": "6.0.1"
+        },
+        "runtime_assets": [
+          "lib/net8.0/DynamicData.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "File.TypeChecker/4.4.0": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/netstandard2.0/FileTypeChecker.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "HarfBuzzSharp/8.3.1.1": {
+        "dependencies": {
+          "HarfBuzzSharp.NativeAssets.Win32": "8.3.1.1",
+          "HarfBuzzSharp.NativeAssets.macOS": "8.3.1.1"
+        },
+        "runtime_assets": [
+          "lib/net8.0/HarfBuzzSharp.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "HarfBuzzSharp.NativeAssets.Linux/8.3.1.1": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/linux-arm/native/libHarfBuzzSharp.so",
+          "runtimes/linux-arm64/native/libHarfBuzzSharp.so",
+          "runtimes/linux-loongarch64/native/libHarfBuzzSharp.so",
+          "runtimes/linux-musl-arm/native/libHarfBuzzSharp.so",
+          "runtimes/linux-musl-arm64/native/libHarfBuzzSharp.so",
+          "runtimes/linux-musl-loongarch64/native/libHarfBuzzSharp.so",
+          "runtimes/linux-musl-riscv64/native/libHarfBuzzSharp.so",
+          "runtimes/linux-musl-x64/native/libHarfBuzzSharp.so",
+          "runtimes/linux-riscv64/native/libHarfBuzzSharp.so",
+          "runtimes/linux-x64/native/libHarfBuzzSharp.so",
+          "runtimes/linux-x86/native/libHarfBuzzSharp.so"
+        ]
+      },
+      "HarfBuzzSharp.NativeAssets.macOS/8.3.1.1": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/osx/native/libHarfBuzzSharp.dylib"
+        ]
+      },
+      "HarfBuzzSharp.NativeAssets.Win32/8.3.1.1": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win-arm64/native/libHarfBuzzSharp.dll",
+          "runtimes/win-x64/native/libHarfBuzzSharp.dll",
+          "runtimes/win-x86/native/libHarfBuzzSharp.dll"
+        ]
+      },
+      "Humanizer.Core/2.14.1": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net6.0/Humanizer.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Json.More.Net/2.1.1": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net9.0/Json.More.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "JsonPointer.Net/5.3.1": {
+        "dependencies": {
+          "Humanizer.Core": "2.14.1",
+          "Json.More.Net": "2.1.1"
+        },
+        "runtime_assets": [
+          "lib/net9.0/JsonPointer.Net.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "JsonSchema.Net/7.4.0": {
+        "dependencies": {
+          "JsonPointer.Net": "5.3.1"
+        },
+        "runtime_assets": [
+          "lib/net9.0/JsonSchema.Net.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Markdig.Signed/1.0.0": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/Markdig.Signed.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Material.Icons/2.1.9": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/netstandard2.0/Material.Icons.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Material.Icons.Avalonia/2.1.9": {
+        "dependencies": {
+          "Avalonia": "11.3.12",
+          "Material.Icons": "2.1.9"
+        },
+        "runtime_assets": [
+          "lib/netstandard2.0/Material.Icons.Avalonia.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "MedallionShell/1.6.2": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/netstandard2.0/MedallionShell.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "MessageBox.Avalonia/3.3.1.1": {
+        "dependencies": {
+          "Avalonia": "11.3.12",
+          "DialogHost.Avalonia": "0.8.1"
+        },
+        "runtime_assets": [
+          "lib/netstandard2.0/MsBox.Avalonia.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "MicroCom.Runtime/0.11.0": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net5.0/MicroCom.Runtime.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.ApplicationInsights/2.23.0": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/netstandard2.0/Microsoft.ApplicationInsights.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.AspNetCore.Connections.Abstractions/10.0.5": {
+        "dependencies": {
+          "Microsoft.Extensions.Features": "10.0.5"
+        },
+        "runtime_assets": [
+          "lib/net10.0/Microsoft.AspNetCore.Connections.Abstractions.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.AspNetCore.Http.Connections.Client/10.0.5": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Connections.Common": "10.0.5",
+          "Microsoft.Extensions.Logging.Abstractions": "10.0.5",
+          "Microsoft.Extensions.Options": "10.0.5"
+        },
+        "runtime_assets": [
+          "lib/net10.0/Microsoft.AspNetCore.Http.Connections.Client.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.AspNetCore.Http.Connections.Common/10.0.5": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Connections.Abstractions": "10.0.5"
+        },
+        "runtime_assets": [
+          "lib/net10.0/Microsoft.AspNetCore.Http.Connections.Common.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.AspNetCore.SignalR.Client/10.0.5": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Connections.Client": "10.0.5",
+          "Microsoft.AspNetCore.SignalR.Client.Core": "10.0.5"
+        },
+        "runtime_assets": [
+          "lib/net10.0/Microsoft.AspNetCore.SignalR.Client.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.AspNetCore.SignalR.Client.Core/10.0.5": {
+        "dependencies": {
+          "Microsoft.AspNetCore.SignalR.Common": "10.0.5",
+          "Microsoft.AspNetCore.SignalR.Protocols.Json": "10.0.5",
+          "Microsoft.Extensions.DependencyInjection": "10.0.5",
+          "Microsoft.Extensions.Logging": "10.0.5"
+        },
+        "runtime_assets": [
+          "lib/net10.0/Microsoft.AspNetCore.SignalR.Client.Core.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.AspNetCore.SignalR.Common/10.0.5": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Connections.Abstractions": "10.0.5",
+          "Microsoft.Extensions.Options": "10.0.5"
+        },
+        "runtime_assets": [
+          "lib/net10.0/Microsoft.AspNetCore.SignalR.Common.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.AspNetCore.SignalR.Protocols.Json/10.0.5": {
+        "dependencies": {
+          "Microsoft.AspNetCore.SignalR.Common": "10.0.5"
+        },
+        "runtime_assets": [
+          "lib/net10.0/Microsoft.AspNetCore.SignalR.Protocols.Json.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.AspNetCore.SignalR.Protocols.NewtonsoftJson/10.0.5": {
+        "dependencies": {
+          "Microsoft.AspNetCore.SignalR.Common": "10.0.5",
+          "Newtonsoft.Json": "13.0.4"
+        },
+        "runtime_assets": [
+          "lib/net10.0/Microsoft.AspNetCore.SignalR.Protocols.NewtonsoftJson.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.AspNetCore.WebUtilities/10.0.5": {
+        "dependencies": {
+          "Microsoft.Net.Http.Headers": "10.0.5"
+        },
+        "runtime_assets": [
+          "lib/net10.0/Microsoft.AspNetCore.WebUtilities.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.Bcl.AsyncInterfaces/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.CodeAnalysis.Common/5.3.0": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/Microsoft.CodeAnalysis.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.CodeAnalysis.CSharp/5.3.0": {
+        "dependencies": {
+          "Microsoft.CodeAnalysis.Common": "5.3.0"
+        },
+        "runtime_assets": [
+          "lib/net10.0/Microsoft.CodeAnalysis.CSharp.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.Extensions.DependencyInjection/10.0.5": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.5"
+        },
+        "runtime_assets": [
+          "lib/net10.0/Microsoft.Extensions.DependencyInjection.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.Extensions.Features/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/Microsoft.Extensions.Features.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.Extensions.Logging/10.0.5": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "10.0.5",
+          "Microsoft.Extensions.Logging.Abstractions": "10.0.5",
+          "Microsoft.Extensions.Options": "10.0.5"
+        },
+        "runtime_assets": [
+          "lib/net10.0/Microsoft.Extensions.Logging.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.Extensions.Logging.Abstractions/10.0.5": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.5"
+        },
+        "runtime_assets": [
+          "lib/net10.0/Microsoft.Extensions.Logging.Abstractions.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.Extensions.ObjectPool/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/Microsoft.Extensions.ObjectPool.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.Extensions.Options/10.0.5": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.5",
+          "Microsoft.Extensions.Primitives": "10.0.5"
+        },
+        "runtime_assets": [
+          "lib/net10.0/Microsoft.Extensions.Options.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.Extensions.Primitives/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/Microsoft.Extensions.Primitives.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.Management.Infrastructure/3.0.0": {
+        "dependencies": {
+          "Microsoft.Management.Infrastructure.Runtime.Unix": "3.0.0",
+          "Microsoft.Management.Infrastructure.Runtime.Win": "3.0.0"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.Management.Infrastructure.CimCmdlets/7.6.0": {
+        "dependencies": {
+          "System.Management.Automation": "7.6.0"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net10.0/Microsoft.Management.Infrastructure.CimCmdlets.dll"
+        ]
+      },
+      "Microsoft.Management.Infrastructure.Runtime.Unix/3.0.0": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/unix/lib/netstandard1.6/Microsoft.Management.Infrastructure.dll"
+        ]
+      },
+      "Microsoft.Management.Infrastructure.Runtime.Win/3.0.0": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win-arm64/lib/netstandard1.6/microsoft.management.infrastructure.dll",
+          "runtimes/win-arm64/lib/netstandard1.6/microsoft.management.infrastructure.native.dll",
+          "runtimes/win-x64/lib/netstandard1.6/microsoft.management.infrastructure.dll",
+          "runtimes/win-x64/lib/netstandard1.6/microsoft.management.infrastructure.native.dll",
+          "runtimes/win-x86/lib/netstandard1.6/microsoft.management.infrastructure.dll",
+          "runtimes/win-x86/lib/netstandard1.6/microsoft.management.infrastructure.native.dll",
+          "runtimes/win-arm64/native/microsoft.management.infrastructure.native.unmanaged.dll",
+          "runtimes/win-x64/native/microsoft.management.infrastructure.native.unmanaged.dll",
+          "runtimes/win-x86/native/microsoft.management.infrastructure.native.unmanaged.dll"
+        ]
+      },
+      "Microsoft.Net.Http.Headers/10.0.5": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "10.0.5"
+        },
+        "runtime_assets": [
+          "lib/net10.0/Microsoft.Net.Http.Headers.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.PowerShell.Commands.Diagnostics/7.6.0": {
+        "dependencies": {
+          "System.Management.Automation": "7.6.0"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net10.0/Microsoft.PowerShell.Commands.Diagnostics.dll"
+        ]
+      },
+      "Microsoft.PowerShell.Commands.Management/7.6.0": {
+        "dependencies": {
+          "Microsoft.PowerShell.Security": "7.6.0",
+          "System.Diagnostics.EventLog": "10.0.5",
+          "System.ServiceProcess.ServiceController": "10.0.5"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/unix/lib/net10.0/Microsoft.PowerShell.Commands.Management.dll",
+          "runtimes/win/lib/net10.0/Microsoft.PowerShell.Commands.Management.dll"
+        ]
+      },
+      "Microsoft.PowerShell.Commands.Utility/7.6.0": {
+        "dependencies": {
+          "JsonSchema.Net": "7.4.0",
+          "Markdig.Signed": "1.0.0",
+          "Microsoft.CodeAnalysis.CSharp": "5.3.0",
+          "Microsoft.PowerShell.MarkdownRender": "7.2.1",
+          "Microsoft.Win32.SystemEvents": "10.0.5",
+          "System.Drawing.Common": "10.0.5",
+          "System.Management.Automation": "7.6.0"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/unix/lib/net10.0/Microsoft.PowerShell.Commands.Utility.dll",
+          "runtimes/win/lib/net10.0/Microsoft.PowerShell.Commands.Utility.dll"
+        ]
+      },
+      "Microsoft.PowerShell.ConsoleHost/7.6.0": {
+        "dependencies": {
+          "System.Management.Automation": "7.6.0"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/unix/lib/net10.0/Microsoft.PowerShell.ConsoleHost.dll",
+          "runtimes/win/lib/net10.0/Microsoft.PowerShell.ConsoleHost.dll"
+        ]
+      },
+      "Microsoft.PowerShell.CoreCLR.Eventing/7.6.0": {
+        "dependencies": {
+          "System.Diagnostics.EventLog": "10.0.5"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net10.0/Microsoft.PowerShell.CoreCLR.Eventing.dll"
+        ]
+      },
+      "Microsoft.PowerShell.MarkdownRender/7.2.1": {
+        "dependencies": {
+          "Markdig.Signed": "1.0.0"
+        },
+        "runtime_assets": [
+          "lib/netstandard2.0/Microsoft.PowerShell.MarkdownRender.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.PowerShell.Native/700.0.0-rc.1": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/linux-arm/native/build.manifest",
+          "runtimes/linux-arm/native/build.manifest.sig",
+          "runtimes/linux-arm/native/libpsl-native.so",
+          "runtimes/linux-arm64/native/build.manifest",
+          "runtimes/linux-arm64/native/build.manifest.sig",
+          "runtimes/linux-arm64/native/libpsl-native.so",
+          "runtimes/linux-musl-x64/native/build.manifest",
+          "runtimes/linux-musl-x64/native/build.manifest.sig",
+          "runtimes/linux-musl-x64/native/libpsl-native.so",
+          "runtimes/linux-x64/native/build.manifest",
+          "runtimes/linux-x64/native/build.manifest.sig",
+          "runtimes/linux-x64/native/libpsl-native.so",
+          "runtimes/osx/native/libpsl-native.dylib",
+          "runtimes/win-arm64/native/PowerShell.Core.Instrumentation.dll",
+          "runtimes/win-arm64/native/build.manifest",
+          "runtimes/win-arm64/native/build.manifest.sig",
+          "runtimes/win-arm64/native/pwrshplugin.dll",
+          "runtimes/win-x64/native/PowerShell.Core.Instrumentation.dll",
+          "runtimes/win-x64/native/build.manifest",
+          "runtimes/win-x64/native/build.manifest.sig",
+          "runtimes/win-x64/native/pwrshplugin.dll",
+          "runtimes/win-x86/native/PowerShell.Core.Instrumentation.dll",
+          "runtimes/win-x86/native/build.manifest",
+          "runtimes/win-x86/native/build.manifest.sig",
+          "runtimes/win-x86/native/pwrshplugin.dll"
+        ]
+      },
+      "Microsoft.PowerShell.SDK/7.6.0": {
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "10.0.5",
+          "Microsoft.Extensions.ObjectPool": "10.0.5",
+          "Microsoft.Management.Infrastructure.CimCmdlets": "7.6.0",
+          "Microsoft.PowerShell.Commands.Diagnostics": "7.6.0",
+          "Microsoft.PowerShell.Commands.Management": "7.6.0",
+          "Microsoft.PowerShell.Commands.Utility": "7.6.0",
+          "Microsoft.PowerShell.ConsoleHost": "7.6.0",
+          "Microsoft.PowerShell.Security": "7.6.0",
+          "Microsoft.WSMan.Management": "7.6.0",
+          "Microsoft.Win32.Registry.AccessControl": "10.0.5",
+          "Microsoft.Win32.SystemEvents": "10.0.5",
+          "Microsoft.Windows.Compatibility": "10.0.5",
+          "System.CodeDom": "10.0.5",
+          "System.ComponentModel.Composition": "10.0.5",
+          "System.ComponentModel.Composition.Registration": "10.0.5",
+          "System.Configuration.ConfigurationManager": "10.0.5",
+          "System.Data.Odbc": "10.0.5",
+          "System.Data.OleDb": "10.0.5",
+          "System.Data.SqlClient": "4.9.1",
+          "System.Diagnostics.EventLog": "10.0.5",
+          "System.Diagnostics.PerformanceCounter": "10.0.5",
+          "System.DirectoryServices": "10.0.5",
+          "System.DirectoryServices.AccountManagement": "10.0.5",
+          "System.DirectoryServices.Protocols": "10.0.5",
+          "System.Drawing.Common": "10.0.5",
+          "System.IO.Packaging": "10.0.5",
+          "System.IO.Ports": "10.0.5",
+          "System.Management": "10.0.5",
+          "System.Management.Automation": "7.6.0",
+          "System.Net.Http.WinHttpHandler": "10.0.5",
+          "System.Reflection.Context": "10.0.5",
+          "System.Runtime.Caching": "10.0.5",
+          "System.Security.Cryptography.Pkcs": "10.0.5",
+          "System.Security.Cryptography.ProtectedData": "10.0.5",
+          "System.Security.Cryptography.Xml": "10.0.5",
+          "System.Security.Permissions": "10.0.5",
+          "System.ServiceModel.Http": "10.0.652802",
+          "System.ServiceModel.NetFramingBase": "10.0.652802",
+          "System.ServiceModel.NetTcp": "10.0.652802",
+          "System.ServiceModel.Primitives": "10.0.652802",
+          "System.ServiceModel.Syndication": "10.0.5",
+          "System.ServiceProcess.ServiceController": "10.0.5",
+          "System.Speech": "10.0.5",
+          "System.Windows.Extensions": "10.0.5",
+          "runtime.android-arm.runtime.native.System.IO.Ports": "10.0.5",
+          "runtime.android-arm64.runtime.native.System.IO.Ports": "10.0.5",
+          "runtime.android-x64.runtime.native.System.IO.Ports": "10.0.5",
+          "runtime.android-x86.runtime.native.System.IO.Ports": "10.0.5",
+          "runtime.linux-arm.runtime.native.System.IO.Ports": "10.0.5",
+          "runtime.linux-arm64.runtime.native.System.IO.Ports": "10.0.5",
+          "runtime.linux-bionic-arm64.runtime.native.System.IO.Ports": "10.0.5",
+          "runtime.linux-bionic-x64.runtime.native.System.IO.Ports": "10.0.5",
+          "runtime.linux-musl-arm.runtime.native.System.IO.Ports": "10.0.5",
+          "runtime.linux-musl-arm64.runtime.native.System.IO.Ports": "10.0.5",
+          "runtime.linux-musl-x64.runtime.native.System.IO.Ports": "10.0.5",
+          "runtime.linux-x64.runtime.native.System.IO.Ports": "10.0.5",
+          "runtime.maccatalyst-arm64.runtime.native.System.IO.Ports": "10.0.5",
+          "runtime.maccatalyst-x64.runtime.native.System.IO.Ports": "10.0.5",
+          "runtime.osx-arm64.runtime.native.System.IO.Ports": "10.0.5",
+          "runtime.osx-x64.runtime.native.System.IO.Ports": "10.0.5"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/unix/lib/net10.0/Microsoft.PowerShell.SDK.dll",
+          "runtimes/win/lib/net10.0/Microsoft.PowerShell.SDK.dll"
+        ]
+      },
+      "Microsoft.PowerShell.Security/7.6.0": {
+        "dependencies": {
+          "System.Management.Automation": "7.6.0"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/unix/lib/net10.0/Microsoft.PowerShell.Security.dll",
+          "runtimes/win/lib/net10.0/Microsoft.PowerShell.Security.dll"
+        ]
+      },
+      "Microsoft.Security.Extensions/1.4.0": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win-arm64/lib/net5.0/getfilesiginforedistwrapper.dll",
+          "runtimes/win-x64/lib/net5.0/getfilesiginforedistwrapper.dll",
+          "runtimes/win-x86/lib/net5.0/getfilesiginforedistwrapper.dll",
+          "runtimes/win-arm64/native/getfilesiginforedist.dll",
+          "runtimes/win-x64/native/getfilesiginforedist.dll",
+          "runtimes/win-x86/native/getfilesiginforedist.dll"
+        ]
+      },
+      "Microsoft.Win32.Registry.AccessControl/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/Microsoft.Win32.Registry.AccessControl.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net10.0/Microsoft.Win32.Registry.AccessControl.dll"
+        ]
+      },
+      "Microsoft.Win32.SystemEvents/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/Microsoft.Win32.SystemEvents.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net10.0/Microsoft.Win32.SystemEvents.dll"
+        ]
+      },
+      "Microsoft.Windows.Compatibility/10.0.5": {
+        "dependencies": {
+          "Microsoft.Win32.Registry.AccessControl": "10.0.5",
+          "Microsoft.Win32.SystemEvents": "10.0.5",
+          "System.CodeDom": "10.0.5",
+          "System.ComponentModel.Composition": "10.0.5",
+          "System.ComponentModel.Composition.Registration": "10.0.5",
+          "System.Configuration.ConfigurationManager": "10.0.5",
+          "System.Data.Odbc": "10.0.5",
+          "System.Data.OleDb": "10.0.5",
+          "System.Data.SqlClient": "4.9.1",
+          "System.Diagnostics.EventLog": "10.0.5",
+          "System.Diagnostics.PerformanceCounter": "10.0.5",
+          "System.DirectoryServices": "10.0.5",
+          "System.DirectoryServices.AccountManagement": "10.0.5",
+          "System.DirectoryServices.Protocols": "10.0.5",
+          "System.Drawing.Common": "10.0.5",
+          "System.IO.Packaging": "10.0.5",
+          "System.IO.Ports": "10.0.5",
+          "System.Management": "10.0.5",
+          "System.Reflection.Context": "10.0.5",
+          "System.Runtime.Caching": "10.0.5",
+          "System.Security.Cryptography.Pkcs": "10.0.5",
+          "System.Security.Cryptography.ProtectedData": "10.0.5",
+          "System.Security.Cryptography.Xml": "10.0.5",
+          "System.Security.Permissions": "10.0.5",
+          "System.ServiceModel.Http": "10.0.652802",
+          "System.ServiceModel.NetTcp": "10.0.652802",
+          "System.ServiceModel.Primitives": "10.0.652802",
+          "System.ServiceModel.Syndication": "10.0.5",
+          "System.ServiceProcess.ServiceController": "10.0.5",
+          "System.Speech": "10.0.5",
+          "System.Web.Services.Description": "8.1.2"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.WSMan.Management/7.6.0": {
+        "dependencies": {
+          "Microsoft.WSMan.Runtime": "7.6.0",
+          "System.Diagnostics.EventLog": "10.0.5",
+          "System.Management.Automation": "7.6.0",
+          "System.ServiceProcess.ServiceController": "10.0.5"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net10.0/Microsoft.WSMan.Management.dll"
+        ]
+      },
+      "Microsoft.WSMan.Runtime/7.6.0": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net10.0/Microsoft.WSMan.Runtime.dll"
+        ]
+      },
+      "Newtonsoft.Json/13.0.4": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net6.0/Newtonsoft.Json.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Onigwrap/1.0.10": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/netstandard2.0/Onigwrap.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/linux-arm64/native/libonigwrap.so",
+          "runtimes/linux-bionic-arm64/native/libonigwrap.so",
+          "runtimes/linux-bionic-x64/native/libonigwrap.so",
+          "runtimes/linux-musl-arm64/native/libonigwrap.so",
+          "runtimes/linux-musl-x64/native/libonigwrap.so",
+          "runtimes/linux-x64/native/libonigwrap.so",
+          "runtimes/maccatalyst-arm64/native/libonigwrap.dylib",
+          "runtimes/maccatalyst-x64/native/libonigwrap.dylib",
+          "runtimes/osx-arm64/native/libonigwrap.dylib",
+          "runtimes/osx-x64/native/libonigwrap.dylib",
+          "runtimes/win-arm64/native/libonigwrap.dll",
+          "runtimes/win-x64/native/libonigwrap.dll",
+          "runtimes/win-x86/native/libonigwrap.dll"
+        ]
+      },
+      "ReactiveUI/20.1.1": {
+        "dependencies": {
+          "DynamicData": "8.4.1",
+          "Splat": "15.1.1"
+        },
+        "runtime_assets": [
+          "lib/net8.0/ReactiveUI.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "ReactiveUI.Fody/19.5.41": {
+        "dependencies": {
+          "ReactiveUI": "20.1.1"
+        },
+        "runtime_assets": [
+          "lib/net8.0/ReactiveUI.Fody.Helpers.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "runtime.android-arm.runtime.native.System.IO.Ports/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/android-arm/native/libSystem.IO.Ports.Native.so"
+        ]
+      },
+      "runtime.android-arm64.runtime.native.System.IO.Ports/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/android-arm64/native/libSystem.IO.Ports.Native.so"
+        ]
+      },
+      "runtime.android-x64.runtime.native.System.IO.Ports/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/android-x64/native/libSystem.IO.Ports.Native.so"
+        ]
+      },
+      "runtime.android-x86.runtime.native.System.IO.Ports/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/android-x86/native/libSystem.IO.Ports.Native.so"
+        ]
+      },
+      "runtime.linux-arm.runtime.native.System.IO.Ports/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/linux-arm/native/libSystem.IO.Ports.Native.so"
+        ]
+      },
+      "runtime.linux-arm64.runtime.native.System.IO.Ports/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/linux-arm64/native/libSystem.IO.Ports.Native.so"
+        ]
+      },
+      "runtime.linux-bionic-arm64.runtime.native.System.IO.Ports/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/linux-bionic-arm64/native/libSystem.IO.Ports.Native.so"
+        ]
+      },
+      "runtime.linux-bionic-x64.runtime.native.System.IO.Ports/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/linux-bionic-x64/native/libSystem.IO.Ports.Native.so"
+        ]
+      },
+      "runtime.linux-musl-arm.runtime.native.System.IO.Ports/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/linux-musl-arm/native/libSystem.IO.Ports.Native.so"
+        ]
+      },
+      "runtime.linux-musl-arm64.runtime.native.System.IO.Ports/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/linux-musl-arm64/native/libSystem.IO.Ports.Native.so"
+        ]
+      },
+      "runtime.linux-musl-x64.runtime.native.System.IO.Ports/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/linux-musl-x64/native/libSystem.IO.Ports.Native.so"
+        ]
+      },
+      "runtime.linux-x64.runtime.native.System.IO.Ports/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/linux-x64/native/libSystem.IO.Ports.Native.so"
+        ]
+      },
+      "runtime.maccatalyst-arm64.runtime.native.System.IO.Ports/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/maccatalyst-arm64/native/libSystem.IO.Ports.Native.dylib"
+        ]
+      },
+      "runtime.maccatalyst-x64.runtime.native.System.IO.Ports/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/maccatalyst-x64/native/libSystem.IO.Ports.Native.dylib"
+        ]
+      },
+      "runtime.native.System.Data.SqlClient.sni/4.4.0": {
+        "dependencies": {
+          "runtime.win-arm64.runtime.native.System.Data.SqlClient.sni": "4.4.0",
+          "runtime.win-x64.runtime.native.System.Data.SqlClient.sni": "4.4.0",
+          "runtime.win-x86.runtime.native.System.Data.SqlClient.sni": "4.4.0"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "runtime.osx-arm64.runtime.native.System.IO.Ports/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/osx-arm64/native/libSystem.IO.Ports.Native.dylib"
+        ]
+      },
+      "runtime.osx-x64.runtime.native.System.IO.Ports/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/osx-x64/native/libSystem.IO.Ports.Native.dylib"
+        ]
+      },
+      "runtime.win-arm64.runtime.native.System.Data.SqlClient.sni/4.4.0": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win-arm64/native/sni.dll"
+        ]
+      },
+      "runtime.win-x64.runtime.native.System.Data.SqlClient.sni/4.4.0": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win-x64/native/sni.dll"
+        ]
+      },
+      "runtime.win-x86.runtime.native.System.Data.SqlClient.sni/4.4.0": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win-x86/native/sni.dll"
+        ]
+      },
+      "SkiaSharp/2.88.9": {
+        "dependencies": {
+          "SkiaSharp.NativeAssets.Win32": "2.88.9",
+          "SkiaSharp.NativeAssets.macOS": "2.88.9"
+        },
+        "runtime_assets": [
+          "lib/net6.0/SkiaSharp.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "SkiaSharp.NativeAssets.Linux/2.88.9": {
+        "dependencies": {
+          "SkiaSharp": "2.88.9"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/linux-arm/native/libSkiaSharp.so",
+          "runtimes/linux-arm64/native/libSkiaSharp.so",
+          "runtimes/linux-musl-x64/native/libSkiaSharp.so",
+          "runtimes/linux-x64/native/libSkiaSharp.so"
+        ]
+      },
+      "SkiaSharp.NativeAssets.macOS/2.88.9": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/osx/native/libSkiaSharp.dylib"
+        ]
+      },
+      "SkiaSharp.NativeAssets.Win32/2.88.9": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win-arm64/native/libSkiaSharp.dll",
+          "runtimes/win-x64/native/libSkiaSharp.dll",
+          "runtimes/win-x86/native/libSkiaSharp.dll"
+        ]
+      },
+      "Splat/15.1.1": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net8.0/Splat.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.CodeDom/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/System.CodeDom.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.ComponentModel.Composition/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/System.ComponentModel.Composition.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.ComponentModel.Composition.Registration/10.0.5": {
+        "dependencies": {
+          "System.ComponentModel.Composition": "10.0.5",
+          "System.Reflection.Context": "10.0.5"
+        },
+        "runtime_assets": [
+          "lib/net10.0/System.ComponentModel.Composition.Registration.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.Configuration.ConfigurationManager/10.0.5": {
+        "dependencies": {
+          "System.Diagnostics.EventLog": "10.0.5",
+          "System.Security.Cryptography.ProtectedData": "10.0.5"
+        },
+        "runtime_assets": [
+          "lib/net10.0/System.Configuration.ConfigurationManager.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.Data.Odbc/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/System.Data.Odbc.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/unix/lib/net10.0/System.Data.Odbc.dll",
+          "runtimes/win/lib/net10.0/System.Data.Odbc.dll"
+        ]
+      },
+      "System.Data.OleDb/10.0.5": {
+        "dependencies": {
+          "System.Configuration.ConfigurationManager": "10.0.5",
+          "System.Diagnostics.PerformanceCounter": "10.0.5"
+        },
+        "runtime_assets": [
+          "lib/net10.0/System.Data.OleDb.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net10.0/System.Data.OleDb.dll"
+        ]
+      },
+      "System.Data.SqlClient/4.9.1": {
+        "dependencies": {
+          "runtime.native.System.Data.SqlClient.sni": "4.4.0"
+        },
+        "runtime_assets": [
+          "lib/net8.0/System.Data.SqlClient.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/unix/lib/net8.0/System.Data.SqlClient.dll",
+          "runtimes/win/lib/net8.0/System.Data.SqlClient.dll"
+        ]
+      },
+      "System.Diagnostics.EventLog/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/System.Diagnostics.EventLog.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net10.0/System.Diagnostics.EventLog.Messages.dll",
+          "runtimes/win/lib/net10.0/System.Diagnostics.EventLog.dll"
+        ]
+      },
+      "System.Diagnostics.PerformanceCounter/10.0.5": {
+        "dependencies": {
+          "System.Configuration.ConfigurationManager": "10.0.5"
+        },
+        "runtime_assets": [
+          "lib/net10.0/System.Diagnostics.PerformanceCounter.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net10.0/System.Diagnostics.PerformanceCounter.dll"
+        ]
+      },
+      "System.DirectoryServices/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/System.DirectoryServices.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net10.0/System.DirectoryServices.dll"
+        ]
+      },
+      "System.DirectoryServices.AccountManagement/10.0.5": {
+        "dependencies": {
+          "System.Configuration.ConfigurationManager": "10.0.5",
+          "System.DirectoryServices": "10.0.5",
+          "System.DirectoryServices.Protocols": "10.0.5"
+        },
+        "runtime_assets": [
+          "lib/net10.0/System.DirectoryServices.AccountManagement.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net10.0/System.DirectoryServices.AccountManagement.dll"
+        ]
+      },
+      "System.DirectoryServices.Protocols/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/System.DirectoryServices.Protocols.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/linux/lib/net10.0/System.DirectoryServices.Protocols.dll",
+          "runtimes/osx/lib/net10.0/System.DirectoryServices.Protocols.dll",
+          "runtimes/win/lib/net10.0/System.DirectoryServices.Protocols.dll"
+        ]
+      },
+      "System.Drawing.Common/10.0.5": {
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "10.0.5"
+        },
+        "runtime_assets": [
+          "lib/net10.0/System.Drawing.Common.dll",
+          "lib/net10.0/System.Private.Windows.Core.dll",
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.IO.Packaging/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/System.IO.Packaging.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.IO.Ports/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/System.IO.Ports.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/unix/lib/net10.0/System.IO.Ports.dll",
+          "runtimes/win/lib/net10.0/System.IO.Ports.dll"
+        ]
+      },
+      "System.Management/10.0.5": {
+        "dependencies": {
+          "System.CodeDom": "10.0.5"
+        },
+        "runtime_assets": [
+          "lib/net10.0/System.Management.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net10.0/System.Management.dll"
+        ]
+      },
+      "System.Management.Automation/7.6.0": {
+        "dependencies": {
+          "Microsoft.ApplicationInsights": "2.23.0",
+          "Microsoft.Management.Infrastructure": "3.0.0",
+          "Microsoft.PowerShell.CoreCLR.Eventing": "7.6.0",
+          "Microsoft.PowerShell.Native": "700.0.0-rc.1",
+          "Microsoft.Security.Extensions": "1.4.0",
+          "Microsoft.Win32.Registry.AccessControl": "10.0.5",
+          "Newtonsoft.Json": "13.0.4",
+          "System.CodeDom": "10.0.5",
+          "System.Configuration.ConfigurationManager": "10.0.5",
+          "System.Diagnostics.EventLog": "10.0.5",
+          "System.DirectoryServices": "10.0.5",
+          "System.Management": "10.0.5",
+          "System.Security.Cryptography.Pkcs": "10.0.5",
+          "System.Security.Cryptography.ProtectedData": "10.0.5",
+          "System.Security.Permissions": "10.0.5",
+          "System.Windows.Extensions": "10.0.5"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/unix/lib/net10.0/System.Management.Automation.dll",
+          "runtimes/win/lib/net10.0/System.Management.Automation.dll"
+        ]
+      },
+      "System.Net.Http.WinHttpHandler/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/System.Net.Http.WinHttpHandler.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net10.0/System.Net.Http.WinHttpHandler.dll"
+        ]
+      },
+      "System.Reactive/6.0.1": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net6.0/System.Reactive.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.Reflection.Context/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/System.Reflection.Context.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.Runtime.Caching/10.0.5": {
+        "dependencies": {
+          "System.Configuration.ConfigurationManager": "10.0.5"
+        },
+        "runtime_assets": [
+          "lib/net10.0/System.Runtime.Caching.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net10.0/System.Runtime.Caching.dll"
+        ]
+      },
+      "System.Security.Cryptography.Pkcs/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/System.Security.Cryptography.Pkcs.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net10.0/System.Security.Cryptography.Pkcs.dll"
+        ]
+      },
+      "System.Security.Cryptography.ProtectedData/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/System.Security.Cryptography.ProtectedData.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.Security.Cryptography.Xml/10.0.5": {
+        "dependencies": {
+          "System.Security.Cryptography.Pkcs": "10.0.5"
+        },
+        "runtime_assets": [
+          "lib/net10.0/System.Security.Cryptography.Xml.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.Security.Permissions/10.0.5": {
+        "dependencies": {
+          "System.Windows.Extensions": "10.0.5"
+        },
+        "runtime_assets": [
+          "lib/net10.0/System.Security.Permissions.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.ServiceModel.Http/10.0.652802": {
+        "dependencies": {
+          "System.ServiceModel.Primitives": "10.0.652802"
+        },
+        "runtime_assets": [
+          "lib/net10.0/System.ServiceModel.Http.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.ServiceModel.NetFramingBase/10.0.652802": {
+        "dependencies": {
+          "System.ServiceModel.Primitives": "10.0.652802"
+        },
+        "runtime_assets": [
+          "lib/net10.0/System.ServiceModel.NetFramingBase.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.ServiceModel.NetTcp/10.0.652802": {
+        "dependencies": {
+          "System.ServiceModel.NetFramingBase": "10.0.652802",
+          "System.ServiceModel.Primitives": "10.0.652802"
+        },
+        "runtime_assets": [
+          "lib/net10.0/System.ServiceModel.NetTcp.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.ServiceModel.Primitives/10.0.652802": {
+        "dependencies": {
+          "Microsoft.Extensions.ObjectPool": "10.0.5",
+          "System.Security.Cryptography.Xml": "10.0.5"
+        },
+        "runtime_assets": [
+          "lib/net10.0/System.ServiceModel.Duplex.dll",
+          "lib/net10.0/System.ServiceModel.Primitives.dll",
+          "lib/net10.0/System.ServiceModel.Security.dll",
+          "lib/net10.0/System.ServiceModel.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.ServiceModel.Syndication/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/System.ServiceModel.Syndication.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.ServiceProcess.ServiceController/10.0.5": {
+        "dependencies": {
+          "System.Diagnostics.EventLog": "10.0.5"
+        },
+        "runtime_assets": [
+          "lib/net10.0/System.ServiceProcess.ServiceController.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net10.0/System.ServiceProcess.ServiceController.dll"
+        ]
+      },
+      "System.Speech/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/System.Speech.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net10.0/System.Speech.dll"
+        ]
+      },
+      "System.Web.Services.Description/8.1.2": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/netstandard2.0/System.Web.Services.Description.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.Windows.Extensions/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/System.Windows.Extensions.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net10.0/System.Windows.Extensions.dll"
+        ]
+      },
+      "TextMateSharp/2.0.2": {
+        "dependencies": {
+          "Onigwrap": "1.0.10"
+        },
+        "runtime_assets": [
+          "lib/netstandard2.0/TextMateSharp.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "TextMateSharp.Grammars/2.0.2": {
+        "dependencies": {
+          "TextMateSharp": "2.0.2"
+        },
+        "runtime_assets": [
+          "lib/netstandard2.0/TextMateSharp.Grammars.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Tmds.DBus.Protocol/0.21.2": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net8.0/Tmds.DBus.Protocol.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "SpecterInsight.ApiClient/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.SignalR.Client": "10.0.5",
+          "Microsoft.AspNetCore.SignalR.Protocols.NewtonsoftJson": "10.0.5",
+          "Newtonsoft.Json": "13.0.4"
+        },
+        "runtime_assets": [
+          "SpecterInsight.ApiClient.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "SpecterInsight.Obfuscation/1.0.0": {
+        "dependencies": {
+          "AmsiScanner.Common": "2.3.5",
+          "Antlr4.Runtime.Standard": "4.13.1",
+          "MedallionShell": "1.6.2",
+          "Microsoft.CodeAnalysis.CSharp": "5.3.0",
+          "Microsoft.PowerShell.SDK": "7.6.0"
+        },
+        "runtime_assets": [
+          "SpecterInsight.Obfuscation.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Securify.ShellLink/1.1.0.0": {
+        "dependencies": {},
+        "runtime_assets": [
+          "Securify.ShellLink.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      }
+    }
+  },
+  {
+    "id": "ART-398d38598cc57129fea8",
+    "manifest": "server/SpecterInsight.Server.Host.deps.json",
+    "target": ".NETCoreApp,Version=v10.0",
+    "nodes": {
+      "SpecterInsight.Server.Host/1.0.0": {
+        "dependencies": {
+          "SpecterInsight.Server": "1.0.0"
+        },
+        "runtime_assets": [
+          "SpecterInsight.Server.Host.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "AmsiScanner.Common/2.3.5": {
+        "dependencies": {
+          "Microsoft.PowerShell.SDK": "7.6.0"
+        },
+        "runtime_assets": [
+          "lib/net6.0/AmsiScanner.Common.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Anthropic/12.9.0": {
+        "dependencies": {
+          "Microsoft.Extensions.AI.Abstractions": "10.4.1"
+        },
+        "runtime_assets": [
+          "lib/net9.0/Anthropic.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Anthropic.SDK/5.10.0": {
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "10.0.5",
+          "Microsoft.Extensions.AI.Abstractions": "10.4.1"
+        },
+        "runtime_assets": [
+          "lib/net10.0/Anthropic.SDK.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Antlr4.Runtime.Standard/4.13.1": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/netstandard2.0/Antlr4.Runtime.Standard.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "AsmResolver/5.5.1": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net8.0/AsmResolver.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "AsmResolver.PE/5.5.1": {
+        "dependencies": {
+          "AsmResolver.PE.File": "5.5.1"
+        },
+        "runtime_assets": [
+          "lib/net8.0/AsmResolver.PE.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "AsmResolver.PE.File/5.5.1": {
+        "dependencies": {
+          "AsmResolver": "5.5.1"
+        },
+        "runtime_assets": [
+          "lib/net8.0/AsmResolver.PE.File.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "AsmResolver.PE.Win32Resources/5.5.1": {
+        "dependencies": {
+          "AsmResolver": "5.5.1",
+          "AsmResolver.PE": "5.5.1"
+        },
+        "runtime_assets": [
+          "lib/net8.0/AsmResolver.PE.Win32Resources.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "BCrypt.Net-Next/4.1.0": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/BCrypt.Net-Next.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "BouncyCastle.Cryptography/2.4.0": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net6.0/BouncyCastle.Cryptography.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Certes/3.0.4": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.4",
+          "Portable.BouncyCastle": "1.9.0"
+        },
+        "runtime_assets": [
+          "lib/net6.0/Certes.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "DiscUtils.Core/0.16.13": {
+        "dependencies": {
+          "DiscUtils.Streams": "0.16.13"
+        },
+        "runtime_assets": [
+          "lib/net5.0/DiscUtils.Core.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "DiscUtils.Fat/0.16.13": {
+        "dependencies": {
+          "DiscUtils.Core": "0.16.13"
+        },
+        "runtime_assets": [
+          "lib/net5.0/DiscUtils.Fat.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "DiscUtils.Iso9660/0.16.13": {
+        "dependencies": {
+          "DiscUtils.Core": "0.16.13"
+        },
+        "runtime_assets": [
+          "lib/net5.0/DiscUtils.Iso9660.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "DiscUtils.Streams/0.16.13": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net5.0/DiscUtils.Streams.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "DiscUtils.Vhd/0.16.13": {
+        "dependencies": {
+          "DiscUtils.Core": "0.16.13"
+        },
+        "runtime_assets": [
+          "lib/net5.0/DiscUtils.Vhd.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "DotNetZip/1.16.0": {
+        "dependencies": {
+          "System.Security.Permissions": "10.0.5"
+        },
+        "runtime_assets": [
+          "lib/netstandard2.0/DotNetZip.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Elasticsearch.Net/7.17.5": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/netstandard2.1/Elasticsearch.Net.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "FastBertTokenizer/0.4.67": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net8.0/FastBertTokenizer.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Google.Protobuf/3.30.2": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net5.0/Google.Protobuf.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Humanizer.Core/2.14.1": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net6.0/Humanizer.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Json.More.Net/2.1.1": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net9.0/Json.More.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "JsonPointer.Net/5.3.1": {
+        "dependencies": {
+          "Humanizer.Core": "2.14.1",
+          "Json.More.Net": "2.1.1"
+        },
+        "runtime_assets": [
+          "lib/net9.0/JsonPointer.Net.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "JsonSchema.Net/7.4.0": {
+        "dependencies": {
+          "JsonPointer.Net": "5.3.1"
+        },
+        "runtime_assets": [
+          "lib/net9.0/JsonSchema.Net.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "MailKit/4.8.0": {
+        "dependencies": {
+          "MimeKit": "4.8.0"
+        },
+        "runtime_assets": [
+          "lib/net8.0/MailKit.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Markdig.Signed/0.44.0": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net9.0/Markdig.Signed.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "MaxMind.Db/4.3.4": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/MaxMind.Db.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "MaxMind.GeoIP2/5.4.1": {
+        "dependencies": {
+          "MaxMind.Db": "4.3.4"
+        },
+        "runtime_assets": [
+          "lib/net10.0/MaxMind.GeoIP2.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "MedallionShell/1.6.2": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/netstandard2.0/MedallionShell.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.Agents.AI/1.0.0-rc4": {
+        "dependencies": {
+          "Microsoft.Agents.AI.Abstractions": "1.0.0-rc4",
+          "Microsoft.Extensions.AI": "10.4.1",
+          "Microsoft.Extensions.AI.Abstractions": "10.4.1",
+          "Microsoft.Extensions.VectorData.Abstractions": "9.7.0",
+          "Microsoft.ML.Tokenizers": "2.0.0"
+        },
+        "runtime_assets": [
+          "lib/net10.0/Microsoft.Agents.AI.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.Agents.AI.Abstractions/1.0.0-rc4": {
+        "dependencies": {
+          "Microsoft.Extensions.AI.Abstractions": "10.4.1"
+        },
+        "runtime_assets": [
+          "lib/net10.0/Microsoft.Agents.AI.Abstractions.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.Agents.AI.Anthropic/1.0.0-rc4": {
+        "dependencies": {
+          "Anthropic": "12.9.0",
+          "Microsoft.Agents.AI": "1.0.0-rc4",
+          "Microsoft.Extensions.AI": "10.4.1",
+          "Microsoft.Extensions.AI.Abstractions": "10.4.1",
+          "Microsoft.Extensions.VectorData.Abstractions": "9.7.0",
+          "Microsoft.ML.Tokenizers": "2.0.0"
+        },
+        "runtime_assets": [
+          "lib/net10.0/Microsoft.Agents.AI.Anthropic.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.Agents.AI.OpenAI/1.0.0-rc4": {
+        "dependencies": {
+          "Microsoft.Agents.AI": "1.0.0-rc4",
+          "Microsoft.Extensions.AI": "10.4.1",
+          "Microsoft.Extensions.AI.Abstractions": "10.4.1",
+          "Microsoft.Extensions.AI.OpenAI": "10.4.1",
+          "Microsoft.Extensions.VectorData.Abstractions": "9.7.0",
+          "Microsoft.ML.Tokenizers": "2.0.0",
+          "OpenAI": "2.9.1",
+          "System.ClientModel": "1.9.0"
+        },
+        "runtime_assets": [
+          "lib/net10.0/Microsoft.Agents.AI.OpenAI.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.Agents.AI.Workflows/1.0.0-rc4": {
+        "dependencies": {
+          "Microsoft.Agents.AI": "1.0.0-rc4",
+          "Microsoft.Agents.AI.Abstractions": "1.0.0-rc4",
+          "Microsoft.Extensions.AI": "10.4.1",
+          "Microsoft.Extensions.AI.Abstractions": "10.4.1",
+          "Microsoft.Extensions.VectorData.Abstractions": "9.7.0",
+          "Microsoft.ML.Tokenizers": "2.0.0",
+          "OpenTelemetry.Api": "1.13.1"
+        },
+        "runtime_assets": [
+          "lib/net10.0/Microsoft.Agents.AI.Workflows.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.ApplicationInsights/2.23.0": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/netstandard2.0/Microsoft.ApplicationInsights.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.AspNetCore.Authentication.JwtBearer/10.0.5": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "8.0.1"
+        },
+        "runtime_assets": [
+          "lib/net10.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.AspNetCore.JsonPatch/10.0.5": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.4"
+        },
+        "runtime_assets": [
+          "lib/net10.0/Microsoft.AspNetCore.JsonPatch.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.AspNetCore.Mvc.NewtonsoftJson/10.0.5": {
+        "dependencies": {
+          "Microsoft.AspNetCore.JsonPatch": "10.0.5",
+          "Newtonsoft.Json": "13.0.4",
+          "Newtonsoft.Json.Bson": "1.0.2"
+        },
+        "runtime_assets": [
+          "lib/net10.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.AspNetCore.SignalR.Protocols.NewtonsoftJson/10.0.5": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.4"
+        },
+        "runtime_assets": [
+          "lib/net10.0/Microsoft.AspNetCore.SignalR.Protocols.NewtonsoftJson.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.Bcl.AsyncInterfaces/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.CodeAnalysis.Common/5.0.0": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net9.0/Microsoft.CodeAnalysis.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.CodeAnalysis.CSharp/5.0.0": {
+        "dependencies": {
+          "Microsoft.CodeAnalysis.Common": "5.0.0"
+        },
+        "runtime_assets": [
+          "lib/net9.0/Microsoft.CodeAnalysis.CSharp.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.Extensions.AI/10.4.1": {
+        "dependencies": {
+          "Microsoft.Extensions.AI.Abstractions": "10.4.1",
+          "System.Numerics.Tensors": "10.0.4"
+        },
+        "runtime_assets": [
+          "lib/net10.0/Microsoft.Extensions.AI.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.Extensions.AI.Abstractions/10.4.1": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/Microsoft.Extensions.AI.Abstractions.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.Extensions.AI.OpenAI/10.4.1": {
+        "dependencies": {
+          "Microsoft.Extensions.AI.Abstractions": "10.4.1",
+          "OpenAI": "2.9.1"
+        },
+        "runtime_assets": [
+          "lib/net10.0/Microsoft.Extensions.AI.OpenAI.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.Extensions.VectorData.Abstractions/9.7.0": {
+        "dependencies": {
+          "Microsoft.Extensions.AI.Abstractions": "10.4.1"
+        },
+        "runtime_assets": [
+          "lib/net8.0/Microsoft.Extensions.VectorData.Abstractions.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.IdentityModel.Abstractions/8.16.0": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/Microsoft.IdentityModel.Abstractions.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.IdentityModel.JsonWebTokens/8.16.0": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Tokens": "8.16.0"
+        },
+        "runtime_assets": [
+          "lib/net10.0/Microsoft.IdentityModel.JsonWebTokens.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.IdentityModel.Logging/8.16.0": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Abstractions": "8.16.0"
+        },
+        "runtime_assets": [
+          "lib/net10.0/Microsoft.IdentityModel.Logging.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.IdentityModel.Protocols/8.0.1": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Tokens": "8.16.0"
+        },
+        "runtime_assets": [
+          "lib/net9.0/Microsoft.IdentityModel.Protocols.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.IdentityModel.Protocols.OpenIdConnect/8.0.1": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Protocols": "8.0.1",
+          "System.IdentityModel.Tokens.Jwt": "8.16.0"
+        },
+        "runtime_assets": [
+          "lib/net9.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.IdentityModel.Tokens/8.16.0": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Logging": "8.16.0"
+        },
+        "runtime_assets": [
+          "lib/net10.0/Microsoft.IdentityModel.Tokens.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.Management.Infrastructure/3.0.0": {
+        "dependencies": {
+          "Microsoft.Management.Infrastructure.Runtime.Unix": "3.0.0",
+          "Microsoft.Management.Infrastructure.Runtime.Win": "3.0.0"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.Management.Infrastructure.CimCmdlets/7.6.0": {
+        "dependencies": {
+          "System.Management.Automation": "7.6.0"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net10.0/Microsoft.Management.Infrastructure.CimCmdlets.dll"
+        ]
+      },
+      "Microsoft.Management.Infrastructure.Runtime.Unix/3.0.0": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/unix/lib/netstandard1.6/Microsoft.Management.Infrastructure.dll"
+        ]
+      },
+      "Microsoft.Management.Infrastructure.Runtime.Win/3.0.0": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win-arm64/lib/netstandard1.6/microsoft.management.infrastructure.dll",
+          "runtimes/win-arm64/lib/netstandard1.6/microsoft.management.infrastructure.native.dll",
+          "runtimes/win-x64/lib/netstandard1.6/microsoft.management.infrastructure.dll",
+          "runtimes/win-x64/lib/netstandard1.6/microsoft.management.infrastructure.native.dll",
+          "runtimes/win-x86/lib/netstandard1.6/microsoft.management.infrastructure.dll",
+          "runtimes/win-x86/lib/netstandard1.6/microsoft.management.infrastructure.native.dll",
+          "runtimes/win-arm64/native/microsoft.management.infrastructure.native.unmanaged.dll",
+          "runtimes/win-x64/native/microsoft.management.infrastructure.native.unmanaged.dll",
+          "runtimes/win-x86/native/microsoft.management.infrastructure.native.unmanaged.dll"
+        ]
+      },
+      "Microsoft.ML.OnnxRuntime/1.17.0": {
+        "dependencies": {
+          "Microsoft.ML.OnnxRuntime.Managed": "1.17.0"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/android/native/onnxruntime.aar",
+          "runtimes/ios/native/onnxruntime.xcframework/Info.plist",
+          "runtimes/ios/native/onnxruntime.xcframework/ios-arm64/onnxruntime.framework/Headers/coreml_provider_factory.h",
+          "runtimes/ios/native/onnxruntime.xcframework/ios-arm64/onnxruntime.framework/Headers/cpu_provider_factory.h",
+          "runtimes/ios/native/onnxruntime.xcframework/ios-arm64/onnxruntime.framework/Headers/onnxruntime_c_api.h",
+          "runtimes/ios/native/onnxruntime.xcframework/ios-arm64/onnxruntime.framework/Headers/onnxruntime_cxx_api.h",
+          "runtimes/ios/native/onnxruntime.xcframework/ios-arm64/onnxruntime.framework/Headers/onnxruntime_cxx_inline.h",
+          "runtimes/ios/native/onnxruntime.xcframework/ios-arm64/onnxruntime.framework/Headers/onnxruntime_float16.h",
+          "runtimes/ios/native/onnxruntime.xcframework/ios-arm64/onnxruntime.framework/Headers/onnxruntime_run_options_config_keys.h",
+          "runtimes/ios/native/onnxruntime.xcframework/ios-arm64/onnxruntime.framework/Headers/onnxruntime_session_options_config_keys.h",
+          "runtimes/ios/native/onnxruntime.xcframework/ios-arm64/onnxruntime.framework/Info.plist",
+          "runtimes/ios/native/onnxruntime.xcframework/ios-arm64/onnxruntime.framework/onnxruntime",
+          "runtimes/ios/native/onnxruntime.xcframework/ios-arm64_x86_64-simulator/onnxruntime.framework/Headers/coreml_provider_factory.h",
+          "runtimes/ios/native/onnxruntime.xcframework/ios-arm64_x86_64-simulator/onnxruntime.framework/Headers/cpu_provider_factory.h",
+          "runtimes/ios/native/onnxruntime.xcframework/ios-arm64_x86_64-simulator/onnxruntime.framework/Headers/onnxruntime_c_api.h",
+          "runtimes/ios/native/onnxruntime.xcframework/ios-arm64_x86_64-simulator/onnxruntime.framework/Headers/onnxruntime_cxx_api.h",
+          "runtimes/ios/native/onnxruntime.xcframework/ios-arm64_x86_64-simulator/onnxruntime.framework/Headers/onnxruntime_cxx_inline.h",
+          "runtimes/ios/native/onnxruntime.xcframework/ios-arm64_x86_64-simulator/onnxruntime.framework/Headers/onnxruntime_float16.h",
+          "runtimes/ios/native/onnxruntime.xcframework/ios-arm64_x86_64-simulator/onnxruntime.framework/Headers/onnxruntime_run_options_config_keys.h",
+          "runtimes/ios/native/onnxruntime.xcframework/ios-arm64_x86_64-simulator/onnxruntime.framework/Headers/onnxruntime_session_options_config_keys.h",
+          "runtimes/ios/native/onnxruntime.xcframework/ios-arm64_x86_64-simulator/onnxruntime.framework/Info.plist",
+          "runtimes/ios/native/onnxruntime.xcframework/ios-arm64_x86_64-simulator/onnxruntime.framework/onnxruntime",
+          "runtimes/linux-arm64/native/libonnxruntime.so",
+          "runtimes/linux-x64/native/libonnxruntime.so",
+          "runtimes/osx-arm64/native/libonnxruntime.dylib",
+          "runtimes/osx-x64/native/libonnxruntime.dylib",
+          "runtimes/win-arm64/native/onnxruntime.dll",
+          "runtimes/win-arm64/native/onnxruntime.lib",
+          "runtimes/win-arm64/native/onnxruntime_providers_shared.dll",
+          "runtimes/win-arm64/native/onnxruntime_providers_shared.lib",
+          "runtimes/win-x64/native/onnxruntime.dll",
+          "runtimes/win-x64/native/onnxruntime.lib",
+          "runtimes/win-x64/native/onnxruntime_providers_shared.dll",
+          "runtimes/win-x64/native/onnxruntime_providers_shared.lib",
+          "runtimes/win-x86/native/onnxruntime.dll",
+          "runtimes/win-x86/native/onnxruntime.lib",
+          "runtimes/win-x86/native/onnxruntime_providers_shared.dll",
+          "runtimes/win-x86/native/onnxruntime_providers_shared.lib"
+        ]
+      },
+      "Microsoft.ML.OnnxRuntime.Managed/1.17.0": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net6.0/Microsoft.ML.OnnxRuntime.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.ML.Tokenizers/2.0.0": {
+        "dependencies": {
+          "Google.Protobuf": "3.30.2"
+        },
+        "runtime_assets": [
+          "lib/net8.0/Microsoft.ML.Tokenizers.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.OpenApi/2.4.1": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net8.0/Microsoft.OpenApi.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.PowerShell.Commands.Diagnostics/7.6.0": {
+        "dependencies": {
+          "System.Management.Automation": "7.6.0"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net10.0/Microsoft.PowerShell.Commands.Diagnostics.dll"
+        ]
+      },
+      "Microsoft.PowerShell.Commands.Management/7.6.0": {
+        "dependencies": {
+          "Microsoft.PowerShell.Security": "7.6.0",
+          "System.ServiceProcess.ServiceController": "10.0.5"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/unix/lib/net10.0/Microsoft.PowerShell.Commands.Management.dll",
+          "runtimes/win/lib/net10.0/Microsoft.PowerShell.Commands.Management.dll"
+        ]
+      },
+      "Microsoft.PowerShell.Commands.Utility/7.6.0": {
+        "dependencies": {
+          "JsonSchema.Net": "7.4.0",
+          "Markdig.Signed": "0.44.0",
+          "Microsoft.CodeAnalysis.CSharp": "5.0.0",
+          "Microsoft.PowerShell.MarkdownRender": "7.2.1",
+          "Microsoft.Win32.SystemEvents": "10.0.5",
+          "System.Drawing.Common": "10.0.5",
+          "System.Management.Automation": "7.6.0"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/unix/lib/net10.0/Microsoft.PowerShell.Commands.Utility.dll",
+          "runtimes/win/lib/net10.0/Microsoft.PowerShell.Commands.Utility.dll"
+        ]
+      },
+      "Microsoft.PowerShell.ConsoleHost/7.6.0": {
+        "dependencies": {
+          "System.Management.Automation": "7.6.0"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/unix/lib/net10.0/Microsoft.PowerShell.ConsoleHost.dll",
+          "runtimes/win/lib/net10.0/Microsoft.PowerShell.ConsoleHost.dll"
+        ]
+      },
+      "Microsoft.PowerShell.CoreCLR.Eventing/7.6.0": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net10.0/Microsoft.PowerShell.CoreCLR.Eventing.dll"
+        ]
+      },
+      "Microsoft.PowerShell.MarkdownRender/7.2.1": {
+        "dependencies": {
+          "Markdig.Signed": "0.44.0"
+        },
+        "runtime_assets": [
+          "lib/netstandard2.0/Microsoft.PowerShell.MarkdownRender.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.PowerShell.Native/700.0.0-rc.1": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/linux-arm/native/build.manifest",
+          "runtimes/linux-arm/native/build.manifest.sig",
+          "runtimes/linux-arm/native/libpsl-native.so",
+          "runtimes/linux-arm64/native/build.manifest",
+          "runtimes/linux-arm64/native/build.manifest.sig",
+          "runtimes/linux-arm64/native/libpsl-native.so",
+          "runtimes/linux-musl-x64/native/build.manifest",
+          "runtimes/linux-musl-x64/native/build.manifest.sig",
+          "runtimes/linux-musl-x64/native/libpsl-native.so",
+          "runtimes/linux-x64/native/build.manifest",
+          "runtimes/linux-x64/native/build.manifest.sig",
+          "runtimes/linux-x64/native/libpsl-native.so",
+          "runtimes/osx/native/libpsl-native.dylib",
+          "runtimes/win-arm64/native/PowerShell.Core.Instrumentation.dll",
+          "runtimes/win-arm64/native/build.manifest",
+          "runtimes/win-arm64/native/build.manifest.sig",
+          "runtimes/win-arm64/native/pwrshplugin.dll",
+          "runtimes/win-x64/native/PowerShell.Core.Instrumentation.dll",
+          "runtimes/win-x64/native/build.manifest",
+          "runtimes/win-x64/native/build.manifest.sig",
+          "runtimes/win-x64/native/pwrshplugin.dll",
+          "runtimes/win-x86/native/PowerShell.Core.Instrumentation.dll",
+          "runtimes/win-x86/native/build.manifest",
+          "runtimes/win-x86/native/build.manifest.sig",
+          "runtimes/win-x86/native/pwrshplugin.dll"
+        ]
+      },
+      "Microsoft.PowerShell.SDK/7.6.0": {
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "10.0.5",
+          "Microsoft.Management.Infrastructure.CimCmdlets": "7.6.0",
+          "Microsoft.PowerShell.Commands.Diagnostics": "7.6.0",
+          "Microsoft.PowerShell.Commands.Management": "7.6.0",
+          "Microsoft.PowerShell.Commands.Utility": "7.6.0",
+          "Microsoft.PowerShell.ConsoleHost": "7.6.0",
+          "Microsoft.PowerShell.Security": "7.6.0",
+          "Microsoft.WSMan.Management": "7.6.0",
+          "Microsoft.Win32.Registry.AccessControl": "10.0.5",
+          "Microsoft.Win32.SystemEvents": "10.0.5",
+          "Microsoft.Windows.Compatibility": "10.0.5",
+          "System.CodeDom": "10.0.5",
+          "System.ComponentModel.Composition": "10.0.5",
+          "System.ComponentModel.Composition.Registration": "10.0.5",
+          "System.Configuration.ConfigurationManager": "10.0.5",
+          "System.Data.Odbc": "10.0.5",
+          "System.Data.OleDb": "10.0.5",
+          "System.Data.SqlClient": "4.9.1",
+          "System.Diagnostics.PerformanceCounter": "10.0.5",
+          "System.DirectoryServices": "10.0.5",
+          "System.DirectoryServices.AccountManagement": "10.0.5",
+          "System.DirectoryServices.Protocols": "10.0.5",
+          "System.Drawing.Common": "10.0.5",
+          "System.IO.Packaging": "10.0.5",
+          "System.IO.Ports": "10.0.5",
+          "System.Management": "10.0.5",
+          "System.Management.Automation": "7.6.0",
+          "System.Net.Http.WinHttpHandler": "10.0.5",
+          "System.Reflection.Context": "10.0.5",
+          "System.Runtime.Caching": "10.0.5",
+          "System.Security.Cryptography.ProtectedData": "10.0.5",
+          "System.Security.Permissions": "10.0.5",
+          "System.ServiceModel.Http": "10.0.652802",
+          "System.ServiceModel.NetFramingBase": "10.0.652802",
+          "System.ServiceModel.NetTcp": "10.0.652802",
+          "System.ServiceModel.Primitives": "10.0.652802",
+          "System.ServiceModel.Syndication": "10.0.5",
+          "System.ServiceProcess.ServiceController": "10.0.5",
+          "System.Speech": "10.0.5",
+          "System.Windows.Extensions": "10.0.5",
+          "runtime.android-arm.runtime.native.System.IO.Ports": "10.0.5",
+          "runtime.android-arm64.runtime.native.System.IO.Ports": "10.0.5",
+          "runtime.android-x64.runtime.native.System.IO.Ports": "10.0.5",
+          "runtime.android-x86.runtime.native.System.IO.Ports": "10.0.5",
+          "runtime.linux-arm.runtime.native.System.IO.Ports": "10.0.5",
+          "runtime.linux-arm64.runtime.native.System.IO.Ports": "10.0.5",
+          "runtime.linux-bionic-arm64.runtime.native.System.IO.Ports": "10.0.5",
+          "runtime.linux-bionic-x64.runtime.native.System.IO.Ports": "10.0.5",
+          "runtime.linux-musl-arm.runtime.native.System.IO.Ports": "10.0.5",
+          "runtime.linux-musl-arm64.runtime.native.System.IO.Ports": "10.0.5",
+          "runtime.linux-musl-x64.runtime.native.System.IO.Ports": "10.0.5",
+          "runtime.linux-x64.runtime.native.System.IO.Ports": "10.0.5",
+          "runtime.maccatalyst-arm64.runtime.native.System.IO.Ports": "10.0.5",
+          "runtime.maccatalyst-x64.runtime.native.System.IO.Ports": "10.0.5",
+          "runtime.osx-arm64.runtime.native.System.IO.Ports": "10.0.5",
+          "runtime.osx-x64.runtime.native.System.IO.Ports": "10.0.5"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/unix/lib/net10.0/Microsoft.PowerShell.SDK.dll",
+          "runtimes/win/lib/net10.0/Microsoft.PowerShell.SDK.dll"
+        ]
+      },
+      "Microsoft.PowerShell.Security/7.6.0": {
+        "dependencies": {
+          "System.Management.Automation": "7.6.0"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/unix/lib/net10.0/Microsoft.PowerShell.Security.dll",
+          "runtimes/win/lib/net10.0/Microsoft.PowerShell.Security.dll"
+        ]
+      },
+      "Microsoft.Security.Extensions/1.4.0": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win-arm64/lib/net5.0/getfilesiginforedistwrapper.dll",
+          "runtimes/win-x64/lib/net5.0/getfilesiginforedistwrapper.dll",
+          "runtimes/win-x86/lib/net5.0/getfilesiginforedistwrapper.dll",
+          "runtimes/win-arm64/native/getfilesiginforedist.dll",
+          "runtimes/win-x64/native/getfilesiginforedist.dll",
+          "runtimes/win-x86/native/getfilesiginforedist.dll"
+        ]
+      },
+      "Microsoft.Win32.Registry.AccessControl/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/Microsoft.Win32.Registry.AccessControl.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net10.0/Microsoft.Win32.Registry.AccessControl.dll"
+        ]
+      },
+      "Microsoft.Win32.SystemEvents/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/Microsoft.Win32.SystemEvents.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net10.0/Microsoft.Win32.SystemEvents.dll"
+        ]
+      },
+      "Microsoft.Windows.Compatibility/10.0.5": {
+        "dependencies": {
+          "Microsoft.Win32.Registry.AccessControl": "10.0.5",
+          "Microsoft.Win32.SystemEvents": "10.0.5",
+          "System.CodeDom": "10.0.5",
+          "System.ComponentModel.Composition": "10.0.5",
+          "System.ComponentModel.Composition.Registration": "10.0.5",
+          "System.Configuration.ConfigurationManager": "10.0.5",
+          "System.Data.Odbc": "10.0.5",
+          "System.Data.OleDb": "10.0.5",
+          "System.Data.SqlClient": "4.9.1",
+          "System.Diagnostics.PerformanceCounter": "10.0.5",
+          "System.DirectoryServices": "10.0.5",
+          "System.DirectoryServices.AccountManagement": "10.0.5",
+          "System.DirectoryServices.Protocols": "10.0.5",
+          "System.Drawing.Common": "10.0.5",
+          "System.IO.Packaging": "10.0.5",
+          "System.IO.Ports": "10.0.5",
+          "System.Management": "10.0.5",
+          "System.Reflection.Context": "10.0.5",
+          "System.Runtime.Caching": "10.0.5",
+          "System.Security.Cryptography.ProtectedData": "10.0.5",
+          "System.Security.Permissions": "10.0.5",
+          "System.ServiceModel.Http": "10.0.652802",
+          "System.ServiceModel.NetTcp": "10.0.652802",
+          "System.ServiceModel.Primitives": "10.0.652802",
+          "System.ServiceModel.Syndication": "10.0.5",
+          "System.ServiceProcess.ServiceController": "10.0.5",
+          "System.Speech": "10.0.5",
+          "System.Web.Services.Description": "8.1.2"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.WSMan.Management/7.6.0": {
+        "dependencies": {
+          "Microsoft.WSMan.Runtime": "7.6.0",
+          "System.Management.Automation": "7.6.0",
+          "System.ServiceProcess.ServiceController": "10.0.5"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net10.0/Microsoft.WSMan.Management.dll"
+        ]
+      },
+      "Microsoft.WSMan.Runtime/7.6.0": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net10.0/Microsoft.WSMan.Runtime.dll"
+        ]
+      },
+      "MimeKit/4.8.0": {
+        "dependencies": {
+          "BouncyCastle.Cryptography": "2.4.0"
+        },
+        "runtime_assets": [
+          "lib/net8.0/MimeKit.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "ModelContextProtocol/1.2.0": {
+        "dependencies": {
+          "ModelContextProtocol.Core": "1.2.0"
+        },
+        "runtime_assets": [
+          "lib/net10.0/ModelContextProtocol.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "ModelContextProtocol.AspNetCore/1.2.0": {
+        "dependencies": {
+          "ModelContextProtocol": "1.2.0"
+        },
+        "runtime_assets": [
+          "lib/net10.0/ModelContextProtocol.AspNetCore.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "ModelContextProtocol.Core/1.2.0": {
+        "dependencies": {
+          "Microsoft.Extensions.AI.Abstractions": "10.4.1"
+        },
+        "runtime_assets": [
+          "lib/net10.0/ModelContextProtocol.Core.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Mono.Cecil/0.11.6": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/netstandard2.0/Mono.Cecil.Mdb.dll",
+          "lib/netstandard2.0/Mono.Cecil.Pdb.dll",
+          "lib/netstandard2.0/Mono.Cecil.Rocks.dll",
+          "lib/netstandard2.0/Mono.Cecil.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "NEST/7.17.5": {
+        "dependencies": {
+          "Elasticsearch.Net": "7.17.5"
+        },
+        "runtime_assets": [
+          "lib/netstandard2.0/Nest.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "NEST.JsonNetSerializer/7.17.5": {
+        "dependencies": {
+          "NEST": "7.17.5",
+          "Newtonsoft.Json": "13.0.4"
+        },
+        "runtime_assets": [
+          "lib/netstandard2.0/Nest.JsonNetSerializer.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Newtonsoft.Json/13.0.4": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net6.0/Newtonsoft.Json.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Newtonsoft.Json.Bson/1.0.2": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.4"
+        },
+        "runtime_assets": [
+          "lib/netstandard2.0/Newtonsoft.Json.Bson.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Npgsql/10.0.2": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/Npgsql.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Npgsql.DependencyInjection/10.0.2": {
+        "dependencies": {
+          "Npgsql": "10.0.2"
+        },
+        "runtime_assets": [
+          "lib/net8.0/Npgsql.DependencyInjection.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "NSwag.Annotations/14.6.3": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/netstandard2.0/NSwag.Annotations.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Octokit/14.0.0": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/netstandard2.0/Octokit.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "OllamaSharp/5.4.24": {
+        "dependencies": {
+          "Microsoft.Extensions.AI.Abstractions": "10.4.1"
+        },
+        "runtime_assets": [
+          "lib/net10.0/OllamaSharp.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "OpenAI/2.9.1": {
+        "dependencies": {
+          "System.ClientModel": "1.9.0"
+        },
+        "runtime_assets": [
+          "lib/net10.0/OpenAI.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "OpenMcdf/3.1.4": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/OpenMcdf.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "OpenTelemetry.Api/1.13.1": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net9.0/OpenTelemetry.Api.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Portable.BouncyCastle/1.9.0": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/netstandard2.0/BouncyCastle.Crypto.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "runtime.android-arm.runtime.native.System.IO.Ports/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/android-arm/native/libSystem.IO.Ports.Native.so"
+        ]
+      },
+      "runtime.android-arm64.runtime.native.System.IO.Ports/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/android-arm64/native/libSystem.IO.Ports.Native.so"
+        ]
+      },
+      "runtime.android-x64.runtime.native.System.IO.Ports/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/android-x64/native/libSystem.IO.Ports.Native.so"
+        ]
+      },
+      "runtime.android-x86.runtime.native.System.IO.Ports/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/android-x86/native/libSystem.IO.Ports.Native.so"
+        ]
+      },
+      "runtime.linux-arm.runtime.native.System.IO.Ports/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/linux-arm/native/libSystem.IO.Ports.Native.so"
+        ]
+      },
+      "runtime.linux-arm64.runtime.native.System.IO.Ports/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/linux-arm64/native/libSystem.IO.Ports.Native.so"
+        ]
+      },
+      "runtime.linux-bionic-arm64.runtime.native.System.IO.Ports/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/linux-bionic-arm64/native/libSystem.IO.Ports.Native.so"
+        ]
+      },
+      "runtime.linux-bionic-x64.runtime.native.System.IO.Ports/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/linux-bionic-x64/native/libSystem.IO.Ports.Native.so"
+        ]
+      },
+      "runtime.linux-musl-arm.runtime.native.System.IO.Ports/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/linux-musl-arm/native/libSystem.IO.Ports.Native.so"
+        ]
+      },
+      "runtime.linux-musl-arm64.runtime.native.System.IO.Ports/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/linux-musl-arm64/native/libSystem.IO.Ports.Native.so"
+        ]
+      },
+      "runtime.linux-musl-x64.runtime.native.System.IO.Ports/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/linux-musl-x64/native/libSystem.IO.Ports.Native.so"
+        ]
+      },
+      "runtime.linux-x64.runtime.native.System.IO.Ports/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/linux-x64/native/libSystem.IO.Ports.Native.so"
+        ]
+      },
+      "runtime.maccatalyst-arm64.runtime.native.System.IO.Ports/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/maccatalyst-arm64/native/libSystem.IO.Ports.Native.dylib"
+        ]
+      },
+      "runtime.maccatalyst-x64.runtime.native.System.IO.Ports/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/maccatalyst-x64/native/libSystem.IO.Ports.Native.dylib"
+        ]
+      },
+      "runtime.native.System.Data.SqlClient.sni/4.4.0": {
+        "dependencies": {
+          "runtime.win-arm64.runtime.native.System.Data.SqlClient.sni": "4.4.0",
+          "runtime.win-x64.runtime.native.System.Data.SqlClient.sni": "4.4.0",
+          "runtime.win-x86.runtime.native.System.Data.SqlClient.sni": "4.4.0"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "runtime.osx-arm64.runtime.native.System.IO.Ports/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/osx-arm64/native/libSystem.IO.Ports.Native.dylib"
+        ]
+      },
+      "runtime.osx-x64.runtime.native.System.IO.Ports/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/osx-x64/native/libSystem.IO.Ports.Native.dylib"
+        ]
+      },
+      "runtime.win-arm64.runtime.native.System.Data.SqlClient.sni/4.4.0": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win-arm64/native/sni.dll"
+        ]
+      },
+      "runtime.win-x64.runtime.native.System.Data.SqlClient.sni/4.4.0": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win-x64/native/sni.dll"
+        ]
+      },
+      "runtime.win-x86.runtime.native.System.Data.SqlClient.sni/4.4.0": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win-x86/native/sni.dll"
+        ]
+      },
+      "SmartComponents.Inference/0.1.0-preview10148": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/netstandard2.0/SmartComponents.Inference.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "SmartComponents.LocalEmbeddings/0.1.0-preview10148": {
+        "dependencies": {
+          "FastBertTokenizer": "0.4.67",
+          "Microsoft.ML.OnnxRuntime": "1.17.0",
+          "SmartComponents.Inference": "0.1.0-preview10148",
+          "System.Numerics.Tensors": "10.0.4",
+          "System.Runtime.Caching": "10.0.5"
+        },
+        "runtime_assets": [
+          "lib/net8.0/SmartComponents.LocalEmbeddings.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "SSH.NET/2024.2.0": {
+        "dependencies": {
+          "BouncyCastle.Cryptography": "2.4.0"
+        },
+        "runtime_assets": [
+          "lib/net8.0/Renci.SshNet.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Swashbuckle.AspNetCore.Newtonsoft/10.1.5": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "10.0.5",
+          "Swashbuckle.AspNetCore.SwaggerGen": "10.1.5"
+        },
+        "runtime_assets": [
+          "lib/net10.0/Swashbuckle.AspNetCore.Newtonsoft.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Swashbuckle.AspNetCore.Swagger/10.1.5": {
+        "dependencies": {
+          "Microsoft.OpenApi": "2.4.1"
+        },
+        "runtime_assets": [
+          "lib/net10.0/Swashbuckle.AspNetCore.Swagger.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Swashbuckle.AspNetCore.SwaggerGen/10.1.5": {
+        "dependencies": {
+          "Swashbuckle.AspNetCore.Swagger": "10.1.5"
+        },
+        "runtime_assets": [
+          "lib/net10.0/Swashbuckle.AspNetCore.SwaggerGen.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Swashbuckle.AspNetCore.SwaggerUI/10.1.5": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/Swashbuckle.AspNetCore.SwaggerUI.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.ClientModel/1.9.0": {
+        "dependencies": {
+          "System.Memory.Data": "10.0.1"
+        },
+        "runtime_assets": [
+          "lib/net10.0/System.ClientModel.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.CodeDom/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/System.CodeDom.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.ComponentModel.Composition/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/System.ComponentModel.Composition.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.ComponentModel.Composition.Registration/10.0.5": {
+        "dependencies": {
+          "System.ComponentModel.Composition": "10.0.5",
+          "System.Reflection.Context": "10.0.5"
+        },
+        "runtime_assets": [
+          "lib/net10.0/System.ComponentModel.Composition.Registration.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.Configuration.ConfigurationManager/10.0.5": {
+        "dependencies": {
+          "System.Security.Cryptography.ProtectedData": "10.0.5"
+        },
+        "runtime_assets": [
+          "lib/net10.0/System.Configuration.ConfigurationManager.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.Data.Odbc/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/System.Data.Odbc.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/unix/lib/net10.0/System.Data.Odbc.dll",
+          "runtimes/win/lib/net10.0/System.Data.Odbc.dll"
+        ]
+      },
+      "System.Data.OleDb/10.0.5": {
+        "dependencies": {
+          "System.Configuration.ConfigurationManager": "10.0.5",
+          "System.Diagnostics.PerformanceCounter": "10.0.5"
+        },
+        "runtime_assets": [
+          "lib/net10.0/System.Data.OleDb.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net10.0/System.Data.OleDb.dll"
+        ]
+      },
+      "System.Data.SqlClient/4.9.1": {
+        "dependencies": {
+          "runtime.native.System.Data.SqlClient.sni": "4.4.0"
+        },
+        "runtime_assets": [
+          "lib/net8.0/System.Data.SqlClient.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/unix/lib/net8.0/System.Data.SqlClient.dll",
+          "runtimes/win/lib/net8.0/System.Data.SqlClient.dll"
+        ]
+      },
+      "System.Diagnostics.PerformanceCounter/10.0.5": {
+        "dependencies": {
+          "System.Configuration.ConfigurationManager": "10.0.5"
+        },
+        "runtime_assets": [
+          "lib/net10.0/System.Diagnostics.PerformanceCounter.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net10.0/System.Diagnostics.PerformanceCounter.dll"
+        ]
+      },
+      "System.DirectoryServices/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/System.DirectoryServices.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net10.0/System.DirectoryServices.dll"
+        ]
+      },
+      "System.DirectoryServices.AccountManagement/10.0.5": {
+        "dependencies": {
+          "System.Configuration.ConfigurationManager": "10.0.5",
+          "System.DirectoryServices": "10.0.5",
+          "System.DirectoryServices.Protocols": "10.0.5"
+        },
+        "runtime_assets": [
+          "lib/net10.0/System.DirectoryServices.AccountManagement.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net10.0/System.DirectoryServices.AccountManagement.dll"
+        ]
+      },
+      "System.DirectoryServices.Protocols/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/System.DirectoryServices.Protocols.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/linux/lib/net10.0/System.DirectoryServices.Protocols.dll",
+          "runtimes/osx/lib/net10.0/System.DirectoryServices.Protocols.dll",
+          "runtimes/win/lib/net10.0/System.DirectoryServices.Protocols.dll"
+        ]
+      },
+      "System.Drawing.Common/10.0.5": {
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "10.0.5"
+        },
+        "runtime_assets": [
+          "lib/net10.0/System.Drawing.Common.dll",
+          "lib/net10.0/System.Private.Windows.Core.dll",
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.IdentityModel.Tokens.Jwt/8.16.0": {
+        "dependencies": {
+          "Microsoft.IdentityModel.JsonWebTokens": "8.16.0",
+          "Microsoft.IdentityModel.Tokens": "8.16.0"
+        },
+        "runtime_assets": [
+          "lib/net10.0/System.IdentityModel.Tokens.Jwt.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.IO.Packaging/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/System.IO.Packaging.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.IO.Ports/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/System.IO.Ports.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/unix/lib/net10.0/System.IO.Ports.dll",
+          "runtimes/win/lib/net10.0/System.IO.Ports.dll"
+        ]
+      },
+      "System.Management/10.0.5": {
+        "dependencies": {
+          "System.CodeDom": "10.0.5"
+        },
+        "runtime_assets": [
+          "lib/net10.0/System.Management.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net10.0/System.Management.dll"
+        ]
+      },
+      "System.Management.Automation/7.6.0": {
+        "dependencies": {
+          "Microsoft.ApplicationInsights": "2.23.0",
+          "Microsoft.Management.Infrastructure": "3.0.0",
+          "Microsoft.PowerShell.CoreCLR.Eventing": "7.6.0",
+          "Microsoft.PowerShell.Native": "700.0.0-rc.1",
+          "Microsoft.Security.Extensions": "1.4.0",
+          "Microsoft.Win32.Registry.AccessControl": "10.0.5",
+          "Newtonsoft.Json": "13.0.4",
+          "System.CodeDom": "10.0.5",
+          "System.Configuration.ConfigurationManager": "10.0.5",
+          "System.DirectoryServices": "10.0.5",
+          "System.Management": "10.0.5",
+          "System.Security.Cryptography.ProtectedData": "10.0.5",
+          "System.Security.Permissions": "10.0.5",
+          "System.Windows.Extensions": "10.0.5"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/unix/lib/net10.0/System.Management.Automation.dll",
+          "runtimes/win/lib/net10.0/System.Management.Automation.dll"
+        ]
+      },
+      "System.Memory.Data/10.0.1": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/System.Memory.Data.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.Net.Http.WinHttpHandler/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/System.Net.Http.WinHttpHandler.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net10.0/System.Net.Http.WinHttpHandler.dll"
+        ]
+      },
+      "System.Numerics.Tensors/10.0.4": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/System.Numerics.Tensors.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.Reflection.Context/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/System.Reflection.Context.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.Runtime.Caching/10.0.5": {
+        "dependencies": {
+          "System.Configuration.ConfigurationManager": "10.0.5"
+        },
+        "runtime_assets": [
+          "lib/net10.0/System.Runtime.Caching.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net10.0/System.Runtime.Caching.dll"
+        ]
+      },
+      "System.Security.Cryptography.ProtectedData/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/System.Security.Cryptography.ProtectedData.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.Security.Permissions/10.0.5": {
+        "dependencies": {
+          "System.Windows.Extensions": "10.0.5"
+        },
+        "runtime_assets": [
+          "lib/net10.0/System.Security.Permissions.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.ServiceModel.Http/10.0.652802": {
+        "dependencies": {
+          "System.ServiceModel.Primitives": "10.0.652802"
+        },
+        "runtime_assets": [
+          "lib/net10.0/System.ServiceModel.Http.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.ServiceModel.NetFramingBase/10.0.652802": {
+        "dependencies": {
+          "System.ServiceModel.Primitives": "10.0.652802"
+        },
+        "runtime_assets": [
+          "lib/net10.0/System.ServiceModel.NetFramingBase.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.ServiceModel.NetTcp/10.0.652802": {
+        "dependencies": {
+          "System.ServiceModel.NetFramingBase": "10.0.652802",
+          "System.ServiceModel.Primitives": "10.0.652802"
+        },
+        "runtime_assets": [
+          "lib/net10.0/System.ServiceModel.NetTcp.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.ServiceModel.Primitives/10.0.652802": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/System.ServiceModel.Duplex.dll",
+          "lib/net10.0/System.ServiceModel.Primitives.dll",
+          "lib/net10.0/System.ServiceModel.Security.dll",
+          "lib/net10.0/System.ServiceModel.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.ServiceModel.Syndication/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/System.ServiceModel.Syndication.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.ServiceProcess.ServiceController/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/System.ServiceProcess.ServiceController.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net10.0/System.ServiceProcess.ServiceController.dll"
+        ]
+      },
+      "System.Speech/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/System.Speech.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net10.0/System.Speech.dll"
+        ]
+      },
+      "System.Web.Services.Description/8.1.2": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/netstandard2.0/System.Web.Services.Description.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.Windows.Extensions/10.0.5": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net10.0/System.Windows.Extensions.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net10.0/System.Windows.Extensions.dll"
+        ]
+      },
+      "WixToolset.Dtf.WindowsInstaller/4.0.5": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/netstandard2.0/WixToolset.Dtf.WindowsInstaller.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "ZstdSharp.Port/0.8.8": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net9.0/ZstdSharp.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "common/1.0.0": {
+        "dependencies": {
+          "SpecterInsight": "1.0.0"
+        },
+        "runtime_assets": [
+          "common.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "SpecterInsight/1.0.0": {
+        "dependencies": {},
+        "runtime_assets": [
+          "SpecterInsight.exe"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "SpecterInsight.Obfuscation/1.0.0": {
+        "dependencies": {
+          "AmsiScanner.Common": "2.3.5",
+          "Antlr4.Runtime.Standard": "4.13.1",
+          "MedallionShell": "1.6.2",
+          "Microsoft.CodeAnalysis.CSharp": "5.0.0",
+          "Microsoft.PowerShell.SDK": "7.6.0"
+        },
+        "runtime_assets": [
+          "SpecterInsight.Obfuscation.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "SpecterInsight.Server/1.0.0": {
+        "dependencies": {
+          "Anthropic": "12.9.0",
+          "Anthropic.SDK": "5.10.0",
+          "AsmResolver": "5.5.1",
+          "AsmResolver.PE": "5.5.1",
+          "AsmResolver.PE.File": "5.5.1",
+          "AsmResolver.PE.Win32Resources": "5.5.1",
+          "BCrypt.Net-Next": "4.1.0",
+          "Certes": "3.0.4",
+          "DiscUtils.Core": "0.16.13",
+          "DiscUtils.Fat": "0.16.13",
+          "DiscUtils.Iso9660": "0.16.13",
+          "DiscUtils.Vhd": "0.16.13",
+          "DotNetZip": "1.16.0",
+          "MailKit": "4.8.0",
+          "MaxMind.GeoIP2": "5.4.1",
+          "Microsoft.Agents.AI": "1.0.0-rc4",
+          "Microsoft.Agents.AI.Anthropic": "1.0.0-rc4",
+          "Microsoft.Agents.AI.OpenAI": "1.0.0-rc4",
+          "Microsoft.Agents.AI.Workflows": "1.0.0-rc4",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "10.0.5",
+          "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "10.0.5",
+          "Microsoft.AspNetCore.SignalR.Protocols.NewtonsoftJson": "10.0.5",
+          "Microsoft.Extensions.AI": "10.4.1",
+          "Microsoft.Extensions.AI.OpenAI": "10.4.1",
+          "Microsoft.PowerShell.SDK": "7.6.0",
+          "ModelContextProtocol": "1.2.0",
+          "ModelContextProtocol.AspNetCore": "1.2.0",
+          "Mono.Cecil": "0.11.6",
+          "NEST": "7.17.5",
+          "NEST.JsonNetSerializer": "7.17.5",
+          "NSwag.Annotations": "14.6.3",
+          "Npgsql": "10.0.2",
+          "Npgsql.DependencyInjection": "10.0.2",
+          "Octokit": "14.0.0",
+          "OllamaSharp": "5.4.24",
+          "OpenAI": "2.9.1",
+          "OpenMcdf": "3.1.4",
+          "SSH.NET": "2024.2.0",
+          "SmartComponents.LocalEmbeddings": "0.1.0-preview10148",
+          "SpecterInsight": "1.0.0",
+          "SpecterInsight.Obfuscation": "1.0.0",
+          "Swashbuckle.AspNetCore.Newtonsoft": "10.1.5",
+          "Swashbuckle.AspNetCore.SwaggerGen": "10.1.5",
+          "Swashbuckle.AspNetCore.SwaggerUI": "10.1.5",
+          "System.IdentityModel.Tokens.Jwt": "8.16.0",
+          "WixToolset.Dtf.WindowsInstaller": "4.0.5",
+          "ZstdSharp.Port": "0.8.8",
+          "common": "1.0.0"
+        },
+        "runtime_assets": [
+          "SpecterInsight.Server.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Interop.TaskScheduler/1.0.0.0": {
+        "dependencies": {},
+        "runtime_assets": [
+          "Interop.TaskScheduler.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Securify.ShellLink/1.1.0.0": {
+        "dependencies": {},
+        "runtime_assets": [
+          "Securify.ShellLink.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      }
+    }
+  },
+  {
+    "id": "ART-acc69d82e1df77034d29",
+    "manifest": "server/SpecterInsight.Server.deps.json",
+    "target": ".NETCoreApp,Version=v8.0",
+    "nodes": {
+      "SpecterInsight.Server/1.0.0": {
+        "dependencies": {
+          "AsmResolver": "5.5.1",
+          "AsmResolver.PE": "5.5.1",
+          "AsmResolver.PE.File": "5.5.1",
+          "AsmResolver.PE.Win32Resources": "5.5.1",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
+          "BCrypt.Net-Next": "4.0.3",
+          "Certes": "3.0.4",
+          "Common": "1.0.0",
+          "DotNetZip": "1.16.0",
+          "MaxMind.GeoIP2": "5.2.0",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.6",
+          "Microsoft.AspNetCore.Hosting.Abstractions": "2.2.0",
+          "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "8.0.6",
+          "Microsoft.AspNetCore.SignalR.Protocols.NewtonsoftJson": "8.0.6",
+          "Microsoft.OpenApi": "1.6.15",
+          "Microsoft.PowerShell.SDK": "7.4.3",
+          "Mono.Cecil": "0.11.5",
+          "NEST": "7.17.5",
+          "NEST.JsonNetSerializer": "7.17.5",
+          "NSwag.Annotations": "14.0.8",
+          "NSwag.MSBuild": "14.0.8",
+          "Npgsql": "8.0.3",
+          "Npgsql.DependencyInjection": "8.0.3",
+          "Octokit": "13.0.0",
+          "SpecterInsight": "1.0.0",
+          "SpecterInsight.Obfuscation": "1.0.0",
+          "Swashbuckle.AspNetCore": "6.6.2",
+          "Swashbuckle.AspNetCore.Newtonsoft": "6.6.2",
+          "Swashbuckle.AspNetCore.Swagger": "6.6.2",
+          "Swashbuckle.AspNetCore.SwaggerGen": "6.6.2",
+          "Swashbuckle.AspNetCore.SwaggerUI": "6.6.2",
+          "System.IdentityModel.Tokens.Jwt": "7.6.2",
+          "System.Threading.Tasks.Extensions": "4.5.4"
+        },
+        "runtime_assets": [
+          "SpecterInsight.Server.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "AmsiScanner.Common/2.3.5": {
+        "dependencies": {
+          "Microsoft.PowerShell.SDK": "7.4.3"
+        },
+        "runtime_assets": [
+          "lib/net6.0/AmsiScanner.Common.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "AsmResolver/5.5.1": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net8.0/AsmResolver.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "AsmResolver.PE/5.5.1": {
+        "dependencies": {
+          "AsmResolver.PE.File": "5.5.1"
+        },
+        "runtime_assets": [
+          "lib/net8.0/AsmResolver.PE.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "AsmResolver.PE.File/5.5.1": {
+        "dependencies": {
+          "AsmResolver": "5.5.1"
+        },
+        "runtime_assets": [
+          "lib/net8.0/AsmResolver.PE.File.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "AsmResolver.PE.Win32Resources/5.5.1": {
+        "dependencies": {
+          "AsmResolver": "5.5.1",
+          "AsmResolver.PE": "5.5.1"
+        },
+        "runtime_assets": [
+          "lib/net8.0/AsmResolver.PE.Win32Resources.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "AutoMapper/12.0.1": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.7.0"
+        },
+        "runtime_assets": [
+          "lib/netstandard2.1/AutoMapper.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "AutoMapper.Extensions.Microsoft.DependencyInjection/12.0.1": {
+        "dependencies": {
+          "AutoMapper": "12.0.1",
+          "Microsoft.Extensions.Options": "8.0.2"
+        },
+        "runtime_assets": [
+          "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "BCrypt.Net-Next/4.0.3": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net6.0/BCrypt.Net-Next.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Certes/3.0.4": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "Portable.BouncyCastle": "1.9.0"
+        },
+        "runtime_assets": [
+          "lib/net6.0/Certes.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "DotNetZip/1.16.0": {
+        "dependencies": {
+          "System.Security.Permissions": "8.0.0",
+          "System.Text.Encoding.CodePages": "8.0.0"
+        },
+        "runtime_assets": [
+          "lib/netstandard2.0/DotNetZip.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Elasticsearch.Net/7.17.5": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.7.0",
+          "System.Buffers": "4.5.1",
+          "System.Diagnostics.DiagnosticSource": "8.0.1"
+        },
+        "runtime_assets": [
+          "lib/netstandard2.1/Elasticsearch.Net.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "JetBrains.Annotations/2021.2.0": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/netstandard2.0/JetBrains.Annotations.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Json.More.Net/1.9.3": {
+        "dependencies": {
+          "System.Text.Json": "6.0.9"
+        },
+        "runtime_assets": [
+          "lib/netstandard2.0/Json.More.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "JsonPointer.Net/3.0.3": {
+        "dependencies": {
+          "Json.More.Net": "1.9.3"
+        },
+        "runtime_assets": [
+          "lib/netstandard2.0/JsonPointer.Net.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "JsonSchema.Net/5.2.7": {
+        "dependencies": {
+          "JetBrains.Annotations": "2021.2.0",
+          "Json.More.Net": "1.9.3",
+          "JsonPointer.Net": "3.0.3"
+        },
+        "runtime_assets": [
+          "lib/netstandard2.0/JsonSchema.Net.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Markdig.Signed/0.33.0": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net6.0/Markdig.Signed.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "MaxMind.Db/4.1.0": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net8.0/MaxMind.Db.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "MaxMind.GeoIP2/5.2.0": {
+        "dependencies": {
+          "MaxMind.Db": "4.1.0",
+          "Microsoft.Extensions.Options": "8.0.2"
+        },
+        "runtime_assets": [
+          "lib/net8.0/MaxMind.GeoIP2.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "MedallionShell/1.6.2": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/netstandard2.0/MedallionShell.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.ApplicationInsights/2.21.0": {
+        "dependencies": {
+          "System.Diagnostics.DiagnosticSource": "8.0.1"
+        },
+        "runtime_assets": [
+          "lib/netstandard2.0/Microsoft.ApplicationInsights.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.AspNetCore.Authentication.JwtBearer/8.0.6": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "7.1.2"
+        },
+        "runtime_assets": [
+          "lib/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.AspNetCore.Connections.Abstractions/8.0.6": {
+        "dependencies": {
+          "Microsoft.Extensions.Features": "8.0.6",
+          "System.IO.Pipelines": "8.0.0"
+        },
+        "runtime_assets": [
+          "lib/net8.0/Microsoft.AspNetCore.Connections.Abstractions.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.AspNetCore.Hosting.Abstractions/2.2.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Hosting.Server.Abstractions": "2.2.0",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
+          "Microsoft.Extensions.Hosting.Abstractions": "2.2.0"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.AspNetCore.Hosting.Server.Abstractions/2.2.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "2.2.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "2.2.0"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.AspNetCore.Http.Abstractions/2.2.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "2.2.0",
+          "System.Text.Encodings.Web": "8.0.0"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.AspNetCore.Http.Features/2.2.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "8.0.0"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.AspNetCore.JsonPatch/8.0.6": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.7.0",
+          "Newtonsoft.Json": "13.0.3"
+        },
+        "runtime_assets": [
+          "lib/net8.0/Microsoft.AspNetCore.JsonPatch.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.AspNetCore.Mvc.NewtonsoftJson/8.0.6": {
+        "dependencies": {
+          "Microsoft.AspNetCore.JsonPatch": "8.0.6",
+          "Newtonsoft.Json": "13.0.3",
+          "Newtonsoft.Json.Bson": "1.0.2"
+        },
+        "runtime_assets": [
+          "lib/net8.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.AspNetCore.SignalR.Common/8.0.6": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Connections.Abstractions": "8.0.6",
+          "Microsoft.Extensions.Options": "8.0.2"
+        },
+        "runtime_assets": [
+          "lib/net8.0/Microsoft.AspNetCore.SignalR.Common.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.AspNetCore.SignalR.Protocols.NewtonsoftJson/8.0.6": {
+        "dependencies": {
+          "Microsoft.AspNetCore.SignalR.Common": "8.0.6",
+          "Newtonsoft.Json": "13.0.3"
+        },
+        "runtime_assets": [
+          "lib/net8.0/Microsoft.AspNetCore.SignalR.Protocols.NewtonsoftJson.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.Bcl.AsyncInterfaces/8.0.0": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.CodeAnalysis.Analyzers/3.3.4": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.CodeAnalysis.Common/4.10.0": {
+        "dependencies": {
+          "Microsoft.CodeAnalysis.Analyzers": "3.3.4",
+          "System.Collections.Immutable": "8.0.0",
+          "System.Reflection.Metadata": "8.0.0"
+        },
+        "runtime_assets": [
+          "lib/net8.0/Microsoft.CodeAnalysis.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.CodeAnalysis.CSharp/4.10.0": {
+        "dependencies": {
+          "Microsoft.CodeAnalysis.Analyzers": "3.3.4",
+          "Microsoft.CodeAnalysis.Common": "4.10.0",
+          "System.Collections.Immutable": "8.0.0",
+          "System.Reflection.Metadata": "8.0.0"
+        },
+        "runtime_assets": [
+          "lib/net8.0/Microsoft.CodeAnalysis.CSharp.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.CSharp/4.7.0": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.Extensions.ApiDescription.Server/6.0.5": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.Extensions.Configuration.Abstractions/2.2.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "8.0.0"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.0": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.Extensions.Features/8.0.6": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net8.0/Microsoft.Extensions.Features.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.Extensions.FileProviders.Abstractions/2.2.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "8.0.0"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.Extensions.Hosting.Abstractions/2.2.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "2.2.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0",
+          "Microsoft.Extensions.FileProviders.Abstractions": "2.2.0",
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.0"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.Extensions.Logging.Abstractions/8.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.Extensions.ObjectPool/8.0.6": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net8.0/Microsoft.Extensions.ObjectPool.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.Extensions.Options/8.0.2": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Primitives": "8.0.0"
+        },
+        "runtime_assets": [
+          "lib/net8.0/Microsoft.Extensions.Options.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.Extensions.Primitives/8.0.0": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.IdentityModel.Abstractions/7.6.2": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net8.0/Microsoft.IdentityModel.Abstractions.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.IdentityModel.JsonWebTokens/7.6.2": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Tokens": "7.6.2"
+        },
+        "runtime_assets": [
+          "lib/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.IdentityModel.Logging/7.6.2": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Abstractions": "7.6.2"
+        },
+        "runtime_assets": [
+          "lib/net8.0/Microsoft.IdentityModel.Logging.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.IdentityModel.Protocols/7.1.2": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Logging": "7.6.2",
+          "Microsoft.IdentityModel.Tokens": "7.6.2"
+        },
+        "runtime_assets": [
+          "lib/net8.0/Microsoft.IdentityModel.Protocols.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.IdentityModel.Protocols.OpenIdConnect/7.1.2": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Protocols": "7.1.2",
+          "System.IdentityModel.Tokens.Jwt": "7.6.2"
+        },
+        "runtime_assets": [
+          "lib/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.IdentityModel.Tokens/7.6.2": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Logging": "7.6.2"
+        },
+        "runtime_assets": [
+          "lib/net8.0/Microsoft.IdentityModel.Tokens.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.Management.Infrastructure/3.0.0": {
+        "dependencies": {
+          "Microsoft.Management.Infrastructure.Runtime.Unix": "3.0.0",
+          "Microsoft.Management.Infrastructure.Runtime.Win": "3.0.0"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.Management.Infrastructure.CimCmdlets/7.4.3": {
+        "dependencies": {
+          "System.Management.Automation": "7.4.3"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net8.0/Microsoft.Management.Infrastructure.CimCmdlets.dll"
+        ]
+      },
+      "Microsoft.Management.Infrastructure.Runtime.Unix/3.0.0": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/unix/lib/netstandard1.6/Microsoft.Management.Infrastructure.dll"
+        ]
+      },
+      "Microsoft.Management.Infrastructure.Runtime.Win/3.0.0": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win-arm64/lib/netstandard1.6/microsoft.management.infrastructure.dll",
+          "runtimes/win-arm64/lib/netstandard1.6/microsoft.management.infrastructure.native.dll",
+          "runtimes/win-x64/lib/netstandard1.6/microsoft.management.infrastructure.dll",
+          "runtimes/win-x64/lib/netstandard1.6/microsoft.management.infrastructure.native.dll",
+          "runtimes/win-x86/lib/netstandard1.6/microsoft.management.infrastructure.dll",
+          "runtimes/win-x86/lib/netstandard1.6/microsoft.management.infrastructure.native.dll",
+          "runtimes/win-arm64/native/microsoft.management.infrastructure.native.unmanaged.dll",
+          "runtimes/win-x64/native/microsoft.management.infrastructure.native.unmanaged.dll",
+          "runtimes/win-x86/native/microsoft.management.infrastructure.native.unmanaged.dll"
+        ]
+      },
+      "Microsoft.OpenApi/1.6.15": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/netstandard2.0/Microsoft.OpenApi.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.PowerShell.Commands.Diagnostics/7.4.3": {
+        "dependencies": {
+          "System.Management.Automation": "7.4.3"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net8.0/Microsoft.PowerShell.Commands.Diagnostics.dll"
+        ]
+      },
+      "Microsoft.PowerShell.Commands.Management/7.4.3": {
+        "dependencies": {
+          "Microsoft.PowerShell.Security": "7.4.3",
+          "System.ServiceProcess.ServiceController": "8.0.0"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/unix/lib/net8.0/Microsoft.PowerShell.Commands.Management.dll",
+          "runtimes/win/lib/net8.0/Microsoft.PowerShell.Commands.Management.dll"
+        ]
+      },
+      "Microsoft.PowerShell.Commands.Utility/7.4.3": {
+        "dependencies": {
+          "Json.More.Net": "1.9.3",
+          "JsonSchema.Net": "5.2.7",
+          "Markdig.Signed": "0.33.0",
+          "Microsoft.CodeAnalysis.CSharp": "4.10.0",
+          "Microsoft.PowerShell.MarkdownRender": "7.2.1",
+          "System.Drawing.Common": "8.0.6",
+          "System.Management.Automation": "7.4.3",
+          "System.Text.Json": "6.0.9",
+          "System.Threading.AccessControl": "8.0.0"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/unix/lib/net8.0/Microsoft.PowerShell.Commands.Utility.dll",
+          "runtimes/win/lib/net8.0/Microsoft.PowerShell.Commands.Utility.dll"
+        ]
+      },
+      "Microsoft.PowerShell.ConsoleHost/7.4.3": {
+        "dependencies": {
+          "System.Management.Automation": "7.4.3"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/unix/lib/net8.0/Microsoft.PowerShell.ConsoleHost.dll",
+          "runtimes/win/lib/net8.0/Microsoft.PowerShell.ConsoleHost.dll"
+        ]
+      },
+      "Microsoft.PowerShell.CoreCLR.Eventing/7.4.3": {
+        "dependencies": {
+          "System.Diagnostics.EventLog": "8.0.0"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net8.0/Microsoft.PowerShell.CoreCLR.Eventing.dll"
+        ]
+      },
+      "Microsoft.PowerShell.MarkdownRender/7.2.1": {
+        "dependencies": {
+          "Markdig.Signed": "0.33.0"
+        },
+        "runtime_assets": [
+          "lib/netstandard2.0/Microsoft.PowerShell.MarkdownRender.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.PowerShell.Native/7.4.0": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/linux-arm/native/libpsl-native.so",
+          "runtimes/linux-arm64/native/libpsl-native.so",
+          "runtimes/linux-musl-x64/native/libpsl-native.so",
+          "runtimes/linux-x64/native/libpsl-native.so",
+          "runtimes/osx/native/libpsl-native.dylib",
+          "runtimes/win-arm/native/PowerShell.Core.Instrumentation.dll",
+          "runtimes/win-arm/native/pwrshplugin.dll",
+          "runtimes/win-arm64/native/PowerShell.Core.Instrumentation.dll",
+          "runtimes/win-arm64/native/pwrshplugin.dll",
+          "runtimes/win-x64/native/PowerShell.Core.Instrumentation.dll",
+          "runtimes/win-x64/native/pwrshplugin.dll",
+          "runtimes/win-x86/native/PowerShell.Core.Instrumentation.dll",
+          "runtimes/win-x86/native/pwrshplugin.dll"
+        ]
+      },
+      "Microsoft.PowerShell.SDK/7.4.3": {
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "8.0.0",
+          "Microsoft.Extensions.ObjectPool": "8.0.6",
+          "Microsoft.Management.Infrastructure.CimCmdlets": "7.4.3",
+          "Microsoft.PowerShell.Commands.Diagnostics": "7.4.3",
+          "Microsoft.PowerShell.Commands.Management": "7.4.3",
+          "Microsoft.PowerShell.Commands.Utility": "7.4.3",
+          "Microsoft.PowerShell.ConsoleHost": "7.4.3",
+          "Microsoft.PowerShell.Security": "7.4.3",
+          "Microsoft.WSMan.Management": "7.4.3",
+          "Microsoft.Windows.Compatibility": "8.0.6",
+          "System.Data.SqlClient": "4.8.6",
+          "System.IO.Packaging": "8.0.0",
+          "System.Management.Automation": "7.4.3",
+          "System.Net.Http.WinHttpHandler": "8.0.0",
+          "System.Private.ServiceModel": "4.10.3",
+          "System.ServiceModel.Duplex": "4.10.3",
+          "System.ServiceModel.Http": "4.10.3",
+          "System.ServiceModel.NetTcp": "4.10.3",
+          "System.ServiceModel.Primitives": "4.10.3",
+          "System.ServiceModel.Security": "4.10.3",
+          "System.Text.Encodings.Web": "8.0.0",
+          "System.Web.Services.Description": "4.10.3"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/unix/lib/net8.0/Microsoft.PowerShell.SDK.dll",
+          "runtimes/win/lib/net8.0/Microsoft.PowerShell.SDK.dll"
+        ]
+      },
+      "Microsoft.PowerShell.Security/7.4.3": {
+        "dependencies": {
+          "System.Management.Automation": "7.4.3"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/unix/lib/net8.0/Microsoft.PowerShell.Security.dll",
+          "runtimes/win/lib/net8.0/Microsoft.PowerShell.Security.dll"
+        ]
+      },
+      "Microsoft.Security.Extensions/1.2.0": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win-arm/lib/net5.0/getfilesiginforedistwrapper.dll",
+          "runtimes/win-arm64/lib/net5.0/getfilesiginforedistwrapper.dll",
+          "runtimes/win-x64/lib/net5.0/getfilesiginforedistwrapper.dll",
+          "runtimes/win-x86/lib/net5.0/getfilesiginforedistwrapper.dll",
+          "runtimes/win-arm/native/getfilesiginforedist.dll",
+          "runtimes/win-arm64/native/getfilesiginforedist.dll",
+          "runtimes/win-x64/native/getfilesiginforedist.dll",
+          "runtimes/win-x86/native/getfilesiginforedist.dll"
+        ]
+      },
+      "Microsoft.Win32.Registry/4.7.0": {
+        "dependencies": {
+          "System.Security.AccessControl": "6.0.1",
+          "System.Security.Principal.Windows": "5.0.0"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.Win32.Registry.AccessControl/8.0.0": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net8.0/Microsoft.Win32.Registry.AccessControl.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net8.0/Microsoft.Win32.Registry.AccessControl.dll"
+        ]
+      },
+      "Microsoft.Win32.SystemEvents/8.0.0": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net8.0/Microsoft.Win32.SystemEvents.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.dll"
+        ]
+      },
+      "Microsoft.Windows.Compatibility/8.0.6": {
+        "dependencies": {
+          "Microsoft.Win32.Registry.AccessControl": "8.0.0",
+          "Microsoft.Win32.SystemEvents": "8.0.0",
+          "System.CodeDom": "8.0.0",
+          "System.ComponentModel.Composition": "8.0.0",
+          "System.ComponentModel.Composition.Registration": "8.0.0",
+          "System.Configuration.ConfigurationManager": "8.0.0",
+          "System.Data.Odbc": "8.0.0",
+          "System.Data.OleDb": "8.0.0",
+          "System.Data.SqlClient": "4.8.6",
+          "System.Diagnostics.EventLog": "8.0.0",
+          "System.Diagnostics.PerformanceCounter": "8.0.0",
+          "System.DirectoryServices": "8.0.0",
+          "System.DirectoryServices.AccountManagement": "8.0.0",
+          "System.DirectoryServices.Protocols": "8.0.0",
+          "System.Drawing.Common": "8.0.6",
+          "System.IO.Packaging": "8.0.0",
+          "System.IO.Ports": "8.0.0",
+          "System.Management": "8.0.0",
+          "System.Reflection.Context": "8.0.0",
+          "System.Runtime.Caching": "8.0.0",
+          "System.Security.Cryptography.Pkcs": "8.0.0",
+          "System.Security.Cryptography.ProtectedData": "8.0.0",
+          "System.Security.Cryptography.Xml": "8.0.1",
+          "System.Security.Permissions": "8.0.0",
+          "System.ServiceModel.Duplex": "4.10.3",
+          "System.ServiceModel.Http": "4.10.3",
+          "System.ServiceModel.NetTcp": "4.10.3",
+          "System.ServiceModel.Primitives": "4.10.3",
+          "System.ServiceModel.Security": "4.10.3",
+          "System.ServiceModel.Syndication": "8.0.0",
+          "System.ServiceProcess.ServiceController": "8.0.0",
+          "System.Speech": "8.0.0",
+          "System.Text.Encoding.CodePages": "8.0.0",
+          "System.Threading.AccessControl": "8.0.0",
+          "System.Web.Services.Description": "4.10.3"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Microsoft.WSMan.Management/7.4.3": {
+        "dependencies": {
+          "Microsoft.WSMan.Runtime": "7.4.3",
+          "System.Management.Automation": "7.4.3",
+          "System.ServiceProcess.ServiceController": "8.0.0"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net8.0/Microsoft.WSMan.Management.dll"
+        ]
+      },
+      "Microsoft.WSMan.Runtime/7.4.3": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net8.0/Microsoft.WSMan.Runtime.dll"
+        ]
+      },
+      "Mono.Cecil/0.11.5": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/netstandard2.0/Mono.Cecil.Mdb.dll",
+          "lib/netstandard2.0/Mono.Cecil.Pdb.dll",
+          "lib/netstandard2.0/Mono.Cecil.Rocks.dll",
+          "lib/netstandard2.0/Mono.Cecil.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "NEST/7.17.5": {
+        "dependencies": {
+          "Elasticsearch.Net": "7.17.5"
+        },
+        "runtime_assets": [
+          "lib/netstandard2.0/Nest.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "NEST.JsonNetSerializer/7.17.5": {
+        "dependencies": {
+          "NEST": "7.17.5",
+          "Newtonsoft.Json": "13.0.3"
+        },
+        "runtime_assets": [
+          "lib/netstandard2.0/Nest.JsonNetSerializer.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net6.0/Newtonsoft.Json.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Newtonsoft.Json.Bson/1.0.2": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3"
+        },
+        "runtime_assets": [
+          "lib/netstandard2.0/Newtonsoft.Json.Bson.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Npgsql/8.0.3": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.0"
+        },
+        "runtime_assets": [
+          "lib/net8.0/Npgsql.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Npgsql.DependencyInjection/8.0.3": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0",
+          "Npgsql": "8.0.3"
+        },
+        "runtime_assets": [
+          "lib/net7.0/Npgsql.DependencyInjection.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "NSwag.Annotations/14.0.8": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/netstandard2.0/NSwag.Annotations.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "NSwag.MSBuild/14.0.8": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Octokit/13.0.0": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/netstandard2.0/Octokit.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Portable.BouncyCastle/1.9.0": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/netstandard2.0/BouncyCastle.Crypto.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "runtime.linux-arm.runtime.native.System.IO.Ports/8.0.0": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/linux-arm/native/libSystem.IO.Ports.Native.so"
+        ]
+      },
+      "runtime.linux-arm64.runtime.native.System.IO.Ports/8.0.0": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/linux-arm64/native/libSystem.IO.Ports.Native.so"
+        ]
+      },
+      "runtime.linux-x64.runtime.native.System.IO.Ports/8.0.0": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/linux-x64/native/libSystem.IO.Ports.Native.so"
+        ]
+      },
+      "runtime.native.System.Data.SqlClient.sni/4.7.0": {
+        "dependencies": {
+          "runtime.win-arm64.runtime.native.System.Data.SqlClient.sni": "4.4.0",
+          "runtime.win-x64.runtime.native.System.Data.SqlClient.sni": "4.4.0",
+          "runtime.win-x86.runtime.native.System.Data.SqlClient.sni": "4.4.0"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "runtime.native.System.IO.Ports/8.0.0": {
+        "dependencies": {
+          "runtime.linux-arm.runtime.native.System.IO.Ports": "8.0.0",
+          "runtime.linux-arm64.runtime.native.System.IO.Ports": "8.0.0",
+          "runtime.linux-x64.runtime.native.System.IO.Ports": "8.0.0",
+          "runtime.osx-arm64.runtime.native.System.IO.Ports": "8.0.0",
+          "runtime.osx-x64.runtime.native.System.IO.Ports": "8.0.0"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "runtime.osx-arm64.runtime.native.System.IO.Ports/8.0.0": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/osx-arm64/native/libSystem.IO.Ports.Native.dylib"
+        ]
+      },
+      "runtime.osx-x64.runtime.native.System.IO.Ports/8.0.0": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/osx-x64/native/libSystem.IO.Ports.Native.dylib"
+        ]
+      },
+      "runtime.win-arm64.runtime.native.System.Data.SqlClient.sni/4.4.0": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win-arm64/native/sni.dll"
+        ]
+      },
+      "runtime.win-x64.runtime.native.System.Data.SqlClient.sni/4.4.0": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win-x64/native/sni.dll"
+        ]
+      },
+      "runtime.win-x86.runtime.native.System.Data.SqlClient.sni/4.4.0": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win-x86/native/sni.dll"
+        ]
+      },
+      "Swashbuckle.AspNetCore/6.6.2": {
+        "dependencies": {
+          "Microsoft.Extensions.ApiDescription.Server": "6.0.5",
+          "Swashbuckle.AspNetCore.Swagger": "6.6.2",
+          "Swashbuckle.AspNetCore.SwaggerGen": "6.6.2",
+          "Swashbuckle.AspNetCore.SwaggerUI": "6.6.2"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Swashbuckle.AspNetCore.Newtonsoft/6.6.2": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "8.0.6",
+          "Swashbuckle.AspNetCore.SwaggerGen": "6.6.2"
+        },
+        "runtime_assets": [
+          "lib/net8.0/Swashbuckle.AspNetCore.Newtonsoft.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Swashbuckle.AspNetCore.Swagger/6.6.2": {
+        "dependencies": {
+          "Microsoft.OpenApi": "1.6.15"
+        },
+        "runtime_assets": [
+          "lib/net8.0/Swashbuckle.AspNetCore.Swagger.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Swashbuckle.AspNetCore.SwaggerGen/6.6.2": {
+        "dependencies": {
+          "Swashbuckle.AspNetCore.Swagger": "6.6.2"
+        },
+        "runtime_assets": [
+          "lib/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Swashbuckle.AspNetCore.SwaggerUI/6.6.2": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.Buffers/4.5.1": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.CodeDom/8.0.0": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net8.0/System.CodeDom.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.Collections.Immutable/8.0.0": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.ComponentModel.Composition/8.0.0": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net8.0/System.ComponentModel.Composition.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.ComponentModel.Composition.Registration/8.0.0": {
+        "dependencies": {
+          "System.ComponentModel.Composition": "8.0.0",
+          "System.Reflection.Context": "8.0.0"
+        },
+        "runtime_assets": [
+          "lib/net8.0/System.ComponentModel.Composition.Registration.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.Configuration.ConfigurationManager/8.0.0": {
+        "dependencies": {
+          "System.Diagnostics.EventLog": "8.0.0",
+          "System.Security.Cryptography.ProtectedData": "8.0.0"
+        },
+        "runtime_assets": [
+          "lib/net8.0/System.Configuration.ConfigurationManager.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.Data.Odbc/8.0.0": {
+        "dependencies": {
+          "System.Text.Encoding.CodePages": "8.0.0"
+        },
+        "runtime_assets": [
+          "lib/net8.0/System.Data.Odbc.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/freebsd/lib/net8.0/System.Data.Odbc.dll",
+          "runtimes/illumos/lib/net8.0/System.Data.Odbc.dll",
+          "runtimes/ios/lib/net8.0/System.Data.Odbc.dll",
+          "runtimes/linux/lib/net8.0/System.Data.Odbc.dll",
+          "runtimes/osx/lib/net8.0/System.Data.Odbc.dll",
+          "runtimes/solaris/lib/net8.0/System.Data.Odbc.dll",
+          "runtimes/tvos/lib/net8.0/System.Data.Odbc.dll",
+          "runtimes/win/lib/net8.0/System.Data.Odbc.dll"
+        ]
+      },
+      "System.Data.OleDb/8.0.0": {
+        "dependencies": {
+          "System.Configuration.ConfigurationManager": "8.0.0",
+          "System.Diagnostics.PerformanceCounter": "8.0.0"
+        },
+        "runtime_assets": [
+          "lib/net8.0/System.Data.OleDb.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net8.0/System.Data.OleDb.dll"
+        ]
+      },
+      "System.Data.SqlClient/4.8.6": {
+        "dependencies": {
+          "Microsoft.Win32.Registry": "4.7.0",
+          "System.Security.Principal.Windows": "5.0.0",
+          "runtime.native.System.Data.SqlClient.sni": "4.7.0"
+        },
+        "runtime_assets": [
+          "lib/netcoreapp2.1/System.Data.SqlClient.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/unix/lib/netcoreapp2.1/System.Data.SqlClient.dll",
+          "runtimes/win/lib/netcoreapp2.1/System.Data.SqlClient.dll"
+        ]
+      },
+      "System.Diagnostics.DiagnosticSource/8.0.1": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net8.0/System.Diagnostics.DiagnosticSource.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.Diagnostics.EventLog/8.0.0": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.Diagnostics.PerformanceCounter/8.0.0": {
+        "dependencies": {
+          "System.Configuration.ConfigurationManager": "8.0.0"
+        },
+        "runtime_assets": [
+          "lib/net8.0/System.Diagnostics.PerformanceCounter.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net8.0/System.Diagnostics.PerformanceCounter.dll"
+        ]
+      },
+      "System.DirectoryServices/8.0.0": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net8.0/System.DirectoryServices.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net8.0/System.DirectoryServices.dll"
+        ]
+      },
+      "System.DirectoryServices.AccountManagement/8.0.0": {
+        "dependencies": {
+          "System.Configuration.ConfigurationManager": "8.0.0",
+          "System.DirectoryServices": "8.0.0",
+          "System.DirectoryServices.Protocols": "8.0.0"
+        },
+        "runtime_assets": [
+          "lib/net8.0/System.DirectoryServices.AccountManagement.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net8.0/System.DirectoryServices.AccountManagement.dll"
+        ]
+      },
+      "System.DirectoryServices.Protocols/8.0.0": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net8.0/System.DirectoryServices.Protocols.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/linux/lib/net8.0/System.DirectoryServices.Protocols.dll",
+          "runtimes/osx/lib/net8.0/System.DirectoryServices.Protocols.dll",
+          "runtimes/win/lib/net8.0/System.DirectoryServices.Protocols.dll"
+        ]
+      },
+      "System.Drawing.Common/8.0.6": {
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "8.0.0"
+        },
+        "runtime_assets": [
+          "lib/net8.0/System.Drawing.Common.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.Formats.Asn1/8.0.0": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.IdentityModel.Tokens.Jwt/7.6.2": {
+        "dependencies": {
+          "Microsoft.IdentityModel.JsonWebTokens": "7.6.2",
+          "Microsoft.IdentityModel.Tokens": "7.6.2"
+        },
+        "runtime_assets": [
+          "lib/net8.0/System.IdentityModel.Tokens.Jwt.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.IO.Packaging/8.0.0": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net8.0/System.IO.Packaging.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.IO.Pipelines/8.0.0": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.IO.Ports/8.0.0": {
+        "dependencies": {
+          "runtime.native.System.IO.Ports": "8.0.0"
+        },
+        "runtime_assets": [
+          "lib/net8.0/System.IO.Ports.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/unix/lib/net8.0/System.IO.Ports.dll",
+          "runtimes/win/lib/net8.0/System.IO.Ports.dll"
+        ]
+      },
+      "System.Management/8.0.0": {
+        "dependencies": {
+          "System.CodeDom": "8.0.0"
+        },
+        "runtime_assets": [
+          "lib/net8.0/System.Management.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net8.0/System.Management.dll"
+        ]
+      },
+      "System.Management.Automation/7.4.3": {
+        "dependencies": {
+          "Microsoft.ApplicationInsights": "2.21.0",
+          "Microsoft.Management.Infrastructure": "3.0.0",
+          "Microsoft.PowerShell.CoreCLR.Eventing": "7.4.3",
+          "Microsoft.PowerShell.Native": "7.4.0",
+          "Microsoft.Security.Extensions": "1.2.0",
+          "Microsoft.Win32.Registry.AccessControl": "8.0.0",
+          "Newtonsoft.Json": "13.0.3",
+          "System.Configuration.ConfigurationManager": "8.0.0",
+          "System.Diagnostics.DiagnosticSource": "8.0.1",
+          "System.DirectoryServices": "8.0.0",
+          "System.Management": "8.0.0",
+          "System.Security.AccessControl": "6.0.1",
+          "System.Security.Cryptography.Pkcs": "8.0.0",
+          "System.Security.Permissions": "8.0.0",
+          "System.Text.Encoding.CodePages": "8.0.0"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/unix/lib/net8.0/System.Management.Automation.dll",
+          "runtimes/win/lib/net8.0/System.Management.Automation.dll"
+        ]
+      },
+      "System.Net.Http.WinHttpHandler/8.0.0": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net8.0/System.Net.Http.WinHttpHandler.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net8.0/System.Net.Http.WinHttpHandler.dll"
+        ]
+      },
+      "System.Numerics.Vectors/4.5.0": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.Private.ServiceModel/4.10.3": {
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "8.0.0",
+          "Microsoft.Extensions.ObjectPool": "8.0.6",
+          "System.Numerics.Vectors": "4.5.0",
+          "System.Reflection.DispatchProxy": "4.7.1",
+          "System.Security.Cryptography.Xml": "8.0.1",
+          "System.Security.Principal.Windows": "5.0.0"
+        },
+        "runtime_assets": [
+          "lib/netstandard2.0/System.Private.ServiceModel.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.Reflection.Context/8.0.0": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net8.0/System.Reflection.Context.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.Reflection.DispatchProxy/4.7.1": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.Reflection.Metadata/8.0.0": {
+        "dependencies": {
+          "System.Collections.Immutable": "8.0.0"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.Runtime.Caching/8.0.0": {
+        "dependencies": {
+          "System.Configuration.ConfigurationManager": "8.0.0"
+        },
+        "runtime_assets": [
+          "lib/net8.0/System.Runtime.Caching.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net8.0/System.Runtime.Caching.dll"
+        ]
+      },
+      "System.Runtime.CompilerServices.Unsafe/6.0.0": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.Security.AccessControl/6.0.1": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.Security.Cryptography.Pkcs/8.0.0": {
+        "dependencies": {
+          "System.Formats.Asn1": "8.0.0"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.Security.Cryptography.ProtectedData/8.0.0": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net8.0/System.Security.Cryptography.ProtectedData.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.Security.Cryptography.Xml/8.0.1": {
+        "dependencies": {
+          "System.Security.Cryptography.Pkcs": "8.0.0"
+        },
+        "runtime_assets": [
+          "lib/net8.0/System.Security.Cryptography.Xml.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.Security.Permissions/8.0.0": {
+        "dependencies": {
+          "System.Windows.Extensions": "8.0.0"
+        },
+        "runtime_assets": [
+          "lib/net8.0/System.Security.Permissions.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.Security.Principal.Windows/5.0.0": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.ServiceModel.Duplex/4.10.3": {
+        "dependencies": {
+          "System.Private.ServiceModel": "4.10.3",
+          "System.ServiceModel.Primitives": "4.10.3"
+        },
+        "runtime_assets": [
+          "lib/net6.0/System.ServiceModel.Duplex.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.ServiceModel.Http/4.10.3": {
+        "dependencies": {
+          "System.Private.ServiceModel": "4.10.3",
+          "System.ServiceModel.Primitives": "4.10.3"
+        },
+        "runtime_assets": [
+          "lib/net6.0/System.ServiceModel.Http.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.ServiceModel.NetTcp/4.10.3": {
+        "dependencies": {
+          "System.Private.ServiceModel": "4.10.3",
+          "System.ServiceModel.Primitives": "4.10.3"
+        },
+        "runtime_assets": [
+          "lib/net6.0/System.ServiceModel.NetTcp.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.ServiceModel.Primitives/4.10.3": {
+        "dependencies": {
+          "System.Private.ServiceModel": "4.10.3"
+        },
+        "runtime_assets": [
+          "lib/net6.0/System.ServiceModel.Primitives.dll",
+          "lib/net6.0/System.ServiceModel.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.ServiceModel.Security/4.10.3": {
+        "dependencies": {
+          "System.Private.ServiceModel": "4.10.3",
+          "System.ServiceModel.Primitives": "4.10.3"
+        },
+        "runtime_assets": [
+          "lib/net6.0/System.ServiceModel.Security.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.ServiceModel.Syndication/8.0.0": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net8.0/System.ServiceModel.Syndication.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.ServiceProcess.ServiceController/8.0.0": {
+        "dependencies": {
+          "System.Diagnostics.EventLog": "8.0.0"
+        },
+        "runtime_assets": [
+          "lib/net8.0/System.ServiceProcess.ServiceController.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net8.0/System.ServiceProcess.ServiceController.dll"
+        ]
+      },
+      "System.Speech/8.0.0": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net8.0/System.Speech.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net8.0/System.Speech.dll"
+        ]
+      },
+      "System.Text.Encoding.CodePages/8.0.0": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.Text.Encodings.Web/8.0.0": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.Text.Json/6.0.9": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0",
+          "System.Text.Encodings.Web": "8.0.0"
+        },
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.Threading.AccessControl/8.0.0": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net8.0/System.Threading.AccessControl.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net8.0/System.Threading.AccessControl.dll"
+        ]
+      },
+      "System.Threading.Tasks.Extensions/4.5.4": {
+        "dependencies": {},
+        "runtime_assets": [],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.Web.Services.Description/4.10.3": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/netstandard2.0/System.Web.Services.Description.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "System.Windows.Extensions/8.0.0": {
+        "dependencies": {},
+        "runtime_assets": [
+          "lib/net8.0/System.Windows.Extensions.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": [
+          "runtimes/win/lib/net8.0/System.Windows.Extensions.dll"
+        ]
+      },
+      "Common/1.0.0": {
+        "dependencies": {
+          "SpecterInsight": "1.0.0"
+        },
+        "runtime_assets": [
+          "common.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "SpecterInsight/1.0.0": {
+        "dependencies": {
+          "Swashbuckle.AspNetCore": "6.6.2"
+        },
+        "runtime_assets": [
+          "SpecterInsight.exe"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "SpecterInsight.Obfuscation/1.0.0": {
+        "dependencies": {
+          "AmsiScanner.Common": "2.3.5",
+          "MedallionShell": "1.6.2",
+          "Microsoft.CodeAnalysis.CSharp": "4.10.0"
+        },
+        "runtime_assets": [
+          "SpecterInsight.Obfuscation.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      },
+      "Interop.TaskScheduler/1.0.0.0": {
+        "dependencies": {},
+        "runtime_assets": [
+          "Interop.TaskScheduler.dll"
+        ],
+        "native_assets": [],
+        "rid_assets": []
+      }
+    }
+  }
+]

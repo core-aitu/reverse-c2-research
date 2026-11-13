@@ -1,0 +1,60 @@
+{
+  "platform": "Fedora Linux 44 (KDE Plasma Desktop Edition)",
+  "architecture": "x86_64",
+  "python": "3.14.8",
+  "python_dependencies": [
+    "dncil==1.0.2",
+    "dnfile==0.18.0",
+    "pefile==2024.8.26",
+    "PyYAML==6.0.3"
+  ],
+  "sdk": "10.0.404",
+  "netcore_runtime": "10.0.15",
+  "sdk_release_metadata": "https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/10.0/releases.json",
+  "sdk_archive_sha512": "577d0eb17fec33d029104c5c63a1ab0accc3e28776274abef2218dbac5af18d2109b5406d26b31d76f5c245215e3ba0926a94c20246c672c41847c9e1eb1dc50",
+  "isolation": "bubblewrap 0.11.0",
+  "network": "private namespace, in-memory HTTP handler",
+  "main_runs_utc": [
+    "2026-11-12T19:52:42Z",
+    "2026-11-12T19:52:46Z"
+  ],
+  "control_run_utc": [
+    "2026-11-12T20:09:19Z",
+    "2026-11-12T20:09:22Z"
+  ],
+  "result_sha256": "da33359e281d1d871ee4a49c5c5b208de7853f8697dae2eb60d16460acba15fa",
+  "matching_runs": 3,
+  "cases_per_run": 8,
+  "inventory_control_utc": "2026-11-12T20:09:29.550149+00:00",
+  "manifest_uncompressed_sha256": "e452c6ecfe17c4f4937e5ddda3a741ee33044782db64bd698281b1abcb6908e5",
+  "duplicates_uncompressed_sha256": "82c2c4cc0e15796bf29b1f67b04e20bf69f2e89127eebac3f4db500c4fc04656",
+  "extended_control_utc": [
+    "2026-11-12T23:50:29Z",
+    "2026-11-12T23:50:32Z"
+  ],
+  "latest_snapshot_recheck_utc": "2026-11-12T23:53:20.244534+00:00",
+  "extended_runs": {
+    "postgres": {
+      "identical_logs": 3,
+      "records": 19,
+      "sha256": "3a028bcc817e83bd91d2d9dd906df70c81c723b0f98bfc5bf0fa7f8b76bd7917"
+    },
+    "presentation-and-data": {
+      "identical_logs": 3,
+      "records": 41,
+      "sha256": "f3410a33b6191188d96f69f4f27fc32e5a0bdb2433b476f0fad555046958668f"
+    },
+    "local-search": {
+      "identical_logs": 3,
+      "records": 10,
+      "sha256": "fbdaf8ce17cadfb6af6091af7c085873087a9490fc91e235d8fe09433214f540"
+    }
+  },
+  "postgres_fixture": {
+    "version": "16.4",
+    "source_archive_sha256": "971766d645aa73e93b9ef4e3be44201b4f45b5477095b049125403f9f3386d6f",
+    "transport": "Unix socket in isolated namespace",
+    "storage": "new tmpfs cluster per run",
+    "signalr": "in-memory interface capture"
+  }
+}

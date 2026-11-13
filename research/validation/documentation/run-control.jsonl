@@ -1,0 +1,8 @@
+{"scenario":"server-folder-overview","passed":true}
+{"scenario":"server-missing-directory","passed":true}
+{"scenario":"tree","passed":true,"Verb":"GET","Path":"/Documentation","status":200,"value":"[{\u0022name\u0022:\u0022Guide\u0022,\u0022contents\u0022:\u0022Folder summary\u0022,\u0022children\u0022:[{\u0022name\u0022:\u0022Sample\u0022,\u0022contents\u0022:\u0022# Synthetic fixture\\n\u0022,\u0022children\u0022:[]},{\u0022name\u0022:\u0022Overview\u0022,\u0022contents\u0022:\u0022Folder summary\u0022,\u0022children\u0022:[]}]}]","error":null}
+{"scenario":"empty","passed":true,"Verb":"GET","Path":"/Documentation","status":200,"value":"[]","error":null}
+{"scenario":"null","passed":true,"Verb":"GET","Path":"/Documentation","status":200,"value":null,"error":"SpecterInsight.ApiClient.ApiException"}
+{"scenario":"error","passed":true,"Verb":"GET","Path":"/Documentation","status":503,"value":null,"error":"SpecterInsight.ApiClient.ApiException"}
+{"scenario":"ui-path","path":"Guide/Sample","passed":true,"content":"# Synthetic fixture\n"}
+{"scenario":"ui-path","path":"Guide/Missing","passed":true,"content":null}

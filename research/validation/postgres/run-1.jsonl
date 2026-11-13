@@ -1,0 +1,19 @@
+{"scenario":"postgres-version","value":"16.4","expected":"16.4","passed":true}
+{"scenario":"table-names","value":"documentationchunks,event","expected":"documentationchunks,event","passed":true}
+{"scenario":"columns-doc","value":7,"expected":7,"passed":true}
+{"scenario":"columns-event","value":9,"expected":9,"passed":true}
+{"scenario":"initial-count","value":0,"expected":0,"passed":true}
+{"scenario":"insert-count","value":1,"expected":1,"passed":true}
+{"scenario":"empty-embedding-count","value":0,"expected":0,"passed":true}
+{"scenario":"same-key-count","value":1,"expected":1,"passed":true}
+{"scenario":"updated-embedding-count","value":1,"expected":1,"passed":true}
+{"scenario":"updated-content","value":"two","expected":"two","passed":true}
+{"scenario":"second-chunk","value":2,"expected":2,"passed":true}
+{"scenario":"clear","value":0,"expected":0,"passed":true}
+{"scenario":"hub-received-ids","value":"fixture-1,fixture-2","expected":"fixture-1,fixture-2","passed":true}
+{"scenario":"stored-events","value":2,"expected":2,"passed":true}
+{"scenario":"audit-row","record":{"id":"fixture-2","type":"audit-second","timestamp":"2026-01-02T04:04:05Z","source":"fixture-source","system":"fixture-system","outcome":1,"message":"fixture message","details":"{}"}}
+{"scenario":"filtered-event-id","value":"fixture-2","expected":"fixture-2","passed":true}
+{"scenario":"filtered-event-outcome","value":"Failure","expected":"Failure","passed":true}
+{"scenario":"start-date-filter","value":"fixture-2","expected":"fixture-2","passed":true}
+{"scenario":"remaining-event","value":"fixture-1","expected":"fixture-1","passed":true}
