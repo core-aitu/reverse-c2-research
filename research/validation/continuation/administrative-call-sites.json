@@ -1,0 +1,5424 @@
+{
+  "server/SpecterInsight.Server.Host.dll": {
+    "sha256": "5a04275085e3fc64197f8dbb55b96a89736445fc490a674675959163ba5a58a0",
+    "mvid": "a7323df4-c701-43a6-aac0-0b59c502a573",
+    "methods": [
+      {
+        "type": "SpecterInsight.Server.Host.Program+<Main>d__0",
+        "name": "MoveNext",
+        "token": "0x6000004",
+        "sig": "200001",
+        "parameters": [],
+        "rva": 8380,
+        "il_sha256": "f1cf03b58c104dfad719b7105ee30494d71bbe6bfcc4be7b0edfd52df0ac2619",
+        "exception_regions": 1,
+        "operations": [
+          {
+            "il": 23,
+            "op": "call",
+            "target": "SpecterInsight.Server.KestrelManagementServer::Build"
+          },
+          {
+            "il": 28,
+            "op": "callvirt",
+            "target": "<generic>::GetAwaiter"
+          },
+          {
+            "il": 36,
+            "op": "call",
+            "target": "<generic>::get_IsCompleted"
+          },
+          {
+            "il": 68,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 114,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplication::RunAsync"
+          },
+          {
+            "il": 119,
+            "op": "callvirt",
+            "target": "System.Threading.Tasks.Task::GetAwaiter"
+          },
+          {
+            "il": 127,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.TaskAwaiter::get_IsCompleted"
+          },
+          {
+            "il": 159,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 219,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetException"
+          },
+          {
+            "il": 240,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetResult"
+          }
+        ],
+        "selected_literals": []
+      }
+    ]
+  },
+  "server/SpecterInsight.Server.dll": {
+    "sha256": "a6c454cdfc80e5d9bd3906747d30edbe4fcf69ab2e3c2b52b301b6f4b60e46a5",
+    "mvid": "1323c471-66a2-40e3-a048-50e1f9d4dcfb",
+    "methods": [
+      {
+        "type": "SpecterInsight.Server.Startup",
+        "name": "ConfigureServices",
+        "token": "0x600003b",
+        "sig": "2001011280e9",
+        "parameters": [
+          "services"
+        ],
+        "rva": 11172,
+        "il_sha256": "1ca66b3c095672215ec23bb9a8cd3ec30551b6d19b4d0193fe86b3a5bf4431e7",
+        "exception_regions": 0,
+        "operations": [
+          {
+            "il": 1,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.EndpointMetadataApiExplorerServiceCollectionExtensions::AddEndpointsApiExplorer"
+          },
+          {
+            "il": 8,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.MvcServiceCollectionExtensions::AddMvc"
+          },
+          {
+            "il": 18,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.MvcCoreMvcBuilderExtensions::AddApplicationPart"
+          },
+          {
+            "il": 25,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 32,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 39,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 46,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 53,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 60,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 67,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 74,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 81,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 88,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 95,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 102,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 109,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 116,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 123,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 130,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 137,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 144,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.SignalRDependencyInjectionExtensions::AddSignalR"
+          },
+          {
+            "il": 149,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.NewtonsoftJsonProtocolDependencyInjectionExtensions::AddNewtonsoftJsonProtocol"
+          },
+          {
+            "il": 156,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.MvcServiceCollectionExtensions::AddControllers"
+          },
+          {
+            "il": 175,
+            "op": "ldftn",
+            "target": "SpecterInsight.Server.Startup+<>c::<ConfigureServices>b__4_0"
+          },
+          {
+            "il": 192,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.NewtonsoftJsonMvcBuilderExtensions::AddNewtonsoftJson"
+          },
+          {
+            "il": 199,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.NewtonsoftServiceCollectionExtensions::AddSwaggerGenNewtonsoftSupport"
+          },
+          {
+            "il": 220,
+            "op": "ldftn",
+            "target": "SpecterInsight.Server.Startup+<>c::<ConfigureServices>b__4_1"
+          },
+          {
+            "il": 237,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.SwaggerGenServiceCollectionExtensions::AddSwaggerGen"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.Server.Startup",
+        "name": "Configure",
+        "token": "0x600003c",
+        "sig": "2002011280ed1280f1",
+        "parameters": [
+          "app",
+          "env"
+        ],
+        "rva": 11428,
+        "il_sha256": "3d6a6d061b537da7c674d57cc334be4eebc0c62b88e9ded64993889edf006131",
+        "exception_regions": 0,
+        "operations": [
+          {
+            "il": 0,
+            "op": "newobj",
+            "target": "SpecterInsight.Server.Startup+<>c__DisplayClass5_0::.ctor"
+          },
+          {
+            "il": 6,
+            "op": "call",
+            "target": "Microsoft.AspNetCore.Builder.HttpsPolicyBuilderExtensions::UseHttpsRedirection"
+          },
+          {
+            "il": 13,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.IApplicationBuilder::get_ApplicationServices"
+          },
+          {
+            "il": 26,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.IApplicationBuilder::get_ApplicationServices"
+          },
+          {
+            "il": 43,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.IApplicationBuilder::get_ApplicationServices"
+          },
+          {
+            "il": 58,
+            "op": "ldftn",
+            "target": "SpecterInsight.Server.Startup+<>c__DisplayClass5_0::<Configure>b__0"
+          },
+          {
+            "il": 76,
+            "op": "call",
+            "target": "Microsoft.AspNetCore.Builder.EndpointRoutingApplicationBuilderExtensions::UseRouting"
+          },
+          {
+            "il": 83,
+            "op": "call",
+            "target": "Microsoft.AspNetCore.Builder.AuthorizationAppBuilderExtensions::UseAuthorization"
+          },
+          {
+            "il": 91,
+            "op": "call",
+            "target": "Microsoft.AspNetCore.Builder.SwaggerBuilderExtensions::UseSwagger"
+          },
+          {
+            "il": 99,
+            "op": "call",
+            "target": "Microsoft.AspNetCore.Builder.SwaggerUIBuilderExtensions::UseSwaggerUI"
+          },
+          {
+            "il": 111,
+            "op": "call",
+            "target": "Microsoft.AspNetCore.Builder.UseMiddlewareExtensions::UseMiddleware"
+          },
+          {
+            "il": 123,
+            "op": "call",
+            "target": "Microsoft.AspNetCore.Builder.UseMiddlewareExtensions::UseMiddleware"
+          },
+          {
+            "il": 144,
+            "op": "ldftn",
+            "target": "SpecterInsight.Server.Startup+<>c::<Configure>b__5_1"
+          },
+          {
+            "il": 161,
+            "op": "call",
+            "target": "Microsoft.AspNetCore.Builder.EndpointRoutingApplicationBuilderExtensions::UseEndpoints"
+          },
+          {
+            "il": 182,
+            "op": "ldftn",
+            "target": "SpecterInsight.Server.Startup+<>c::<Configure>b__5_2"
+          },
+          {
+            "il": 199,
+            "op": "call",
+            "target": "Microsoft.AspNetCore.Builder.EndpointRoutingApplicationBuilderExtensions::UseEndpoints"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.Server.KestrelManagementServer",
+        "name": "Build",
+        "token": "0x600003d",
+        "sig": "000015127501128121",
+        "parameters": [],
+        "rva": 11648,
+        "il_sha256": "9825de4e230c28bee3d70666a12387cdef36b565eab4d2486d7f237e5b76cb58",
+        "exception_regions": 0,
+        "operations": [],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.Server.KestrelManagementServer",
+        "name": "Build",
+        "token": "0x600003e",
+        "sig": "0001151275011281211d0e",
+        "parameters": [
+          "args"
+        ],
+        "rva": 11708,
+        "il_sha256": "c8b6d0b223c82e71df5bb0452ba6fa1020c8bcdd19059c0e260a6f510b9c0b98",
+        "exception_regions": 0,
+        "operations": [],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.Server.KestrelManagementServer",
+        "name": "Build",
+        "token": "0x600003f",
+        "sig": "0002151275011281211d0e128081",
+        "parameters": [
+          "args",
+          "configuration"
+        ],
+        "rva": 11776,
+        "il_sha256": "9716b1cd82c085a6b885c2dbb8a6731fb509e7deb21e06bb4ef4505e8ab0b5ec",
+        "exception_regions": 0,
+        "operations": [],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.Server.Services.Documentation.DocumentationService",
+        "name": "SemanticSearchAsync",
+        "token": "0x6000c55",
+        "sig": "20051512750115128171011285900e080e0e1180c1",
+        "parameters": [
+          "query",
+          "topK",
+          "provider",
+          "model",
+          "ct"
+        ],
+        "rva": 191056,
+        "il_sha256": "7c1fbf49ce9374097d067e20a9eb0ff2ae1574676d0a1e9cc5352af45293f24e",
+        "exception_regions": 0,
+        "operations": [],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService",
+        "name": "ApplyHelper",
+        "token": "0x6000faf",
+        "sig": "20010115127d0112820d",
+        "parameters": [
+          "data"
+        ],
+        "rva": 226328,
+        "il_sha256": "ccc360853c9fc84a5b1f4e8867501bcd34447669d993693b1d4c9c6c83e2d384",
+        "exception_regions": 2,
+        "operations": [
+          {
+            "il": 13,
+            "op": "callvirt",
+            "target": "<generic>::get_Current"
+          },
+          {
+            "il": 75,
+            "op": "callvirt",
+            "target": "<generic>::get_Current"
+          },
+          {
+            "il": 119,
+            "op": "call",
+            "target": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService::TryLookupVendor"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService",
+        "name": "Augment",
+        "token": "0x6000fb0",
+        "sig": "20030112820d0e0e",
+        "parameters": [
+          "pso",
+          "fieldName",
+          "vendor"
+        ],
+        "rva": 226588,
+        "il_sha256": "5a7bcd7ac1b51568d8422342aaba177b26501ab83d648bcb7cf6f46b3c8667ca",
+        "exception_regions": 0,
+        "operations": [
+          {
+            "il": 39,
+            "op": "callvirt",
+            "target": "<generic>::Add"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.Server.Controllers.DocumentationController",
+        "name": ".ctor",
+        "token": "0x600199a",
+        "sig": "200201128594128584",
+        "parameters": [
+          "documentation",
+          "state"
+        ],
+        "rva": 312861,
+        "il_sha256": "d79255b706173ddd319efc91544b5831419d669af8b823b9cb0babda9de80bd8",
+        "exception_regions": 0,
+        "operations": [],
+        "selected_literals": [
+          "documentation"
+        ]
+      },
+      {
+        "type": "SpecterInsight.Server.Controllers.DocumentationController",
+        "name": "GetDocumentation",
+        "token": "0x600199b",
+        "sig": "0000151275011d128a68",
+        "parameters": [],
+        "rva": 312916,
+        "il_sha256": "5a76a3292c0bd1bac3bb2d46ce9fc6388761ca5af716e3330e4e0173b0c75a08",
+        "exception_regions": 0,
+        "operations": [
+          {
+            "il": 29,
+            "op": "call",
+            "target": "<generic>::Start<<GetDocumentation>d__3>"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.Server.Controllers.DocumentationController",
+        "name": "GetAllDocumentation",
+        "token": "0x600199e",
+        "sig": "200015127501151289a101151280e101128a68",
+        "parameters": [],
+        "rva": 313052,
+        "il_sha256": "b28cb883d44aebf4e0471f222a04e438dee13d3a67a86471d0650f43436b26c0",
+        "exception_regions": 0,
+        "operations": [
+          {
+            "il": 37,
+            "op": "call",
+            "target": "<generic>::Start<<GetAllDocumentation>d__7>"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.Server.Controllers.DocumentationController",
+        "name": "SearchDocumentation",
+        "token": "0x600199f",
+        "sig": "200215127501151289a101151280e101128590128a6c1180c1",
+        "parameters": [
+          "request",
+          "ct"
+        ],
+        "rva": 313120,
+        "il_sha256": "f7c138f4e69096becb20628234571daefb351cce3d8b0ce667265713d7874b0d",
+        "exception_regions": 0,
+        "operations": [
+          {
+            "il": 53,
+            "op": "call",
+            "target": "<generic>::Start<<SearchDocumentation>d__8>"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.Server.Controllers.DocumentationController",
+        "name": "GetIndexStatus",
+        "token": "0x60019a0",
+        "sig": "2000151289a101128a74",
+        "parameters": [],
+        "rva": 313204,
+        "il_sha256": "943f8a78ef7a944c35b373d2b629b38400b8949075a539807e1d98a18a03e866",
+        "exception_regions": 0,
+        "operations": [
+          {
+            "il": 1,
+            "op": "newobj",
+            "target": "SpecterInsight.Server.Controllers.DocumentationIndexStatus::.ctor"
+          },
+          {
+            "il": 13,
+            "op": "callvirt",
+            "target": "SpecterInsight.Server.Services.Documentation.DocumentationIndexingState::get_IsIndexing"
+          },
+          {
+            "il": 18,
+            "op": "callvirt",
+            "target": "SpecterInsight.Server.Controllers.DocumentationIndexStatus::set_IsIndexing"
+          },
+          {
+            "il": 30,
+            "op": "callvirt",
+            "target": "SpecterInsight.Server.Services.Documentation.DocumentationIndexingState::get_TotalChunks"
+          },
+          {
+            "il": 35,
+            "op": "callvirt",
+            "target": "SpecterInsight.Server.Controllers.DocumentationIndexStatus::set_TotalChunks"
+          },
+          {
+            "il": 47,
+            "op": "callvirt",
+            "target": "SpecterInsight.Server.Services.Documentation.DocumentationIndexingState::get_IndexedChunks"
+          },
+          {
+            "il": 52,
+            "op": "callvirt",
+            "target": "SpecterInsight.Server.Controllers.DocumentationIndexStatus::set_IndexedChunks"
+          },
+          {
+            "il": 64,
+            "op": "callvirt",
+            "target": "SpecterInsight.Server.Services.Documentation.DocumentationIndexingState::get_LastIndexedAt"
+          },
+          {
+            "il": 69,
+            "op": "callvirt",
+            "target": "SpecterInsight.Server.Controllers.DocumentationIndexStatus::set_LastIndexedAt"
+          },
+          {
+            "il": 81,
+            "op": "callvirt",
+            "target": "SpecterInsight.Server.Services.Documentation.DocumentationIndexingState::get_LastError"
+          },
+          {
+            "il": 86,
+            "op": "callvirt",
+            "target": "SpecterInsight.Server.Controllers.DocumentationIndexStatus::set_LastError"
+          },
+          {
+            "il": 98,
+            "op": "callvirt",
+            "target": "SpecterInsight.Server.Services.Documentation.DocumentationIndexingState::get_SelectedProvider"
+          },
+          {
+            "il": 103,
+            "op": "callvirt",
+            "target": "SpecterInsight.Server.Controllers.DocumentationIndexStatus::set_SelectedProvider"
+          },
+          {
+            "il": 115,
+            "op": "callvirt",
+            "target": "SpecterInsight.Server.Services.Documentation.DocumentationIndexingState::get_SelectedModel"
+          },
+          {
+            "il": 120,
+            "op": "callvirt",
+            "target": "SpecterInsight.Server.Controllers.DocumentationIndexStatus::set_SelectedModel"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.Server.Controllers.DocumentationController",
+        "name": "GetEmbeddingProviders",
+        "token": "0x60019a1",
+        "sig": "2001151289a101151280e10112859812859c",
+        "parameters": [
+          "embeddingService"
+        ],
+        "rva": 313352,
+        "il_sha256": "bf23b23dd517d4be80b6170f4cad6e72d162f60e855551f1f24b271e501f8168",
+        "exception_regions": 0,
+        "operations": [
+          {
+            "il": 2,
+            "op": "callvirt",
+            "target": "SpecterInsight.Server.Services.Documentation.IEmbeddingService::GetAvailableProviders"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.Server.Controllers.DocumentationController",
+        "name": "StartIndexing",
+        "token": "0x60019a2",
+        "sig": "20021289c1128a70128125",
+        "parameters": [
+          "request",
+          "services"
+        ],
+        "rva": 313372,
+        "il_sha256": "f1d8d8482a1c60a4222c85fde35d84738aadfa0b5d03bbc48cdba2a71c9fc1bb",
+        "exception_regions": 0,
+        "operations": [
+          {
+            "il": 0,
+            "op": "newobj",
+            "target": "SpecterInsight.Server.Controllers.DocumentationController+<>c__DisplayClass11_0::.ctor"
+          },
+          {
+            "il": 26,
+            "op": "callvirt",
+            "target": "SpecterInsight.Server.Services.Documentation.DocumentationIndexingState::get_IsIndexing"
+          },
+          {
+            "il": 46,
+            "op": "ldftn",
+            "target": "SpecterInsight.Server.Controllers.DocumentationController+<>c__DisplayClass11_0::<StartIndexing>b__0"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.Server.KestrelManagementServer+<>c",
+        "name": "<Build>b__2_0",
+        "token": "0x6001bdd",
+        "sig": "20011270128125",
+        "parameters": [
+          "sp"
+        ],
+        "rva": 343247,
+        "il_sha256": "92356db2b4d2de55c8830c44bb0f0cf5c6bcd84403f5fbd051bc21f16febf0db",
+        "exception_regions": 0,
+        "operations": [],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.Server.KestrelManagementServer+<>c",
+        "name": "<Build>b__2_1",
+        "token": "0x6001bde",
+        "sig": "20011286ac128125",
+        "parameters": [
+          "sp"
+        ],
+        "rva": 343255,
+        "il_sha256": "16703f52c7889a098b6fa78a3466ff50f1c780e01ba2e581c4fa5ac7e83d7f46",
+        "exception_regions": 0,
+        "operations": [],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.Server.KestrelManagementServer+<>c",
+        "name": "<Build>b__2_2",
+        "token": "0x6001bdf",
+        "sig": "200101128129",
+        "parameters": [
+          "options"
+        ],
+        "rva": 343263,
+        "il_sha256": "0c3f2c57f2478ba1aed591a6c5b3d8fd477ded2845e724ee514e65a14fd88219",
+        "exception_regions": 0,
+        "operations": [],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.Server.KestrelManagementServer+<>c",
+        "name": "<Build>b__2_3",
+        "token": "0x6001be0",
+        "sig": "2001011280f9",
+        "parameters": [
+          "options"
+        ],
+        "rva": 343272,
+        "il_sha256": "57778cba3e14131b43701ef829e933dfdba72df8215cae8503b8e2ca55f7ebde",
+        "exception_regions": 0,
+        "operations": [
+          {
+            "il": 16,
+            "op": "callvirt",
+            "target": "<generic>::Add"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.Server.KestrelManagementServer+<>c",
+        "name": "<Build>b__2_4",
+        "token": "0x6001be1",
+        "sig": "20010112810d",
+        "parameters": [
+          "setup"
+        ],
+        "rva": 343308,
+        "il_sha256": "2c7f981cf8006e811af05ae8f6e30edcd21726d2f7c3e143a755511cdc0d68a4",
+        "exception_regions": 0,
+        "operations": [
+          {
+            "il": 53,
+            "op": "ldftn",
+            "target": "SpecterInsight.Server.KestrelManagementServer+<>c::<Build>b__2_12"
+          },
+          {
+            "il": 90,
+            "op": "ldftn",
+            "target": "SpecterInsight.Server.KestrelManagementServer+<>c::<Build>b__2_13"
+          },
+          {
+            "il": 168,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.SwaggerGenOptionsExtensions::AddSecurityDefinition"
+          },
+          {
+            "il": 188,
+            "op": "ldftn",
+            "target": "SpecterInsight.Server.KestrelManagementServer+<>c::<Build>b__2_14"
+          },
+          {
+            "il": 205,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.SwaggerGenOptionsExtensions::AddSecurityRequirement"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.Server.KestrelManagementServer+<>c",
+        "name": "<Build>b__2_12",
+        "token": "0x6001be2",
+        "sig": "2000128101",
+        "parameters": [],
+        "rva": 343531,
+        "il_sha256": "b97ac6616aff1ebdf88060116a18271450986f9c956d015ae27b05ce7d26869c",
+        "exception_regions": 0,
+        "operations": [],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.Server.KestrelManagementServer+<>c",
+        "name": "<Build>b__2_13",
+        "token": "0x6001be3",
+        "sig": "2000128101",
+        "parameters": [],
+        "rva": 343562,
+        "il_sha256": "4a3f5c326f7840991e5b5ad6cba8ab5eb57054ece1a4e4a3f16efd6d6092590f",
+        "exception_regions": 0,
+        "operations": [],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.Server.KestrelManagementServer+<>c",
+        "name": "<Build>b__2_14",
+        "token": "0x6001be4",
+        "sig": "2001128109128105",
+        "parameters": [
+          "document"
+        ],
+        "rva": 343596,
+        "il_sha256": "cc822bc3bc9518298a281141fb7d13551affdbb04879514505596d096d9549bd",
+        "exception_regions": 0,
+        "operations": [],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.Server.KestrelManagementServer+<>c",
+        "name": "<Build>b__2_16",
+        "token": "0x6001be5",
+        "sig": "20010112812d",
+        "parameters": [
+          "httpsOptions"
+        ],
+        "rva": 343639,
+        "il_sha256": "0133ed61744e2a1685f688875a5ae13a000bfdf6aab5dce19f863333a49c8a57",
+        "exception_regions": 0,
+        "operations": [],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.Server.KestrelManagementServer+<>c",
+        "name": "<Build>b__2_9",
+        "token": "0x6001be6",
+        "sig": "200101128111",
+        "parameters": [
+          "x"
+        ],
+        "rva": 343659,
+        "il_sha256": "6e6905b960ecf110f58e2ee64499ce03b2837e91844941529857fe012e740fdc",
+        "exception_regions": 0,
+        "operations": [
+          {
+            "il": 1,
+            "op": "call",
+            "target": "Microsoft.AspNetCore.Builder.ControllerEndpointRouteBuilderExtensions::MapControllers"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.Server.KestrelManagementServer+<>c",
+        "name": "<Build>b__2_10",
+        "token": "0x6001be7",
+        "sig": "200101128111",
+        "parameters": [
+          "endpoints"
+        ],
+        "rva": 343668,
+        "il_sha256": "2c0ab80e431be9b95d6f120a0b222097d787a3139bd327dbdd709cd91a986999",
+        "exception_regions": 0,
+        "operations": [
+          {
+            "il": 6,
+            "op": "call",
+            "target": "Microsoft.AspNetCore.Builder.HubEndpointRouteBuilderExtensions::MapHub"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.Server.KestrelManagementServer+<>c",
+        "name": "<Build>b__2_11",
+        "token": "0x6001be8",
+        "sig": "20021279128135151280fd011279",
+        "parameters": [
+          "context",
+          "next"
+        ],
+        "rva": 343684,
+        "il_sha256": "c3fb4e899d83ec08599de1573537cd5c846cec3f19a02f9e7b0f726e86934695",
+        "exception_regions": 0,
+        "operations": [
+          {
+            "il": 2,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::Create"
+          },
+          {
+            "il": 45,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::Start"
+          },
+          {
+            "il": 57,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::get_Task"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.Server.KestrelManagementServer+<Build>d__0",
+        "name": "MoveNext",
+        "token": "0x6001bf1",
+        "sig": "200001",
+        "parameters": [],
+        "rva": 344272,
+        "il_sha256": "4315d14e2003aabc895cb98f49ba0ed950b1807a2c34b13f53dd20926bc2fb5a",
+        "exception_regions": 1,
+        "operations": [
+          {
+            "il": 16,
+            "op": "call",
+            "target": "SpecterInsight.Server.KestrelManagementServer::Build"
+          },
+          {
+            "il": 21,
+            "op": "callvirt",
+            "target": "<generic>::GetAwaiter"
+          },
+          {
+            "il": 29,
+            "op": "call",
+            "target": "<generic>::get_IsCompleted"
+          },
+          {
+            "il": 122,
+            "op": "call",
+            "target": "<generic>::SetException"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.Server.KestrelManagementServer+<Build>d__1",
+        "name": "MoveNext",
+        "token": "0x6001bf3",
+        "sig": "200001",
+        "parameters": [],
+        "rva": 344468,
+        "il_sha256": "b8e71dba930b8ed32f379cc5f438b3fd20d8b4ca47d620757fe91b76ed513858",
+        "exception_regions": 1,
+        "operations": [
+          {
+            "il": 10,
+            "op": "newobj",
+            "target": "Microsoft.Extensions.Configuration.ConfigurationBuilder::.ctor"
+          },
+          {
+            "il": 15,
+            "op": "call",
+            "target": "Microsoft.Extensions.Configuration.ConfigurationBuilder::Build"
+          },
+          {
+            "il": 28,
+            "op": "call",
+            "target": "SpecterInsight.Server.KestrelManagementServer::Build"
+          },
+          {
+            "il": 34,
+            "op": "callvirt",
+            "target": "<generic>::ConfigureAwait"
+          },
+          {
+            "il": 43,
+            "op": "call",
+            "target": "<generic>::GetAwaiter"
+          },
+          {
+            "il": 51,
+            "op": "call",
+            "target": "<generic>::get_IsCompleted"
+          },
+          {
+            "il": 146,
+            "op": "call",
+            "target": "<generic>::SetException"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.Server.KestrelManagementServer+<Build>d__2",
+        "name": "MoveNext",
+        "token": "0x6001bf5",
+        "sig": "200001",
+        "parameters": [],
+        "rva": 344688,
+        "il_sha256": "f96f8bcf5b10fb3b1d2afadfd18eace72c7375caacd3cce2ddcce3ffe3a0c006",
+        "exception_regions": 6,
+        "operations": [
+          {
+            "il": 108,
+            "op": "callvirt",
+            "target": "System.Threading.Tasks.Task::ConfigureAwait"
+          },
+          {
+            "il": 117,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.ConfiguredTaskAwaitable::GetAwaiter"
+          },
+          {
+            "il": 126,
+            "op": "call",
+            "target": "ConfiguredTaskAwaiter::get_IsCompleted"
+          },
+          {
+            "il": 200,
+            "op": "call",
+            "target": "ConfiguredTaskAwaiter::GetResult"
+          },
+          {
+            "il": 232,
+            "op": "call",
+            "target": "Microsoft.AspNetCore.Builder.WebApplication::CreateBuilder"
+          },
+          {
+            "il": 248,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 253,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.EndpointMetadataApiExplorerServiceCollectionExtensions::AddEndpointsApiExplorer"
+          },
+          {
+            "il": 265,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 270,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.MvcServiceCollectionExtensions::AddMvc"
+          },
+          {
+            "il": 280,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.MvcCoreMvcBuilderExtensions::AddApplicationPart"
+          },
+          {
+            "il": 292,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Logging"
+          },
+          {
+            "il": 298,
+            "op": "call",
+            "target": "Microsoft.Extensions.Logging.LoggingBuilderExtensions::SetMinimumLevel"
+          },
+          {
+            "il": 310,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Configuration"
+          },
+          {
+            "il": 327,
+            "op": "newobj",
+            "target": "Microsoft.Extensions.Configuration.ConfigurationBuilder::.ctor"
+          },
+          {
+            "il": 339,
+            "op": "call",
+            "target": "Microsoft.Extensions.Configuration.JsonConfigurationExtensions::AddJsonFile"
+          },
+          {
+            "il": 350,
+            "op": "call",
+            "target": "Microsoft.Extensions.Configuration.ChainedBuilderExtensions::AddConfiguration"
+          },
+          {
+            "il": 355,
+            "op": "call",
+            "target": "Microsoft.Extensions.Configuration.EnvironmentVariablesExtensions::AddEnvironmentVariables"
+          },
+          {
+            "il": 366,
+            "op": "call",
+            "target": "Microsoft.Extensions.Configuration.CommandLineConfigurationExtensions::AddCommandLine"
+          },
+          {
+            "il": 371,
+            "op": "callvirt",
+            "target": "Microsoft.Extensions.Configuration.IConfigurationBuilder::Build"
+          },
+          {
+            "il": 387,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Configuration"
+          },
+          {
+            "il": 398,
+            "op": "call",
+            "target": "Microsoft.Extensions.Configuration.ChainedBuilderExtensions::AddConfiguration"
+          },
+          {
+            "il": 415,
+            "op": "callvirt",
+            "target": "<generic>::ConfigureAwait"
+          },
+          {
+            "il": 424,
+            "op": "call",
+            "target": "<generic>::GetAwaiter"
+          },
+          {
+            "il": 433,
+            "op": "call",
+            "target": "<generic>::get_IsCompleted"
+          },
+          {
+            "il": 573,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Configuration"
+          },
+          {
+            "il": 590,
+            "op": "callvirt",
+            "target": "<generic>::Add"
+          },
+          {
+            "il": 595,
+            "op": "call",
+            "target": "Microsoft.Extensions.Configuration.MemoryConfigurationBuilderExtensions::AddInMemoryCollection"
+          },
+          {
+            "il": 607,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 612,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.LoggingServiceCollectionExtensions::AddLogging"
+          },
+          {
+            "il": 624,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 636,
+            "op": "call",
+            "target": "SpecterInsight.Server.Services.Database.DatabaseExtensions::AddSpecterDatabaseAsync"
+          },
+          {
+            "il": 642,
+            "op": "callvirt",
+            "target": "<generic>::ConfigureAwait"
+          },
+          {
+            "il": 651,
+            "op": "call",
+            "target": "<generic>::GetAwaiter"
+          },
+          {
+            "il": 660,
+            "op": "call",
+            "target": "<generic>::get_IsCompleted"
+          },
+          {
+            "il": 746,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 751,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 763,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 788,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 800,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 805,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 817,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 822,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddTransient<SpecterInsight.Server.Services.Events.EventLoggingService>"
+          },
+          {
+            "il": 834,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 839,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddTransient"
+          },
+          {
+            "il": 851,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 856,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 868,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 873,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 885,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 890,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 902,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 907,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 919,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 924,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 936,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 941,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 953,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 958,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 970,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 975,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 987,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 992,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 1004,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1009,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 1021,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1026,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 1038,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1043,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 1055,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1060,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 1072,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1077,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 1089,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1094,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 1106,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1111,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 1123,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1128,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 1140,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1145,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 1157,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1162,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 1174,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1179,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 1191,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1196,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 1208,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1227,
+            "op": "ldftn",
+            "target": "SpecterInsight.Server.KestrelManagementServer+<>c::<Build>b__2_0"
+          },
+          {
+            "il": 1244,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 1256,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1261,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 1273,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1278,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddTransient"
+          },
+          {
+            "il": 1290,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1295,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 1307,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1312,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 1324,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1329,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 1341,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1346,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 1358,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1363,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 1375,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1380,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 1392,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1397,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddTransient"
+          },
+          {
+            "il": 1409,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1414,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 1426,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1431,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 1443,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1448,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 1460,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1465,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 1477,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1482,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 1494,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1499,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 1511,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1516,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 1528,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1533,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 1545,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1550,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 1562,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1567,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 1579,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1584,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 1596,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1601,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 1613,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1618,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 1630,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1635,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 1647,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1652,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 1664,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1669,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 1681,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1686,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 1698,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1703,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 1715,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1720,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 1732,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1737,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 1749,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1754,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 1766,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1785,
+            "op": "ldftn",
+            "target": "SpecterInsight.Server.KestrelManagementServer+<>c::<Build>b__2_1"
+          },
+          {
+            "il": 1802,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionHostedServiceExtensions::AddHostedService"
+          },
+          {
+            "il": 1814,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1819,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 1831,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1836,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 1848,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1853,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 1865,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1870,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 1882,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1887,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 1899,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1904,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 1916,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1921,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 1933,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1938,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 1950,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1955,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 1967,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1972,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 1984,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 1989,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 2001,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 2006,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton<SpecterInsight.Server.Services.Documentation.DocumentationIndexingState>"
+          },
+          {
+            "il": 2018,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 2023,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped<SpecterInsight.Server.Services.Documentation.IEmbeddingService,SpecterInsight.Server.Services.Documentation.EmbeddingService>"
+          },
+          {
+            "il": 2035,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 2040,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped<SpecterInsight.Server.Services.Documentation.IDocumentationService,SpecterInsight.Server.Services.Documentation.DocumentationService>"
+          },
+          {
+            "il": 2052,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 2057,
+            "op": "call",
+            "target": "SpecterInsight.Server.Services.Mcp.McpStartupExtensions::AddSpecterMcpServer"
+          },
+          {
+            "il": 2069,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 2074,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 2086,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 2091,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 2103,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 2108,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 2120,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 2125,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 2137,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 2142,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 2154,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 2159,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 2171,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 2176,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 2188,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 2193,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 2205,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 2210,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 2222,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 2227,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 2239,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 2244,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 2256,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 2261,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 2273,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 2278,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped"
+          },
+          {
+            "il": 2290,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 2295,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 2307,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 2312,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 2324,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 2329,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 2341,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 2346,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 2358,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 2363,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 2375,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 2380,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 2392,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 2397,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 2409,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 2414,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 2426,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 2431,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 2443,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 2448,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton"
+          },
+          {
+            "il": 2460,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 2465,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.SignalRDependencyInjectionExtensions::AddSignalR"
+          },
+          {
+            "il": 2470,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.NewtonsoftJsonProtocolDependencyInjectionExtensions::AddNewtonsoftJsonProtocol"
+          },
+          {
+            "il": 2482,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 2501,
+            "op": "ldftn",
+            "target": "SpecterInsight.Server.KestrelManagementServer+<>c::<Build>b__2_2"
+          },
+          {
+            "il": 2518,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.MvcServiceCollectionExtensions::AddControllers"
+          },
+          {
+            "il": 2537,
+            "op": "ldftn",
+            "target": "SpecterInsight.Server.KestrelManagementServer+<>c::<Build>b__2_3"
+          },
+          {
+            "il": 2554,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.NewtonsoftJsonMvcBuilderExtensions::AddNewtonsoftJson"
+          },
+          {
+            "il": 2566,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 2571,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.NewtonsoftServiceCollectionExtensions::AddSwaggerGenNewtonsoftSupport"
+          },
+          {
+            "il": 2583,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_Services"
+          },
+          {
+            "il": 2602,
+            "op": "ldftn",
+            "target": "SpecterInsight.Server.KestrelManagementServer+<>c::<Build>b__2_4"
+          },
+          {
+            "il": 2619,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.SwaggerGenServiceCollectionExtensions::AddSwaggerGen"
+          },
+          {
+            "il": 2631,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::get_WebHost"
+          },
+          {
+            "il": 2642,
+            "op": "ldftn",
+            "target": "SpecterInsight.Server.KestrelManagementServer+<>c__DisplayClass2_0::<Build>b__5"
+          },
+          {
+            "il": 2653,
+            "op": "call",
+            "target": "Microsoft.AspNetCore.Hosting.WebHostBuilderKestrelExtensions::ConfigureKestrel"
+          },
+          {
+            "il": 2671,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplicationBuilder::Build"
+          },
+          {
+            "il": 2693,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplication::get_Services"
+          },
+          {
+            "il": 2735,
+            "op": "callvirt",
+            "target": "<generic>::ConfigureAwait"
+          },
+          {
+            "il": 2744,
+            "op": "call",
+            "target": "<generic>::GetAwaiter"
+          },
+          {
+            "il": 2753,
+            "op": "call",
+            "target": "<generic>::get_IsCompleted"
+          },
+          {
+            "il": 2904,
+            "op": "callvirt",
+            "target": "System.Threading.Tasks.Task::ConfigureAwait"
+          },
+          {
+            "il": 2913,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.ConfiguredTaskAwaitable::GetAwaiter"
+          },
+          {
+            "il": 2922,
+            "op": "call",
+            "target": "ConfiguredTaskAwaiter::get_IsCompleted"
+          },
+          {
+            "il": 2996,
+            "op": "call",
+            "target": "ConfiguredTaskAwaiter::GetResult"
+          },
+          {
+            "il": 3012,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplication::get_Services"
+          },
+          {
+            "il": 3038,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplication::get_Services"
+          },
+          {
+            "il": 3054,
+            "op": "callvirt",
+            "target": "System.Threading.Tasks.Task::ConfigureAwait"
+          },
+          {
+            "il": 3063,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.ConfiguredTaskAwaitable::GetAwaiter"
+          },
+          {
+            "il": 3072,
+            "op": "call",
+            "target": "ConfiguredTaskAwaiter::get_IsCompleted"
+          },
+          {
+            "il": 3146,
+            "op": "call",
+            "target": "ConfiguredTaskAwaiter::GetResult"
+          },
+          {
+            "il": 3162,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplication::get_Services"
+          },
+          {
+            "il": 3190,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplication::get_Services"
+          },
+          {
+            "il": 3217,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplication::get_Services"
+          },
+          {
+            "il": 3244,
+            "op": "callvirt",
+            "target": "System.Threading.Tasks.Task::ConfigureAwait"
+          },
+          {
+            "il": 3253,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.ConfiguredTaskAwaitable::GetAwaiter"
+          },
+          {
+            "il": 3262,
+            "op": "call",
+            "target": "ConfiguredTaskAwaiter::get_IsCompleted"
+          },
+          {
+            "il": 3336,
+            "op": "call",
+            "target": "ConfiguredTaskAwaiter::GetResult"
+          },
+          {
+            "il": 3354,
+            "op": "callvirt",
+            "target": "System.Threading.Tasks.Task::ConfigureAwait"
+          },
+          {
+            "il": 3363,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.ConfiguredTaskAwaitable::GetAwaiter"
+          },
+          {
+            "il": 3372,
+            "op": "call",
+            "target": "ConfiguredTaskAwaiter::get_IsCompleted"
+          },
+          {
+            "il": 3446,
+            "op": "call",
+            "target": "ConfiguredTaskAwaiter::GetResult"
+          },
+          {
+            "il": 3462,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplication::get_Services"
+          },
+          {
+            "il": 3478,
+            "op": "callvirt",
+            "target": "System.Threading.Tasks.Task::ConfigureAwait"
+          },
+          {
+            "il": 3487,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.ConfiguredTaskAwaitable::GetAwaiter"
+          },
+          {
+            "il": 3496,
+            "op": "call",
+            "target": "ConfiguredTaskAwaiter::get_IsCompleted"
+          },
+          {
+            "il": 3570,
+            "op": "call",
+            "target": "ConfiguredTaskAwaiter::GetResult"
+          },
+          {
+            "il": 3587,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplication::get_Services"
+          },
+          {
+            "il": 3661,
+            "op": "callvirt",
+            "target": "System.Threading.Tasks.Task::ConfigureAwait"
+          },
+          {
+            "il": 3670,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.ConfiguredTaskAwaitable::GetAwaiter"
+          },
+          {
+            "il": 3679,
+            "op": "call",
+            "target": "ConfiguredTaskAwaiter::get_IsCompleted"
+          },
+          {
+            "il": 3754,
+            "op": "call",
+            "target": "ConfiguredTaskAwaiter::GetResult"
+          },
+          {
+            "il": 3804,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplication::get_Services"
+          },
+          {
+            "il": 3857,
+            "op": "callvirt",
+            "target": "System.Threading.Tasks.Task::ConfigureAwait"
+          },
+          {
+            "il": 3866,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.ConfiguredTaskAwaitable::GetAwaiter"
+          },
+          {
+            "il": 3875,
+            "op": "call",
+            "target": "ConfiguredTaskAwaiter::get_IsCompleted"
+          },
+          {
+            "il": 3950,
+            "op": "call",
+            "target": "ConfiguredTaskAwaiter::GetResult"
+          },
+          {
+            "il": 3999,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplication::get_Services"
+          },
+          {
+            "il": 4015,
+            "op": "callvirt",
+            "target": "System.Threading.Tasks.Task::ConfigureAwait"
+          },
+          {
+            "il": 4024,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.ConfiguredTaskAwaitable::GetAwaiter"
+          },
+          {
+            "il": 4033,
+            "op": "call",
+            "target": "ConfiguredTaskAwaiter::get_IsCompleted"
+          },
+          {
+            "il": 4108,
+            "op": "call",
+            "target": "ConfiguredTaskAwaiter::GetResult"
+          },
+          {
+            "il": 4130,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplication::get_Services"
+          },
+          {
+            "il": 4151,
+            "op": "ldftn",
+            "target": "SpecterInsight.Server.KestrelManagementServer+<>c__DisplayClass2_0::<Build>b__6"
+          },
+          {
+            "il": 4185,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplication::get_Services"
+          },
+          {
+            "il": 4206,
+            "op": "ldftn",
+            "target": "SpecterInsight.Server.KestrelManagementServer+<>c__DisplayClass2_0::<Build>b__7"
+          },
+          {
+            "il": 4229,
+            "op": "ldftn",
+            "target": "SpecterInsight.Server.KestrelManagementServer+<>c__DisplayClass2_0::<Build>b__8"
+          },
+          {
+            "il": 4298,
+            "op": "call",
+            "target": "Microsoft.Extensions.Logging.LoggerExtensions::LogError"
+          },
+          {
+            "il": 4335,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplication::get_Services"
+          },
+          {
+            "il": 4350,
+            "op": "ldftn",
+            "target": "SpecterInsight.Server.KestrelManagementServer+<>c__DisplayClass2_1::<Build>b__17"
+          },
+          {
+            "il": 4386,
+            "op": "call",
+            "target": "Microsoft.Extensions.Logging.LoggerExtensions::LogError"
+          },
+          {
+            "il": 4404,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplication::get_Services"
+          },
+          {
+            "il": 4440,
+            "op": "call",
+            "target": "Microsoft.Extensions.Logging.LoggerExtensions::LogError"
+          },
+          {
+            "il": 4458,
+            "op": "call",
+            "target": "SpecterInsight.Server.Services.Mcp.McpStartupExtensions::UseWellKnownJsonHandler"
+          },
+          {
+            "il": 4474,
+            "op": "call",
+            "target": "Microsoft.AspNetCore.Builder.EndpointRoutingApplicationBuilderExtensions::UseRouting"
+          },
+          {
+            "il": 4491,
+            "op": "call",
+            "target": "Microsoft.AspNetCore.Builder.AuthorizationAppBuilderExtensions::UseAuthorization"
+          },
+          {
+            "il": 4509,
+            "op": "call",
+            "target": "Microsoft.AspNetCore.Builder.SwaggerBuilderExtensions::UseSwagger"
+          },
+          {
+            "il": 4527,
+            "op": "call",
+            "target": "Microsoft.AspNetCore.Builder.SwaggerUIBuilderExtensions::UseSwaggerUI"
+          },
+          {
+            "il": 4549,
+            "op": "call",
+            "target": "Microsoft.AspNetCore.Builder.UseMiddlewareExtensions::UseMiddleware"
+          },
+          {
+            "il": 4571,
+            "op": "call",
+            "target": "Microsoft.AspNetCore.Builder.UseMiddlewareExtensions::UseMiddleware"
+          },
+          {
+            "il": 4602,
+            "op": "ldftn",
+            "target": "SpecterInsight.Server.KestrelManagementServer+<>c::<Build>b__2_9"
+          },
+          {
+            "il": 4619,
+            "op": "call",
+            "target": "Microsoft.AspNetCore.Builder.EndpointRoutingApplicationBuilderExtensions::UseEndpoints"
+          },
+          {
+            "il": 4650,
+            "op": "ldftn",
+            "target": "SpecterInsight.Server.KestrelManagementServer+<>c::<Build>b__2_10"
+          },
+          {
+            "il": 4667,
+            "op": "call",
+            "target": "Microsoft.AspNetCore.Builder.EndpointRoutingApplicationBuilderExtensions::UseEndpoints"
+          },
+          {
+            "il": 4694,
+            "op": "call",
+            "target": "SpecterInsight.Server.Services.Mcp.McpStartupExtensions::MapSpecterMcpAsync"
+          },
+          {
+            "il": 4700,
+            "op": "callvirt",
+            "target": "System.Threading.Tasks.Task::ConfigureAwait"
+          },
+          {
+            "il": 4709,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.ConfiguredTaskAwaitable::GetAwaiter"
+          },
+          {
+            "il": 4718,
+            "op": "call",
+            "target": "ConfiguredTaskAwaiter::get_IsCompleted"
+          },
+          {
+            "il": 4793,
+            "op": "call",
+            "target": "ConfiguredTaskAwaiter::GetResult"
+          },
+          {
+            "il": 4823,
+            "op": "ldftn",
+            "target": "SpecterInsight.Server.KestrelManagementServer+<>c::<Build>b__2_11"
+          },
+          {
+            "il": 4840,
+            "op": "call",
+            "target": "Microsoft.AspNetCore.Builder.UseExtensions::Use"
+          },
+          {
+            "il": 4913,
+            "op": "call",
+            "target": "<generic>::SetException"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.Server.Services.Events.EventLoggingService+<LogAsync>d__3",
+        "name": "MoveNext",
+        "token": "0x60021d1",
+        "sig": "200001",
+        "parameters": [],
+        "rva": 612516,
+        "il_sha256": "a8e32b9ca6e66c48eca6ed1c653476ce38886ea43d160caeb3c6aa6cbe9ce1df",
+        "exception_regions": 3,
+        "operations": [
+          {
+            "il": 52,
+            "op": "callvirt",
+            "target": "System.Threading.Tasks.Task::ConfigureAwait"
+          },
+          {
+            "il": 60,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.ConfiguredTaskAwaitable::GetAwaiter"
+          },
+          {
+            "il": 68,
+            "op": "call",
+            "target": "ConfiguredTaskAwaiter::get_IsCompleted"
+          },
+          {
+            "il": 100,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 140,
+            "op": "call",
+            "target": "ConfiguredTaskAwaiter::GetResult"
+          },
+          {
+            "il": 167,
+            "op": "call",
+            "target": "Microsoft.Extensions.Logging.LoggerExtensions::LogError"
+          },
+          {
+            "il": 185,
+            "op": "callvirt",
+            "target": "<generic>::get_Clients"
+          },
+          {
+            "il": 234,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.SignalR.IClientProxy::SendCoreAsync"
+          },
+          {
+            "il": 240,
+            "op": "callvirt",
+            "target": "System.Threading.Tasks.Task::ConfigureAwait"
+          },
+          {
+            "il": 248,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.ConfiguredTaskAwaitable::GetAwaiter"
+          },
+          {
+            "il": 256,
+            "op": "call",
+            "target": "ConfiguredTaskAwaiter::get_IsCompleted"
+          },
+          {
+            "il": 288,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 325,
+            "op": "call",
+            "target": "ConfiguredTaskAwaiter::GetResult"
+          },
+          {
+            "il": 352,
+            "op": "call",
+            "target": "Microsoft.Extensions.Logging.LoggerExtensions::LogError"
+          },
+          {
+            "il": 379,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetException"
+          },
+          {
+            "il": 400,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetResult"
+          }
+        ],
+        "selected_literals": [
+          "EventNotification"
+        ]
+      },
+      {
+        "type": "SpecterInsight.Server.Services.Documentation.DocumentationService+<SemanticSearchAsync>d__7",
+        "name": "MoveNext",
+        "token": "0x6002257",
+        "sig": "200001",
+        "parameters": [],
+        "rva": 644988,
+        "il_sha256": "77944452107ca083481fdf387e174d1122fa7e17b3d64ec4caa94ce206567901",
+        "exception_regions": 2,
+        "operations": [
+          {
+            "il": 25,
+            "op": "newobj",
+            "target": "SpecterInsight.Server.Services.Documentation.DocumentationService+<>c__DisplayClass7_0::.ctor"
+          },
+          {
+            "il": 51,
+            "op": "callvirt",
+            "target": "SpecterInsight.Server.Services.Documentation.DocumentationIndexingState::get_SelectedProvider"
+          },
+          {
+            "il": 73,
+            "op": "callvirt",
+            "target": "SpecterInsight.Server.Services.Documentation.DocumentationIndexingState::get_SelectedModel"
+          },
+          {
+            "il": 105,
+            "op": "callvirt",
+            "target": "SpecterInsight.Server.Services.Documentation.IEmbeddingService::GenerateEmbeddingAsync"
+          },
+          {
+            "il": 111,
+            "op": "callvirt",
+            "target": "<generic>::ConfigureAwait"
+          },
+          {
+            "il": 120,
+            "op": "call",
+            "target": "<generic>::GetAwaiter"
+          },
+          {
+            "il": 129,
+            "op": "call",
+            "target": "<generic>::get_IsCompleted"
+          },
+          {
+            "il": 280,
+            "op": "callvirt",
+            "target": "SpecterInsight.Server.Services.Database.DatabaseService::GetAllDocumentationChunksAsync"
+          },
+          {
+            "il": 286,
+            "op": "callvirt",
+            "target": "<generic>::ConfigureAwait"
+          },
+          {
+            "il": 295,
+            "op": "call",
+            "target": "<generic>::GetAwaiter"
+          },
+          {
+            "il": 304,
+            "op": "call",
+            "target": "<generic>::get_IsCompleted"
+          },
+          {
+            "il": 337,
+            "op": "call",
+            "target": "<generic>::AwaitUnsafeOnCompleted<ConfiguredTaskAwaiter<System.Collections.Generic.List`1<SpecterInsight.Server.Services.Database.Entities.DocumentationChunk>>,<SemanticSearchAsync>d__7>"
+          },
+          {
+            "il": 414,
+            "op": "call",
+            "target": "SpecterInsight.Server.Services.Documentation.DocumentationService::SubstringSearch"
+          },
+          {
+            "il": 433,
+            "op": "ldftn",
+            "target": "SpecterInsight.Server.Services.Documentation.DocumentationService+<>c__DisplayClass7_0::<SemanticSearchAsync>b__0"
+          },
+          {
+            "il": 444,
+            "op": "call",
+            "target": "System.Linq.Enumerable::Where<SpecterInsight.Server.Services.Database.Entities.DocumentationChunk>"
+          },
+          {
+            "il": 455,
+            "op": "ldftn",
+            "target": "SpecterInsight.Server.Services.Documentation.DocumentationService+<>c__DisplayClass7_0::<SemanticSearchAsync>b__1"
+          },
+          {
+            "il": 466,
+            "op": "call",
+            "target": "System.Linq.Enumerable::Select<SpecterInsight.Server.Services.Database.Entities.DocumentationChunk,SpecterInsight.Server.Services.Documentation.DocumentationSearchResult>"
+          },
+          {
+            "il": 485,
+            "op": "ldftn",
+            "target": "SpecterInsight.Server.Services.Documentation.DocumentationService+<>c::<SemanticSearchAsync>b__7_2"
+          },
+          {
+            "il": 502,
+            "op": "call",
+            "target": "System.Linq.Enumerable::OrderByDescending<SpecterInsight.Server.Services.Documentation.DocumentationSearchResult,0xc>"
+          },
+          {
+            "il": 513,
+            "op": "call",
+            "target": "System.Linq.Enumerable::Take<SpecterInsight.Server.Services.Documentation.DocumentationSearchResult>"
+          },
+          {
+            "il": 518,
+            "op": "call",
+            "target": "System.Linq.Enumerable::ToList<SpecterInsight.Server.Services.Documentation.DocumentationSearchResult>"
+          },
+          {
+            "il": 551,
+            "op": "call",
+            "target": "<generic>::SetException"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.Server.Controllers.DocumentationController+<GetAllDocumentation>d__7",
+        "name": "MoveNext",
+        "token": "0x6002725",
+        "sig": "200001",
+        "parameters": [],
+        "rva": 901368,
+        "il_sha256": "96ff57b838f9469df85da78a1203b5fe2e65aed8a4d4c30a60029a2d0c71dedd",
+        "exception_regions": 1,
+        "operations": [
+          {
+            "il": 17,
+            "op": "call",
+            "target": "SpecterInsight.Server.Controllers.DocumentationController::GetDocumentation"
+          },
+          {
+            "il": 22,
+            "op": "callvirt",
+            "target": "<generic>::GetAwaiter"
+          },
+          {
+            "il": 31,
+            "op": "call",
+            "target": "<generic>::get_IsCompleted"
+          },
+          {
+            "il": 64,
+            "op": "call",
+            "target": "<generic>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<SpecterInsight.Server.Controllers.DocumentationEntry[]>,<GetAllDocumentation>d__7>"
+          },
+          {
+            "il": 141,
+            "op": "call",
+            "target": "<generic>::SetException"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.Server.Controllers.DocumentationController+<GetDocumentation>d__3",
+        "name": "MoveNext",
+        "token": "0x6002727",
+        "sig": "200001",
+        "parameters": [],
+        "rva": 901584,
+        "il_sha256": "8740cc4caa957b40a2a01551b707a91c198d0919d6aff3498418a3ba75175dd5",
+        "exception_regions": 1,
+        "operations": [
+          {
+            "il": 17,
+            "op": "call",
+            "target": "SpecterInsight.Server.IO.ServerPaths::get_DocumentationFolder"
+          },
+          {
+            "il": 22,
+            "op": "call",
+            "target": "SpecterInsight.Server.Controllers.DocumentationController::Load"
+          },
+          {
+            "il": 27,
+            "op": "callvirt",
+            "target": "<generic>::GetAwaiter"
+          },
+          {
+            "il": 35,
+            "op": "call",
+            "target": "<generic>::get_IsCompleted"
+          },
+          {
+            "il": 67,
+            "op": "call",
+            "target": "<generic>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<SpecterInsight.Server.Controllers.DocumentationEntry[]>,<GetDocumentation>d__3>"
+          },
+          {
+            "il": 138,
+            "op": "call",
+            "target": "<generic>::SetException"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.Server.Controllers.DocumentationController+<Load>d__6",
+        "name": "MoveNext",
+        "token": "0x6002729",
+        "sig": "200001",
+        "parameters": [],
+        "rva": 901796,
+        "il_sha256": "07c1ddc0c15f5570032dceea3bfda267923e7fa520bf95f06f5f2bd256bc295e",
+        "exception_regions": 1,
+        "operations": [
+          {
+            "il": 38,
+            "op": "call",
+            "target": "System.Array::Empty<SpecterInsight.Server.Controllers.DocumentationEntry>"
+          },
+          {
+            "il": 137,
+            "op": "newobj",
+            "target": "SpecterInsight.Server.Controllers.DocumentationEntry::.ctor"
+          },
+          {
+            "il": 164,
+            "op": "callvirt",
+            "target": "SpecterInsight.Server.Controllers.DocumentationEntry::set_Name"
+          },
+          {
+            "il": 192,
+            "op": "call",
+            "target": "SpecterInsight.Server.Controllers.DocumentationController::Load"
+          },
+          {
+            "il": 197,
+            "op": "callvirt",
+            "target": "<generic>::GetAwaiter"
+          },
+          {
+            "il": 206,
+            "op": "call",
+            "target": "<generic>::get_IsCompleted"
+          },
+          {
+            "il": 239,
+            "op": "call",
+            "target": "<generic>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<SpecterInsight.Server.Controllers.DocumentationEntry[]>,<Load>d__6>"
+          },
+          {
+            "il": 293,
+            "op": "callvirt",
+            "target": "SpecterInsight.Server.Controllers.DocumentationEntry::set_Children"
+          },
+          {
+            "il": 373,
+            "op": "callvirt",
+            "target": "<generic>::GetAwaiter"
+          },
+          {
+            "il": 382,
+            "op": "call",
+            "target": "<generic>::get_IsCompleted"
+          },
+          {
+            "il": 480,
+            "op": "callvirt",
+            "target": "SpecterInsight.Server.Controllers.DocumentationEntry::set_Contents"
+          },
+          {
+            "il": 504,
+            "op": "callvirt",
+            "target": "<generic>::Add"
+          },
+          {
+            "il": 613,
+            "op": "newobj",
+            "target": "SpecterInsight.Server.Controllers.DocumentationEntry::.ctor"
+          },
+          {
+            "il": 641,
+            "op": "callvirt",
+            "target": "SpecterInsight.Server.Controllers.DocumentationEntry::set_Name"
+          },
+          {
+            "il": 680,
+            "op": "callvirt",
+            "target": "<generic>::GetAwaiter"
+          },
+          {
+            "il": 689,
+            "op": "call",
+            "target": "<generic>::get_IsCompleted"
+          },
+          {
+            "il": 778,
+            "op": "callvirt",
+            "target": "SpecterInsight.Server.Controllers.DocumentationEntry::set_Contents"
+          },
+          {
+            "il": 802,
+            "op": "callvirt",
+            "target": "SpecterInsight.Server.Controllers.DocumentationEntry::set_Children"
+          },
+          {
+            "il": 819,
+            "op": "callvirt",
+            "target": "<generic>::Add"
+          },
+          {
+            "il": 891,
+            "op": "ldftn",
+            "target": "SpecterInsight.Server.Controllers.DocumentationController+<>c::<Load>b__6_0"
+          },
+          {
+            "il": 925,
+            "op": "call",
+            "target": "System.Linq.Enumerable::Concat<SpecterInsight.Server.Controllers.DocumentationEntry>"
+          },
+          {
+            "il": 930,
+            "op": "call",
+            "target": "System.Linq.Enumerable::ToArray<SpecterInsight.Server.Controllers.DocumentationEntry>"
+          },
+          {
+            "il": 977,
+            "op": "call",
+            "target": "<generic>::SetException"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.Server.Controllers.DocumentationController+<SearchDocumentation>d__8",
+        "name": "MoveNext",
+        "token": "0x600272b",
+        "sig": "200001",
+        "parameters": [],
+        "rva": 902880,
+        "il_sha256": "ba86bc189647a0c4b268c887835751e9dd3758057092102b29f83122ae96f6ee",
+        "exception_regions": 1,
+        "operations": [
+          {
+            "il": 26,
+            "op": "callvirt",
+            "target": "SpecterInsight.Server.Controllers.DocumentationSearchRequest::get_Query"
+          },
+          {
+            "il": 66,
+            "op": "callvirt",
+            "target": "SpecterInsight.Server.Controllers.DocumentationSearchRequest::get_TopK"
+          },
+          {
+            "il": 92,
+            "op": "callvirt",
+            "target": "SpecterInsight.Server.Controllers.DocumentationSearchRequest::get_Query"
+          },
+          {
+            "il": 104,
+            "op": "callvirt",
+            "target": "SpecterInsight.Server.Controllers.DocumentationSearchRequest::get_Provider"
+          },
+          {
+            "il": 115,
+            "op": "callvirt",
+            "target": "SpecterInsight.Server.Controllers.DocumentationSearchRequest::get_Model"
+          },
+          {
+            "il": 126,
+            "op": "callvirt",
+            "target": "SpecterInsight.Server.Services.Documentation.IDocumentationService::SemanticSearchAsync"
+          },
+          {
+            "il": 132,
+            "op": "callvirt",
+            "target": "<generic>::ConfigureAwait"
+          },
+          {
+            "il": 141,
+            "op": "call",
+            "target": "<generic>::GetAwaiter"
+          },
+          {
+            "il": 150,
+            "op": "call",
+            "target": "<generic>::get_IsCompleted"
+          },
+          {
+            "il": 183,
+            "op": "call",
+            "target": "<generic>::AwaitUnsafeOnCompleted<ConfiguredTaskAwaiter<System.Collections.Generic.List`1<SpecterInsight.Server.Services.Documentation.DocumentationSearchResult>>,<SearchDocumentation>d__8>"
+          },
+          {
+            "il": 262,
+            "op": "call",
+            "target": "<generic>::SetException"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.Server.Startup+<>c__DisplayClass5_0+<<Configure>b__0>d",
+        "name": "MoveNext",
+        "token": "0x60028ba",
+        "sig": "200001",
+        "parameters": [],
+        "rva": 952676,
+        "il_sha256": "93e4db7c7728b7dd1191e7614f2ac0c3a672e0e18026bc1b2a7c9f28b6b14597",
+        "exception_regions": 2,
+        "operations": [
+          {
+            "il": 49,
+            "op": "callvirt",
+            "target": "System.Threading.Tasks.Task::GetAwaiter"
+          },
+          {
+            "il": 57,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.TaskAwaiter::get_IsCompleted"
+          },
+          {
+            "il": 89,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 147,
+            "op": "callvirt",
+            "target": "System.Threading.Tasks.Task::GetAwaiter"
+          },
+          {
+            "il": 155,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.TaskAwaiter::get_IsCompleted"
+          },
+          {
+            "il": 187,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 245,
+            "op": "callvirt",
+            "target": "System.Threading.Tasks.Task::GetAwaiter"
+          },
+          {
+            "il": 253,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.TaskAwaiter::get_IsCompleted"
+          },
+          {
+            "il": 285,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 347,
+            "op": "call",
+            "target": "Microsoft.Extensions.Logging.LoggerExtensions::LogError"
+          },
+          {
+            "il": 374,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetException"
+          },
+          {
+            "il": 395,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetResult"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.Server.KestrelManagementServer+<>c+<<Build>b__2_11>d",
+        "name": "MoveNext",
+        "token": "0x60028bc",
+        "sig": "200001",
+        "parameters": [],
+        "rva": 953160,
+        "il_sha256": "688b63fceb3e09a0635b639363b48e43c84d5c047d86e4c253046c2733ef812b",
+        "exception_regions": 1,
+        "operations": [
+          {
+            "il": 48,
+            "op": "callvirt",
+            "target": "System.Threading.Tasks.Task::ConfigureAwait"
+          },
+          {
+            "il": 56,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.ConfiguredTaskAwaitable::GetAwaiter"
+          },
+          {
+            "il": 64,
+            "op": "call",
+            "target": "ConfiguredTaskAwaiter::get_IsCompleted"
+          },
+          {
+            "il": 96,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 133,
+            "op": "call",
+            "target": "ConfiguredTaskAwaiter::GetResult"
+          },
+          {
+            "il": 158,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetException"
+          },
+          {
+            "il": 179,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetResult"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.Server.KestrelManagementServer+<>c__DisplayClass2_0+<<Build>b__15>d",
+        "name": "MoveNext",
+        "token": "0x60028be",
+        "sig": "200001",
+        "parameters": [],
+        "rva": 953392,
+        "il_sha256": "94005420888928768056d11f838be306e13f148bdeb0df63a094a7579d9ec34b",
+        "exception_regions": 1,
+        "operations": [
+          {
+            "il": 43,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncVoidMethodBuilder::SetException"
+          },
+          {
+            "il": 64,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncVoidMethodBuilder::SetResult"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.Server.KestrelManagementServer+<>c__DisplayClass2_0+<<Build>b__6>d",
+        "name": "MoveNext",
+        "token": "0x60028c0",
+        "sig": "200001",
+        "parameters": [],
+        "rva": 953508,
+        "il_sha256": "eac3263695a63fb837da3d07e4ddbdd0da1d7491d72f35ac5929b34a153d2262",
+        "exception_regions": 2,
+        "operations": [
+          {
+            "il": 156,
+            "op": "callvirt",
+            "target": "<generic>::ConfigureAwait"
+          },
+          {
+            "il": 165,
+            "op": "call",
+            "target": "<generic>::GetAwaiter"
+          },
+          {
+            "il": 173,
+            "op": "call",
+            "target": "<generic>::get_IsCompleted"
+          },
+          {
+            "il": 205,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 388,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetException"
+          },
+          {
+            "il": 409,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetResult"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.Server.KestrelManagementServer+<>c__DisplayClass2_0+<<Build>b__7>d",
+        "name": "MoveNext",
+        "token": "0x60028c2",
+        "sig": "200001",
+        "parameters": [],
+        "rva": 954004,
+        "il_sha256": "c4bd61fbb186775988b56fcc44fe479207cec946c8b74e7b226e87ba1f190345",
+        "exception_regions": 1,
+        "operations": [
+          {
+            "il": 29,
+            "op": "callvirt",
+            "target": "System.Threading.Tasks.Task::ConfigureAwait"
+          },
+          {
+            "il": 37,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.ConfiguredTaskAwaitable::GetAwaiter"
+          },
+          {
+            "il": 45,
+            "op": "call",
+            "target": "ConfiguredTaskAwaiter::get_IsCompleted"
+          },
+          {
+            "il": 77,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 114,
+            "op": "call",
+            "target": "ConfiguredTaskAwaiter::GetResult"
+          },
+          {
+            "il": 139,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetException"
+          },
+          {
+            "il": 160,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetResult"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.Server.KestrelManagementServer+<>c__DisplayClass2_0+<<Build>b__8>d",
+        "name": "MoveNext",
+        "token": "0x60028c4",
+        "sig": "200001",
+        "parameters": [],
+        "rva": 954216,
+        "il_sha256": "8fcacd5c052fc1ef41a81578d609de6bee2c11dde7925d589ce411560f82953d",
+        "exception_regions": 3,
+        "operations": [
+          {
+            "il": 27,
+            "op": "callvirt",
+            "target": "Microsoft.AspNetCore.Builder.WebApplication::get_Services"
+          },
+          {
+            "il": 57,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions::GetRequiredService<SpecterInsight.Server.Services.Documentation.IDocumentationService>"
+          },
+          {
+            "il": 73,
+            "op": "callvirt",
+            "target": "SpecterInsight.Server.Services.Documentation.IDocumentationService::IndexDocumentationAsync"
+          },
+          {
+            "il": 79,
+            "op": "callvirt",
+            "target": "System.Threading.Tasks.Task::ConfigureAwait"
+          },
+          {
+            "il": 88,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.ConfiguredTaskAwaitable::GetAwaiter"
+          },
+          {
+            "il": 96,
+            "op": "call",
+            "target": "ConfiguredTaskAwaiter::get_IsCompleted"
+          },
+          {
+            "il": 128,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 165,
+            "op": "call",
+            "target": "ConfiguredTaskAwaiter::GetResult"
+          },
+          {
+            "il": 228,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetException"
+          },
+          {
+            "il": 249,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetResult"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.Server.KestrelManagementServer+<>c__DisplayClass2_1+<<Build>b__17>d",
+        "name": "MoveNext",
+        "token": "0x60028c6",
+        "sig": "200001",
+        "parameters": [],
+        "rva": 954540,
+        "il_sha256": "887c9ef54e5d4a2277b5ef83981af08e04390eead1191a6e03a21264d0f9242d",
+        "exception_regions": 2,
+        "operations": [
+          {
+            "il": 49,
+            "op": "callvirt",
+            "target": "System.Threading.Tasks.Task::ConfigureAwait"
+          },
+          {
+            "il": 57,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.ConfiguredTaskAwaitable::GetAwaiter"
+          },
+          {
+            "il": 65,
+            "op": "call",
+            "target": "ConfiguredTaskAwaiter::get_IsCompleted"
+          },
+          {
+            "il": 97,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 137,
+            "op": "call",
+            "target": "ConfiguredTaskAwaiter::GetResult"
+          },
+          {
+            "il": 154,
+            "op": "callvirt",
+            "target": "System.Threading.Tasks.Task::ConfigureAwait"
+          },
+          {
+            "il": 162,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.ConfiguredTaskAwaitable::GetAwaiter"
+          },
+          {
+            "il": 170,
+            "op": "call",
+            "target": "ConfiguredTaskAwaiter::get_IsCompleted"
+          },
+          {
+            "il": 202,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 242,
+            "op": "call",
+            "target": "ConfiguredTaskAwaiter::GetResult"
+          },
+          {
+            "il": 259,
+            "op": "callvirt",
+            "target": "System.Threading.Tasks.Task::ConfigureAwait"
+          },
+          {
+            "il": 267,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.ConfiguredTaskAwaitable::GetAwaiter"
+          },
+          {
+            "il": 275,
+            "op": "call",
+            "target": "ConfiguredTaskAwaiter::get_IsCompleted"
+          },
+          {
+            "il": 307,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 344,
+            "op": "call",
+            "target": "ConfiguredTaskAwaiter::GetResult"
+          },
+          {
+            "il": 368,
+            "op": "call",
+            "target": "Microsoft.Extensions.Logging.LoggerExtensions::LogError"
+          },
+          {
+            "il": 395,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetException"
+          },
+          {
+            "il": 416,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetResult"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.Server.Controllers.DocumentationController+<>c__DisplayClass11_0+<<StartIndexing>b__0>d",
+        "name": "MoveNext",
+        "token": "0x6002946",
+        "sig": "200001",
+        "parameters": [],
+        "rva": 976904,
+        "il_sha256": "fc14ad67baec06a10c44df290af1bed2b74825cb227c61adc9cb0d61b2365159",
+        "exception_regions": 2,
+        "operations": [
+          {
+            "il": 52,
+            "op": "call",
+            "target": "Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions::GetRequiredService<SpecterInsight.Server.Services.Documentation.IDocumentationService>"
+          },
+          {
+            "il": 63,
+            "op": "callvirt",
+            "target": "SpecterInsight.Server.Controllers.DocumentationIndexRequest::get_Provider"
+          },
+          {
+            "il": 81,
+            "op": "callvirt",
+            "target": "SpecterInsight.Server.Controllers.DocumentationIndexRequest::get_Provider"
+          },
+          {
+            "il": 95,
+            "op": "callvirt",
+            "target": "SpecterInsight.Server.Controllers.DocumentationIndexRequest::get_Model"
+          },
+          {
+            "il": 113,
+            "op": "callvirt",
+            "target": "SpecterInsight.Server.Controllers.DocumentationIndexRequest::get_Model"
+          },
+          {
+            "il": 130,
+            "op": "callvirt",
+            "target": "SpecterInsight.Server.Services.Documentation.IDocumentationService::IndexDocumentationAsync"
+          },
+          {
+            "il": 136,
+            "op": "callvirt",
+            "target": "System.Threading.Tasks.Task::ConfigureAwait"
+          },
+          {
+            "il": 145,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.ConfiguredTaskAwaitable::GetAwaiter"
+          },
+          {
+            "il": 153,
+            "op": "call",
+            "target": "ConfiguredTaskAwaiter::get_IsCompleted"
+          },
+          {
+            "il": 185,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 222,
+            "op": "call",
+            "target": "ConfiguredTaskAwaiter::GetResult"
+          },
+          {
+            "il": 278,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetException"
+          },
+          {
+            "il": 306,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetResult"
+          }
+        ],
+        "selected_literals": []
+      }
+    ]
+  },
+  "client/SpecterInsight.UI.dll": {
+    "sha256": "b26312d15a0a8d2743ef50069874567ef768d64e1eed0a9e82a410976fbe10d6",
+    "mvid": "ec17b4c7-9015-4373-9b10-8081bc59e9a9",
+    "methods": [
+      {
+        "type": "SpecterInsight.UI.Views.DocumentationViewer",
+        "name": ".ctor",
+        "token": "0x6000157",
+        "sig": "200001",
+        "parameters": [],
+        "rva": 154007,
+        "il_sha256": "a4ec08c41197296a6cb1bae2c071303b4d763c6fc46126fe95e2f619dfb1112a",
+        "exception_regions": 0,
+        "operations": [
+          {
+            "il": 8,
+            "op": "call",
+            "target": "SpecterInsight.UI.Views.DocumentationViewer::InitializeComponent"
+          },
+          {
+            "il": 14,
+            "op": "newobj",
+            "target": "SpecterInsight.UI.ViewModels.DocumentationViewModel::.ctor"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.UI.Views.DocumentationViewer",
+        "name": "OnAttachedToVisualTree",
+        "token": "0x6000158",
+        "sig": "20010112854d",
+        "parameters": [
+          "e"
+        ],
+        "rva": 154033,
+        "il_sha256": "600e6646ab9d5cff0a82d8efa7b008dd3b1a8cd2ca8b0be8922596908b3a41be",
+        "exception_regions": 0,
+        "operations": [
+          {
+            "il": 8,
+            "op": "call",
+            "target": "SpecterInsight.UI.Views.DocumentationViewer::get_ViewModel"
+          },
+          {
+            "il": 13,
+            "op": "callvirt",
+            "target": "SpecterInsight.UI.ViewModels.DocumentationViewModel::UpdateDocumentation"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.UI.Views.DocumentationViewer",
+        "name": "OnDetachedFromVisualTree",
+        "token": "0x6000159",
+        "sig": "20010112854d",
+        "parameters": [
+          "e"
+        ],
+        "rva": 154053,
+        "il_sha256": "f81742aa7ea32bef5cc1462fc8b58b01b985e3e5be06fc73e41a79b6d13ffcc3",
+        "exception_regions": 0,
+        "operations": [],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.UI.ViewModels.DocumentationViewModel",
+        "name": "UpdateDocumentation",
+        "token": "0x6000917",
+        "sig": "200001",
+        "parameters": [],
+        "rva": 598246,
+        "il_sha256": "650ac95bb7f8fd6301d74fcd281c6e431f3e275a5d4a092e2c3b47a638e99009",
+        "exception_regions": 0,
+        "operations": [
+          {
+            "il": 1,
+            "op": "ldftn",
+            "target": "SpecterInsight.UI.ViewModels.DocumentationViewModel::<UpdateDocumentation>b__5_0"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.UI.ViewModels.DocumentationViewModel",
+        "name": "<UpdateDocumentation>b__5_0",
+        "token": "0x6000918",
+        "sig": "20001280e9",
+        "parameters": [],
+        "rva": 598268,
+        "il_sha256": "1bb5a08400a7c1ef6176c9ae0ff92a92b86ebdbad6942ee1d08c66f7eff66510",
+        "exception_regions": 0,
+        "operations": [
+          {
+            "il": 2,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::Create"
+          },
+          {
+            "il": 37,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::Start<<<UpdateDocumentation>b__5_0>d>"
+          },
+          {
+            "il": 49,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::get_Task"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.UI.ViewModels.DocumentationViewModel+<<UpdateDocumentation>b__5_0>d",
+        "name": "MoveNext",
+        "token": "0x6000919",
+        "sig": "200001",
+        "parameters": [],
+        "rva": 598336,
+        "il_sha256": "b5f66294b44a6cb0b17eaa41257e7007c371014a62f00f0524d4184c8b7a64f8",
+        "exception_regions": 2,
+        "operations": [
+          {
+            "il": 21,
+            "op": "newobj",
+            "target": "SpecterInsight.UI.ViewModels.DocumentationViewModel+<>c__DisplayClass5_0::.ctor"
+          },
+          {
+            "il": 43,
+            "op": "call",
+            "target": "SpecterInsight.UI.Globals::get_Client"
+          },
+          {
+            "il": 58,
+            "op": "callvirt",
+            "target": "SpecterInsight.ApiClient.SpecterInsightClientGenerated::DocumentationAsync"
+          },
+          {
+            "il": 63,
+            "op": "callvirt",
+            "target": "<generic>::GetAwaiter"
+          },
+          {
+            "il": 72,
+            "op": "call",
+            "target": "<generic>::get_IsCompleted"
+          },
+          {
+            "il": 105,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Collections.Generic.ICollection`1<SpecterInsight.ApiClient.DocumentationEntry>>,<<UpdateDocumentation>b__5_0>d>"
+          },
+          {
+            "il": 159,
+            "op": "call",
+            "target": "System.Linq.Enumerable::ToArray<SpecterInsight.ApiClient.DocumentationEntry>"
+          },
+          {
+            "il": 169,
+            "op": "call",
+            "target": "Avalonia.Threading.Dispatcher::get_UIThread"
+          },
+          {
+            "il": 180,
+            "op": "ldftn",
+            "target": "SpecterInsight.UI.ViewModels.DocumentationViewModel+<>c__DisplayClass5_0::<UpdateDocumentation>b__1"
+          },
+          {
+            "il": 191,
+            "op": "callvirt",
+            "target": "Avalonia.Threading.Dispatcher::InvokeAsync"
+          },
+          {
+            "il": 206,
+            "op": "call",
+            "target": "SpecterInsight.UI.Services.NotificationService::NotifyAll"
+          },
+          {
+            "il": 233,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetException"
+          },
+          {
+            "il": 254,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetResult"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.UI.ViewModels.EventLogViewModel",
+        "name": "Refresh",
+        "token": "0x6000938",
+        "sig": "20001280e9",
+        "parameters": [],
+        "rva": 599904,
+        "il_sha256": "46edbfa46a19f09ba9c7a62163c1979b4ebe8c472fb66788eb082d30d02ac6ff",
+        "exception_regions": 0,
+        "operations": [
+          {
+            "il": 2,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::Create"
+          },
+          {
+            "il": 37,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::Start"
+          },
+          {
+            "il": 49,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::get_Task"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.UI.ViewModels.EventLogViewModel",
+        "name": "Refresh",
+        "token": "0x6000939",
+        "sig": "20011280e902",
+        "parameters": [
+          "forceReloadWorkingSet"
+        ],
+        "rva": 599972,
+        "il_sha256": "3a7fa1b95a119e2fbfb0e2728d1a1a853c431bb6dc18b138d1a24721d3ce8e3f",
+        "exception_regions": 0,
+        "operations": [
+          {
+            "il": 2,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::Create"
+          },
+          {
+            "il": 45,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::Start"
+          },
+          {
+            "il": 57,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::get_Task"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.UI.ViewModels.EventLogViewModel",
+        "name": "OnConnected",
+        "token": "0x600093e",
+        "sig": "20011280e9128169",
+        "parameters": [
+          "client"
+        ],
+        "rva": 600604,
+        "il_sha256": "396529481288425915d0b15116e23a90a70598b5d906236b415c946809488653",
+        "exception_regions": 0,
+        "operations": [
+          {
+            "il": 2,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::Create"
+          },
+          {
+            "il": 45,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::Start"
+          },
+          {
+            "il": 57,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::get_Task"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.UI.ViewModels.EventLogViewModel",
+        "name": "OnDisconnected",
+        "token": "0x600093f",
+        "sig": "20021280e9128169128111",
+        "parameters": [
+          "client",
+          "ex"
+        ],
+        "rva": 600680,
+        "il_sha256": "b317f8cdd0dbc34202e23114a743bc08976a7bf16d4810ad6dce15eb67f4238f",
+        "exception_regions": 0,
+        "operations": [
+          {
+            "il": 2,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::Create"
+          },
+          {
+            "il": 37,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::Start"
+          },
+          {
+            "il": 49,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::get_Task"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.UI.ViewModels.EventLogViewModel",
+        "name": "OnEventNotification",
+        "token": "0x6000940",
+        "sig": "20011280e9128449",
+        "parameters": [
+          "arg"
+        ],
+        "rva": 600748,
+        "il_sha256": "9b0ab724d3ac2ed4d1fbce217470de119478e7b75599aeba8282d3ce7b18444b",
+        "exception_regions": 0,
+        "operations": [
+          {
+            "il": 2,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::Create"
+          },
+          {
+            "il": 45,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::Start"
+          },
+          {
+            "il": 57,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::get_Task"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.UI.ViewModels.EventLogViewModel+<>c__DisplayClass44_0+<<Refresh>b__0>d",
+        "name": "MoveNext",
+        "token": "0x6000946",
+        "sig": "200001",
+        "parameters": [],
+        "rva": 601000,
+        "il_sha256": "b3c56e238bb56f96d84cac1e6b60ddfeb9564fd631d520a63db8d2295ff7cdd9",
+        "exception_regions": 1,
+        "operations": [
+          {
+            "il": 23,
+            "op": "call",
+            "target": "SpecterInsight.UI.ViewModels.EventLogViewModel::Refresh"
+          },
+          {
+            "il": 28,
+            "op": "callvirt",
+            "target": "System.Threading.Tasks.Task::GetAwaiter"
+          },
+          {
+            "il": 36,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.TaskAwaiter::get_IsCompleted"
+          },
+          {
+            "il": 68,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 128,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetException"
+          },
+          {
+            "il": 149,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetResult"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.UI.ViewModels.EventLogViewModel+<>c__DisplayClass44_0+<<Refresh>b__1>d",
+        "name": "MoveNext",
+        "token": "0x6000948",
+        "sig": "200001",
+        "parameters": [],
+        "rva": 601200,
+        "il_sha256": "3925c0f9289659e1b9140abeaf5ea4053ac80cd1146a07ddf3d4d50371bd4f07",
+        "exception_regions": 3,
+        "operations": [
+          {
+            "il": 38,
+            "op": "call",
+            "target": "SpecterInsight.UI.Globals::get_Client"
+          },
+          {
+            "il": 59,
+            "op": "callvirt",
+            "target": "SpecterInsight.ApiClient.SpecterInsightClientGenerated::GetLatestEventsAsync"
+          },
+          {
+            "il": 64,
+            "op": "callvirt",
+            "target": "<generic>::GetAwaiter"
+          },
+          {
+            "il": 72,
+            "op": "call",
+            "target": "<generic>::get_IsCompleted"
+          },
+          {
+            "il": 104,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 173,
+            "op": "callvirt",
+            "target": "<generic>::Clear"
+          },
+          {
+            "il": 195,
+            "op": "callvirt",
+            "target": "<generic>::get_Current"
+          },
+          {
+            "il": 215,
+            "op": "callvirt",
+            "target": "<generic>::Add"
+          },
+          {
+            "il": 300,
+            "op": "call",
+            "target": "SpecterInsight.UI.ViewModels.EventLogViewModel::ApplyFilter"
+          },
+          {
+            "il": 312,
+            "op": "call",
+            "target": "SpecterInsight.UI.Services.NotificationService::NotifyAll"
+          },
+          {
+            "il": 339,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetException"
+          },
+          {
+            "il": 360,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetResult"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.UI.ViewModels.EventLogViewModel+<>c__DisplayClass51_0+<<OnEventNotification>b__0>d",
+        "name": "MoveNext",
+        "token": "0x600094e",
+        "sig": "200001",
+        "parameters": [],
+        "rva": 601760,
+        "il_sha256": "8e5ead5a9dd21da4127bf4498dc489e6b8b0588d1da7ab903a8d75b01be61914",
+        "exception_regions": 2,
+        "operations": [
+          {
+            "il": 32,
+            "op": "call",
+            "target": "SpecterInsight.UI.ViewModels.EventLogViewModel::OnEventNotification"
+          },
+          {
+            "il": 37,
+            "op": "callvirt",
+            "target": "System.Threading.Tasks.Task::GetAwaiter"
+          },
+          {
+            "il": 45,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.TaskAwaiter::get_IsCompleted"
+          },
+          {
+            "il": 77,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 121,
+            "op": "call",
+            "target": "SpecterInsight.UI.Services.NotificationService::NotifyAll"
+          },
+          {
+            "il": 146,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetException"
+          },
+          {
+            "il": 167,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetResult"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.UI.ViewModels.EventLogViewModel+<OnConnected>d__49",
+        "name": "MoveNext",
+        "token": "0x6000950",
+        "sig": "200001",
+        "parameters": [],
+        "rva": 601992,
+        "il_sha256": "6bd44aac6c506bd819ea5b0ed991d4965cf0056a444a8e1a07490a373a4b0e65",
+        "exception_regions": 2,
+        "operations": [
+          {
+            "il": 19,
+            "op": "call",
+            "target": "SpecterInsight.UI.ViewModels.EventLogViewModel::Refresh"
+          },
+          {
+            "il": 24,
+            "op": "callvirt",
+            "target": "System.Threading.Tasks.Task::GetAwaiter"
+          },
+          {
+            "il": 32,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.TaskAwaiter::get_IsCompleted"
+          },
+          {
+            "il": 64,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 145,
+            "op": "ldftn",
+            "target": "SpecterInsight.UI.ViewModels.EventLogViewModel::OnEventNotification"
+          },
+          {
+            "il": 156,
+            "op": "callvirt",
+            "target": "SpecterInsight.ApiClient.SpecterInsightClient::OnEventNotification"
+          },
+          {
+            "il": 164,
+            "op": "call",
+            "target": "SpecterInsight.UI.Services.NotificationService::NotifyAll"
+          },
+          {
+            "il": 189,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetException"
+          },
+          {
+            "il": 210,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetResult"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.UI.ViewModels.EventLogViewModel+<OnDisconnected>d__50",
+        "name": "MoveNext",
+        "token": "0x6000952",
+        "sig": "200001",
+        "parameters": [],
+        "rva": 602264,
+        "il_sha256": "2e1ea00b03bedcebee8519fa9d9ba83f651ccf6ff45c56301ff0cb3fb85010ed",
+        "exception_regions": 1,
+        "operations": [
+          {
+            "il": 7,
+            "op": "call",
+            "target": "Avalonia.Threading.Dispatcher::get_UIThread"
+          },
+          {
+            "il": 13,
+            "op": "ldftn",
+            "target": "SpecterInsight.UI.ViewModels.EventLogViewModel::<OnDisconnected>b__50_0"
+          },
+          {
+            "il": 58,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetException"
+          },
+          {
+            "il": 79,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetResult"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.UI.ViewModels.EventLogViewModel+<OnEventNotification>d__51",
+        "name": "MoveNext",
+        "token": "0x6000954",
+        "sig": "200001",
+        "parameters": [],
+        "rva": 602396,
+        "il_sha256": "85242996648699841b9cac99113726299e771f5e40b64d580cb6d7e02ac12b8e",
+        "exception_regions": 1,
+        "operations": [
+          {
+            "il": 7,
+            "op": "newobj",
+            "target": "SpecterInsight.UI.ViewModels.EventLogViewModel+<>c__DisplayClass51_0::.ctor"
+          },
+          {
+            "il": 37,
+            "op": "call",
+            "target": "Avalonia.Threading.Dispatcher::get_UIThread"
+          },
+          {
+            "il": 49,
+            "op": "call",
+            "target": "Avalonia.Threading.Dispatcher::get_UIThread"
+          },
+          {
+            "il": 55,
+            "op": "ldftn",
+            "target": "SpecterInsight.UI.ViewModels.EventLogViewModel+<>c__DisplayClass51_0::<OnEventNotification>b__0"
+          },
+          {
+            "il": 66,
+            "op": "callvirt",
+            "target": "Avalonia.Threading.Dispatcher::InvokeAsync"
+          },
+          {
+            "il": 86,
+            "op": "callvirt",
+            "target": "<generic>::Add"
+          },
+          {
+            "il": 105,
+            "op": "call",
+            "target": "SpecterInsight.UI.ViewModels.EventLogViewModel::get_AppliedMinimumTimestamp"
+          },
+          {
+            "il": 111,
+            "op": "call",
+            "target": "SpecterInsight.UI.ViewModels.EventLogViewModel::get_AppliedSearchFilter"
+          },
+          {
+            "il": 116,
+            "op": "call",
+            "target": "SpecterInsight.UI.ViewModels.EventLogViewModel::IsMatch"
+          },
+          {
+            "il": 124,
+            "op": "call",
+            "target": "SpecterInsight.UI.ViewModels.EventLogViewModel::get_Events"
+          },
+          {
+            "il": 159,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetException"
+          },
+          {
+            "il": 180,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetResult"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.UI.ViewModels.EventLogViewModel+<Refresh>d__43",
+        "name": "MoveNext",
+        "token": "0x6000956",
+        "sig": "200001",
+        "parameters": [],
+        "rva": 602628,
+        "il_sha256": "80db8502bafbd1b5fa457ebe4cc9d116173957a82a9b387062e522126854c262",
+        "exception_regions": 1,
+        "operations": [
+          {
+            "il": 19,
+            "op": "call",
+            "target": "SpecterInsight.UI.ViewModels.EventLogViewModel::Refresh"
+          },
+          {
+            "il": 24,
+            "op": "callvirt",
+            "target": "System.Threading.Tasks.Task::GetAwaiter"
+          },
+          {
+            "il": 32,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.TaskAwaiter::get_IsCompleted"
+          },
+          {
+            "il": 64,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 124,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetException"
+          },
+          {
+            "il": 145,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetResult"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.UI.ViewModels.EventLogViewModel+<Refresh>d__44",
+        "name": "MoveNext",
+        "token": "0x6000958",
+        "sig": "200001",
+        "parameters": [],
+        "rva": 602824,
+        "il_sha256": "d82b96b8d2f1f054f3ddd6ba96dd825012114e94353c50333a120f14fe35f4d0",
+        "exception_regions": 1,
+        "operations": [
+          {
+            "il": 21,
+            "op": "newobj",
+            "target": "SpecterInsight.UI.ViewModels.EventLogViewModel+<>c__DisplayClass44_0::.ctor"
+          },
+          {
+            "il": 65,
+            "op": "call",
+            "target": "Avalonia.Threading.Dispatcher::get_UIThread"
+          },
+          {
+            "il": 77,
+            "op": "call",
+            "target": "Avalonia.Threading.Dispatcher::get_UIThread"
+          },
+          {
+            "il": 88,
+            "op": "ldftn",
+            "target": "SpecterInsight.UI.ViewModels.EventLogViewModel+<>c__DisplayClass44_0::<Refresh>b__0"
+          },
+          {
+            "il": 112,
+            "op": "call",
+            "target": "SpecterInsight.UI.ViewModels.EventLogViewModel::set_IsApplyButtonEnabled"
+          },
+          {
+            "il": 124,
+            "op": "call",
+            "target": "SpecterInsight.UI.ViewModels.EventLogViewModel::get_DraftTimeSpanFilter"
+          },
+          {
+            "il": 130,
+            "op": "call",
+            "target": "SpecterInsight.UI.ViewModels.EventLogViewModel::get_AppliedTimeSpanFilter"
+          },
+          {
+            "il": 143,
+            "op": "call",
+            "target": "SpecterInsight.UI.ViewModels.EventLogViewModel::get_Events"
+          },
+          {
+            "il": 184,
+            "op": "call",
+            "target": "SpecterInsight.UI.ViewModels.EventLogViewModel::get_DraftSearchFilter"
+          },
+          {
+            "il": 203,
+            "op": "call",
+            "target": "SpecterInsight.UI.ViewModels.EventLogViewModel::get_DraftSearchFilter"
+          },
+          {
+            "il": 232,
+            "op": "call",
+            "target": "SpecterInsight.UI.ViewModels.EventLogViewModel::set_AppliedSearchFilter"
+          },
+          {
+            "il": 239,
+            "op": "call",
+            "target": "SpecterInsight.UI.ViewModels.EventLogViewModel::get_DraftTimeSpanFilter"
+          },
+          {
+            "il": 244,
+            "op": "call",
+            "target": "SpecterInsight.UI.ViewModels.EventLogViewModel::set_AppliedTimeSpanFilter"
+          },
+          {
+            "il": 251,
+            "op": "call",
+            "target": "SpecterInsight.UI.ViewModels.EventLogViewModel::GetEventTypeHashtable"
+          },
+          {
+            "il": 276,
+            "op": "call",
+            "target": "SpecterInsight.UI.ViewModels.EventLogViewModel::get_DraftTimeSpanFilter"
+          },
+          {
+            "il": 298,
+            "op": "call",
+            "target": "SpecterInsight.UI.ViewModels.EventLogViewModel::GetEventTypeHashtable"
+          },
+          {
+            "il": 326,
+            "op": "ldftn",
+            "target": "SpecterInsight.UI.ViewModels.EventLogViewModel+<>c__DisplayClass44_0::<Refresh>b__1"
+          },
+          {
+            "il": 342,
+            "op": "callvirt",
+            "target": "System.Threading.Tasks.Task::GetAwaiter"
+          },
+          {
+            "il": 350,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.TaskAwaiter::get_IsCompleted"
+          },
+          {
+            "il": 382,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 441,
+            "op": "call",
+            "target": "SpecterInsight.UI.ViewModels.EventLogViewModel::get_Events"
+          },
+          {
+            "il": 446,
+            "op": "callvirt",
+            "target": "<generic>::Clear"
+          },
+          {
+            "il": 452,
+            "op": "call",
+            "target": "SpecterInsight.UI.ViewModels.EventLogViewModel::get_Events"
+          },
+          {
+            "il": 468,
+            "op": "call",
+            "target": "AvaloniaEdit.Utils.ExtensionMethods::AddRange"
+          },
+          {
+            "il": 474,
+            "op": "call",
+            "target": "SpecterInsight.UI.ViewModels.EventLogViewModel::get_SelectedEvent"
+          },
+          {
+            "il": 482,
+            "op": "call",
+            "target": "SpecterInsight.UI.ViewModels.EventLogViewModel::get_Events"
+          },
+          {
+            "il": 488,
+            "op": "call",
+            "target": "SpecterInsight.UI.ViewModels.EventLogViewModel::get_SelectedEvent"
+          },
+          {
+            "il": 502,
+            "op": "call",
+            "target": "SpecterInsight.UI.ViewModels.EventLogViewModel::get_Events"
+          },
+          {
+            "il": 512,
+            "op": "call",
+            "target": "SpecterInsight.UI.ViewModels.EventLogViewModel::set_SelectedEvent"
+          },
+          {
+            "il": 521,
+            "op": "call",
+            "target": "SpecterInsight.UI.ViewModels.EventLogViewModel::get_Events"
+          },
+          {
+            "il": 531,
+            "op": "call",
+            "target": "SpecterInsight.UI.ViewModels.EventLogViewModel::set_SelectedEvent"
+          },
+          {
+            "il": 538,
+            "op": "call",
+            "target": "SpecterInsight.UI.ViewModels.EventLogViewModel::set_IsApplyButtonEnabled"
+          },
+          {
+            "il": 570,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetException"
+          },
+          {
+            "il": 598,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetResult"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.UI.ViewModels.Controls.DocumentationViewModel+<LoadAsync>d__33",
+        "name": "MoveNext",
+        "token": "0x600122a",
+        "sig": "200001",
+        "parameters": [],
+        "rva": 756292,
+        "il_sha256": "146ee560d77632bc33b30fe57d8cd253870e34b9981fc3573d92b431f58ccf2c",
+        "exception_regions": 3,
+        "operations": [
+          {
+            "il": 19,
+            "op": "newobj",
+            "target": "SpecterInsight.UI.ViewModels.Controls.DocumentationViewModel+<>c__DisplayClass33_0::.ctor"
+          },
+          {
+            "il": 46,
+            "op": "call",
+            "target": "SpecterInsight.UI.Globals::get_Client"
+          },
+          {
+            "il": 73,
+            "op": "call",
+            "target": "SpecterInsight.UI.ViewModels.Controls.DocumentationViewModel::set_IsLoading"
+          },
+          {
+            "il": 79,
+            "op": "callvirt",
+            "target": "SpecterInsight.ApiClient.SpecterInsightClientGenerated::DocumentationAsync"
+          },
+          {
+            "il": 85,
+            "op": "callvirt",
+            "target": "<generic>::ConfigureAwait"
+          },
+          {
+            "il": 94,
+            "op": "call",
+            "target": "<generic>::GetAwaiter"
+          },
+          {
+            "il": 103,
+            "op": "call",
+            "target": "<generic>::get_IsCompleted"
+          },
+          {
+            "il": 136,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted<ConfiguredTaskAwaiter<System.Collections.Generic.ICollection`1<SpecterInsight.ApiClient.DocumentationEntry>>,<LoadAsync>d__33>"
+          },
+          {
+            "il": 195,
+            "op": "call",
+            "target": "Avalonia.Threading.Dispatcher::get_UIThread"
+          },
+          {
+            "il": 206,
+            "op": "ldftn",
+            "target": "SpecterInsight.UI.ViewModels.Controls.DocumentationViewModel+<>c__DisplayClass33_0::<LoadAsync>b__0"
+          },
+          {
+            "il": 217,
+            "op": "callvirt",
+            "target": "Avalonia.Threading.Dispatcher::InvokeAsync"
+          },
+          {
+            "il": 222,
+            "op": "callvirt",
+            "target": "Avalonia.Threading.DispatcherOperation::GetAwaiter"
+          },
+          {
+            "il": 231,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.TaskAwaiter::get_IsCompleted"
+          },
+          {
+            "il": 264,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 309,
+            "op": "call",
+            "target": "SpecterInsight.UI.Services.NotificationService::NotifyAll"
+          },
+          {
+            "il": 324,
+            "op": "call",
+            "target": "SpecterInsight.UI.ViewModels.Controls.DocumentationViewModel::set_IsLoading"
+          },
+          {
+            "il": 357,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetException"
+          },
+          {
+            "il": 385,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetResult"
+          }
+        ],
+        "selected_literals": []
+      }
+    ]
+  },
+  "client/SpecterInsight.ApiClient.dll": {
+    "sha256": "5c658f03289e5804a692ee66ca7beff3883631f4a3d81b301bdade0e7fa45422",
+    "mvid": "25208fa6-b62b-46bd-b864-eea28025b41e",
+    "methods": [
+      {
+        "type": "SpecterInsight.ApiClient.SpecterInsightClient",
+        "name": "OnEventNotification",
+        "token": "0x6000023",
+        "sig": "2001126515128081021280e0128089",
+        "parameters": [
+          "evt"
+        ],
+        "rva": 9028,
+        "il_sha256": "359c5c32f2b4e4e29ce535a2df074cdccba04e96ffb1bac1f15358a0a58764e4",
+        "exception_regions": 0,
+        "operations": [],
+        "selected_literals": [
+          "EventNotification"
+        ]
+      },
+      {
+        "type": "SpecterInsight.ApiClient.SpecterInsightClientGenerated",
+        "name": "DocumentationAsync",
+        "token": "0x60000a3",
+        "sig": "200015127d0115128109011280bc",
+        "parameters": [],
+        "rva": 15255,
+        "il_sha256": "1e99e4553b3e00cd6e6759ef61c4bfa952bd9bea1e54b11f2416939927e34858",
+        "exception_regions": 0,
+        "operations": [
+          {
+            "il": 6,
+            "op": "callvirt",
+            "target": "SpecterInsight.ApiClient.SpecterInsightClientGenerated::DocumentationAsync"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.ApiClient.SpecterInsightClientGenerated",
+        "name": "DocumentationAsync",
+        "token": "0x60000a4",
+        "sig": "200115127d0115128109011280bc11808d",
+        "parameters": [
+          "cancellationToken"
+        ],
+        "rva": 15268,
+        "il_sha256": "4f835c838d38b90fee56a72605cec98ddc75c23673a96578114645861fea7b0d",
+        "exception_regions": 0,
+        "operations": [
+          {
+            "il": 45,
+            "op": "call",
+            "target": "<generic>::Start<<DocumentationAsync>d__107>"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.ApiClient.SpecterInsightClientGenerated",
+        "name": "SearchAsync",
+        "token": "0x60000a5",
+        "sig": "200115127d0115128109011280cc1280c8",
+        "parameters": [
+          "body"
+        ],
+        "rva": 15343,
+        "il_sha256": "63322664eb6eabf3636b026e1472e476d2a9ae30c7a5d7efd9b6a63b757ec5a5",
+        "exception_regions": 0,
+        "operations": [
+          {
+            "il": 7,
+            "op": "callvirt",
+            "target": "SpecterInsight.ApiClient.SpecterInsightClientGenerated::SearchAsync"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.ApiClient.SpecterInsightClientGenerated",
+        "name": "SearchAsync",
+        "token": "0x60000a6",
+        "sig": "200215127d0115128109011280cc1280c811808d",
+        "parameters": [
+          "body",
+          "cancellationToken"
+        ],
+        "rva": 15360,
+        "il_sha256": "4c3f52abc94febeb144f2c951d941352410562cd96aa6c1a0c7446b6121ce936",
+        "exception_regions": 0,
+        "operations": [],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.ApiClient.SpecterInsightClientGenerated",
+        "name": "IndexStatusAsync",
+        "token": "0x60000a7",
+        "sig": "200015127d011280c4",
+        "parameters": [],
+        "rva": 15443,
+        "il_sha256": "cdf11f1cc30a1af90ba16ef8acb3f69b9fc6f761b1ba45705d8347ff2eacb5bd",
+        "exception_regions": 0,
+        "operations": [],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.ApiClient.SpecterInsightClientGenerated",
+        "name": "IndexStatusAsync",
+        "token": "0x60000a8",
+        "sig": "200115127d011280c411808d",
+        "parameters": [
+          "cancellationToken"
+        ],
+        "rva": 15456,
+        "il_sha256": "eddcc2a0ace9a23d7f33541fa7cfbbd4541ab1b603e85f0e4edc527ef23f687d",
+        "exception_regions": 0,
+        "operations": [],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.ApiClient.SpecterInsightClientGenerated",
+        "name": "EmbeddingProvidersAsync",
+        "token": "0x60000a9",
+        "sig": "200015127d0115128109011280dc",
+        "parameters": [],
+        "rva": 15531,
+        "il_sha256": "d8d195b834e406a11fb320017d78d97eb7527294da1936482b0460bfb14c5ad8",
+        "exception_regions": 0,
+        "operations": [],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.ApiClient.SpecterInsightClientGenerated",
+        "name": "EmbeddingProvidersAsync",
+        "token": "0x60000aa",
+        "sig": "200115127d0115128109011280dc11808d",
+        "parameters": [
+          "cancellationToken"
+        ],
+        "rva": 15544,
+        "il_sha256": "cd1bd5ec3e4a2d199a44975fa936cfc023ad36ea33d560a70e6d573e751a9d4f",
+        "exception_regions": 0,
+        "operations": [],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.ApiClient.SpecterInsightClientGenerated",
+        "name": "IndexAsync",
+        "token": "0x60000ab",
+        "sig": "20011280891280c0",
+        "parameters": [
+          "body"
+        ],
+        "rva": 15619,
+        "il_sha256": "16d864a97d1e14ae4f5a11aabd8d6e7cc10305700aa8244be7f3cc69be39a12d",
+        "exception_regions": 0,
+        "operations": [],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.ApiClient.SpecterInsightClientGenerated",
+        "name": "IndexAsync",
+        "token": "0x60000ac",
+        "sig": "20021280891280c011808d",
+        "parameters": [
+          "body",
+          "cancellationToken"
+        ],
+        "rva": 15636,
+        "il_sha256": "1e32b0e712536c913d14373e7c0a15057522a1ec183b4d81366206af413f120e",
+        "exception_regions": 0,
+        "operations": [
+          {
+            "il": 2,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::Create"
+          },
+          {
+            "il": 53,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::Start"
+          },
+          {
+            "il": 65,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::get_Task"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.ApiClient.SpecterInsightClientGenerated",
+        "name": "ReadObjectResponseAsync",
+        "token": "0x60001e1",
+        "sig": "30010315127d01151182c4011e001280d915128121020e15128115010e11808d",
+        "parameters": [
+          "response",
+          "headers",
+          "cancellationToken"
+        ],
+        "rva": 30808,
+        "il_sha256": "4c0d576e6147b8fa1150a76c6fde6dc737660a8c2847009e953e7e2ce9ecf88d",
+        "exception_regions": 0,
+        "operations": [],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.ApiClient.SpecterInsightClientGenerated+<DocumentationAsync>d__107",
+        "name": "MoveNext",
+        "token": "0x6000860",
+        "sig": "200001",
+        "parameters": [],
+        "rva": 110028,
+        "il_sha256": "c0f5e2bce86a09c3c91f0503095b0467b95661f5a2b81b198cbb3c91e6a1eb8c",
+        "exception_regions": 6,
+        "operations": [
+          {
+            "il": 60,
+            "op": "callvirt",
+            "target": "<generic>::ConfigureAwait"
+          },
+          {
+            "il": 69,
+            "op": "call",
+            "target": "<generic>::GetAwaiter"
+          },
+          {
+            "il": 78,
+            "op": "call",
+            "target": "<generic>::get_IsCompleted"
+          },
+          {
+            "il": 111,
+            "op": "call",
+            "target": "<generic>::AwaitUnsafeOnCompleted<ConfiguredTaskAwaiter<System.Net.Http.HttpRequestMessage>,<DocumentationAsync>d__107>"
+          },
+          {
+            "il": 229,
+            "op": "callvirt",
+            "target": "<generic>::Add"
+          },
+          {
+            "il": 234,
+            "op": "newobj",
+            "target": "System.Text.StringBuilder::.ctor"
+          },
+          {
+            "il": 262,
+            "op": "callvirt",
+            "target": "System.Text.StringBuilder::Append"
+          },
+          {
+            "il": 275,
+            "op": "callvirt",
+            "target": "System.Text.StringBuilder::Append"
+          },
+          {
+            "il": 328,
+            "op": "callvirt",
+            "target": "System.Net.Http.HttpClient::SendAsync"
+          },
+          {
+            "il": 334,
+            "op": "callvirt",
+            "target": "<generic>::ConfigureAwait"
+          },
+          {
+            "il": 343,
+            "op": "call",
+            "target": "<generic>::GetAwaiter"
+          },
+          {
+            "il": 352,
+            "op": "call",
+            "target": "<generic>::get_IsCompleted"
+          },
+          {
+            "il": 385,
+            "op": "call",
+            "target": "<generic>::AwaitUnsafeOnCompleted<ConfiguredTaskAwaiter<System.Net.Http.HttpResponseMessage>,<DocumentationAsync>d__107>"
+          },
+          {
+            "il": 496,
+            "op": "callvirt",
+            "target": "<generic>::get_Current"
+          },
+          {
+            "il": 613,
+            "op": "callvirt",
+            "target": "<generic>::get_Current"
+          },
+          {
+            "il": 724,
+            "op": "callvirt",
+            "target": "SpecterInsight.ApiClient.SpecterInsightClientGenerated::ReadObjectResponseAsync<System.Collections.Generic.ICollection`1<SpecterInsight.ApiClient.DocumentationEntry>>"
+          },
+          {
+            "il": 730,
+            "op": "callvirt",
+            "target": "<generic>::ConfigureAwait"
+          },
+          {
+            "il": 739,
+            "op": "call",
+            "target": "<generic>::GetAwaiter"
+          },
+          {
+            "il": 748,
+            "op": "call",
+            "target": "<generic>::get_IsCompleted"
+          },
+          {
+            "il": 781,
+            "op": "call",
+            "target": "<generic>::AwaitUnsafeOnCompleted<ConfiguredTaskAwaiter<ObjectResponseResult`1<System.Collections.Generic.ICollection`1<SpecterInsight.ApiClient.DocumentationEntry>>>,<DocumentationAsync>d__107>"
+          },
+          {
+            "il": 923,
+            "op": "callvirt",
+            "target": "<generic>::ConfigureAwait"
+          },
+          {
+            "il": 932,
+            "op": "call",
+            "target": "<generic>::GetAwaiter"
+          },
+          {
+            "il": 941,
+            "op": "call",
+            "target": "<generic>::get_IsCompleted"
+          },
+          {
+            "il": 974,
+            "op": "call",
+            "target": "<generic>::AwaitUnsafeOnCompleted<ConfiguredTaskAwaiter<0xe>,<DocumentationAsync>d__107>"
+          },
+          {
+            "il": 1170,
+            "op": "call",
+            "target": "<generic>::SetException"
+          }
+        ],
+        "selected_literals": [
+          "Documentation"
+        ]
+      },
+      {
+        "type": "SpecterInsight.ApiClient.SpecterInsightClientGenerated+<EmbeddingProvidersAsync>d__113",
+        "name": "MoveNext",
+        "token": "0x600087c",
+        "sig": "200001",
+        "parameters": [],
+        "rva": 129152,
+        "il_sha256": "fd9bb5bfdc9b2b318d2f8538cddbbad64e78d717e74746e3f870b16406aa9732",
+        "exception_regions": 6,
+        "operations": [
+          {
+            "il": 60,
+            "op": "callvirt",
+            "target": "<generic>::ConfigureAwait"
+          },
+          {
+            "il": 69,
+            "op": "call",
+            "target": "<generic>::GetAwaiter"
+          },
+          {
+            "il": 78,
+            "op": "call",
+            "target": "<generic>::get_IsCompleted"
+          },
+          {
+            "il": 229,
+            "op": "callvirt",
+            "target": "<generic>::Add"
+          },
+          {
+            "il": 234,
+            "op": "newobj",
+            "target": "System.Text.StringBuilder::.ctor"
+          },
+          {
+            "il": 262,
+            "op": "callvirt",
+            "target": "System.Text.StringBuilder::Append"
+          },
+          {
+            "il": 275,
+            "op": "callvirt",
+            "target": "System.Text.StringBuilder::Append"
+          },
+          {
+            "il": 328,
+            "op": "callvirt",
+            "target": "System.Net.Http.HttpClient::SendAsync"
+          },
+          {
+            "il": 334,
+            "op": "callvirt",
+            "target": "<generic>::ConfigureAwait"
+          },
+          {
+            "il": 343,
+            "op": "call",
+            "target": "<generic>::GetAwaiter"
+          },
+          {
+            "il": 352,
+            "op": "call",
+            "target": "<generic>::get_IsCompleted"
+          },
+          {
+            "il": 496,
+            "op": "callvirt",
+            "target": "<generic>::get_Current"
+          },
+          {
+            "il": 613,
+            "op": "callvirt",
+            "target": "<generic>::get_Current"
+          },
+          {
+            "il": 724,
+            "op": "callvirt",
+            "target": "SpecterInsight.ApiClient.SpecterInsightClientGenerated::ReadObjectResponseAsync"
+          },
+          {
+            "il": 730,
+            "op": "callvirt",
+            "target": "<generic>::ConfigureAwait"
+          },
+          {
+            "il": 739,
+            "op": "call",
+            "target": "<generic>::GetAwaiter"
+          },
+          {
+            "il": 748,
+            "op": "call",
+            "target": "<generic>::get_IsCompleted"
+          },
+          {
+            "il": 923,
+            "op": "callvirt",
+            "target": "<generic>::ConfigureAwait"
+          },
+          {
+            "il": 932,
+            "op": "call",
+            "target": "<generic>::GetAwaiter"
+          },
+          {
+            "il": 941,
+            "op": "call",
+            "target": "<generic>::get_IsCompleted"
+          },
+          {
+            "il": 1170,
+            "op": "call",
+            "target": "<generic>::SetException"
+          }
+        ],
+        "selected_literals": [
+          "Documentation/embedding-providers"
+        ]
+      },
+      {
+        "type": "SpecterInsight.ApiClient.SpecterInsightClientGenerated+<IndexAsync>d__115",
+        "name": "MoveNext",
+        "token": "0x60008b2",
+        "sig": "200001",
+        "parameters": [],
+        "rva": 167056,
+        "il_sha256": "2909bcd28c0f578c74cf70f36982d30acb4bc11d3afe09047a57b7e33b232927",
+        "exception_regions": 6,
+        "operations": [
+          {
+            "il": 60,
+            "op": "callvirt",
+            "target": "<generic>::ConfigureAwait"
+          },
+          {
+            "il": 69,
+            "op": "call",
+            "target": "<generic>::GetAwaiter"
+          },
+          {
+            "il": 77,
+            "op": "call",
+            "target": "<generic>::get_IsCompleted"
+          },
+          {
+            "il": 109,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 257,
+            "op": "newobj",
+            "target": "System.Text.StringBuilder::.ctor"
+          },
+          {
+            "il": 285,
+            "op": "callvirt",
+            "target": "System.Text.StringBuilder::Append"
+          },
+          {
+            "il": 298,
+            "op": "callvirt",
+            "target": "System.Text.StringBuilder::Append"
+          },
+          {
+            "il": 351,
+            "op": "callvirt",
+            "target": "System.Net.Http.HttpClient::SendAsync"
+          },
+          {
+            "il": 357,
+            "op": "callvirt",
+            "target": "<generic>::ConfigureAwait"
+          },
+          {
+            "il": 366,
+            "op": "call",
+            "target": "<generic>::GetAwaiter"
+          },
+          {
+            "il": 375,
+            "op": "call",
+            "target": "<generic>::get_IsCompleted"
+          },
+          {
+            "il": 408,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 512,
+            "op": "callvirt",
+            "target": "<generic>::get_Current"
+          },
+          {
+            "il": 629,
+            "op": "callvirt",
+            "target": "<generic>::get_Current"
+          },
+          {
+            "il": 764,
+            "op": "callvirt",
+            "target": "<generic>::ConfigureAwait"
+          },
+          {
+            "il": 773,
+            "op": "call",
+            "target": "<generic>::GetAwaiter"
+          },
+          {
+            "il": 782,
+            "op": "call",
+            "target": "<generic>::get_IsCompleted"
+          },
+          {
+            "il": 815,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted"
+          },
+          {
+            "il": 1011,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetException"
+          },
+          {
+            "il": 1039,
+            "op": "call",
+            "target": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetResult"
+          }
+        ],
+        "selected_literals": [
+          "Documentation/index"
+        ]
+      },
+      {
+        "type": "SpecterInsight.ApiClient.SpecterInsightClientGenerated+<IndexStatusAsync>d__111",
+        "name": "MoveNext",
+        "token": "0x60008b4",
+        "sig": "200001",
+        "parameters": [],
+        "rva": 168280,
+        "il_sha256": "fdd5dce63958db9d84d7e41a2a4fea5bcf3b48159d5a071b3b67d886e9141ada",
+        "exception_regions": 6,
+        "operations": [
+          {
+            "il": 60,
+            "op": "callvirt",
+            "target": "<generic>::ConfigureAwait"
+          },
+          {
+            "il": 69,
+            "op": "call",
+            "target": "<generic>::GetAwaiter"
+          },
+          {
+            "il": 78,
+            "op": "call",
+            "target": "<generic>::get_IsCompleted"
+          },
+          {
+            "il": 229,
+            "op": "callvirt",
+            "target": "<generic>::Add"
+          },
+          {
+            "il": 234,
+            "op": "newobj",
+            "target": "System.Text.StringBuilder::.ctor"
+          },
+          {
+            "il": 262,
+            "op": "callvirt",
+            "target": "System.Text.StringBuilder::Append"
+          },
+          {
+            "il": 275,
+            "op": "callvirt",
+            "target": "System.Text.StringBuilder::Append"
+          },
+          {
+            "il": 328,
+            "op": "callvirt",
+            "target": "System.Net.Http.HttpClient::SendAsync"
+          },
+          {
+            "il": 334,
+            "op": "callvirt",
+            "target": "<generic>::ConfigureAwait"
+          },
+          {
+            "il": 343,
+            "op": "call",
+            "target": "<generic>::GetAwaiter"
+          },
+          {
+            "il": 352,
+            "op": "call",
+            "target": "<generic>::get_IsCompleted"
+          },
+          {
+            "il": 496,
+            "op": "callvirt",
+            "target": "<generic>::get_Current"
+          },
+          {
+            "il": 613,
+            "op": "callvirt",
+            "target": "<generic>::get_Current"
+          },
+          {
+            "il": 724,
+            "op": "callvirt",
+            "target": "SpecterInsight.ApiClient.SpecterInsightClientGenerated::ReadObjectResponseAsync<SpecterInsight.ApiClient.DocumentationIndexStatus>"
+          },
+          {
+            "il": 730,
+            "op": "callvirt",
+            "target": "<generic>::ConfigureAwait"
+          },
+          {
+            "il": 739,
+            "op": "call",
+            "target": "<generic>::GetAwaiter"
+          },
+          {
+            "il": 748,
+            "op": "call",
+            "target": "<generic>::get_IsCompleted"
+          },
+          {
+            "il": 781,
+            "op": "call",
+            "target": "<generic>::AwaitUnsafeOnCompleted<ConfiguredTaskAwaiter<ObjectResponseResult`1<SpecterInsight.ApiClient.DocumentationIndexStatus>>,<IndexStatusAsync>d__111>"
+          },
+          {
+            "il": 923,
+            "op": "callvirt",
+            "target": "<generic>::ConfigureAwait"
+          },
+          {
+            "il": 932,
+            "op": "call",
+            "target": "<generic>::GetAwaiter"
+          },
+          {
+            "il": 941,
+            "op": "call",
+            "target": "<generic>::get_IsCompleted"
+          },
+          {
+            "il": 1170,
+            "op": "call",
+            "target": "<generic>::SetException"
+          }
+        ],
+        "selected_literals": [
+          "Documentation/index-status"
+        ]
+      },
+      {
+        "type": "SpecterInsight.ApiClient.SpecterInsightClientGenerated+<ReadObjectResponseAsync>d__427`1",
+        "name": "MoveNext",
+        "token": "0x600090e",
+        "sig": "200001",
+        "parameters": [],
+        "rva": 229072,
+        "il_sha256": "4a5874281b1f941e422c8c21a93e0d91e5c6e9c4ba8392c2a2d445b5934b65bb",
+        "exception_regions": 6,
+        "operations": [
+          {
+            "il": 107,
+            "op": "callvirt",
+            "target": "<generic>::ConfigureAwait"
+          },
+          {
+            "il": 116,
+            "op": "call",
+            "target": "<generic>::GetAwaiter"
+          },
+          {
+            "il": 125,
+            "op": "call",
+            "target": "<generic>::get_IsCompleted"
+          },
+          {
+            "il": 323,
+            "op": "callvirt",
+            "target": "<generic>::ConfigureAwait"
+          },
+          {
+            "il": 332,
+            "op": "call",
+            "target": "<generic>::GetAwaiter"
+          },
+          {
+            "il": 341,
+            "op": "call",
+            "target": "<generic>::get_IsCompleted"
+          },
+          {
+            "il": 606,
+            "op": "call",
+            "target": "<generic>::SetException"
+          }
+        ],
+        "selected_literals": []
+      },
+      {
+        "type": "SpecterInsight.ApiClient.SpecterInsightClientGenerated+<SearchAsync>d__109",
+        "name": "MoveNext",
+        "token": "0x6000930",
+        "sig": "200001",
+        "parameters": [],
+        "rva": 252420,
+        "il_sha256": "4c788e3cae698347c81ed3801c6bfa1fab5ffc3a85788e75250547a83ea4355d",
+        "exception_regions": 6,
+        "operations": [
+          {
+            "il": 60,
+            "op": "callvirt",
+            "target": "<generic>::ConfigureAwait"
+          },
+          {
+            "il": 69,
+            "op": "call",
+            "target": "<generic>::GetAwaiter"
+          },
+          {
+            "il": 78,
+            "op": "call",
+            "target": "<generic>::get_IsCompleted"
+          },
+          {
+            "il": 288,
+            "op": "callvirt",
+            "target": "<generic>::Add"
+          },
+          {
+            "il": 293,
+            "op": "newobj",
+            "target": "System.Text.StringBuilder::.ctor"
+          },
+          {
+            "il": 321,
+            "op": "callvirt",
+            "target": "System.Text.StringBuilder::Append"
+          },
+          {
+            "il": 334,
+            "op": "callvirt",
+            "target": "System.Text.StringBuilder::Append"
+          },
+          {
+            "il": 387,
+            "op": "callvirt",
+            "target": "System.Net.Http.HttpClient::SendAsync"
+          },
+          {
+            "il": 393,
+            "op": "callvirt",
+            "target": "<generic>::ConfigureAwait"
+          },
+          {
+            "il": 402,
+            "op": "call",
+            "target": "<generic>::GetAwaiter"
+          },
+          {
+            "il": 411,
+            "op": "call",
+            "target": "<generic>::get_IsCompleted"
+          },
+          {
+            "il": 555,
+            "op": "callvirt",
+            "target": "<generic>::get_Current"
+          },
+          {
+            "il": 672,
+            "op": "callvirt",
+            "target": "<generic>::get_Current"
+          },
+          {
+            "il": 783,
+            "op": "callvirt",
+            "target": "SpecterInsight.ApiClient.SpecterInsightClientGenerated::ReadObjectResponseAsync<System.Collections.Generic.ICollection`1<SpecterInsight.ApiClient.DocumentationSearchResult>>"
+          },
+          {
+            "il": 789,
+            "op": "callvirt",
+            "target": "<generic>::ConfigureAwait"
+          },
+          {
+            "il": 798,
+            "op": "call",
+            "target": "<generic>::GetAwaiter"
+          },
+          {
+            "il": 807,
+            "op": "call",
+            "target": "<generic>::get_IsCompleted"
+          },
+          {
+            "il": 840,
+            "op": "call",
+            "target": "<generic>::AwaitUnsafeOnCompleted<ConfiguredTaskAwaiter<ObjectResponseResult`1<System.Collections.Generic.ICollection`1<SpecterInsight.ApiClient.DocumentationSearchResult>>>,<SearchAsync>d__109>"
+          },
+          {
+            "il": 982,
+            "op": "callvirt",
+            "target": "<generic>::ConfigureAwait"
+          },
+          {
+            "il": 991,
+            "op": "call",
+            "target": "<generic>::GetAwaiter"
+          },
+          {
+            "il": 1000,
+            "op": "call",
+            "target": "<generic>::get_IsCompleted"
+          },
+          {
+            "il": 1229,
+            "op": "call",
+            "target": "<generic>::SetException"
+          }
+        ],
+        "selected_literals": [
+          "Documentation/search"
+        ]
+      }
+    ]
+  }
+}

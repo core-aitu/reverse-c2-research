@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup><TargetFramework>net10.0</TargetFramework><OutputType>Exe</OutputType><ImplicitUsings>enable</ImplicitUsings><Nullable>enable</Nullable></PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Npgsql"><HintPath>$(Dist)/server/Npgsql.dll</HintPath></Reference>
+    <Reference Include="Microsoft.AspNetCore.SignalR.Client"><HintPath>$(Dist)/client/Microsoft.AspNetCore.SignalR.Client.dll</HintPath></Reference>
+    <Reference Include="Microsoft.AspNetCore.SignalR.Client.Core"><HintPath>$(Dist)/client/Microsoft.AspNetCore.SignalR.Client.Core.dll</HintPath></Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Connections.Client"><HintPath>$(Dist)/client/Microsoft.AspNetCore.Http.Connections.Client.dll</HintPath></Reference>
+    <Reference Include="Newtonsoft.Json"><HintPath>$(Dist)/client/Newtonsoft.Json.dll</HintPath></Reference>
+  </ItemGroup>
+</Project>

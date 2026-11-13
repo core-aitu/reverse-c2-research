@@ -56,3 +56,7 @@ cmp research/validation/presentation-and-data/run-1.jsonl "$output_dir/validatio
 Каждый запуск создаёт новый кластер в приватном временном каталоге. Настоящие Server.dll и Npgsql взаимодействуют с ним по Unix-сокету. Доступ к порту TCP и рабочим конфигурациям продукта отсутствует. Для клиентского прогона зафиксирована передаваемая JSON-запись из серверного журнала. Для изначально двух запусков каждой серии и последующей сверки важна идентичность содержимого журналов. SHA-256 сохранены в environment.json. [Полная постановка опыта](extended-findings.md)
 
 Для автономного поиска стенд использует библиотеки и модель из этой же рабочей копии. Вызов `research/validation/local-search/repeat.sh "$sdk_dir" "$copy_dir" "$output_dir/build/search"` выводит десять JSON-записей. Геобаза проверена командой `mmdblookup --verbose --file resources/GeoLite2-City.mmdb --ip 192.0.2.1`, версия утилиты 1.13.3. [Журнал поиска](../validation/local-search/run-1.jsonl) · [Вывод mmdblookup](../examination/geoip-metadata.txt)
+
+## Дополнение от 13 ноября
+
+Новые опыты подтвердили лабораторный путь аудита через SignalR до штатного окна, наблюдаемый отказ защищённого HTTP-маршрута и работу раздельного маршрута чтения. Ранее описанные стенды сохранены. [Обновлённые результаты](../validation/continuation/results.md) · [Повторение](../validation/continuation/repeat.md)

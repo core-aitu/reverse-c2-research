@@ -1,0 +1,9 @@
+{"id":"doc-success","value":{"window":true,"kind":"UserControl","requests":["/Documentation"],"documents":1,"text":["Fixture Page"]}}
+{"id":"doc-retention-error","value":{"documents":1,"error":null,"visible":true}}
+{"id":"doc-retention-empty","value":{"documents":0,"error":null,"visible":false}}
+{"id":"doc-empty","value":{"window":true,"kind":"UserControl","requests":["/Documentation"],"documents":0,"text":[]}}
+{"id":"doc-error","value":{"window":true,"kind":"UserControl","requests":["/Documentation"],"documents":-1,"text":[]}}
+{"id":"events-success","value":{"window":true,"requests":["/Events/Events/GetLatestEvents"],"events":1,"error":null,"visible":["user-login","Synthetic audit event"]}}
+{"id":"events-error","value":{"window":true,"requests":["/Events/Events/GetLatestEvents"],"events":1,"error":null,"visible":["user-login","Synthetic audit event"]}}
+{"id":"events-empty","value":{"window":true,"requests":["/Events/Events/GetLatestEvents"],"events":0,"error":null,"visible":[]}}
+{"id":"events-reopened","value":{"window":true,"events":1,"visible":true}}

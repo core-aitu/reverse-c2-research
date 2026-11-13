@@ -1,0 +1,447 @@
+{
+  "native": [
+    {
+      "sha256": "776f63b2ca58b7647b100bf5818c32e3d0fd46c35b004e7f4e678a177a576837",
+      "paths": [
+        "templates/x64/specter-win-x64-dll.dll"
+      ],
+      "machine": "0x8664",
+      "is_dll": true,
+      "section_count": 7,
+      "certificate_directory_present": false,
+      "import_libraries": [
+        "KERNEL32.dll",
+        "OLEAUT32.dll",
+        "mscoree.dll",
+        "ole32.dll"
+      ],
+      "debug_directory_types": [
+        13,
+        14
+      ],
+      "use": "Unverified"
+    },
+    {
+      "sha256": "7c2dc2ca5680fa4fa85bab343593c45ce1030bdd0a22f8c54076a02a7e2cdbf6",
+      "paths": [
+        "templates/x64/specter-win-x64-dll.dll.bak",
+        "templates/x64/specter-win-x64-dll.dll.new_bak"
+      ],
+      "machine": "0x8664",
+      "is_dll": true,
+      "section_count": 7,
+      "certificate_directory_present": false,
+      "import_libraries": [
+        "KERNEL32.dll",
+        "OLEAUT32.dll",
+        "mscoree.dll",
+        "ole32.dll"
+      ],
+      "debug_directory_types": [
+        13,
+        14
+      ],
+      "use": "Unverified"
+    },
+    {
+      "sha256": "09f401e0b3ee33eaa2da8e5660d99294b41506ee1b2f22758f4c257a5828f498",
+      "paths": [
+        "templates/x64/specter-win-x64-exe.exe"
+      ],
+      "machine": "0x8664",
+      "is_dll": false,
+      "section_count": 7,
+      "certificate_directory_present": false,
+      "import_libraries": [
+        "KERNEL32.dll",
+        "OLEAUT32.dll",
+        "mscoree.dll",
+        "ole32.dll"
+      ],
+      "debug_directory_types": [
+        13,
+        14
+      ],
+      "use": "Unverified"
+    },
+    {
+      "sha256": "9423f68bd2b594347f3b8368496add0a343f8569385d56af65618c921cd1895a",
+      "paths": [
+        "templates/x64/specter-win-x64-exe.exe.bak",
+        "templates/x64/specter-win-x64-exe.exe.new_bak"
+      ],
+      "machine": "0x8664",
+      "is_dll": false,
+      "section_count": 7,
+      "certificate_directory_present": false,
+      "import_libraries": [
+        "KERNEL32.dll",
+        "OLEAUT32.dll",
+        "mscoree.dll",
+        "ole32.dll"
+      ],
+      "debug_directory_types": [
+        13,
+        14
+      ],
+      "use": "Unverified"
+    },
+    {
+      "sha256": "1720f539a01cda00ca0cdc66035c2fb2cb45e2d986f6c2416651ce1386bf507b",
+      "paths": [
+        "templates/x86/specter-win-x86-dll.dll"
+      ],
+      "machine": "0x14c",
+      "is_dll": true,
+      "section_count": 6,
+      "certificate_directory_present": false,
+      "import_libraries": [
+        "KERNEL32.dll",
+        "OLEAUT32.dll",
+        "mscoree.dll",
+        "ole32.dll"
+      ],
+      "debug_directory_types": [
+        13,
+        14
+      ],
+      "use": "Unverified"
+    },
+    {
+      "sha256": "3980257c4c9344b98b4c9f00e6a9282e79c7f9e31f9a577e95492a834c612976",
+      "paths": [
+        "templates/x86/specter-win-x86-dll.dll.bak",
+        "templates/x86/specter-win-x86-dll.dll.new_bak"
+      ],
+      "machine": "0x14c",
+      "is_dll": true,
+      "section_count": 6,
+      "certificate_directory_present": false,
+      "import_libraries": [
+        "KERNEL32.dll",
+        "OLEAUT32.dll",
+        "mscoree.dll",
+        "ole32.dll"
+      ],
+      "debug_directory_types": [
+        13,
+        14
+      ],
+      "use": "Unverified"
+    },
+    {
+      "sha256": "a9ae90d261bae95932b8617f2334047ebfbb968f1791a24ce8008c14e98f4675",
+      "paths": [
+        "templates/x86/specter-win-x86-exe.exe"
+      ],
+      "machine": "0x14c",
+      "is_dll": false,
+      "section_count": 6,
+      "certificate_directory_present": false,
+      "import_libraries": [
+        "KERNEL32.dll",
+        "OLEAUT32.dll",
+        "mscoree.dll",
+        "ole32.dll"
+      ],
+      "debug_directory_types": [
+        13,
+        14
+      ],
+      "use": "Unverified"
+    },
+    {
+      "sha256": "ae889f0085a0f141b961f7059bc1034e4135364f66f069659f1b96dfe741d8fe",
+      "paths": [
+        "templates/x86/specter-win-x86-exe.exe.bak",
+        "templates/x86/specter-win-x86-exe.exe.new_bak"
+      ],
+      "machine": "0x14c",
+      "is_dll": false,
+      "section_count": 6,
+      "certificate_directory_present": false,
+      "import_libraries": [
+        "KERNEL32.dll",
+        "OLEAUT32.dll",
+        "mscoree.dll",
+        "ole32.dll"
+      ],
+      "debug_directory_types": [
+        13,
+        14
+      ],
+      "use": "Unverified"
+    }
+  ],
+  "modules": [
+    {
+      "path": "modules/AD.dll",
+      "sha256": "012b5fa1889c2099338f7799739898bac2ab10306fcd68eda7ab3060c8140bb2",
+      "name": "AD",
+      "version": "7.0.0.0",
+      "mvid": "480d2bad-171c-4b72-b90e-466798d1c23c",
+      "direct_assemblyref_candidates": [],
+      "runtime_use": "Unverified"
+    },
+    {
+      "path": "modules/CredentialManager.dll",
+      "sha256": "694a871f5a3bdf1151cfadc965394e8f30fc1fe6fc96361062df20b4e7f022d1",
+      "name": "CredentialManager",
+      "version": "1.0.0.0",
+      "mvid": "ff113cd6-b80a-45c7-8879-3a371ea1bc98",
+      "direct_assemblyref_candidates": [],
+      "runtime_use": "Unverified"
+    },
+    {
+      "path": "modules/Direct.dll",
+      "sha256": "c30f24cfceac505e226a671138a9d75610b03d161ee323b21020307c2db1fbfa",
+      "name": "Direct",
+      "version": "7.0.0.0",
+      "mvid": "2aaf66a0-c515-4135-aa2a-a996756ebd84",
+      "direct_assemblyref_candidates": [],
+      "runtime_use": "Unverified"
+    },
+    {
+      "path": "modules/Dumper.dll",
+      "sha256": "a9e0fc749eda0ed29e6074926cb2ef07d6864ebe1367d8a66cd0ef6a66e344a0",
+      "name": "dumper",
+      "version": "7.0.0.0",
+      "mvid": "112f73f1-e6dc-4f15-bfab-35122fa6bc66",
+      "direct_assemblyref_candidates": [],
+      "runtime_use": "Unverified"
+    },
+    {
+      "path": "modules/EventLog.dll",
+      "sha256": "094531ab90bf68cd100d50f95340d24b7aeccc604df76cfff1109b180a08a823",
+      "name": "EventLog",
+      "version": "7.0.0.0",
+      "mvid": "a5eae887-5e67-4ca1-8aee-470cd3797e31",
+      "direct_assemblyref_candidates": [],
+      "runtime_use": "Unverified"
+    },
+    {
+      "path": "modules/Firewall.dll",
+      "sha256": "2de374ab0116ae1a8f32c274dcbd876acf0ab4ed47bb5e03e4a61d63b026f9ba",
+      "name": "Firewall",
+      "version": "7.0.0.0",
+      "mvid": "f91ea26a-2dc9-492f-bdc3-b9f1792e307a",
+      "direct_assemblyref_candidates": [
+        {
+          "path": "modules/GPO.dll",
+          "sha256": "bb600a86192f23cba4f3e91b2658454c652f4979e224dd41a85b9ab685c0886a"
+        }
+      ],
+      "runtime_use": "Unverified"
+    },
+    {
+      "path": "modules/GPO.dll",
+      "sha256": "bb600a86192f23cba4f3e91b2658454c652f4979e224dd41a85b9ab685c0886a",
+      "name": "GPO",
+      "version": "7.0.0.0",
+      "mvid": "29c3e0d0-1dbc-4afe-9902-a57be6908edc",
+      "direct_assemblyref_candidates": [],
+      "runtime_use": "Unverified"
+    },
+    {
+      "path": "modules/Interop.NetFwTypeLib.dll",
+      "sha256": "e13a32101c5c456048e555697ad91a1fd5792c804dbe7d399c57ee885de42c2f",
+      "name": "Interop.NetFwTypeLib",
+      "version": "1.0.0.0",
+      "mvid": "038bf1bc-d0af-424f-bd76-35c062b4d6e4",
+      "direct_assemblyref_candidates": [
+        {
+          "path": "modules/Firewall.dll",
+          "sha256": "2de374ab0116ae1a8f32c274dcbd876acf0ab4ed47bb5e03e4a61d63b026f9ba"
+        }
+      ],
+      "runtime_use": "Unverified"
+    },
+    {
+      "path": "modules/Interop.TaskScheduler.dll",
+      "sha256": "6317b1cdbc554624184f58597fe2ea4d87733de0985a918204d3135959a6cbac",
+      "name": "Interop.TaskScheduler",
+      "version": "1.0.0.0",
+      "mvid": "75d0ba55-f5d4-457a-86cd-d9b385a3a030",
+      "direct_assemblyref_candidates": [
+        {
+          "path": "modules/common.dll",
+          "sha256": "9a3f0b7727247962c18981e2924f59ff6b01ff6a6ddf2fd74d3129f5b098bb26"
+        },
+        {
+          "path": "modules/lateral.dll",
+          "sha256": "f877efafec959d731f88057dd06b981ee9482985ec21d72e7eb52cab8c67e76c"
+        }
+      ],
+      "runtime_use": "Unverified"
+    },
+    {
+      "path": "modules/Microsoft.GroupPolicy.Management.dll",
+      "sha256": "9fd9e20b06253d040d6e2ae3afe930a013fc4199fc844d6543a54c1c49c60331",
+      "name": "Microsoft.GroupPolicy.Management",
+      "version": "2.0.0.0",
+      "mvid": "5de59291-aa2f-4a1c-832e-d75a8c61af47",
+      "direct_assemblyref_candidates": [],
+      "runtime_use": "Unverified"
+    },
+    {
+      "path": "modules/PSCredentialManager.Api.dll",
+      "sha256": "43ca6c1c63cf8177b67b526f39352ed9c2c56fadbe6a227de0fc27df0c36e4c9",
+      "name": "PSCredentialManager.Api",
+      "version": "1.0.0.0",
+      "mvid": "8140e985-fa0b-4b61-9a71-2248b42b5089",
+      "direct_assemblyref_candidates": [
+        {
+          "path": "modules/CredentialManager.dll",
+          "sha256": "694a871f5a3bdf1151cfadc965394e8f30fc1fe6fc96361062df20b4e7f022d1"
+        }
+      ],
+      "runtime_use": "Unverified"
+    },
+    {
+      "path": "modules/PSCredentialManager.Common.dll",
+      "sha256": "ade4d3af0d0437eb9f00b1c594c8dc1a528a0dd41fc1c1f19034181455bd44fc",
+      "name": "PSCredentialManager.Common",
+      "version": "1.0.0.0",
+      "mvid": "552273e3-6962-487b-9dcd-05c7d68a8846",
+      "direct_assemblyref_candidates": [
+        {
+          "path": "modules/CredentialManager.dll",
+          "sha256": "694a871f5a3bdf1151cfadc965394e8f30fc1fe6fc96361062df20b4e7f022d1"
+        },
+        {
+          "path": "modules/PSCredentialManager.Api.dll",
+          "sha256": "43ca6c1c63cf8177b67b526f39352ed9c2c56fadbe6a227de0fc27df0c36e4c9"
+        }
+      ],
+      "runtime_use": "Unverified"
+    },
+    {
+      "path": "modules/System.DirectoryServices.AccountManagement.dll",
+      "sha256": "b813b45bdf7c56fcd260d231e1eb05a2c4c0a9b365b029779df3d4355e5aa48d",
+      "name": "System.DirectoryServices.AccountManagement",
+      "version": "4.0.0.0",
+      "mvid": "0f9e7aa2-3dc9-4d18-8df2-060a6761d387",
+      "direct_assemblyref_candidates": [
+        {
+          "path": "modules/GPO.dll",
+          "sha256": "bb600a86192f23cba4f3e91b2658454c652f4979e224dd41a85b9ab685c0886a"
+        }
+      ],
+      "runtime_use": "Unverified"
+    },
+    {
+      "path": "modules/common.dll",
+      "sha256": "9a3f0b7727247962c18981e2924f59ff6b01ff6a6ddf2fd74d3129f5b098bb26",
+      "name": "common",
+      "version": "7.0.0.0",
+      "mvid": "6cdcb623-1d54-4c50-861c-3933d650d0e6",
+      "direct_assemblyref_candidates": [
+        {
+          "path": "modules/EventLog.dll",
+          "sha256": "094531ab90bf68cd100d50f95340d24b7aeccc604df76cfff1109b180a08a823"
+        },
+        {
+          "path": "modules/Firewall.dll",
+          "sha256": "2de374ab0116ae1a8f32c274dcbd876acf0ab4ed47bb5e03e4a61d63b026f9ba"
+        },
+        {
+          "path": "modules/GPO.dll",
+          "sha256": "bb600a86192f23cba4f3e91b2658454c652f4979e224dd41a85b9ab685c0886a"
+        },
+        {
+          "path": "modules/credentials.dll",
+          "sha256": "7582cabd4291d45dfafdf1125fe79d4dab07e3076994d7505aa167c60da0cec6"
+        },
+        {
+          "path": "modules/lateral.dll",
+          "sha256": "f877efafec959d731f88057dd06b981ee9482985ec21d72e7eb52cab8c67e76c"
+        },
+        {
+          "path": "modules/recon.dll",
+          "sha256": "c1079fd338765e3842a5f95b9fc66406d2eb7fc4126b4ab8e8d8920f010f67d9"
+        },
+        {
+          "path": "modules/smb.dll",
+          "sha256": "b73c2d2a1912f4bad56055bae21f1ba95a51a96363ac86c38eadd6caece7e9d1"
+        },
+        {
+          "path": "server/SpecterInsight.Server.dll",
+          "sha256": "a6c454cdfc80e5d9bd3906747d30edbe4fcf69ab2e3c2b52b301b6f4b60e46a5"
+        }
+      ],
+      "runtime_use": "Unverified"
+    },
+    {
+      "path": "modules/credentials.dll",
+      "sha256": "7582cabd4291d45dfafdf1125fe79d4dab07e3076994d7505aa167c60da0cec6",
+      "name": "credentials",
+      "version": "7.0.0.0",
+      "mvid": "66e2123c-8084-4777-8a01-8c0c8d98cf12",
+      "direct_assemblyref_candidates": [],
+      "runtime_use": "Unverified"
+    },
+    {
+      "path": "modules/inveigh.dll",
+      "sha256": "f119919c3c5979a205ee4569580976e9fac37a9922eb31e349f2500acdafbcdf",
+      "name": "inveigh",
+      "version": "1.0.0.0",
+      "mvid": "dd68d0b6-7c86-498b-8b34-b6272cc685c9",
+      "direct_assemblyref_candidates": [],
+      "runtime_use": "Unverified"
+    },
+    {
+      "path": "modules/lateral.dll",
+      "sha256": "f877efafec959d731f88057dd06b981ee9482985ec21d72e7eb52cab8c67e76c",
+      "name": "lateral",
+      "version": "7.0.0.0",
+      "mvid": "1ff7e0fb-6336-400a-8b7d-b7ce98773160",
+      "direct_assemblyref_candidates": [],
+      "runtime_use": "Unverified"
+    },
+    {
+      "path": "modules/levelup.dll",
+      "sha256": "9f75f8de371d26e5143dc254109a80434072bb1811a34e305e793d6c930754b9",
+      "name": "levelup",
+      "version": "7.0.0.0",
+      "mvid": "40f5436a-6828-4c54-bdf7-653577796c5c",
+      "direct_assemblyref_candidates": [],
+      "runtime_use": "Unverified"
+    },
+    {
+      "path": "modules/persistence.dll",
+      "sha256": "230ae977abba3f0d1188ed79405cd33771e6eba2acacabcf56c200dfd59c2b9c",
+      "name": "persistence",
+      "version": "7.0.0.0",
+      "mvid": "42388b96-475e-472b-ae9d-ac4f278bba2c",
+      "direct_assemblyref_candidates": [],
+      "runtime_use": "Unverified"
+    },
+    {
+      "path": "modules/reach.dll",
+      "sha256": "5e481dc2ebc2a6476e0f778f86f44943075a3920c157c0f0728332f8c4df45d1",
+      "name": "reach",
+      "version": "7.0.0.0",
+      "mvid": "4d326663-55b6-4436-9ce9-f039ed1ff029",
+      "direct_assemblyref_candidates": [],
+      "runtime_use": "Unverified"
+    },
+    {
+      "path": "modules/recon.dll",
+      "sha256": "c1079fd338765e3842a5f95b9fc66406d2eb7fc4126b4ab8e8d8920f010f67d9",
+      "name": "recon",
+      "version": "7.0.0.0",
+      "mvid": "bbd5cc4d-b74c-46ce-9e98-ccc69f283126",
+      "direct_assemblyref_candidates": [],
+      "runtime_use": "Unverified"
+    },
+    {
+      "path": "modules/smb.dll",
+      "sha256": "b73c2d2a1912f4bad56055bae21f1ba95a51a96363ac86c38eadd6caece7e9d1",
+      "name": "smb",
+      "version": "7.0.0.0",
+      "mvid": "f234a594-5745-4c31-8690-1593d3458a49",
+      "direct_assemblyref_candidates": [],
+      "runtime_use": "Unverified"
+    }
+  ]
+}
