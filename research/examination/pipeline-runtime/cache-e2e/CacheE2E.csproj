@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="SpecterInsight">
+      <HintPath>/home/deleteme/Desktop/SpecterInsight/server/SpecterInsight.exe</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="Common">
+      <HintPath>/home/deleteme/Desktop/SpecterInsight/server/common.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    <Reference Include="SpecterInsight.Obfuscation">
+      <HintPath>/home/deleteme/Desktop/SpecterInsight/server/SpecterInsight.Obfuscation.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="SpecterInsight.Server">
+      <HintPath>/home/deleteme/Desktop/SpecterInsight/server/SpecterInsight.Server.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="System.Management.Automation">
+      <HintPath>/home/deleteme/Desktop/SpecterInsight/server/runtimes/unix/lib/net10.0/System.Management.Automation.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="Microsoft.Management.Infrastructure">
+      <HintPath>/home/deleteme/Desktop/SpecterInsight/server/runtimes/unix/lib/netstandard1.6/Microsoft.Management.Infrastructure.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="Npgsql">
+      <HintPath>/home/deleteme/Desktop/SpecterInsight/server/Npgsql.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="/home/deleteme/Desktop/SpecterInsight/server/*.dll" CopyToOutputDirectory="PreserveNewest" Link="%(Filename)%(Extension)" />
+    <None Include="/home/deleteme/Desktop/SpecterInsight/server/runtimes/unix/lib/net10.0/*.dll" CopyToOutputDirectory="PreserveNewest" Link="%(Filename)%(Extension)" />
+    <None Include="/home/deleteme/Desktop/SpecterInsight/server/runtimes/unix/lib/netstandard1.6/Microsoft.Management.Infrastructure.dll" CopyToOutputDirectory="PreserveNewest" Link="Microsoft.Management.Infrastructure.dll" />
+    <None Include="/home/deleteme/Desktop/SpecterInsight/server/runtimes/linux-x64/native/*.so" CopyToOutputDirectory="PreserveNewest" Link="%(Filename)%(Extension)" />
+  </ItemGroup>
+</Project>

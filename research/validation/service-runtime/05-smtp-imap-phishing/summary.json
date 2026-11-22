@@ -1,0 +1,44 @@
+{
+  "scenario": "smtp-imap-phishing",
+  "correlationId": "svc-05-phishing-20261122",
+  "observed": true,
+  "input": {
+    "smtp": "127.0.0.1:39005, plaintext loopback",
+    "from": "sender@example.invalid",
+    "recipients": ["recipient-one@example.invalid", "recipient-two@example.invalid"],
+    "subject": "Benign runtime fixture",
+    "attachment": "fixture.txt"
+  },
+  "network": {
+    "protocol": "SMTP",
+    "sequence": ["EHLO", "MAIL FROM", "RCPT TO x2", "DATA", "QUIT"],
+    "messageSize": 658,
+    "messageSha256": "7e32bb4f594269ed16bd09ddde0bf1377b9eea7f8c1460e4815ce39e294eb837",
+    "externalTarget": false
+  },
+  "databaseChanges": {
+    "phishing-email-sentRowsBeforeCleanup": 2,
+    "phishing-email-sentRowsAfterCleanup": 0
+  },
+  "fileChanges": [
+    "transcript.jsonl",
+    "message.eml"
+  ],
+  "signalR": {
+    "events": 0,
+    "reason": "EventLoggingService was constructed without a hub; its notification failure was caught after both DB rows were written"
+  },
+  "errorsAndRetry": {
+    "errors": 0,
+    "smtpRetries": 0
+  },
+  "cleanup": {
+    "smtpServerStopped": true,
+    "auditRowsDeleted": true,
+    "externalDelivery": false
+  },
+  "imap": {
+    "runtimeStatus": "not implemented in the supplied managed server",
+    "evidenceBoundary": "No MailKit.Net.Imap/ImapClient use exists; IMAP host/port/SSL are persisted and returned as account metadata only."
+  }
+}

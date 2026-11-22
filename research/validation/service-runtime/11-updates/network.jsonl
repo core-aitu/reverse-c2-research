@@ -1,0 +1,1 @@
+{"bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", "bodySize": 0, "forwarded": false, "headerNames": ["host"], "method": "CONNECT", "path": "dl.dropboxusercontent.com:443", "responseStatus": 502, "timestampUtc": "2026-11-22T12:29:46.616054+00:00"}

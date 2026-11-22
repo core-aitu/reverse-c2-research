@@ -1,0 +1,40 @@
+{
+  "scenario": "loaders",
+  "correlationId": "svc-12-loaders-20261122",
+  "status": "passed",
+  "input": {
+    "platform": "linux-x86_64",
+    "stagedBundleZipBytes": 291,
+    "stagedDepsZipBytes": 295,
+    "managedFixtureBytes": 22
+  },
+  "network": { "requests": 0 },
+  "databaseAndFiles": {
+    "databaseRows": 0,
+    "stagedFiles": 3,
+    "dependenciesFolderExistsAfterCleanup": false
+  },
+  "signalR": { "messages": 0 },
+  "errorsAndRetry": {
+    "missingAssemblyReturnedNull": true,
+    "preCancelledReadRaisedOperationCanceledException": true,
+    "retry": 0
+  },
+  "result": {
+    "hasValidBundle": true,
+    "invalidPlatformAccepted": false,
+    "assemblyManifest": ["fixture.managed.dll", "fx.dll"],
+    "depsAssemblyPrecedenceConfirmed": true,
+    "managedAssemblySha256": "a1474c1c5cdceea6da2659c0cdba091ab8bb476201a5a80af5ca9b06f0d0cdce",
+    "flatBundleBytes": 18756584,
+    "flatBundleSha256Run1": "63698adfeb5d12bb2fb7d01466831ec350a18345420739bebea7619f5f55851a",
+    "flatBundleSha256Run2": "63698adfeb5d12bb2fb7d01466831ec350a18345420739bebea7619f5f55851a",
+    "cacheSameReference": { "runtimeBundle": true, "flatBundle": true, "deps": true },
+    "finding": "On a matching Linux host, GetFlatBundleAsync packages the installed runtime directly even when a staged runtime ZIP exists; the staged ZIP is used by GetRuntimeBundleAsync."
+  },
+  "reproducibility": {
+    "flatBundle": "reproducible across two fresh processes",
+    "fixtureZip": "not byte-reproducible because ZipArchive embeds creation timestamps; content-level assembly hashes are stable"
+  },
+  "cleanup": { "allStagedFixturesRemoved": true }
+}

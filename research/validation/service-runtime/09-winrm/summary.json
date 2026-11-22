@@ -1,0 +1,34 @@
+{
+  "scenario": "winrm",
+  "correlationId": "svc-09-winrm-20261122",
+  "status": "bounded-failure-path-passed",
+  "input": {
+    "target": "http://127.0.0.1:39011/wsman",
+    "auth": "PassTheHash",
+    "username": "FIXTURE\\user",
+    "ntHash": "fixture/redacted"
+  },
+  "network": {
+    "requests": 2,
+    "sequence": ["POST /wsman without Authorization -> 401 NTLM", "POST /wsman with Authorization -> 401 NTLM"],
+    "forwardedOutsideLoopback": 0,
+    "logSha256": "4a15ce460c88ed3570e2e134490ff84dfbd96642f01773140350049fe52f09bf"
+  },
+  "databaseAndFiles": {
+    "authFailureEventsBeforeCleanup": 1,
+    "authFailureEventsAfterCleanup": 0,
+    "sessionsCreated": 0,
+    "filesChanged": 0
+  },
+  "signalR": { "EventNotification": 1 },
+  "errorsAndRetry": {
+    "error": "AuthenticationException: WinRM NTLM: no Negotiate/NTLM challenge in Type1 response.",
+    "authenticationRoundTrips": 2,
+    "applicationRetry": 0
+  },
+  "cleanup": { "failureEventRemoved": true, "mockServerStopped": true },
+  "limitations": [
+    "A successful WSMan/PSRP session, command, upload and download require a Windows WinRM endpoint and remain unverified.",
+    "The local mock intentionally returned an incomplete NTLM challenge and captured header presence only, never credential material."
+  ]
+}

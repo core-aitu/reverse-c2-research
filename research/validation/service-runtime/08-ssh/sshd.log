@@ -1,0 +1,16 @@
+Server listening on 127.0.0.1 port 39010.
+WARNING: 'UsePAM no' is not supported in this build and may cause several problems.
+Connection from 127.0.0.1 port 57458 on 127.0.0.1 port 39010 rdomain ""
+Accepted key ED25519 SHA256:/IiPzt0WfB1jw+/191vMnfPY+DuJW3GFFQ7jbAWHoAw found at /tmp/specter-services-runtime/authorized_keys:1
+Accepted publickey for deleteme from 127.0.0.1 port 57458 ssh2: ED25519 SHA256:/IiPzt0WfB1jw+/191vMnfPY+DuJW3GFFQ7jbAWHoAw
+User child is on pid 94610
+Starting session: command for deleteme from 127.0.0.1 port 57458 id 0
+Close session: user deleteme from 127.0.0.1 port 57458 id 0
+Starting session: command for deleteme from 127.0.0.1 port 57458 id 0
+Close session: user deleteme from 127.0.0.1 port 57458 id 0
+Starting session: command for deleteme from 127.0.0.1 port 57458 id 0
+Close session: user deleteme from 127.0.0.1 port 57458 id 0
+Starting session: command for deleteme from 127.0.0.1 port 57458 id 0
+Close session: user deleteme from 127.0.0.1 port 57458 id 0
+Received disconnect from 127.0.0.1 port 57458:11: Connection terminated by the client.
+Disconnected from user deleteme 127.0.0.1 port 57458

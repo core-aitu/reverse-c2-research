@@ -1,0 +1,48 @@
+PRECONDITION FAILURE (resolved in the final run): this log records the initial
+attempt before libc++abi.so.1 was supplied. The final shipped-transformer run
+completed twice; see runtime-report.json, artifact-hashes.txt, and
+bflat-dependencies.txt. This historical stderr is retained to document why the
+first attempt failed.
+
+Error: DllNotFound_Linux, objwriter, 
+objwriter.so: cannot open shared object file: No such file or directory
+libc++abi.so.1: cannot open shared object file: No such file or directory
+objwriter: cannot open shared object file: No such file or directory
+libobjwriter: cannot open shared object file: No such file or directory
+
+System.DllNotFoundException: DllNotFound_Linux, objwriter, 
+objwriter.so: cannot open shared object file: No such file or directory
+libc++abi.so.1: cannot open shared object file: No such file or directory
+objwriter: cannot open shared object file: No such file or directory
+libobjwriter: cannot open shared object file: No such file or directory
+
+   at System.Runtime.InteropServices.NativeLibrary.LoadLibErrorTracker.Throw(String) + 0x47
+   at Internal.Runtime.CompilerHelpers.InteropHelpers.FixupModuleCell(InteropHelpers.ModuleFixupCell*) + 0x127
+   at Internal.Runtime.CompilerHelpers.InteropHelpers.ResolvePInvokeSlow(InteropHelpers.MethodFixupCell*) + 0x35
+   at ILCompiler.DependencyAnalysis.ObjectWriter.InitObjWriter(String, String) + 0x43
+   at ILCompiler.DependencyAnalysis.ObjectWriter..ctor(String, NodeFactory, ObjectWritingOptions) + 0x19a
+   at ILCompiler.DependencyAnalysis.ObjectWriter.EmitObject(String, IReadOnlyCollection`1, NodeFactory, ObjectWritingOptions, IObjectDumper, Logger) + 0x85
+   at ILCompiler.Compilation.ILCompiler.ICompilation.Compile(String, ObjectDumper) + 0x32
+   at BuildCommand.Handle(ParseResult) + 0x2fef
+   at System.CommandLine.Invocation.InvocationPipeline.<>c__DisplayClass4_0.<<BuildInvocationChain>b__0>d.MoveNext() + 0x139
+--- End of stack trace from previous location ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw() + 0x1c
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task) + 0xbe
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task, ConfigureAwaitOptions) + 0x4e
+   at System.CommandLine.Builder.CommandLineBuilderExtensions.<>c__DisplayClass17_0.<<UseParseErrorReporting>b__0>d.MoveNext() + 0xf2
+--- End of stack trace from previous location ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw() + 0x1c
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task) + 0xbe
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task, ConfigureAwaitOptions) + 0x4e
+   at System.CommandLine.Builder.CommandLineBuilderExtensions.<>c__DisplayClass12_0.<<UseHelp>b__0>d.MoveNext() + 0xbf
+--- End of stack trace from previous location ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw() + 0x1c
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task) + 0xbe
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task, ConfigureAwaitOptions) + 0x4e
+   at System.CommandLine.Builder.CommandLineBuilderExtensions.<>c__DisplayClass23_0.<<UseVersionOption>b__0>d.MoveNext() + 0x1dd
+--- End of stack trace from previous location ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw() + 0x1c
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task) + 0xbe
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task, ConfigureAwaitOptions) + 0x4e
+   at System.CommandLine.Invocation.InvocationPipeline.<Invoke>g__FullInvocationChain|3_0(InvocationContext) + 0x8a
+   at Program.Main(String[] args) + 0x2b4

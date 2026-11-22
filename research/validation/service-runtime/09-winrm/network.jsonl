@@ -1,0 +1,2 @@
+{"bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", "bodySize": 0, "hasAuthorization": false, "headerNames": ["content-length", "host"], "method": "POST", "path": "/wsman", "responseStatus": 401, "timestampUtc": "2026-11-22T12:25:06.475646+00:00"}
+{"bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", "bodySize": 0, "hasAuthorization": true, "headerNames": ["authorization", "content-length", "host"], "method": "POST", "path": "/wsman", "responseStatus": 401, "timestampUtc": "2026-11-22T12:25:06.495768+00:00"}

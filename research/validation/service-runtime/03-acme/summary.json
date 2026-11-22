@@ -1,0 +1,42 @@
+{
+  "scenario": "acme",
+  "correlationId": "svc-03-acme-20261122",
+  "status": "failure-path-observed; successful issuance intentionally not attempted",
+  "input": {
+    "email": "fixture@example.invalid",
+    "serviceMethod": "AcmeService.CreateAcmeAccount",
+    "directory": "LetsEncryptV2"
+  },
+  "network": [
+    {
+      "method": "CONNECT",
+      "destination": "acme-v02.api.letsencrypt.org:443",
+      "forwardedExternally": false,
+      "localProxyResponse": 502
+    }
+  ],
+  "databaseChanges": {
+    "AcmeAccountRowsForFixture": 0
+  },
+  "fileChanges": {
+    "certificateFiles": 0,
+    "pfxFiles": 0
+  },
+  "signalR": {
+    "events": 0,
+    "reason": "AcmeService has no hub dependency"
+  },
+  "errorsAndRetry": {
+    "exceptionType": "System.Net.Http.HttpRequestException",
+    "exception": "proxy tunnel failed with 502",
+    "capturedNetworkAttempts": 1,
+    "serviceRetryObserved": false
+  },
+  "cleanup": {
+    "proxyStopped": true,
+    "remoteAccountCreated": false,
+    "localDatabaseRowCreated": false,
+    "certificateCleanupRequired": false
+  },
+  "limitations": "No real ACME account, DNS challenge, or certificate was requested. Successful issuance remains unobserved because the implementation has a hard-coded public CA endpoint."
+}

@@ -1,0 +1,25 @@
+{
+  "observed": true,
+  "database": "disposable local PostgreSQL; minimal Event and PayloadPipelines schema",
+  "pipeline": "runtime_cache_e2e",
+  "output": {
+    "size": 4,
+    "sha256Initial": "9f64a747e1b97f131fabb6b447296c9b6f0201e79fb3c5356e6c77e89b6a806a",
+    "sha256Regenerated": "9f64a747e1b97f131fabb6b447296c9b6f0201e79fb3c5356e6c77e89b6a806a",
+    "equal": true
+  },
+  "eventCountsAtObservation": {
+    "payload-generated": 2,
+    "payload-cache-expired": 1,
+    "payload-cached": 2
+  },
+  "eventCountsAfterPolicyStop": {
+    "payload-generated": 2,
+    "payload-retrieved-from-cache": 1,
+    "payload-cache-expired": 1,
+    "payload-cached": 2
+  },
+  "cacheEntries": 1,
+  "implementation": "real PayloadCachingService -> PayloadsService -> PayloadPipelineService -> RunspacePoolService",
+  "limitations": "PayloadPipelineService constructor was bypassed to avoid its unrelated process patch routine; its real RunPipelineAsync method and all cache/payload methods were used. Event hub was null; database logging remained active."
+}

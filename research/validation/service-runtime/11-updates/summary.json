@@ -1,0 +1,37 @@
+{
+  "scenario": "updates",
+  "correlationId": "svc-11-updates-20261122",
+  "status": "safe-subpaths-passed",
+  "input": {
+    "currentVersion": "7.0.0.0",
+    "clientFixtureBytes": 29,
+    "latestVersionEndpoint": "hard-coded Dropbox URL"
+  },
+  "network": {
+    "requests": 1,
+    "request": "CONNECT dl.dropboxusercontent.com:443",
+    "result": "local reject proxy 502",
+    "forwarded": 0
+  },
+  "databaseAndFiles": {
+    "databaseRows": 0,
+    "clientZipBytes": 151,
+    "clientZipSha256": "52597c6354d4cf6b5d186e28baeeea37d538b8ca72bbb5903cd6a0e948469d08",
+    "clientAndUpdatesFoldersExistAfterCleanup": false
+  },
+  "signalR": { "messages": 0 },
+  "errorsAndRetry": {
+    "versionCheck": "HttpRequestException after local proxy 502",
+    "applicationRetry": 0
+  },
+  "result": {
+    "validVersionParse": "12.34.56",
+    "invalidVersionAccepted": false,
+    "initialUpdateStatus": "Complete"
+  },
+  "cleanup": { "zipRemoved": true, "fixtureClientRemoved": true, "proxyStopped": true },
+  "limitations": [
+    "RunUpdateDropbox/RunUpdateScript was intentionally not executed because it downloads a public archive, kills the current server process, overwrites the installation, and restarts it.",
+    "Therefore download-progress SignalR and post-update restart remain unverified."
+  ]
+}

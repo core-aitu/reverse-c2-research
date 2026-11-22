@@ -1,0 +1,46 @@
+{
+  "scenario": "tunnels",
+  "correlationId": "svc-10-tunnels-20261122",
+  "status": "partial-runtime-passed",
+  "input": {
+    "session": "fixture-session",
+    "localPort": 39012,
+    "remote": "127.0.0.1:9",
+    "isolation": "new user and network namespace; loopback only"
+  },
+  "network": {
+    "listener": "0.0.0.0:39012 inside isolated network namespace",
+    "syntheticConnections": 1,
+    "externalInterfaces": 0,
+    "implantForwarding": 0
+  },
+  "databaseAndFiles": {
+    "rows": 0,
+    "files": 0,
+    "reason": "The isolated network namespace could not reach PostgreSQL; EventLoggingService swallowed its DB connection failures."
+  },
+  "signalR": {
+    "messages": 6,
+    "methods": { "TunnelInitiatorStart": 1, "TunnelInitiatorStop": 1, "EventNotification": 4 }
+  },
+  "errorsAndRetry": {
+    "connect": "Expected forwarding failure because no real implant SessionsService was provided.",
+    "retry": 0
+  },
+  "result": {
+    "initiatorsAfterStart": 1,
+    "pairsAfterConnect": 1,
+    "initiatorsAfterStop": 0,
+    "pairsAfterStop": 1,
+    "finding": "StopTunnelAsync removes the initiator/listener but retains the TunnelPair dictionary entry."
+  },
+  "cleanup": {
+    "listenerStopped": true,
+    "networkNamespaceDestroyed": true,
+    "retainedPairUntilProcessExit": 1
+  },
+  "limitations": [
+    "End-to-end forwarding through a live implant was not attempted.",
+    "Tunnel Event rows were not persisted because namespace isolation intentionally cut PostgreSQL connectivity; equivalent EventLogging persistence was exercised in other scenarios."
+  ]
+}

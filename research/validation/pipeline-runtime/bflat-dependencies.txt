@@ -1,0 +1,9 @@
+Fedora packages downloaded to /tmp only; not installed system-wide:
+ef8a6a5622472b0fe89a38596fce00d5a39d9642aceff7a39dcc41f454814516  libcxx-22.1.8-4.fc44.x86_64.rpm
+a2cbbe96714fca3fdd8a6b2343accadeccc1036466b92b69b24af2b19cf90533  libcxxabi-22.1.8-4.fc44.x86_64.rpm
+
+Extracted libraries used through LD_LIBRARY_PATH:
+8af52d8e7bf26612f75d492dfe0b9a4e1bfecf0b96b8acb75809f0e9f676e2a9  libc++.so.1.0
+051681be0fc1121c4fdbe0d74f976b804c4c77a5a247c2f251e853e11884c0c2  libc++abi.so.1.0
+
+The shipped dependencies/bflat/bin/lld and llvm-objcopy required their executable bits to be restored; their contents were not modified.

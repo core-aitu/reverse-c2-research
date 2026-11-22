@@ -1,0 +1,45 @@
+{
+  "scenario": "ssh",
+  "correlationId": "svc-08-ssh-20261122",
+  "status": "passed",
+  "input": {
+    "target": "127.0.0.1:39010",
+    "username": "deleteme",
+    "auth": "ephemeral Ed25519 private key",
+    "publicKeySha256": "78e5fd84c5adbafb9e4e94d346b2302e7ccb4a08b6c7014ed7d078653394b2ca",
+    "command": "printf correlation",
+    "uploadBytes": 24
+  },
+  "network": {
+    "connections": 1,
+    "scope": "loopback only",
+    "serverLog": "sshd.log",
+    "serverLogSha256": "5829c5cfb4878dd92fbaf6dd2f4aa8862fbcdb51a2161adf3f59b57f5cbabd3e"
+  },
+  "databaseAndFiles": {
+    "sshTasksBeforeCleanup": 2,
+    "eventRowsBeforeCleanup": 4,
+    "sshSessionRowsAfterCleanup": 0,
+    "remoteFile": "/tmp/specter-ssh-runtime-<session>.txt",
+    "remoteFileRemoved": true
+  },
+  "signalR": {
+    "messages": 10,
+    "methods": { "EventNotification": 4, "SshSessionUpdate": 2, "SshTaskUpdate": 4 }
+  },
+  "result": {
+    "connected": true,
+    "commandOutput": "svc-08-ssh-20261122",
+    "downloadedBytes": 24,
+    "downloadedSha256": "d3bd82100c085cc5faa52f58cb0af155dd50c9f627f32fb8cee928267784b631",
+    "sessionEndedAtSet": true
+  },
+  "errorsAndRetry": { "errors": 0, "applicationRetry": 0 },
+  "cleanup": {
+    "remoteFileRemoved": true,
+    "sessionAndCascadeTasksRemoved": true,
+    "eventRowsRemoved": true,
+    "sshdStopped": true,
+    "ephemeralKeysRemoved": true
+  }
+}

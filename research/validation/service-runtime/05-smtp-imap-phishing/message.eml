@@ -1,0 +1,20 @@
+From: Runtime Fixture <sender@example.invalid>
+Date: Sun, 22 Nov 2026 17:06:11 +0500
+Subject: Benign runtime fixture
+Message-Id: <QSKHIAFAWUU4.1CYYTLVX9C74@fenix>
+To: recipient-one@example.invalid, recipient-two@example.invalid
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="=-IysCHsiR6XlXTxf3dOLqMA=="
+
+--=-IysCHsiR6XlXTxf3dOLqMA==
+Content-Type: text/html; charset=utf-8
+
+<p>Correlation svc-05-phishing-20261122</p>
+--=-IysCHsiR6XlXTxf3dOLqMA==
+Content-Type: text/plain; name=fixture.txt
+Content-Transfer-Encoding: 7bit
+Content-Disposition: attachment; filename=fixture.txt
+
+benign attachment
+
+--=-IysCHsiR6XlXTxf3dOLqMA==--

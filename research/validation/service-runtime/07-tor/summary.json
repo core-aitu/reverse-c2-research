@@ -1,0 +1,36 @@
+{
+  "scenario": "tor",
+  "correlationId": "svc-07-tor-20261122",
+  "status": "bounded-failure-path-passed",
+  "input": {
+    "socksPort": 39008,
+    "streamTarget": "127.0.0.1:1"
+  },
+  "network": {
+    "requests": 14,
+    "uniqueAuthorities": 7,
+    "forwarded": 0,
+    "response": "local reject proxy 502",
+    "explanation": "Seven constructor background attempts plus seven explicit StartAsync attempts."
+  },
+  "databaseAndFiles": { "changes": 0 },
+  "signalR": { "messages": 0 },
+  "errorsAndRetry": {
+    "start": "InvalidOperationException: All Tor directory authorities failed",
+    "streamBeforeBootstrap": "InvalidOperationException: Tor service is not running. Call StartAsync first.",
+    "authorityFailoverPerBootstrap": 7,
+    "automaticApplicationRetryAfterAllAuthorities": 0
+  },
+  "result": {
+    "initialRunning": false,
+    "bootstrapped": false,
+    "relays": 0,
+    "finalRunning": false,
+    "notableState": "SocksPort remains 39008 after failed StartAsync even though IsRunning is false."
+  },
+  "cleanup": { "disposed": true, "proxyStopped": true },
+  "limitations": [
+    "A successful Tor bootstrap/circuit/SOCKS flow was intentionally not attempted because it requires the public Tor network.",
+    "All hard-coded directory addresses were intercepted locally and never reached."
+  ]
+}

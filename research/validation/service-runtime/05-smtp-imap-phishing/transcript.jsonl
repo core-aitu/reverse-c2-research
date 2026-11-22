@@ -1,0 +1,16 @@
+{"timestampUtc": "2026-11-22T12:06:11.771610+00:00", "direction": "server", "line": "220 localhost Specter runtime SMTP fixture"}
+{"timestampUtc": "2026-11-22T12:06:11.797034+00:00", "direction": "client", "line": "EHLO fenix"}
+{"timestampUtc": "2026-11-22T12:06:11.797122+00:00", "direction": "server", "line": "250-localhost"}
+{"timestampUtc": "2026-11-22T12:06:11.797223+00:00", "direction": "server", "line": "250 SIZE 1048576"}
+{"timestampUtc": "2026-11-22T12:06:11.890813+00:00", "direction": "client", "line": "MAIL FROM:<sender@example.invalid> SIZE=658"}
+{"timestampUtc": "2026-11-22T12:06:11.890981+00:00", "direction": "server", "line": "250 OK"}
+{"timestampUtc": "2026-11-22T12:06:11.896830+00:00", "direction": "client", "line": "RCPT TO:<recipient-one@example.invalid>"}
+{"timestampUtc": "2026-11-22T12:06:11.896899+00:00", "direction": "server", "line": "250 OK"}
+{"timestampUtc": "2026-11-22T12:06:11.899472+00:00", "direction": "client", "line": "RCPT TO:<recipient-two@example.invalid>"}
+{"timestampUtc": "2026-11-22T12:06:11.899526+00:00", "direction": "server", "line": "250 OK"}
+{"timestampUtc": "2026-11-22T12:06:11.899833+00:00", "direction": "client", "line": "DATA"}
+{"timestampUtc": "2026-11-22T12:06:11.899864+00:00", "direction": "server", "line": "354 End data with <CR><LF>.<CR><LF>"}
+{"timestampUtc": "2026-11-22T12:06:11.906892+00:00", "direction": "message", "line": "{\"sha256\": \"7e32bb4f594269ed16bd09ddde0bf1377b9eea7f8c1460e4815ce39e294eb837\", \"size\": 658}"}
+{"timestampUtc": "2026-11-22T12:06:11.906930+00:00", "direction": "server", "line": "250 2.0.0 queued"}
+{"timestampUtc": "2026-11-22T12:06:11.909816+00:00", "direction": "client", "line": "QUIT"}
+{"timestampUtc": "2026-11-22T12:06:11.909864+00:00", "direction": "server", "line": "221 Bye"}

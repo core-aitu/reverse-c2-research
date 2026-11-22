@@ -1,0 +1,34 @@
+{
+  "scenario": "webdav",
+  "correlationId": "svc-04-webdav-20261122",
+  "observed": true,
+  "input": {
+    "name": "fixture/sub/hello.txt",
+    "size": 22,
+    "sha256": "6922018b292e2d72a1fd8bdfd26acefa6ef09bf7b68053c8154d8e6611277fa1"
+  },
+  "network": [],
+  "databaseChanges": {},
+  "fileChanges": {
+    "createdDirectories": 2,
+    "createdFiles": 1,
+    "readBackSize": 22,
+    "readBackSha256": "6922018b292e2d72a1fd8bdfd26acefa6ef09bf7b68053c8154d8e6611277fa1",
+    "entriesBeforeCleanup": 3,
+    "filesAfterCleanup": 0
+  },
+  "signalR": {
+    "method": "WebDavFilesChanged",
+    "events": 3,
+    "sources": ["CreateDirectory", "RegisterFile", "UnregisterFile"]
+  },
+  "errorsAndRetry": {
+    "errors": 0,
+    "retries": 0
+  },
+  "cleanup": {
+    "fixtureRemoved": true,
+    "webDavRootExists": false
+  },
+  "limitations": "This scenario exercised the management service and SignalR broadcast. Listener-side HTTP OPTIONS/PROPFIND/GET/HEAD routing was not hosted in this process."
+}

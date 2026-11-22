@@ -1,0 +1,49 @@
+{
+  "scenario": "postgresql-and-background-queues",
+  "correlationId": "svc-01-postgres-cache-20261122",
+  "observed": true,
+  "input": {
+    "database": "disposable PostgreSQL 16.4 on 127.0.0.1:32769",
+    "pipeline": "runtime_cache_e2e",
+    "payloadHex": "01020304",
+    "cacheTtlMs": 700,
+    "regenerateOnExpiration": true
+  },
+  "network": [
+    {
+      "direction": "outbound-loopback",
+      "protocol": "PostgreSQL",
+      "destination": "127.0.0.1:32769",
+      "externalTarget": false
+    }
+  ],
+  "databaseChanges": {
+    "payload-generated": 2,
+    "payload-cache-expired": 1,
+    "payload-cached": 2,
+    "payload-retrieved-from-cache": 1
+  },
+  "fileChanges": [
+    "temporary probe root and copied default/configuration.json under /tmp/specter-services-cache"
+  ],
+  "signalR": {
+    "events": 0,
+    "reason": "hub intentionally null; EventLoggingService caught the notification failure while PostgreSQL logging continued"
+  },
+  "errorsAndRetry": {
+    "errorsEscapingScenario": 0,
+    "backgroundRegenerationCount": 1,
+    "pollDeadlineMs": 5000
+  },
+  "result": {
+    "initialSha256": "9f64a747e1b97f131fabb6b447296c9b6f0201e79fb3c5356e6c77e89b6a806a",
+    "regeneratedSha256": "9f64a747e1b97f131fabb6b447296c9b6f0201e79fb3c5356e6c77e89b6a806a",
+    "cacheEntriesAfterRegeneration": 1
+  },
+  "cleanup": {
+    "policyChangedToRegenerate": false,
+    "policyTtlMinutes": 10,
+    "postgresContainer": "removed after all sequential scenarios",
+    "temporaryFiles": "removed after evidence extraction"
+  }
+}

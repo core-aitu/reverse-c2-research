@@ -1,0 +1,53 @@
+{
+  "scenario": "elasticsearch-kibana",
+  "correlationId": "svc-02-elastic-20261122",
+  "observed": true,
+  "input": {
+    "elasticsearch": "8.15.1 disposable container",
+    "kibana": "8.15.1 disposable container",
+    "index": "specter-runtime-fixture",
+    "document": {
+      "CorrelationId": "svc-02-elastic-20261122",
+      "Fixture": "benign-runtime-document",
+      "Count": 1
+    }
+  },
+  "network": {
+    "elasticServiceViaCaptureProxy": [
+      "PUT /_template/specter_index_template -> 200",
+      "HEAD /specter-runtime-fixture -> 404",
+      "PUT /specter-runtime-fixture -> 200",
+      "POST /specter-runtime-fixture/_doc -> 201"
+    ],
+    "kibanaChecks": [
+      "GET /api/status -> 200 available",
+      "GET /api/saved_objects/_find?type=dashboard&per_page=1 -> 200 total=0"
+    ],
+    "externalTarget": false
+  },
+  "databaseChanges": {
+    "postgresql": 0,
+    "elasticsearchDocuments": 1,
+    "elasticsearchLegacyTemplates": 1,
+    "kibanaDashboards": 0
+  },
+  "fileChanges": [
+    "http.jsonl capture",
+    "kibana-status.json capture"
+  ],
+  "signalR": {
+    "events": 0,
+    "reason": "ElasticService has no SignalR dependency"
+  },
+  "errorsAndRetry": {
+    "serviceErrors": 0,
+    "capturedRetries": 0,
+    "notableBranch": "HEAD 404 followed once by index creation",
+    "dashboardsMethod": "EnsureDashboardsExistAsync returned without network activity"
+  },
+  "cleanup": {
+    "elasticsearchContainer": "removed after evidence extraction",
+    "kibanaContainer": "removed after evidence extraction",
+    "dockerNetwork": "removed after evidence extraction"
+  }
+}

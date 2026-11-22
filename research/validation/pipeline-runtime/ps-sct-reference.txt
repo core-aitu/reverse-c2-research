@@ -1,0 +1,12 @@
+Source: dependencies/specter-pipelines.json
+Source SHA-256: f29c183391c77efa3d654abd94cbe543616b55d7cf88b4e212c5e3495d447287
+
+Definitions with name == ps_sct_file: 0
+Static scriptBlock references containing ps_sct_file: 1
+Consumer: ps_cmstp_file (pipelineId f7a8b9c0d1e243f4a5b6c7d8e9f0a1b2)
+Consumer expression: Get-PayloadURL -Pipeline 'ps_sct_file'
+
+Related shipped definition:
+generic_sct_file (pipelineId e0f1a2b3c4d546e7f8a9b0c1d2e3f4a5) accepts a mandatory Command and calls New-SctFile.
+
+Conclusion for this supplied image: ps_sct_file is a dangling static reference. No exact definition is present in the manifest, local database/dump, backup, update archive, or reconstructed managed code. No replacement definition was synthesized.

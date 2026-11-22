@@ -1,0 +1,45 @@
+{
+  "scenario": "ai-providers-mcp",
+  "correlationId": "svc-06-ai-mcp-20261122",
+  "status": "passed-with-bounded-provider-failures",
+  "input": {
+    "openAiKey": "fixture/redacted",
+    "anthropicKey": "fixture/redacted",
+    "ollamaEndpoint": "http://127.0.0.1:39006",
+    "mcpFunction": "RuntimeMcpFixture(Name=fixture)"
+  },
+  "network": {
+    "ollama": "GET /api/tags -> 200; fixture-a, fixture-b",
+    "openAi": "CONNECT api.openai.com:443 -> local reject proxy 502; never forwarded",
+    "anthropic": "CONNECT api.anthropic.com:443 -> local reject proxy 502; never forwarded",
+    "attemptsRecorded": 2,
+    "note": "The first attempt exposed an enum-mapping initialization defect in the harness; the corrected replay produced the same provider requests and completed."
+  },
+  "databaseAndFiles": {
+    "aiFunctionDefinitionRowsBeforeCleanup": 1,
+    "aiFunctionDefinitionRowsAfterCleanup": 0,
+    "persistentFilesCreated": 0
+  },
+  "signalR": {
+    "messages": 0,
+    "reason": "MCP creates a synthetic session not present in AiSessions; best-effort tool-call persistence fails before broadcast and is swallowed by AiToolHost."
+  },
+  "result": {
+    "providersReturned": ["Ollama"],
+    "mcpToolsRegistered": 1,
+    "mcpOutput": "hello fixture"
+  },
+  "errorsAndRetry": {
+    "providerSuppression": "ListAllModelsAsync suppresses failed provider exceptions and returns successful providers only.",
+    "applicationRetry": 0,
+    "harnessRetry": 1
+  },
+  "cleanup": {
+    "definitionRemoved": true,
+    "loopbackServersStopped": true
+  },
+  "limitations": [
+    "The MCP tool registration and execution core was exercised directly; an HTTP/SSE MCP transport handshake was not hosted.",
+    "No external AI provider accepted a request and no real API key was used."
+  ]
+}

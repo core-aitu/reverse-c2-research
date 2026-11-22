@@ -1,0 +1,391 @@
+{
+  "StartedUtc": "2026-11-22T10:46:43.1448506Z",
+  "Host": "Unix 6.19.10.300; .NET 10.0.13; X64; pointer=8",
+  "Artifacts": [
+    {
+      "Pipeline": "C# compiler",
+      "Run": "run-1",
+      "Input": "inert C# library: Fixture.Value()=\u003E42",
+      "Output": "/tmp/specter-pipeline-runtime-final3/artifacts/csharp-1.dll",
+      "Sha256": "c6af0c11823d78ad3396c97d9620b4d2a8a3172250bee6a9a2a53baf6fb57a91",
+      "Size": 5120,
+      "Format": "PE/.NET assembly",
+      "Status": "observed",
+      "Limitations": "Compiled by shipped Roslyn transformer; artifact not executed."
+    },
+    {
+      "Pipeline": "C# compiler",
+      "Run": "run-2",
+      "Input": "inert C# library: Fixture.Value()=\u003E42",
+      "Output": "/tmp/specter-pipeline-runtime-final3/artifacts/csharp-2.dll",
+      "Sha256": "f4306fc9685b40a1c0dbb6712dd1d633d47f9369a0a34bf50a3cf87ae00c0056",
+      "Size": 5120,
+      "Format": "PE/.NET assembly",
+      "Status": "observed",
+      "Limitations": "Compiled by shipped Roslyn transformer; artifact not executed."
+    },
+    {
+      "Pipeline": "BFlat / NativeAOT",
+      "Run": "run-1",
+      "Input": "inert C# console program returning 0",
+      "Output": "/tmp/specter-pipeline-runtime-final3/artifacts/bflat-nativeaot-1.elf",
+      "Sha256": "2ba028463dc64142565246c9fe407fdf57c796a78145d7c81a81aca80de60833",
+      "Size": 3770408,
+      "Format": "ELF native executable",
+      "Status": "observed",
+      "Limitations": "Compiled by shipped BFlat transformer; artifact not executed."
+    },
+    {
+      "Pipeline": "BFlat / NativeAOT",
+      "Run": "run-2",
+      "Input": "inert C# console program returning 0",
+      "Output": "/tmp/specter-pipeline-runtime-final3/artifacts/bflat-nativeaot-2.elf",
+      "Sha256": "4b4acc5228235f11a622429411ae3479b921ea43e334d19ac34e3663b98e8078",
+      "Size": 3770408,
+      "Format": "ELF native executable",
+      "Status": "observed",
+      "Limitations": "Compiled by shipped BFlat transformer; artifact not executed."
+    },
+    {
+      "Pipeline": "Zig",
+      "Run": "run-1",
+      "Input": "inert Zig main with no effects",
+      "Output": "/tmp/specter-pipeline-runtime-final3/artifacts/zig-linux-1.elf",
+      "Sha256": "53cdd870aee55789db86524576dc5f320fb7299e1d504e1ad68282a4766a7ed4",
+      "Size": 4176,
+      "Format": "ELF native executable",
+      "Status": "observed",
+      "Limitations": "Compiled by shipped Zig transformer; artifact not executed."
+    },
+    {
+      "Pipeline": "Zig",
+      "Run": "run-2",
+      "Input": "inert Zig main with no effects",
+      "Output": "/tmp/specter-pipeline-runtime-final3/artifacts/zig-linux-2.elf",
+      "Sha256": "53cdd870aee55789db86524576dc5f320fb7299e1d504e1ad68282a4766a7ed4",
+      "Size": 4176,
+      "Format": "ELF native executable",
+      "Status": "observed",
+      "Limitations": "Compiled by shipped Zig transformer; artifact not executed."
+    },
+    {
+      "Pipeline": "Zig PE fixture",
+      "Run": "run-1",
+      "Input": "inert exported Run returning true",
+      "Output": "/tmp/specter-pipeline-runtime-final3/artifacts/zig-inert-x64-1.dll",
+      "Sha256": "b790c6dba6abec2c199f11c300f53a824578001b4dd0691987e4a71b9458dabb",
+      "Size": 4608,
+      "Format": "PE32\u002B native DLL",
+      "Status": "observed",
+      "Limitations": "Fixture for SRDI conversion only; not loaded or executed."
+    },
+    {
+      "Pipeline": "Zig PE fixture",
+      "Run": "run-2",
+      "Input": "inert exported Run returning true",
+      "Output": "/tmp/specter-pipeline-runtime-final3/artifacts/zig-inert-x64-2.dll",
+      "Sha256": "3844790216629e9f3e7472f82ba2c19da20d95b6d9660dd396c2ab2192463e2a",
+      "Size": 4608,
+      "Format": "PE32\u002B native DLL",
+      "Status": "observed",
+      "Limitations": "Fixture for SRDI conversion only; not loaded or executed."
+    },
+    {
+      "Pipeline": "Zig raw-section extractor",
+      "Run": "run-1",
+      "Input": "inert freestanding _start containing only an infinite loop",
+      "Output": "/tmp/specter-pipeline-runtime-final3/artifacts/zig-raw-text-1.bin",
+      "Sha256": "423d0f940572195de35a22e8ba0f88e4deb358e980007119ccd19eea6321d8b1",
+      "Size": 6,
+      "Format": "raw .text bytes",
+      "Status": "observed",
+      "Limitations": "Extracted with the shipped transformer and zig objcopy; bytes were never executed."
+    },
+    {
+      "Pipeline": "Zig raw-section extractor",
+      "Run": "run-2",
+      "Input": "inert freestanding _start containing only an infinite loop",
+      "Output": "/tmp/specter-pipeline-runtime-final3/artifacts/zig-raw-text-2.bin",
+      "Sha256": "423d0f940572195de35a22e8ba0f88e4deb358e980007119ccd19eea6321d8b1",
+      "Size": 6,
+      "Format": "raw .text bytes",
+      "Status": "observed",
+      "Limitations": "Extracted with the shipped transformer and zig objcopy; bytes were never executed."
+    },
+    {
+      "Pipeline": "PowerShell remove-comments",
+      "Run": "run-1",
+      "Input": "benign local script",
+      "Output": "/tmp/specter-pipeline-runtime-final3/artifacts/powershell-comments-1.ps1",
+      "Sha256": "548d0bb4e9ed0801adfb2f2a51be33dbccf39acc6772dbb443da72cbdb011ca2",
+      "Size": 46,
+      "Format": "UTF-8 PowerShell source",
+      "Status": "observed",
+      "Limitations": "Pure token transform; output not executed."
+    },
+    {
+      "Pipeline": "PowerShell string-base64",
+      "Run": "run-1",
+      "Input": "benign local script",
+      "Output": "/tmp/specter-pipeline-runtime-final3/artifacts/powershell-base64-1.ps1",
+      "Sha256": "f4bb54ff0bc154ff81c80a88a9c9e518b7a843dfd1934308f69ddc4bf2ddd93e",
+      "Size": 672,
+      "Format": "UTF-8 PowerShell source",
+      "Status": "observed",
+      "Limitations": "Uses randomized helper name/offset; output not executed."
+    },
+    {
+      "Pipeline": "PowerShell remove-comments",
+      "Run": "run-2",
+      "Input": "benign local script",
+      "Output": "/tmp/specter-pipeline-runtime-final3/artifacts/powershell-comments-2.ps1",
+      "Sha256": "548d0bb4e9ed0801adfb2f2a51be33dbccf39acc6772dbb443da72cbdb011ca2",
+      "Size": 46,
+      "Format": "UTF-8 PowerShell source",
+      "Status": "observed",
+      "Limitations": "Pure token transform; output not executed."
+    },
+    {
+      "Pipeline": "PowerShell string-base64",
+      "Run": "run-2",
+      "Input": "benign local script",
+      "Output": "/tmp/specter-pipeline-runtime-final3/artifacts/powershell-base64-2.ps1",
+      "Sha256": "5ff6558c4a7adfe8e3378a81f48b13d8fa856c29f39d38041a392f455264d50a",
+      "Size": 654,
+      "Format": "UTF-8 PowerShell source",
+      "Status": "observed",
+      "Limitations": "Uses randomized helper name/offset; output not executed."
+    },
+    {
+      "Pipeline": "SRDI",
+      "Run": "run-1",
+      "Input": "inert x64 PE DLL exported Run",
+      "Output": "/tmp/specter-pipeline-runtime-final3/artifacts/srdi-1.bin",
+      "Sha256": "b79b7e9da3337cb7f3f888326b2e6478851ea65a9f52fe78b006fd86cd691143",
+      "Size": 6676,
+      "Format": "raw SRDI wrapper bytes",
+      "Status": "observed",
+      "Limitations": "Converted but never mapped or executed; converter zeroes the first two bytes of its input array."
+    },
+    {
+      "Pipeline": "SRDI",
+      "Run": "run-2",
+      "Input": "inert x64 PE DLL exported Run",
+      "Output": "/tmp/specter-pipeline-runtime-final3/artifacts/srdi-2.bin",
+      "Sha256": "b79b7e9da3337cb7f3f888326b2e6478851ea65a9f52fe78b006fd86cd691143",
+      "Size": 6676,
+      "Format": "raw SRDI wrapper bytes",
+      "Status": "observed",
+      "Limitations": "Converted but never mapped or executed; converter zeroes the first two bytes of its input array."
+    },
+    {
+      "Pipeline": "PE template injection",
+      "Run": "x86-run-1",
+      "Input": "x86 shipped template \u002B 4096-byte inert pattern",
+      "Output": "/tmp/specter-pipeline-runtime-final3/artifacts/template-injected-x86-1.exe",
+      "Sha256": "633e815995c4d386a8fa61a847c48237e0a1a46a8db98f29efcfbaf66241461d",
+      "Size": 130048,
+      "Format": "PE32 executable",
+      "Status": "observed",
+      "Limitations": "Exact marker/update primitives; AsmResolver version rewrite and execution intentionally omitted."
+    },
+    {
+      "Pipeline": "PE template injection",
+      "Run": "x86-run-2",
+      "Input": "x86 shipped template \u002B 4096-byte inert pattern",
+      "Output": "/tmp/specter-pipeline-runtime-final3/artifacts/template-injected-x86-2.exe",
+      "Sha256": "37962cee50f3edcea2f589d6b6bdfbb2952681a2dd867d83bb3b68310dbb4fa3",
+      "Size": 130048,
+      "Format": "PE32 executable",
+      "Status": "observed",
+      "Limitations": "Exact marker/update primitives; AsmResolver version rewrite and execution intentionally omitted."
+    },
+    {
+      "Pipeline": "PE template injection",
+      "Run": "x64-run-1",
+      "Input": "x64 shipped template \u002B 4096-byte inert pattern",
+      "Output": "/tmp/specter-pipeline-runtime-final3/artifacts/template-injected-x64-1.exe",
+      "Sha256": "ed44e850c7b65b8254f9dfe7b85254261eb4e16076c43953c6ccb37f2bde870b",
+      "Size": 133632,
+      "Format": "PE32\u002B executable",
+      "Status": "observed",
+      "Limitations": "Exact marker/update primitives; AsmResolver version rewrite and execution intentionally omitted."
+    },
+    {
+      "Pipeline": "PE template injection",
+      "Run": "x64-run-2",
+      "Input": "x64 shipped template \u002B 4096-byte inert pattern",
+      "Output": "/tmp/specter-pipeline-runtime-final3/artifacts/template-injected-x64-2.exe",
+      "Sha256": "5459fd6c1c4892630d4ef53e3d184c3d1f282b7ed507e79fef2f5fde32930c59",
+      "Size": 133632,
+      "Format": "PE32\u002B executable",
+      "Status": "observed",
+      "Limitations": "Exact marker/update primitives; AsmResolver version rewrite and execution intentionally omitted."
+    }
+  ],
+  "Checks": {
+    "stage-C# compiler": {
+      "status": "completed"
+    },
+    "stage-BFlat / NativeAOT": {
+      "status": "completed"
+    },
+    "stage-Zig": {
+      "status": "completed"
+    },
+    "stage-Zig raw-section extractor": {
+      "status": "completed"
+    },
+    "stage-PowerShell transforms": {
+      "status": "completed"
+    },
+    "multiOutput": {
+      "outputCount": 5,
+      "types": [
+        "System.String",
+        "System.String",
+        "System.Byte",
+        "System.Byte",
+        "System.Byte"
+      ],
+      "firstValue": "first",
+      "serviceBehavior": "PayloadPipelineService uses First()/FirstOrDefault(); later outputs are ignored."
+    },
+    "cancellation": {
+      "requestedAfterMs": 250,
+      "elapsedMs": 268,
+      "invocationState": "Stopped",
+      "exception": null,
+      "errorCount": 0
+    },
+    "stage-PowerShell contracts": {
+      "status": "completed"
+    },
+    "srdiInputMutationRun1": {
+      "before": "4d5a",
+      "after": "0000"
+    },
+    "srdiInputMutationRun2": {
+      "before": "4d5a",
+      "after": "0000"
+    },
+    "stage-SRDI": {
+      "status": "completed"
+    },
+    "templateMarkers-x86": {
+      "file": "/home/deleteme/Desktop/SpecterInsight/templates/x86/specter-win-x86-exe.exe",
+      "fileSize": 130048,
+      "binaryOffset": 6712,
+      "decoderOffset": 6328,
+      "parametersOffset": 6584,
+      "containingSection": ".rdata",
+      "sectionRawStart": 6144,
+      "sectionRawEnd": 127488,
+      "capacityToSectionRawEnd": 120776,
+      "explicitCapacityCheckInCompileAsync": false
+    },
+    "templateUpdate-x86-1": {
+      "mapUpdated": true,
+      "parametersUpdated": true,
+      "pointerSizedTailBytes": 8,
+      "tailBefore": "e010400004000000",
+      "tailAfter": "e010400004000000",
+      "tailUnchanged": true
+    },
+    "templateUpdate-x86-2": {
+      "mapUpdated": true,
+      "parametersUpdated": true,
+      "pointerSizedTailBytes": 8,
+      "tailBefore": "e010400004000000",
+      "tailAfter": "e010400004000000",
+      "tailUnchanged": true
+    },
+    "markerCapacity-x86": {
+      "inferredCapacityToSectionRawEnd": 120776,
+      "exactFitsBackingArray": true,
+      "overFitsBackingArray": true,
+      "exactCopySucceeded": true,
+      "overCopySucceeded": true,
+      "nextSectionByteBefore": 0,
+      "nextSectionByteAfter": 90,
+      "overDidOverwriteNextSection": true,
+      "compileAsyncRejectsOversizeBeforeCopy": false
+    },
+    "templateMarkers-x64": {
+      "file": "/home/deleteme/Desktop/SpecterInsight/templates/x64/specter-win-x64-exe.exe",
+      "fileSize": 133632,
+      "binaryOffset": 9144,
+      "decoderOffset": 8752,
+      "parametersOffset": 9008,
+      "containingSection": ".rdata",
+      "sectionRawStart": 8192,
+      "sectionRawEnd": 130048,
+      "capacityToSectionRawEnd": 120904,
+      "explicitCapacityCheckInCompileAsync": false
+    },
+    "templateUpdate-x64-1": {
+      "mapUpdated": true,
+      "parametersUpdated": true,
+      "pointerSizedTailBytes": 8,
+      "tailBefore": "0011004001000000",
+      "tailAfter": "0011004001000000",
+      "tailUnchanged": true
+    },
+    "templateUpdate-x64-2": {
+      "mapUpdated": true,
+      "parametersUpdated": true,
+      "pointerSizedTailBytes": 8,
+      "tailBefore": "0011004001000000",
+      "tailAfter": "0011004001000000",
+      "tailUnchanged": true
+    },
+    "markerCapacity-x64": {
+      "inferredCapacityToSectionRawEnd": 120904,
+      "exactFitsBackingArray": true,
+      "overFitsBackingArray": true,
+      "exactCopySucceeded": true,
+      "overCopySucceeded": true,
+      "nextSectionByteBefore": 0,
+      "nextSectionByteAfter": 90,
+      "overDidOverwriteNextSection": true,
+      "compileAsyncRejectsOversizeBeforeCopy": false
+    },
+    "stage-PE template injection": {
+      "status": "completed"
+    },
+    "cacheKeyEquality": {
+      "emptyEqualsExtra": true,
+      "extraEqualsEmpty": false,
+      "reorderedEquals": true,
+      "reorderedHashEqual": true
+    },
+    "cacheRaceModel": {
+      "implementationPattern": "same TryGetValue -\u003E generate -\u003E TryAdd sequence as PayloadCachingService",
+      "workers": 24,
+      "generated": 24,
+      "successfulAdds": 1,
+      "cachedEntries": 1,
+      "distinctCallerResults": 24,
+      "scope": "service-equivalent concurrency contract using the real private key type; PayloadsService was not invoked"
+    },
+    "cacheTimer": {
+      "signaled": true,
+      "callbackCount": 1,
+      "elapsedMs": 182,
+      "regeneratePolicy": true,
+      "scope": "actual private PayloadCacheValue timer/callback; outer async regeneration requires live PayloadsService and was not invoked"
+    },
+    "cacheTimerReset": {
+      "signaled": true,
+      "callbackCount": 1,
+      "elapsedMs": 282,
+      "resetAfterMs": 100,
+      "policyMs": 180,
+      "expirationWasExtended": true
+    },
+    "stage-cache contracts": {
+      "status": "completed"
+    },
+    "finishedUtc": "2026-11-22T10:47:12.9200806Z"
+  }
+}

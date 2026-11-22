@@ -1,0 +1,45 @@
+Linux fenix 6.19.10-300.fc44.x86_64 #1 SMP PREEMPT_DYNAMIC Wed Mar 25 18:23:49 UTC 2026 x86_64 GNU/Linux
+.NET SDK:
+ Version:           10.0.113
+ Commit:            4099f83977
+ Workload version:  10.0.100-manifests.da132f47
+ MSBuild version:   18.0.36+4099f8397
+
+Runtime Environment:
+ OS Name:     fedora
+ OS Version:  44
+ OS Platform: Linux
+ RID:         fedora.44-x64
+ Base Path:   /usr/lib64/dotnet/sdk/10.0.113/
+
+.NET workloads installed:
+There are no installed workloads to display.
+Configured to use workload sets when installing new manifests.
+No workload sets are installed. Run "dotnet workload restore" to install a workload set.
+
+Host:
+  Version:      10.0.13
+  Architecture: x64
+  Commit:       4099f83977
+
+.NET SDKs installed:
+  10.0.113 [/usr/lib64/dotnet/sdk]
+
+.NET runtimes installed:
+  Microsoft.AspNetCore.App 10.0.13 [/usr/lib64/dotnet/shared/Microsoft.AspNetCore.App]
+  Microsoft.NETCore.App 10.0.13 [/usr/lib64/dotnet/shared/Microsoft.NETCore.App]
+
+Other architectures found:
+  None
+
+Environment variables:
+  Not set
+
+global.json file:
+  Not found
+
+Learn more:
+  https://aka.ms/dotnet/info
+
+Download .NET:
+  https://aka.ms/dotnet/download
