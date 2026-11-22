@@ -9,6 +9,7 @@
 | Архитектура | [Представления](architecture/views.md), [графы пакетов](architecture/package-graphs.json), [путь документа](interactions/documentation.md), [модель хранения](analysis/storage.md) |
 | Компоненты | [Server и Host](components/server/reference.md), [Client](components/client/reference.md), [Specter](components/specter/reference.md), [вспомогательные компоненты](components/auxiliary/reference.md) |
 | Протоколы | [Management API](protocols/management.md), [свидетельства об обмене Specter](protocols/specter-observations.md) |
+| Зашифрованные вложения | [Статический отчёт этапа 8](reports/encrypted-archives.md), [состояние архивов](examination/stage8-archives/archive-analysis.json), [OOXML/VBA-инвентарь](examination/stage8-archives/office-analysis.json) |
 | Проверка и публикация | [Реестр выводов](validation/findings.jsonl), [среда и суммы](validation/environment.json), [шаблоны записей](templates/records.md) |
 
 **Как проверить вывод.** Найти FND в реестре выводов, затем перечисленные OBS в реестре наблюдений. Запись OBS задаёт исходный файл ART, выход инструмента и место внутри него. Внутри одного снимка ART определяется путём. Идентичность содержимого между снимками проверяется по SHA-256. Для метода дополнительно сверяются MVID, токен и смещение IL. У результатов динамики ключами служат имя сценария и, для поиска в UI, путь документа.
@@ -22,3 +23,5 @@
 [Аудит сохранности и точности покрытия от 18 ноября](reports/evidence-audit.md)
 
 [Индивидуальные карточки обновления документации UI](reports/documentation-ui-semantics.md)
+
+[Этап 8: зашифрованные архивы](reports/encrypted-archives.md) — два пароля восстановлены, DOCM/XLSM разобраны статически, для третьего ZIP установлено локальное происхождение и сохранена граница неизвестного plaintext.

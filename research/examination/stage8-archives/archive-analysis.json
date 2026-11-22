@@ -1,0 +1,66 @@
+{
+  "method": "Static ZIP inventory, offline password recovery and isolated extraction; no Office process and no macro or payload execution.",
+  "source_snapshot": {
+    "archive": "local-archive/specter-study.tar.zst",
+    "sha256": "6abd802cb515008db799dda817892ac4e8d995760e8f4a8856b4b4eb4ad43f67",
+    "original_root": "/home/deleteme/Desktop/SpecterInsight",
+    "snapshot_started_utc": "2026-11-12T19:50:00.699736+00:00"
+  },
+  "archives": [
+    {
+      "name": "Joint_NATO_Training_Program_2026_Invitation.zip",
+      "source_path": "notebooks/f4e3d2c1-b0a9-4837-a6b5-c4d3e2f1a0b9/files/Joint_NATO_Training_Program_2026_Invitation.zip",
+      "sha256": "da47ad640d548054176fe97f59f2985218b483dc65705313aa517efe810042db",
+      "rea_evidence_id": "ev_37a78ebc302e97c94642b28348479255187c0fc1b3f4eb9976160c7e5b6afd53",
+      "encryption": "ZipCrypto + Deflate",
+      "password_status": "recovered",
+      "password": "Ukraine2026",
+      "member": {
+        "name": "Joint_NATO_Training_Program_2026_Invitation.docm",
+        "bytes": 21893,
+        "crc32": "bcacc85f",
+        "sha256": "66b8169ccf8db86524813f22ff1ba3eb88af8d658098009c727ec6cdc40b523f"
+      }
+    },
+    {
+      "name": "Court_Summons_Notice_UA_2026.zip",
+      "source_path": "notebooks/d4f2a8c6-3b7e-4d9a-b1c5-8e6f0a2d4c7b/files/Court_Summons_Notice_UA_2026.zip",
+      "sha256": "e28f1a5e449b69f6e0e9b0fa9cbef6372bc829fe2ce19134a84a76f42fa0143b",
+      "rea_evidence_id": "ev_d2dce5808d2eac4d7faf97993d3acf482494d145fc675ee7ee39b68536b92b76",
+      "encryption": "ZipCrypto + Deflate",
+      "password_status": "recovered",
+      "password": "Ukraine2026",
+      "member": {
+        "name": "Court_Summons_Notice_UA_2026.xlsm",
+        "bytes": 6795,
+        "crc32": "76e12efc",
+        "sha256": "e9f4de063cfab93117a88989b28012bf025d788a22263d9a7d0b9302f1f97379"
+      }
+    },
+    {
+      "name": "National_Security_Commission_Meeting_Agenda_2025.zip",
+      "source_path": "notebooks/3f8a9c2e-7d4b-4f1a-b6e8-5c0d9a2e3f7b/files/National_Security_Commission_Meeting_Agenda_2025.zip",
+      "sha256": "c2d5083e0a9b73dd682ccaa4fb8b141ea4593dc3eb636893f15dbe67738eae79",
+      "rea_evidence_id": "ev_b3a19d260255b4ff54db8e49c4beffede8dddaa9ea8304ff2778e9e6ddbcf04f",
+      "encryption": "ZipCrypto + Deflate",
+      "password_status": "not recovered",
+      "password_search": {
+        "local_wordlist_candidates": 101126,
+        "contextual_candidates": 1345379,
+        "exact_filename_and_sha256_web_matches": 0
+      },
+      "provenance_status": "verified to the supplied snapshot; external origin unknown",
+      "provenance": {
+        "original_path": "/home/deleteme/Desktop/SpecterInsight/notebooks/3f8a9c2e-7d4b-4f1a-b6e8-5c0d9a2e3f7b/files/National_Security_Commission_Meeting_Agenda_2025.zip",
+        "same_packaging_profile_as_other_two": true,
+        "profile": "one encrypted member, ZipCrypto/Deflate, creator version 4.5, FAT host, NTFS 0x000a extra field, no data descriptor, no comment"
+      },
+      "member": {
+        "name": "National_Security_Commission_Meeting_Agenda_2025.xlsm",
+        "bytes": 7496,
+        "crc32": "b9051de7",
+        "sha256": null
+      }
+    }
+  ]
+}

