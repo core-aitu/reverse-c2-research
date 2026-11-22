@@ -1,0 +1,1024 @@
+{
+  "evidence_id": "ev_ea5bbe96e08215b20a1537224eaf3b8d2f73567a123358c8b853822cf4afa2f9",
+  "subject": {
+    "name": "SpecterInsight.UI.dll",
+    "digest": {
+      "sha256": "b26312d15a0a8d2743ef50069874567ef768d64e1eed0a9e82a410976fbe10d6"
+    },
+    "local_path": "/home/deleteme/Desktop/SpecterInsight/client/SpecterInsight.UI.dll",
+    "format": "pe",
+    "architecture": "x86"
+  },
+  "provider": {
+    "id": "rea-analysis-view",
+    "name": "REA analysis view projection",
+    "version": "1"
+  },
+  "analysis_profile": null,
+  "predicate_type": "rea.analysis-view",
+  "operation": "inspect_analysis_view",
+  "parameters": {
+    "parent_evidence_id": "ev_65e656abd415d6667b0156def1ffbf363b2f5c34579417de788dae570b320c83",
+    "view": {
+      "kind": "managed-members",
+      "collection": "call_edges",
+      "offset": 0,
+      "limit": 128
+    }
+  },
+  "raw_result": null,
+  "normalized_result": {
+    "kind": "managed-members",
+    "view": {
+      "kind": "managed-members",
+      "collection": "call_edges",
+      "offset": 0,
+      "limit": 128
+    },
+    "page": {
+      "collection": "call_edges",
+      "rows": [
+        {
+          "caller_token": "0x06000156",
+          "il_offset": 1,
+          "target_identity_sha256": "c900ab6a52f3f904e3f209c2885deb9fa0d084375bc444a125e1af1405e89cde",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.get_ViewModel",
+          "opcode": "call",
+          "target_token": "0x0a0000a0",
+          "target_kind": "member-ref",
+          "target_name": "get_DataContext",
+          "target_declaring_type": "Avalonia.StyledElement"
+        },
+        {
+          "caller_token": "0x06000157",
+          "il_offset": 1,
+          "target_identity_sha256": "11bfb8a4eda4b28d49799aa1c507a10f6a3e9beb17943e3cf7c2602ccf4922b9",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer..ctor",
+          "opcode": "call",
+          "target_token": "0x0a0000a1",
+          "target_kind": "member-ref",
+          "target_name": ".ctor",
+          "target_declaring_type": "Avalonia.Controls.UserControl"
+        },
+        {
+          "caller_token": "0x06000157",
+          "il_offset": 8,
+          "target_identity_sha256": "a7e350989e8140a28eaf77df6a88a77dff8953c8176e8a2d84c7cf3dbdda746d",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer..ctor",
+          "opcode": "call",
+          "target_token": "0x0600015a",
+          "target_kind": "method-def",
+          "target_name": "InitializeComponent",
+          "target_declaring_type": "SpecterInsight.UI.Views.DocumentationViewer"
+        },
+        {
+          "caller_token": "0x06000157",
+          "il_offset": 14,
+          "target_identity_sha256": "afb22811247293de3afc93fe06dc62a147785adc53979c7d6dfaf4a4f64126dd",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer..ctor",
+          "opcode": "newobj",
+          "target_token": "0x06000916",
+          "target_kind": "method-def",
+          "target_name": ".ctor",
+          "target_declaring_type": "SpecterInsight.UI.ViewModels.DocumentationViewModel"
+        },
+        {
+          "caller_token": "0x06000157",
+          "il_offset": 19,
+          "target_identity_sha256": "1dcc3e9a2059ae28f55db0ca2643df182ae192003c509bd40c01ae1090de9409",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer..ctor",
+          "opcode": "call",
+          "target_token": "0x0a000003",
+          "target_kind": "member-ref",
+          "target_name": "set_DataContext",
+          "target_declaring_type": "Avalonia.StyledElement"
+        },
+        {
+          "caller_token": "0x06000158",
+          "il_offset": 2,
+          "target_identity_sha256": "03f6ba70b066353342f4c021fc48d3aa5ead4c2bc6ed106dc916ef94492b39ae",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.OnAttachedToVisualTree",
+          "opcode": "call",
+          "target_token": "0x0a000334",
+          "target_kind": "member-ref",
+          "target_name": "OnAttachedToVisualTree",
+          "target_declaring_type": "Avalonia.Visual"
+        },
+        {
+          "caller_token": "0x06000158",
+          "il_offset": 8,
+          "target_identity_sha256": "4c1059453e9135c477cf0f175fa2e68569f30f94e35c3c34834cfd810ca6842e",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.OnAttachedToVisualTree",
+          "opcode": "call",
+          "target_token": "0x06000156",
+          "target_kind": "method-def",
+          "target_name": "get_ViewModel",
+          "target_declaring_type": "SpecterInsight.UI.Views.DocumentationViewer"
+        },
+        {
+          "caller_token": "0x06000158",
+          "il_offset": 13,
+          "target_identity_sha256": "0528f2c3102f5b3633c1364c9f243bf3493009fa0d7f6bcf934df63d10622398",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.OnAttachedToVisualTree",
+          "opcode": "callvirt",
+          "target_token": "0x06000917",
+          "target_kind": "method-def",
+          "target_name": "UpdateDocumentation",
+          "target_declaring_type": "SpecterInsight.UI.ViewModels.DocumentationViewModel"
+        },
+        {
+          "caller_token": "0x06000159",
+          "il_offset": 2,
+          "target_identity_sha256": "d2d1f262660bff11a8c094693c1e8e9680824ca539679892e71263e7b6a8a58f",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.OnDetachedFromVisualTree",
+          "opcode": "call",
+          "target_token": "0x0a000335",
+          "target_kind": "member-ref",
+          "target_name": "OnDetachedFromVisualTree",
+          "target_declaring_type": "Avalonia.Visual"
+        },
+        {
+          "caller_token": "0x0600015a",
+          "il_offset": 4,
+          "target_identity_sha256": "a2f9cfe5911d50a28d8756de0713e580f4db2cf754d472608322686876c3ab92",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.InitializeComponent",
+          "opcode": "call",
+          "target_token": "0x0600015c",
+          "target_kind": "method-def",
+          "target_name": "!XamlIlPopulateTrampoline",
+          "target_declaring_type": "SpecterInsight.UI.Views.DocumentationViewer"
+        },
+        {
+          "caller_token": "0x0600015a",
+          "il_offset": 10,
+          "target_identity_sha256": "0f132162632e5ea6851f0664e7e5c35c1f01f79418b9230a834994f4ff1c2ce1",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.InitializeComponent",
+          "opcode": "call",
+          "target_token": "0x0a0000af",
+          "target_kind": "member-ref",
+          "target_name": "FindNameScope",
+          "target_declaring_type": "Avalonia.Controls.NameScopeExtensions"
+        },
+        {
+          "caller_token": "0x0600015a",
+          "il_offset": 29,
+          "target_identity_sha256": "6c0a2bec30d74695870d4a124cacb9fd520c62e3a355d1bea235b770c7d5d473",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.InitializeComponent",
+          "opcode": "call",
+          "target_token": "0x2b00006e",
+          "target_kind": "method-spec",
+          "target_name": "Find",
+          "target_declaring_type": "Avalonia.Controls.NameScopeExtensions"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 25,
+          "target_identity_sha256": null,
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "newobj",
+          "target_token": "0x0a000336",
+          "target_kind": "member-ref",
+          "target_name": ".ctor",
+          "target_declaring_type": "Context`1"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 49,
+          "target_identity_sha256": "bd5ba39337d214788835f7349bc83af3b3217bdee67e6a78d57e0dca25df3562",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "callvirt",
+          "target_token": "0x0a00005c",
+          "target_kind": "member-ref",
+          "target_name": "BeginInit",
+          "target_declaring_type": "System.ComponentModel.ISupportInitialize"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 57,
+          "target_identity_sha256": null,
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "callvirt",
+          "target_token": "0x0a000339",
+          "target_kind": "member-ref",
+          "target_name": "PushParent",
+          "target_declaring_type": "Context`1"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 64,
+          "target_identity_sha256": "8007118711c7cdf90cb88c657515df84e1a689c519248ccd1bb571e113d289d4",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "newobj",
+          "target_token": "0x0a0000ba",
+          "target_kind": "member-ref",
+          "target_name": ".ctor",
+          "target_declaring_type": "Avalonia.Controls.Grid"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 72,
+          "target_identity_sha256": "bd5ba39337d214788835f7349bc83af3b3217bdee67e6a78d57e0dca25df3562",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "callvirt",
+          "target_token": "0x0a00005c",
+          "target_kind": "member-ref",
+          "target_name": "BeginInit",
+          "target_declaring_type": "System.ComponentModel.ISupportInitialize"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 77,
+          "target_identity_sha256": "a47993ab191c7f88fbc8f8e2f452538158deb82e033825e8f1ae1fc941de501a",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "callvirt",
+          "target_token": "0x0a0000bb",
+          "target_kind": "member-ref",
+          "target_name": "set_Content",
+          "target_declaring_type": "Avalonia.Controls.ContentControl"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 88,
+          "target_identity_sha256": null,
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "callvirt",
+          "target_token": "0x0a000339",
+          "target_kind": "member-ref",
+          "target_name": "PushParent",
+          "target_declaring_type": "Context`1"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 95,
+          "target_identity_sha256": "6884ab0909e6ac88c31a25ce1cbd4c2c89152c422100822eed0836c54a01dc70",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "newobj",
+          "target_token": "0x0a0000dd",
+          "target_kind": "member-ref",
+          "target_name": ".ctor",
+          "target_declaring_type": "Avalonia.Controls.ColumnDefinitions"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 102,
+          "target_identity_sha256": null,
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "callvirt",
+          "target_token": "0x0a0000de",
+          "target_kind": "member-ref",
+          "target_name": "set_Capacity",
+          "target_declaring_type": "Avalonia.Collections.AvaloniaList`1"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 118,
+          "target_identity_sha256": "4c87143de294ad35662fb0c5ba0f0307e3bb21b8eafa117ccfc7c855ac6a2c8f",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "newobj",
+          "target_token": "0x0a0000be",
+          "target_kind": "member-ref",
+          "target_name": ".ctor",
+          "target_declaring_type": "Avalonia.Controls.GridLength"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 123,
+          "target_identity_sha256": "7963a71c700818026d4cdafe5336e27bd4d37515ce06698cea8fe37af1ac7199",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "newobj",
+          "target_token": "0x0a0000df",
+          "target_kind": "member-ref",
+          "target_name": ".ctor",
+          "target_declaring_type": "Avalonia.Controls.ColumnDefinition"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 128,
+          "target_identity_sha256": null,
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "callvirt",
+          "target_token": "0x0a0000e0",
+          "target_kind": "member-ref",
+          "target_name": "Add",
+          "target_declaring_type": "Avalonia.Collections.AvaloniaList`1"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 144,
+          "target_identity_sha256": "4c87143de294ad35662fb0c5ba0f0307e3bb21b8eafa117ccfc7c855ac6a2c8f",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "newobj",
+          "target_token": "0x0a0000be",
+          "target_kind": "member-ref",
+          "target_name": ".ctor",
+          "target_declaring_type": "Avalonia.Controls.GridLength"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 149,
+          "target_identity_sha256": "7963a71c700818026d4cdafe5336e27bd4d37515ce06698cea8fe37af1ac7199",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "newobj",
+          "target_token": "0x0a0000df",
+          "target_kind": "member-ref",
+          "target_name": ".ctor",
+          "target_declaring_type": "Avalonia.Controls.ColumnDefinition"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 154,
+          "target_identity_sha256": null,
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "callvirt",
+          "target_token": "0x0a0000e0",
+          "target_kind": "member-ref",
+          "target_name": "Add",
+          "target_declaring_type": "Avalonia.Collections.AvaloniaList`1"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 159,
+          "target_identity_sha256": "caccaad4c88d73af9254a3a60f3efeb450781ebf5938210ee9107673db3f5b34",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "callvirt",
+          "target_token": "0x0a0000e1",
+          "target_kind": "member-ref",
+          "target_name": "set_ColumnDefinitions",
+          "target_declaring_type": "Avalonia.Controls.Grid"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 166,
+          "target_identity_sha256": "8eeef6f62c9b1c62b649234345b492fc2cc5e02ebd8356955ab5af1ca091a735",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "callvirt",
+          "target_token": "0x0a0000c2",
+          "target_kind": "member-ref",
+          "target_name": "get_Children",
+          "target_declaring_type": "Avalonia.Controls.Panel"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 171,
+          "target_identity_sha256": "6c2f2e3f7dc9b086e6faffebf01982aeef00b2c4cf0272e270de18cc0855ee9d",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "newobj",
+          "target_token": "0x0a00033a",
+          "target_kind": "member-ref",
+          "target_name": ".ctor",
+          "target_declaring_type": "Avalonia.Controls.TreeView"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 180,
+          "target_identity_sha256": "bd5ba39337d214788835f7349bc83af3b3217bdee67e6a78d57e0dca25df3562",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "callvirt",
+          "target_token": "0x0a00005c",
+          "target_kind": "member-ref",
+          "target_name": "BeginInit",
+          "target_declaring_type": "System.ComponentModel.ISupportInitialize"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 185,
+          "target_identity_sha256": null,
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "callvirt",
+          "target_token": "0x0a0000c3",
+          "target_kind": "member-ref",
+          "target_name": "Add",
+          "target_declaring_type": "Avalonia.Collections.AvaloniaList`1"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 199,
+          "target_identity_sha256": null,
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "callvirt",
+          "target_token": "0x0a000339",
+          "target_kind": "member-ref",
+          "target_name": "PushParent",
+          "target_declaring_type": "Context`1"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 213,
+          "target_identity_sha256": "463bcc7619f9524a51b86c37f4b6913e1704be39502aa4eef06530e49aea35f3",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "callvirt",
+          "target_token": "0x0a000069",
+          "target_kind": "member-ref",
+          "target_name": "set_Name",
+          "target_declaring_type": "Avalonia.StyledElement"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 233,
+          "target_identity_sha256": "4f8859012f7c29ae421d11eab7bb73e381e11cc1cc6f876727af4ade1f94706c",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "callvirt",
+          "target_token": "0x0a00006a",
+          "target_kind": "member-ref",
+          "target_name": "Register",
+          "target_declaring_type": "Avalonia.Controls.INameScope"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 240,
+          "target_identity_sha256": "8ba01f038ee80ca94e2fec6fb056fafe01dc67227bcae83e9f684b762ae6bd64",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "call",
+          "target_token": "0x0a0000e2",
+          "target_kind": "member-ref",
+          "target_name": "SetColumn",
+          "target_declaring_type": "Avalonia.Controls.Grid"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 256,
+          "target_identity_sha256": "4f2d6eb8c67a7a5057806094e1d58ee49d708b68c5f55c7def386fc4c1e51dd1",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "newobj",
+          "target_token": "0x0a0000d5",
+          "target_kind": "member-ref",
+          "target_name": ".ctor",
+          "target_declaring_type": "Avalonia.Markup.Xaml.MarkupExtensions.ReflectionBindingExtension"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 275,
+          "target_identity_sha256": "ce208f8f270e59fd95b62ec7b7f77cc358cd576332fdf46563ddd308634f3079",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "callvirt",
+          "target_token": "0x0a0000d7",
+          "target_kind": "member-ref",
+          "target_name": "ProvideValue",
+          "target_declaring_type": "Avalonia.Markup.Xaml.MarkupExtensions.ReflectionBindingExtension"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 288,
+          "target_identity_sha256": "aeda8ebbf3b12813a3f49cffdcadcbae1105e30d64d056c92dd4243b8ac03da4",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "call",
+          "target_token": "0x0a000060",
+          "target_kind": "member-ref",
+          "target_name": "Bind",
+          "target_declaring_type": "Avalonia.AvaloniaObjectExtensions"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 295,
+          "target_identity_sha256": "df1e94b3920b5c8311ce8954bf59ea597aa708866fa15586ba3ee17326b56193",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "newobj",
+          "target_token": "0x0a00033d",
+          "target_kind": "member-ref",
+          "target_name": ".ctor",
+          "target_declaring_type": "Avalonia.Markup.Xaml.Templates.TreeDataTemplate"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 306,
+          "target_identity_sha256": null,
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "callvirt",
+          "target_token": "0x0a000339",
+          "target_kind": "member-ref",
+          "target_name": "PushParent",
+          "target_declaring_type": "Context`1"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 319,
+          "target_identity_sha256": "4f2d6eb8c67a7a5057806094e1d58ee49d708b68c5f55c7def386fc4c1e51dd1",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "newobj",
+          "target_token": "0x0a0000d5",
+          "target_kind": "member-ref",
+          "target_name": ".ctor",
+          "target_declaring_type": "Avalonia.Markup.Xaml.MarkupExtensions.ReflectionBindingExtension"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 328,
+          "target_identity_sha256": null,
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "call",
+          "target_token": "0x06001824",
+          "target_kind": "method-def",
+          "target_name": "Avalonia.Markup.Xaml.Templates.TreeDataTemplate,Avalonia.Markup.Xaml.ItemsSource!Property",
+          "target_declaring_type": "CompiledAvaloniaXaml.XamlIlHelpers"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 338,
+          "target_identity_sha256": "ce208f8f270e59fd95b62ec7b7f77cc358cd576332fdf46563ddd308634f3079",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "callvirt",
+          "target_token": "0x0a0000d7",
+          "target_kind": "member-ref",
+          "target_name": "ProvideValue",
+          "target_declaring_type": "Avalonia.Markup.Xaml.MarkupExtensions.ReflectionBindingExtension"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 350,
+          "target_identity_sha256": "36849c9542f5e937780e0031984bc411a38fa0c58e51c1ce04787f2bf80c05cf",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "callvirt",
+          "target_token": "0x0a00033e",
+          "target_kind": "member-ref",
+          "target_name": "set_ItemsSource",
+          "target_declaring_type": "Avalonia.Markup.Xaml.Templates.TreeDataTemplate"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 355,
+          "target_identity_sha256": null,
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "ldftn",
+          "target_token": "0x0600015d",
+          "target_kind": "method-def",
+          "target_name": "Build_1",
+          "target_declaring_type": "XamlClosure_22"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 362,
+          "target_identity_sha256": "fd3eb9674890a0abfccbc11d892bf2ab36b7b84963e6734228645cd2bd33f778",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "call",
+          "target_token": "0x2b000001",
+          "target_kind": "method-spec",
+          "target_name": "DeferredTransformationFactoryV3",
+          "target_declaring_type": "Avalonia.Markup.Xaml.XamlIl.Runtime.XamlIlRuntimeHelpers"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 367,
+          "target_identity_sha256": "42dc0b3b577cd8c6ddf1210022e370aeca795d68835cc968ea720ca38d107519",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "callvirt",
+          "target_token": "0x0a00033f",
+          "target_kind": "member-ref",
+          "target_name": "set_Content",
+          "target_declaring_type": "Avalonia.Markup.Xaml.Templates.TreeDataTemplate"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 373,
+          "target_identity_sha256": null,
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "callvirt",
+          "target_token": "0x0a000340",
+          "target_kind": "member-ref",
+          "target_name": "PopParent",
+          "target_declaring_type": "Context`1"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 378,
+          "target_identity_sha256": "193d9b6bfd80ddc640d48e2e6a0201ff64ce45fd248b1da008cdde6c5bf13be0",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "callvirt",
+          "target_token": "0x0a000184",
+          "target_kind": "member-ref",
+          "target_name": "set_ItemTemplate",
+          "target_declaring_type": "Avalonia.Controls.ItemsControl"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 385,
+          "target_identity_sha256": null,
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "callvirt",
+          "target_token": "0x0a000340",
+          "target_kind": "member-ref",
+          "target_name": "PopParent",
+          "target_declaring_type": "Context`1"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 390,
+          "target_identity_sha256": "4ee30e755da46f545594a5ece966c496d14ad52fe6cf8330a31c5c743da16e80",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "callvirt",
+          "target_token": "0x0a000070",
+          "target_kind": "member-ref",
+          "target_name": "EndInit",
+          "target_declaring_type": "System.ComponentModel.ISupportInitialize"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 396,
+          "target_identity_sha256": "8eeef6f62c9b1c62b649234345b492fc2cc5e02ebd8356955ab5af1ca091a735",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "callvirt",
+          "target_token": "0x0a0000c2",
+          "target_kind": "member-ref",
+          "target_name": "get_Children",
+          "target_declaring_type": "Avalonia.Controls.Panel"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 401,
+          "target_identity_sha256": "9f67b74cd60916d95f37e0276a4d69f82695dd78ca6a866bd4825ecc6fdcdf20",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "newobj",
+          "target_token": "0x0a000108",
+          "target_kind": "member-ref",
+          "target_name": ".ctor",
+          "target_declaring_type": "Avalonia.Controls.Markdown"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 410,
+          "target_identity_sha256": "bd5ba39337d214788835f7349bc83af3b3217bdee67e6a78d57e0dca25df3562",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "callvirt",
+          "target_token": "0x0a00005c",
+          "target_kind": "member-ref",
+          "target_name": "BeginInit",
+          "target_declaring_type": "System.ComponentModel.ISupportInitialize"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 415,
+          "target_identity_sha256": null,
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "callvirt",
+          "target_token": "0x0a0000c3",
+          "target_kind": "member-ref",
+          "target_name": "Add",
+          "target_declaring_type": "Avalonia.Collections.AvaloniaList`1"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 429,
+          "target_identity_sha256": null,
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "callvirt",
+          "target_token": "0x0a000339",
+          "target_kind": "member-ref",
+          "target_name": "PushParent",
+          "target_declaring_type": "Context`1"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 438,
+          "target_identity_sha256": "8ba01f038ee80ca94e2fec6fb056fafe01dc67227bcae83e9f684b762ae6bd64",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "call",
+          "target_token": "0x0a0000e2",
+          "target_kind": "member-ref",
+          "target_name": "SetColumn",
+          "target_declaring_type": "Avalonia.Controls.Grid"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 454,
+          "target_identity_sha256": "4f2d6eb8c67a7a5057806094e1d58ee49d708b68c5f55c7def386fc4c1e51dd1",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "newobj",
+          "target_token": "0x0a0000d5",
+          "target_kind": "member-ref",
+          "target_name": ".ctor",
+          "target_declaring_type": "Avalonia.Markup.Xaml.MarkupExtensions.ReflectionBindingExtension"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 473,
+          "target_identity_sha256": "ce208f8f270e59fd95b62ec7b7f77cc358cd576332fdf46563ddd308634f3079",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "callvirt",
+          "target_token": "0x0a0000d7",
+          "target_kind": "member-ref",
+          "target_name": "ProvideValue",
+          "target_declaring_type": "Avalonia.Markup.Xaml.MarkupExtensions.ReflectionBindingExtension"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 486,
+          "target_identity_sha256": "aeda8ebbf3b12813a3f49cffdcadcbae1105e30d64d056c92dd4243b8ac03da4",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "call",
+          "target_token": "0x0a000060",
+          "target_kind": "member-ref",
+          "target_name": "Bind",
+          "target_declaring_type": "Avalonia.AvaloniaObjectExtensions"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 528,
+          "target_identity_sha256": "0c2aef63113b8de116bd57feb37bb66eea1fef59049cebd333f2974b9ad5cc41",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "newobj",
+          "target_token": "0x0a00002e",
+          "target_kind": "member-ref",
+          "target_name": ".ctor",
+          "target_declaring_type": "Avalonia.Thickness"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 533,
+          "target_identity_sha256": "0a2c853e5e90679a2dd10266146929b0f7ef17d81f5aef81a2949ed890d1d3bc",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "callvirt",
+          "target_token": "0x0a0000ce",
+          "target_kind": "member-ref",
+          "target_name": "set_Margin",
+          "target_declaring_type": "Avalonia.Layout.Layoutable"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 539,
+          "target_identity_sha256": null,
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "callvirt",
+          "target_token": "0x0a000340",
+          "target_kind": "member-ref",
+          "target_name": "PopParent",
+          "target_declaring_type": "Context`1"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 544,
+          "target_identity_sha256": "4ee30e755da46f545594a5ece966c496d14ad52fe6cf8330a31c5c743da16e80",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "callvirt",
+          "target_token": "0x0a000070",
+          "target_kind": "member-ref",
+          "target_name": "EndInit",
+          "target_declaring_type": "System.ComponentModel.ISupportInitialize"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 550,
+          "target_identity_sha256": null,
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "callvirt",
+          "target_token": "0x0a000340",
+          "target_kind": "member-ref",
+          "target_name": "PopParent",
+          "target_declaring_type": "Context`1"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 555,
+          "target_identity_sha256": "4ee30e755da46f545594a5ece966c496d14ad52fe6cf8330a31c5c743da16e80",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "callvirt",
+          "target_token": "0x0a000070",
+          "target_kind": "member-ref",
+          "target_name": "EndInit",
+          "target_declaring_type": "System.ComponentModel.ISupportInitialize"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 561,
+          "target_identity_sha256": null,
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "callvirt",
+          "target_token": "0x0a000340",
+          "target_kind": "member-ref",
+          "target_name": "PopParent",
+          "target_declaring_type": "Context`1"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 566,
+          "target_identity_sha256": "4ee30e755da46f545594a5ece966c496d14ad52fe6cf8330a31c5c743da16e80",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "callvirt",
+          "target_token": "0x0a000070",
+          "target_kind": "member-ref",
+          "target_name": "EndInit",
+          "target_declaring_type": "System.ComponentModel.ISupportInitialize"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 592,
+          "target_identity_sha256": "72eefdeb8379dee52dc3a2582bd99516cd26608445508c4092bf0aeb7ea97845",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "call",
+          "target_token": "0x0a00003a",
+          "target_kind": "member-ref",
+          "target_name": "SetNameScope",
+          "target_declaring_type": "Avalonia.Controls.NameScope"
+        },
+        {
+          "caller_token": "0x0600015b",
+          "il_offset": 603,
+          "target_identity_sha256": "5234a6e4a1acf14a91080e19d059b57b1a165212494a6b99c83963e74c80835f",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulate",
+          "opcode": "callvirt",
+          "target_token": "0x0a00003b",
+          "target_kind": "member-ref",
+          "target_name": "Complete",
+          "target_declaring_type": "Avalonia.Controls.INameScope"
+        },
+        {
+          "caller_token": "0x0600015c",
+          "il_offset": 16,
+          "target_identity_sha256": null,
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulateTrampoline",
+          "opcode": "call",
+          "target_token": "0x0a00003c",
+          "target_kind": "member-ref",
+          "target_name": "Invoke",
+          "target_declaring_type": "System.Action`1"
+        },
+        {
+          "caller_token": "0x0600015c",
+          "il_offset": 24,
+          "target_identity_sha256": "3bdc2979643ffc165a61d0e89a8d84ecd3ac4fe80d23ce622434220e880d6dbd",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulateTrampoline",
+          "opcode": "call",
+          "target_token": "0x0a00001b",
+          "target_kind": "member-ref",
+          "target_name": "CreateRootServiceProviderV3",
+          "target_declaring_type": "Avalonia.Markup.Xaml.XamlIl.Runtime.XamlIlRuntimeHelpers"
+        },
+        {
+          "caller_token": "0x0600015c",
+          "il_offset": 30,
+          "target_identity_sha256": "93a432fdf7bd76e13e7add714cfd1011d6d698b7c9f407d66447fdc769c1a267",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.!XamlIlPopulateTrampoline",
+          "opcode": "call",
+          "target_token": "0x0600015b",
+          "target_kind": "method-def",
+          "target_name": "!XamlIlPopulate",
+          "target_declaring_type": "SpecterInsight.UI.Views.DocumentationViewer"
+        },
+        {
+          "caller_token": "0x06000915",
+          "il_offset": 13,
+          "target_identity_sha256": "a1a62c0e9803ce673e73fbee086691404193e46544994ecacc6f40673fa9265c",
+          "caller": "SpecterInsight.UI.ViewModels.DocumentationViewModel.set_Documents",
+          "opcode": "call",
+          "target_token": "0x2b0002d3",
+          "target_kind": "method-spec",
+          "target_name": "RaiseAndSetIfChanged",
+          "target_declaring_type": "ReactiveUI.IReactiveObjectExtensions"
+        },
+        {
+          "caller_token": "0x06000916",
+          "il_offset": 1,
+          "target_identity_sha256": null,
+          "caller": "SpecterInsight.UI.ViewModels.DocumentationViewModel..ctor",
+          "opcode": "call",
+          "target_token": "0x06000eb5",
+          "target_kind": "method-def",
+          "target_name": ".ctor",
+          "target_declaring_type": "SpecterInsight.UI.ViewModels.ViewModelBase"
+        },
+        {
+          "caller_token": "0x06000917",
+          "il_offset": 1,
+          "target_identity_sha256": "32277814ddde1bc51ef23649d018134e3a55928c961d24f2173f8f784bafca29",
+          "caller": "SpecterInsight.UI.ViewModels.DocumentationViewModel.UpdateDocumentation",
+          "opcode": "ldftn",
+          "target_token": "0x06000918",
+          "target_kind": "method-def",
+          "target_name": "<UpdateDocumentation>b__5_0",
+          "target_declaring_type": "SpecterInsight.UI.ViewModels.DocumentationViewModel"
+        },
+        {
+          "caller_token": "0x06000917",
+          "il_offset": 7,
+          "target_identity_sha256": null,
+          "caller": "SpecterInsight.UI.ViewModels.DocumentationViewModel.UpdateDocumentation",
+          "opcode": "newobj",
+          "target_token": "0x0a00003f",
+          "target_kind": "member-ref",
+          "target_name": ".ctor",
+          "target_declaring_type": "System.Func`1"
+        },
+        {
+          "caller_token": "0x06000917",
+          "il_offset": 12,
+          "target_identity_sha256": "5c1524cef931226838614eec5c2356beabd7b6d33a44aaa04b4ac9f238c82846",
+          "caller": "SpecterInsight.UI.ViewModels.DocumentationViewModel.UpdateDocumentation",
+          "opcode": "call",
+          "target_token": "0x0a000040",
+          "target_kind": "member-ref",
+          "target_name": "Run",
+          "target_declaring_type": "System.Threading.Tasks.Task"
+        },
+        {
+          "caller_token": "0x06000918",
+          "il_offset": 2,
+          "target_identity_sha256": "b5f52d39f059ec9e01b2a621ef5a48d753f7e9891c07874a27f15b19460be2d8",
+          "caller": "SpecterInsight.UI.ViewModels.DocumentationViewModel.<UpdateDocumentation>b__5_0",
+          "opcode": "call",
+          "target_token": "0x0a000043",
+          "target_kind": "member-ref",
+          "target_name": "Create",
+          "target_declaring_type": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder"
+        },
+        {
+          "caller_token": "0x06000918",
+          "il_offset": 37,
+          "target_identity_sha256": "bae7d2db609c0d78bd461e7c03a319e06ac2256e043e0c12805cbce15f91e917",
+          "caller": "SpecterInsight.UI.ViewModels.DocumentationViewModel.<UpdateDocumentation>b__5_0",
+          "opcode": "call",
+          "target_token": "0x2b0002d4",
+          "target_kind": "method-spec",
+          "target_name": "Start",
+          "target_declaring_type": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder"
+        },
+        {
+          "caller_token": "0x06000918",
+          "il_offset": 49,
+          "target_identity_sha256": "bca5cbe83eaaa410983005f59faa44ddb39c540898f25fcbd681625de251f270",
+          "caller": "SpecterInsight.UI.ViewModels.DocumentationViewModel.<UpdateDocumentation>b__5_0",
+          "opcode": "call",
+          "target_token": "0x0a000045",
+          "target_kind": "member-ref",
+          "target_name": "get_Task",
+          "target_declaring_type": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder"
+        }
+      ]
+    },
+    "parent_evidence_id": "ev_65e656abd415d6667b0156def1ffbf363b2f5c34579417de788dae570b320c83",
+    "parent_operation": "inspect_managed_members",
+    "parent_digest": "65e656abd415d6667b0156def1ffbf363b2f5c34579417de788dae570b320c83",
+    "view_digest": "fdd493fd6a5f9d79138de0b5820e7bbe4d842fbfcfb91ab02b6cb3019cb23306",
+    "artifact": {
+      "path": "/home/deleteme/Desktop/SpecterInsight/client/SpecterInsight.UI.dll",
+      "sha256": "b26312d15a0a8d2743ef50069874567ef768d64e1eed0a9e82a410976fbe10d6"
+    },
+    "coverage": {
+      "status": "page",
+      "examined": 82,
+      "total": 82,
+      "next_offset": null,
+      "exhausted": true
+    },
+    "limitations": [
+      "CIL instruction anchors are decoded from file-backed method bodies only; no target assembly is loaded or executed.",
+      "Exported types are reported from ExportedType rows as declared; forwarded types are not resolved in their implementing assemblies.",
+      "Member signatures decode ECMA-335 primitive, class, valuetype, generic instantiation, generic variable, pointer, byref, single-dimension and general array, function pointer including VARARG sentinels, custom modifier, and typed reference forms; class and valuetype operands keep their encoded TypeDefOrRefOrSpec values.",
+      "Metadata tokens are build-local coordinates and are only meaningful with the reported artifact SHA-256 and MVID.",
+      "Types, fields, methods, call edges, field accesses, and user strings cover only the selected declaring types; coverage describes that selection. Edge targets outside it keep their names but are not described.",
+      "User strings are the #US literals loaded by ldstr in the inspected method bodies, with their own coverage; instruction anchors and normalized CIL digests keep their build-local tokens."
+    ],
+    "unknowns": [
+      "Collection counts and pages cover producer-returned rows; member completeness remains the original coverage, not an absence claim about unreturned rows.",
+      "Exported types and member references cover the whole assembly; the other collections cover only the selected declaring types.",
+      "Metadata tokens are build-local coordinates bound to the recorded artifact SHA-256 and module MVID; this view does not load or execute the assembly."
+    ],
+    "signature_resolution": "type-names-v1",
+    "nesting_read": true,
+    "identity_scope": {
+      "token_identity": "build-local",
+      "requires_artifact_sha256": "b26312d15a0a8d2743ef50069874567ef768d64e1eed0a9e82a410976fbe10d6",
+      "requires_mvid": "ec17b4c7-9015-4373-9b10-8081bc59e9a9"
+    },
+    "selection": {
+      "type_names": [
+        "SpecterInsight.UI.Views.DocumentationViewer",
+        "SpecterInsight.UI.ViewModels.DocumentationViewModel",
+        "SpecterInsight.UI.ViewModels.DocumentationViewModel+<<UpdateDocumentation>b__5_0>d",
+        "SpecterInsight.UI.ViewModels.DocumentationViewModel+<>c__DisplayClass5_0"
+      ],
+      "unmatched_type_names": [
+        "SpecterInsight.UI.ViewModels.DocumentationViewModel+<<UpdateDocumentation>b__5_0>d",
+        "SpecterInsight.UI.ViewModels.DocumentationViewModel+<>c__DisplayClass5_0"
+      ]
+    },
+    "method_rows": {
+      "offset": 0,
+      "count": 6642,
+      "total": 6642
+    },
+    "source_metadata_status": "complete",
+    "source_coverage": {
+      "state": "complete",
+      "issues": []
+    }
+  },
+  "confidence": "derived",
+  "authority": "shipped-artifact",
+  "environment": null,
+  "limitations": [
+    "CIL instruction anchors are decoded from file-backed method bodies only; no target assembly is loaded or executed.",
+    "Exported types are reported from ExportedType rows as declared; forwarded types are not resolved in their implementing assemblies.",
+    "Member signatures decode ECMA-335 primitive, class, valuetype, generic instantiation, generic variable, pointer, byref, single-dimension and general array, function pointer including VARARG sentinels, custom modifier, and typed reference forms; class and valuetype operands keep their encoded TypeDefOrRefOrSpec values.",
+    "Metadata tokens are build-local coordinates and are only meaningful with the reported artifact SHA-256 and MVID.",
+    "Types, fields, methods, call edges, field accesses, and user strings cover only the selected declaring types; coverage describes that selection. Edge targets outside it keep their names but are not described.",
+    "User strings are the #US literals loaded by ldstr in the inspected method bodies, with their own coverage; instruction anchors and normalized CIL digests keep their build-local tokens."
+  ],
+  "relationship_coverage": null,
+  "locations": [
+    {
+      "kind": "artifact-path",
+      "path": "/home/deleteme/Desktop/SpecterInsight/client/SpecterInsight.UI.dll"
+    }
+  ],
+  "evidence_links": [
+    "ev_65e656abd415d6667b0156def1ffbf363b2f5c34579417de788dae570b320c83"
+  ]
+}

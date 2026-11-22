@@ -5,6 +5,7 @@ import gzip
 import hashlib
 import json
 from pathlib import Path
+from semantic_cards import validate_ui_cards
 
 here=Path(__file__).resolve().parent
 r=here.parents[1]
@@ -12,7 +13,21 @@ def jsonl(p):return [json.loads(v) for v in p.read_text().splitlines()]
 def load(p):return json.loads(p.read_text())
 def digest(data):return hashlib.sha256(data).hexdigest()
 
+def validate_retained_rows(name, rows):
+    assert rows, 'empty log'
+    if name=='diagnostics':
+        assert all(o.get('passed') is True for o in rows),name
+        keys=[(o['sha256'],o['id'],o.get('token')) for o in rows]
+        assert len(set(keys))==len(keys), 'duplicate diagnostic observation'
+    else:
+        assert len({o['id'] for o in rows})==len(rows), 'duplicate scenario id'
+        if name=='loopback':
+            informational={'http-pair','signalr-record'}
+            assert all(o.get('passed') is True for o in rows if o['id'] not in informational),name
+
 def main():
+    if not __debug__:
+        raise SystemExit('Run without -O: this verifier requires enabled assertions.')
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('distribution',type=Path)
     parser.add_argument('--write',action='store_true')
@@ -30,8 +45,21 @@ def main():
     for name,pat in [('diagnostics','logentry'),('loopback','loop'),('desktop','desktop')]:
         f=here/name/(pat+'-1.jsonl');second=here/name/(pat+'-2.jsonl')
         assert f.read_bytes()==second.read_bytes(),name
-        rows=jsonl(f);assert all(o.get('passed',True) for o in rows)
+        rows=jsonl(f)
+        validate_retained_rows(name, rows)
         result[name]={'records':len(rows),'runs':2,'log_sha256':digest(f.read_bytes())}
+    first=here/'desktop/cancel-1.jsonl'
+    second=here/'desktop/cancel-2.jsonl'
+    assert first.read_bytes()==second.read_bytes()
+    rows=jsonl(first)
+    expected=[
+        ('second-response', {'model':'Second request','visible':True}),
+        ('late-first-response', {'model':'First request','visible':True,'previousVisible':False}),
+        ('http-cancel', {'tokenCancelled':True,'taskStatus':'RanToCompletion','model':'First request','visible':True}),
+        ('response-after-detach', {'detached':True,'requestCancelled':False,'model':'Detached response','visible':False}),
+    ]
+    assert [(row['id'],row['result']) for row in rows]==expected
+    result['documentation_order_and_cancellation']={'records':len(rows),'runs':2,'log_sha256':digest(first.read_bytes())}
     diag=jsonl(here/'diagnostics/logentry-1.jsonl')
     assert len(groups)==5 and all(len(g['methods'])==13 for g in groups)
     assert sum(row['id']=='sequence-point' for row in diag)==13
@@ -63,17 +91,29 @@ def main():
     assert set(aux)=={path.split('/')[0] for path in manifest}
     baseline={a['sha256']:{int(m['token'],16) for m in a['methods']} for a in old}
     coverage=load(r/'validation/coverage.json')
+    semantics=validate_ui_cards(r,args.distribution)
     identities=[dict(sha256=a['sha256'],paths=a['paths'],assembly_discovered=True,type_indexed=a['indexed_types'],
         method_identified=a['indexed_methods'],prior_individual_il=len(baseline.get(a['sha256'],set())),
         additional_diagnostic_semantics=next((len(g['methods']) for g in groups if g['sha256']==a['sha256']),0),
         tasks=sorted({t for path in a['paths'] for t in aux[path.split('/')[0]]})) for a in coverage]
     for a in identities:
+        reviewed=semantics['by_image'].get(a['sha256'],{})
+        a['additional_individual_ui_records']=reviewed.get('additional_individual_il_records',0)
+        a['complete_local_semantic_cards']=reviewed.get('complete_within_method',0)
+        a['partial_semantic_cards']=reviewed.get('partial',0)
         for p in a['paths']:
             if p.endswith('Obfuscation.dll'):a['tasks']=[3,9]
     stats={'Assembly Discovered':len(identities),'Type Indexed':sum(a['type_indexed'] for a in identities),
            'Method Identified':sum(a['method_identified'] for a in identities),
-           'Method Semantically Analyzed':{'prior_individual_records':56,'new_LogEntry_method_image_pairs':65,
-           'distinct_individual_records_lower_bound':121,'automatic_direct_accessors_separate':13514},
+           'Method Semantically Analyzed':{'complete_semantic_cards':semantics['complete_within_method'],
+           'acceptance_status':'Reviewed cards cover local instructions, calls and error handling. Counts of dynamic observations use separate units.',
+           'partial_semantic_cards':semantics['partial'],
+           'prior_individual_il_records':56,'new_LogEntry_il_method_image_pairs':65,
+           'additional_individual_ui_records':semantics['additional_individual_il_records'],
+           'distinct_individual_il_records':semantics['distinct_individual_il_records'],
+           'semantic_card_file_sha256':semantics['card_file_sha256'],
+           'automatic_direct_accessors_separate':13514,
+           'diagnostic_behavior_documented_at_group_level':65},
            'Cross-Component Relationship Established':{'selected_static_method_cards':sum(len(v['methods']) for v in kernels.values()),
            'confirmed_lab_edges':['Host -> Server Build (IL)','SearchAsync -> fixture HTTP adapter -> SearchDocumentation -> PostgreSQL -> ApiClient DTO',
               'EventLoggingService -> PostgreSQL','IHubContext bridge -> local SignalR -> stock ApiClient subscription',

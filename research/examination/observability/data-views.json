@@ -1,0 +1,622 @@
+{
+  "dashboards": [
+    {
+      "id": "d7bc6a70-5f3c-11ee-aa47-e1b546753540",
+      "panel_count_by_primary_view": {
+        "709afdbd-b63b-409f-823a-b6982e063d3f": 1,
+        "b7f2f870-b395-4a89-8d17-570aa428aa53": 5
+      },
+      "panels": [
+        {
+          "object": "7e723d42-3a12-44de-975a-67281d69b0d1",
+          "panel": "00fe7030-e62a-439b-a2b4-9151990d49b1",
+          "type": "visualization"
+        },
+        {
+          "embedded_data_view": "b7f2f870-b395-4a89-8d17-570aa428aa53",
+          "object": "8575edb0-616a-11ee-80be-db04eef2608e",
+          "panel": "a3e1df40-55e5-4259-92a7-6c3c0c6fa1c9",
+          "type": "visualization"
+        },
+        {
+          "object": "c8d3b4c0-5f3f-11ee-aa47-e1b546753540",
+          "panel": "8595f0d2-5da0-49da-b995-07734054a4fe",
+          "type": "visualization"
+        },
+        {
+          "object": "223c0310-616a-11ee-80be-db04eef2608e",
+          "panel": "2030f700-829b-4337-81c0-f5dba48f460e",
+          "type": "visualization"
+        },
+        {
+          "object": "37085200-5f3d-11ee-aa47-e1b546753540",
+          "panel": "93fdc08b-c071-48fb-a301-15a8c864c86b",
+          "type": "visualization"
+        },
+        {
+          "object": "67430590-6169-11ee-80be-db04eef2608e",
+          "panel": "159865f8-9f55-45c1-a361-6909ade1224f",
+          "type": "search"
+        }
+      ],
+      "title": "SpecterInsight - Command and Control"
+    },
+    {
+      "id": "94fb7aa0-35ac-11ee-9870-577ed5df0eed",
+      "panel_count_by_primary_view": {
+        "709afdbd-b63b-409f-823a-b6982e063d3f": 2,
+        "b7f2f870-b395-4a89-8d17-570aa428aa53": 7
+      },
+      "panels": [
+        {
+          "object": "039aa940-3599-11ee-9870-577ed5df0eed",
+          "panel": "d2b6db96-30bc-4e3d-a0ae-332d94cb8b2b",
+          "type": "visualization"
+        },
+        {
+          "object": "24f63e10-3599-11ee-9870-577ed5df0eed",
+          "panel": "72b44de6-35d5-402f-a469-91b9141f2151",
+          "type": "visualization"
+        },
+        {
+          "object": "1397fbe0-3599-11ee-9870-577ed5df0eed",
+          "panel": "7fb27513-85f7-46bb-ad6d-82b9cf3df316",
+          "type": "visualization"
+        },
+        {
+          "object": "3b5bbb80-3599-11ee-9870-577ed5df0eed",
+          "panel": "1c3a62ff-b5bf-45b5-8650-990ac7e1aca4",
+          "type": "visualization"
+        },
+        {
+          "object": "bdffc0a0-3598-11ee-9870-577ed5df0eed",
+          "panel": "f8ae052f-2c2e-409c-b805-27e673245843",
+          "type": "map"
+        },
+        {
+          "object": "4bf54e20-3599-11ee-9870-577ed5df0eed",
+          "panel": "a5fc4b5f-b0d5-4388-9bfb-8c6e2601b391",
+          "type": "visualization"
+        },
+        {
+          "object": "5ef35da0-3599-11ee-9870-577ed5df0eed",
+          "panel": "b966ce18-691d-498b-80e4-3e932fa209d8",
+          "type": "visualization"
+        },
+        {
+          "object": "e5d84620-35ab-11ee-9870-577ed5df0eed",
+          "panel": "29b78f0f-a1b5-46c0-b24d-0390a71fbb3d",
+          "type": "map"
+        },
+        {
+          "object": "eb44bb0b-f3cd-43a1-b132-2bf68b647800",
+          "panel": "87b03f7f-125d-4542-b726-210ff6868dca",
+          "type": "visualization"
+        }
+      ],
+      "title": "SpecterInsight - Network Discovery"
+    },
+    {
+      "id": "73ed8040-caff-11ee-b294-431605044e6d",
+      "panel_count_by_primary_view": {
+        "709afdbd-b63b-409f-823a-b6982e063d3f": 3,
+        "b7f2f870-b395-4a89-8d17-570aa428aa53": 1
+      },
+      "panels": [
+        {
+          "embedded_data_view": "709afdbd-b63b-409f-823a-b6982e063d3f",
+          "object": "5846af50-cb00-11ee-b294-431605044e6d",
+          "panel": "e1c2e24a-298f-4074-ac3d-aec87a7049a4",
+          "type": "visualization"
+        },
+        {
+          "object": "e07d1940-cb6e-11ee-b294-431605044e6d",
+          "panel": "f428628a-873d-4fcf-b9d3-4fe43abd701d",
+          "type": "visualization"
+        },
+        {
+          "embedded_data_view": "b7f2f870-b395-4a89-8d17-570aa428aa53",
+          "object": "39f469e9-3faa-4653-b66f-f54a31c9bb0d",
+          "panel": "3ebb6ce1-90a4-47b6-bfd9-92ddb42cef48",
+          "type": "visualization"
+        },
+        {
+          "object": "e117c3e0-cb74-11ee-b294-431605044e6d",
+          "panel": "a51a0a45-5f06-45bb-9df3-b9444e3cc144",
+          "type": "search"
+        }
+      ],
+      "title": "SpecterInsight - Lateral Movement"
+    },
+    {
+      "id": "a23a4c50-970e-11ee-bad5-47269760dcc5",
+      "panel_count_by_primary_view": {
+        "709afdbd-b63b-409f-823a-b6982e063d3f": 1,
+        "b7f2f870-b395-4a89-8d17-570aa428aa53": 4
+      },
+      "panels": [
+        {
+          "object": "a4f23660-977c-11ee-bad5-47269760dcc5",
+          "panel": "62ac5c54-70d8-40cd-8c96-641321939848",
+          "type": "visualization"
+        },
+        {
+          "embedded_data_view": "b7f2f870-b395-4a89-8d17-570aa428aa53",
+          "object": "77139620-970f-11ee-bad5-47269760dcc5",
+          "panel": "175da9c9-97c1-46d9-a304-5195bb5d4692",
+          "type": "visualization"
+        },
+        {
+          "object": "4c95df40-9712-11ee-bad5-47269760dcc5",
+          "panel": "bac06067-6270-484b-9d60-e3f92c9afb85",
+          "type": "visualization"
+        },
+        {
+          "object": "89a88e20-9710-11ee-bad5-47269760dcc5",
+          "panel": "9afedfc5-a407-4ff8-9763-63f2f947f3ef",
+          "type": "visualization"
+        },
+        {
+          "object": "d962fa3d-4a2b-4e12-b4f9-b653863077de",
+          "panel": "b6bc5280-4361-4749-b0dd-f066b1aa5526",
+          "type": "search"
+        }
+      ],
+      "title": "SpecterInsight - Credentials"
+    },
+    {
+      "id": "7c102590-5f41-11ee-aa47-e1b546753540",
+      "panel_count_by_primary_view": {
+        "b7f2f870-b395-4a89-8d17-570aa428aa53": 5
+      },
+      "panels": [
+        {
+          "object": "7a3e9010-5fd4-11ee-aa47-e1b546753540",
+          "panel": "d4e1aa3b-df53-4bad-ad2d-741a2a827b6d",
+          "type": "visualization"
+        },
+        {
+          "object": "6ccfbb10-5fd5-11ee-aa47-e1b546753540",
+          "panel": "7ba3c8a8-3781-4801-94a4-694761045f0b",
+          "type": "visualization"
+        },
+        {
+          "object": "8be90b90-5fd6-11ee-aa47-e1b546753540",
+          "panel": "54d10d01-fa40-4aea-a937-2ebb5ab304eb",
+          "type": "visualization"
+        },
+        {
+          "object": "9f7d8020-6001-11ee-aa47-e1b546753540",
+          "panel": "2d4b63b0-31b1-4354-980c-a120e9be725e",
+          "type": "visualization"
+        },
+        {
+          "object": "8ffae820-5fc7-11ee-aa47-e1b546753540",
+          "panel": "f895fd46-a98e-4f1e-8121-dfe2a1201279",
+          "type": "search"
+        }
+      ],
+      "title": "SpecterInsight - Persistence"
+    },
+    {
+      "id": "22c1fad0-3229-11ee-9870-577ed5df0eed",
+      "panel_count_by_primary_view": {
+        "b7f2f870-b395-4a89-8d17-570aa428aa53": 6
+      },
+      "panels": [
+        {
+          "embedded_data_view": "709afdbd-b63b-409f-823a-b6982e063d3f",
+          "object": "4d90c3c0-359b-11ee-9870-577ed5df0eed",
+          "panel": "454f42ea-e123-487a-9ac2-08bc5958b8e2",
+          "type": "visualization"
+        },
+        {
+          "object": "cdc18580-3356-11ee-9870-577ed5df0eed",
+          "panel": "538d58c4-3983-4ff4-9f68-037f4c7bcc6a",
+          "type": "visualization"
+        },
+        {
+          "object": "03684540-3341-11ee-9870-577ed5df0eed",
+          "panel": "38452518-12d1-470e-a5a0-cf044d11217c",
+          "type": "visualization"
+        },
+        {
+          "embedded_data_view": "709afdbd-b63b-409f-823a-b6982e063d3f",
+          "object": "abb1dc90-334e-11ee-9870-577ed5df0eed",
+          "panel": "286bed6e-d539-41da-a828-c400ddf0eb69",
+          "type": "visualization"
+        },
+        {
+          "object": "b8a44b10-334c-11ee-9870-577ed5df0eed",
+          "panel": "541f0af0-4985-4080-ab3f-b1a8f9305908",
+          "type": "visualization"
+        },
+        {
+          "object": "88e237a0-3349-11ee-9870-577ed5df0eed",
+          "panel": "e3b2be90-f806-4bc8-925f-7b9cbd54afda",
+          "type": "search"
+        }
+      ],
+      "title": "SpecterInsight - Infrastructure"
+    }
+  ],
+  "data_views": {
+    "709afdbd-b63b-409f-823a-b6982e063d3f": {
+      "fields_count": 0,
+      "name": "specter",
+      "runtimeFieldMap_count": 0,
+      "timeFieldName": "",
+      "title": "specter*"
+    },
+    "b7f2f870-b395-4a89-8d17-570aa428aa53": {
+      "fields_count": 0,
+      "name": "specter*",
+      "runtimeFieldMap_count": 0,
+      "timeFieldName": "@timestamp",
+      "title": "specter*"
+    }
+  },
+  "panel_sources": [
+    {
+      "id": "7e723d42-3a12-44de-975a-67281d69b0d1",
+      "sources": [
+        {
+          "data_view": "b7f2f870-b395-4a89-8d17-570aa428aa53",
+          "source": "searchSource"
+        }
+      ],
+      "type": "visualization"
+    },
+    {
+      "id": "8575edb0-616a-11ee-80be-db04eef2608e",
+      "sources": [
+        {
+          "data_view": "b7f2f870-b395-4a89-8d17-570aa428aa53",
+          "source": "searchSource"
+        }
+      ],
+      "type": "visualization"
+    },
+    {
+      "id": "c8d3b4c0-5f3f-11ee-aa47-e1b546753540",
+      "sources": [
+        {
+          "data_view": "b7f2f870-b395-4a89-8d17-570aa428aa53",
+          "source": "searchSource"
+        }
+      ],
+      "type": "visualization"
+    },
+    {
+      "id": "223c0310-616a-11ee-80be-db04eef2608e",
+      "sources": [
+        {
+          "data_view": "b7f2f870-b395-4a89-8d17-570aa428aa53",
+          "source": "searchSource"
+        }
+      ],
+      "type": "visualization"
+    },
+    {
+      "id": "37085200-5f3d-11ee-aa47-e1b546753540",
+      "sources": [
+        {
+          "data_view": "b7f2f870-b395-4a89-8d17-570aa428aa53",
+          "source": "searchSource"
+        }
+      ],
+      "type": "visualization"
+    },
+    {
+      "id": "67430590-6169-11ee-80be-db04eef2608e",
+      "sources": [
+        {
+          "data_view": "709afdbd-b63b-409f-823a-b6982e063d3f",
+          "source": "searchSource"
+        }
+      ],
+      "type": "search"
+    },
+    {
+      "id": "039aa940-3599-11ee-9870-577ed5df0eed",
+      "sources": [
+        {
+          "data_view": "b7f2f870-b395-4a89-8d17-570aa428aa53",
+          "source": "searchSource"
+        }
+      ],
+      "type": "visualization"
+    },
+    {
+      "id": "24f63e10-3599-11ee-9870-577ed5df0eed",
+      "sources": [
+        {
+          "data_view": "b7f2f870-b395-4a89-8d17-570aa428aa53",
+          "source": "searchSource"
+        }
+      ],
+      "type": "visualization"
+    },
+    {
+      "id": "1397fbe0-3599-11ee-9870-577ed5df0eed",
+      "sources": [
+        {
+          "data_view": "b7f2f870-b395-4a89-8d17-570aa428aa53",
+          "source": "searchSource"
+        }
+      ],
+      "type": "visualization"
+    },
+    {
+      "id": "3b5bbb80-3599-11ee-9870-577ed5df0eed",
+      "sources": [
+        {
+          "data_view": "b7f2f870-b395-4a89-8d17-570aa428aa53",
+          "source": "searchSource"
+        }
+      ],
+      "type": "visualization"
+    },
+    {
+      "id": "bdffc0a0-3598-11ee-9870-577ed5df0eed",
+      "sources": [
+        {
+          "source": "EMS_TMS"
+        },
+        {
+          "data_view": "709afdbd-b63b-409f-823a-b6982e063d3f",
+          "source": "ES_SEARCH"
+        }
+      ],
+      "type": "map"
+    },
+    {
+      "id": "4bf54e20-3599-11ee-9870-577ed5df0eed",
+      "sources": [
+        {
+          "data_view": "b7f2f870-b395-4a89-8d17-570aa428aa53",
+          "source": "searchSource"
+        }
+      ],
+      "type": "visualization"
+    },
+    {
+      "id": "5ef35da0-3599-11ee-9870-577ed5df0eed",
+      "sources": [
+        {
+          "data_view": "b7f2f870-b395-4a89-8d17-570aa428aa53",
+          "source": "searchSource"
+        }
+      ],
+      "type": "visualization"
+    },
+    {
+      "id": "e5d84620-35ab-11ee-9870-577ed5df0eed",
+      "sources": [
+        {
+          "source": "EMS_TMS"
+        },
+        {
+          "data_view": "709afdbd-b63b-409f-823a-b6982e063d3f",
+          "source": "ES_PEW_PEW"
+        },
+        {
+          "data_view": "709afdbd-b63b-409f-823a-b6982e063d3f",
+          "source": "ES_SEARCH"
+        }
+      ],
+      "type": "map"
+    },
+    {
+      "id": "eb44bb0b-f3cd-43a1-b132-2bf68b647800",
+      "sources": [
+        {
+          "data_view": "b7f2f870-b395-4a89-8d17-570aa428aa53",
+          "source": "searchSource"
+        }
+      ],
+      "type": "visualization"
+    },
+    {
+      "id": "5846af50-cb00-11ee-b294-431605044e6d",
+      "sources": [
+        {
+          "data_view": "709afdbd-b63b-409f-823a-b6982e063d3f",
+          "source": "searchSource"
+        }
+      ],
+      "type": "visualization"
+    },
+    {
+      "id": "e07d1940-cb6e-11ee-b294-431605044e6d",
+      "sources": [
+        {
+          "data_view": "709afdbd-b63b-409f-823a-b6982e063d3f",
+          "source": "searchSource"
+        }
+      ],
+      "type": "visualization"
+    },
+    {
+      "id": "39f469e9-3faa-4653-b66f-f54a31c9bb0d",
+      "sources": [
+        {
+          "data_view": "b7f2f870-b395-4a89-8d17-570aa428aa53",
+          "source": "searchSource"
+        }
+      ],
+      "type": "visualization"
+    },
+    {
+      "id": "e117c3e0-cb74-11ee-b294-431605044e6d",
+      "sources": [
+        {
+          "data_view": "709afdbd-b63b-409f-823a-b6982e063d3f",
+          "source": "searchSource"
+        }
+      ],
+      "type": "search"
+    },
+    {
+      "id": "a4f23660-977c-11ee-bad5-47269760dcc5",
+      "sources": [
+        {
+          "data_view": "709afdbd-b63b-409f-823a-b6982e063d3f",
+          "source": "searchSource"
+        }
+      ],
+      "type": "visualization"
+    },
+    {
+      "id": "77139620-970f-11ee-bad5-47269760dcc5",
+      "sources": [
+        {
+          "data_view": "b7f2f870-b395-4a89-8d17-570aa428aa53",
+          "source": "searchSource"
+        }
+      ],
+      "type": "visualization"
+    },
+    {
+      "id": "4c95df40-9712-11ee-bad5-47269760dcc5",
+      "sources": [
+        {
+          "data_view": "b7f2f870-b395-4a89-8d17-570aa428aa53",
+          "source": "searchSource"
+        }
+      ],
+      "type": "visualization"
+    },
+    {
+      "id": "89a88e20-9710-11ee-bad5-47269760dcc5",
+      "sources": [
+        {
+          "data_view": "b7f2f870-b395-4a89-8d17-570aa428aa53",
+          "source": "searchSource"
+        }
+      ],
+      "type": "visualization"
+    },
+    {
+      "id": "d962fa3d-4a2b-4e12-b4f9-b653863077de",
+      "sources": [
+        {
+          "data_view": "b7f2f870-b395-4a89-8d17-570aa428aa53",
+          "source": "searchSource"
+        }
+      ],
+      "type": "search"
+    },
+    {
+      "id": "7a3e9010-5fd4-11ee-aa47-e1b546753540",
+      "sources": [
+        {
+          "data_view": "b7f2f870-b395-4a89-8d17-570aa428aa53",
+          "source": "searchSource"
+        }
+      ],
+      "type": "visualization"
+    },
+    {
+      "id": "6ccfbb10-5fd5-11ee-aa47-e1b546753540",
+      "sources": [
+        {
+          "data_view": "b7f2f870-b395-4a89-8d17-570aa428aa53",
+          "source": "searchSource"
+        }
+      ],
+      "type": "visualization"
+    },
+    {
+      "id": "8be90b90-5fd6-11ee-aa47-e1b546753540",
+      "sources": [
+        {
+          "data_view": "b7f2f870-b395-4a89-8d17-570aa428aa53",
+          "source": "searchSource"
+        }
+      ],
+      "type": "visualization"
+    },
+    {
+      "id": "9f7d8020-6001-11ee-aa47-e1b546753540",
+      "sources": [
+        {
+          "data_view": "b7f2f870-b395-4a89-8d17-570aa428aa53",
+          "source": "searchSource"
+        }
+      ],
+      "type": "visualization"
+    },
+    {
+      "id": "8ffae820-5fc7-11ee-aa47-e1b546753540",
+      "sources": [
+        {
+          "data_view": "b7f2f870-b395-4a89-8d17-570aa428aa53",
+          "source": "searchSource"
+        }
+      ],
+      "type": "search"
+    },
+    {
+      "id": "4d90c3c0-359b-11ee-9870-577ed5df0eed",
+      "sources": [
+        {
+          "data_view": "b7f2f870-b395-4a89-8d17-570aa428aa53",
+          "source": "searchSource"
+        }
+      ],
+      "type": "visualization"
+    },
+    {
+      "id": "cdc18580-3356-11ee-9870-577ed5df0eed",
+      "sources": [
+        {
+          "data_view": "b7f2f870-b395-4a89-8d17-570aa428aa53",
+          "source": "searchSource"
+        }
+      ],
+      "type": "visualization"
+    },
+    {
+      "id": "03684540-3341-11ee-9870-577ed5df0eed",
+      "sources": [
+        {
+          "data_view": "b7f2f870-b395-4a89-8d17-570aa428aa53",
+          "source": "searchSource"
+        }
+      ],
+      "type": "visualization"
+    },
+    {
+      "id": "abb1dc90-334e-11ee-9870-577ed5df0eed",
+      "sources": [
+        {
+          "data_view": "b7f2f870-b395-4a89-8d17-570aa428aa53",
+          "source": "searchSource"
+        }
+      ],
+      "type": "visualization"
+    },
+    {
+      "id": "b8a44b10-334c-11ee-9870-577ed5df0eed",
+      "sources": [
+        {
+          "data_view": "b7f2f870-b395-4a89-8d17-570aa428aa53",
+          "source": "searchSource"
+        }
+      ],
+      "type": "visualization"
+    },
+    {
+      "id": "88e237a0-3349-11ee-9870-577ed5df0eed",
+      "sources": [
+        {
+          "data_view": "b7f2f870-b395-4a89-8d17-570aa428aa53",
+          "source": "searchSource"
+        }
+      ],
+      "type": "search"
+    }
+  ],
+  "sha256": "4ec038f77fc1e617e966d8f2af4be64dccbcca886126ea88247544a32ed05841"
+}

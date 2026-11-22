@@ -1,0 +1,195 @@
+{
+  "evidence_id": "ev_edee1607d77ef229fe019d8ee890cda4bc7d7ce48bb2cd0ad09fe9be07b23f3e",
+  "subject": {
+    "name": "SpecterInsight.UI.dll",
+    "digest": {
+      "sha256": "b26312d15a0a8d2743ef50069874567ef768d64e1eed0a9e82a410976fbe10d6"
+    },
+    "local_path": "/home/deleteme/Desktop/SpecterInsight/client/SpecterInsight.UI.dll",
+    "format": "pe",
+    "architecture": "x86"
+  },
+  "provider": {
+    "id": "rea-analysis-view",
+    "name": "REA analysis view projection",
+    "version": "1"
+  },
+  "analysis_profile": null,
+  "predicate_type": "rea.analysis-view",
+  "operation": "inspect_analysis_view",
+  "parameters": {
+    "parent_evidence_id": "ev_901e511793151573b86756ce328464ae9559559549868fffd1f7db4fa49f554f",
+    "view": {
+      "kind": "summary"
+    }
+  },
+  "raw_result": null,
+  "normalized_result": {
+    "kind": "summary",
+    "view": {
+      "kind": "summary"
+    },
+    "parent_evidence_id": "ev_901e511793151573b86756ce328464ae9559559549868fffd1f7db4fa49f554f",
+    "parent_operation": "inspect_managed_members",
+    "parent_digest": "901e511793151573b86756ce328464ae9559559549868fffd1f7db4fa49f554f",
+    "view_digest": "01d8e9e3343d99497722f86eeff65c29218eae88b042f2f0ae1dbcb03f034c2d",
+    "artifact": {
+      "path": "/home/deleteme/Desktop/SpecterInsight/client/SpecterInsight.UI.dll",
+      "sha256": "b26312d15a0a8d2743ef50069874567ef768d64e1eed0a9e82a410976fbe10d6"
+    },
+    "coverage": {
+      "status": "complete-within-view",
+      "examined": 4305,
+      "total": 4305,
+      "next_offset": null,
+      "exhausted": true
+    },
+    "limitations": [
+      "CIL instruction anchors are decoded from file-backed method bodies only; no target assembly is loaded or executed.",
+      "Exported types are reported from ExportedType rows as declared; forwarded types are not resolved in their implementing assemblies.",
+      "Member signatures decode ECMA-335 primitive, class, valuetype, generic instantiation, generic variable, pointer, byref, single-dimension and general array, function pointer including VARARG sentinels, custom modifier, and typed reference forms; class and valuetype operands keep their encoded TypeDefOrRefOrSpec values.",
+      "Metadata tokens are build-local coordinates and are only meaningful with the reported artifact SHA-256 and MVID.",
+      "Types, fields, methods, call edges, field accesses, and user strings cover only the selected declaring types; coverage describes that selection. Edge targets outside it keep their names but are not described.",
+      "User strings are the #US literals loaded by ldstr in the inspected method bodies, with their own coverage; instruction anchors and normalized CIL digests keep their build-local tokens."
+    ],
+    "unknowns": [
+      "Collection counts and pages cover producer-returned rows; member completeness remains the original coverage, not an absence claim about unreturned rows.",
+      "Exported types and member references cover the whole assembly; the other collections cover only the selected declaring types.",
+      "Metadata tokens are build-local coordinates bound to the recorded artifact SHA-256 and module MVID; this view does not load or execute the assembly."
+    ],
+    "summary": {
+      "signature_resolution": "type-names-v1",
+      "nesting_read": true,
+      "artifact": {
+        "path": "/home/deleteme/Desktop/SpecterInsight/client/SpecterInsight.UI.dll",
+        "sha256": "b26312d15a0a8d2743ef50069874567ef768d64e1eed0a9e82a410976fbe10d6",
+        "byte_length": 2276864,
+        "format": "pe"
+      },
+      "module": {
+        "name": "SpecterInsight.UI.dll",
+        "generation": 0,
+        "mvid": "ec17b4c7-9015-4373-9b10-8081bc59e9a9",
+        "enc_id": null,
+        "enc_base_id": null,
+        "token": "0x00000001",
+        "row_offset": 1401696
+      },
+      "assembly": {
+        "name": "SpecterInsight.UI",
+        "version": "7.0.0.0",
+        "culture": null,
+        "flags": 0,
+        "hash_algorithm": 32772,
+        "public_key": {
+          "kind": "none",
+          "byte_length": 0,
+          "sha256": null,
+          "token": null
+        },
+        "token": "0x20000001",
+        "row_offset": 1822640
+      },
+      "metadata": {
+        "status": "complete",
+        "version": "v4.0.30319",
+        "table_row_counts": {
+          "Module": 1,
+          "TypeRef": 815,
+          "TypeDef": 1279,
+          "Field": 5343,
+          "MethodDef": 6642,
+          "Param": 3266,
+          "InterfaceImpl": 622,
+          "MemberRef": 4261,
+          "Constant": 173,
+          "CustomAttribute": 9869,
+          "FieldMarshal": 5,
+          "DeclSecurity": 1,
+          "ClassLayout": 4,
+          "StandAloneSig": 1502,
+          "EventMap": 18,
+          "Event": 21,
+          "PropertyMap": 319,
+          "Property": 1381,
+          "MethodSemantics": 2328,
+          "MethodImpl": 994,
+          "ModuleRef": 2,
+          "TypeSpec": 995,
+          "ImplMap": 12,
+          "FieldRVA": 5,
+          "Assembly": 1,
+          "AssemblyRef": 53,
+          "ManifestResource": 2,
+          "NestedClass": 983,
+          "GenericParam": 15,
+          "MethodSpec": 1922,
+          "GenericParamConstraint": 1
+        }
+      },
+      "identity_scope": {
+        "token_identity": "build-local",
+        "requires_artifact_sha256": "b26312d15a0a8d2743ef50069874567ef768d64e1eed0a9e82a410976fbe10d6",
+        "requires_mvid": "ec17b4c7-9015-4373-9b10-8081bc59e9a9"
+      },
+      "selection": {
+        "type_names": [
+          "<<UpdateDocumentation>b__5_0>d"
+        ],
+        "unmatched_type_names": []
+      },
+      "method_rows": {
+        "offset": 0,
+        "count": 6642,
+        "total": 6642
+      },
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "user_strings": {
+        "state": "complete",
+        "issues": []
+      },
+      "limitations": [
+        "Metadata tokens are build-local coordinates and are only meaningful with the reported artifact SHA-256 and MVID.",
+        "CIL instruction anchors are decoded from file-backed method bodies only; no target assembly is loaded or executed.",
+        "Exported types are reported from ExportedType rows as declared; forwarded types are not resolved in their implementing assemblies.",
+        "User strings are the #US literals loaded by ldstr in the inspected method bodies, with their own coverage; instruction anchors and normalized CIL digests keep their build-local tokens.",
+        "Member signatures decode ECMA-335 primitive, class, valuetype, generic instantiation, generic variable, pointer, byref, single-dimension and general array, function pointer including VARARG sentinels, custom modifier, and typed reference forms; class and valuetype operands keep their encoded TypeDefOrRefOrSpec values.",
+        "Types, fields, methods, call edges, field accesses, and user strings cover only the selected declaring types; coverage describes that selection. Edge targets outside it keep their names but are not described."
+      ],
+      "reported_counts": {
+        "types": 1,
+        "exported_types": 0,
+        "fields": 5,
+        "methods": 2,
+        "member_refs": 4261,
+        "call_edges": 16,
+        "field_accesses": 20,
+        "user_strings": 0
+      }
+    }
+  },
+  "confidence": "derived",
+  "authority": "shipped-artifact",
+  "environment": null,
+  "limitations": [
+    "CIL instruction anchors are decoded from file-backed method bodies only; no target assembly is loaded or executed.",
+    "Exported types are reported from ExportedType rows as declared; forwarded types are not resolved in their implementing assemblies.",
+    "Member signatures decode ECMA-335 primitive, class, valuetype, generic instantiation, generic variable, pointer, byref, single-dimension and general array, function pointer including VARARG sentinels, custom modifier, and typed reference forms; class and valuetype operands keep their encoded TypeDefOrRefOrSpec values.",
+    "Metadata tokens are build-local coordinates and are only meaningful with the reported artifact SHA-256 and MVID.",
+    "Types, fields, methods, call edges, field accesses, and user strings cover only the selected declaring types; coverage describes that selection. Edge targets outside it keep their names but are not described.",
+    "User strings are the #US literals loaded by ldstr in the inspected method bodies, with their own coverage; instruction anchors and normalized CIL digests keep their build-local tokens."
+  ],
+  "relationship_coverage": null,
+  "locations": [
+    {
+      "kind": "artifact-path",
+      "path": "/home/deleteme/Desktop/SpecterInsight/client/SpecterInsight.UI.dll"
+    }
+  ],
+  "evidence_links": [
+    "ev_901e511793151573b86756ce328464ae9559559549868fffd1f7db4fa49f554f"
+  ]
+}

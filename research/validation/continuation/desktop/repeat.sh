@@ -21,7 +21,7 @@ for path in "$dist/client/"*.dll; do
  files+=(--ro-bind "$path" "/files/$name")
 done
 bwrap --unshare-all --die-with-parent --new-session --clearenv --ro-bind /usr /usr --symlink usr/lib /lib --symlink usr/lib64 /lib64 --symlink usr/bin /bin --ro-bind /etc/fonts /etc/fonts --dev /dev --proc /proc --tmpfs /tmp \
- --setenv HOME /tmp --setenv PATH /usr/bin --setenv DISPLAY :77 --setenv FONTCONFIG_PATH /etc/fonts --setenv LD_LIBRARY_PATH /native --setenv DOTNET_EnableDiagnostics 0 --ro-bind "$sdk" /dotnet --ro-bind "$build/app" /app --ro-bind "$xvfb" /Xvfb --ro-bind "$build/record.json" /record.json --ro-bind "$dist/client/runtimes/linux-x64/native" /native "${files[@]}" --chdir /tmp /bin/bash -euc '
+ --setenv STUDY_SCREEN_CASE "${5:-baseline}" --setenv HOME /tmp --setenv PATH /usr/bin --setenv DISPLAY :77 --setenv FONTCONFIG_PATH /etc/fonts --setenv LD_LIBRARY_PATH /native --setenv DOTNET_EnableDiagnostics 0 --ro-bind "$sdk" /dotnet --ro-bind "$build/app" /app --ro-bind "$xvfb" /Xvfb --ro-bind "$build/record.json" /record.json --ro-bind "$dist/client/runtimes/linux-x64/native" /native "${files[@]}" --chdir /tmp /bin/bash -euc '
  /Xvfb :77 -screen 0 1280x800x24 -nolisten tcp >/tmp/xlog 2>&1 &
  xp=$!; trap "kill $xp 2>/dev/null || true" EXIT
  for ((i=0;i<40;i++)); do xdpyinfo >/dev/null 2>&1 && break; sleep 0.1; done

@@ -1,0 +1,19 @@
+{"id":"csv-consumer","value":"Example","passed":true}
+{"id":"no-fixture-identity-401","passed":true}
+{"id":"api-denied-exception","passed":true}
+{"id":"product-filter-rejects-fixture-identity","passed":true}
+{"id":"fixture-http-503-client-exception","passed":true}
+{"id":"fixture-reader-200","passed":true}
+{"id":"api-read-dto","passed":true}
+{"id":"http-pair","method":"GET","path":"/reference/Documentation","status":200,"body":[{"name":"Guide","contents":"Folder summary","children":[{"name":"Sample","contents":"# Synthetic fixture\n","children":[]},{"name":"Overview","contents":"Folder summary","children":[]}]}]}
+{"id":"empty-tree","passed":true}
+{"id":"signalr-record","record":{"id":"fixture-online","type":"user-login","timestamp":"2027-01-02T03:04:05Z","source":"test-source","system":"test-system","outcome":0,"message":"Synthetic audit event","details":"{}"}}
+{"id":"signalr-first","passed":true}
+{"id":"signalr-first-after-new-connection","passed":true}
+{"id":"search-api-to-stored-fixture","passed":true}
+{"id":"database-correlated","passed":true}
+{"id":"stock-window-subscribed","passed":true}
+{"id":"stock-window-visible","passed":true}
+{"id":"stock-connected-audit","eventId":"fixture-live-window","initialEmpty":true,"matches":1,"visible":true,"passed":true}
+{"id":"stock-window-exit","passed":true}
+{"id":"same-id-in-database","passed":true}

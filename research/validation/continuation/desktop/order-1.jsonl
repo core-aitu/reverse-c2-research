@@ -1,0 +1,3 @@
+{"id":"second-response","result":{"model":"Second request","visible":true}}
+{"id":"late-first-response","result":{"model":"First request","visible":true,"previousVisible":false}}
+{"id":"response-after-detach","result":{"detached":true,"requestCancelled":false,"model":"Detached response","visible":false}}

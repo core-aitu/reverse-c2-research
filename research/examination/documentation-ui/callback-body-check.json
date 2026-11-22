@@ -1,0 +1,34 @@
+{
+  "assembly_sha256": "b26312d15a0a8d2743ef50069874567ef768d64e1eed0a9e82a410976fbe10d6",
+  "mvid": "ec17b4c7-9015-4373-9b10-8081bc59e9a9",
+  "methods": [
+    {
+      "token": "0x06000914",
+      "name": "get_Documents",
+      "declaring_type": "DocumentationViewModel",
+      "parent_type": null,
+      "il_sha256": "a79133bfb836bc7c2683ebb5f6123a0c4d4128eb159ff088ae1a29c5b2b6cf9b",
+      "il_size": 7,
+      "exception_regions": 0
+    },
+    {
+      "token": "0x06000915",
+      "name": "set_Documents",
+      "declaring_type": "DocumentationViewModel",
+      "parent_type": null,
+      "il_sha256": "a67402170e05bb0720790172606fcde75f3c7d414d2d952485c89c643268f566",
+      "il_size": 20,
+      "exception_regions": 0
+    },
+    {
+      "token": "0x0600091c",
+      "name": "\u003CUpdateDocumentation\u003Eb__1",
+      "declaring_type": "\u003C\u003Ec__DisplayClass5_0",
+      "parent_type": "DocumentationViewModel",
+      "il_sha256": "333fd9c015824191f2eafe6d7090ccdeb76c3b73ffc5bc1fa3caeb7393a32374",
+      "il_size": 18,
+      "exception_regions": 0
+    }
+  ],
+  "setter_property_argument": "Documents"
+}

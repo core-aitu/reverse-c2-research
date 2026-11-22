@@ -1,0 +1,51 @@
+{
+  "method": "SHA-256 matched diagnostic-variants.json; DLL flag from COFF Characteristics 0x2000; CLI entry kind from IMAGE_COR20_HEADER Flags (0x10 native) and EntryPointTokenOrRva (zero or table tag). Static headers only.",
+  "images": [
+    {
+      "paths": [
+        "server/SpecterInsight.exe",
+        "templates/any/specter-dotnet-exe.exe"
+      ],
+      "sha256": "d5e7e80c6e67939caa244f9f1b8736cafb4d1e5e906ee2668c34387c8067569d",
+      "pe_kind": "EXE",
+      "clr_entrypoint_kind": "MethodDef",
+      "mvid": "e10959e7-1725-4dc7-9ff7-d7dd25e9f0e8"
+    },
+    {
+      "paths": [
+        "templates/any/SpecterInsight.exe"
+      ],
+      "sha256": "44b88633520b501f999290c462581a5e35ee3eadf507c00caf9f828778701595",
+      "pe_kind": "EXE",
+      "clr_entrypoint_kind": "MethodDef",
+      "mvid": "aace5ac7-76e1-468b-baaa-2904a1512a2c"
+    },
+    {
+      "paths": [
+        "templates/any/specter-dotnet-exe.exe.bak"
+      ],
+      "sha256": "85fb4c9ac4ee295efbb907d37d5a066726bda8c35a8ddd67890325680d540f95",
+      "pe_kind": "EXE",
+      "clr_entrypoint_kind": "MethodDef",
+      "mvid": "305c9607-ab93-4a7f-a38f-38c745dfbf0b"
+    },
+    {
+      "paths": [
+        "templates/any/specter-dotnet-exe.exe.bak2"
+      ],
+      "sha256": "3fff31bed46cb2957c89b1cd662735877c0b173ada977b101c88939020a833f6",
+      "pe_kind": "EXE",
+      "clr_entrypoint_kind": "MethodDef",
+      "mvid": "62b0d9b6-0f41-489c-a8cc-18284bb5cf90"
+    },
+    {
+      "paths": [
+        "templates/any/specter-dotnet-exe.exe.bak3"
+      ],
+      "sha256": "0c8aaa733148ecffe88457b24b4e474113a9e2eba06a4c1e30c5ab7ba920a9d4",
+      "pe_kind": "EXE",
+      "clr_entrypoint_kind": "MethodDef",
+      "mvid": "75a77f22-8006-46e6-90f7-300784a901ad"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "sha256": "a6c454cdfc80e5d9bd3906747d30edbe4fcf69ab2e3c2b52b301b6f4b60e46a5",
+  "mvid": "1323c471-66a2-40e3-a048-50e1f9d4dcfb",
+  "typed_candidates": {
+    "api_attribute_only": 1,
+    "both": 35,
+    "mvc_base_only": 3
+  },
+  "public_instance_methods_with_direct_verb": 202,
+  "methods_with_separate_route_attribute": 0,
+  "verb_method_counts": {
+    "HttpDeleteAttribute": 28,
+    "HttpGetAttribute": 91,
+    "HttpPostAttribute": 62,
+    "HttpPutAttribute": 21
+  },
+  "scope": "Direct attributes and locally resolvable ancestry. Metadata counts only. Does not resolve conventions, dynamic endpoints, named routes, or invocation frequency."
+}

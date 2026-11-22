@@ -1,0 +1,226 @@
+{
+  "evidence_id": "ev_6b66ce362941ce8f9d03841b642d237a157c99a0242fc48770097f6abdfbd8fd",
+  "subject": {
+    "name": "SpecterInsight.UI.dll",
+    "digest": {
+      "sha256": "b26312d15a0a8d2743ef50069874567ef768d64e1eed0a9e82a410976fbe10d6"
+    },
+    "local_path": "/home/deleteme/Desktop/SpecterInsight/client/SpecterInsight.UI.dll",
+    "format": "pe",
+    "architecture": "x86"
+  },
+  "provider": {
+    "id": "rea-analysis-view",
+    "name": "REA analysis view projection",
+    "version": "1"
+  },
+  "analysis_profile": null,
+  "predicate_type": "rea.analysis-view",
+  "operation": "inspect_analysis_view",
+  "parameters": {
+    "parent_evidence_id": "ev_901e511793151573b86756ce328464ae9559559549868fffd1f7db4fa49f554f",
+    "view": {
+      "kind": "managed-members",
+      "collection": "fields",
+      "offset": 0,
+      "limit": 32
+    }
+  },
+  "raw_result": null,
+  "normalized_result": {
+    "kind": "managed-members",
+    "view": {
+      "kind": "managed-members",
+      "collection": "fields",
+      "offset": 0,
+      "limit": 32
+    },
+    "page": {
+      "collection": "fields",
+      "rows": [
+        {
+          "token": "0x0400079d",
+          "row_offset": 1452360,
+          "declaring_type_token": "0x020001c7",
+          "declaring_type": "<<UpdateDocumentation>b__5_0>d",
+          "name": "<>1__state",
+          "flags": 6,
+          "signature": {
+            "raw_length": 2,
+            "raw_sha256": "557c754d26e2667287367a856ea5fcd584f35ab796d24a6a875d1648a4637d23",
+            "resolved_sha256": "557c754d26e2667287367a856ea5fcd584f35ab796d24a6a875d1648a4637d23",
+            "kind": "field",
+            "parse_status": "decoded",
+            "calling_convention": "field",
+            "generic_parameter_count": null,
+            "parameter_count": null,
+            "return_type": null,
+            "parameter_types": [],
+            "field_type": "i4",
+            "issue": null
+          }
+        },
+        {
+          "token": "0x0400079e",
+          "row_offset": 1452370,
+          "declaring_type_token": "0x020001c7",
+          "declaring_type": "<<UpdateDocumentation>b__5_0>d",
+          "name": "<>t__builder",
+          "flags": 6,
+          "signature": {
+            "raw_length": 4,
+            "raw_sha256": "ee0885538d2a9aa37f55b3f2d2b98661881b1ccdf31769bc13cc01b742847a5f",
+            "resolved_sha256": "8e6aee73ff21200b7397e6310beebb433cd657a782affaab4fafb70d8633b19e",
+            "kind": "field",
+            "parse_status": "decoded",
+            "calling_convention": "field",
+            "generic_parameter_count": null,
+            "parameter_count": null,
+            "return_type": null,
+            "parameter_types": [],
+            "field_type": "valuetype:245",
+            "issue": null
+          }
+        },
+        {
+          "token": "0x0400079f",
+          "row_offset": 1452380,
+          "declaring_type_token": "0x020001c7",
+          "declaring_type": "<<UpdateDocumentation>b__5_0>d",
+          "name": "<>4__this",
+          "flags": 6,
+          "signature": {
+            "raw_length": 4,
+            "raw_sha256": "88f9272cc44af5ae414a17632652a44a70ef6214bc05eee38e709c4ea75144a8",
+            "resolved_sha256": "66f6f242d1804f6d65676b55160e2d0de2b1d8b2b3a0a154fc438fda2c7c0bc4",
+            "kind": "field",
+            "parse_status": "decoded",
+            "calling_convention": "field",
+            "generic_parameter_count": null,
+            "parameter_count": null,
+            "return_type": null,
+            "parameter_types": [],
+            "field_type": "class:1816",
+            "issue": null
+          }
+        },
+        {
+          "token": "0x040007a0",
+          "row_offset": 1452390,
+          "declaring_type_token": "0x020001c7",
+          "declaring_type": "<<UpdateDocumentation>b__5_0>d",
+          "name": "<>8__1",
+          "flags": 1,
+          "signature": {
+            "raw_length": 4,
+            "raw_sha256": "f6025b135d1f3d08101af7b6683aedbed71f602b04c1f2735d3e3b070718f8ec",
+            "resolved_sha256": "4d9a2ead3ba048cfcbf862789eab1a7eb129b03d9cfb086c60426980b922130a",
+            "kind": "field",
+            "parse_status": "decoded",
+            "calling_convention": "field",
+            "generic_parameter_count": null,
+            "parameter_count": null,
+            "return_type": null,
+            "parameter_types": [],
+            "field_type": "class:1824",
+            "issue": null
+          }
+        },
+        {
+          "token": "0x040007a1",
+          "row_offset": 1452400,
+          "declaring_type_token": "0x020001c7",
+          "declaring_type": "<<UpdateDocumentation>b__5_0>d",
+          "name": "<>u__1",
+          "flags": 1,
+          "signature": {
+            "raw_length": 14,
+            "raw_sha256": "8a4886a87d6e72165bd5ec085b1f749c0d7c209fd7caeb7b0796d0914ef68ca7",
+            "resolved_sha256": "966a11e3273c95655cbb68a153b29a5dceeccef5a7e0adf985a91cd7b9efba8c",
+            "kind": "field",
+            "parse_status": "decoded",
+            "calling_convention": "field",
+            "generic_parameter_count": null,
+            "parameter_count": null,
+            "return_type": null,
+            "parameter_types": [],
+            "field_type": "valuetype:409<class:869<class:1893>>",
+            "issue": null
+          }
+        }
+      ]
+    },
+    "parent_evidence_id": "ev_901e511793151573b86756ce328464ae9559559549868fffd1f7db4fa49f554f",
+    "parent_operation": "inspect_managed_members",
+    "parent_digest": "901e511793151573b86756ce328464ae9559559549868fffd1f7db4fa49f554f",
+    "view_digest": "af0ac0eb29dcdf3ccf0526ed04190bb98ab2993ebbdffbe3fb5cbfbb35848ae3",
+    "artifact": {
+      "path": "/home/deleteme/Desktop/SpecterInsight/client/SpecterInsight.UI.dll",
+      "sha256": "b26312d15a0a8d2743ef50069874567ef768d64e1eed0a9e82a410976fbe10d6"
+    },
+    "coverage": {
+      "status": "page",
+      "examined": 5,
+      "total": 5,
+      "next_offset": null,
+      "exhausted": true
+    },
+    "limitations": [
+      "CIL instruction anchors are decoded from file-backed method bodies only; no target assembly is loaded or executed.",
+      "Exported types are reported from ExportedType rows as declared; forwarded types are not resolved in their implementing assemblies.",
+      "Member signatures decode ECMA-335 primitive, class, valuetype, generic instantiation, generic variable, pointer, byref, single-dimension and general array, function pointer including VARARG sentinels, custom modifier, and typed reference forms; class and valuetype operands keep their encoded TypeDefOrRefOrSpec values.",
+      "Metadata tokens are build-local coordinates and are only meaningful with the reported artifact SHA-256 and MVID.",
+      "Types, fields, methods, call edges, field accesses, and user strings cover only the selected declaring types; coverage describes that selection. Edge targets outside it keep their names but are not described.",
+      "User strings are the #US literals loaded by ldstr in the inspected method bodies, with their own coverage; instruction anchors and normalized CIL digests keep their build-local tokens."
+    ],
+    "unknowns": [
+      "Collection counts and pages cover producer-returned rows; member completeness remains the original coverage, not an absence claim about unreturned rows.",
+      "Exported types and member references cover the whole assembly; the other collections cover only the selected declaring types.",
+      "Metadata tokens are build-local coordinates bound to the recorded artifact SHA-256 and module MVID; this view does not load or execute the assembly."
+    ],
+    "signature_resolution": "type-names-v1",
+    "nesting_read": true,
+    "identity_scope": {
+      "token_identity": "build-local",
+      "requires_artifact_sha256": "b26312d15a0a8d2743ef50069874567ef768d64e1eed0a9e82a410976fbe10d6",
+      "requires_mvid": "ec17b4c7-9015-4373-9b10-8081bc59e9a9"
+    },
+    "selection": {
+      "type_names": [
+        "<<UpdateDocumentation>b__5_0>d"
+      ],
+      "unmatched_type_names": []
+    },
+    "method_rows": {
+      "offset": 0,
+      "count": 6642,
+      "total": 6642
+    },
+    "source_metadata_status": "complete",
+    "source_coverage": {
+      "state": "complete",
+      "issues": []
+    }
+  },
+  "confidence": "derived",
+  "authority": "shipped-artifact",
+  "environment": null,
+  "limitations": [
+    "CIL instruction anchors are decoded from file-backed method bodies only; no target assembly is loaded or executed.",
+    "Exported types are reported from ExportedType rows as declared; forwarded types are not resolved in their implementing assemblies.",
+    "Member signatures decode ECMA-335 primitive, class, valuetype, generic instantiation, generic variable, pointer, byref, single-dimension and general array, function pointer including VARARG sentinels, custom modifier, and typed reference forms; class and valuetype operands keep their encoded TypeDefOrRefOrSpec values.",
+    "Metadata tokens are build-local coordinates and are only meaningful with the reported artifact SHA-256 and MVID.",
+    "Types, fields, methods, call edges, field accesses, and user strings cover only the selected declaring types; coverage describes that selection. Edge targets outside it keep their names but are not described.",
+    "User strings are the #US literals loaded by ldstr in the inspected method bodies, with their own coverage; instruction anchors and normalized CIL digests keep their build-local tokens."
+  ],
+  "relationship_coverage": null,
+  "locations": [
+    {
+      "kind": "artifact-path",
+      "path": "/home/deleteme/Desktop/SpecterInsight/client/SpecterInsight.UI.dll"
+    }
+  ],
+  "evidence_links": [
+    "ev_901e511793151573b86756ce328464ae9559559549868fffd1f7db4fa49f554f"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "path": "client/SpecterInsight.UI.dll",
+  "sha256": "b26312d15a0a8d2743ef50069874567ef768d64e1eed0a9e82a410976fbe10d6",
+  "coded_type": 1357,
+  "token": "0x01000153",
+  "row_file_offset": 1405088,
+  "namespace": "Avalonia",
+  "name": "VisualTreeAttachmentEventArgs",
+  "resolution_scope_coded": 18,
+  "method_signature_sources": [
+    "0x06000158",
+    "0x06000159"
+  ],
+  "method": "Read PE sections, CLI metadata streams, table widths and TypeRef row 339 without executing the assembly."
+}

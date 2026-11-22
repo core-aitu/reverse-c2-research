@@ -1,0 +1,155 @@
+{
+    "probes": {
+        "chunk_duplicate_default_index_sqlstate": "23505",
+        "event_duplicate_identifier_distinct_ids": "2"
+    },
+    "schema": "public",
+    "tables": [
+        {
+            "name": "documentationchunks",
+            "columns": [
+                {
+                    "name": "id",
+                    "type": "integer",
+                    "default": "nextval('documentationchunks_id_seq'::regclass)",
+                    "required": true
+                },
+                {
+                    "name": "path",
+                    "type": "text",
+                    "default": null,
+                    "required": true
+                },
+                {
+                    "name": "title",
+                    "type": "text",
+                    "default": null,
+                    "required": true
+                },
+                {
+                    "name": "content",
+                    "type": "text",
+                    "default": null,
+                    "required": true
+                },
+                {
+                    "name": "embedding",
+                    "type": "real[]",
+                    "default": null,
+                    "required": false
+                },
+                {
+                    "name": "chunkindex",
+                    "type": "integer",
+                    "default": "0",
+                    "required": true
+                },
+                {
+                    "name": "indexedat",
+                    "type": "timestamp with time zone",
+                    "default": "now()",
+                    "required": true
+                }
+            ],
+            "indexes": [
+                {
+                    "name": "documentationchunks_pkey",
+                    "valid": true,
+                    "unique": true,
+                    "primary": true,
+                    "definition": "CREATE UNIQUE INDEX documentationchunks_pkey ON public.documentationchunks USING btree (id)"
+                },
+                {
+                    "name": "ix_doc_chunks_path_idx",
+                    "valid": true,
+                    "unique": true,
+                    "primary": false,
+                    "definition": "CREATE UNIQUE INDEX ix_doc_chunks_path_idx ON public.documentationchunks USING btree (path, chunkindex)"
+                }
+            ],
+            "constraints": [
+                {
+                    "name": "documentationchunks_pkey",
+                    "validated": true,
+                    "definition": "PRIMARY KEY (id)"
+                }
+            ]
+        },
+        {
+            "name": "event",
+            "columns": [
+                {
+                    "name": "id",
+                    "type": "integer",
+                    "default": "nextval('event_id_seq'::regclass)",
+                    "required": true
+                },
+                {
+                    "name": "identifier",
+                    "type": "text",
+                    "default": null,
+                    "required": true
+                },
+                {
+                    "name": "timestamp",
+                    "type": "timestamp with time zone",
+                    "default": null,
+                    "required": true
+                },
+                {
+                    "name": "type",
+                    "type": "text",
+                    "default": null,
+                    "required": true
+                },
+                {
+                    "name": "source",
+                    "type": "text",
+                    "default": null,
+                    "required": true
+                },
+                {
+                    "name": "outcome",
+                    "type": "text",
+                    "default": null,
+                    "required": true
+                },
+                {
+                    "name": "system",
+                    "type": "text",
+                    "default": null,
+                    "required": true
+                },
+                {
+                    "name": "message",
+                    "type": "text",
+                    "default": null,
+                    "required": true
+                },
+                {
+                    "name": "details",
+                    "type": "text",
+                    "default": null,
+                    "required": true
+                }
+            ],
+            "indexes": [
+                {
+                    "name": "event_pkey",
+                    "valid": true,
+                    "unique": true,
+                    "primary": true,
+                    "definition": "CREATE UNIQUE INDEX event_pkey ON public.event USING btree (id)"
+                }
+            ],
+            "constraints": [
+                {
+                    "name": "event_pkey",
+                    "validated": true,
+                    "definition": "PRIMARY KEY (id)"
+                }
+            ]
+        }
+    ],
+    "postgres_version": "16.4"
+}

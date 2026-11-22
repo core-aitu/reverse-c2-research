@@ -5,10 +5,16 @@
     "Type Indexed": 7533,
     "Method Identified": 44896,
     "Method Semantically Analyzed": {
-      "prior_individual_records": 56,
-      "new_LogEntry_method_image_pairs": 65,
-      "distinct_individual_records_lower_bound": 121,
-      "automatic_direct_accessors_separate": 13514
+      "complete_semantic_cards": 7,
+      "acceptance_status": "Reviewed cards cover local instructions, calls and error handling. Counts of dynamic observations use separate units.",
+      "partial_semantic_cards": 0,
+      "prior_individual_il_records": 56,
+      "new_LogEntry_il_method_image_pairs": 65,
+      "additional_individual_ui_records": 6,
+      "distinct_individual_il_records": 127,
+      "semantic_card_file_sha256": "9fd34f2ee0d723811c4cd1bc9bade5fb9723f96491f7323a9defb3d39f9370ce",
+      "automatic_direct_accessors_separate": 13514,
+      "diagnostic_behavior_documented_at_group_level": 65
     },
     "Cross-Component Relationship Established": {
       "selected_static_method_cards": 83,
@@ -35,6 +41,11 @@
         "records": 9,
         "runs": 2,
         "log_sha256": "de15488c0c571e0bd3ba01414685de495781a9bae972c1a8be6f7e1bb9363214"
+      },
+      "documentation_order_and_cancellation": {
+        "records": 4,
+        "runs": 2,
+        "log_sha256": "70719520cb9cf3881f52a27401b4a047a0cc41885c2feefa2336f4690b19a370"
       }
     }
   },
@@ -53,7 +64,10 @@
         5,
         6,
         7
-      ]
+      ],
+      "additional_individual_ui_records": 0,
+      "complete_local_semantic_cards": 0,
+      "partial_semantic_cards": 0
     },
     {
       "sha256": "7c48d7c851c4ef4c531d616699366e307b155099a84f31bb8b9e8596db57fb4b",
@@ -69,7 +83,10 @@
       "tasks": [
         3,
         9
-      ]
+      ],
+      "additional_individual_ui_records": 0,
+      "complete_local_semantic_cards": 0,
+      "partial_semantic_cards": 0
     },
     {
       "sha256": "b26312d15a0a8d2743ef50069874567ef768d64e1eed0a9e82a410976fbe10d6",
@@ -85,7 +102,10 @@
         5,
         6,
         7
-      ]
+      ],
+      "additional_individual_ui_records": 6,
+      "complete_local_semantic_cards": 7,
+      "partial_semantic_cards": 0
     },
     {
       "sha256": "012b5fa1889c2099338f7799739898bac2ab10306fcd68eda7ab3060c8140bb2",
@@ -99,7 +119,10 @@
       "additional_diagnostic_semantics": 0,
       "tasks": [
         3
-      ]
+      ],
+      "additional_individual_ui_records": 0,
+      "complete_local_semantic_cards": 0,
+      "partial_semantic_cards": 0
     },
     {
       "sha256": "694a871f5a3bdf1151cfadc965394e8f30fc1fe6fc96361062df20b4e7f022d1",
@@ -113,7 +136,10 @@
       "additional_diagnostic_semantics": 0,
       "tasks": [
         3
-      ]
+      ],
+      "additional_individual_ui_records": 0,
+      "complete_local_semantic_cards": 0,
+      "partial_semantic_cards": 0
     },
     {
       "sha256": "c30f24cfceac505e226a671138a9d75610b03d161ee323b21020307c2db1fbfa",
@@ -127,7 +153,10 @@
       "additional_diagnostic_semantics": 0,
       "tasks": [
         3
-      ]
+      ],
+      "additional_individual_ui_records": 0,
+      "complete_local_semantic_cards": 0,
+      "partial_semantic_cards": 0
     },
     {
       "sha256": "a9e0fc749eda0ed29e6074926cb2ef07d6864ebe1367d8a66cd0ef6a66e344a0",
@@ -141,7 +170,10 @@
       "additional_diagnostic_semantics": 0,
       "tasks": [
         3
-      ]
+      ],
+      "additional_individual_ui_records": 0,
+      "complete_local_semantic_cards": 0,
+      "partial_semantic_cards": 0
     },
     {
       "sha256": "094531ab90bf68cd100d50f95340d24b7aeccc604df76cfff1109b180a08a823",
@@ -155,7 +187,10 @@
       "additional_diagnostic_semantics": 0,
       "tasks": [
         3
-      ]
+      ],
+      "additional_individual_ui_records": 0,
+      "complete_local_semantic_cards": 0,
+      "partial_semantic_cards": 0
     },
     {
       "sha256": "2de374ab0116ae1a8f32c274dcbd876acf0ab4ed47bb5e03e4a61d63b026f9ba",
@@ -169,7 +204,10 @@
       "additional_diagnostic_semantics": 0,
       "tasks": [
         3
-      ]
+      ],
+      "additional_individual_ui_records": 0,
+      "complete_local_semantic_cards": 0,
+      "partial_semantic_cards": 0
     },
     {
       "sha256": "bb600a86192f23cba4f3e91b2658454c652f4979e224dd41a85b9ab685c0886a",
@@ -183,7 +221,10 @@
       "additional_diagnostic_semantics": 0,
       "tasks": [
         3
-      ]
+      ],
+      "additional_individual_ui_records": 0,
+      "complete_local_semantic_cards": 0,
+      "partial_semantic_cards": 0
     },
     {
       "sha256": "e13a32101c5c456048e555697ad91a1fd5792c804dbe7d399c57ee885de42c2f",
@@ -197,7 +238,10 @@
       "additional_diagnostic_semantics": 0,
       "tasks": [
         3
-      ]
+      ],
+      "additional_individual_ui_records": 0,
+      "complete_local_semantic_cards": 0,
+      "partial_semantic_cards": 0
     },
     {
       "sha256": "6317b1cdbc554624184f58597fe2ea4d87733de0985a918204d3135959a6cbac",
@@ -211,7 +255,10 @@
       "additional_diagnostic_semantics": 0,
       "tasks": [
         3
-      ]
+      ],
+      "additional_individual_ui_records": 0,
+      "complete_local_semantic_cards": 0,
+      "partial_semantic_cards": 0
     },
     {
       "sha256": "9fd9e20b06253d040d6e2ae3afe930a013fc4199fc844d6543a54c1c49c60331",
@@ -225,7 +272,10 @@
       "additional_diagnostic_semantics": 0,
       "tasks": [
         3
-      ]
+      ],
+      "additional_individual_ui_records": 0,
+      "complete_local_semantic_cards": 0,
+      "partial_semantic_cards": 0
     },
     {
       "sha256": "43ca6c1c63cf8177b67b526f39352ed9c2c56fadbe6a227de0fc27df0c36e4c9",
@@ -239,7 +289,10 @@
       "additional_diagnostic_semantics": 0,
       "tasks": [
         3
-      ]
+      ],
+      "additional_individual_ui_records": 0,
+      "complete_local_semantic_cards": 0,
+      "partial_semantic_cards": 0
     },
     {
       "sha256": "ade4d3af0d0437eb9f00b1c594c8dc1a528a0dd41fc1c1f19034181455bd44fc",
@@ -253,7 +306,10 @@
       "additional_diagnostic_semantics": 0,
       "tasks": [
         3
-      ]
+      ],
+      "additional_individual_ui_records": 0,
+      "complete_local_semantic_cards": 0,
+      "partial_semantic_cards": 0
     },
     {
       "sha256": "b813b45bdf7c56fcd260d231e1eb05a2c4c0a9b365b029779df3d4355e5aa48d",
@@ -267,7 +323,10 @@
       "additional_diagnostic_semantics": 0,
       "tasks": [
         3
-      ]
+      ],
+      "additional_individual_ui_records": 0,
+      "complete_local_semantic_cards": 0,
+      "partial_semantic_cards": 0
     },
     {
       "sha256": "9a3f0b7727247962c18981e2924f59ff6b01ff6a6ddf2fd74d3129f5b098bb26",
@@ -281,7 +340,10 @@
       "additional_diagnostic_semantics": 0,
       "tasks": [
         3
-      ]
+      ],
+      "additional_individual_ui_records": 0,
+      "complete_local_semantic_cards": 0,
+      "partial_semantic_cards": 0
     },
     {
       "sha256": "7582cabd4291d45dfafdf1125fe79d4dab07e3076994d7505aa167c60da0cec6",
@@ -295,7 +357,10 @@
       "additional_diagnostic_semantics": 0,
       "tasks": [
         3
-      ]
+      ],
+      "additional_individual_ui_records": 0,
+      "complete_local_semantic_cards": 0,
+      "partial_semantic_cards": 0
     },
     {
       "sha256": "f119919c3c5979a205ee4569580976e9fac37a9922eb31e349f2500acdafbcdf",
@@ -309,7 +374,10 @@
       "additional_diagnostic_semantics": 0,
       "tasks": [
         3
-      ]
+      ],
+      "additional_individual_ui_records": 0,
+      "complete_local_semantic_cards": 0,
+      "partial_semantic_cards": 0
     },
     {
       "sha256": "f877efafec959d731f88057dd06b981ee9482985ec21d72e7eb52cab8c67e76c",
@@ -323,7 +391,10 @@
       "additional_diagnostic_semantics": 0,
       "tasks": [
         3
-      ]
+      ],
+      "additional_individual_ui_records": 0,
+      "complete_local_semantic_cards": 0,
+      "partial_semantic_cards": 0
     },
     {
       "sha256": "9f75f8de371d26e5143dc254109a80434072bb1811a34e305e793d6c930754b9",
@@ -337,7 +408,10 @@
       "additional_diagnostic_semantics": 0,
       "tasks": [
         3
-      ]
+      ],
+      "additional_individual_ui_records": 0,
+      "complete_local_semantic_cards": 0,
+      "partial_semantic_cards": 0
     },
     {
       "sha256": "230ae977abba3f0d1188ed79405cd33771e6eba2acacabcf56c200dfd59c2b9c",
@@ -351,7 +425,10 @@
       "additional_diagnostic_semantics": 0,
       "tasks": [
         3
-      ]
+      ],
+      "additional_individual_ui_records": 0,
+      "complete_local_semantic_cards": 0,
+      "partial_semantic_cards": 0
     },
     {
       "sha256": "5e481dc2ebc2a6476e0f778f86f44943075a3920c157c0f0728332f8c4df45d1",
@@ -365,7 +442,10 @@
       "additional_diagnostic_semantics": 0,
       "tasks": [
         3
-      ]
+      ],
+      "additional_individual_ui_records": 0,
+      "complete_local_semantic_cards": 0,
+      "partial_semantic_cards": 0
     },
     {
       "sha256": "c1079fd338765e3842a5f95b9fc66406d2eb7fc4126b4ab8e8d8920f010f67d9",
@@ -379,7 +459,10 @@
       "additional_diagnostic_semantics": 0,
       "tasks": [
         3
-      ]
+      ],
+      "additional_individual_ui_records": 0,
+      "complete_local_semantic_cards": 0,
+      "partial_semantic_cards": 0
     },
     {
       "sha256": "b73c2d2a1912f4bad56055bae21f1ba95a51a96363ac86c38eadd6caece7e9d1",
@@ -393,7 +476,10 @@
       "additional_diagnostic_semantics": 0,
       "tasks": [
         3
-      ]
+      ],
+      "additional_individual_ui_records": 0,
+      "complete_local_semantic_cards": 0,
+      "partial_semantic_cards": 0
     },
     {
       "sha256": "5a04275085e3fc64197f8dbb55b96a89736445fc490a674675959163ba5a58a0",
@@ -411,7 +497,10 @@
         5,
         7,
         9
-      ]
+      ],
+      "additional_individual_ui_records": 0,
+      "complete_local_semantic_cards": 0,
+      "partial_semantic_cards": 0
     },
     {
       "sha256": "a6c454cdfc80e5d9bd3906747d30edbe4fcf69ab2e3c2b52b301b6f4b60e46a5",
@@ -429,7 +518,10 @@
         5,
         7,
         9
-      ]
+      ],
+      "additional_individual_ui_records": 0,
+      "complete_local_semantic_cards": 0,
+      "partial_semantic_cards": 0
     },
     {
       "sha256": "d5e7e80c6e67939caa244f9f1b8736cafb4d1e5e906ee2668c34387c8067569d",
@@ -449,7 +541,10 @@
         5,
         7,
         9
-      ]
+      ],
+      "additional_individual_ui_records": 0,
+      "complete_local_semantic_cards": 0,
+      "partial_semantic_cards": 0
     },
     {
       "sha256": "44b88633520b501f999290c462581a5e35ee3eadf507c00caf9f828778701595",
@@ -465,7 +560,10 @@
         2,
         3,
         9
-      ]
+      ],
+      "additional_individual_ui_records": 0,
+      "complete_local_semantic_cards": 0,
+      "partial_semantic_cards": 0
     },
     {
       "sha256": "85fb4c9ac4ee295efbb907d37d5a066726bda8c35a8ddd67890325680d540f95",
@@ -481,7 +579,10 @@
         2,
         3,
         9
-      ]
+      ],
+      "additional_individual_ui_records": 0,
+      "complete_local_semantic_cards": 0,
+      "partial_semantic_cards": 0
     },
     {
       "sha256": "3fff31bed46cb2957c89b1cd662735877c0b173ada977b101c88939020a833f6",
@@ -497,7 +598,10 @@
         2,
         3,
         9
-      ]
+      ],
+      "additional_individual_ui_records": 0,
+      "complete_local_semantic_cards": 0,
+      "partial_semantic_cards": 0
     },
     {
       "sha256": "0c8aaa733148ecffe88457b24b4e474113a9e2eba06a4c1e30c5ab7ba920a9d4",
@@ -513,7 +617,10 @@
         2,
         3,
         9
-      ]
+      ],
+      "additional_individual_ui_records": 0,
+      "complete_local_semantic_cards": 0,
+      "partial_semantic_cards": 0
     }
   ],
   "roots": {

@@ -1,0 +1,827 @@
+{
+  "schema_version": 1,
+  "scope": "Individual administrative UI method cards. Complete-within-method covers local instructions/direct calls/own error handling; callee internals and whole-application behavior remain separately scoped. Partial cards do not enter the complete-card count.",
+  "assembly_sha256": "b26312d15a0a8d2743ef50069874567ef768d64e1eed0a9e82a410976fbe10d6",
+  "mvid": "ec17b4c7-9015-4373-9b10-8081bc59e9a9",
+  "cards": [
+    {
+      "id": "SEM-UI-06000158",
+      "component": "Client UI",
+      "assembly_path": "client/SpecterInsight.UI.dll",
+      "assembly_sha256": "b26312d15a0a8d2743ef50069874567ef768d64e1eed0a9e82a410976fbe10d6",
+      "mvid": "ec17b4c7-9015-4373-9b10-8081bc59e9a9",
+      "token": "0x06000158",
+      "signature": "System.Void SpecterInsight.UI.Views.DocumentationViewer.OnAttachedToVisualTree(Avalonia.VisualTreeAttachmentEventArgs e)",
+      "signature_metadata": {
+        "raw_length": 6,
+        "raw_sha256": "feb17c5549b4d1f58b0c2bf4d239412ff5338c45e698303e0186602d1267ab04",
+        "resolved_sha256": "8a9b5a0d5a809b98ed152a058cf5a650e5ca89b1428d5ce6cf8566a0d26c02ef",
+        "kind": "method",
+        "parse_status": "decoded",
+        "calling_convention": "default has-this",
+        "generic_parameter_count": null,
+        "parameter_count": 1,
+        "return_type": "void",
+        "parameter_types": [
+          "class:1357"
+        ],
+        "field_type": null,
+        "issue": null
+      },
+      "il_sha256": "600e6646ab9d5cff0a82d8efa7b008dd3b1a8cd2ca8b0be8922596908b3a41be",
+      "il_size": 19,
+      "inputs": [
+        "this — экземпляр DocumentationViewer",
+        "e — аргумент присоединения визуального дерева",
+        "DataContext должен допускать приведение к DocumentationViewModel, выполняемое get_ViewModel"
+      ],
+      "result": "Возврат void после вызова базового обработчика и UpdateDocumentation. Завершение запроса документации не возвращается вызывающему коду.",
+      "state_changes": [
+        "Прямых записей полей в теле нет.",
+        "На +2 выполняется базовый обработчик, на +8 получается ViewModel, на +13 вызывается обновление. Косвенные эффекты базового обработчика не исследованы."
+      ],
+      "error_branches": [
+        "Собственных ветвлений и EH-областей нет. Синхронное исключение из вызванного метода выходит из этого обработчика.",
+        "Отдельные опыты с отсутствующим/неверным DataContext и исключением базового обработчика не выполнялись."
+      ],
+      "calls": [
+        {
+          "caller_token": "0x06000158",
+          "il_offset": 2,
+          "target_identity_sha256": "03f6ba70b066353342f4c021fc48d3aa5ead4c2bc6ed106dc916ef94492b39ae",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.OnAttachedToVisualTree",
+          "opcode": "call",
+          "target_token": "0x0a000334",
+          "target_kind": "member-ref",
+          "target_name": "OnAttachedToVisualTree",
+          "target_declaring_type": "Avalonia.Visual"
+        },
+        {
+          "caller_token": "0x06000158",
+          "il_offset": 8,
+          "target_identity_sha256": "4c1059453e9135c477cf0f175fa2e68569f30f94e35c3c34834cfd810ca6842e",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.OnAttachedToVisualTree",
+          "opcode": "call",
+          "target_token": "0x06000156",
+          "target_kind": "method-def",
+          "target_name": "get_ViewModel",
+          "target_declaring_type": "SpecterInsight.UI.Views.DocumentationViewer"
+        },
+        {
+          "caller_token": "0x06000158",
+          "il_offset": 13,
+          "target_identity_sha256": "0528f2c3102f5b3633c1364c9f243bf3493009fa0d7f6bcf934df63d10622398",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.OnAttachedToVisualTree",
+          "opcode": "callvirt",
+          "target_token": "0x06000917",
+          "target_kind": "method-def",
+          "target_name": "UpdateDocumentation",
+          "target_declaring_type": "SpecterInsight.UI.ViewModels.DocumentationViewModel"
+        }
+      ],
+      "exception_regions": [],
+      "il_offsets": [
+        2,
+        8,
+        13,
+        18
+      ],
+      "il_evidence": {
+        "path": "examination/documentation-ui/rea-top-methods.json",
+        "token": "0x06000158"
+      },
+      "observations": [
+        "OBS-032",
+        "OBS-027"
+      ],
+      "card_status": "complete_within_method",
+      "verification_status": "Verified",
+      "basis": "static IL and EH; historical screen observations are supporting integration evidence only",
+      "confidence": {
+        "level": "high for the explicitly cited local IL, bounded for indirect effects",
+        "reason": "Fresh REA body digest matches the previously retained call-site record; all decoded instructions and own EH regions were inspected."
+      },
+      "dynamic_verification": {
+        "new_run": false,
+        "method_isolated": false,
+        "related_logs": [
+          "validation/continuation/desktop/desktop-1.jsonl",
+          "validation/continuation/desktop/desktop-2.jsonl"
+        ]
+      },
+      "limits": [
+        "Гарантии базового Avalonia.Visual.OnAttachedToVisualTree исследованы только как внешний вызов.",
+        "Штатная навигация главного окна не проверена."
+      ]
+    },
+    {
+      "id": "SEM-UI-06000159",
+      "component": "Client UI",
+      "assembly_path": "client/SpecterInsight.UI.dll",
+      "assembly_sha256": "b26312d15a0a8d2743ef50069874567ef768d64e1eed0a9e82a410976fbe10d6",
+      "mvid": "ec17b4c7-9015-4373-9b10-8081bc59e9a9",
+      "token": "0x06000159",
+      "signature": "System.Void SpecterInsight.UI.Views.DocumentationViewer.OnDetachedFromVisualTree(Avalonia.VisualTreeAttachmentEventArgs e)",
+      "signature_metadata": {
+        "raw_length": 6,
+        "raw_sha256": "feb17c5549b4d1f58b0c2bf4d239412ff5338c45e698303e0186602d1267ab04",
+        "resolved_sha256": "8a9b5a0d5a809b98ed152a058cf5a650e5ca89b1428d5ce6cf8566a0d26c02ef",
+        "kind": "method",
+        "parse_status": "decoded",
+        "calling_convention": "default has-this",
+        "generic_parameter_count": null,
+        "parameter_count": 1,
+        "return_type": "void",
+        "parameter_types": [
+          "class:1357"
+        ],
+        "field_type": null,
+        "issue": null
+      },
+      "il_sha256": "f81742aa7ea32bef5cc1462fc8b58b01b985e3e5be06fc73e41a79b6d13ffcc3",
+      "il_size": 8,
+      "inputs": [
+        "this — экземпляр DocumentationViewer",
+        "e — аргумент отсоединения визуального дерева"
+      ],
+      "result": "Возврат void после единственного вызова Avalonia.Visual.OnDetachedFromVisualTree.",
+      "state_changes": [
+        "В этом override нет прямой записи полей, очистки Documents, обращения к задаче или вызова отмены.",
+        "Базовый обработчик вызывается на +2. Его внутренние эффекты в данную карточку не входят."
+      ],
+      "error_branches": [
+        "В теле нет ветвлений и EH-областей. Исключение базового вызова локально не перехватывается.",
+        "Отсоединение во время незавершённого HTTP-запроса динамически не проверялось."
+      ],
+      "calls": [
+        {
+          "caller_token": "0x06000159",
+          "il_offset": 2,
+          "target_identity_sha256": "d2d1f262660bff11a8c094693c1e8e9680824ca539679892e71263e7b6a8a58f",
+          "caller": "SpecterInsight.UI.Views.DocumentationViewer.OnDetachedFromVisualTree",
+          "opcode": "call",
+          "target_token": "0x0a000335",
+          "target_kind": "member-ref",
+          "target_name": "OnDetachedFromVisualTree",
+          "target_declaring_type": "Avalonia.Visual"
+        }
+      ],
+      "exception_regions": [],
+      "il_offsets": [
+        2,
+        7
+      ],
+      "il_evidence": {
+        "path": "examination/documentation-ui/rea-top-methods.json",
+        "token": "0x06000159"
+      },
+      "observations": [
+        "OBS-032",
+        "OBS-027"
+      ],
+      "card_status": "complete_within_method",
+      "verification_status": "Verified",
+      "basis": "static IL and EH; historical screen observations are supporting integration evidence only",
+      "confidence": {
+        "level": "high for the explicitly cited local IL, bounded for indirect effects",
+        "reason": "Fresh REA body digest matches the previously retained call-site record; all decoded instructions and own EH regions were inspected."
+      },
+      "dynamic_verification": {
+        "new_run": false,
+        "method_isolated": false,
+        "related_logs": [
+          "validation/continuation/desktop/desktop-1.jsonl",
+          "validation/continuation/desktop/desktop-2.jsonl"
+        ]
+      },
+      "limits": [
+        "Отсутствие отмены в данном override не доказывает отсутствие отмены в базовом классе, HTTP-клиенте или другом компоненте."
+      ]
+    },
+    {
+      "id": "SEM-UI-06000917",
+      "component": "Client UI",
+      "assembly_path": "client/SpecterInsight.UI.dll",
+      "assembly_sha256": "b26312d15a0a8d2743ef50069874567ef768d64e1eed0a9e82a410976fbe10d6",
+      "mvid": "ec17b4c7-9015-4373-9b10-8081bc59e9a9",
+      "token": "0x06000917",
+      "signature": "System.Void SpecterInsight.UI.ViewModels.DocumentationViewModel.UpdateDocumentation()",
+      "signature_metadata": {
+        "raw_length": 3,
+        "raw_sha256": "0c9373898d2dd1c85902837a9e979cb88484e2548a008ad2b2176cc7119d09df",
+        "resolved_sha256": "0c9373898d2dd1c85902837a9e979cb88484e2548a008ad2b2176cc7119d09df",
+        "kind": "method",
+        "parse_status": "decoded",
+        "calling_convention": "default has-this",
+        "generic_parameter_count": null,
+        "parameter_count": 0,
+        "return_type": "void",
+        "parameter_types": [],
+        "field_type": null,
+        "issue": null
+      },
+      "il_sha256": "650ac95bb7f8fd6301d74fcd281c6e431f3e275a5d4a092e2c3b47a638e99009",
+      "il_size": 19,
+      "inputs": [
+        "this — экземпляр ViewModel, захватываемый делегатом",
+        "Явных параметров нет"
+      ],
+      "result": "Создаёт Func<Task>, передаёт его Task.Run и отбрасывает полученную задачу инструкцией pop на +17. Возвращает void.",
+      "state_changes": [
+        "Запускает работу делегата <UpdateDocumentation>b__5_0.",
+        "Прямых записей полей, сохранения Task, проверки уже запущенного обновления и передачи токена отмены в этом теле нет."
+      ],
+      "error_branches": [
+        "В теле нет EH-областей. Синхронные ошибки создания делегата/запуска задачи локально не перехватываются.",
+        "Исход фоновой задачи не передаётся через возвращаемое значение этого метода. Ошибки рабочего автомата рассматриваются отдельно."
+      ],
+      "calls": [
+        {
+          "caller_token": "0x06000917",
+          "il_offset": 1,
+          "target_identity_sha256": "32277814ddde1bc51ef23649d018134e3a55928c961d24f2173f8f784bafca29",
+          "caller": "SpecterInsight.UI.ViewModels.DocumentationViewModel.UpdateDocumentation",
+          "opcode": "ldftn",
+          "target_token": "0x06000918",
+          "target_kind": "method-def",
+          "target_name": "<UpdateDocumentation>b__5_0",
+          "target_declaring_type": "SpecterInsight.UI.ViewModels.DocumentationViewModel"
+        },
+        {
+          "caller_token": "0x06000917",
+          "il_offset": 7,
+          "target_identity_sha256": null,
+          "caller": "SpecterInsight.UI.ViewModels.DocumentationViewModel.UpdateDocumentation",
+          "opcode": "newobj",
+          "target_token": "0x0a00003f",
+          "target_kind": "member-ref",
+          "target_name": ".ctor",
+          "target_declaring_type": "System.Func`1"
+        },
+        {
+          "caller_token": "0x06000917",
+          "il_offset": 12,
+          "target_identity_sha256": "5c1524cef931226838614eec5c2356beabd7b6d33a44aaa04b4ac9f238c82846",
+          "caller": "SpecterInsight.UI.ViewModels.DocumentationViewModel.UpdateDocumentation",
+          "opcode": "call",
+          "target_token": "0x0a000040",
+          "target_kind": "member-ref",
+          "target_name": "Run",
+          "target_declaring_type": "System.Threading.Tasks.Task"
+        }
+      ],
+      "exception_regions": [],
+      "il_offsets": [
+        1,
+        7,
+        12,
+        17,
+        18
+      ],
+      "il_evidence": {
+        "path": "examination/documentation-ui/rea-top-methods.json",
+        "token": "0x06000917"
+      },
+      "observations": [
+        "OBS-032",
+        "OBS-027"
+      ],
+      "card_status": "complete_within_method",
+      "verification_status": "Verified",
+      "basis": "static IL and EH; historical screen observations are supporting integration evidence only",
+      "confidence": {
+        "level": "high for the explicitly cited local IL, bounded for indirect effects",
+        "reason": "Fresh REA body digest matches the previously retained call-site record; all decoded instructions and own EH regions were inspected."
+      },
+      "dynamic_verification": {
+        "new_run": false,
+        "method_isolated": false,
+        "related_logs": [
+          "validation/continuation/desktop/desktop-1.jsonl",
+          "validation/continuation/desktop/desktop-2.jsonl"
+        ]
+      },
+      "limits": [
+        "Параллельные обновления и порядок прихода их ответов динамически не проверялись.",
+        "Существование других ограничителей параллелизма вне этого тела не исключено."
+      ]
+    },
+    {
+      "id": "SEM-UI-06000919",
+      "component": "Client UI",
+      "assembly_path": "client/SpecterInsight.UI.dll",
+      "assembly_sha256": "b26312d15a0a8d2743ef50069874567ef768d64e1eed0a9e82a410976fbe10d6",
+      "mvid": "ec17b4c7-9015-4373-9b10-8081bc59e9a9",
+      "token": "0x06000919",
+      "signature": "System.Void SpecterInsight.UI.ViewModels.DocumentationViewModel+<<UpdateDocumentation>b__5_0>d.MoveNext()",
+      "signature_metadata": {
+        "raw_length": 3,
+        "raw_sha256": "0c9373898d2dd1c85902837a9e979cb88484e2548a008ad2b2176cc7119d09df",
+        "resolved_sha256": "0c9373898d2dd1c85902837a9e979cb88484e2548a008ad2b2176cc7119d09df",
+        "kind": "method",
+        "parse_status": "decoded",
+        "calling_convention": "default has-this",
+        "generic_parameter_count": null,
+        "parameter_count": 0,
+        "return_type": "void",
+        "parameter_types": [],
+        "field_type": null,
+        "issue": null
+      },
+      "il_sha256": "b5f66294b44a6cb0b17eaa41257e7007c371014a62f00f0524d4184c8b7a64f8",
+      "il_size": 260,
+      "inputs": [
+        "Поля автомата state, builder, this, closure и awaiter",
+        "Globals.Client в начале запроса",
+        "Результат или исключение DocumentationAsync"
+      ],
+      "result": "Возвращает void как шаг автомата. При нормальном завершении вызывает builder.SetResult; при исключении внешней EH-области вызывает SetException.",
+      "state_changes": [
+        "На +43 читается Globals.Client. При null переход +52 ведёт к завершению +240 без DocumentationAsync.",
+        "На +58 вызывается DocumentationAsync. Незавершённый await сохраняет state=0 и awaiter; возобновление восстанавливает awaiter, очищает его поле и возвращает state=-1.",
+        "После GetResult на +146 результат копируется ToArray на +159 и помещается в поле closure на +164.",
+        "На +191 вызывается Dispatcher.InvokeAsync с делегатом 0x0600091c. Результат вызова отбрасывается на +196. В данном теле нет ожидания завершения делегата UI.",
+        "При нормальном терминальном исходе state=-2 и SetResult на +254; при внешнем исключении state=-2 и SetException на +233."
+      ],
+      "error_branches": [
+        "Внутренняя EH-область try [17,206) ловит System.Exception и вызывает NotificationService.NotifyAll на +206. После нормального возврата уведомления управление идёт к SetResult.",
+        "Внешняя EH-область try [14,215) ловит System.Exception и устанавливает исключение задачи. Она включает вызов NotifyAll, поэтому его исключение не теряется в этом теле.",
+        "Ошибки, возникающие при последующем исполнении делегата UI, не наблюдаются через ожидание DispatcherOperation в этом методе. Их обработка самим диспетчером здесь не установлена.",
+        "Ранее сохранённый опыт с HTTP 503 показал сохранение ранее видимого документа. Вызов NotifyAll и обе EH-ветви отдельно не инструментировались."
+      ],
+      "calls": [
+        {
+          "caller_token": "0x06000919",
+          "il_offset": 21,
+          "target_identity_sha256": null,
+          "caller": "<<UpdateDocumentation>b__5_0>d.MoveNext",
+          "opcode": "newobj",
+          "target_token": "0x0600091b",
+          "target_kind": "method-def",
+          "target_name": ".ctor",
+          "target_declaring_type": "<>c__DisplayClass5_0"
+        },
+        {
+          "caller_token": "0x06000919",
+          "il_offset": 43,
+          "target_identity_sha256": null,
+          "caller": "<<UpdateDocumentation>b__5_0>d.MoveNext",
+          "opcode": "call",
+          "target_token": "0x06000027",
+          "target_kind": "method-def",
+          "target_name": "get_Client",
+          "target_declaring_type": "SpecterInsight.UI.Globals"
+        },
+        {
+          "caller_token": "0x06000919",
+          "il_offset": 58,
+          "target_identity_sha256": "023545fbe9f0faac2edf274fa898a34255dabba148481d12022902364bc68b96",
+          "caller": "<<UpdateDocumentation>b__5_0>d.MoveNext",
+          "opcode": "callvirt",
+          "target_token": "0x0a0008f5",
+          "target_kind": "member-ref",
+          "target_name": "DocumentationAsync",
+          "target_declaring_type": "SpecterInsight.ApiClient.SpecterInsightClientGenerated"
+        },
+        {
+          "caller_token": "0x06000919",
+          "il_offset": 63,
+          "target_identity_sha256": null,
+          "caller": "<<UpdateDocumentation>b__5_0>d.MoveNext",
+          "opcode": "callvirt",
+          "target_token": "0x0a0008f6",
+          "target_kind": "member-ref",
+          "target_name": "GetAwaiter",
+          "target_declaring_type": "System.Threading.Tasks.Task`1"
+        },
+        {
+          "caller_token": "0x06000919",
+          "il_offset": 72,
+          "target_identity_sha256": null,
+          "caller": "<<UpdateDocumentation>b__5_0>d.MoveNext",
+          "opcode": "call",
+          "target_token": "0x0a0008f7",
+          "target_kind": "member-ref",
+          "target_name": "get_IsCompleted",
+          "target_declaring_type": "System.Runtime.CompilerServices.TaskAwaiter`1"
+        },
+        {
+          "caller_token": "0x06000919",
+          "il_offset": 105,
+          "target_identity_sha256": "153995355db9f0ce746ba99eaf3bf5ca7d5c6bb34fa598284b8fceea87823549",
+          "caller": "<<UpdateDocumentation>b__5_0>d.MoveNext",
+          "opcode": "call",
+          "target_token": "0x2b0002d5",
+          "target_kind": "method-spec",
+          "target_name": "AwaitUnsafeOnCompleted",
+          "target_declaring_type": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder"
+        },
+        {
+          "caller_token": "0x06000919",
+          "il_offset": 146,
+          "target_identity_sha256": null,
+          "caller": "<<UpdateDocumentation>b__5_0>d.MoveNext",
+          "opcode": "call",
+          "target_token": "0x0a0008f8",
+          "target_kind": "member-ref",
+          "target_name": "GetResult",
+          "target_declaring_type": "System.Runtime.CompilerServices.TaskAwaiter`1"
+        },
+        {
+          "caller_token": "0x06000919",
+          "il_offset": 159,
+          "target_identity_sha256": "25fcd754a984def1030cd0872483d16c3b0f8fe130ef0b0c8b518102b149745a",
+          "caller": "<<UpdateDocumentation>b__5_0>d.MoveNext",
+          "opcode": "call",
+          "target_token": "0x2b0002d6",
+          "target_kind": "method-spec",
+          "target_name": "ToArray",
+          "target_declaring_type": "System.Linq.Enumerable"
+        },
+        {
+          "caller_token": "0x06000919",
+          "il_offset": 169,
+          "target_identity_sha256": "38f92714ae03cc6582efe1f12c0a0b25e83933399c58f6db44f2998466dc74fe",
+          "caller": "<<UpdateDocumentation>b__5_0>d.MoveNext",
+          "opcode": "call",
+          "target_token": "0x0a000007",
+          "target_kind": "member-ref",
+          "target_name": "get_UIThread",
+          "target_declaring_type": "Avalonia.Threading.Dispatcher"
+        },
+        {
+          "caller_token": "0x06000919",
+          "il_offset": 180,
+          "target_identity_sha256": null,
+          "caller": "<<UpdateDocumentation>b__5_0>d.MoveNext",
+          "opcode": "ldftn",
+          "target_token": "0x0600091c",
+          "target_kind": "method-def",
+          "target_name": "<UpdateDocumentation>b__1",
+          "target_declaring_type": "<>c__DisplayClass5_0"
+        },
+        {
+          "caller_token": "0x06000919",
+          "il_offset": 186,
+          "target_identity_sha256": "dbc7e2abb1e9e4334b235817430bc25faf3c79d4455244ad59875aa45f087190",
+          "caller": "<<UpdateDocumentation>b__5_0>d.MoveNext",
+          "opcode": "newobj",
+          "target_token": "0x0a0001f5",
+          "target_kind": "member-ref",
+          "target_name": ".ctor",
+          "target_declaring_type": "System.Action"
+        },
+        {
+          "caller_token": "0x06000919",
+          "il_offset": 191,
+          "target_identity_sha256": "5b0e5e1a7c2f02d3bf4e02f6fc3ccdb53185296790430f8ecbba066d9829768b",
+          "caller": "<<UpdateDocumentation>b__5_0>d.MoveNext",
+          "opcode": "callvirt",
+          "target_token": "0x0a00049f",
+          "target_kind": "member-ref",
+          "target_name": "InvokeAsync",
+          "target_declaring_type": "Avalonia.Threading.Dispatcher"
+        },
+        {
+          "caller_token": "0x06000919",
+          "il_offset": 206,
+          "target_identity_sha256": null,
+          "caller": "<<UpdateDocumentation>b__5_0>d.MoveNext",
+          "opcode": "call",
+          "target_token": "0x0600159c",
+          "target_kind": "method-def",
+          "target_name": "NotifyAll",
+          "target_declaring_type": "SpecterInsight.UI.Services.NotificationService"
+        },
+        {
+          "caller_token": "0x06000919",
+          "il_offset": 233,
+          "target_identity_sha256": "93bbf72a4a3f71f2701f61003005ff0f66b0d2799560f94e0ccb3c0b89b3b5da",
+          "caller": "<<UpdateDocumentation>b__5_0>d.MoveNext",
+          "opcode": "call",
+          "target_token": "0x0a000058",
+          "target_kind": "member-ref",
+          "target_name": "SetException",
+          "target_declaring_type": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder"
+        },
+        {
+          "caller_token": "0x06000919",
+          "il_offset": 254,
+          "target_identity_sha256": "07f88d0773080c2ac1531e4b5b910b9d65710f8477e164a32f2e0c8e1eaa1a72",
+          "caller": "<<UpdateDocumentation>b__5_0>d.MoveNext",
+          "opcode": "call",
+          "target_token": "0x0a000059",
+          "target_kind": "member-ref",
+          "target_name": "SetResult",
+          "target_declaring_type": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder"
+        }
+      ],
+      "exception_regions": [
+        {
+          "flags": 0,
+          "try_offset": 17,
+          "try_length": 189,
+          "handler_offset": 206,
+          "handler_length": 7,
+          "class_token": "0x01000044",
+          "class_type": "System.Exception",
+          "class_type_name_sha256": "10731c5537455c0520450190d8e79f4b5d65d9c858443567d9759a51b469c8fe",
+          "class_type_identity_resolved": false,
+          "filter_offset": null
+        },
+        {
+          "flags": 0,
+          "try_offset": 14,
+          "try_length": 201,
+          "handler_offset": 215,
+          "handler_length": 25,
+          "class_token": "0x01000044",
+          "class_type": "System.Exception",
+          "class_type_name_sha256": "10731c5537455c0520450190d8e79f4b5d65d9c858443567d9759a51b469c8fe",
+          "class_type_identity_resolved": false,
+          "filter_offset": null
+        }
+      ],
+      "il_offsets": [
+        43,
+        50,
+        52,
+        58,
+        77,
+        83,
+        105,
+        129,
+        139,
+        146,
+        159,
+        164,
+        180,
+        191,
+        196,
+        206,
+        233,
+        254
+      ],
+      "il_evidence": {
+        "path": "examination/documentation-ui/rea-async-methods.json",
+        "token": "0x06000919"
+      },
+      "observations": [
+        "OBS-032",
+        "OBS-027",
+        "OBS-034"
+      ],
+      "card_status": "complete_within_method",
+      "verification_status": "Verified",
+      "basis": "static IL and EH; historical screen observations are supporting integration evidence only",
+      "confidence": {
+        "level": "high for the explicitly cited local IL, bounded for indirect effects",
+        "reason": "Fresh REA body digest matches the previously retained call-site record; all decoded instructions and own EH regions were inspected."
+      },
+      "dynamic_verification": {
+        "method_isolated": false,
+        "related_logs": [
+          "validation/continuation/desktop/cancel-1.jsonl",
+          "validation/continuation/desktop/cancel-2.jsonl"
+        ],
+        "scope": "HTTP отменён стендом. Завершение рабочего делегата наблюдалось через Task. Отрисовка и порядок проверены через модель и визуальное дерево."
+      },
+      "limits": [
+        "Завершение операции диспетчера в этом автомате не ожидается. Эффекты внешних вызовов ограничены описанными наблюдениями.",
+        "Globals.Client=null и исключение самого NotifyAll отдельно не вызывались."
+      ]
+    },
+    {
+      "id": "SEM-UI-06000914",
+      "component": "Client UI",
+      "assembly_path": "client/SpecterInsight.UI.dll",
+      "assembly_sha256": "b26312d15a0a8d2743ef50069874567ef768d64e1eed0a9e82a410976fbe10d6",
+      "mvid": "ec17b4c7-9015-4373-9b10-8081bc59e9a9",
+      "token": "0x06000914",
+      "signature": "System.Object SpecterInsight.UI.ViewModels.DocumentationViewModel.get_Documents()",
+      "signature_metadata": {
+        "raw_length": 3,
+        "raw_sha256": "f3a24573bd5156b4fcaa6c36468c26c520cf55463586a700fca5c6bb10bbbfe8",
+        "resolved_sha256": "f3a24573bd5156b4fcaa6c36468c26c520cf55463586a700fca5c6bb10bbbfe8",
+        "kind": "method",
+        "parse_status": "decoded",
+        "calling_convention": "default has-this",
+        "generic_parameter_count": null,
+        "parameter_count": 0,
+        "return_type": "object",
+        "parameter_types": [],
+        "field_type": null,
+        "issue": null
+      },
+      "il_sha256": "a79133bfb836bc7c2683ebb5f6123a0c4d4128eb159ff088ae1a29c5b2b6cf9b",
+      "il_size": 7,
+      "inputs": [
+        "this — текущая модель."
+      ],
+      "result": "Возвращает ссылку из поля 0x0400079c, в том числе null.",
+      "state_changes": [
+        "Читает поле на +1. Возвращает его без копирования на +6."
+      ],
+      "error_branches": [
+        "Нет условных переходов, вызовов и собственных обработчиков исключений."
+      ],
+      "calls": [],
+      "exception_regions": [],
+      "il_offsets": [
+        0,
+        1,
+        6
+      ],
+      "il_evidence": {
+        "path": "examination/documentation-ui/rea-top-methods.json",
+        "token": "0x06000914"
+      },
+      "observations": [
+        "OBS-034"
+      ],
+      "card_status": "complete_within_method",
+      "verification_status": "Verified",
+      "basis": "REA, чтение байтов PE и независимый PEReader",
+      "confidence": {
+        "level": "high",
+        "reason": "Совпали SHA-256 тела и метаданные."
+      },
+      "dynamic_verification": {
+        "method_isolated": false,
+        "related_logs": [
+          "validation/continuation/desktop/cancel-1.jsonl",
+          "validation/continuation/desktop/cancel-2.jsonl"
+        ]
+      },
+      "limits": [
+        "Проверка поведения ReactiveUI и диспетчера ограничена наблюдавшимися сценариями окна."
+      ]
+    },
+    {
+      "id": "SEM-UI-06000915",
+      "component": "Client UI",
+      "assembly_path": "client/SpecterInsight.UI.dll",
+      "assembly_sha256": "b26312d15a0a8d2743ef50069874567ef768d64e1eed0a9e82a410976fbe10d6",
+      "mvid": "ec17b4c7-9015-4373-9b10-8081bc59e9a9",
+      "token": "0x06000915",
+      "signature": "System.Void SpecterInsight.UI.ViewModels.DocumentationViewModel.set_Documents(System.Object value)",
+      "signature_metadata": {
+        "raw_length": 4,
+        "raw_sha256": "cf4b7c51fb192d1f447c7f142ae8f38af4d8565d1a160a31640656a7a4d83925",
+        "resolved_sha256": "cf4b7c51fb192d1f447c7f142ae8f38af4d8565d1a160a31640656a7a4d83925",
+        "kind": "method",
+        "parse_status": "decoded",
+        "calling_convention": "default has-this",
+        "generic_parameter_count": null,
+        "parameter_count": 1,
+        "return_type": "void",
+        "parameter_types": [
+          "object"
+        ],
+        "field_type": null,
+        "issue": null
+      },
+      "il_sha256": "a67402170e05bb0720790172606fcde75f3c7d414d2d952485c89c643268f566",
+      "il_size": 20,
+      "inputs": [
+        "this, ссылка value, текущее значение поля 0x0400079c."
+      ],
+      "result": "Возврат void. Результат RaiseAndSetIfChanged отброшен.",
+      "state_changes": [
+        "Передаёт по ссылке поле Documents (+2), значение (+7) и имя свойства (+8) в RaiseAndSetIfChanged (+13). Управление уведомлениями передано ReactiveUI."
+      ],
+      "error_branches": [
+        "Нет проверки value или собственного обработчика. Синхронное исключение из вызова выходит вызывающему коду."
+      ],
+      "calls": [
+        {
+          "caller_token": "0x06000915",
+          "il_offset": 13,
+          "target_identity_sha256": "a1a62c0e9803ce673e73fbee086691404193e46544994ecacc6f40673fa9265c",
+          "caller": "SpecterInsight.UI.ViewModels.DocumentationViewModel.set_Documents",
+          "opcode": "call",
+          "target_token": "0x2b0002d3",
+          "target_kind": "method-spec",
+          "target_name": "RaiseAndSetIfChanged",
+          "target_declaring_type": "ReactiveUI.IReactiveObjectExtensions"
+        }
+      ],
+      "exception_regions": [],
+      "il_offsets": [
+        0,
+        1,
+        2,
+        7,
+        8,
+        13,
+        18,
+        19
+      ],
+      "il_evidence": {
+        "path": "examination/documentation-ui/rea-top-methods.json",
+        "token": "0x06000915"
+      },
+      "observations": [
+        "OBS-034"
+      ],
+      "card_status": "complete_within_method",
+      "verification_status": "Verified",
+      "basis": "REA, чтение байтов PE и независимый PEReader",
+      "confidence": {
+        "level": "high",
+        "reason": "Совпали SHA-256 тела и метаданные."
+      },
+      "dynamic_verification": {
+        "method_isolated": false,
+        "related_logs": [
+          "validation/continuation/desktop/cancel-1.jsonl",
+          "validation/continuation/desktop/cancel-2.jsonl"
+        ]
+      },
+      "limits": [
+        "Проверка поведения ReactiveUI и диспетчера ограничена наблюдавшимися сценариями окна."
+      ]
+    },
+    {
+      "id": "SEM-UI-0600091c",
+      "component": "Client UI",
+      "assembly_path": "client/SpecterInsight.UI.dll",
+      "assembly_sha256": "b26312d15a0a8d2743ef50069874567ef768d64e1eed0a9e82a410976fbe10d6",
+      "mvid": "ec17b4c7-9015-4373-9b10-8081bc59e9a9",
+      "token": "0x0600091c",
+      "signature": "System.Void SpecterInsight.UI.ViewModels.DocumentationViewModel+<>c__DisplayClass5_0.<UpdateDocumentation>b__1()",
+      "signature_metadata": {
+        "raw_length": 3,
+        "raw_sha256": "0c9373898d2dd1c85902837a9e979cb88484e2548a008ad2b2176cc7119d09df",
+        "resolved_sha256": "0c9373898d2dd1c85902837a9e979cb88484e2548a008ad2b2176cc7119d09df",
+        "kind": "method",
+        "parse_status": "decoded",
+        "calling_convention": "default has-this",
+        "generic_parameter_count": null,
+        "parameter_count": 0,
+        "return_type": "void",
+        "parameter_types": [],
+        "field_type": null,
+        "issue": null
+      },
+      "il_sha256": "333fd9c015824191f2eafe6d7090ccdeb76c3b73ffc5bc1fa3caeb7393a32374",
+      "il_size": 18,
+      "inputs": [
+        "Замыкание с сохранёнными ссылками на модель и результат запроса."
+      ],
+      "result": "Возврат void после вызова сеттера Documents.",
+      "state_changes": [
+        "Читает модель на +1, массив из замыкания на +7, вызывает set_Documents на +12. Нет цикла изменения коллекции или проверки очередности запроса."
+      ],
+      "error_branches": [
+        "Нет собственных EH. Нулевая ссылка модели или исключение сеттера не обрабатываются этим телом."
+      ],
+      "calls": [
+        {
+          "caller_token": "0x0600091c",
+          "il_offset": 12,
+          "target_identity_sha256": null,
+          "caller": "<>c__DisplayClass5_0.<UpdateDocumentation>b__1",
+          "opcode": "call",
+          "target_token": "0x06000915",
+          "target_kind": "method-def",
+          "target_name": "set_Documents",
+          "target_declaring_type": "SpecterInsight.UI.ViewModels.DocumentationViewModel"
+        }
+      ],
+      "exception_regions": [],
+      "il_offsets": [
+        0,
+        1,
+        6,
+        7,
+        12,
+        17
+      ],
+      "il_evidence": {
+        "path": "examination/documentation-ui/rea-callback-method.json",
+        "token": "0x0600091c"
+      },
+      "observations": [
+        "OBS-034"
+      ],
+      "card_status": "complete_within_method",
+      "verification_status": "Verified",
+      "basis": "REA, чтение байтов PE и независимый PEReader",
+      "confidence": {
+        "level": "high",
+        "reason": "Совпали SHA-256 тела и метаданные."
+      },
+      "dynamic_verification": {
+        "method_isolated": false,
+        "related_logs": [
+          "validation/continuation/desktop/cancel-1.jsonl",
+          "validation/continuation/desktop/cancel-2.jsonl"
+        ]
+      },
+      "limits": [
+        "Проверка поведения ReactiveUI и диспетчера ограничена наблюдавшимися сценариями окна."
+      ]
+    }
+  ]
+}

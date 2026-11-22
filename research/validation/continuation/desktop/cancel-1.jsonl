@@ -1,0 +1,4 @@
+{"id":"second-response","result":{"model":"Second request","visible":true}}
+{"id":"late-first-response","result":{"model":"First request","visible":true,"previousVisible":false}}
+{"id":"http-cancel","result":{"tokenCancelled":true,"taskStatus":"RanToCompletion","model":"First request","visible":true}}
+{"id":"response-after-detach","result":{"detached":true,"requestCancelled":false,"model":"Detached response","visible":false}}

@@ -1,0 +1,2069 @@
+{
+  "scope": "Filtered rows from retained REA projection for the CSV loader and property assignment. Decimal IL offsets.",
+  "symbol": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService",
+  "assembly": {
+    "path": "/home/deleteme/Desktop/SpecterInsight/server/SpecterInsight.Server.dll",
+    "sha256": "a6c454cdfc80e5d9bd3906747d30edbe4fcf69ab2e3c2b52b301b6f4b60e46a5",
+    "byte_length": 4624384,
+    "format": "pe"
+  },
+  "module": {
+    "name": "SpecterInsight.Server.dll",
+    "generation": 0,
+    "mvid": "1323c471-66a2-40e3-a048-50e1f9d4dcfb",
+    "enc_id": null,
+    "enc_base_id": null,
+    "token": "0x00000001",
+    "row_offset": 969848
+  },
+  "selection": {
+    "type_names": [
+      "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService"
+    ],
+    "unmatched_type_names": []
+  },
+  "parent_id": "ev_fa6218b587a4d432a9dbc2d898e3bf8eef18e702c5b0b3524c0083db1516ad42",
+  "views": {
+    "methods": "ev_10d4dc2169db2f73840ff708017184b5c93c2308edb7c7966ba094b828888ee3",
+    "call_edges": "ev_7f58b4eaf911970a188d03abc10af24d266929245732caacb1319af2f4904d53",
+    "user_strings": "ev_baddd2811d09a62aad1736e6f2badc80a5438da2bc5fe755308d108c0a9e79fd"
+  },
+  "methods": [
+    {
+      "token": "0x06000faf",
+      "row_offset": 1221776,
+      "declaring_type_token": "0x02000191",
+      "declaring_type": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService",
+      "name": "ApplyHelper",
+      "rva": 226328,
+      "impl_flags": 0,
+      "flags": 129,
+      "signature": {
+        "raw_length": 10,
+        "raw_sha256": "1d6f8b1fc7ca4c8b1ae26c004d4b6848dc39e134005498e1f90eb07bb065e47a",
+        "resolved_sha256": "6c95d636bf595dfce29e59f1843200098909380e2c84a7e5f13581fa3bfba6e6",
+        "kind": "method",
+        "parse_status": "decoded",
+        "calling_convention": "default has-this",
+        "generic_parameter_count": null,
+        "parameter_count": 1,
+        "return_type": "void",
+        "parameter_types": [
+          "class:125<class:525>"
+        ],
+        "field_type": null,
+        "issue": null
+      },
+      "body": {
+        "status": "present",
+        "header_format": "fat",
+        "rva": 226328,
+        "file_offset": 218648,
+        "max_stack": 4,
+        "init_locals": true,
+        "local_var_sig_token": "0x1100045d",
+        "il_size": 218,
+        "il_sha256": "ccc360853c9fc84a5b1f4e8867501bcd34447669d993693b1d4c9c6c83e2d384",
+        "normalized_il_sha256": "836f750dcd6d81fe136df9e9fa150385e775aa3ad45b33e0796ee2373bb2acfe",
+        "instruction_count": 79,
+        "decoded_instruction_count": 79,
+        "truncated_instructions": 0,
+        "opcode_counts": {
+          "ldarg.1": 1,
+          "callvirt": 17,
+          "stloc.0": 1,
+          "br": 1,
+          "ldloc.0": 4,
+          "stloc.1": 1,
+          "ldloc.1": 3,
+          "stloc.2": 1,
+          "ldloc.2": 2,
+          "ldtoken": 1,
+          "call": 5,
+          "brtrue.s": 2,
+          "brtrue": 2,
+          "stloc.3": 1,
+          "br.s": 2,
+          "ldloc.3": 4,
+          "stloc.s": 3,
+          "ldloc.s": 10,
+          "isinst": 2,
+          "brfalse.s": 7,
+          "ldarg.0": 3,
+          "ldloca.s": 1,
+          "leave.s": 2,
+          "endfinally": 2,
+          "ret": 1
+        },
+        "anchors": [
+          {
+            "il_offset": 0,
+            "opcode": "ldarg.1",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 1,
+            "opcode": "callvirt",
+            "operand_kind": "method",
+            "operand": "0x0a00015b"
+          },
+          {
+            "il_offset": 6,
+            "opcode": "stloc.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 7,
+            "opcode": "br",
+            "operand_kind": "branch",
+            "operand": "194"
+          },
+          {
+            "il_offset": 12,
+            "opcode": "ldloc.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 13,
+            "opcode": "callvirt",
+            "operand_kind": "method",
+            "operand": "0x0a00015c"
+          },
+          {
+            "il_offset": 18,
+            "opcode": "stloc.1",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 19,
+            "opcode": "ldloc.1",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 20,
+            "opcode": "callvirt",
+            "operand_kind": "method",
+            "operand": "0x0a00014f"
+          },
+          {
+            "il_offset": 25,
+            "opcode": "callvirt",
+            "operand_kind": "method",
+            "operand": "0x0a000158"
+          },
+          {
+            "il_offset": 30,
+            "opcode": "stloc.2",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 31,
+            "opcode": "ldloc.2",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 32,
+            "opcode": "ldtoken",
+            "operand_kind": "type",
+            "operand": "0x01000297"
+          },
+          {
+            "il_offset": 37,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0a000105"
+          },
+          {
+            "il_offset": 42,
+            "opcode": "callvirt",
+            "operand_kind": "method",
+            "operand": "0x0a000297"
+          },
+          {
+            "il_offset": 47,
+            "opcode": "brtrue.s",
+            "operand_kind": "branch",
+            "operand": "60"
+          },
+          {
+            "il_offset": 49,
+            "opcode": "ldloc.2",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 50,
+            "opcode": "callvirt",
+            "operand_kind": "method",
+            "operand": "0x0a000159"
+          },
+          {
+            "il_offset": 55,
+            "opcode": "brtrue",
+            "operand_kind": "branch",
+            "operand": "194"
+          },
+          {
+            "il_offset": 60,
+            "opcode": "ldloc.1",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 61,
+            "opcode": "callvirt",
+            "operand_kind": "method",
+            "operand": "0x0a00015d"
+          },
+          {
+            "il_offset": 66,
+            "opcode": "callvirt",
+            "operand_kind": "method",
+            "operand": "0x0a000843"
+          },
+          {
+            "il_offset": 71,
+            "opcode": "stloc.3",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 72,
+            "opcode": "br.s",
+            "operand_kind": "branch",
+            "operand": "174"
+          },
+          {
+            "il_offset": 74,
+            "opcode": "ldloc.3",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 75,
+            "opcode": "callvirt",
+            "operand_kind": "method",
+            "operand": "0x0a000844"
+          },
+          {
+            "il_offset": 80,
+            "opcode": "stloc.s",
+            "operand_kind": "variable",
+            "operand": "4"
+          },
+          {
+            "il_offset": 82,
+            "opcode": "ldloc.s",
+            "operand_kind": "variable",
+            "operand": "4"
+          },
+          {
+            "il_offset": 84,
+            "opcode": "callvirt",
+            "operand_kind": "method",
+            "operand": "0x0a000161"
+          },
+          {
+            "il_offset": 89,
+            "opcode": "isinst",
+            "operand_kind": "type",
+            "operand": "0x01000297"
+          },
+          {
+            "il_offset": 94,
+            "opcode": "stloc.s",
+            "operand_kind": "variable",
+            "operand": "5"
+          },
+          {
+            "il_offset": 96,
+            "opcode": "ldloc.s",
+            "operand_kind": "variable",
+            "operand": "5"
+          },
+          {
+            "il_offset": 98,
+            "opcode": "brfalse.s",
+            "operand_kind": "branch",
+            "operand": "148"
+          },
+          {
+            "il_offset": 100,
+            "opcode": "ldloc.s",
+            "operand_kind": "variable",
+            "operand": "4"
+          },
+          {
+            "il_offset": 102,
+            "opcode": "callvirt",
+            "operand_kind": "method",
+            "operand": "0x0a000845"
+          },
+          {
+            "il_offset": 107,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x06000fb3"
+          },
+          {
+            "il_offset": 112,
+            "opcode": "brfalse.s",
+            "operand_kind": "branch",
+            "operand": "148"
+          },
+          {
+            "il_offset": 114,
+            "opcode": "ldarg.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 115,
+            "opcode": "ldloc.s",
+            "operand_kind": "variable",
+            "operand": "5"
+          },
+          {
+            "il_offset": 117,
+            "opcode": "ldloca.s",
+            "operand_kind": "variable",
+            "operand": "6"
+          },
+          {
+            "il_offset": 119,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x06000fb1"
+          },
+          {
+            "il_offset": 124,
+            "opcode": "brfalse.s",
+            "operand_kind": "branch",
+            "operand": "174"
+          },
+          {
+            "il_offset": 126,
+            "opcode": "ldloc.s",
+            "operand_kind": "variable",
+            "operand": "6"
+          },
+          {
+            "il_offset": 128,
+            "opcode": "brfalse.s",
+            "operand_kind": "branch",
+            "operand": "174"
+          },
+          {
+            "il_offset": 130,
+            "opcode": "ldarg.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 131,
+            "opcode": "ldloc.1",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 132,
+            "opcode": "ldloc.s",
+            "operand_kind": "variable",
+            "operand": "4"
+          },
+          {
+            "il_offset": 134,
+            "opcode": "callvirt",
+            "operand_kind": "method",
+            "operand": "0x0a000845"
+          },
+          {
+            "il_offset": 139,
+            "opcode": "ldloc.s",
+            "operand_kind": "variable",
+            "operand": "6"
+          },
+          {
+            "il_offset": 141,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x06000fb0"
+          },
+          {
+            "il_offset": 146,
+            "opcode": "br.s",
+            "operand_kind": "branch",
+            "operand": "174"
+          },
+          {
+            "il_offset": 148,
+            "opcode": "ldloc.s",
+            "operand_kind": "variable",
+            "operand": "4"
+          },
+          {
+            "il_offset": 150,
+            "opcode": "callvirt",
+            "operand_kind": "method",
+            "operand": "0x0a000161"
+          },
+          {
+            "il_offset": 155,
+            "opcode": "isinst",
+            "operand_kind": "type",
+            "operand": "0x1b000042"
+          },
+          {
+            "il_offset": 160,
+            "opcode": "stloc.s",
+            "operand_kind": "variable",
+            "operand": "7"
+          },
+          {
+            "il_offset": 162,
+            "opcode": "ldloc.s",
+            "operand_kind": "variable",
+            "operand": "7"
+          },
+          {
+            "il_offset": 164,
+            "opcode": "brfalse.s",
+            "operand_kind": "branch",
+            "operand": "174"
+          },
+          {
+            "il_offset": 166,
+            "opcode": "ldarg.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 167,
+            "opcode": "ldloc.s",
+            "operand_kind": "variable",
+            "operand": "7"
+          },
+          {
+            "il_offset": 169,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x06000faf"
+          },
+          {
+            "il_offset": 174,
+            "opcode": "ldloc.3",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 175,
+            "opcode": "callvirt",
+            "operand_kind": "method",
+            "operand": "0x0a000038"
+          },
+          {
+            "il_offset": 180,
+            "opcode": "brtrue.s",
+            "operand_kind": "branch",
+            "operand": "74"
+          },
+          {
+            "il_offset": 182,
+            "opcode": "leave.s",
+            "operand_kind": "branch",
+            "operand": "194"
+          },
+          {
+            "il_offset": 184,
+            "opcode": "ldloc.3",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 185,
+            "opcode": "brfalse.s",
+            "operand_kind": "branch",
+            "operand": "193"
+          },
+          {
+            "il_offset": 187,
+            "opcode": "ldloc.3",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 188,
+            "opcode": "callvirt",
+            "operand_kind": "method",
+            "operand": "0x0a000037"
+          },
+          {
+            "il_offset": 193,
+            "opcode": "endfinally",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 194,
+            "opcode": "ldloc.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 195,
+            "opcode": "callvirt",
+            "operand_kind": "method",
+            "operand": "0x0a000038"
+          },
+          {
+            "il_offset": 200,
+            "opcode": "brtrue",
+            "operand_kind": "branch",
+            "operand": "12"
+          },
+          {
+            "il_offset": 205,
+            "opcode": "leave.s",
+            "operand_kind": "branch",
+            "operand": "217"
+          },
+          {
+            "il_offset": 207,
+            "opcode": "ldloc.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 208,
+            "opcode": "brfalse.s",
+            "operand_kind": "branch",
+            "operand": "216"
+          },
+          {
+            "il_offset": 210,
+            "opcode": "ldloc.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 211,
+            "opcode": "callvirt",
+            "operand_kind": "method",
+            "operand": "0x0a000037"
+          },
+          {
+            "il_offset": 216,
+            "opcode": "endfinally",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 217,
+            "opcode": "ret",
+            "operand_kind": "none",
+            "operand": null
+          }
+        ],
+        "exception_regions": [
+          {
+            "flags": 2,
+            "try_offset": 72,
+            "try_length": 112,
+            "handler_offset": 184,
+            "handler_length": 10,
+            "class_token": null,
+            "class_type": null,
+            "class_type_name_sha256": null,
+            "class_type_identity_resolved": null,
+            "filter_offset": null
+          },
+          {
+            "flags": 2,
+            "try_offset": 7,
+            "try_length": 200,
+            "handler_offset": 207,
+            "handler_length": 10,
+            "class_token": null,
+            "class_type": null,
+            "class_type_name_sha256": null,
+            "class_type_identity_resolved": null,
+            "filter_offset": null
+          }
+        ],
+        "issue": null
+      }
+    },
+    {
+      "token": "0x06000fb0",
+      "row_offset": 1221794,
+      "declaring_type_token": "0x02000191",
+      "declaring_type": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService",
+      "name": "Augment",
+      "rva": 226588,
+      "impl_flags": 0,
+      "flags": 129,
+      "signature": {
+        "raw_length": 8,
+        "raw_sha256": "c003032723a718367f6325e10bd814b29f4fce09cdd87805c60c231e5f64f6b0",
+        "resolved_sha256": "8bc98f0190fa2417fcff3612d2bb109e10be21d0a5aa06e2b6caae8f5ef4d204",
+        "kind": "method",
+        "parse_status": "decoded",
+        "calling_convention": "default has-this",
+        "generic_parameter_count": null,
+        "parameter_count": 3,
+        "return_type": "void",
+        "parameter_types": [
+          "class:525",
+          "string",
+          "string"
+        ],
+        "field_type": null,
+        "issue": null
+      },
+      "body": {
+        "status": "present",
+        "header_format": "fat",
+        "rva": 226588,
+        "file_offset": 218908,
+        "max_stack": 3,
+        "init_locals": true,
+        "local_var_sig_token": "0x11000035",
+        "il_size": 45,
+        "il_sha256": "5a7bcd7ac1b51568d8422342aaba177b26501ab83d648bcb7cf6f46b3c8667ca",
+        "normalized_il_sha256": "925b8ade1feb1b8db53143063b5c2d1d3e771b3a5d2402ac577cefdc27932393",
+        "instruction_count": 16,
+        "decoded_instruction_count": 16,
+        "truncated_instructions": 0,
+        "opcode_counts": {
+          "ldstr": 1,
+          "ldarg.2": 1,
+          "call": 1,
+          "stloc.0": 1,
+          "ldarg.1": 2,
+          "callvirt": 4,
+          "ldloc.0": 2,
+          "brtrue.s": 1,
+          "ldarg.3": 1,
+          "newobj": 1,
+          "ret": 1
+        },
+        "anchors": [
+          {
+            "il_offset": 0,
+            "opcode": "ldstr",
+            "operand_kind": "string",
+            "operand": "0x700473c0"
+          },
+          {
+            "il_offset": 5,
+            "opcode": "ldarg.2",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 6,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0a00011e"
+          },
+          {
+            "il_offset": 11,
+            "opcode": "stloc.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 12,
+            "opcode": "ldarg.1",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 13,
+            "opcode": "callvirt",
+            "operand_kind": "method",
+            "operand": "0x0a00015d"
+          },
+          {
+            "il_offset": 18,
+            "opcode": "ldloc.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 19,
+            "opcode": "callvirt",
+            "operand_kind": "method",
+            "operand": "0x0a00015e"
+          },
+          {
+            "il_offset": 24,
+            "opcode": "brtrue.s",
+            "operand_kind": "branch",
+            "operand": "44"
+          },
+          {
+            "il_offset": 26,
+            "opcode": "ldarg.1",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 27,
+            "opcode": "callvirt",
+            "operand_kind": "method",
+            "operand": "0x0a00015d"
+          },
+          {
+            "il_offset": 32,
+            "opcode": "ldloc.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 33,
+            "opcode": "ldarg.3",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 34,
+            "opcode": "newobj",
+            "operand_kind": "method",
+            "operand": "0x0a00015f"
+          },
+          {
+            "il_offset": 39,
+            "opcode": "callvirt",
+            "operand_kind": "method",
+            "operand": "0x0a000160"
+          },
+          {
+            "il_offset": 44,
+            "opcode": "ret",
+            "operand_kind": "none",
+            "operand": null
+          }
+        ],
+        "exception_regions": [],
+        "issue": null
+      }
+    },
+    {
+      "token": "0x06000fb4",
+      "row_offset": 1221866,
+      "declaring_type_token": "0x02000191",
+      "declaring_type": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService",
+      "name": "LoadVendors",
+      "rva": 226872,
+      "impl_flags": 0,
+      "flags": 129,
+      "signature": {
+        "raw_length": 10,
+        "raw_sha256": "2485e3b17a940fc83cda42bac445ecc77962a494ac8f7a0d6f56635178e1ab7b",
+        "resolved_sha256": "3772ef46b0c3cd2026899e51e1748ef9294f4741d58f647749f8bf369b2d3855",
+        "kind": "method",
+        "parse_status": "decoded",
+        "calling_convention": "default has-this",
+        "generic_parameter_count": null,
+        "parameter_count": 1,
+        "return_type": "class:217<string,string>",
+        "parameter_types": [
+          "string"
+        ],
+        "field_type": null,
+        "issue": null
+      },
+      "body": {
+        "status": "present",
+        "header_format": "fat",
+        "rva": 226872,
+        "file_offset": 219192,
+        "max_stack": 4,
+        "init_locals": true,
+        "local_var_sig_token": "0x1100045e",
+        "il_size": 265,
+        "il_sha256": "dde482907db7cc4d6669fd883a38e8ec47d97ee320958a60f4d512024133621d",
+        "normalized_il_sha256": "9df4212cba9f4a108e49f320a087682d578b52c987b81db2e0df7598e21eb5ad",
+        "instruction_count": 104,
+        "decoded_instruction_count": 104,
+        "truncated_instructions": 0,
+        "opcode_counts": {
+          "call": 6,
+          "newobj": 1,
+          "stloc.0": 1,
+          "ldarg.1": 2,
+          "brtrue.s": 3,
+          "ldloc.0": 3,
+          "ret": 2,
+          "ldc.i4.1": 5,
+          "stloc.1": 2,
+          "callvirt": 18,
+          "stloc.2": 1,
+          "br": 2,
+          "ldloc.2": 4,
+          "stloc.3": 1,
+          "ldloc.1": 1,
+          "brfalse.s": 2,
+          "ldc.i4.0": 3,
+          "ldloc.3": 6,
+          "brtrue": 2,
+          "ldc.i4.s": 4,
+          "stloc.s": 5,
+          "ldloc.s": 15,
+          "blt": 1,
+          "add": 3,
+          "bgt.s": 1,
+          "br.s": 1,
+          "sub": 2,
+          "ldsfld": 2,
+          "ldc.i4.6": 1,
+          "bne.un.s": 1,
+          "pop": 1,
+          "leave.s": 1,
+          "endfinally": 1
+        },
+        "anchors": [
+          {
+            "il_offset": 0,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0a0002f7"
+          },
+          {
+            "il_offset": 5,
+            "opcode": "newobj",
+            "operand_kind": "method",
+            "operand": "0x0a000792"
+          },
+          {
+            "il_offset": 10,
+            "opcode": "stloc.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 11,
+            "opcode": "ldarg.1",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 12,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0a00013f"
+          },
+          {
+            "il_offset": 17,
+            "opcode": "brtrue.s",
+            "operand_kind": "branch",
+            "operand": "21"
+          },
+          {
+            "il_offset": 19,
+            "opcode": "ldloc.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 20,
+            "opcode": "ret",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 21,
+            "opcode": "ldc.i4.1",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 22,
+            "opcode": "stloc.1",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 23,
+            "opcode": "ldarg.1",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 24,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0a00085a"
+          },
+          {
+            "il_offset": 29,
+            "opcode": "callvirt",
+            "operand_kind": "method",
+            "operand": "0x0a00003c"
+          },
+          {
+            "il_offset": 34,
+            "opcode": "stloc.2",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 35,
+            "opcode": "br",
+            "operand_kind": "branch",
+            "operand": "240"
+          },
+          {
+            "il_offset": 40,
+            "opcode": "ldloc.2",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 41,
+            "opcode": "callvirt",
+            "operand_kind": "method",
+            "operand": "0x0a000039"
+          },
+          {
+            "il_offset": 46,
+            "opcode": "stloc.3",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 47,
+            "opcode": "ldloc.1",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 48,
+            "opcode": "brfalse.s",
+            "operand_kind": "branch",
+            "operand": "57"
+          },
+          {
+            "il_offset": 50,
+            "opcode": "ldc.i4.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 51,
+            "opcode": "stloc.1",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 52,
+            "opcode": "br",
+            "operand_kind": "branch",
+            "operand": "240"
+          },
+          {
+            "il_offset": 57,
+            "opcode": "ldloc.3",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 58,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0a0002fc"
+          },
+          {
+            "il_offset": 63,
+            "opcode": "brtrue",
+            "operand_kind": "branch",
+            "operand": "240"
+          },
+          {
+            "il_offset": 68,
+            "opcode": "ldloc.3",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 69,
+            "opcode": "ldc.i4.s",
+            "operand_kind": "constant",
+            "operand": "44"
+          },
+          {
+            "il_offset": 71,
+            "opcode": "callvirt",
+            "operand_kind": "method",
+            "operand": "0x0a00038e"
+          },
+          {
+            "il_offset": 76,
+            "opcode": "stloc.s",
+            "operand_kind": "variable",
+            "operand": "4"
+          },
+          {
+            "il_offset": 78,
+            "opcode": "ldloc.s",
+            "operand_kind": "variable",
+            "operand": "4"
+          },
+          {
+            "il_offset": 80,
+            "opcode": "ldc.i4.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 81,
+            "opcode": "blt",
+            "operand_kind": "branch",
+            "operand": "240"
+          },
+          {
+            "il_offset": 86,
+            "opcode": "ldloc.3",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 87,
+            "opcode": "ldc.i4.s",
+            "operand_kind": "constant",
+            "operand": "44"
+          },
+          {
+            "il_offset": 89,
+            "opcode": "ldloc.s",
+            "operand_kind": "variable",
+            "operand": "4"
+          },
+          {
+            "il_offset": 91,
+            "opcode": "ldc.i4.1",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 92,
+            "opcode": "add",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 93,
+            "opcode": "callvirt",
+            "operand_kind": "method",
+            "operand": "0x0a000616"
+          },
+          {
+            "il_offset": 98,
+            "opcode": "stloc.s",
+            "operand_kind": "variable",
+            "operand": "5"
+          },
+          {
+            "il_offset": 100,
+            "opcode": "ldloc.3",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 101,
+            "opcode": "ldc.i4.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 102,
+            "opcode": "ldloc.s",
+            "operand_kind": "variable",
+            "operand": "4"
+          },
+          {
+            "il_offset": 104,
+            "opcode": "callvirt",
+            "operand_kind": "method",
+            "operand": "0x0a0000e7"
+          },
+          {
+            "il_offset": 109,
+            "opcode": "callvirt",
+            "operand_kind": "method",
+            "operand": "0x0a00036c"
+          },
+          {
+            "il_offset": 114,
+            "opcode": "stloc.s",
+            "operand_kind": "variable",
+            "operand": "6"
+          },
+          {
+            "il_offset": 116,
+            "opcode": "ldloc.s",
+            "operand_kind": "variable",
+            "operand": "5"
+          },
+          {
+            "il_offset": 118,
+            "opcode": "ldloc.s",
+            "operand_kind": "variable",
+            "operand": "4"
+          },
+          {
+            "il_offset": 120,
+            "opcode": "bgt.s",
+            "operand_kind": "branch",
+            "operand": "146"
+          },
+          {
+            "il_offset": 122,
+            "opcode": "ldloc.3",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 123,
+            "opcode": "ldloc.s",
+            "operand_kind": "variable",
+            "operand": "4"
+          },
+          {
+            "il_offset": 125,
+            "opcode": "ldc.i4.1",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 126,
+            "opcode": "add",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 127,
+            "opcode": "callvirt",
+            "operand_kind": "method",
+            "operand": "0x0a0002c1"
+          },
+          {
+            "il_offset": 132,
+            "opcode": "callvirt",
+            "operand_kind": "method",
+            "operand": "0x0a00036c"
+          },
+          {
+            "il_offset": 137,
+            "opcode": "ldc.i4.s",
+            "operand_kind": "constant",
+            "operand": "34"
+          },
+          {
+            "il_offset": 139,
+            "opcode": "callvirt",
+            "operand_kind": "method",
+            "operand": "0x0a00085b"
+          },
+          {
+            "il_offset": 144,
+            "opcode": "br.s",
+            "operand_kind": "branch",
+            "operand": "175"
+          },
+          {
+            "il_offset": 146,
+            "opcode": "ldloc.3",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 147,
+            "opcode": "ldloc.s",
+            "operand_kind": "variable",
+            "operand": "4"
+          },
+          {
+            "il_offset": 149,
+            "opcode": "ldc.i4.1",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 150,
+            "opcode": "add",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 151,
+            "opcode": "ldloc.s",
+            "operand_kind": "variable",
+            "operand": "5"
+          },
+          {
+            "il_offset": 153,
+            "opcode": "ldloc.s",
+            "operand_kind": "variable",
+            "operand": "4"
+          },
+          {
+            "il_offset": 155,
+            "opcode": "sub",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 156,
+            "opcode": "ldc.i4.1",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 157,
+            "opcode": "sub",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 158,
+            "opcode": "callvirt",
+            "operand_kind": "method",
+            "operand": "0x0a0000e7"
+          },
+          {
+            "il_offset": 163,
+            "opcode": "callvirt",
+            "operand_kind": "method",
+            "operand": "0x0a00036c"
+          },
+          {
+            "il_offset": 168,
+            "opcode": "ldc.i4.s",
+            "operand_kind": "constant",
+            "operand": "34"
+          },
+          {
+            "il_offset": 170,
+            "opcode": "callvirt",
+            "operand_kind": "method",
+            "operand": "0x0a00085b"
+          },
+          {
+            "il_offset": 175,
+            "opcode": "stloc.s",
+            "operand_kind": "variable",
+            "operand": "7"
+          },
+          {
+            "il_offset": 177,
+            "opcode": "ldloc.s",
+            "operand_kind": "variable",
+            "operand": "6"
+          },
+          {
+            "il_offset": 179,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0a000179"
+          },
+          {
+            "il_offset": 184,
+            "opcode": "brtrue.s",
+            "operand_kind": "branch",
+            "operand": "240"
+          },
+          {
+            "il_offset": 186,
+            "opcode": "ldloc.s",
+            "operand_kind": "variable",
+            "operand": "7"
+          },
+          {
+            "il_offset": 188,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0a000179"
+          },
+          {
+            "il_offset": 193,
+            "opcode": "brtrue.s",
+            "operand_kind": "branch",
+            "operand": "240"
+          },
+          {
+            "il_offset": 195,
+            "opcode": "ldsfld",
+            "operand_kind": "field",
+            "operand": "0x040007d4"
+          },
+          {
+            "il_offset": 200,
+            "opcode": "ldloc.s",
+            "operand_kind": "variable",
+            "operand": "6"
+          },
+          {
+            "il_offset": 202,
+            "opcode": "ldsfld",
+            "operand_kind": "field",
+            "operand": "0x0a000163"
+          },
+          {
+            "il_offset": 207,
+            "opcode": "callvirt",
+            "operand_kind": "method",
+            "operand": "0x0a000859"
+          },
+          {
+            "il_offset": 212,
+            "opcode": "callvirt",
+            "operand_kind": "method",
+            "operand": "0x0a0003c0"
+          },
+          {
+            "il_offset": 217,
+            "opcode": "stloc.s",
+            "operand_kind": "variable",
+            "operand": "8"
+          },
+          {
+            "il_offset": 219,
+            "opcode": "ldloc.s",
+            "operand_kind": "variable",
+            "operand": "8"
+          },
+          {
+            "il_offset": 221,
+            "opcode": "callvirt",
+            "operand_kind": "method",
+            "operand": "0x0a0000e6"
+          },
+          {
+            "il_offset": 226,
+            "opcode": "ldc.i4.6",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 227,
+            "opcode": "bne.un.s",
+            "operand_kind": "branch",
+            "operand": "240"
+          },
+          {
+            "il_offset": 229,
+            "opcode": "ldloc.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 230,
+            "opcode": "ldloc.s",
+            "operand_kind": "variable",
+            "operand": "8"
+          },
+          {
+            "il_offset": 232,
+            "opcode": "ldloc.s",
+            "operand_kind": "variable",
+            "operand": "7"
+          },
+          {
+            "il_offset": 234,
+            "opcode": "callvirt",
+            "operand_kind": "method",
+            "operand": "0x0a00085c"
+          },
+          {
+            "il_offset": 239,
+            "opcode": "pop",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 240,
+            "opcode": "ldloc.2",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 241,
+            "opcode": "callvirt",
+            "operand_kind": "method",
+            "operand": "0x0a000038"
+          },
+          {
+            "il_offset": 246,
+            "opcode": "brtrue",
+            "operand_kind": "branch",
+            "operand": "40"
+          },
+          {
+            "il_offset": 251,
+            "opcode": "leave.s",
+            "operand_kind": "branch",
+            "operand": "263"
+          },
+          {
+            "il_offset": 253,
+            "opcode": "ldloc.2",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 254,
+            "opcode": "brfalse.s",
+            "operand_kind": "branch",
+            "operand": "262"
+          },
+          {
+            "il_offset": 256,
+            "opcode": "ldloc.2",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 257,
+            "opcode": "callvirt",
+            "operand_kind": "method",
+            "operand": "0x0a000037"
+          },
+          {
+            "il_offset": 262,
+            "opcode": "endfinally",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 263,
+            "opcode": "ldloc.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 264,
+            "opcode": "ret",
+            "operand_kind": "none",
+            "operand": null
+          }
+        ],
+        "exception_regions": [
+          {
+            "flags": 2,
+            "try_offset": 35,
+            "try_length": 218,
+            "handler_offset": 253,
+            "handler_length": 10,
+            "class_token": null,
+            "class_type": null,
+            "class_type_name_sha256": null,
+            "class_type_identity_resolved": null,
+            "filter_offset": null
+          }
+        ],
+        "issue": null
+      }
+    }
+  ],
+  "call_edges": [
+    {
+      "caller_token": "0x06000faf",
+      "il_offset": 1,
+      "target_identity_sha256": null,
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.ApplyHelper",
+      "opcode": "callvirt",
+      "target_token": "0x0a00015b",
+      "target_kind": "member-ref",
+      "target_name": "GetEnumerator",
+      "target_declaring_type": "System.Collections.Generic.IEnumerable`1"
+    },
+    {
+      "caller_token": "0x06000faf",
+      "il_offset": 13,
+      "target_identity_sha256": null,
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.ApplyHelper",
+      "opcode": "callvirt",
+      "target_token": "0x0a00015c",
+      "target_kind": "member-ref",
+      "target_name": "get_Current",
+      "target_declaring_type": "System.Collections.Generic.IEnumerator`1"
+    },
+    {
+      "caller_token": "0x06000faf",
+      "il_offset": 20,
+      "target_identity_sha256": "cac0911ec902a4e22b72274996c077a0636167444617809a3b8decc89de64adb",
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.ApplyHelper",
+      "opcode": "callvirt",
+      "target_token": "0x0a00014f",
+      "target_kind": "member-ref",
+      "target_name": "get_BaseObject",
+      "target_declaring_type": "System.Management.Automation.PSObject"
+    },
+    {
+      "caller_token": "0x06000faf",
+      "il_offset": 25,
+      "target_identity_sha256": "9b115c5308ff81925aa39ba90caf261e6d2a3c60175ba2b554c838821188e77e",
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.ApplyHelper",
+      "opcode": "callvirt",
+      "target_token": "0x0a000158",
+      "target_kind": "member-ref",
+      "target_name": "GetType",
+      "target_declaring_type": "System.Object"
+    },
+    {
+      "caller_token": "0x06000faf",
+      "il_offset": 37,
+      "target_identity_sha256": "8d9271b88183a0aef4347472480982b77c566e517fc63aed6571eaaecbdc61ee",
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.ApplyHelper",
+      "opcode": "call",
+      "target_token": "0x0a000105",
+      "target_kind": "member-ref",
+      "target_name": "GetTypeFromHandle",
+      "target_declaring_type": "System.Type"
+    },
+    {
+      "caller_token": "0x06000faf",
+      "il_offset": 42,
+      "target_identity_sha256": "22f6f94c59697cf0ef009710f79328d0fbd613dbf334c7bda4de154b8649a6ff",
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.ApplyHelper",
+      "opcode": "callvirt",
+      "target_token": "0x0a000297",
+      "target_kind": "member-ref",
+      "target_name": "Equals",
+      "target_declaring_type": "System.Type"
+    },
+    {
+      "caller_token": "0x06000faf",
+      "il_offset": 50,
+      "target_identity_sha256": "35f434e45cd5fce96fb09449c1f00a95b75d03aa9bf7dba2ba7a346856f4ad70",
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.ApplyHelper",
+      "opcode": "callvirt",
+      "target_token": "0x0a000159",
+      "target_kind": "member-ref",
+      "target_name": "get_IsValueType",
+      "target_declaring_type": "System.Type"
+    },
+    {
+      "caller_token": "0x06000faf",
+      "il_offset": 61,
+      "target_identity_sha256": "6f1a9c1159169bd609212b677a997e1ec9ad28f4faad0e563fe8967f29bd4fe9",
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.ApplyHelper",
+      "opcode": "callvirt",
+      "target_token": "0x0a00015d",
+      "target_kind": "member-ref",
+      "target_name": "get_Members",
+      "target_declaring_type": "System.Management.Automation.PSObject"
+    },
+    {
+      "caller_token": "0x06000faf",
+      "il_offset": 66,
+      "target_identity_sha256": null,
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.ApplyHelper",
+      "opcode": "callvirt",
+      "target_token": "0x0a000843",
+      "target_kind": "member-ref",
+      "target_name": "GetEnumerator",
+      "target_declaring_type": "System.Management.Automation.PSMemberInfoCollection`1"
+    },
+    {
+      "caller_token": "0x06000faf",
+      "il_offset": 75,
+      "target_identity_sha256": null,
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.ApplyHelper",
+      "opcode": "callvirt",
+      "target_token": "0x0a000844",
+      "target_kind": "member-ref",
+      "target_name": "get_Current",
+      "target_declaring_type": "System.Collections.Generic.IEnumerator`1"
+    },
+    {
+      "caller_token": "0x06000faf",
+      "il_offset": 84,
+      "target_identity_sha256": "d2b95b923a1e205b6d225b7d123afe123d268ff015eb54a04966bb8bb41ff1a3",
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.ApplyHelper",
+      "opcode": "callvirt",
+      "target_token": "0x0a000161",
+      "target_kind": "member-ref",
+      "target_name": "get_Value",
+      "target_declaring_type": "System.Management.Automation.PSMemberInfo"
+    },
+    {
+      "caller_token": "0x06000faf",
+      "il_offset": 102,
+      "target_identity_sha256": "d21c28f8725f0e68f7c3798d1cb147a94bbb409efcb571d7a427332597d3d509",
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.ApplyHelper",
+      "opcode": "callvirt",
+      "target_token": "0x0a000845",
+      "target_kind": "member-ref",
+      "target_name": "get_Name",
+      "target_declaring_type": "System.Management.Automation.PSMemberInfo"
+    },
+    {
+      "caller_token": "0x06000faf",
+      "il_offset": 107,
+      "target_identity_sha256": "23a52893da7152c3bf162a660596deaf39d516d8cc58b12e6d07687040cbac41",
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.ApplyHelper",
+      "opcode": "call",
+      "target_token": "0x06000fb3",
+      "target_kind": "method-def",
+      "target_name": "IsMacFieldName",
+      "target_declaring_type": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService"
+    },
+    {
+      "caller_token": "0x06000faf",
+      "il_offset": 119,
+      "target_identity_sha256": "5beed2c4f6e9a17695887a0d7b3d766e32048ec2439b8740f3946f740a3be53c",
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.ApplyHelper",
+      "opcode": "call",
+      "target_token": "0x06000fb1",
+      "target_kind": "method-def",
+      "target_name": "TryLookupVendor",
+      "target_declaring_type": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService"
+    },
+    {
+      "caller_token": "0x06000faf",
+      "il_offset": 134,
+      "target_identity_sha256": "d21c28f8725f0e68f7c3798d1cb147a94bbb409efcb571d7a427332597d3d509",
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.ApplyHelper",
+      "opcode": "callvirt",
+      "target_token": "0x0a000845",
+      "target_kind": "member-ref",
+      "target_name": "get_Name",
+      "target_declaring_type": "System.Management.Automation.PSMemberInfo"
+    },
+    {
+      "caller_token": "0x06000faf",
+      "il_offset": 141,
+      "target_identity_sha256": "77cbbd35e7fd0f4acf893dc27bc46d7170601fef5ddadefa1dcbe2a7ec2da502",
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.ApplyHelper",
+      "opcode": "call",
+      "target_token": "0x06000fb0",
+      "target_kind": "method-def",
+      "target_name": "Augment",
+      "target_declaring_type": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService"
+    },
+    {
+      "caller_token": "0x06000faf",
+      "il_offset": 150,
+      "target_identity_sha256": "d2b95b923a1e205b6d225b7d123afe123d268ff015eb54a04966bb8bb41ff1a3",
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.ApplyHelper",
+      "opcode": "callvirt",
+      "target_token": "0x0a000161",
+      "target_kind": "member-ref",
+      "target_name": "get_Value",
+      "target_declaring_type": "System.Management.Automation.PSMemberInfo"
+    },
+    {
+      "caller_token": "0x06000faf",
+      "il_offset": 169,
+      "target_identity_sha256": "d4c6403fede6b2926e4c2344319f592a65786c44a66fdf90ab6c4189281ff0b7",
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.ApplyHelper",
+      "opcode": "call",
+      "target_token": "0x06000faf",
+      "target_kind": "method-def",
+      "target_name": "ApplyHelper",
+      "target_declaring_type": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService"
+    },
+    {
+      "caller_token": "0x06000faf",
+      "il_offset": 175,
+      "target_identity_sha256": "052ad0a0bb12692fc0fe3fcb45de460cb996fdce58fba01b68149cac67705324",
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.ApplyHelper",
+      "opcode": "callvirt",
+      "target_token": "0x0a000038",
+      "target_kind": "member-ref",
+      "target_name": "MoveNext",
+      "target_declaring_type": "System.Collections.IEnumerator"
+    },
+    {
+      "caller_token": "0x06000faf",
+      "il_offset": 188,
+      "target_identity_sha256": "98e6cc4b0e746fddfcc91aa0b7cf5a39565d89cad96ff885d5af2f63c0cac69d",
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.ApplyHelper",
+      "opcode": "callvirt",
+      "target_token": "0x0a000037",
+      "target_kind": "member-ref",
+      "target_name": "Dispose",
+      "target_declaring_type": "System.IDisposable"
+    },
+    {
+      "caller_token": "0x06000faf",
+      "il_offset": 195,
+      "target_identity_sha256": "052ad0a0bb12692fc0fe3fcb45de460cb996fdce58fba01b68149cac67705324",
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.ApplyHelper",
+      "opcode": "callvirt",
+      "target_token": "0x0a000038",
+      "target_kind": "member-ref",
+      "target_name": "MoveNext",
+      "target_declaring_type": "System.Collections.IEnumerator"
+    },
+    {
+      "caller_token": "0x06000faf",
+      "il_offset": 211,
+      "target_identity_sha256": "98e6cc4b0e746fddfcc91aa0b7cf5a39565d89cad96ff885d5af2f63c0cac69d",
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.ApplyHelper",
+      "opcode": "callvirt",
+      "target_token": "0x0a000037",
+      "target_kind": "member-ref",
+      "target_name": "Dispose",
+      "target_declaring_type": "System.IDisposable"
+    },
+    {
+      "caller_token": "0x06000fb0",
+      "il_offset": 6,
+      "target_identity_sha256": "1578cee7e107b407ff6c9b4a48718683e874f2a9e3787caed1046dbc6aedbc78",
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.Augment",
+      "opcode": "call",
+      "target_token": "0x0a00011e",
+      "target_kind": "member-ref",
+      "target_name": "Format",
+      "target_declaring_type": "System.String"
+    },
+    {
+      "caller_token": "0x06000fb0",
+      "il_offset": 13,
+      "target_identity_sha256": "6f1a9c1159169bd609212b677a997e1ec9ad28f4faad0e563fe8967f29bd4fe9",
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.Augment",
+      "opcode": "callvirt",
+      "target_token": "0x0a00015d",
+      "target_kind": "member-ref",
+      "target_name": "get_Members",
+      "target_declaring_type": "System.Management.Automation.PSObject"
+    },
+    {
+      "caller_token": "0x06000fb0",
+      "il_offset": 19,
+      "target_identity_sha256": null,
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.Augment",
+      "opcode": "callvirt",
+      "target_token": "0x0a00015e",
+      "target_kind": "member-ref",
+      "target_name": "get_Item",
+      "target_declaring_type": "System.Management.Automation.PSMemberInfoCollection`1"
+    },
+    {
+      "caller_token": "0x06000fb0",
+      "il_offset": 27,
+      "target_identity_sha256": "6f1a9c1159169bd609212b677a997e1ec9ad28f4faad0e563fe8967f29bd4fe9",
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.Augment",
+      "opcode": "callvirt",
+      "target_token": "0x0a00015d",
+      "target_kind": "member-ref",
+      "target_name": "get_Members",
+      "target_declaring_type": "System.Management.Automation.PSObject"
+    },
+    {
+      "caller_token": "0x06000fb0",
+      "il_offset": 34,
+      "target_identity_sha256": "399a3e18ec2ba0494312a121af750d4bf133600852c2a46854211daa82dfbfe0",
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.Augment",
+      "opcode": "newobj",
+      "target_token": "0x0a00015f",
+      "target_kind": "member-ref",
+      "target_name": ".ctor",
+      "target_declaring_type": "System.Management.Automation.PSNoteProperty"
+    },
+    {
+      "caller_token": "0x06000fb0",
+      "il_offset": 39,
+      "target_identity_sha256": null,
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.Augment",
+      "opcode": "callvirt",
+      "target_token": "0x0a000160",
+      "target_kind": "member-ref",
+      "target_name": "Add",
+      "target_declaring_type": "System.Management.Automation.PSMemberInfoCollection`1"
+    },
+    {
+      "caller_token": "0x06000fb4",
+      "il_offset": 0,
+      "target_identity_sha256": "b82b4bc13642bcf18274d119f2548d99a7cc9044572c65b4498b43148c31c0ac",
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.LoadVendors",
+      "opcode": "call",
+      "target_token": "0x0a0002f7",
+      "target_kind": "member-ref",
+      "target_name": "get_OrdinalIgnoreCase",
+      "target_declaring_type": "System.StringComparer"
+    },
+    {
+      "caller_token": "0x06000fb4",
+      "il_offset": 5,
+      "target_identity_sha256": null,
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.LoadVendors",
+      "opcode": "newobj",
+      "target_token": "0x0a000792",
+      "target_kind": "member-ref",
+      "target_name": ".ctor",
+      "target_declaring_type": "System.Collections.Generic.Dictionary`2"
+    },
+    {
+      "caller_token": "0x06000fb4",
+      "il_offset": 12,
+      "target_identity_sha256": "cb51cf9de8b7be544080f10d82b55659589912bd8dc7035495a7787b5e6f114f",
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.LoadVendors",
+      "opcode": "call",
+      "target_token": "0x0a00013f",
+      "target_kind": "member-ref",
+      "target_name": "Exists",
+      "target_declaring_type": "System.IO.File"
+    },
+    {
+      "caller_token": "0x06000fb4",
+      "il_offset": 24,
+      "target_identity_sha256": "9714a495c16a85107a640574341018c5e5d0c1bf9bea64298d27fa00165239d0",
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.LoadVendors",
+      "opcode": "call",
+      "target_token": "0x0a00085a",
+      "target_kind": "member-ref",
+      "target_name": "ReadLines",
+      "target_declaring_type": "System.IO.File"
+    },
+    {
+      "caller_token": "0x06000fb4",
+      "il_offset": 29,
+      "target_identity_sha256": null,
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.LoadVendors",
+      "opcode": "callvirt",
+      "target_token": "0x0a00003c",
+      "target_kind": "member-ref",
+      "target_name": "GetEnumerator",
+      "target_declaring_type": "System.Collections.Generic.IEnumerable`1"
+    },
+    {
+      "caller_token": "0x06000fb4",
+      "il_offset": 41,
+      "target_identity_sha256": null,
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.LoadVendors",
+      "opcode": "callvirt",
+      "target_token": "0x0a000039",
+      "target_kind": "member-ref",
+      "target_name": "get_Current",
+      "target_declaring_type": "System.Collections.Generic.IEnumerator`1"
+    },
+    {
+      "caller_token": "0x06000fb4",
+      "il_offset": 58,
+      "target_identity_sha256": "68f83bda0d34a5c8de826ac8ee9d06c0c8fd1805e77548d7b65f9becd0a3dc06",
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.LoadVendors",
+      "opcode": "call",
+      "target_token": "0x0a0002fc",
+      "target_kind": "member-ref",
+      "target_name": "IsNullOrWhiteSpace",
+      "target_declaring_type": "System.String"
+    },
+    {
+      "caller_token": "0x06000fb4",
+      "il_offset": 71,
+      "target_identity_sha256": "0dfc2d72dfceccca26750641c1944f1a53cf2b4c035d00913379a77756a1a2ad",
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.LoadVendors",
+      "opcode": "callvirt",
+      "target_token": "0x0a00038e",
+      "target_kind": "member-ref",
+      "target_name": "IndexOf",
+      "target_declaring_type": "System.String"
+    },
+    {
+      "caller_token": "0x06000fb4",
+      "il_offset": 93,
+      "target_identity_sha256": "fe2f07bba78bc59167ad5d85dab85db6b5257d7282980fa6e4ab4f958b583385",
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.LoadVendors",
+      "opcode": "callvirt",
+      "target_token": "0x0a000616",
+      "target_kind": "member-ref",
+      "target_name": "IndexOf",
+      "target_declaring_type": "System.String"
+    },
+    {
+      "caller_token": "0x06000fb4",
+      "il_offset": 104,
+      "target_identity_sha256": "473828c535d833946d0079f6666ef95e3a0eabb03db309e9212294d2b4c30107",
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.LoadVendors",
+      "opcode": "callvirt",
+      "target_token": "0x0a0000e7",
+      "target_kind": "member-ref",
+      "target_name": "Substring",
+      "target_declaring_type": "System.String"
+    },
+    {
+      "caller_token": "0x06000fb4",
+      "il_offset": 109,
+      "target_identity_sha256": "903033df61ae919169ce22ef2ec363b96a249ee10720d14565bbcd0ed08823c5",
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.LoadVendors",
+      "opcode": "callvirt",
+      "target_token": "0x0a00036c",
+      "target_kind": "member-ref",
+      "target_name": "Trim",
+      "target_declaring_type": "System.String"
+    },
+    {
+      "caller_token": "0x06000fb4",
+      "il_offset": 127,
+      "target_identity_sha256": "ea9bbd0dc1f3af5464dace40cd3f85adaf2e8980740ef7a88515ced6af8892cd",
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.LoadVendors",
+      "opcode": "callvirt",
+      "target_token": "0x0a0002c1",
+      "target_kind": "member-ref",
+      "target_name": "Substring",
+      "target_declaring_type": "System.String"
+    },
+    {
+      "caller_token": "0x06000fb4",
+      "il_offset": 132,
+      "target_identity_sha256": "903033df61ae919169ce22ef2ec363b96a249ee10720d14565bbcd0ed08823c5",
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.LoadVendors",
+      "opcode": "callvirt",
+      "target_token": "0x0a00036c",
+      "target_kind": "member-ref",
+      "target_name": "Trim",
+      "target_declaring_type": "System.String"
+    },
+    {
+      "caller_token": "0x06000fb4",
+      "il_offset": 139,
+      "target_identity_sha256": "e5944c656086ff2d7fa07d25a203c5d5a60572d0b61614144e44560f9909aa5b",
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.LoadVendors",
+      "opcode": "callvirt",
+      "target_token": "0x0a00085b",
+      "target_kind": "member-ref",
+      "target_name": "Trim",
+      "target_declaring_type": "System.String"
+    },
+    {
+      "caller_token": "0x06000fb4",
+      "il_offset": 158,
+      "target_identity_sha256": "473828c535d833946d0079f6666ef95e3a0eabb03db309e9212294d2b4c30107",
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.LoadVendors",
+      "opcode": "callvirt",
+      "target_token": "0x0a0000e7",
+      "target_kind": "member-ref",
+      "target_name": "Substring",
+      "target_declaring_type": "System.String"
+    },
+    {
+      "caller_token": "0x06000fb4",
+      "il_offset": 163,
+      "target_identity_sha256": "903033df61ae919169ce22ef2ec363b96a249ee10720d14565bbcd0ed08823c5",
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.LoadVendors",
+      "opcode": "callvirt",
+      "target_token": "0x0a00036c",
+      "target_kind": "member-ref",
+      "target_name": "Trim",
+      "target_declaring_type": "System.String"
+    },
+    {
+      "caller_token": "0x06000fb4",
+      "il_offset": 170,
+      "target_identity_sha256": "e5944c656086ff2d7fa07d25a203c5d5a60572d0b61614144e44560f9909aa5b",
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.LoadVendors",
+      "opcode": "callvirt",
+      "target_token": "0x0a00085b",
+      "target_kind": "member-ref",
+      "target_name": "Trim",
+      "target_declaring_type": "System.String"
+    },
+    {
+      "caller_token": "0x06000fb4",
+      "il_offset": 179,
+      "target_identity_sha256": "b60e35c2faa0db0144d0d4d286a12cbf011c9c7fb1b61c856aae285f649e4486",
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.LoadVendors",
+      "opcode": "call",
+      "target_token": "0x0a000179",
+      "target_kind": "member-ref",
+      "target_name": "IsNullOrEmpty",
+      "target_declaring_type": "System.String"
+    },
+    {
+      "caller_token": "0x06000fb4",
+      "il_offset": 188,
+      "target_identity_sha256": "b60e35c2faa0db0144d0d4d286a12cbf011c9c7fb1b61c856aae285f649e4486",
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.LoadVendors",
+      "opcode": "call",
+      "target_token": "0x0a000179",
+      "target_kind": "member-ref",
+      "target_name": "IsNullOrEmpty",
+      "target_declaring_type": "System.String"
+    },
+    {
+      "caller_token": "0x06000fb4",
+      "il_offset": 207,
+      "target_identity_sha256": "533e7dff92c198893ff22821f0a2996990e1dd4f165735739e2aa30c7421291f",
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.LoadVendors",
+      "opcode": "callvirt",
+      "target_token": "0x0a000859",
+      "target_kind": "member-ref",
+      "target_name": "Replace",
+      "target_declaring_type": "System.Text.RegularExpressions.Regex"
+    },
+    {
+      "caller_token": "0x06000fb4",
+      "il_offset": 212,
+      "target_identity_sha256": "70b4be3dbafff7ceaf71e86c1e3dd03ecca1671b25eb0f04061f573fbf5a81e4",
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.LoadVendors",
+      "opcode": "callvirt",
+      "target_token": "0x0a0003c0",
+      "target_kind": "member-ref",
+      "target_name": "ToUpperInvariant",
+      "target_declaring_type": "System.String"
+    },
+    {
+      "caller_token": "0x06000fb4",
+      "il_offset": 221,
+      "target_identity_sha256": "77cf0c3abfc8b6a89c0470109da7aa17ff95324d461708e0eeac097fe965441f",
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.LoadVendors",
+      "opcode": "callvirt",
+      "target_token": "0x0a0000e6",
+      "target_kind": "member-ref",
+      "target_name": "get_Length",
+      "target_declaring_type": "System.String"
+    },
+    {
+      "caller_token": "0x06000fb4",
+      "il_offset": 234,
+      "target_identity_sha256": null,
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.LoadVendors",
+      "opcode": "callvirt",
+      "target_token": "0x0a00085c",
+      "target_kind": "member-ref",
+      "target_name": "TryAdd",
+      "target_declaring_type": "System.Collections.Generic.Dictionary`2"
+    },
+    {
+      "caller_token": "0x06000fb4",
+      "il_offset": 241,
+      "target_identity_sha256": "052ad0a0bb12692fc0fe3fcb45de460cb996fdce58fba01b68149cac67705324",
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.LoadVendors",
+      "opcode": "callvirt",
+      "target_token": "0x0a000038",
+      "target_kind": "member-ref",
+      "target_name": "MoveNext",
+      "target_declaring_type": "System.Collections.IEnumerator"
+    },
+    {
+      "caller_token": "0x06000fb4",
+      "il_offset": 257,
+      "target_identity_sha256": "98e6cc4b0e746fddfcc91aa0b7cf5a39565d89cad96ff885d5af2f63c0cac69d",
+      "caller": "SpecterInsight.Server.Services.DataAugmentation.MacVendorDataTransformService.LoadVendors",
+      "opcode": "callvirt",
+      "target_token": "0x0a000037",
+      "target_kind": "member-ref",
+      "target_name": "Dispose",
+      "target_declaring_type": "System.IDisposable"
+    }
+  ],
+  "user_strings": [
+    {
+      "token": "0x700473c0",
+      "offset": 2376256,
+      "value": "{0}_vendor"
+    }
+  ]
+}

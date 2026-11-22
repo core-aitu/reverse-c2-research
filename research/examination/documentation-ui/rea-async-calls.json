@@ -1,0 +1,292 @@
+{
+  "evidence_id": "ev_b47f1fad6f521b65d95e3ab5d9e28d12d57dcfaad2dab37525e2b046720b5de0",
+  "subject": {
+    "name": "SpecterInsight.UI.dll",
+    "digest": {
+      "sha256": "b26312d15a0a8d2743ef50069874567ef768d64e1eed0a9e82a410976fbe10d6"
+    },
+    "local_path": "/home/deleteme/Desktop/SpecterInsight/client/SpecterInsight.UI.dll",
+    "format": "pe",
+    "architecture": "x86"
+  },
+  "provider": {
+    "id": "rea-analysis-view",
+    "name": "REA analysis view projection",
+    "version": "1"
+  },
+  "analysis_profile": null,
+  "predicate_type": "rea.analysis-view",
+  "operation": "inspect_analysis_view",
+  "parameters": {
+    "parent_evidence_id": "ev_901e511793151573b86756ce328464ae9559559549868fffd1f7db4fa49f554f",
+    "view": {
+      "kind": "managed-members",
+      "collection": "call_edges",
+      "offset": 0,
+      "limit": 32
+    }
+  },
+  "raw_result": null,
+  "normalized_result": {
+    "kind": "managed-members",
+    "view": {
+      "kind": "managed-members",
+      "collection": "call_edges",
+      "offset": 0,
+      "limit": 32
+    },
+    "page": {
+      "collection": "call_edges",
+      "rows": [
+        {
+          "caller_token": "0x06000919",
+          "il_offset": 21,
+          "target_identity_sha256": null,
+          "caller": "<<UpdateDocumentation>b__5_0>d.MoveNext",
+          "opcode": "newobj",
+          "target_token": "0x0600091b",
+          "target_kind": "method-def",
+          "target_name": ".ctor",
+          "target_declaring_type": "<>c__DisplayClass5_0"
+        },
+        {
+          "caller_token": "0x06000919",
+          "il_offset": 43,
+          "target_identity_sha256": null,
+          "caller": "<<UpdateDocumentation>b__5_0>d.MoveNext",
+          "opcode": "call",
+          "target_token": "0x06000027",
+          "target_kind": "method-def",
+          "target_name": "get_Client",
+          "target_declaring_type": "SpecterInsight.UI.Globals"
+        },
+        {
+          "caller_token": "0x06000919",
+          "il_offset": 58,
+          "target_identity_sha256": "023545fbe9f0faac2edf274fa898a34255dabba148481d12022902364bc68b96",
+          "caller": "<<UpdateDocumentation>b__5_0>d.MoveNext",
+          "opcode": "callvirt",
+          "target_token": "0x0a0008f5",
+          "target_kind": "member-ref",
+          "target_name": "DocumentationAsync",
+          "target_declaring_type": "SpecterInsight.ApiClient.SpecterInsightClientGenerated"
+        },
+        {
+          "caller_token": "0x06000919",
+          "il_offset": 63,
+          "target_identity_sha256": null,
+          "caller": "<<UpdateDocumentation>b__5_0>d.MoveNext",
+          "opcode": "callvirt",
+          "target_token": "0x0a0008f6",
+          "target_kind": "member-ref",
+          "target_name": "GetAwaiter",
+          "target_declaring_type": "System.Threading.Tasks.Task`1"
+        },
+        {
+          "caller_token": "0x06000919",
+          "il_offset": 72,
+          "target_identity_sha256": null,
+          "caller": "<<UpdateDocumentation>b__5_0>d.MoveNext",
+          "opcode": "call",
+          "target_token": "0x0a0008f7",
+          "target_kind": "member-ref",
+          "target_name": "get_IsCompleted",
+          "target_declaring_type": "System.Runtime.CompilerServices.TaskAwaiter`1"
+        },
+        {
+          "caller_token": "0x06000919",
+          "il_offset": 105,
+          "target_identity_sha256": "153995355db9f0ce746ba99eaf3bf5ca7d5c6bb34fa598284b8fceea87823549",
+          "caller": "<<UpdateDocumentation>b__5_0>d.MoveNext",
+          "opcode": "call",
+          "target_token": "0x2b0002d5",
+          "target_kind": "method-spec",
+          "target_name": "AwaitUnsafeOnCompleted",
+          "target_declaring_type": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder"
+        },
+        {
+          "caller_token": "0x06000919",
+          "il_offset": 146,
+          "target_identity_sha256": null,
+          "caller": "<<UpdateDocumentation>b__5_0>d.MoveNext",
+          "opcode": "call",
+          "target_token": "0x0a0008f8",
+          "target_kind": "member-ref",
+          "target_name": "GetResult",
+          "target_declaring_type": "System.Runtime.CompilerServices.TaskAwaiter`1"
+        },
+        {
+          "caller_token": "0x06000919",
+          "il_offset": 159,
+          "target_identity_sha256": "25fcd754a984def1030cd0872483d16c3b0f8fe130ef0b0c8b518102b149745a",
+          "caller": "<<UpdateDocumentation>b__5_0>d.MoveNext",
+          "opcode": "call",
+          "target_token": "0x2b0002d6",
+          "target_kind": "method-spec",
+          "target_name": "ToArray",
+          "target_declaring_type": "System.Linq.Enumerable"
+        },
+        {
+          "caller_token": "0x06000919",
+          "il_offset": 169,
+          "target_identity_sha256": "38f92714ae03cc6582efe1f12c0a0b25e83933399c58f6db44f2998466dc74fe",
+          "caller": "<<UpdateDocumentation>b__5_0>d.MoveNext",
+          "opcode": "call",
+          "target_token": "0x0a000007",
+          "target_kind": "member-ref",
+          "target_name": "get_UIThread",
+          "target_declaring_type": "Avalonia.Threading.Dispatcher"
+        },
+        {
+          "caller_token": "0x06000919",
+          "il_offset": 180,
+          "target_identity_sha256": null,
+          "caller": "<<UpdateDocumentation>b__5_0>d.MoveNext",
+          "opcode": "ldftn",
+          "target_token": "0x0600091c",
+          "target_kind": "method-def",
+          "target_name": "<UpdateDocumentation>b__1",
+          "target_declaring_type": "<>c__DisplayClass5_0"
+        },
+        {
+          "caller_token": "0x06000919",
+          "il_offset": 186,
+          "target_identity_sha256": "dbc7e2abb1e9e4334b235817430bc25faf3c79d4455244ad59875aa45f087190",
+          "caller": "<<UpdateDocumentation>b__5_0>d.MoveNext",
+          "opcode": "newobj",
+          "target_token": "0x0a0001f5",
+          "target_kind": "member-ref",
+          "target_name": ".ctor",
+          "target_declaring_type": "System.Action"
+        },
+        {
+          "caller_token": "0x06000919",
+          "il_offset": 191,
+          "target_identity_sha256": "5b0e5e1a7c2f02d3bf4e02f6fc3ccdb53185296790430f8ecbba066d9829768b",
+          "caller": "<<UpdateDocumentation>b__5_0>d.MoveNext",
+          "opcode": "callvirt",
+          "target_token": "0x0a00049f",
+          "target_kind": "member-ref",
+          "target_name": "InvokeAsync",
+          "target_declaring_type": "Avalonia.Threading.Dispatcher"
+        },
+        {
+          "caller_token": "0x06000919",
+          "il_offset": 206,
+          "target_identity_sha256": null,
+          "caller": "<<UpdateDocumentation>b__5_0>d.MoveNext",
+          "opcode": "call",
+          "target_token": "0x0600159c",
+          "target_kind": "method-def",
+          "target_name": "NotifyAll",
+          "target_declaring_type": "SpecterInsight.UI.Services.NotificationService"
+        },
+        {
+          "caller_token": "0x06000919",
+          "il_offset": 233,
+          "target_identity_sha256": "93bbf72a4a3f71f2701f61003005ff0f66b0d2799560f94e0ccb3c0b89b3b5da",
+          "caller": "<<UpdateDocumentation>b__5_0>d.MoveNext",
+          "opcode": "call",
+          "target_token": "0x0a000058",
+          "target_kind": "member-ref",
+          "target_name": "SetException",
+          "target_declaring_type": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder"
+        },
+        {
+          "caller_token": "0x06000919",
+          "il_offset": 254,
+          "target_identity_sha256": "07f88d0773080c2ac1531e4b5b910b9d65710f8477e164a32f2e0c8e1eaa1a72",
+          "caller": "<<UpdateDocumentation>b__5_0>d.MoveNext",
+          "opcode": "call",
+          "target_token": "0x0a000059",
+          "target_kind": "member-ref",
+          "target_name": "SetResult",
+          "target_declaring_type": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder"
+        },
+        {
+          "caller_token": "0x0600091a",
+          "il_offset": 7,
+          "target_identity_sha256": "fd60fc8b51dca2efbcb5de1c1385f0faade67dfc9e094a353920d3564feea88a",
+          "caller": "<<UpdateDocumentation>b__5_0>d.SetStateMachine",
+          "opcode": "call",
+          "target_token": "0x0a00005a",
+          "target_kind": "member-ref",
+          "target_name": "SetStateMachine",
+          "target_declaring_type": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder"
+        }
+      ]
+    },
+    "parent_evidence_id": "ev_901e511793151573b86756ce328464ae9559559549868fffd1f7db4fa49f554f",
+    "parent_operation": "inspect_managed_members",
+    "parent_digest": "901e511793151573b86756ce328464ae9559559549868fffd1f7db4fa49f554f",
+    "view_digest": "9125f49ed5936da1c9ae4418de972feb261a81b44b4f822eb2c554030a08eca3",
+    "artifact": {
+      "path": "/home/deleteme/Desktop/SpecterInsight/client/SpecterInsight.UI.dll",
+      "sha256": "b26312d15a0a8d2743ef50069874567ef768d64e1eed0a9e82a410976fbe10d6"
+    },
+    "coverage": {
+      "status": "page",
+      "examined": 16,
+      "total": 16,
+      "next_offset": null,
+      "exhausted": true
+    },
+    "limitations": [
+      "CIL instruction anchors are decoded from file-backed method bodies only; no target assembly is loaded or executed.",
+      "Exported types are reported from ExportedType rows as declared; forwarded types are not resolved in their implementing assemblies.",
+      "Member signatures decode ECMA-335 primitive, class, valuetype, generic instantiation, generic variable, pointer, byref, single-dimension and general array, function pointer including VARARG sentinels, custom modifier, and typed reference forms; class and valuetype operands keep their encoded TypeDefOrRefOrSpec values.",
+      "Metadata tokens are build-local coordinates and are only meaningful with the reported artifact SHA-256 and MVID.",
+      "Types, fields, methods, call edges, field accesses, and user strings cover only the selected declaring types; coverage describes that selection. Edge targets outside it keep their names but are not described.",
+      "User strings are the #US literals loaded by ldstr in the inspected method bodies, with their own coverage; instruction anchors and normalized CIL digests keep their build-local tokens."
+    ],
+    "unknowns": [
+      "Collection counts and pages cover producer-returned rows; member completeness remains the original coverage, not an absence claim about unreturned rows.",
+      "Exported types and member references cover the whole assembly; the other collections cover only the selected declaring types.",
+      "Metadata tokens are build-local coordinates bound to the recorded artifact SHA-256 and module MVID; this view does not load or execute the assembly."
+    ],
+    "signature_resolution": "type-names-v1",
+    "nesting_read": true,
+    "identity_scope": {
+      "token_identity": "build-local",
+      "requires_artifact_sha256": "b26312d15a0a8d2743ef50069874567ef768d64e1eed0a9e82a410976fbe10d6",
+      "requires_mvid": "ec17b4c7-9015-4373-9b10-8081bc59e9a9"
+    },
+    "selection": {
+      "type_names": [
+        "<<UpdateDocumentation>b__5_0>d"
+      ],
+      "unmatched_type_names": []
+    },
+    "method_rows": {
+      "offset": 0,
+      "count": 6642,
+      "total": 6642
+    },
+    "source_metadata_status": "complete",
+    "source_coverage": {
+      "state": "complete",
+      "issues": []
+    }
+  },
+  "confidence": "derived",
+  "authority": "shipped-artifact",
+  "environment": null,
+  "limitations": [
+    "CIL instruction anchors are decoded from file-backed method bodies only; no target assembly is loaded or executed.",
+    "Exported types are reported from ExportedType rows as declared; forwarded types are not resolved in their implementing assemblies.",
+    "Member signatures decode ECMA-335 primitive, class, valuetype, generic instantiation, generic variable, pointer, byref, single-dimension and general array, function pointer including VARARG sentinels, custom modifier, and typed reference forms; class and valuetype operands keep their encoded TypeDefOrRefOrSpec values.",
+    "Metadata tokens are build-local coordinates and are only meaningful with the reported artifact SHA-256 and MVID.",
+    "Types, fields, methods, call edges, field accesses, and user strings cover only the selected declaring types; coverage describes that selection. Edge targets outside it keep their names but are not described.",
+    "User strings are the #US literals loaded by ldstr in the inspected method bodies, with their own coverage; instruction anchors and normalized CIL digests keep their build-local tokens."
+  ],
+  "relationship_coverage": null,
+  "locations": [
+    {
+      "kind": "artifact-path",
+      "path": "/home/deleteme/Desktop/SpecterInsight/client/SpecterInsight.UI.dll"
+    }
+  ],
+  "evidence_links": [
+    "ev_901e511793151573b86756ce328464ae9559559549868fffd1f7db4fa49f554f"
+  ]
+}

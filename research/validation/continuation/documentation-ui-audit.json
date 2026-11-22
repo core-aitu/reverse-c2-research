@@ -1,0 +1,66 @@
+{
+  "checked_utc": "2026-11-17T19:47:39.247005+00:00",
+  "scope": "Retained record integrity and local archive availability. No new runtime experiment.",
+  "observations": 33,
+  "findings": 37,
+  "finding_status_counts": {
+    "Verified": 33,
+    "Contradicted": 1,
+    "Inferred": 1,
+    "Unverified": 2
+  },
+  "distinct_referenced_record_paths": 72,
+  "method_sources": {
+    "analysis/method-evidence.json": {
+      "individual_il_records": 56,
+      "sha256": "c2efee4b4205691904b1f165dbb7df2a11129760ee74144e25147c228ce7ebf5"
+    },
+    "validation/continuation/diagnostic-variants.json": {
+      "individual_il_records": 65,
+      "sha256": "d84f5ab707110ceafb7bedc8d0b474d554e9d82b53261234d8cebee6b53c3029"
+    },
+    "analysis/semantic-cards/documentation-ui.json": {
+      "individual_cards": 4,
+      "additional_individual_il_records": 3,
+      "sha256": "ce759629e02f674442c773852f4b818b6e5331ef0444c398d98bacd4e61f4af2"
+    }
+  },
+  "prior_individual_il_records": 121,
+  "distinct_individual_il_records": 124,
+  "complete_semantic_card_count": 3,
+  "partial_semantic_card_count": 1,
+  "semantic_card_limit": "Reviewed local method semantics and declared dependency/error limits. No additional runtime scenarios.",
+  "archives": [
+    {
+      "path": "local-archive/specter-study.tar.zst",
+      "available": true,
+      "expected_sha256": "6abd802cb515008db799dda817892ac4e8d995760e8f4a8856b4b4eb4ad43f67",
+      "actual_sha256": "6abd802cb515008db799dda817892ac4e8d995760e8f4a8856b4b4eb4ad43f67",
+      "matches": true
+    },
+    {
+      "path": "local-archive/continuation/xorg-x11-server-Xvfb-21.1.25-2.fc44.x86_64.rpm",
+      "available": true,
+      "expected_sha256": "b25c6d7b27c711dd8fa8cc435d970663560b3ea771a65790f71ec45afaa0d4dc",
+      "actual_sha256": "b25c6d7b27c711dd8fa8cc435d970663560b3ea771a65790f71ec45afaa0d4dc",
+      "matches": true
+    }
+  ],
+  "historical_temp_workspace_available": false,
+  "source_sha256": {
+    "evidence/observations.jsonl": "9f4e2874b829b315ba6a7b122469464e8e3bde263c39bdddeb2a1d5fefeea6e4",
+    "validation/findings.jsonl": "c4a71a0311fae31dadc43784de08110341a0ef6f65da19e1dda776a34f604cfe",
+    "validation/continuation/matrix.json": "233dced31d841cbc4a4d8b8f6769bbc10630ed961958d7aa13afa57c7b7e3896",
+    "validation/continuation/verify.py": "97b11a564c6c3640edbda81dbc5d5d2d7859284f799888aa3627a3cfb6079d92",
+    "validation/continuation/audit_evidence.py": "0ef3eebb3167dca94e66e48b013fd8d62bc8b822b58ae140b5955b003f1c398a",
+    "validation/continuation/test_retained_evidence.py": "1d9790200d86ebdc914d36ab780ec0387b3f078b34e1bc2fdf93f3ecc8968e29",
+    "validation/continuation/semantic_cards.py": "bcd76e1acf8327f44dfcbdf217967531c354c8d8b3ba736711af4cc0db94def2"
+  },
+  "errors": [],
+  "limits": [
+    "Existing record paths and OBS references do not prove that claims are supported by their content.",
+    "Archive hashes do not establish fresh buildability or execution equivalence.",
+    "Distribution-wide hashes and artifact IDs are not revalidated by this audit.",
+    "Historical runtime logs are retained evidence, not newly executed scenarios."
+  ]
+}

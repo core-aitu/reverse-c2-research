@@ -18,3 +18,7 @@
 **Методика.** Представления фиксируют вопросы исследователей, границы и основания связей с учётом ISO/IEC/IEEE 42010:2022. Сбор, извлечение, анализ и отчёт разделены по рекомендациям NIST SP 800-86. Для сохранения происхождения и повторяемости использованы рекомендации SWGDE. Структура research/, идентификаторы и формат JSONL — соглашения этого исследования. Для текущего корпуса не создавался SARIF-экспорт. [ISO 42010](https://www.iso.org/standard/74393.html) · [NIST SP 800-86](https://csrc.nist.gov/pubs/sp/800/86/final) · [SWGDE Collection](https://www.swgde.org/documents/published-complete-listing/18-f-002-2-0/) · [SWGDE Examinations](https://www.swgde.org/documents/published-complete-listing/18-f-001-2/) · [OASIS SARIF 2.1.0](https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html)
 
 [Последние результаты](validation/continuation/results.md) · [Задачи и статус](validation/continuation/backlog.md) · [Матрица покрытия](validation/continuation/matrix.json)
+
+[Аудит сохранности и точности покрытия от 18 ноября](reports/evidence-audit.md)
+
+[Индивидуальные карточки обновления документации UI](reports/documentation-ui-semantics.md)

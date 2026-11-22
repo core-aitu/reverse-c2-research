@@ -1,0 +1,38 @@
+{
+  "parent_evidence_id": "ev_45289c5594638871179fdbc83c4591b11d7310873e90640d55d73b38da08cbe7",
+  "call_edges": [
+    {
+      "caller_token": "0x0600091c",
+      "il_offset": 12,
+      "target_identity_sha256": null,
+      "caller": "<>c__DisplayClass5_0.<UpdateDocumentation>b__1",
+      "opcode": "call",
+      "target_token": "0x06000915",
+      "target_kind": "method-def",
+      "target_name": "set_Documents",
+      "target_declaring_type": "SpecterInsight.UI.ViewModels.DocumentationViewModel"
+    }
+  ],
+  "field_accesses": [
+    {
+      "method_token": "0x0600091c",
+      "il_offset": 1,
+      "target_identity_sha256": "137ddc07e0964e3ef03a34e4b10a9abf5c50943ff2f11fc569ed58884bea877a",
+      "method": "<>c__DisplayClass5_0.<UpdateDocumentation>b__1",
+      "opcode": "ldfld",
+      "field_token": "0x040007a3",
+      "field_name": "<>4__this",
+      "field_declaring_type": "<>c__DisplayClass5_0"
+    },
+    {
+      "method_token": "0x0600091c",
+      "il_offset": 7,
+      "target_identity_sha256": "739ea4543e3c31ff2af46a176b43c5b7aa2848d38d094015b883e5993fc8e23f",
+      "method": "<>c__DisplayClass5_0.<UpdateDocumentation>b__1",
+      "opcode": "ldfld",
+      "field_token": "0x040007a2",
+      "field_name": "docs",
+      "field_declaring_type": "<>c__DisplayClass5_0"
+    }
+  ]
+}

@@ -1,0 +1,470 @@
+{
+  "pdbCount": 378,
+  "portableCount": 362,
+  "portableUniqueIds": 347,
+  "symbolsPath": "server/SpecterInsight.pdb",
+  "symbolSha256": "3fc9e470652342d34a5a0f5cc4c75d25703e91d2d65e58ffdc9e2a7c4451b174",
+  "symbolGuid": "02f203d1-8a24-4d3d-826b-d3cbacbc2996",
+  "symbolStamp": 2629479585,
+  "symbolNormalizedSha256": "d103f202248a3dcd026bd3cbacbc2996a1acba9c9e4e9e3a5bc9079407877712",
+  "sourcePath": "templates/source/SpecterInsight/Logging/LogEntry.cs",
+  "sourceSha256": "15612b3de852685f555ab76398d3a16769fb5958ec988be6ff32167e04f9bc08",
+  "documentRow": 44,
+  "documentChecksumAlgorithm": "8829d00f-11b8-4213-878b-770e8597ac16",
+  "documentChecksum": "15612b3de852685f555ab76398d3a16769fb5958ec988be6ff32167e04f9bc08",
+  "sourceEmbeddedRecord": false,
+  "comparisons": [
+    {
+      "token": "0x06000114",
+      "name": "get_System",
+      "ilBytes": 7,
+      "ilSha256": "49115073943631b87ba28ab69ddb66cb18754518d0f0553b2cd5a2e0c92db043",
+      "hiddenCount": 0,
+      "visible": [
+        {
+          "il": 0,
+          "startLine": 7,
+          "startColumn": 13,
+          "endLine": 7,
+          "endColumn": 17
+        }
+      ]
+    },
+    {
+      "token": "0x06000115",
+      "name": "set_System",
+      "ilBytes": 8,
+      "ilSha256": "53fc6a9cfc13f248cc7181a9e3ca24324030ee64dace1b542e99891db39a8ad6",
+      "hiddenCount": 0,
+      "visible": [
+        {
+          "il": 0,
+          "startLine": 8,
+          "startColumn": 13,
+          "endLine": 8,
+          "endColumn": 17
+        }
+      ]
+    },
+    {
+      "token": "0x06000116",
+      "name": "get_Message",
+      "ilBytes": 7,
+      "ilSha256": "0661e376d301025b1b7ffa969b47f2484238d07a5a6ea5ac46795d1b6d408cf5",
+      "hiddenCount": 0,
+      "visible": [
+        {
+          "il": 0,
+          "startLine": 12,
+          "startColumn": 13,
+          "endLine": 12,
+          "endColumn": 17
+        }
+      ]
+    },
+    {
+      "token": "0x06000117",
+      "name": "set_Message",
+      "ilBytes": 8,
+      "ilSha256": "1393ad30bdaffe64fa3d00a5efc14177d9e7aba5d46f1910f4441f940acdab2d",
+      "hiddenCount": 0,
+      "visible": [
+        {
+          "il": 0,
+          "startLine": 13,
+          "startColumn": 13,
+          "endLine": 13,
+          "endColumn": 17
+        }
+      ]
+    },
+    {
+      "token": "0x06000118",
+      "name": "get_TimeStamp",
+      "ilBytes": 7,
+      "ilSha256": "affcfa19196b335e7d0bf7aa032e43875e9900ec9fa12ebff8291ac0e7ac64d6",
+      "hiddenCount": 0,
+      "visible": [
+        {
+          "il": 0,
+          "startLine": 17,
+          "startColumn": 13,
+          "endLine": 17,
+          "endColumn": 17
+        }
+      ]
+    },
+    {
+      "token": "0x06000119",
+      "name": "set_TimeStamp",
+      "ilBytes": 8,
+      "ilSha256": "8a7df650581d478c102792be3b561f4c7bd7c050598071f2c2043ef7bcdbd1ca",
+      "hiddenCount": 0,
+      "visible": [
+        {
+          "il": 0,
+          "startLine": 18,
+          "startColumn": 13,
+          "endLine": 18,
+          "endColumn": 17
+        }
+      ]
+    },
+    {
+      "token": "0x0600011a",
+      "name": "get_Count",
+      "ilBytes": 7,
+      "ilSha256": "bc3e6626f215d7b453a89c5d15ddd3b52a559f59481939c63eacc22488bca516",
+      "hiddenCount": 0,
+      "visible": [
+        {
+          "il": 0,
+          "startLine": 22,
+          "startColumn": 13,
+          "endLine": 22,
+          "endColumn": 17
+        }
+      ]
+    },
+    {
+      "token": "0x0600011b",
+      "name": "set_Count",
+      "ilBytes": 8,
+      "ilSha256": "d61a412443cb74a5d28d54529530b94ec86e33a2959a15ca107a24d9ddc8bb6d",
+      "hiddenCount": 0,
+      "visible": [
+        {
+          "il": 0,
+          "startLine": 23,
+          "startColumn": 13,
+          "endLine": 23,
+          "endColumn": 17
+        }
+      ]
+    },
+    {
+      "token": "0x0600011c",
+      "name": ".ctor",
+      "ilBytes": 14,
+      "ilSha256": "13cd8e06cfd6fb78ad5446d608672cb0df09db8d29a3594ef7ef364ea5f0e888",
+      "hiddenCount": 0,
+      "visible": [
+        {
+          "il": 0,
+          "startLine": 24,
+          "startColumn": 13,
+          "endLine": 24,
+          "endColumn": 14
+        },
+        {
+          "il": 7,
+          "startLine": 26,
+          "startColumn": 9,
+          "endLine": 26,
+          "endColumn": 26
+        },
+        {
+          "il": 13,
+          "startLine": 26,
+          "startColumn": 29,
+          "endLine": 26,
+          "endColumn": 30
+        }
+      ]
+    },
+    {
+      "token": "0x0600011d",
+      "name": ".ctor",
+      "ilBytes": 43,
+      "ilSha256": "c7fada985825af11db81bf77d236af18dc479730b68f708d6f50b63084dcfdcf",
+      "hiddenCount": 0,
+      "visible": [
+        {
+          "il": 0,
+          "startLine": 24,
+          "startColumn": 13,
+          "endLine": 24,
+          "endColumn": 14
+        },
+        {
+          "il": 7,
+          "startLine": 28,
+          "startColumn": 9,
+          "endLine": 28,
+          "endColumn": 40
+        },
+        {
+          "il": 13,
+          "startLine": 29,
+          "startColumn": 13,
+          "endLine": 29,
+          "endColumn": 36
+        },
+        {
+          "il": 20,
+          "startLine": 30,
+          "startColumn": 13,
+          "endLine": 30,
+          "endColumn": 40
+        },
+        {
+          "il": 31,
+          "startLine": 31,
+          "startColumn": 13,
+          "endLine": 31,
+          "endColumn": 46
+        },
+        {
+          "il": 42,
+          "startLine": 32,
+          "startColumn": 9,
+          "endLine": 32,
+          "endColumn": 10
+        }
+      ]
+    },
+    {
+      "token": "0x0600011e",
+      "name": ".ctor",
+      "ilBytes": 39,
+      "ilSha256": "d44076da2abae93aa62abd115245579bfd5bd9dc5a436e63c282685a5ad05f08",
+      "hiddenCount": 0,
+      "visible": [
+        {
+          "il": 0,
+          "startLine": 24,
+          "startColumn": 13,
+          "endLine": 24,
+          "endColumn": 14
+        },
+        {
+          "il": 7,
+          "startLine": 34,
+          "startColumn": 9,
+          "endLine": 34,
+          "endColumn": 60
+        },
+        {
+          "il": 13,
+          "startLine": 35,
+          "startColumn": 13,
+          "endLine": 35,
+          "endColumn": 36
+        },
+        {
+          "il": 20,
+          "startLine": 36,
+          "startColumn": 13,
+          "endLine": 36,
+          "endColumn": 40
+        },
+        {
+          "il": 27,
+          "startLine": 37,
+          "startColumn": 13,
+          "endLine": 37,
+          "endColumn": 40
+        },
+        {
+          "il": 38,
+          "startLine": 38,
+          "startColumn": 9,
+          "endLine": 38,
+          "endColumn": 10
+        }
+      ]
+    },
+    {
+      "token": "0x0600011f",
+      "name": ".ctor",
+      "ilBytes": 39,
+      "ilSha256": "039e7158688e1144334d70d0b483755d27d14ea5e0e113c2d1d1603f52921af4",
+      "hiddenCount": 0,
+      "visible": [
+        {
+          "il": 0,
+          "startLine": 24,
+          "startColumn": 13,
+          "endLine": 24,
+          "endColumn": 14
+        },
+        {
+          "il": 7,
+          "startLine": 40,
+          "startColumn": 9,
+          "endLine": 40,
+          "endColumn": 55
+        },
+        {
+          "il": 13,
+          "startLine": 41,
+          "startColumn": 13,
+          "endLine": 41,
+          "endColumn": 34
+        },
+        {
+          "il": 20,
+          "startLine": 42,
+          "startColumn": 13,
+          "endLine": 42,
+          "endColumn": 36
+        },
+        {
+          "il": 27,
+          "startLine": 43,
+          "startColumn": 13,
+          "endLine": 43,
+          "endColumn": 46
+        },
+        {
+          "il": 38,
+          "startLine": 44,
+          "startColumn": 9,
+          "endLine": 44,
+          "endColumn": 10
+        }
+      ]
+    },
+    {
+      "token": "0x06000120",
+      "name": ".ctor",
+      "ilBytes": 35,
+      "ilSha256": "aa6a92f647582debba439a373ee237255d5eb25205d7f0bdd5aa02f8a7c3cb04",
+      "hiddenCount": 0,
+      "visible": [
+        {
+          "il": 0,
+          "startLine": 24,
+          "startColumn": 13,
+          "endLine": 24,
+          "endColumn": 14
+        },
+        {
+          "il": 7,
+          "startLine": 46,
+          "startColumn": 9,
+          "endLine": 46,
+          "endColumn": 75
+        },
+        {
+          "il": 13,
+          "startLine": 47,
+          "startColumn": 13,
+          "endLine": 47,
+          "endColumn": 34
+        },
+        {
+          "il": 20,
+          "startLine": 48,
+          "startColumn": 13,
+          "endLine": 48,
+          "endColumn": 36
+        },
+        {
+          "il": 27,
+          "startLine": 49,
+          "startColumn": 13,
+          "endLine": 49,
+          "endColumn": 40
+        },
+        {
+          "il": 34,
+          "startLine": 50,
+          "startColumn": 9,
+          "endLine": 50,
+          "endColumn": 10
+        }
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "paths": [
+        "server/SpecterInsight.exe",
+        "templates/any/specter-dotnet-exe.exe"
+      ],
+      "sha256": "d5e7e80c6e67939caa244f9f1b8736cafb4d1e5e906ee2668c34387c8067569d",
+      "mvid": "e10959e7-1725-4dc7-9ff7-d7dd25e9f0e8",
+      "codeviewGuid": "02f203d1-8a24-4d3d-826b-d3cbacbc2996",
+      "codeviewStamp": 2629479585,
+      "age": 1,
+      "pdbLeaf": "SpecterInsight.pdb",
+      "portable": true,
+      "embeddedPortablePdb": false,
+      "pdbChecksumExpected": "d103f202248a3dcd026bd3cbacbc2996a1acba9c9e4e9e3a5bc9079407877712",
+      "suppliedSymbolIdMatches": true,
+      "suppliedSymbolChecksumMatches": true,
+      "matchingPortableFiles": [
+        "server/SpecterInsight.pdb"
+      ]
+    },
+    {
+      "paths": [
+        "templates/any/SpecterInsight.exe"
+      ],
+      "sha256": "44b88633520b501f999290c462581a5e35ee3eadf507c00caf9f828778701595",
+      "mvid": "aace5ac7-76e1-468b-baaa-2904a1512a2c",
+      "codeviewGuid": "3386373a-cf8e-4fe8-895b-328e4a2530ed",
+      "codeviewStamp": 3788972177,
+      "age": 1,
+      "pdbLeaf": "SpecterInsight.pdb",
+      "portable": true,
+      "embeddedPortablePdb": false,
+      "pdbChecksumExpected": "3a3786338ecfe8ff895b328e4a2530ed9120d7e186e1500fb5f0269e3aaf5754",
+      "suppliedSymbolIdMatches": false,
+      "suppliedSymbolChecksumMatches": false,
+      "matchingPortableFiles": []
+    },
+    {
+      "paths": [
+        "templates/any/specter-dotnet-exe.exe.bak"
+      ],
+      "sha256": "85fb4c9ac4ee295efbb907d37d5a066726bda8c35a8ddd67890325680d540f95",
+      "mvid": "305c9607-ab93-4a7f-a38f-38c745dfbf0b",
+      "codeviewGuid": "e5d0c809-883c-478b-8ed0-a2866eb9aee1",
+      "codeviewStamp": 2170107207,
+      "age": 1,
+      "pdbLeaf": "SpecterInsight.pdb",
+      "portable": true,
+      "embeddedPortablePdb": false,
+      "pdbChecksumExpected": "09c8d0e53c888b97ced0a2866eb9aee1473559016677f1f4fcded28f94b208f5",
+      "suppliedSymbolIdMatches": false,
+      "suppliedSymbolChecksumMatches": false,
+      "matchingPortableFiles": []
+    },
+    {
+      "paths": [
+        "templates/any/specter-dotnet-exe.exe.bak2"
+      ],
+      "sha256": "3fff31bed46cb2957c89b1cd662735877c0b173ada977b101c88939020a833f6",
+      "mvid": "62b0d9b6-0f41-489c-a8cc-18284bb5cf90",
+      "codeviewGuid": "e3113cb4-a0a3-4f13-bc35-60d968a744c2",
+      "codeviewStamp": 4002587931,
+      "age": 1,
+      "pdbLeaf": "SpecterInsight.pdb",
+      "portable": true,
+      "embeddedPortablePdb": false,
+      "pdbChecksumExpected": "b43c11e3a3a013cfbc3560d968a744c21ba592ee0b9b4eee4d4b6ac7f4162b2d",
+      "suppliedSymbolIdMatches": false,
+      "suppliedSymbolChecksumMatches": false,
+      "matchingPortableFiles": []
+    },
+    {
+      "paths": [
+        "templates/any/specter-dotnet-exe.exe.bak3"
+      ],
+      "sha256": "0c8aaa733148ecffe88457b24b4e474113a9e2eba06a4c1e30c5ab7ba920a9d4",
+      "mvid": "75a77f22-8006-46e6-90f7-300784a901ad",
+      "codeviewGuid": "84d315a9-d3f2-4f36-b7b6-5bd6870053c1",
+      "codeviewStamp": 3445325096,
+      "age": 1,
+      "pdbLeaf": "SpecterInsight.pdb",
+      "portable": true,
+      "embeddedPortablePdb": false,
+      "pdbChecksumExpected": "a915d384f2d3366fb7b65bd6870053c1287d5bcd5d37465d3a3c56b9b503e648",
+      "suppliedSymbolIdMatches": false,
+      "suppliedSymbolChecksumMatches": false,
+      "matchingPortableFiles": []
+    }
+  ]
+}

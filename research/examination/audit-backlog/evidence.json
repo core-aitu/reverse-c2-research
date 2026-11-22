@@ -1,0 +1,612 @@
+{
+  "images": {
+    "client/SpecterInsight.UI.dll": {
+      "sha256": "b26312d15a0a8d2743ef50069874567ef768d64e1eed0a9e82a410976fbe10d6",
+      "mvid": "ec17b4c7-9015-4373-9b10-8081bc59e9a9",
+      "selected_methods": [
+        {
+          "method": "SpecterInsight.UI.ViewModels.EventLogViewModel::.ctor",
+          "token": "0x06000936",
+          "il_sha256": "b59ac44b4a87d5c3e2c17c20350c65fb32071f48b61f60d81d189c91fdaacb07",
+          "eh_count": 0,
+          "sites": [
+            {
+              "il_offset": 568,
+              "op": "ldftn",
+              "operand_token": "0x0600093e",
+              "operand": "SpecterInsight.UI.ViewModels.EventLogViewModel::OnConnected"
+            },
+            {
+              "il_offset": 579,
+              "op": "call",
+              "operand_token": "0x06000021",
+              "operand": "SpecterInsight.UI.Globals::add_Connected"
+            },
+            {
+              "il_offset": 585,
+              "op": "ldftn",
+              "operand_token": "0x0600093f",
+              "operand": "SpecterInsight.UI.ViewModels.EventLogViewModel::OnDisconnected"
+            },
+            {
+              "il_offset": 596,
+              "op": "call",
+              "operand_token": "0x06000025",
+              "operand": "SpecterInsight.UI.Globals::add_Disconnected"
+            }
+          ]
+        },
+        {
+          "method": "SpecterInsight.UI.Globals+<Connect>d__16::MoveNext",
+          "token": "0x06000039",
+          "il_sha256": "9f7eb5f1c4c17847091439eef3541a14b1a80efa9e304481bf81d2f18ee1a820",
+          "eh_count": 2,
+          "sites": [
+            {
+              "il_offset": 258,
+              "op": "stsfld",
+              "operand_token": "0x04000019",
+              "operand": "_client"
+            },
+            {
+              "il_offset": 293,
+              "op": "call",
+              "operand_token": "0x06000030",
+              "operand": "SpecterInsight.UI.Globals::RaiseConnected"
+            }
+          ]
+        },
+        {
+          "method": "SpecterInsight.UI.Globals+<RaiseConnected>d__21::MoveNext",
+          "token": "0x06000041",
+          "il_sha256": "e410fbc7dff1eb2c7c7138affb53ebe989dfe4828e0877c61249b9d8e5e473ce",
+          "eh_count": 1,
+          "sites": [
+            {
+              "il_offset": 10,
+              "op": "ldsfld",
+              "operand_token": "0x04000011",
+              "operand": "Connected"
+            },
+            {
+              "il_offset": 23,
+              "op": "ldfld",
+              "operand_token": "0x04000039",
+              "operand": "client"
+            },
+            {
+              "il_offset": 28,
+              "op": "callvirt",
+              "operand_token": "0x06000016",
+              "operand": "SpecterInsight.UI.SpecterClientEventHandler::Invoke"
+            }
+          ]
+        },
+        {
+          "method": "SpecterInsight.UI.ViewModels.EventLogViewModel+<OnConnected>d__49::MoveNext",
+          "token": "0x06000950",
+          "il_sha256": "6bd44aac6c506bd819ea5b0ed991d4965cf0056a444a8e1a07490a373a4b0e65",
+          "eh_count": 2,
+          "sites": [
+            {
+              "il_offset": 18,
+              "op": "ldc.i4.1"
+            },
+            {
+              "il_offset": 19,
+              "op": "call",
+              "operand_token": "0x06000939",
+              "operand": "SpecterInsight.UI.ViewModels.EventLogViewModel::Refresh"
+            },
+            {
+              "il_offset": 104,
+              "op": "call",
+              "operand_token": "0x0a000050",
+              "operand": "System.Runtime.CompilerServices.TaskAwaiter::GetResult"
+            },
+            {
+              "il_offset": 115,
+              "op": "ldc.i4.5"
+            },
+            {
+              "il_offset": 117,
+              "op": "call",
+              "operand_token": "0x0a000355",
+              "operand": "System.TimeSpan::FromSeconds"
+            },
+            {
+              "il_offset": 122,
+              "op": "callvirt",
+              "operand_token": "0x0a000413",
+              "operand": "Avalonia.Threading.DispatcherTimer::set_Interval"
+            },
+            {
+              "il_offset": 133,
+              "op": "callvirt",
+              "operand_token": "0x0a00041c",
+              "operand": "Avalonia.Threading.DispatcherTimer::Start"
+            },
+            {
+              "il_offset": 145,
+              "op": "ldftn",
+              "operand_token": "0x06000940",
+              "operand": "SpecterInsight.UI.ViewModels.EventLogViewModel::OnEventNotification"
+            },
+            {
+              "il_offset": 156,
+              "op": "callvirt",
+              "operand_token": "0x0a000921",
+              "operand": "SpecterInsight.ApiClient.SpecterInsightClient::OnEventNotification"
+            },
+            {
+              "il_offset": 161,
+              "op": "pop"
+            },
+            {
+              "il_offset": 164,
+              "op": "call",
+              "operand_token": "0x0600159c",
+              "operand": "SpecterInsight.UI.Services.NotificationService::NotifyAll"
+            }
+          ]
+        },
+        {
+          "method": "SpecterInsight.UI.ViewModels.EventLogViewModel+<OnEventNotification>d__51::MoveNext",
+          "token": "0x06000954",
+          "il_sha256": "85242996648699841b9cac99113726299e771f5e40b64d580cb6d7e02ac12b8e",
+          "eh_count": 1,
+          "sites": [
+            {
+              "il_offset": 37,
+              "op": "call",
+              "operand_token": "0x0a000007",
+              "operand": "Avalonia.Threading.Dispatcher::get_UIThread"
+            },
+            {
+              "il_offset": 42,
+              "op": "callvirt",
+              "operand_token": "0x0a000386",
+              "operand": "Avalonia.Threading.Dispatcher::CheckAccess"
+            },
+            {
+              "il_offset": 47,
+              "op": "brtrue.s",
+              "operand": 74
+            },
+            {
+              "il_offset": 55,
+              "op": "ldftn",
+              "operand_token": "0x0600094d",
+              "operand": "SpecterInsight.UI.ViewModels.EventLogViewModel+<>c__DisplayClass51_0::<OnEventNotification>b__0"
+            },
+            {
+              "il_offset": 66,
+              "op": "callvirt",
+              "operand_token": "0x0a000416",
+              "operand": "Avalonia.Threading.Dispatcher::InvokeAsync"
+            },
+            {
+              "il_offset": 71,
+              "op": "pop"
+            },
+            {
+              "il_offset": 72,
+              "op": "leave.s",
+              "operand": 166
+            },
+            {
+              "il_offset": 75,
+              "op": "ldfld",
+              "operand_token": "0x040007b0",
+              "operand": "_workingSet"
+            },
+            {
+              "il_offset": 86,
+              "op": "callvirt",
+              "operand_token": "0x0a00091e",
+              "operand": "<TypeSpec>::Add"
+            },
+            {
+              "il_offset": 99,
+              "op": "ldfld",
+              "operand_token": "0x040007af",
+              "operand": "_eventTypes"
+            },
+            {
+              "il_offset": 105,
+              "op": "call",
+              "operand_token": "0x06000930",
+              "operand": "SpecterInsight.UI.ViewModels.EventLogViewModel::get_AppliedMinimumTimestamp"
+            },
+            {
+              "il_offset": 111,
+              "op": "call",
+              "operand_token": "0x0600092a",
+              "operand": "SpecterInsight.UI.ViewModels.EventLogViewModel::get_AppliedSearchFilter"
+            },
+            {
+              "il_offset": 116,
+              "op": "call",
+              "operand_token": "0x0600093b",
+              "operand": "SpecterInsight.UI.ViewModels.EventLogViewModel::IsMatch"
+            },
+            {
+              "il_offset": 121,
+              "op": "brfalse.s",
+              "operand": 141
+            },
+            {
+              "il_offset": 124,
+              "op": "call",
+              "operand_token": "0x06000926",
+              "operand": "SpecterInsight.UI.ViewModels.EventLogViewModel::get_Events"
+            },
+            {
+              "il_offset": 129,
+              "op": "ldc.i4.0"
+            },
+            {
+              "il_offset": 136,
+              "op": "callvirt",
+              "operand_token": "0x0a000922",
+              "operand": "<TypeSpec>::Insert"
+            }
+          ]
+        },
+        {
+          "method": "SpecterInsight.UI.ViewModels.EventLogViewModel+<>c__DisplayClass51_0+<<OnEventNotification>b__0>d::MoveNext",
+          "token": "0x0600094e",
+          "il_sha256": "8e5ead5a9dd21da4127bf4498dc489e6b8b0588d1da7ab903a8d75b01be61914",
+          "eh_count": 2,
+          "sites": [
+            {
+              "il_offset": 32,
+              "op": "call",
+              "operand_token": "0x06000940",
+              "operand": "SpecterInsight.UI.ViewModels.EventLogViewModel::OnEventNotification"
+            },
+            {
+              "il_offset": 114,
+              "op": "call",
+              "operand_token": "0x0a000050",
+              "operand": "System.Runtime.CompilerServices.TaskAwaiter::GetResult"
+            },
+            {
+              "il_offset": 121,
+              "op": "call",
+              "operand_token": "0x0600159c",
+              "operand": "SpecterInsight.UI.Services.NotificationService::NotifyAll"
+            }
+          ]
+        },
+        {
+          "method": "SpecterInsight.UI.ViewModels.EventLogViewModel+<OnDisconnected>d__50::MoveNext",
+          "token": "0x06000952",
+          "il_sha256": "2e1ea00b03bedcebee8519fa9d9ba83f651ccf6ff45c56301ff0cb3fb85010ed",
+          "eh_count": 1,
+          "sites": [
+            {
+              "il_offset": 7,
+              "op": "call",
+              "operand_token": "0x0a000007",
+              "operand": "Avalonia.Threading.Dispatcher::get_UIThread"
+            },
+            {
+              "il_offset": 13,
+              "op": "ldftn",
+              "operand_token": "0x06000942",
+              "operand": "SpecterInsight.UI.ViewModels.EventLogViewModel::<OnDisconnected>b__50_0"
+            },
+            {
+              "il_offset": 24,
+              "op": "callvirt",
+              "operand_token": "0x0a0007a1",
+              "operand": "Avalonia.Threading.Dispatcher::Invoke"
+            },
+            {
+              "il_offset": 35,
+              "op": "callvirt",
+              "operand_token": "0x0a00041b",
+              "operand": "Avalonia.Threading.DispatcherTimer::Stop"
+            }
+          ]
+        },
+        {
+          "method": "SpecterInsight.UI.ViewModels.EventLogViewModel::<OnDisconnected>b__50_0",
+          "token": "0x06000942",
+          "il_sha256": "695ee8176b34aada5488ad44983d030d9a40faf100d935a2bc394e36211d7a5e",
+          "eh_count": 0,
+          "sites": [
+            {
+              "il_offset": 1,
+              "op": "call",
+              "operand_token": "0x06000926",
+              "operand": "SpecterInsight.UI.ViewModels.EventLogViewModel::get_Events"
+            },
+            {
+              "il_offset": 6,
+              "op": "callvirt",
+              "operand_token": "0x0a000918",
+              "operand": "<TypeSpec>::Clear"
+            },
+            {
+              "il_offset": 12,
+              "op": "ldnull"
+            },
+            {
+              "il_offset": 13,
+              "op": "call",
+              "operand_token": "0x06000925",
+              "operand": "SpecterInsight.UI.ViewModels.EventLogViewModel::set_SelectedEvent"
+            }
+          ]
+        },
+        {
+          "method": "SpecterInsight.UI.Globals+<OnDisconnected>d__17::MoveNext",
+          "token": "0x0600003f",
+          "il_sha256": "ed6be33401770594bf12aac588dbdc21c74e8b5a41a268df5097a974587b0c35",
+          "eh_count": 3,
+          "sites": [
+            {
+              "il_offset": 19,
+              "op": "call",
+              "operand_token": "0x0600002f",
+              "operand": "SpecterInsight.UI.Globals::Disconnect"
+            },
+            {
+              "il_offset": 104,
+              "op": "call",
+              "operand_token": "0x0a000050",
+              "operand": "System.Runtime.CompilerServices.TaskAwaiter::GetResult"
+            },
+            {
+              "il_offset": 110,
+              "op": "ldfld",
+              "operand_token": "0x04000035",
+              "operand": "exception"
+            },
+            {
+              "il_offset": 115,
+              "op": "brfalse.s",
+              "operand": 192
+            },
+            {
+              "il_offset": 134,
+              "op": "stsfld",
+              "operand_token": "0x0400001a",
+              "operand": "_state"
+            },
+            {
+              "il_offset": 169,
+              "op": "ldftn",
+              "operand_token": "0x06000036",
+              "operand": "SpecterInsight.UI.Globals+<>c::<OnDisconnected>b__17_0"
+            },
+            {
+              "il_offset": 186,
+              "op": "call",
+              "operand_token": "0x0a000040",
+              "operand": "System.Threading.Tasks.Task::Run"
+            }
+          ]
+        },
+        {
+          "method": "SpecterInsight.UI.Globals+<>c+<<OnDisconnected>b__17_0>d::MoveNext",
+          "token": "0x06000037",
+          "il_sha256": "41a8ff6689dd6808307f9ad5a14a5cff4c53e93031c9d83d752277b28561a235",
+          "eh_count": 1,
+          "sites": [
+            {
+              "il_offset": 10,
+              "op": "call",
+              "operand_token": "0x0600002e",
+              "operand": "SpecterInsight.UI.Globals::ReconnectLoop"
+            }
+          ]
+        },
+        {
+          "method": "SpecterInsight.UI.Globals+<ReconnectLoop>d__19::MoveNext",
+          "token": "0x06000047",
+          "il_sha256": "2b7d66188398b4e8929193b7e90001495b3cff8679eda9ac995d560a76f485f5",
+          "eh_count": 2,
+          "sites": [
+            {
+              "il_offset": 61,
+              "op": "call",
+              "operand_token": "0x06000031",
+              "operand": "SpecterInsight.UI.Globals::RaiseReconnecting"
+            },
+            {
+              "il_offset": 171,
+              "op": "call",
+              "operand_token": "0x0600002b",
+              "operand": "SpecterInsight.UI.Globals::Connect"
+            },
+            {
+              "il_offset": 262,
+              "op": "leave.s",
+              "operand": 274
+            },
+            {
+              "il_offset": 266,
+              "op": "ldc.i4.1"
+            },
+            {
+              "il_offset": 267,
+              "op": "stfld",
+              "operand_token": "0x04000049",
+              "operand": "<>7__wrap1"
+            },
+            {
+              "il_offset": 283,
+              "op": "bne.un.s",
+              "operand": 377
+            },
+            {
+              "il_offset": 285,
+              "op": "ldc.i4",
+              "operand": 2000
+            },
+            {
+              "il_offset": 290,
+              "op": "call",
+              "operand_token": "0x0a00004c",
+              "operand": "System.Threading.Tasks.Task::Delay"
+            },
+            {
+              "il_offset": 377,
+              "op": "call",
+              "operand_token": "0x0600002a",
+              "operand": "SpecterInsight.UI.Globals::get_Status"
+            },
+            {
+              "il_offset": 382,
+              "op": "ldc.i4.2"
+            },
+            {
+              "il_offset": 383,
+              "op": "beq",
+              "operand": 23
+            }
+          ]
+        }
+      ]
+    },
+    "client/SpecterInsight.ApiClient.dll": {
+      "sha256": "5c658f03289e5804a692ee66ca7beff3883631f4a3d81b301bdade0e7fa45422",
+      "mvid": "25208fa6-b62b-46bd-b864-eea28025b41e",
+      "selected_methods": [
+        {
+          "method": "SpecterInsight.ApiClient.SpecterInsightClient::OnEventNotification",
+          "token": "0x06000023",
+          "il_sha256": "359c5c32f2b4e4e29ce535a2df074cdccba04e96ffb1bac1f15358a0a58764e4",
+          "eh_count": 0,
+          "sites": [
+            {
+              "il_offset": 1,
+              "op": "ldfld",
+              "operand_token": "0x04000007",
+              "operand": "_hub"
+            },
+            {
+              "il_offset": 6,
+              "op": "ldstr",
+              "operand_token": "0x70000217",
+              "operand": "EventNotification"
+            },
+            {
+              "il_offset": 11,
+              "op": "ldarg.1"
+            },
+            {
+              "il_offset": 12,
+              "op": "call",
+              "operand_token": "0x2b000010",
+              "operand": "Microsoft.AspNetCore.SignalR.Client.HubConnectionExtensions::On"
+            },
+            {
+              "il_offset": 17,
+              "op": "ret"
+            }
+          ]
+        }
+      ]
+    },
+    "server/SpecterInsight.Server.dll": {
+      "sha256": "a6c454cdfc80e5d9bd3906747d30edbe4fcf69ab2e3c2b52b301b6f4b60e46a5",
+      "mvid": "1323c471-66a2-40e3-a048-50e1f9d4dcfb",
+      "selected_methods": [
+        {
+          "method": "SpecterInsight.Server.Services.Events.EventLoggingService+<LogAsync>d__3::MoveNext",
+          "token": "0x060021d1",
+          "il_sha256": "a8e32b9ca6e66c48eca6ed1c653476ce38886ea43d160caeb3c6aa6cbe9ce1df",
+          "eh_count": 3,
+          "sites": [
+            {
+              "il_offset": 46,
+              "op": "callvirt",
+              "operand_token": "0x06000ce0",
+              "operand": "SpecterInsight.Server.Services.Database.DatabaseService::InsertEventAsync"
+            },
+            {
+              "il_offset": 140,
+              "op": "call",
+              "operand_token": "0x0a000b94",
+              "operand": "ConfiguredTaskAwaiter::GetResult"
+            },
+            {
+              "il_offset": 167,
+              "op": "call",
+              "operand_token": "0x0a000177",
+              "operand": "Microsoft.Extensions.Logging.LoggerExtensions::LogError"
+            },
+            {
+              "il_offset": 180,
+              "op": "ldfld",
+              "operand_token": "0x040005ba",
+              "operand": "_eventsHub"
+            },
+            {
+              "il_offset": 185,
+              "op": "callvirt",
+              "operand_token": "0x0a000c8c",
+              "operand": "<TypeSpec>::get_Clients"
+            },
+            {
+              "il_offset": 194,
+              "op": "brtrue.s",
+              "operand": 201
+            },
+            {
+              "il_offset": 203,
+              "op": "callvirt",
+              "operand_token": "0x0a000c8d",
+              "operand": "<TypeSpec>::get_All"
+            },
+            {
+              "il_offset": 208,
+              "op": "ldstr",
+              "operand_token": "0x70059918",
+              "operand": "EventNotification"
+            },
+            {
+              "il_offset": 222,
+              "op": "ldfld",
+              "operand_token": "0x04001c5e",
+              "operand": "evt"
+            },
+            {
+              "il_offset": 234,
+              "op": "callvirt",
+              "operand_token": "0x0a000e63",
+              "operand": "Microsoft.AspNetCore.SignalR.IClientProxy::SendCoreAsync"
+            },
+            {
+              "il_offset": 352,
+              "op": "call",
+              "operand_token": "0x0a000177",
+              "operand": "Microsoft.Extensions.Logging.LoggerExtensions::LogError"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "db": {
+    "filename_suffixes": [
+      ".sql",
+      ".dump",
+      ".backup",
+      ".sql.gz",
+      ".pgdump"
+    ],
+    "exact_basename": "PG_VERSION",
+    "distribution_manifest_sha256": "cbb9f081aec9e614a6fc0eade0ff34b210ada8d5c3709faa0fb2e3d2a57beafa",
+    "candidates": [],
+    "fixture_catalog_sha256": {
+      "run-1.json": "7b5a190bfe4286c65bf1e270703c6ca826b7b3e95d2725fba73b1ce5c8f47ca5",
+      "run-2.json": "7b5a190bfe4286c65bf1e270703c6ca826b7b3e95d2725fba73b1ce5c8f47ca5"
+    },
+    "isolation": "bwrap, separate IPC/network/filesystems, fresh cluster on tmpfs for each run, unix domain socket only"
+  }
+}

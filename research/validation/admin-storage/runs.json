@@ -1,0 +1,30 @@
+{
+  "sdk": "10.0.404",
+  "postgres": "16.4",
+  "isolation": "bwrap, separate IPC/network/filesystems, fresh cluster on tmpfs for each run, unix domain socket only",
+  "input_sha256": {
+    "server/SpecterInsight.Server.dll": "a6c454cdfc80e5d9bd3906747d30edbe4fcf69ab2e3c2b52b301b6f4b60e46a5",
+    "server/Npgsql.dll": "6c74f02211d3c2323db73c7c3c88bf610e9ee95e3f84dd6ea5d630eef9895c1b",
+    "server/Newtonsoft.Json.dll": "a28c251dfe36d881e9e2462e171441b8b0ec156fe3f452602c9149b1b9efe05b",
+    "Store.csproj": "29d77490ca1dc52a30ab14d4c025dfa81c7a28c3e45e92fd7dff62432016765b",
+    "Program.cs": "965f8ac1ba931440c689aa4f86d75513868fe9560ed1b2d710885003e46f074d",
+    "schema.sql": "151e27d94c6ad899454665e1ff55ec46220e2afe27b008675134891596e9a179",
+    "repeat.sh": "cf7c3a95250f011a0fd8f8121cff7ba2ad39ffd0f8d2cb4c1c3643f05c9e6f64"
+  },
+  "runs": [
+    {
+      "record": "run-1.json",
+      "output_mtime_utc": "2026-11-17T20:17:40.826096+00:00",
+      "catalog_and_probes_sha256": "7b5a190bfe4286c65bf1e270703c6ca826b7b3e95d2725fba73b1ce5c8f47ca5",
+      "storage_fixture_records": 19,
+      "storage_fixture_records_sha256": "3a028bcc817e83bd91d2d9dd906df70c81c723b0f98bfc5bf0fa7f8b76bd7917"
+    },
+    {
+      "record": "run-2.json",
+      "output_mtime_utc": "2026-11-17T20:17:40.836096+00:00",
+      "catalog_and_probes_sha256": "7b5a190bfe4286c65bf1e270703c6ca826b7b3e95d2725fba73b1ce5c8f47ca5",
+      "storage_fixture_records": 19,
+      "storage_fixture_records_sha256": "3a028bcc817e83bd91d2d9dd906df70c81c723b0f98bfc5bf0fa7f8b76bd7917"
+    }
+  ]
+}

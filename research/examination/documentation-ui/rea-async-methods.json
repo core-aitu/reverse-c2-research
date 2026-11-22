@@ -1,0 +1,858 @@
+{
+  "evidence_id": "ev_190cdd9ee74aa4216f58e7e3aaa74de792c073c1b40c2ae6328205e62dc94cce",
+  "subject": {
+    "name": "SpecterInsight.UI.dll",
+    "digest": {
+      "sha256": "b26312d15a0a8d2743ef50069874567ef768d64e1eed0a9e82a410976fbe10d6"
+    },
+    "local_path": "/home/deleteme/Desktop/SpecterInsight/client/SpecterInsight.UI.dll",
+    "format": "pe",
+    "architecture": "x86"
+  },
+  "provider": {
+    "id": "rea-analysis-view",
+    "name": "REA analysis view projection",
+    "version": "1"
+  },
+  "analysis_profile": null,
+  "predicate_type": "rea.analysis-view",
+  "operation": "inspect_analysis_view",
+  "parameters": {
+    "parent_evidence_id": "ev_901e511793151573b86756ce328464ae9559559549868fffd1f7db4fa49f554f",
+    "view": {
+      "kind": "managed-members",
+      "collection": "methods",
+      "offset": 0,
+      "limit": 32
+    }
+  },
+  "raw_result": null,
+  "normalized_result": {
+    "kind": "managed-members",
+    "view": {
+      "kind": "managed-members",
+      "collection": "methods",
+      "offset": 0,
+      "limit": 32
+    },
+    "page": {
+      "collection": "methods",
+      "rows": [
+        {
+          "token": "0x06000919",
+          "row_offset": 1528214,
+          "declaring_type_token": "0x020001c7",
+          "declaring_type": "<<UpdateDocumentation>b__5_0>d",
+          "name": "MoveNext",
+          "rva": 598336,
+          "impl_flags": 0,
+          "flags": 481,
+          "signature": {
+            "raw_length": 3,
+            "raw_sha256": "0c9373898d2dd1c85902837a9e979cb88484e2548a008ad2b2176cc7119d09df",
+            "resolved_sha256": "0c9373898d2dd1c85902837a9e979cb88484e2548a008ad2b2176cc7119d09df",
+            "kind": "method",
+            "parse_status": "decoded",
+            "calling_convention": "default has-this",
+            "generic_parameter_count": null,
+            "parameter_count": 0,
+            "return_type": "void",
+            "parameter_types": [],
+            "field_type": null,
+            "issue": null
+          },
+          "body": {
+            "status": "present",
+            "header_format": "fat",
+            "rva": 598336,
+            "file_offset": 590656,
+            "max_stack": 3,
+            "init_locals": true,
+            "local_var_sig_token": "0x110002b2",
+            "il_size": 260,
+            "il_sha256": "b5f66294b44a6cb0b17eaa41257e7007c371014a62f00f0524d4184c8b7a64f8",
+            "normalized_il_sha256": "d0fbd0c293f61da1fe25c7f888dcb12440e4b749c1700c0da052f1a7c0a96714",
+            "instruction_count": 93,
+            "decoded_instruction_count": 93,
+            "truncated_instructions": 0,
+            "opcode_counts": {
+              "ldarg.0": 18,
+              "ldfld": 6,
+              "stloc.0": 3,
+              "stloc.1": 1,
+              "ldloc.0": 2,
+              "pop": 2,
+              "nop": 1,
+              "brfalse.s": 1,
+              "newobj": 2,
+              "stfld": 9,
+              "ldloc.1": 1,
+              "call": 9,
+              "stloc.2": 1,
+              "ldloc.2": 2,
+              "brtrue.s": 2,
+              "leave": 2,
+              "callvirt": 3,
+              "stloc.s": 3,
+              "ldloca.s": 3,
+              "ldc.i4.0": 1,
+              "dup": 2,
+              "ldloc.s": 2,
+              "ldflda": 4,
+              "initobj": 1,
+              "ldc.i4.m1": 1,
+              "stloc.3": 1,
+              "ldloc.3": 1,
+              "ldftn": 1,
+              "ldnull": 1,
+              "leave.s": 4,
+              "ldc.i4.s": 2,
+              "ret": 1
+            },
+            "anchors": [
+              {
+                "il_offset": 0,
+                "opcode": "ldarg.0",
+                "operand_kind": "none",
+                "operand": null
+              },
+              {
+                "il_offset": 1,
+                "opcode": "ldfld",
+                "operand_kind": "field",
+                "operand": "0x0400079d"
+              },
+              {
+                "il_offset": 6,
+                "opcode": "stloc.0",
+                "operand_kind": "none",
+                "operand": null
+              },
+              {
+                "il_offset": 7,
+                "opcode": "ldarg.0",
+                "operand_kind": "none",
+                "operand": null
+              },
+              {
+                "il_offset": 8,
+                "opcode": "ldfld",
+                "operand_kind": "field",
+                "operand": "0x0400079f"
+              },
+              {
+                "il_offset": 13,
+                "opcode": "stloc.1",
+                "operand_kind": "none",
+                "operand": null
+              },
+              {
+                "il_offset": 14,
+                "opcode": "ldloc.0",
+                "operand_kind": "none",
+                "operand": null
+              },
+              {
+                "il_offset": 15,
+                "opcode": "pop",
+                "operand_kind": "none",
+                "operand": null
+              },
+              {
+                "il_offset": 16,
+                "opcode": "nop",
+                "operand_kind": "none",
+                "operand": null
+              },
+              {
+                "il_offset": 17,
+                "opcode": "ldloc.0",
+                "operand_kind": "none",
+                "operand": null
+              },
+              {
+                "il_offset": 18,
+                "opcode": "brfalse.s",
+                "operand_kind": "branch",
+                "operand": "115"
+              },
+              {
+                "il_offset": 20,
+                "opcode": "ldarg.0",
+                "operand_kind": "none",
+                "operand": null
+              },
+              {
+                "il_offset": 21,
+                "opcode": "newobj",
+                "operand_kind": "method",
+                "operand": "0x0600091b"
+              },
+              {
+                "il_offset": 26,
+                "opcode": "stfld",
+                "operand_kind": "field",
+                "operand": "0x040007a0"
+              },
+              {
+                "il_offset": 31,
+                "opcode": "ldarg.0",
+                "operand_kind": "none",
+                "operand": null
+              },
+              {
+                "il_offset": 32,
+                "opcode": "ldfld",
+                "operand_kind": "field",
+                "operand": "0x040007a0"
+              },
+              {
+                "il_offset": 37,
+                "opcode": "ldloc.1",
+                "operand_kind": "none",
+                "operand": null
+              },
+              {
+                "il_offset": 38,
+                "opcode": "stfld",
+                "operand_kind": "field",
+                "operand": "0x040007a3"
+              },
+              {
+                "il_offset": 43,
+                "opcode": "call",
+                "operand_kind": "method",
+                "operand": "0x06000027"
+              },
+              {
+                "il_offset": 48,
+                "opcode": "stloc.2",
+                "operand_kind": "none",
+                "operand": null
+              },
+              {
+                "il_offset": 49,
+                "opcode": "ldloc.2",
+                "operand_kind": "none",
+                "operand": null
+              },
+              {
+                "il_offset": 50,
+                "opcode": "brtrue.s",
+                "operand_kind": "branch",
+                "operand": "57"
+              },
+              {
+                "il_offset": 52,
+                "opcode": "leave",
+                "operand_kind": "branch",
+                "operand": "240"
+              },
+              {
+                "il_offset": 57,
+                "opcode": "ldloc.2",
+                "operand_kind": "none",
+                "operand": null
+              },
+              {
+                "il_offset": 58,
+                "opcode": "callvirt",
+                "operand_kind": "method",
+                "operand": "0x0a0008f5"
+              },
+              {
+                "il_offset": 63,
+                "opcode": "callvirt",
+                "operand_kind": "method",
+                "operand": "0x0a0008f6"
+              },
+              {
+                "il_offset": 68,
+                "opcode": "stloc.s",
+                "operand_kind": "variable",
+                "operand": "4"
+              },
+              {
+                "il_offset": 70,
+                "opcode": "ldloca.s",
+                "operand_kind": "variable",
+                "operand": "4"
+              },
+              {
+                "il_offset": 72,
+                "opcode": "call",
+                "operand_kind": "method",
+                "operand": "0x0a0008f7"
+              },
+              {
+                "il_offset": 77,
+                "opcode": "brtrue.s",
+                "operand_kind": "branch",
+                "operand": "144"
+              },
+              {
+                "il_offset": 79,
+                "opcode": "ldarg.0",
+                "operand_kind": "none",
+                "operand": null
+              },
+              {
+                "il_offset": 80,
+                "opcode": "ldc.i4.0",
+                "operand_kind": "none",
+                "operand": null
+              },
+              {
+                "il_offset": 81,
+                "opcode": "dup",
+                "operand_kind": "none",
+                "operand": null
+              },
+              {
+                "il_offset": 82,
+                "opcode": "stloc.0",
+                "operand_kind": "none",
+                "operand": null
+              },
+              {
+                "il_offset": 83,
+                "opcode": "stfld",
+                "operand_kind": "field",
+                "operand": "0x0400079d"
+              },
+              {
+                "il_offset": 88,
+                "opcode": "ldarg.0",
+                "operand_kind": "none",
+                "operand": null
+              },
+              {
+                "il_offset": 89,
+                "opcode": "ldloc.s",
+                "operand_kind": "variable",
+                "operand": "4"
+              },
+              {
+                "il_offset": 91,
+                "opcode": "stfld",
+                "operand_kind": "field",
+                "operand": "0x040007a1"
+              },
+              {
+                "il_offset": 96,
+                "opcode": "ldarg.0",
+                "operand_kind": "none",
+                "operand": null
+              },
+              {
+                "il_offset": 97,
+                "opcode": "ldflda",
+                "operand_kind": "field",
+                "operand": "0x0400079e"
+              },
+              {
+                "il_offset": 102,
+                "opcode": "ldloca.s",
+                "operand_kind": "variable",
+                "operand": "4"
+              },
+              {
+                "il_offset": 104,
+                "opcode": "ldarg.0",
+                "operand_kind": "none",
+                "operand": null
+              },
+              {
+                "il_offset": 105,
+                "opcode": "call",
+                "operand_kind": "method",
+                "operand": "0x2b0002d5"
+              },
+              {
+                "il_offset": 110,
+                "opcode": "leave",
+                "operand_kind": "branch",
+                "operand": "259"
+              },
+              {
+                "il_offset": 115,
+                "opcode": "ldarg.0",
+                "operand_kind": "none",
+                "operand": null
+              },
+              {
+                "il_offset": 116,
+                "opcode": "ldfld",
+                "operand_kind": "field",
+                "operand": "0x040007a1"
+              },
+              {
+                "il_offset": 121,
+                "opcode": "stloc.s",
+                "operand_kind": "variable",
+                "operand": "4"
+              },
+              {
+                "il_offset": 123,
+                "opcode": "ldarg.0",
+                "operand_kind": "none",
+                "operand": null
+              },
+              {
+                "il_offset": 124,
+                "opcode": "ldflda",
+                "operand_kind": "field",
+                "operand": "0x040007a1"
+              },
+              {
+                "il_offset": 129,
+                "opcode": "initobj",
+                "operand_kind": "type",
+                "operand": "0x1b00019f"
+              },
+              {
+                "il_offset": 135,
+                "opcode": "ldarg.0",
+                "operand_kind": "none",
+                "operand": null
+              },
+              {
+                "il_offset": 136,
+                "opcode": "ldc.i4.m1",
+                "operand_kind": "none",
+                "operand": null
+              },
+              {
+                "il_offset": 137,
+                "opcode": "dup",
+                "operand_kind": "none",
+                "operand": null
+              },
+              {
+                "il_offset": 138,
+                "opcode": "stloc.0",
+                "operand_kind": "none",
+                "operand": null
+              },
+              {
+                "il_offset": 139,
+                "opcode": "stfld",
+                "operand_kind": "field",
+                "operand": "0x0400079d"
+              },
+              {
+                "il_offset": 144,
+                "opcode": "ldloca.s",
+                "operand_kind": "variable",
+                "operand": "4"
+              },
+              {
+                "il_offset": 146,
+                "opcode": "call",
+                "operand_kind": "method",
+                "operand": "0x0a0008f8"
+              },
+              {
+                "il_offset": 151,
+                "opcode": "stloc.3",
+                "operand_kind": "none",
+                "operand": null
+              },
+              {
+                "il_offset": 152,
+                "opcode": "ldarg.0",
+                "operand_kind": "none",
+                "operand": null
+              },
+              {
+                "il_offset": 153,
+                "opcode": "ldfld",
+                "operand_kind": "field",
+                "operand": "0x040007a0"
+              },
+              {
+                "il_offset": 158,
+                "opcode": "ldloc.3",
+                "operand_kind": "none",
+                "operand": null
+              },
+              {
+                "il_offset": 159,
+                "opcode": "call",
+                "operand_kind": "method",
+                "operand": "0x2b0002d6"
+              },
+              {
+                "il_offset": 164,
+                "opcode": "stfld",
+                "operand_kind": "field",
+                "operand": "0x040007a2"
+              },
+              {
+                "il_offset": 169,
+                "opcode": "call",
+                "operand_kind": "method",
+                "operand": "0x0a000007"
+              },
+              {
+                "il_offset": 174,
+                "opcode": "ldarg.0",
+                "operand_kind": "none",
+                "operand": null
+              },
+              {
+                "il_offset": 175,
+                "opcode": "ldfld",
+                "operand_kind": "field",
+                "operand": "0x040007a0"
+              },
+              {
+                "il_offset": 180,
+                "opcode": "ldftn",
+                "operand_kind": "method",
+                "operand": "0x0600091c"
+              },
+              {
+                "il_offset": 186,
+                "opcode": "newobj",
+                "operand_kind": "method",
+                "operand": "0x0a0001f5"
+              },
+              {
+                "il_offset": 191,
+                "opcode": "callvirt",
+                "operand_kind": "method",
+                "operand": "0x0a00049f"
+              },
+              {
+                "il_offset": 196,
+                "opcode": "pop",
+                "operand_kind": "none",
+                "operand": null
+              },
+              {
+                "il_offset": 197,
+                "opcode": "ldarg.0",
+                "operand_kind": "none",
+                "operand": null
+              },
+              {
+                "il_offset": 198,
+                "opcode": "ldnull",
+                "operand_kind": "none",
+                "operand": null
+              },
+              {
+                "il_offset": 199,
+                "opcode": "stfld",
+                "operand_kind": "field",
+                "operand": "0x040007a0"
+              },
+              {
+                "il_offset": 204,
+                "opcode": "leave.s",
+                "operand_kind": "branch",
+                "operand": "213"
+              },
+              {
+                "il_offset": 206,
+                "opcode": "call",
+                "operand_kind": "method",
+                "operand": "0x0600159c"
+              },
+              {
+                "il_offset": 211,
+                "opcode": "leave.s",
+                "operand_kind": "branch",
+                "operand": "213"
+              },
+              {
+                "il_offset": 213,
+                "opcode": "leave.s",
+                "operand_kind": "branch",
+                "operand": "240"
+              },
+              {
+                "il_offset": 215,
+                "opcode": "stloc.s",
+                "operand_kind": "variable",
+                "operand": "5"
+              },
+              {
+                "il_offset": 217,
+                "opcode": "ldarg.0",
+                "operand_kind": "none",
+                "operand": null
+              },
+              {
+                "il_offset": 218,
+                "opcode": "ldc.i4.s",
+                "operand_kind": "constant",
+                "operand": "-2"
+              },
+              {
+                "il_offset": 220,
+                "opcode": "stfld",
+                "operand_kind": "field",
+                "operand": "0x0400079d"
+              },
+              {
+                "il_offset": 225,
+                "opcode": "ldarg.0",
+                "operand_kind": "none",
+                "operand": null
+              },
+              {
+                "il_offset": 226,
+                "opcode": "ldflda",
+                "operand_kind": "field",
+                "operand": "0x0400079e"
+              },
+              {
+                "il_offset": 231,
+                "opcode": "ldloc.s",
+                "operand_kind": "variable",
+                "operand": "5"
+              },
+              {
+                "il_offset": 233,
+                "opcode": "call",
+                "operand_kind": "method",
+                "operand": "0x0a000058"
+              },
+              {
+                "il_offset": 238,
+                "opcode": "leave.s",
+                "operand_kind": "branch",
+                "operand": "259"
+              },
+              {
+                "il_offset": 240,
+                "opcode": "ldarg.0",
+                "operand_kind": "none",
+                "operand": null
+              },
+              {
+                "il_offset": 241,
+                "opcode": "ldc.i4.s",
+                "operand_kind": "constant",
+                "operand": "-2"
+              },
+              {
+                "il_offset": 243,
+                "opcode": "stfld",
+                "operand_kind": "field",
+                "operand": "0x0400079d"
+              },
+              {
+                "il_offset": 248,
+                "opcode": "ldarg.0",
+                "operand_kind": "none",
+                "operand": null
+              },
+              {
+                "il_offset": 249,
+                "opcode": "ldflda",
+                "operand_kind": "field",
+                "operand": "0x0400079e"
+              },
+              {
+                "il_offset": 254,
+                "opcode": "call",
+                "operand_kind": "method",
+                "operand": "0x0a000059"
+              },
+              {
+                "il_offset": 259,
+                "opcode": "ret",
+                "operand_kind": "none",
+                "operand": null
+              }
+            ],
+            "exception_regions": [
+              {
+                "flags": 0,
+                "try_offset": 17,
+                "try_length": 189,
+                "handler_offset": 206,
+                "handler_length": 7,
+                "class_token": "0x01000044",
+                "class_type": "System.Exception",
+                "class_type_name_sha256": "10731c5537455c0520450190d8e79f4b5d65d9c858443567d9759a51b469c8fe",
+                "class_type_identity_resolved": false,
+                "filter_offset": null
+              },
+              {
+                "flags": 0,
+                "try_offset": 14,
+                "try_length": 201,
+                "handler_offset": 215,
+                "handler_length": 25,
+                "class_token": "0x01000044",
+                "class_type": "System.Exception",
+                "class_type_name_sha256": "10731c5537455c0520450190d8e79f4b5d65d9c858443567d9759a51b469c8fe",
+                "class_type_identity_resolved": false,
+                "filter_offset": null
+              }
+            ],
+            "issue": null
+          }
+        },
+        {
+          "token": "0x0600091a",
+          "row_offset": 1528232,
+          "declaring_type_token": "0x020001c7",
+          "declaring_type": "<<UpdateDocumentation>b__5_0>d",
+          "name": "SetStateMachine",
+          "rva": 598636,
+          "impl_flags": 0,
+          "flags": 481,
+          "signature": {
+            "raw_length": 6,
+            "raw_sha256": "8f4ecdcb8865dc45054ed1ba63754ddb4e9fe45a81949a6be5be96cea6dcb7d9",
+            "resolved_sha256": "4e77b2f1469e6ef7206644922694969fbc2837367dff4487b16d438619655db9",
+            "kind": "method",
+            "parse_status": "decoded",
+            "calling_convention": "default has-this",
+            "generic_parameter_count": null,
+            "parameter_count": 1,
+            "return_type": "void",
+            "parameter_types": [
+              "class:265"
+            ],
+            "field_type": null,
+            "issue": null
+          },
+          "body": {
+            "status": "present",
+            "header_format": "tiny",
+            "rva": 598636,
+            "file_offset": 590956,
+            "max_stack": 8,
+            "init_locals": false,
+            "local_var_sig_token": null,
+            "il_size": 13,
+            "il_sha256": "bfbd36b23dd189f3ca7ee71fc903e07a2ed48fd38094d7f19ff459946d21acf2",
+            "normalized_il_sha256": "23c3ad0dfe50fc1d2f3d19a679e2d1c9efba4b257dc5336378bc6d9d421046b1",
+            "instruction_count": 5,
+            "decoded_instruction_count": 5,
+            "truncated_instructions": 0,
+            "opcode_counts": {
+              "ldarg.0": 1,
+              "ldflda": 1,
+              "ldarg.1": 1,
+              "call": 1,
+              "ret": 1
+            },
+            "anchors": [
+              {
+                "il_offset": 0,
+                "opcode": "ldarg.0",
+                "operand_kind": "none",
+                "operand": null
+              },
+              {
+                "il_offset": 1,
+                "opcode": "ldflda",
+                "operand_kind": "field",
+                "operand": "0x0400079e"
+              },
+              {
+                "il_offset": 6,
+                "opcode": "ldarg.1",
+                "operand_kind": "none",
+                "operand": null
+              },
+              {
+                "il_offset": 7,
+                "opcode": "call",
+                "operand_kind": "method",
+                "operand": "0x0a00005a"
+              },
+              {
+                "il_offset": 12,
+                "opcode": "ret",
+                "operand_kind": "none",
+                "operand": null
+              }
+            ],
+            "exception_regions": [],
+            "issue": null
+          }
+        }
+      ]
+    },
+    "parent_evidence_id": "ev_901e511793151573b86756ce328464ae9559559549868fffd1f7db4fa49f554f",
+    "parent_operation": "inspect_managed_members",
+    "parent_digest": "901e511793151573b86756ce328464ae9559559549868fffd1f7db4fa49f554f",
+    "view_digest": "85472372d6d4da9a1045dfaf8d0da34abe8d69cf11204e560ef9c8368b899190",
+    "artifact": {
+      "path": "/home/deleteme/Desktop/SpecterInsight/client/SpecterInsight.UI.dll",
+      "sha256": "b26312d15a0a8d2743ef50069874567ef768d64e1eed0a9e82a410976fbe10d6"
+    },
+    "coverage": {
+      "status": "page",
+      "examined": 2,
+      "total": 2,
+      "next_offset": null,
+      "exhausted": true
+    },
+    "limitations": [
+      "CIL instruction anchors are decoded from file-backed method bodies only; no target assembly is loaded or executed.",
+      "Exported types are reported from ExportedType rows as declared; forwarded types are not resolved in their implementing assemblies.",
+      "Member signatures decode ECMA-335 primitive, class, valuetype, generic instantiation, generic variable, pointer, byref, single-dimension and general array, function pointer including VARARG sentinels, custom modifier, and typed reference forms; class and valuetype operands keep their encoded TypeDefOrRefOrSpec values.",
+      "Metadata tokens are build-local coordinates and are only meaningful with the reported artifact SHA-256 and MVID.",
+      "Types, fields, methods, call edges, field accesses, and user strings cover only the selected declaring types; coverage describes that selection. Edge targets outside it keep their names but are not described.",
+      "User strings are the #US literals loaded by ldstr in the inspected method bodies, with their own coverage; instruction anchors and normalized CIL digests keep their build-local tokens."
+    ],
+    "unknowns": [
+      "Collection counts and pages cover producer-returned rows; member completeness remains the original coverage, not an absence claim about unreturned rows.",
+      "Exported types and member references cover the whole assembly; the other collections cover only the selected declaring types.",
+      "Metadata tokens are build-local coordinates bound to the recorded artifact SHA-256 and module MVID; this view does not load or execute the assembly."
+    ],
+    "signature_resolution": "type-names-v1",
+    "nesting_read": true,
+    "identity_scope": {
+      "token_identity": "build-local",
+      "requires_artifact_sha256": "b26312d15a0a8d2743ef50069874567ef768d64e1eed0a9e82a410976fbe10d6",
+      "requires_mvid": "ec17b4c7-9015-4373-9b10-8081bc59e9a9"
+    },
+    "selection": {
+      "type_names": [
+        "<<UpdateDocumentation>b__5_0>d"
+      ],
+      "unmatched_type_names": []
+    },
+    "method_rows": {
+      "offset": 0,
+      "count": 6642,
+      "total": 6642
+    },
+    "source_metadata_status": "complete",
+    "source_coverage": {
+      "state": "complete",
+      "issues": []
+    }
+  },
+  "confidence": "derived",
+  "authority": "shipped-artifact",
+  "environment": null,
+  "limitations": [
+    "CIL instruction anchors are decoded from file-backed method bodies only; no target assembly is loaded or executed.",
+    "Exported types are reported from ExportedType rows as declared; forwarded types are not resolved in their implementing assemblies.",
+    "Member signatures decode ECMA-335 primitive, class, valuetype, generic instantiation, generic variable, pointer, byref, single-dimension and general array, function pointer including VARARG sentinels, custom modifier, and typed reference forms; class and valuetype operands keep their encoded TypeDefOrRefOrSpec values.",
+    "Metadata tokens are build-local coordinates and are only meaningful with the reported artifact SHA-256 and MVID.",
+    "Types, fields, methods, call edges, field accesses, and user strings cover only the selected declaring types; coverage describes that selection. Edge targets outside it keep their names but are not described.",
+    "User strings are the #US literals loaded by ldstr in the inspected method bodies, with their own coverage; instruction anchors and normalized CIL digests keep their build-local tokens."
+  ],
+  "relationship_coverage": null,
+  "locations": [
+    {
+      "kind": "artifact-path",
+      "path": "/home/deleteme/Desktop/SpecterInsight/client/SpecterInsight.UI.dll"
+    }
+  ],
+  "evidence_links": [
+    "ev_901e511793151573b86756ce328464ae9559559549868fffd1f7db4fa49f554f"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "server_sha256": "a6c454cdfc80e5d9bd3906747d30edbe4fcf69ab2e3c2b52b301b6f4b60e46a5",
+  "il_sha256": {
+    "ApplyHelper": "ccc360853c9fc84a5b1f4e8867501bcd34447669d993693b1d4c9c6c83e2d384",
+    "Augment": "5a7bcd7ac1b51568d8422342aaba177b26501ab83d648bcb7cf6f46b3c8667ca",
+    "LoadVendors": "dde482907db7cc4d6669fd883a38e8ec47d97ee320958a60f4d512024133621d"
+  },
+  "ui_sha256": "b26312d15a0a8d2743ef50069874567ef768d64e1eed0a9e82a410976fbe10d6",
+  "catalog_sha256": "d49b97cc146fb3e594cb08c3d97b99ad7b09de8609b2f19520b14968bee78f7f",
+  "kibana_export_sha256": "4ec038f77fc1e617e966d8f2af4be64dccbcca886126ea88247544a32ed05841",
+  "kibana_saved_object_types": {
+    "index-pattern": 2,
+    "visualization": 28,
+    "search": 5,
+    "dashboard": 6,
+    "map": 2
+  },
+  "kibana_trailer_records": 1,
+  "saved_objects_matching_literal_case_insensitive": {
+    "MacAddress_vendor": 0,
+    "PhysicalAddress_vendor": 0,
+    "vendor": 0,
+    "manufacturer": 0,
+    "PhysicalAddress": 1
+  },
+  "ui_pe_exact_literal_hits_case_insensitive": {
+    "MacAddress_vendor": {
+      "utf-8": 0,
+      "utf-16-le": 0
+    },
+    "PhysicalAddress_vendor": {
+      "utf-8": 0,
+      "utf-16-le": 0
+    }
+  },
+  "matching_run_sha256": "0ad4bdaecc0e909400a58973904331f583e749f5b8da3576fc3824c90f0c1ef0"
+}

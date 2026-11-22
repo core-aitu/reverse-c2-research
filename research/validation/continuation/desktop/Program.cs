@@ -39,12 +39,20 @@ public class ScreenApp:Application
         var ui=Assembly.LoadFrom((Directory.Exists("/files")?"/files/":"/lib-client/")+"SpecterInsight.UI.dll");
         var ac=Assembly.LoadFrom((Directory.Exists("/files")?"/files/":"/lib-client/")+"SpecterInsight.ApiClient.dll");
         var handler=new Reply();
-        using var http=new HttpClient(handler){BaseAddress=new Uri("http://fixture.invalid")};
+        var scenario=Environment.GetEnvironmentVariable("STUDY_SCREEN_CASE");
+        var ordering=scenario is "documentation-order" or "documentation-cancel";
+        using var held=new HeldDocumentationRequests();
+        using var http=new HttpClient(ordering?(HttpMessageHandler)held:handler){BaseAddress=new Uri("http://fixture.invalid")};
         var ct=ac.GetType("SpecterInsight.ApiClient.SpecterInsightClient",true)!;
         var client=ct.GetConstructors(BindingFlags.Public|BindingFlags.NonPublic|BindingFlags.Instance)
             .Single(c=>c.GetParameters().Length==2 && c.GetParameters()[1].ParameterType==typeof(HttpClient))
             .Invoke(["http://fixture.invalid",http]);
         ui.GetType("SpecterInsight.UI.Globals",true)!.GetProperty("Client",BindingFlags.Static|BindingFlags.Public|BindingFlags.NonPublic)!.SetValue(null,client);
+        if(ordering)
+        {
+            await DocumentationOrder.Run(ui,held,http,scenario=="documentation-cancel");
+            return;
+        }
         static string[] Texts(Control w)=>w.GetVisualDescendants().OfType<TextBlock>()
             .Where(t=>t.IsEffectivelyVisible && t.Bounds.Width>0 && t.Bounds.Height>0)
             .Select(t=>t.Text??"").Where(t=>!string.IsNullOrWhiteSpace(t)).Distinct().ToArray();
