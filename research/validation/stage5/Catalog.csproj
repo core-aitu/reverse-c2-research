@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    <Reference Include="Npgsql"><HintPath>$(Dist)/server/Npgsql.dll</HintPath></Reference>
+  </ItemGroup>
+</Project>

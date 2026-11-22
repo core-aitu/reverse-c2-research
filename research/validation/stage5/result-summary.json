@@ -1,0 +1,40 @@
+{
+  "observed_date": "2026-11-22",
+  "artifact_identity": {
+    "server_sha256": "a6c454cdfc80e5d9bd3906747d30edbe4fcf69ab2e3c2b52b301b6f4b60e46a5",
+    "server_mvid": "1323c471-66a2-40e3-a048-50e1f9d4dcfb",
+    "ui_sha256": "b26312d15a0a8d2743ef50069874567ef768d64e1eed0a9e82a410976fbe10d6",
+    "api_client_sha256": "5c658f03289e5804a692ee66ca7beff3883631f4a3d81b301bdade0e7fa45422"
+  },
+  "postgres": {
+    "version": "16.4",
+    "initializers_applied": 56,
+    "initializers_failed": 0,
+    "tables": 36,
+    "enums": 10,
+    "indexes": 81,
+    "extensions": ["citext 1.6", "pg_trgm 1.6", "plpgsql 1.0"],
+    "migration_relations": 0,
+    "scope": "fresh laboratory database initialized by the shipped DatabaseService; not a historical installation"
+  },
+  "ui": {
+    "stock_process_started": true,
+    "workflow_rendered": 24,
+    "workflow_expected": 24,
+    "navigation_categories_visible": 6,
+    "login_success": true,
+    "logout_returned_to_dialog": true,
+    "local_settings_persisted": true,
+    "http_error_visible": true,
+    "signalr_disconnect_visible": true,
+    "automatic_reconnect_after_server_restart": false
+  },
+  "correlated_chain": {
+    "correlation_id": "fixture-live-window",
+    "postgres_rows": 1,
+    "signalr_received": true,
+    "view_model_contains_id": true,
+    "window_text_visible": true,
+    "passed": true
+  }
+}

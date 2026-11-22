@@ -24,4 +24,6 @@
 
 [Индивидуальные карточки обновления документации UI](reports/documentation-ui-semantics.md)
 
+[Этап 5: PostgreSQL, SignalR и Avalonia UI](validation/stage5/README.md) — полный каталог чистой БД, 24/24 rendering smoke, login/navigation/logout, отрицательный reconnect и коррелируемая цепочка до окна.
+
 [Этап 8: зашифрованные архивы](reports/encrypted-archives.md) — два пароля восстановлены, DOCM/XLSM разобраны статически, для третьего ZIP установлено локальное происхождение и сохранена граница неизвестного plaintext.

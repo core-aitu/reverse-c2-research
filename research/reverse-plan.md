@@ -18,6 +18,7 @@
 | Modules | static-complete | Разобраны 22/22 DLL: 191 PSCmdlet, входы/результаты, все P/Invoke и AssemblyRef, системные эффекты; module carriers отделены от 6 dependency-only файлов, явные third-party identities отмечены отдельно. |
 | Managed Beacon variants | static-complete | Четыре варианта без PDB сопоставлены с `d5e7…569d` по method identity и normalized IL; опубликованы изменённые/совпадающие методы и различия configuration/transport/commands/platform paths. |
 | Client UI workflows | static-complete | Матрица закрыта для 24/24 workflow; semantic review завершён для 11 Services, 13 Utilities и 128 ViewModels (152/152 файла). |
+| Этап 5: PostgreSQL, SignalR и Avalonia UI | runtime-complete для лабораторной цепочки | Каталог чистого стенда: 36 таблиц, 10 enum, 81 индекс; 24/24 workflow rendered; login/navigation/logout пройдены; `fixture-live-window` дошёл до открытого окна. Automatic reconnect после рестарта узла не прошёл и записан как FND-057. |
 | Этап 8: зашифрованные архивы | static-complete в доступной границе | Для двух ZipCrypto восстановлен `Ukraine2026`; DOCM/XLSM извлечены изолированно, OOXML/VBA/relationships хешированы и разобраны без исполнения. Для третьего ZIP пароль не найден, но подтверждён исходный notebook-путь; plaintext явно оставлен неизвестным. |
 
 ## Критерий завершения

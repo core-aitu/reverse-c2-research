@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="WorkflowSmoke.cs" />
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    <Reference Include="Avalonia.Base"><HintPath>$(Dist)/client/Avalonia.Base.dll</HintPath></Reference>
+    <Reference Include="Avalonia.Controls"><HintPath>$(Dist)/client/Avalonia.Controls.dll</HintPath></Reference>
+    <Reference Include="Avalonia.Desktop"><HintPath>$(Dist)/client/Avalonia.Desktop.dll</HintPath></Reference>
+    <Reference Include="Avalonia.Themes.Fluent"><HintPath>$(Dist)/client/Avalonia.Themes.Fluent.dll</HintPath></Reference>
+    <Reference Include="Avalonia.ReactiveUI"><HintPath>$(Dist)/client/Avalonia.ReactiveUI.dll</HintPath></Reference>
+    <Reference Include="Microsoft.AspNetCore.SignalR.Client"><HintPath>$(Dist)/client/Microsoft.AspNetCore.SignalR.Client.dll</HintPath></Reference>
+    <Reference Include="Microsoft.AspNetCore.SignalR.Client.Core"><HintPath>$(Dist)/client/Microsoft.AspNetCore.SignalR.Client.Core.dll</HintPath></Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Connections.Client"><HintPath>$(Dist)/client/Microsoft.AspNetCore.Http.Connections.Client.dll</HintPath></Reference>
+  </ItemGroup>
+</Project>

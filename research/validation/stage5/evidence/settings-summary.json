@@ -1,0 +1,25 @@
+{
+  "observed_root": "$HOME/SpecterInsight",
+  "files": [
+    {
+      "name": "client-settings.json",
+      "sha256": "b082581a939c9e2d5d3eb48f487a9ebbc5b7da7c142a56f0c68b752131bfcf0e",
+      "fields": {
+        "Server": "localhost:1337",
+        "Username": "admin",
+        "Password": "<redacted>",
+        "VerifySSL": false,
+        "SaveSettings": true
+      }
+    },
+    {
+      "name": "eula-acceptance.json",
+      "sha256": "20ebcae7c990f2b43df914bf7522b6fd4e0cb166b3645491d53e53c8044b81d6",
+      "fields": {
+        "IsAccepted": true,
+        "LastUpdated": "2026-11-22T13:35:00.4790473+00:00"
+      }
+    }
+  ],
+  "cache_observation": "With empty fixture responses, no product data cache files were persisted. Login populated the in-process cache services through authenticated REST requests; logout returned the stock UI to the login dialog. Mesa shader-cache files were excluded as platform data."
+}

@@ -1,0 +1,5119 @@
+{
+  "artifact": {
+    "path": "/tmp/reverse-c2-stage5/specter-study-8ULlfzgo/copy/server/SpecterInsight.Server.dll",
+    "sha256": "a6c454cdfc80e5d9bd3906747d30edbe4fcf69ab2e3c2b52b301b6f4b60e46a5",
+    "mvid": "1323c471-66a2-40e3-a048-50e1f9d4dcfb"
+  },
+  "global_initializers": [
+    {
+      "type": "SpecterInsight.Server.Services.Database.DatabaseService",
+      "Name": "CreateAccountTableAsync",
+      "parameters": []
+    },
+    {
+      "type": "SpecterInsight.Server.Services.Database.DatabaseService",
+      "Name": "CreateAcmeAccountTableAsync",
+      "parameters": []
+    },
+    {
+      "type": "SpecterInsight.Server.Services.Database.DatabaseService",
+      "Name": "CreateAiAgentDefinitionTableAsync",
+      "parameters": []
+    },
+    {
+      "type": "SpecterInsight.Server.Services.Database.DatabaseService",
+      "Name": "CreateAiAgentFunctionLinksTableAsync",
+      "parameters": []
+    },
+    {
+      "type": "SpecterInsight.Server.Services.Database.DatabaseService",
+      "Name": "CreateAiFunctionCallResultsTableAsync",
+      "parameters": []
+    },
+    {
+      "type": "SpecterInsight.Server.Services.Database.DatabaseService",
+      "Name": "CreateAiFunctionCallStatusEnumTypeAsync",
+      "parameters": []
+    },
+    {
+      "type": "SpecterInsight.Server.Services.Database.DatabaseService",
+      "Name": "CreateAiFunctionDefinitionTableAsync",
+      "parameters": []
+    },
+    {
+      "type": "SpecterInsight.Server.Services.Database.DatabaseService",
+      "Name": "CreateAiFunctionToolCallApprovalLevelEnumTypeAsync",
+      "parameters": []
+    },
+    {
+      "type": "SpecterInsight.Server.Services.Database.DatabaseService",
+      "Name": "CreateAiMessageArtifactsTableAsync",
+      "parameters": []
+    },
+    {
+      "type": "SpecterInsight.Server.Services.Database.DatabaseService",
+      "Name": "CreateAiMessageTableAsync",
+      "parameters": []
+    },
+    {
+      "type": "SpecterInsight.Server.Services.Database.DatabaseService",
+      "Name": "CreateAiSenderTypeEnumTypeAsync",
+      "parameters": []
+    },
+    {
+      "type": "SpecterInsight.Server.Services.Database.DatabaseService",
+      "Name": "CreateAiSessionStatusEnumTypeAsync",
+      "parameters": [
+        "System.Threading.CancellationToken"
+      ]
+    },
+    {
+      "type": "SpecterInsight.Server.Services.Database.DatabaseService",
+      "Name": "CreateAiSessionsTableAsync",
+      "parameters": [
+        "System.Threading.CancellationToken"
+      ]
+    },
+    {
+      "type": "SpecterInsight.Server.Services.Database.DatabaseService",
+      "Name": "CreateArtifactTableAsync",
+      "parameters": []
+    },
+    {
+      "type": "SpecterInsight.Server.Services.Database.DatabaseService",
+      "Name": "CreateDocumentationChunksTableAsync",
+      "parameters": []
+    },
+    {
+      "type": "SpecterInsight.Server.Services.Database.DatabaseService",
+      "Name": "CreateEmailAccountTableAsync",
+      "parameters": []
+    },
+    {
+      "type": "SpecterInsight.Server.Services.Database.DatabaseService",
+      "Name": "CreateEventsTableAsync",
+      "parameters": []
+    },
+    {
+      "type": "SpecterInsight.Server.Services.Database.DatabaseService",
+      "Name": "CreateImplantTaskStatusEnumTypeAsync",
+      "parameters": []
+    },
+    {
+      "type": "SpecterInsight.Server.Services.Database.DatabaseService",
+      "Name": "CreateImplantTaskTableAsync",
+      "parameters": []
+    },
+    {
+      "type": "SpecterInsight.Server.Services.Database.DatabaseService",
+      "Name": "CreateLabelTableAsync",
+      "parameters": []
+    },
+    {
+      "type": "SpecterInsight.Server.Services.Database.DatabaseService",
+      "Name": "CreateListenerTableAsync",
+      "parameters": []
+    },
+    {
+      "type": "SpecterInsight.Server.Services.Database.DatabaseService",
+      "Name": "CreateNetCachedFilesTableAsync",
+      "parameters": []
+    },
+    {
+      "type": "SpecterInsight.Server.Services.Database.DatabaseService",
+      "Name": "CreateNetCredentialsTableAsync",
+      "parameters": []
+    },
+    {
+      "type": "SpecterInsight.Server.Services.Database.DatabaseService",
+      "Name": "CreateNetHostIpAddressesTableAsync",
+      "parameters": []
+    },
+    {
+      "type": "SpecterInsight.Server.Services.Database.DatabaseService",
+      "Name": "CreateNetHostsTableAsync",
+      "parameters": []
+    },
+    {
+      "type": "SpecterInsight.Server.Services.Database.DatabaseService",
+      "Name": "CreateNetOpenPortsTableAsync",
+      "parameters": []
+    },
+    {
+      "type": "SpecterInsight.Server.Services.Database.DatabaseService",
+      "Name": "CreateNetProcessesTableAsync",
+      "parameters": []
+    },
+    {
+      "type": "SpecterInsight.Server.Services.Database.DatabaseService",
+      "Name": "CreateNetServicesTableAsync",
+      "parameters": []
+    },
+    {
+      "type": "SpecterInsight.Server.Services.Database.DatabaseService",
+      "Name": "CreateNetUsersTableAsync",
+      "parameters": []
+    },
+    {
+      "type": "SpecterInsight.Server.Services.Database.DatabaseService",
+      "Name": "CreatePayloadPipelinesTableAsync",
+      "parameters": []
+    },
+    {
+      "type": "SpecterInsight.Server.Services.Database.DatabaseService",
+      "Name": "CreatePersonaTableAsync",
+      "parameters": []
+    },
+    {
+      "type": "SpecterInsight.Server.Services.Database.DatabaseService",
+      "Name": "CreatePowerShellNotebookTableAsync",
+      "parameters": []
+    },
+    {
+      "type": "SpecterInsight.Server.Services.Database.DatabaseService",
+      "Name": "CreateRefreshTokensTableAsync",
+      "parameters": []
+    },
+    {
+      "type": "SpecterInsight.Server.Services.Database.DatabaseService",
+      "Name": "CreateScriptLabelTableAsync",
+      "parameters": []
+    },
+    {
+      "type": "SpecterInsight.Server.Services.Database.DatabaseService",
+      "Name": "CreateScriptTableAsync",
+      "parameters": []
+    },
+    {
+      "type": "SpecterInsight.Server.Services.Database.DatabaseService",
+      "Name": "CreateSessionTableAsync",
+      "parameters": []
+    },
+    {
+      "type": "SpecterInsight.Server.Services.Database.DatabaseService",
+      "Name": "CreateSshAuthTypeEnumAsync",
+      "parameters": []
+    },
+    {
+      "type": "SpecterInsight.Server.Services.Database.DatabaseService",
+      "Name": "CreateSshSessionTableAsync",
+      "parameters": []
+    },
+    {
+      "type": "SpecterInsight.Server.Services.Database.DatabaseService",
+      "Name": "CreateSshTaskStatusEnumAsync",
+      "parameters": []
+    },
+    {
+      "type": "SpecterInsight.Server.Services.Database.DatabaseService",
+      "Name": "CreateSshTaskTableAsync",
+      "parameters": []
+    },
+    {
+      "type": "SpecterInsight.Server.Services.Database.DatabaseService",
+      "Name": "CreateToolCallApprovalPolicyEnumTypeAsync",
+      "parameters": [
+        "System.Threading.CancellationToken"
+      ]
+    },
+    {
+      "type": "SpecterInsight.Server.Services.Database.DatabaseService",
+      "Name": "CreateWinRmAuthTypeEnumAsync",
+      "parameters": []
+    },
+    {
+      "type": "SpecterInsight.Server.Services.Database.DatabaseService",
+      "Name": "CreateWinRmSessionTableAsync",
+      "parameters": []
+    },
+    {
+      "type": "SpecterInsight.Server.Services.Database.DatabaseService",
+      "Name": "CreateWinRmTaskStatusEnumAsync",
+      "parameters": []
+    },
+    {
+      "type": "SpecterInsight.Server.Services.Database.DatabaseService",
+      "Name": "CreateWinRmTaskTableAsync",
+      "parameters": []
+    },
+    {
+      "type": "SpecterInsight.Server.Services.Database.DatabaseService",
+      "Name": "CreateWordlistTableAsync",
+      "parameters": []
+    }
+  ],
+  "available_initializers": [
+    {
+      "Name": "CreateAccountTableAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateAccountUsernameIndexAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateAcmeAccountTableAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateAiAgentDefinitionTableAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateAiAgentFunctionLinksTableAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateAiFunctionCallResultsTableAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateAiFunctionCallStatusEnumTypeAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateAiFunctionDefinitionTableAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateAiFunctionToolCallApprovalLevelEnumTypeAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateAiMessageArtifactsTableAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateAiMessageTableAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateAiSenderTypeEnumTypeAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateArtifactTableAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateDocumentationChunksTableAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateEmailAccountTableAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateEventsTableAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateImplantTaskStatusEnumTypeAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateImplantTaskTableAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateLabelTableAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateListenerTableAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateMachineIdIndexAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateNetCachedFilesTableAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateNetCredentialsTableAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateNetHostIpAddressesTableAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateNetHostsTableAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateNetOpenPortsTableAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateNetProcessesTableAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateNetServicesTableAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateNetUsersTableAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateNetUsersUniqueIndexAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreatePayloadPipelinesTableAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreatePersonaTableAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreatePowerShellNotebookTableAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateRefreshTokensTableAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateScriptIdIndex",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateScriptLabelTableAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateScriptTableAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateSessionIdIndexAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateSessionTableAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateSshAuthTypeEnumAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateSshSessionTableAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateSshTaskSessionIdIndexAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateSshTaskStatusEnumAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateSshTaskTableAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateTaskIdIndexAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateWinRmAuthTypeEnumAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateWinRmSessionTableAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateWinRmTaskSessionIdIndexAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateWinRmTaskStatusEnumAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateWinRmTaskTableAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "CreateWordlistTableAsync",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "EnsureCitextExtension",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "EnsureTrigramExtension",
+      "return_type": "System.Threading.Tasks.Task"
+    },
+    {
+      "Name": "GetAllAiAgentDefinitionsAsync",
+      "return_type": "System.Threading.Tasks.Task\u00601[[System.Collections.Generic.ICollection\u00601[[SpecterInsight.Server.Services.AiAgent.Classes.AiAgentDefinition, SpecterInsight.Server, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
+    }
+  ],
+  "database_create_methods": [
+    {
+      "Name": "CreateAccountAsync",
+      "parameters": [
+        "SpecterInsight.Server.Services.Database.Entities.Account"
+      ]
+    },
+    {
+      "Name": "CreateAccountTableAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreateAccountUsernameIndexAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreateAcmeAccountAsync",
+      "parameters": [
+        "SpecterInsight.Server.Services.Database.Entities.AcmeAccount"
+      ]
+    },
+    {
+      "Name": "CreateAcmeAccountTableAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreateAiAgentDefinitionTableAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreateAiAgentFunctionLinksTableAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreateAiFunctionCallResultsTableAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreateAiFunctionCallStatusEnumTypeAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreateAiFunctionDefinitionTableAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreateAiFunctionToolCallApprovalLevelEnumTypeAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreateAiMessageArtifactsTableAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreateAiMessageTableAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreateAiSenderTypeEnumTypeAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreateAiSessionStatusEnumTypeAsync",
+      "parameters": [
+        "System.Threading.CancellationToken"
+      ]
+    },
+    {
+      "Name": "CreateAiSessionsTableAsync",
+      "parameters": [
+        "System.Threading.CancellationToken"
+      ]
+    },
+    {
+      "Name": "CreateArtifactTableAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreateDocumentationChunksTableAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreateEmailAccountAsync",
+      "parameters": [
+        "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "System.String",
+        "System.String",
+        "System.String",
+        "System.String",
+        "System.String",
+        "System.Int32",
+        "SpecterInsight.Server.Models.Phishing.SmtpSocketType",
+        "System.String",
+        "System.Int32",
+        "SpecterInsight.Server.Models.Phishing.SmtpSocketType",
+        "System.String",
+        "System.Threading.CancellationToken"
+      ]
+    },
+    {
+      "Name": "CreateEmailAccountTableAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreateEventsTableAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreateImplantTaskStatusEnumTypeAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreateImplantTaskTableAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreateIndexAsync",
+      "parameters": [
+        "System.String",
+        "System.String"
+      ]
+    },
+    {
+      "Name": "CreateLabelAsync",
+      "parameters": [
+        "SpecterInsight.Server.Services.Database.Entities.ScriptLabel"
+      ]
+    },
+    {
+      "Name": "CreateLabelTableAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreateListenerAsync",
+      "parameters": [
+        "SpecterInsight.Server.Services.Database.Entities.Listener",
+        "System.Threading.CancellationToken"
+      ]
+    },
+    {
+      "Name": "CreateListenerTableAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreateMachineIdIndexAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreateNetCachedFilesTableAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreateNetCredentialsTableAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreateNetHostIpAddressesTableAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreateNetHostsTableAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreateNetOpenPortsTableAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreateNetProcessesTableAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreateNetServicesTableAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreateNetUsersTableAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreateNetUsersUniqueIndexAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreatePayloadPipelinesTableAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreatePersonaTableAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreatePowerShellNotebookTableAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreateRefreshTokenAsync",
+      "parameters": [
+        "System.String",
+        "SpecterInsight.Server.Services.Database.RefreshToken"
+      ]
+    },
+    {
+      "Name": "CreateRefreshTokensTableAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreateScriptIdIndex",
+      "parameters": []
+    },
+    {
+      "Name": "CreateScriptLabelTableAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreateScriptTableAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreateSessionIdIndexAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreateSessionTableAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreateSshAuthTypeEnumAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreateSshSessionTableAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreateSshTaskSessionIdIndexAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreateSshTaskStatusEnumAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreateSshTaskTableAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreateTaskAsync",
+      "parameters": [
+        "System.String",
+        "SpecterInsight.Server.Services.Database.Entities.ImplantTask",
+        "System.Threading.CancellationToken"
+      ]
+    },
+    {
+      "Name": "CreateTaskIdIndexAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreateToolCallApprovalPolicyEnumTypeAsync",
+      "parameters": [
+        "System.Threading.CancellationToken"
+      ]
+    },
+    {
+      "Name": "CreateWinRmAuthTypeEnumAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreateWinRmSessionTableAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreateWinRmTaskSessionIdIndexAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreateWinRmTaskStatusEnumAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreateWinRmTaskTableAsync",
+      "parameters": []
+    },
+    {
+      "Name": "CreateWordlistAsync",
+      "parameters": [
+        "System.String",
+        "System.String",
+        "System.String[]",
+        "System.String",
+        "System.Threading.CancellationToken"
+      ]
+    },
+    {
+      "Name": "CreateWordlistTableAsync",
+      "parameters": []
+    }
+  ],
+  "create_methods": [
+    {
+      "method": "EnsureCitextExtension",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "EnsureTrigramExtension",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateAiFunctionCallStatusEnumTypeAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateAiFunctionToolCallApprovalLevelEnumTypeAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateAiSenderTypeEnumTypeAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateAiSessionStatusEnumTypeAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateToolCallApprovalPolicyEnumTypeAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateImplantTaskStatusEnumTypeAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateSshAuthTypeEnumAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateSshTaskStatusEnumAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateWinRmAuthTypeEnumAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateWinRmTaskStatusEnumAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateAccountTableAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateAcmeAccountTableAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateAiAgentDefinitionTableAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateAiFunctionDefinitionTableAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateAiSessionsTableAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateAiFunctionCallResultsTableAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateAiMessageTableAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateArtifactTableAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateAiMessageArtifactsTableAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateAiAgentFunctionLinksTableAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateDocumentationChunksTableAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateEventsTableAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateLabelTableAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateListenerTableAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateNetHostsTableAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateNetCachedFilesTableAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateNetCredentialsTableAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateNetHostIpAddressesTableAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateNetOpenPortsTableAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateNetProcessesTableAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateNetServicesTableAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateNetUsersTableAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreatePayloadPipelinesTableAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreatePersonaTableAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateEmailAccountTableAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreatePowerShellNotebookTableAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateRefreshTokensTableAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateScriptTableAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateScriptLabelTableAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateSessionTableAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateImplantTaskTableAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateSshSessionTableAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateSshTaskTableAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateWinRmSessionTableAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateWinRmTaskTableAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateWordlistTableAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateAccountUsernameIndexAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateMachineIdIndexAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateNetUsersUniqueIndexAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateScriptIdIndex",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateSessionIdIndexAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateSshTaskSessionIdIndexAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateTaskIdIndexAsync",
+      "applied": true,
+      "error": null
+    },
+    {
+      "method": "CreateWinRmTaskSessionIdIndexAsync",
+      "applied": true,
+      "error": null
+    }
+  ],
+  "catalog": {
+    "enums": [
+      {
+        "labels": [
+          "Created",
+          "PendingApproval",
+          "Approved",
+          "Running",
+          "Failed",
+          "Denied",
+          "Complete"
+        ],
+        "enum_name": "aifunctioncallstatus",
+        "schema_name": "public"
+      },
+      {
+        "labels": [
+          "User",
+          "Assistant",
+          "System",
+          "Tool"
+        ],
+        "enum_name": "aisendertype",
+        "schema_name": "public"
+      },
+      {
+        "labels": [
+          "Running",
+          "Pausing",
+          "Paused",
+          "Starting",
+          "Stopped"
+        ],
+        "enum_name": "aisessionstatus",
+        "schema_name": "public"
+      },
+      {
+        "labels": [
+          "NotQueued",
+          "Queued",
+          "Tasked",
+          "Completed",
+          "Cancelled"
+        ],
+        "enum_name": "implanttaskstatus",
+        "schema_name": "public"
+      },
+      {
+        "labels": [
+          "Password",
+          "PrivateKey",
+          "Certificate"
+        ],
+        "enum_name": "sshauthtype",
+        "schema_name": "public"
+      },
+      {
+        "labels": [
+          "Running",
+          "Completed",
+          "Failed",
+          "Cancelled"
+        ],
+        "enum_name": "sshtaskstatus",
+        "schema_name": "public"
+      },
+      {
+        "labels": [
+          "Low",
+          "Medium",
+          "High"
+        ],
+        "enum_name": "toolcallapprovallevel",
+        "schema_name": "public"
+      },
+      {
+        "labels": [
+          "AutoApproveAll",
+          "AutoApproveLow",
+          "AutoApproveMedium",
+          "AutoApproveNone"
+        ],
+        "enum_name": "toolcallapprovalpolicy",
+        "schema_name": "public"
+      },
+      {
+        "labels": [
+          "Password",
+          "PassTheHash",
+          "Kerberos",
+          "Certificate"
+        ],
+        "enum_name": "winrmauthtype",
+        "schema_name": "public"
+      },
+      {
+        "labels": [
+          "Running",
+          "Completed",
+          "Failed",
+          "Cancelled"
+        ],
+        "enum_name": "winrmtaskstatus",
+        "schema_name": "public"
+      }
+    ],
+    "tables": [
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type": "integer",
+            "default": "nextval(\u0027account_id_seq\u0027::regclass)",
+            "ordinal": 1,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "username",
+            "type": "character varying(32)",
+            "default": null,
+            "ordinal": 2,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "hash",
+            "type": "character(60)",
+            "default": null,
+            "ordinal": 3,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "enabled",
+            "type": "boolean",
+            "default": null,
+            "ordinal": 4,
+            "identity": null,
+            "not_null": true
+          }
+        ],
+        "indexes": [
+          {
+            "name": "account_pkey",
+            "valid": true,
+            "unique": true,
+            "primary": true,
+            "definition": "CREATE UNIQUE INDEX account_pkey ON public.account USING btree (id)"
+          },
+          {
+            "name": "account_username_key",
+            "valid": true,
+            "unique": true,
+            "primary": false,
+            "definition": "CREATE UNIQUE INDEX account_username_key ON public.account USING btree (username)"
+          },
+          {
+            "name": "username_idx",
+            "valid": true,
+            "unique": false,
+            "primary": false,
+            "definition": "CREATE INDEX username_idx ON public.account USING btree (username)"
+          }
+        ],
+        "table_name": "account",
+        "constraints": [
+          {
+            "name": "account_pkey",
+            "type": "p",
+            "validated": true,
+            "definition": "PRIMARY KEY (id)"
+          },
+          {
+            "name": "account_username_key",
+            "type": "u",
+            "validated": true,
+            "definition": "UNIQUE (username)"
+          }
+        ],
+        "schema_name": "public"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type": "integer",
+            "default": "nextval(\u0027acmeaccount_id_seq\u0027::regclass)",
+            "ordinal": 1,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "email",
+            "type": "text",
+            "default": null,
+            "ordinal": 2,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "certificate",
+            "type": "text",
+            "default": null,
+            "ordinal": 3,
+            "identity": null,
+            "not_null": true
+          }
+        ],
+        "indexes": [
+          {
+            "name": "acmeaccount_email_key",
+            "valid": true,
+            "unique": true,
+            "primary": false,
+            "definition": "CREATE UNIQUE INDEX acmeaccount_email_key ON public.acmeaccount USING btree (email)"
+          },
+          {
+            "name": "acmeaccount_pkey",
+            "valid": true,
+            "unique": true,
+            "primary": true,
+            "definition": "CREATE UNIQUE INDEX acmeaccount_pkey ON public.acmeaccount USING btree (id)"
+          }
+        ],
+        "table_name": "acmeaccount",
+        "constraints": [
+          {
+            "name": "acmeaccount_email_key",
+            "type": "u",
+            "validated": true,
+            "definition": "UNIQUE (email)"
+          },
+          {
+            "name": "acmeaccount_pkey",
+            "type": "p",
+            "validated": true,
+            "definition": "PRIMARY KEY (id)"
+          }
+        ],
+        "schema_name": "public"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type": "integer",
+            "default": "nextval(\u0027aiagentdefinitions_id_seq\u0027::regclass)",
+            "ordinal": 1,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "agentid",
+            "type": "text",
+            "default": null,
+            "ordinal": 2,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "name",
+            "type": "text",
+            "default": null,
+            "ordinal": 3,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "description",
+            "type": "text",
+            "default": null,
+            "ordinal": 4,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "prompt",
+            "type": "text",
+            "default": null,
+            "ordinal": 5,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "includespecterscripts",
+            "type": "boolean",
+            "default": null,
+            "ordinal": 6,
+            "identity": null,
+            "not_null": true
+          }
+        ],
+        "indexes": [
+          {
+            "name": "aiagentdefinitions_agentid_key",
+            "valid": true,
+            "unique": true,
+            "primary": false,
+            "definition": "CREATE UNIQUE INDEX aiagentdefinitions_agentid_key ON public.aiagentdefinitions USING btree (agentid)"
+          },
+          {
+            "name": "aiagentdefinitions_name_key",
+            "valid": true,
+            "unique": true,
+            "primary": false,
+            "definition": "CREATE UNIQUE INDEX aiagentdefinitions_name_key ON public.aiagentdefinitions USING btree (name)"
+          },
+          {
+            "name": "aiagentdefinitions_pkey",
+            "valid": true,
+            "unique": true,
+            "primary": true,
+            "definition": "CREATE UNIQUE INDEX aiagentdefinitions_pkey ON public.aiagentdefinitions USING btree (id)"
+          }
+        ],
+        "table_name": "aiagentdefinitions",
+        "constraints": [
+          {
+            "name": "aiagentdefinitions_agentid_key",
+            "type": "u",
+            "validated": true,
+            "definition": "UNIQUE (agentid)"
+          },
+          {
+            "name": "aiagentdefinitions_name_key",
+            "type": "u",
+            "validated": true,
+            "definition": "UNIQUE (name)"
+          },
+          {
+            "name": "aiagentdefinitions_pkey",
+            "type": "p",
+            "validated": true,
+            "definition": "PRIMARY KEY (id)"
+          }
+        ],
+        "schema_name": "public"
+      },
+      {
+        "columns": [
+          {
+            "name": "agentid",
+            "type": "integer",
+            "default": null,
+            "ordinal": 1,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "functionid",
+            "type": "integer",
+            "default": null,
+            "ordinal": 2,
+            "identity": null,
+            "not_null": true
+          }
+        ],
+        "indexes": [
+          {
+            "name": "aiagentfunctionlinks_pkey",
+            "valid": true,
+            "unique": true,
+            "primary": true,
+            "definition": "CREATE UNIQUE INDEX aiagentfunctionlinks_pkey ON public.aiagentfunctionlinks USING btree (agentid, functionid)"
+          }
+        ],
+        "table_name": "aiagentfunctionlinks",
+        "constraints": [
+          {
+            "name": "aiagentfunctionlinks_agentid_fkey",
+            "type": "f",
+            "validated": true,
+            "definition": "FOREIGN KEY (agentid) REFERENCES aiagentdefinitions(id) ON DELETE CASCADE"
+          },
+          {
+            "name": "aiagentfunctionlinks_functionid_fkey",
+            "type": "f",
+            "validated": true,
+            "definition": "FOREIGN KEY (functionid) REFERENCES aifunctiondefinitions(id) ON DELETE CASCADE"
+          },
+          {
+            "name": "aiagentfunctionlinks_pkey",
+            "type": "p",
+            "validated": true,
+            "definition": "PRIMARY KEY (agentid, functionid)"
+          }
+        ],
+        "schema_name": "public"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type": "integer",
+            "default": "nextval(\u0027aifunctioncallresults_id_seq\u0027::regclass)",
+            "ordinal": 1,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "sessionid",
+            "type": "integer",
+            "default": null,
+            "ordinal": 2,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "toolcallid",
+            "type": "text",
+            "default": null,
+            "ordinal": 3,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "name",
+            "type": "text",
+            "default": null,
+            "ordinal": 4,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "description",
+            "type": "text",
+            "default": null,
+            "ordinal": 5,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "argumentsjson",
+            "type": "text",
+            "default": null,
+            "ordinal": 6,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "output",
+            "type": "text",
+            "default": null,
+            "ordinal": 7,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "error",
+            "type": "text",
+            "default": null,
+            "ordinal": 8,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "executedutc",
+            "type": "timestamp with time zone",
+            "default": null,
+            "ordinal": 9,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "approvalstatus",
+            "type": "aifunctioncallstatus",
+            "default": null,
+            "ordinal": 10,
+            "identity": null,
+            "not_null": true
+          }
+        ],
+        "indexes": [
+          {
+            "name": "aifunctioncallresults_pkey",
+            "valid": true,
+            "unique": true,
+            "primary": true,
+            "definition": "CREATE UNIQUE INDEX aifunctioncallresults_pkey ON public.aifunctioncallresults USING btree (id)"
+          },
+          {
+            "name": "aifunctioncallresults_toolcallid_key",
+            "valid": true,
+            "unique": true,
+            "primary": false,
+            "definition": "CREATE UNIQUE INDEX aifunctioncallresults_toolcallid_key ON public.aifunctioncallresults USING btree (toolcallid)"
+          }
+        ],
+        "table_name": "aifunctioncallresults",
+        "constraints": [
+          {
+            "name": "aifunctioncallresults_pkey",
+            "type": "p",
+            "validated": true,
+            "definition": "PRIMARY KEY (id)"
+          },
+          {
+            "name": "aifunctioncallresults_sessionid_fkey",
+            "type": "f",
+            "validated": true,
+            "definition": "FOREIGN KEY (sessionid) REFERENCES aisessions(id) ON DELETE CASCADE"
+          },
+          {
+            "name": "aifunctioncallresults_toolcallid_key",
+            "type": "u",
+            "validated": true,
+            "definition": "UNIQUE (toolcallid)"
+          }
+        ],
+        "schema_name": "public"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type": "integer",
+            "default": "nextval(\u0027aifunctiondefinitions_id_seq\u0027::regclass)",
+            "ordinal": 1,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "funcid",
+            "type": "text",
+            "default": null,
+            "ordinal": 2,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "name",
+            "type": "text",
+            "default": null,
+            "ordinal": 3,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "internalname",
+            "type": "text",
+            "default": null,
+            "ordinal": 4,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "description",
+            "type": "text",
+            "default": null,
+            "ordinal": 5,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "documentation",
+            "type": "text",
+            "default": null,
+            "ordinal": 6,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "definition",
+            "type": "text",
+            "default": null,
+            "ordinal": 7,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "approvallevel",
+            "type": "toolcallapprovallevel",
+            "default": null,
+            "ordinal": 8,
+            "identity": null,
+            "not_null": true
+          }
+        ],
+        "indexes": [
+          {
+            "name": "aifunctiondefinitions_funcid_key",
+            "valid": true,
+            "unique": true,
+            "primary": false,
+            "definition": "CREATE UNIQUE INDEX aifunctiondefinitions_funcid_key ON public.aifunctiondefinitions USING btree (funcid)"
+          },
+          {
+            "name": "aifunctiondefinitions_internalname_key",
+            "valid": true,
+            "unique": true,
+            "primary": false,
+            "definition": "CREATE UNIQUE INDEX aifunctiondefinitions_internalname_key ON public.aifunctiondefinitions USING btree (internalname)"
+          },
+          {
+            "name": "aifunctiondefinitions_name_key",
+            "valid": true,
+            "unique": true,
+            "primary": false,
+            "definition": "CREATE UNIQUE INDEX aifunctiondefinitions_name_key ON public.aifunctiondefinitions USING btree (name)"
+          },
+          {
+            "name": "aifunctiondefinitions_pkey",
+            "valid": true,
+            "unique": true,
+            "primary": true,
+            "definition": "CREATE UNIQUE INDEX aifunctiondefinitions_pkey ON public.aifunctiondefinitions USING btree (id)"
+          },
+          {
+            "name": "name_idx",
+            "valid": true,
+            "unique": false,
+            "primary": false,
+            "definition": "CREATE INDEX name_idx ON public.aifunctiondefinitions USING btree (name)"
+          }
+        ],
+        "table_name": "aifunctiondefinitions",
+        "constraints": [
+          {
+            "name": "aifunctiondefinitions_funcid_key",
+            "type": "u",
+            "validated": true,
+            "definition": "UNIQUE (funcid)"
+          },
+          {
+            "name": "aifunctiondefinitions_internalname_key",
+            "type": "u",
+            "validated": true,
+            "definition": "UNIQUE (internalname)"
+          },
+          {
+            "name": "aifunctiondefinitions_name_key",
+            "type": "u",
+            "validated": true,
+            "definition": "UNIQUE (name)"
+          },
+          {
+            "name": "aifunctiondefinitions_pkey",
+            "type": "p",
+            "validated": true,
+            "definition": "PRIMARY KEY (id)"
+          }
+        ],
+        "schema_name": "public"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type": "integer",
+            "default": "nextval(\u0027aimessageartifacts_id_seq\u0027::regclass)",
+            "ordinal": 1,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "aimessageid",
+            "type": "integer",
+            "default": null,
+            "ordinal": 2,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "artifactid",
+            "type": "integer",
+            "default": null,
+            "ordinal": 3,
+            "identity": null,
+            "not_null": true
+          }
+        ],
+        "indexes": [
+          {
+            "name": "aimessageartifacts_aimessageid_artifactid_key",
+            "valid": true,
+            "unique": true,
+            "primary": false,
+            "definition": "CREATE UNIQUE INDEX aimessageartifacts_aimessageid_artifactid_key ON public.aimessageartifacts USING btree (aimessageid, artifactid)"
+          },
+          {
+            "name": "aimessageartifacts_pkey",
+            "valid": true,
+            "unique": true,
+            "primary": true,
+            "definition": "CREATE UNIQUE INDEX aimessageartifacts_pkey ON public.aimessageartifacts USING btree (id)"
+          }
+        ],
+        "table_name": "aimessageartifacts",
+        "constraints": [
+          {
+            "name": "aimessageartifacts_aimessageid_artifactid_key",
+            "type": "u",
+            "validated": true,
+            "definition": "UNIQUE (aimessageid, artifactid)"
+          },
+          {
+            "name": "aimessageartifacts_aimessageid_fkey",
+            "type": "f",
+            "validated": true,
+            "definition": "FOREIGN KEY (aimessageid) REFERENCES aimessages(id) ON DELETE CASCADE"
+          },
+          {
+            "name": "aimessageartifacts_artifactid_fkey",
+            "type": "f",
+            "validated": true,
+            "definition": "FOREIGN KEY (artifactid) REFERENCES artifacts(id) ON DELETE CASCADE"
+          },
+          {
+            "name": "aimessageartifacts_pkey",
+            "type": "p",
+            "validated": true,
+            "definition": "PRIMARY KEY (id)"
+          }
+        ],
+        "schema_name": "public"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type": "integer",
+            "default": "nextval(\u0027aimessages_id_seq\u0027::regclass)",
+            "ordinal": 1,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "sessionid",
+            "type": "integer",
+            "default": null,
+            "ordinal": 2,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "messageid",
+            "type": "text",
+            "default": null,
+            "ordinal": 3,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "timecreated",
+            "type": "timestamp with time zone",
+            "default": null,
+            "ordinal": 4,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "timecompleted",
+            "type": "timestamp with time zone",
+            "default": null,
+            "ordinal": 5,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "sendertype",
+            "type": "aisendertype",
+            "default": null,
+            "ordinal": 6,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "sendername",
+            "type": "text",
+            "default": null,
+            "ordinal": 7,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "receivername",
+            "type": "text",
+            "default": null,
+            "ordinal": 8,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "message",
+            "type": "text",
+            "default": null,
+            "ordinal": 9,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "summarizedtext",
+            "type": "text",
+            "default": null,
+            "ordinal": 10,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "status",
+            "type": "text",
+            "default": null,
+            "ordinal": 11,
+            "identity": null,
+            "not_null": true
+          }
+        ],
+        "indexes": [
+          {
+            "name": "aimessages_messageid_key",
+            "valid": true,
+            "unique": true,
+            "primary": false,
+            "definition": "CREATE UNIQUE INDEX aimessages_messageid_key ON public.aimessages USING btree (messageid)"
+          },
+          {
+            "name": "aimessages_pkey",
+            "valid": true,
+            "unique": true,
+            "primary": true,
+            "definition": "CREATE UNIQUE INDEX aimessages_pkey ON public.aimessages USING btree (id)"
+          }
+        ],
+        "table_name": "aimessages",
+        "constraints": [
+          {
+            "name": "aimessages_messageid_key",
+            "type": "u",
+            "validated": true,
+            "definition": "UNIQUE (messageid)"
+          },
+          {
+            "name": "aimessages_pkey",
+            "type": "p",
+            "validated": true,
+            "definition": "PRIMARY KEY (id)"
+          },
+          {
+            "name": "aimessages_sessionid_fkey",
+            "type": "f",
+            "validated": true,
+            "definition": "FOREIGN KEY (sessionid) REFERENCES aisessions(id) ON DELETE CASCADE"
+          }
+        ],
+        "schema_name": "public"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type": "integer",
+            "default": "nextval(\u0027aisessions_id_seq\u0027::regclass)",
+            "ordinal": 1,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "sessionid",
+            "type": "text",
+            "default": null,
+            "ordinal": 2,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "name",
+            "type": "text",
+            "default": null,
+            "ordinal": 3,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "agents",
+            "type": "text",
+            "default": null,
+            "ordinal": 4,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "modeltype",
+            "type": "text",
+            "default": null,
+            "ordinal": 5,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "modelname",
+            "type": "text",
+            "default": null,
+            "ordinal": 6,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "approvalpolicy",
+            "type": "toolcallapprovalpolicy",
+            "default": null,
+            "ordinal": 7,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "status",
+            "type": "aisessionstatus",
+            "default": null,
+            "ordinal": 8,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "plan",
+            "type": "text",
+            "default": null,
+            "ordinal": 9,
+            "identity": null,
+            "not_null": true
+          }
+        ],
+        "indexes": [
+          {
+            "name": "aisessions_name_key",
+            "valid": true,
+            "unique": true,
+            "primary": false,
+            "definition": "CREATE UNIQUE INDEX aisessions_name_key ON public.aisessions USING btree (name)"
+          },
+          {
+            "name": "aisessions_pkey",
+            "valid": true,
+            "unique": true,
+            "primary": true,
+            "definition": "CREATE UNIQUE INDEX aisessions_pkey ON public.aisessions USING btree (id)"
+          },
+          {
+            "name": "aisessions_sessionid_key",
+            "valid": true,
+            "unique": true,
+            "primary": false,
+            "definition": "CREATE UNIQUE INDEX aisessions_sessionid_key ON public.aisessions USING btree (sessionid)"
+          }
+        ],
+        "table_name": "aisessions",
+        "constraints": [
+          {
+            "name": "aisessions_name_key",
+            "type": "u",
+            "validated": true,
+            "definition": "UNIQUE (name)"
+          },
+          {
+            "name": "aisessions_pkey",
+            "type": "p",
+            "validated": true,
+            "definition": "PRIMARY KEY (id)"
+          },
+          {
+            "name": "aisessions_sessionid_key",
+            "type": "u",
+            "validated": true,
+            "definition": "UNIQUE (sessionid)"
+          }
+        ],
+        "schema_name": "public"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type": "integer",
+            "default": "nextval(\u0027artifacts_id_seq\u0027::regclass)",
+            "ordinal": 1,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "sha256",
+            "type": "text",
+            "default": null,
+            "ordinal": 2,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "name",
+            "type": "text",
+            "default": null,
+            "ordinal": 3,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "extension",
+            "type": "text",
+            "default": null,
+            "ordinal": 4,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "username",
+            "type": "text",
+            "default": null,
+            "ordinal": 5,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "filesize",
+            "type": "bigint",
+            "default": null,
+            "ordinal": 6,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "sourcetype",
+            "type": "text",
+            "default": null,
+            "ordinal": 7,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "source",
+            "type": "text",
+            "default": null,
+            "ordinal": 8,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "sourcepath",
+            "type": "text",
+            "default": null,
+            "ordinal": 9,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "createdtimestamp",
+            "type": "timestamp with time zone",
+            "default": null,
+            "ordinal": 10,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "ingestedtimestamp",
+            "type": "timestamp with time zone",
+            "default": null,
+            "ordinal": 11,
+            "identity": null,
+            "not_null": true
+          }
+        ],
+        "indexes": [
+          {
+            "name": "artifacts_pkey",
+            "valid": true,
+            "unique": true,
+            "primary": true,
+            "definition": "CREATE UNIQUE INDEX artifacts_pkey ON public.artifacts USING btree (id)"
+          }
+        ],
+        "table_name": "artifacts",
+        "constraints": [
+          {
+            "name": "artifacts_pkey",
+            "type": "p",
+            "validated": true,
+            "definition": "PRIMARY KEY (id)"
+          }
+        ],
+        "schema_name": "public"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type": "integer",
+            "default": "nextval(\u0027documentationchunks_id_seq\u0027::regclass)",
+            "ordinal": 1,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "path",
+            "type": "text",
+            "default": null,
+            "ordinal": 2,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "title",
+            "type": "text",
+            "default": null,
+            "ordinal": 3,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "content",
+            "type": "text",
+            "default": null,
+            "ordinal": 4,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "embedding",
+            "type": "real[]",
+            "default": null,
+            "ordinal": 5,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "chunkindex",
+            "type": "integer",
+            "default": "0",
+            "ordinal": 6,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "indexedat",
+            "type": "timestamp with time zone",
+            "default": "now()",
+            "ordinal": 7,
+            "identity": null,
+            "not_null": true
+          }
+        ],
+        "indexes": [
+          {
+            "name": "documentationchunks_pkey",
+            "valid": true,
+            "unique": true,
+            "primary": true,
+            "definition": "CREATE UNIQUE INDEX documentationchunks_pkey ON public.documentationchunks USING btree (id)"
+          },
+          {
+            "name": "ix_doc_chunks_path_idx",
+            "valid": true,
+            "unique": true,
+            "primary": false,
+            "definition": "CREATE UNIQUE INDEX ix_doc_chunks_path_idx ON public.documentationchunks USING btree (path, chunkindex)"
+          }
+        ],
+        "table_name": "documentationchunks",
+        "constraints": [
+          {
+            "name": "documentationchunks_pkey",
+            "type": "p",
+            "validated": true,
+            "definition": "PRIMARY KEY (id)"
+          }
+        ],
+        "schema_name": "public"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type": "integer",
+            "default": "nextval(\u0027emailaccount_id_seq\u0027::regclass)",
+            "ordinal": 1,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "personaid",
+            "type": "integer",
+            "default": null,
+            "ordinal": 2,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "provider",
+            "type": "text",
+            "default": "\u0027\u0027::text",
+            "ordinal": 3,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "emailaddress",
+            "type": "text",
+            "default": null,
+            "ordinal": 4,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "username",
+            "type": "text",
+            "default": "\u0027\u0027::text",
+            "ordinal": 5,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "password",
+            "type": "text",
+            "default": "\u0027\u0027::text",
+            "ordinal": 6,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "imaphost",
+            "type": "text",
+            "default": "\u0027\u0027::text",
+            "ordinal": 7,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "imapport",
+            "type": "integer",
+            "default": "993",
+            "ordinal": 8,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "imapssl",
+            "type": "text",
+            "default": "\u0027SslOnConnect\u0027::text",
+            "ordinal": 9,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "smtphost",
+            "type": "text",
+            "default": "\u0027\u0027::text",
+            "ordinal": 10,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "smtpport",
+            "type": "integer",
+            "default": "465",
+            "ordinal": 11,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "smtpssl",
+            "type": "text",
+            "default": "\u0027SslOnConnect\u0027::text",
+            "ordinal": 12,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "active",
+            "type": "boolean",
+            "default": "true",
+            "ordinal": 13,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "notes",
+            "type": "text",
+            "default": "\u0027\u0027::text",
+            "ordinal": 14,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "createdat",
+            "type": "timestamp with time zone",
+            "default": "now()",
+            "ordinal": 15,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "updatedat",
+            "type": "timestamp with time zone",
+            "default": "now()",
+            "ordinal": 16,
+            "identity": null,
+            "not_null": true
+          }
+        ],
+        "indexes": [
+          {
+            "name": "emailaccount_emailaddress_key",
+            "valid": true,
+            "unique": true,
+            "primary": false,
+            "definition": "CREATE UNIQUE INDEX emailaccount_emailaddress_key ON public.emailaccount USING btree (emailaddress)"
+          },
+          {
+            "name": "emailaccount_pkey",
+            "valid": true,
+            "unique": true,
+            "primary": true,
+            "definition": "CREATE UNIQUE INDEX emailaccount_pkey ON public.emailaccount USING btree (id)"
+          }
+        ],
+        "table_name": "emailaccount",
+        "constraints": [
+          {
+            "name": "emailaccount_emailaddress_key",
+            "type": "u",
+            "validated": true,
+            "definition": "UNIQUE (emailaddress)"
+          },
+          {
+            "name": "emailaccount_personaid_fkey",
+            "type": "f",
+            "validated": true,
+            "definition": "FOREIGN KEY (personaid) REFERENCES persona(id) ON DELETE SET NULL"
+          },
+          {
+            "name": "emailaccount_pkey",
+            "type": "p",
+            "validated": true,
+            "definition": "PRIMARY KEY (id)"
+          }
+        ],
+        "schema_name": "public"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type": "integer",
+            "default": "nextval(\u0027event_id_seq\u0027::regclass)",
+            "ordinal": 1,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "identifier",
+            "type": "text",
+            "default": null,
+            "ordinal": 2,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "timestamp",
+            "type": "timestamp with time zone",
+            "default": null,
+            "ordinal": 3,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "type",
+            "type": "text",
+            "default": null,
+            "ordinal": 4,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "source",
+            "type": "text",
+            "default": null,
+            "ordinal": 5,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "outcome",
+            "type": "text",
+            "default": null,
+            "ordinal": 6,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "system",
+            "type": "text",
+            "default": null,
+            "ordinal": 7,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "message",
+            "type": "text",
+            "default": null,
+            "ordinal": 8,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "details",
+            "type": "text",
+            "default": null,
+            "ordinal": 9,
+            "identity": null,
+            "not_null": true
+          }
+        ],
+        "indexes": [
+          {
+            "name": "event_pkey",
+            "valid": true,
+            "unique": true,
+            "primary": true,
+            "definition": "CREATE UNIQUE INDEX event_pkey ON public.event USING btree (id)"
+          }
+        ],
+        "table_name": "event",
+        "constraints": [
+          {
+            "name": "event_pkey",
+            "type": "p",
+            "validated": true,
+            "definition": "PRIMARY KEY (id)"
+          }
+        ],
+        "schema_name": "public"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type": "integer",
+            "default": "nextval(\u0027implanttasks_id_seq\u0027::regclass)",
+            "ordinal": 1,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "sessionid",
+            "type": "integer",
+            "default": null,
+            "ordinal": 2,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "taskid",
+            "type": "text",
+            "default": null,
+            "ordinal": 3,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "scriptblock",
+            "type": "text",
+            "default": null,
+            "ordinal": 4,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "runinbackground",
+            "type": "boolean",
+            "default": null,
+            "ordinal": 5,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "textoutputonly",
+            "type": "boolean",
+            "default": null,
+            "ordinal": 6,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "labels",
+            "type": "text[]",
+            "default": null,
+            "ordinal": 7,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "scriptname",
+            "type": "text",
+            "default": null,
+            "ordinal": 8,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "scriptdescription",
+            "type": "text",
+            "default": null,
+            "ordinal": 9,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "status",
+            "type": "implanttaskstatus",
+            "default": null,
+            "ordinal": 10,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "timequeued",
+            "type": "timestamp with time zone",
+            "default": null,
+            "ordinal": 11,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "timetasked",
+            "type": "timestamp with time zone",
+            "default": null,
+            "ordinal": 12,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "timecompleted",
+            "type": "timestamp with time zone",
+            "default": null,
+            "ordinal": 13,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "results",
+            "type": "text",
+            "default": null,
+            "ordinal": 14,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "errors",
+            "type": "text",
+            "default": null,
+            "ordinal": 15,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "log",
+            "type": "text",
+            "default": null,
+            "ordinal": 16,
+            "identity": null,
+            "not_null": false
+          }
+        ],
+        "indexes": [
+          {
+            "name": "implanttasks_pkey",
+            "valid": true,
+            "unique": true,
+            "primary": true,
+            "definition": "CREATE UNIQUE INDEX implanttasks_pkey ON public.implanttasks USING btree (id)"
+          },
+          {
+            "name": "implanttasks_taskid_key",
+            "valid": true,
+            "unique": true,
+            "primary": false,
+            "definition": "CREATE UNIQUE INDEX implanttasks_taskid_key ON public.implanttasks USING btree (taskid)"
+          },
+          {
+            "name": "taskid_idx",
+            "valid": true,
+            "unique": false,
+            "primary": false,
+            "definition": "CREATE INDEX taskid_idx ON public.implanttasks USING btree (taskid)"
+          }
+        ],
+        "table_name": "implanttasks",
+        "constraints": [
+          {
+            "name": "implanttasks_pkey",
+            "type": "p",
+            "validated": true,
+            "definition": "PRIMARY KEY (id)"
+          },
+          {
+            "name": "implanttasks_sessionid_fkey",
+            "type": "f",
+            "validated": true,
+            "definition": "FOREIGN KEY (sessionid) REFERENCES session(id) ON DELETE CASCADE"
+          },
+          {
+            "name": "implanttasks_taskid_key",
+            "type": "u",
+            "validated": true,
+            "definition": "UNIQUE (taskid)"
+          }
+        ],
+        "schema_name": "public"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type": "integer",
+            "default": "nextval(\u0027label_id_seq\u0027::regclass)",
+            "ordinal": 1,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "name",
+            "type": "text",
+            "default": null,
+            "ordinal": 2,
+            "identity": null,
+            "not_null": true
+          }
+        ],
+        "indexes": [
+          {
+            "name": "label_name_key",
+            "valid": true,
+            "unique": true,
+            "primary": false,
+            "definition": "CREATE UNIQUE INDEX label_name_key ON public.label USING btree (name)"
+          },
+          {
+            "name": "label_pkey",
+            "valid": true,
+            "unique": true,
+            "primary": true,
+            "definition": "CREATE UNIQUE INDEX label_pkey ON public.label USING btree (id)"
+          }
+        ],
+        "table_name": "label",
+        "constraints": [
+          {
+            "name": "label_name_key",
+            "type": "u",
+            "validated": true,
+            "definition": "UNIQUE (name)"
+          },
+          {
+            "name": "label_pkey",
+            "type": "p",
+            "validated": true,
+            "definition": "PRIMARY KEY (id)"
+          }
+        ],
+        "schema_name": "public"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type": "integer",
+            "default": "nextval(\u0027listener_id_seq\u0027::regclass)",
+            "ordinal": 1,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "prefix",
+            "type": "text",
+            "default": null,
+            "ordinal": 2,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "enabled",
+            "type": "boolean",
+            "default": null,
+            "ordinal": 3,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "certificatename",
+            "type": "text",
+            "default": null,
+            "ordinal": 4,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "webdavpath",
+            "type": "text",
+            "default": null,
+            "ordinal": 5,
+            "identity": null,
+            "not_null": false
+          }
+        ],
+        "indexes": [
+          {
+            "name": "listener_pkey",
+            "valid": true,
+            "unique": true,
+            "primary": true,
+            "definition": "CREATE UNIQUE INDEX listener_pkey ON public.listener USING btree (id)"
+          },
+          {
+            "name": "listener_prefix_key",
+            "valid": true,
+            "unique": true,
+            "primary": false,
+            "definition": "CREATE UNIQUE INDEX listener_prefix_key ON public.listener USING btree (prefix)"
+          }
+        ],
+        "table_name": "listener",
+        "constraints": [
+          {
+            "name": "listener_pkey",
+            "type": "p",
+            "validated": true,
+            "definition": "PRIMARY KEY (id)"
+          },
+          {
+            "name": "listener_prefix_key",
+            "type": "u",
+            "validated": true,
+            "definition": "UNIQUE (prefix)"
+          }
+        ],
+        "schema_name": "public"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type": "integer",
+            "default": "nextval(\u0027netcachedfiles_id_seq\u0027::regclass)",
+            "ordinal": 1,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "fileid",
+            "type": "text",
+            "default": null,
+            "ordinal": 2,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "hostid",
+            "type": "text",
+            "default": null,
+            "ordinal": 3,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "path",
+            "type": "text",
+            "default": null,
+            "ordinal": 4,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "sizebytes",
+            "type": "bigint",
+            "default": null,
+            "ordinal": 5,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "hashmd5",
+            "type": "text",
+            "default": null,
+            "ordinal": 6,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "hashsha256",
+            "type": "text",
+            "default": null,
+            "ordinal": 7,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "content",
+            "type": "text",
+            "default": null,
+            "ordinal": 8,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "mimetype",
+            "type": "text",
+            "default": null,
+            "ordinal": 9,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "isdirectory",
+            "type": "boolean",
+            "default": "false",
+            "ordinal": 10,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "discoveredat",
+            "type": "timestamp with time zone",
+            "default": null,
+            "ordinal": 11,
+            "identity": null,
+            "not_null": true
+          }
+        ],
+        "indexes": [
+          {
+            "name": "netcachedfiles_fileid_key",
+            "valid": true,
+            "unique": true,
+            "primary": false,
+            "definition": "CREATE UNIQUE INDEX netcachedfiles_fileid_key ON public.netcachedfiles USING btree (fileid)"
+          },
+          {
+            "name": "netcachedfiles_hostid_path_key",
+            "valid": true,
+            "unique": true,
+            "primary": false,
+            "definition": "CREATE UNIQUE INDEX netcachedfiles_hostid_path_key ON public.netcachedfiles USING btree (hostid, path)"
+          },
+          {
+            "name": "netcachedfiles_pkey",
+            "valid": true,
+            "unique": true,
+            "primary": true,
+            "definition": "CREATE UNIQUE INDEX netcachedfiles_pkey ON public.netcachedfiles USING btree (id)"
+          }
+        ],
+        "table_name": "netcachedfiles",
+        "constraints": [
+          {
+            "name": "netcachedfiles_fileid_key",
+            "type": "u",
+            "validated": true,
+            "definition": "UNIQUE (fileid)"
+          },
+          {
+            "name": "netcachedfiles_hostid_fkey",
+            "type": "f",
+            "validated": true,
+            "definition": "FOREIGN KEY (hostid) REFERENCES nethosts(hostid) ON DELETE CASCADE"
+          },
+          {
+            "name": "netcachedfiles_hostid_path_key",
+            "type": "u",
+            "validated": true,
+            "definition": "UNIQUE (hostid, path)"
+          },
+          {
+            "name": "netcachedfiles_pkey",
+            "type": "p",
+            "validated": true,
+            "definition": "PRIMARY KEY (id)"
+          }
+        ],
+        "schema_name": "public"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type": "integer",
+            "default": "nextval(\u0027netcredentials_id_seq\u0027::regclass)",
+            "ordinal": 1,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "credentialid",
+            "type": "text",
+            "default": null,
+            "ordinal": 2,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "hostid",
+            "type": "text",
+            "default": null,
+            "ordinal": 3,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "credentialtype",
+            "type": "smallint",
+            "default": null,
+            "ordinal": 4,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "username",
+            "type": "text",
+            "default": null,
+            "ordinal": 5,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "domain",
+            "type": "text",
+            "default": null,
+            "ordinal": 6,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "secret",
+            "type": "text",
+            "default": null,
+            "ordinal": 7,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "additionaldata",
+            "type": "text",
+            "default": null,
+            "ordinal": 8,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "firstseen",
+            "type": "timestamp with time zone",
+            "default": null,
+            "ordinal": 9,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "lastseen",
+            "type": "timestamp with time zone",
+            "default": null,
+            "ordinal": 10,
+            "identity": null,
+            "not_null": true
+          }
+        ],
+        "indexes": [
+          {
+            "name": "netcredentials_credentialid_key",
+            "valid": true,
+            "unique": true,
+            "primary": false,
+            "definition": "CREATE UNIQUE INDEX netcredentials_credentialid_key ON public.netcredentials USING btree (credentialid)"
+          },
+          {
+            "name": "netcredentials_pkey",
+            "valid": true,
+            "unique": true,
+            "primary": true,
+            "definition": "CREATE UNIQUE INDEX netcredentials_pkey ON public.netcredentials USING btree (id)"
+          }
+        ],
+        "table_name": "netcredentials",
+        "constraints": [
+          {
+            "name": "netcredentials_credentialid_key",
+            "type": "u",
+            "validated": true,
+            "definition": "UNIQUE (credentialid)"
+          },
+          {
+            "name": "netcredentials_hostid_fkey",
+            "type": "f",
+            "validated": true,
+            "definition": "FOREIGN KEY (hostid) REFERENCES nethosts(hostid) ON DELETE CASCADE"
+          },
+          {
+            "name": "netcredentials_pkey",
+            "type": "p",
+            "validated": true,
+            "definition": "PRIMARY KEY (id)"
+          }
+        ],
+        "schema_name": "public"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type": "integer",
+            "default": "nextval(\u0027nethostipaddresses_id_seq\u0027::regclass)",
+            "ordinal": 1,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "ipid",
+            "type": "text",
+            "default": null,
+            "ordinal": 2,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "hostid",
+            "type": "text",
+            "default": null,
+            "ordinal": 3,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "ipaddress",
+            "type": "text",
+            "default": null,
+            "ordinal": 4,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "isprimary",
+            "type": "boolean",
+            "default": "false",
+            "ordinal": 5,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "interfacename",
+            "type": "text",
+            "default": null,
+            "ordinal": 6,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "macaddress",
+            "type": "text",
+            "default": null,
+            "ordinal": 7,
+            "identity": null,
+            "not_null": false
+          }
+        ],
+        "indexes": [
+          {
+            "name": "nethostipaddresses_hostid_ipaddress_key",
+            "valid": true,
+            "unique": true,
+            "primary": false,
+            "definition": "CREATE UNIQUE INDEX nethostipaddresses_hostid_ipaddress_key ON public.nethostipaddresses USING btree (hostid, ipaddress)"
+          },
+          {
+            "name": "nethostipaddresses_ipid_key",
+            "valid": true,
+            "unique": true,
+            "primary": false,
+            "definition": "CREATE UNIQUE INDEX nethostipaddresses_ipid_key ON public.nethostipaddresses USING btree (ipid)"
+          },
+          {
+            "name": "nethostipaddresses_pkey",
+            "valid": true,
+            "unique": true,
+            "primary": true,
+            "definition": "CREATE UNIQUE INDEX nethostipaddresses_pkey ON public.nethostipaddresses USING btree (id)"
+          }
+        ],
+        "table_name": "nethostipaddresses",
+        "constraints": [
+          {
+            "name": "nethostipaddresses_hostid_fkey",
+            "type": "f",
+            "validated": true,
+            "definition": "FOREIGN KEY (hostid) REFERENCES nethosts(hostid) ON DELETE CASCADE"
+          },
+          {
+            "name": "nethostipaddresses_hostid_ipaddress_key",
+            "type": "u",
+            "validated": true,
+            "definition": "UNIQUE (hostid, ipaddress)"
+          },
+          {
+            "name": "nethostipaddresses_ipid_key",
+            "type": "u",
+            "validated": true,
+            "definition": "UNIQUE (ipid)"
+          },
+          {
+            "name": "nethostipaddresses_pkey",
+            "type": "p",
+            "validated": true,
+            "definition": "PRIMARY KEY (id)"
+          }
+        ],
+        "schema_name": "public"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type": "integer",
+            "default": "nextval(\u0027nethosts_id_seq\u0027::regclass)",
+            "ordinal": 1,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "hostid",
+            "type": "text",
+            "default": null,
+            "ordinal": 2,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "hostname",
+            "type": "text",
+            "default": null,
+            "ordinal": 3,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "domain",
+            "type": "text",
+            "default": null,
+            "ordinal": 4,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "osname",
+            "type": "text",
+            "default": null,
+            "ordinal": 5,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "osversion",
+            "type": "text",
+            "default": null,
+            "ordinal": 6,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "osarchitecture",
+            "type": "text",
+            "default": null,
+            "ordinal": 7,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "cidrnetwork",
+            "type": "text",
+            "default": null,
+            "ordinal": 8,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "firstseen",
+            "type": "timestamp with time zone",
+            "default": null,
+            "ordinal": 9,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "lastseen",
+            "type": "timestamp with time zone",
+            "default": null,
+            "ordinal": 10,
+            "identity": null,
+            "not_null": true
+          }
+        ],
+        "indexes": [
+          {
+            "name": "nethosts_hostid_key",
+            "valid": true,
+            "unique": true,
+            "primary": false,
+            "definition": "CREATE UNIQUE INDEX nethosts_hostid_key ON public.nethosts USING btree (hostid)"
+          },
+          {
+            "name": "nethosts_pkey",
+            "valid": true,
+            "unique": true,
+            "primary": true,
+            "definition": "CREATE UNIQUE INDEX nethosts_pkey ON public.nethosts USING btree (id)"
+          }
+        ],
+        "table_name": "nethosts",
+        "constraints": [
+          {
+            "name": "nethosts_hostid_key",
+            "type": "u",
+            "validated": true,
+            "definition": "UNIQUE (hostid)"
+          },
+          {
+            "name": "nethosts_pkey",
+            "type": "p",
+            "validated": true,
+            "definition": "PRIMARY KEY (id)"
+          }
+        ],
+        "schema_name": "public"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type": "integer",
+            "default": "nextval(\u0027netopenports_id_seq\u0027::regclass)",
+            "ordinal": 1,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "portid",
+            "type": "text",
+            "default": null,
+            "ordinal": 2,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "hostid",
+            "type": "text",
+            "default": null,
+            "ordinal": 3,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "portnumber",
+            "type": "integer",
+            "default": null,
+            "ordinal": 4,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "protocol",
+            "type": "text",
+            "default": null,
+            "ordinal": 5,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "state",
+            "type": "text",
+            "default": null,
+            "ordinal": 6,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "servicename",
+            "type": "text",
+            "default": null,
+            "ordinal": 7,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "banner",
+            "type": "text",
+            "default": null,
+            "ordinal": 8,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "firstseen",
+            "type": "timestamp with time zone",
+            "default": null,
+            "ordinal": 9,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "lastseen",
+            "type": "timestamp with time zone",
+            "default": null,
+            "ordinal": 10,
+            "identity": null,
+            "not_null": true
+          }
+        ],
+        "indexes": [
+          {
+            "name": "netopenports_hostid_portnumber_protocol_key",
+            "valid": true,
+            "unique": true,
+            "primary": false,
+            "definition": "CREATE UNIQUE INDEX netopenports_hostid_portnumber_protocol_key ON public.netopenports USING btree (hostid, portnumber, protocol)"
+          },
+          {
+            "name": "netopenports_pkey",
+            "valid": true,
+            "unique": true,
+            "primary": true,
+            "definition": "CREATE UNIQUE INDEX netopenports_pkey ON public.netopenports USING btree (id)"
+          },
+          {
+            "name": "netopenports_portid_key",
+            "valid": true,
+            "unique": true,
+            "primary": false,
+            "definition": "CREATE UNIQUE INDEX netopenports_portid_key ON public.netopenports USING btree (portid)"
+          }
+        ],
+        "table_name": "netopenports",
+        "constraints": [
+          {
+            "name": "netopenports_hostid_fkey",
+            "type": "f",
+            "validated": true,
+            "definition": "FOREIGN KEY (hostid) REFERENCES nethosts(hostid) ON DELETE CASCADE"
+          },
+          {
+            "name": "netopenports_hostid_portnumber_protocol_key",
+            "type": "u",
+            "validated": true,
+            "definition": "UNIQUE (hostid, portnumber, protocol)"
+          },
+          {
+            "name": "netopenports_pkey",
+            "type": "p",
+            "validated": true,
+            "definition": "PRIMARY KEY (id)"
+          },
+          {
+            "name": "netopenports_portid_key",
+            "type": "u",
+            "validated": true,
+            "definition": "UNIQUE (portid)"
+          }
+        ],
+        "schema_name": "public"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type": "integer",
+            "default": "nextval(\u0027netprocesses_id_seq\u0027::regclass)",
+            "ordinal": 1,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "processrecordid",
+            "type": "text",
+            "default": null,
+            "ordinal": 2,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "hostid",
+            "type": "text",
+            "default": null,
+            "ordinal": 3,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "pid",
+            "type": "integer",
+            "default": null,
+            "ordinal": 4,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "name",
+            "type": "text",
+            "default": null,
+            "ordinal": 5,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "executablepath",
+            "type": "text",
+            "default": null,
+            "ordinal": 6,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "commandline",
+            "type": "text",
+            "default": null,
+            "ordinal": 7,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "username",
+            "type": "text",
+            "default": null,
+            "ordinal": 8,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "architecture",
+            "type": "text",
+            "default": null,
+            "ordinal": 9,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "observedat",
+            "type": "timestamp with time zone",
+            "default": null,
+            "ordinal": 10,
+            "identity": null,
+            "not_null": true
+          }
+        ],
+        "indexes": [
+          {
+            "name": "netprocesses_pkey",
+            "valid": true,
+            "unique": true,
+            "primary": true,
+            "definition": "CREATE UNIQUE INDEX netprocesses_pkey ON public.netprocesses USING btree (id)"
+          },
+          {
+            "name": "netprocesses_processrecordid_key",
+            "valid": true,
+            "unique": true,
+            "primary": false,
+            "definition": "CREATE UNIQUE INDEX netprocesses_processrecordid_key ON public.netprocesses USING btree (processrecordid)"
+          }
+        ],
+        "table_name": "netprocesses",
+        "constraints": [
+          {
+            "name": "netprocesses_hostid_fkey",
+            "type": "f",
+            "validated": true,
+            "definition": "FOREIGN KEY (hostid) REFERENCES nethosts(hostid) ON DELETE CASCADE"
+          },
+          {
+            "name": "netprocesses_pkey",
+            "type": "p",
+            "validated": true,
+            "definition": "PRIMARY KEY (id)"
+          },
+          {
+            "name": "netprocesses_processrecordid_key",
+            "type": "u",
+            "validated": true,
+            "definition": "UNIQUE (processrecordid)"
+          }
+        ],
+        "schema_name": "public"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type": "integer",
+            "default": "nextval(\u0027netservices_id_seq\u0027::regclass)",
+            "ordinal": 1,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "serviceid",
+            "type": "text",
+            "default": null,
+            "ordinal": 2,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "hostid",
+            "type": "text",
+            "default": null,
+            "ordinal": 3,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "name",
+            "type": "text",
+            "default": null,
+            "ordinal": 4,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "displayname",
+            "type": "text",
+            "default": null,
+            "ordinal": 5,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "status",
+            "type": "text",
+            "default": null,
+            "ordinal": 6,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "starttype",
+            "type": "text",
+            "default": null,
+            "ordinal": 7,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "executablepath",
+            "type": "text",
+            "default": null,
+            "ordinal": 8,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "firstseen",
+            "type": "timestamp with time zone",
+            "default": null,
+            "ordinal": 9,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "lastseen",
+            "type": "timestamp with time zone",
+            "default": null,
+            "ordinal": 10,
+            "identity": null,
+            "not_null": true
+          }
+        ],
+        "indexes": [
+          {
+            "name": "netservices_hostid_name_key",
+            "valid": true,
+            "unique": true,
+            "primary": false,
+            "definition": "CREATE UNIQUE INDEX netservices_hostid_name_key ON public.netservices USING btree (hostid, name)"
+          },
+          {
+            "name": "netservices_pkey",
+            "valid": true,
+            "unique": true,
+            "primary": true,
+            "definition": "CREATE UNIQUE INDEX netservices_pkey ON public.netservices USING btree (id)"
+          },
+          {
+            "name": "netservices_serviceid_key",
+            "valid": true,
+            "unique": true,
+            "primary": false,
+            "definition": "CREATE UNIQUE INDEX netservices_serviceid_key ON public.netservices USING btree (serviceid)"
+          }
+        ],
+        "table_name": "netservices",
+        "constraints": [
+          {
+            "name": "netservices_hostid_fkey",
+            "type": "f",
+            "validated": true,
+            "definition": "FOREIGN KEY (hostid) REFERENCES nethosts(hostid) ON DELETE CASCADE"
+          },
+          {
+            "name": "netservices_hostid_name_key",
+            "type": "u",
+            "validated": true,
+            "definition": "UNIQUE (hostid, name)"
+          },
+          {
+            "name": "netservices_pkey",
+            "type": "p",
+            "validated": true,
+            "definition": "PRIMARY KEY (id)"
+          },
+          {
+            "name": "netservices_serviceid_key",
+            "type": "u",
+            "validated": true,
+            "definition": "UNIQUE (serviceid)"
+          }
+        ],
+        "schema_name": "public"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type": "integer",
+            "default": "nextval(\u0027netusers_id_seq\u0027::regclass)",
+            "ordinal": 1,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "userid",
+            "type": "text",
+            "default": null,
+            "ordinal": 2,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "hostid",
+            "type": "text",
+            "default": null,
+            "ordinal": 3,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "username",
+            "type": "text",
+            "default": null,
+            "ordinal": 4,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "domain",
+            "type": "text",
+            "default": null,
+            "ordinal": 5,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "sid",
+            "type": "text",
+            "default": null,
+            "ordinal": 6,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "isenabled",
+            "type": "boolean",
+            "default": null,
+            "ordinal": 7,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "isadmin",
+            "type": "boolean",
+            "default": null,
+            "ordinal": 8,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "groups",
+            "type": "text",
+            "default": null,
+            "ordinal": 9,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "lastlogon",
+            "type": "timestamp with time zone",
+            "default": null,
+            "ordinal": 10,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "firstseen",
+            "type": "timestamp with time zone",
+            "default": null,
+            "ordinal": 11,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "lastseen",
+            "type": "timestamp with time zone",
+            "default": null,
+            "ordinal": 12,
+            "identity": null,
+            "not_null": true
+          }
+        ],
+        "indexes": [
+          {
+            "name": "netusers_host_username_domain_idx",
+            "valid": true,
+            "unique": true,
+            "primary": false,
+            "definition": "CREATE UNIQUE INDEX netusers_host_username_domain_idx ON public.netusers USING btree (hostid, username, COALESCE(domain, \u0027\u0027::text))"
+          },
+          {
+            "name": "netusers_pkey",
+            "valid": true,
+            "unique": true,
+            "primary": true,
+            "definition": "CREATE UNIQUE INDEX netusers_pkey ON public.netusers USING btree (id)"
+          },
+          {
+            "name": "netusers_userid_key",
+            "valid": true,
+            "unique": true,
+            "primary": false,
+            "definition": "CREATE UNIQUE INDEX netusers_userid_key ON public.netusers USING btree (userid)"
+          }
+        ],
+        "table_name": "netusers",
+        "constraints": [
+          {
+            "name": "netusers_hostid_fkey",
+            "type": "f",
+            "validated": true,
+            "definition": "FOREIGN KEY (hostid) REFERENCES nethosts(hostid) ON DELETE CASCADE"
+          },
+          {
+            "name": "netusers_pkey",
+            "type": "p",
+            "validated": true,
+            "definition": "PRIMARY KEY (id)"
+          },
+          {
+            "name": "netusers_userid_key",
+            "type": "u",
+            "validated": true,
+            "definition": "UNIQUE (userid)"
+          }
+        ],
+        "schema_name": "public"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type": "integer",
+            "default": "nextval(\u0027payloadpipelines_id_seq\u0027::regclass)",
+            "ordinal": 1,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "pipelineid",
+            "type": "text",
+            "default": null,
+            "ordinal": 2,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "name",
+            "type": "citext",
+            "default": null,
+            "ordinal": 3,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "description",
+            "type": "text",
+            "default": null,
+            "ordinal": 4,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "documentation",
+            "type": "text",
+            "default": null,
+            "ordinal": 5,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "scriptblock",
+            "type": "text",
+            "default": null,
+            "ordinal": 6,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "outputformat",
+            "type": "text",
+            "default": null,
+            "ordinal": 7,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "ispremium",
+            "type": "boolean",
+            "default": null,
+            "ordinal": 8,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "isenabled",
+            "type": "boolean",
+            "default": null,
+            "ordinal": 9,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "testparameters",
+            "type": "text",
+            "default": null,
+            "ordinal": 10,
+            "identity": null,
+            "not_null": true
+          }
+        ],
+        "indexes": [
+          {
+            "name": "payloadpipelines_name_key",
+            "valid": true,
+            "unique": true,
+            "primary": false,
+            "definition": "CREATE UNIQUE INDEX payloadpipelines_name_key ON public.payloadpipelines USING btree (name)"
+          },
+          {
+            "name": "payloadpipelines_pipelineid_key",
+            "valid": true,
+            "unique": true,
+            "primary": false,
+            "definition": "CREATE UNIQUE INDEX payloadpipelines_pipelineid_key ON public.payloadpipelines USING btree (pipelineid)"
+          },
+          {
+            "name": "payloadpipelines_pkey",
+            "valid": true,
+            "unique": true,
+            "primary": true,
+            "definition": "CREATE UNIQUE INDEX payloadpipelines_pkey ON public.payloadpipelines USING btree (id)"
+          }
+        ],
+        "table_name": "payloadpipelines",
+        "constraints": [
+          {
+            "name": "payloadpipelines_name_key",
+            "type": "u",
+            "validated": true,
+            "definition": "UNIQUE (name)"
+          },
+          {
+            "name": "payloadpipelines_pipelineid_key",
+            "type": "u",
+            "validated": true,
+            "definition": "UNIQUE (pipelineid)"
+          },
+          {
+            "name": "payloadpipelines_pkey",
+            "type": "p",
+            "validated": true,
+            "definition": "PRIMARY KEY (id)"
+          }
+        ],
+        "schema_name": "public"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type": "integer",
+            "default": "nextval(\u0027persona_id_seq\u0027::regclass)",
+            "ordinal": 1,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "name",
+            "type": "text",
+            "default": null,
+            "ordinal": 2,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "country",
+            "type": "text",
+            "default": "\u0027\u0027::text",
+            "ordinal": 3,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "placeofbirth",
+            "type": "text",
+            "default": "\u0027\u0027::text",
+            "ordinal": 4,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "address",
+            "type": "text",
+            "default": "\u0027\u0027::text",
+            "ordinal": 5,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "backstory",
+            "type": "text",
+            "default": "\u0027\u0027::text",
+            "ordinal": 6,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "properties",
+            "type": "jsonb",
+            "default": "\u0027{}\u0027::jsonb",
+            "ordinal": 7,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "createdat",
+            "type": "timestamp with time zone",
+            "default": "now()",
+            "ordinal": 8,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "updatedat",
+            "type": "timestamp with time zone",
+            "default": "now()",
+            "ordinal": 9,
+            "identity": null,
+            "not_null": true
+          }
+        ],
+        "indexes": [
+          {
+            "name": "persona_name_key",
+            "valid": true,
+            "unique": true,
+            "primary": false,
+            "definition": "CREATE UNIQUE INDEX persona_name_key ON public.persona USING btree (name)"
+          },
+          {
+            "name": "persona_pkey",
+            "valid": true,
+            "unique": true,
+            "primary": true,
+            "definition": "CREATE UNIQUE INDEX persona_pkey ON public.persona USING btree (id)"
+          }
+        ],
+        "table_name": "persona",
+        "constraints": [
+          {
+            "name": "persona_name_key",
+            "type": "u",
+            "validated": true,
+            "definition": "UNIQUE (name)"
+          },
+          {
+            "name": "persona_pkey",
+            "type": "p",
+            "validated": true,
+            "definition": "PRIMARY KEY (id)"
+          }
+        ],
+        "schema_name": "public"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type": "integer",
+            "default": "nextval(\u0027powershellnotebooks_id_seq\u0027::regclass)",
+            "ordinal": 1,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "notebookid",
+            "type": "text",
+            "default": null,
+            "ordinal": 2,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "name",
+            "type": "text",
+            "default": null,
+            "ordinal": 3,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "description",
+            "type": "text",
+            "default": null,
+            "ordinal": 4,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "timecreated",
+            "type": "timestamp with time zone",
+            "default": null,
+            "ordinal": 5,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "timeupdated",
+            "type": "timestamp with time zone",
+            "default": null,
+            "ordinal": 6,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "cells",
+            "type": "jsonb",
+            "default": null,
+            "ordinal": 7,
+            "identity": null,
+            "not_null": true
+          }
+        ],
+        "indexes": [
+          {
+            "name": "powershellnotebooks_notebookid_key",
+            "valid": true,
+            "unique": true,
+            "primary": false,
+            "definition": "CREATE UNIQUE INDEX powershellnotebooks_notebookid_key ON public.powershellnotebooks USING btree (notebookid)"
+          },
+          {
+            "name": "powershellnotebooks_pkey",
+            "valid": true,
+            "unique": true,
+            "primary": true,
+            "definition": "CREATE UNIQUE INDEX powershellnotebooks_pkey ON public.powershellnotebooks USING btree (id)"
+          }
+        ],
+        "table_name": "powershellnotebooks",
+        "constraints": [
+          {
+            "name": "powershellnotebooks_notebookid_key",
+            "type": "u",
+            "validated": true,
+            "definition": "UNIQUE (notebookid)"
+          },
+          {
+            "name": "powershellnotebooks_pkey",
+            "type": "p",
+            "validated": true,
+            "definition": "PRIMARY KEY (id)"
+          }
+        ],
+        "schema_name": "public"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type": "integer",
+            "default": "nextval(\u0027refreshtokens_id_seq\u0027::regclass)",
+            "ordinal": 1,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "account_id",
+            "type": "integer",
+            "default": null,
+            "ordinal": 2,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "token",
+            "type": "text",
+            "default": null,
+            "ordinal": 3,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "created",
+            "type": "timestamp with time zone",
+            "default": null,
+            "ordinal": 4,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "expires",
+            "type": "timestamp with time zone",
+            "default": null,
+            "ordinal": 5,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "created_by_ip",
+            "type": "text",
+            "default": null,
+            "ordinal": 6,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "revoked",
+            "type": "boolean",
+            "default": null,
+            "ordinal": 7,
+            "identity": null,
+            "not_null": true
+          }
+        ],
+        "indexes": [
+          {
+            "name": "refreshtokens_pkey",
+            "valid": true,
+            "unique": true,
+            "primary": true,
+            "definition": "CREATE UNIQUE INDEX refreshtokens_pkey ON public.refreshtokens USING btree (id)"
+          }
+        ],
+        "table_name": "refreshtokens",
+        "constraints": [
+          {
+            "name": "refreshtokens_account_id_fkey",
+            "type": "f",
+            "validated": true,
+            "definition": "FOREIGN KEY (account_id) REFERENCES account(id) ON DELETE CASCADE"
+          },
+          {
+            "name": "refreshtokens_pkey",
+            "type": "p",
+            "validated": true,
+            "definition": "PRIMARY KEY (id)"
+          }
+        ],
+        "schema_name": "public"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type": "integer",
+            "default": "nextval(\u0027script_id_seq\u0027::regclass)",
+            "ordinal": 1,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "scriptid",
+            "type": "text",
+            "default": null,
+            "ordinal": 2,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "name",
+            "type": "text",
+            "default": null,
+            "ordinal": 3,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "description",
+            "type": "text",
+            "default": null,
+            "ordinal": 4,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "documentation",
+            "type": "text",
+            "default": null,
+            "ordinal": 5,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "scriptblock",
+            "type": "text",
+            "default": null,
+            "ordinal": 6,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "version",
+            "type": "integer",
+            "default": null,
+            "ordinal": 7,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "ispremium",
+            "type": "boolean",
+            "default": null,
+            "ordinal": 8,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "enabled",
+            "type": "boolean",
+            "default": null,
+            "ordinal": 9,
+            "identity": null,
+            "not_null": true
+          }
+        ],
+        "indexes": [
+          {
+            "name": "script_pkey",
+            "valid": true,
+            "unique": true,
+            "primary": true,
+            "definition": "CREATE UNIQUE INDEX script_pkey ON public.script USING btree (id)"
+          },
+          {
+            "name": "script_scriptid_key",
+            "valid": true,
+            "unique": true,
+            "primary": false,
+            "definition": "CREATE UNIQUE INDEX script_scriptid_key ON public.script USING btree (scriptid)"
+          },
+          {
+            "name": "scriptid_idx",
+            "valid": true,
+            "unique": false,
+            "primary": false,
+            "definition": "CREATE INDEX scriptid_idx ON public.script USING btree (scriptid)"
+          }
+        ],
+        "table_name": "script",
+        "constraints": [
+          {
+            "name": "script_pkey",
+            "type": "p",
+            "validated": true,
+            "definition": "PRIMARY KEY (id)"
+          },
+          {
+            "name": "script_scriptid_key",
+            "type": "u",
+            "validated": true,
+            "definition": "UNIQUE (scriptid)"
+          }
+        ],
+        "schema_name": "public"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type": "integer",
+            "default": "nextval(\u0027scriptlabel_id_seq\u0027::regclass)",
+            "ordinal": 1,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "fkey_scriptid",
+            "type": "integer",
+            "default": null,
+            "ordinal": 2,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "fkey_labelid",
+            "type": "integer",
+            "default": null,
+            "ordinal": 3,
+            "identity": null,
+            "not_null": false
+          }
+        ],
+        "indexes": [
+          {
+            "name": "scriptlabel_pkey",
+            "valid": true,
+            "unique": true,
+            "primary": true,
+            "definition": "CREATE UNIQUE INDEX scriptlabel_pkey ON public.scriptlabel USING btree (id)"
+          }
+        ],
+        "table_name": "scriptlabel",
+        "constraints": [
+          {
+            "name": "scriptlabel_fkey_labelid_fkey",
+            "type": "f",
+            "validated": true,
+            "definition": "FOREIGN KEY (fkey_labelid) REFERENCES label(id) ON DELETE CASCADE"
+          },
+          {
+            "name": "scriptlabel_fkey_scriptid_fkey",
+            "type": "f",
+            "validated": true,
+            "definition": "FOREIGN KEY (fkey_scriptid) REFERENCES script(id) ON DELETE CASCADE"
+          },
+          {
+            "name": "scriptlabel_pkey",
+            "type": "p",
+            "validated": true,
+            "definition": "PRIMARY KEY (id)"
+          }
+        ],
+        "schema_name": "public"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type": "integer",
+            "default": "nextval(\u0027session_id_seq\u0027::regclass)",
+            "ordinal": 1,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "buildid",
+            "type": "text",
+            "default": null,
+            "ordinal": 2,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "sessionid",
+            "type": "text",
+            "default": null,
+            "ordinal": 3,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "nickname",
+            "type": "text",
+            "default": null,
+            "ordinal": 4,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "machineid",
+            "type": "text",
+            "default": null,
+            "ordinal": 5,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "fqdn",
+            "type": "text",
+            "default": null,
+            "ordinal": 6,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "ip",
+            "type": "text",
+            "default": null,
+            "ordinal": 7,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "path",
+            "type": "text",
+            "default": null,
+            "ordinal": 8,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "pid",
+            "type": "integer",
+            "default": null,
+            "ordinal": 9,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "username",
+            "type": "text",
+            "default": null,
+            "ordinal": 10,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "os",
+            "type": "text",
+            "default": null,
+            "ordinal": 11,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "architecture",
+            "type": "text",
+            "default": null,
+            "ordinal": 12,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "lastcheckin",
+            "type": "timestamp with time zone",
+            "default": null,
+            "ordinal": 13,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "nextcheckin",
+            "type": "timestamp with time zone",
+            "default": null,
+            "ordinal": 14,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "interval",
+            "type": "interval",
+            "default": null,
+            "ordinal": 15,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "Window",
+            "type": "interval",
+            "default": null,
+            "ordinal": 16,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "archived",
+            "type": "boolean",
+            "default": null,
+            "ordinal": 17,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "expirationdate",
+            "type": "timestamp with time zone",
+            "default": null,
+            "ordinal": 18,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "notes",
+            "type": "text",
+            "default": null,
+            "ordinal": 19,
+            "identity": null,
+            "not_null": true
+          }
+        ],
+        "indexes": [
+          {
+            "name": "machineid_idx",
+            "valid": true,
+            "unique": false,
+            "primary": false,
+            "definition": "CREATE INDEX machineid_idx ON public.session USING btree (machineid)"
+          },
+          {
+            "name": "session_pkey",
+            "valid": true,
+            "unique": true,
+            "primary": true,
+            "definition": "CREATE UNIQUE INDEX session_pkey ON public.session USING btree (id)"
+          },
+          {
+            "name": "session_sessionid_key",
+            "valid": true,
+            "unique": true,
+            "primary": false,
+            "definition": "CREATE UNIQUE INDEX session_sessionid_key ON public.session USING btree (sessionid)"
+          },
+          {
+            "name": "sessionid_idx",
+            "valid": true,
+            "unique": false,
+            "primary": false,
+            "definition": "CREATE INDEX sessionid_idx ON public.session USING btree (sessionid)"
+          }
+        ],
+        "table_name": "session",
+        "constraints": [
+          {
+            "name": "session_pkey",
+            "type": "p",
+            "validated": true,
+            "definition": "PRIMARY KEY (id)"
+          },
+          {
+            "name": "session_sessionid_key",
+            "type": "u",
+            "validated": true,
+            "definition": "UNIQUE (sessionid)"
+          }
+        ],
+        "schema_name": "public"
+      },
+      {
+        "columns": [
+          {
+            "name": "sessionid",
+            "type": "uuid",
+            "default": null,
+            "ordinal": 1,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "targethost",
+            "type": "text",
+            "default": null,
+            "ordinal": 2,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "port",
+            "type": "integer",
+            "default": null,
+            "ordinal": 3,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "username",
+            "type": "text",
+            "default": null,
+            "ordinal": 4,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "authtype",
+            "type": "sshauthtype",
+            "default": null,
+            "ordinal": 5,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "tunnelsessionid",
+            "type": "text",
+            "default": null,
+            "ordinal": 6,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "createdat",
+            "type": "timestamp with time zone",
+            "default": null,
+            "ordinal": 7,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "endedat",
+            "type": "timestamp with time zone",
+            "default": null,
+            "ordinal": 8,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "notes",
+            "type": "text",
+            "default": null,
+            "ordinal": 9,
+            "identity": null,
+            "not_null": false
+          }
+        ],
+        "indexes": [
+          {
+            "name": "sshsessions_pkey",
+            "valid": true,
+            "unique": true,
+            "primary": true,
+            "definition": "CREATE UNIQUE INDEX sshsessions_pkey ON public.sshsessions USING btree (sessionid)"
+          }
+        ],
+        "table_name": "sshsessions",
+        "constraints": [
+          {
+            "name": "sshsessions_pkey",
+            "type": "p",
+            "validated": true,
+            "definition": "PRIMARY KEY (sessionid)"
+          }
+        ],
+        "schema_name": "public"
+      },
+      {
+        "columns": [
+          {
+            "name": "taskid",
+            "type": "uuid",
+            "default": null,
+            "ordinal": 1,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "sessionid",
+            "type": "uuid",
+            "default": null,
+            "ordinal": 2,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "command",
+            "type": "text",
+            "default": null,
+            "ordinal": 3,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "status",
+            "type": "sshtaskstatus",
+            "default": null,
+            "ordinal": 4,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "timequeued",
+            "type": "timestamp with time zone",
+            "default": null,
+            "ordinal": 5,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "timecompleted",
+            "type": "timestamp with time zone",
+            "default": null,
+            "ordinal": 6,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "output",
+            "type": "text",
+            "default": null,
+            "ordinal": 7,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "errors",
+            "type": "text",
+            "default": null,
+            "ordinal": 8,
+            "identity": null,
+            "not_null": false
+          }
+        ],
+        "indexes": [
+          {
+            "name": "sshtasks_pkey",
+            "valid": true,
+            "unique": true,
+            "primary": true,
+            "definition": "CREATE UNIQUE INDEX sshtasks_pkey ON public.sshtasks USING btree (taskid)"
+          },
+          {
+            "name": "sshtasksessionid_idx",
+            "valid": true,
+            "unique": false,
+            "primary": false,
+            "definition": "CREATE INDEX sshtasksessionid_idx ON public.sshtasks USING btree (sessionid)"
+          }
+        ],
+        "table_name": "sshtasks",
+        "constraints": [
+          {
+            "name": "sshtasks_pkey",
+            "type": "p",
+            "validated": true,
+            "definition": "PRIMARY KEY (taskid)"
+          },
+          {
+            "name": "sshtasks_sessionid_fkey",
+            "type": "f",
+            "validated": true,
+            "definition": "FOREIGN KEY (sessionid) REFERENCES sshsessions(sessionid) ON DELETE CASCADE"
+          }
+        ],
+        "schema_name": "public"
+      },
+      {
+        "columns": [
+          {
+            "name": "sessionid",
+            "type": "uuid",
+            "default": null,
+            "ordinal": 1,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "targethost",
+            "type": "text",
+            "default": null,
+            "ordinal": 2,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "port",
+            "type": "integer",
+            "default": null,
+            "ordinal": 3,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "username",
+            "type": "text",
+            "default": null,
+            "ordinal": 4,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "authtype",
+            "type": "winrmauthtype",
+            "default": null,
+            "ordinal": 5,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "usessl",
+            "type": "boolean",
+            "default": "false",
+            "ordinal": 6,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "useragent",
+            "type": "text",
+            "default": "\u0027Microsoft WinRM Client\u0027::text",
+            "ordinal": 7,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "tunnelsessionid",
+            "type": "text",
+            "default": null,
+            "ordinal": 8,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "createdat",
+            "type": "timestamp with time zone",
+            "default": null,
+            "ordinal": 9,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "endedat",
+            "type": "timestamp with time zone",
+            "default": null,
+            "ordinal": 10,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "notes",
+            "type": "text",
+            "default": null,
+            "ordinal": 11,
+            "identity": null,
+            "not_null": false
+          }
+        ],
+        "indexes": [
+          {
+            "name": "winrmsessions_pkey",
+            "valid": true,
+            "unique": true,
+            "primary": true,
+            "definition": "CREATE UNIQUE INDEX winrmsessions_pkey ON public.winrmsessions USING btree (sessionid)"
+          }
+        ],
+        "table_name": "winrmsessions",
+        "constraints": [
+          {
+            "name": "winrmsessions_pkey",
+            "type": "p",
+            "validated": true,
+            "definition": "PRIMARY KEY (sessionid)"
+          }
+        ],
+        "schema_name": "public"
+      },
+      {
+        "columns": [
+          {
+            "name": "taskid",
+            "type": "uuid",
+            "default": null,
+            "ordinal": 1,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "sessionid",
+            "type": "uuid",
+            "default": null,
+            "ordinal": 2,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "command",
+            "type": "text",
+            "default": null,
+            "ordinal": 3,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "status",
+            "type": "winrmtaskstatus",
+            "default": null,
+            "ordinal": 4,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "timequeued",
+            "type": "timestamp with time zone",
+            "default": null,
+            "ordinal": 5,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "timecompleted",
+            "type": "timestamp with time zone",
+            "default": null,
+            "ordinal": 6,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "output",
+            "type": "text",
+            "default": null,
+            "ordinal": 7,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "errors",
+            "type": "text",
+            "default": null,
+            "ordinal": 8,
+            "identity": null,
+            "not_null": false
+          }
+        ],
+        "indexes": [
+          {
+            "name": "winrmtasks_pkey",
+            "valid": true,
+            "unique": true,
+            "primary": true,
+            "definition": "CREATE UNIQUE INDEX winrmtasks_pkey ON public.winrmtasks USING btree (taskid)"
+          },
+          {
+            "name": "winrmtasksessionid_idx",
+            "valid": true,
+            "unique": false,
+            "primary": false,
+            "definition": "CREATE INDEX winrmtasksessionid_idx ON public.winrmtasks USING btree (sessionid)"
+          }
+        ],
+        "table_name": "winrmtasks",
+        "constraints": [
+          {
+            "name": "winrmtasks_pkey",
+            "type": "p",
+            "validated": true,
+            "definition": "PRIMARY KEY (taskid)"
+          },
+          {
+            "name": "winrmtasks_sessionid_fkey",
+            "type": "f",
+            "validated": true,
+            "definition": "FOREIGN KEY (sessionid) REFERENCES winrmsessions(sessionid) ON DELETE CASCADE"
+          }
+        ],
+        "schema_name": "public"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type": "integer",
+            "default": "nextval(\u0027wordlist_id_seq\u0027::regclass)",
+            "ordinal": 1,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "name",
+            "type": "text",
+            "default": null,
+            "ordinal": 2,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "description",
+            "type": "text",
+            "default": "\u0027\u0027::text",
+            "ordinal": 3,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "tags",
+            "type": "text[]",
+            "default": "\u0027{}\u0027::text[]",
+            "ordinal": 4,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "content",
+            "type": "text",
+            "default": null,
+            "ordinal": 5,
+            "identity": null,
+            "not_null": false
+          },
+          {
+            "name": "createdat",
+            "type": "timestamp with time zone",
+            "default": "now()",
+            "ordinal": 6,
+            "identity": null,
+            "not_null": true
+          },
+          {
+            "name": "updatedat",
+            "type": "timestamp with time zone",
+            "default": "now()",
+            "ordinal": 7,
+            "identity": null,
+            "not_null": true
+          }
+        ],
+        "indexes": [
+          {
+            "name": "wordlist_name_key",
+            "valid": true,
+            "unique": true,
+            "primary": false,
+            "definition": "CREATE UNIQUE INDEX wordlist_name_key ON public.wordlist USING btree (name)"
+          },
+          {
+            "name": "wordlist_pkey",
+            "valid": true,
+            "unique": true,
+            "primary": true,
+            "definition": "CREATE UNIQUE INDEX wordlist_pkey ON public.wordlist USING btree (id)"
+          }
+        ],
+        "table_name": "wordlist",
+        "constraints": [
+          {
+            "name": "wordlist_name_key",
+            "type": "u",
+            "validated": true,
+            "definition": "UNIQUE (name)"
+          },
+          {
+            "name": "wordlist_pkey",
+            "type": "p",
+            "validated": true,
+            "definition": "PRIMARY KEY (id)"
+          }
+        ],
+        "schema_name": "public"
+      }
+    ],
+    "database": "postgres",
+    "extensions": [
+      {
+        "name": "citext",
+        "version": "1.6",
+        "schema_name": "public"
+      },
+      {
+        "name": "pg_trgm",
+        "version": "1.6",
+        "schema_name": "public"
+      },
+      {
+        "name": "plpgsql",
+        "version": "1.0",
+        "schema_name": "pg_catalog"
+      }
+    ],
+    "observed_at_utc": "2026-11-22T13:43:17.402579",
+    "postgres_version": "16.4",
+    "migration_relations": []
+  }
+}
