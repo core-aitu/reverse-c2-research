@@ -21,7 +21,17 @@
     { "type": "PipelineJobCompleted", "payload": "AuditEvent" },
     { "type": "AgentSimulatorRegistered", "payload": "AuditEvent" },
     { "type": "SimulatorTaskQueued", "payload": "AuditEvent" },
-    { "type": "SimulatorTaskCompleted", "payload": "AuditEvent" }
+    { "type": "SimulatorTaskCompleted", "payload": "AuditEvent" },
+    { "type": "ScriptUpdated", "payload": "AuditEvent" },
+    { "type": "ScriptDeleted", "payload": "AuditEvent" },
+    { "type": "WordlistCreated", "payload": "AuditEvent" },
+    { "type": "WordlistUpdated", "payload": "AuditEvent" },
+    { "type": "WordlistDeleted", "payload": "AuditEvent" },
+    { "type": "ListenerCreated", "payload": "AuditEvent" },
+    { "type": "ListenerUpdated", "payload": "AuditEvent" },
+    { "type": "ListenerDeleted", "payload": "AuditEvent" },
+    { "type": "CertificateMetadataUpdated", "payload": "AuditEvent" },
+    { "type": "CertificateMetadataDeleted", "payload": "AuditEvent" }
   ],
   "indexedLegacySubscriptions": 25,
   "status": "management plane, adapters, safe pipeline and protocol simulator"

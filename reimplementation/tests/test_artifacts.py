@@ -47,6 +47,20 @@ class GeneratedArtifactTests(unittest.TestCase):
             self.assertIn(f"CREATE TABLE {table}", migration)
         self.assertIn("fixture-safe-transform", migration)
 
+    def test_typed_catalog_dtos_are_pinned_to_managed_evidence(self) -> None:
+        catalog = json.loads((ROOT / "contracts/dto-catalog.json").read_text())
+        self.assertEqual(
+            "5c658f03289e5804a692ee66ca7beff3883631f4a3d81b301bdade0e7fa45422",
+            catalog["artifact"]["sha256"],
+        )
+        self.assertFalse(catalog["provenance"]["executed"])
+        self.assertEqual(
+            ["identifier", "name", "description", "documentation", "scriptBlock", "version", "isPremium", "labels", "enabled"],
+            catalog["types"]["SpecterScript"],
+        )
+        self.assertEqual(8, len(catalog["types"]["WordlistResponse"]))
+        self.assertEqual(9, len(catalog["types"]["CertificateInfo"]))
+
 
 if __name__ == "__main__":
     unittest.main()

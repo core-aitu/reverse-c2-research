@@ -17,8 +17,11 @@ This directory contains the independent Go and TypeScript implementation describ
 - fixture-first ports for PostgreSQL, Elasticsearch, SMTP, ACME, WebDAV, AI, SSH, Tor, WinRM and updates;
 - a typed DAG pipeline limited to bounded, non-executable transforms;
 - a persistent agent/beacon protocol simulator covering register, check-in, dispatch and results.
+- evidence-pinned legacy DTOs and database-backed endpoints for scripts, wordlists, listener configuration and certificate metadata.
 
 The agent gateway is intentionally simulator-only in this service. It does not run a remote shell, load code or generate deployment payloads. Pipeline nodes are an allowlist of deterministic data transforms; shell, PowerShell, network and loader nodes are rejected. These boundaries preserve the orchestration contract while keeping execution isolated and reviewable.
+
+The first typed catalog group uses the original paths and camel-case JSON representations. Its independently described field catalog is in `contracts/dto-catalog.json`, pinned to the ApiClient artifact SHA-256/MVID and static managed-metadata Evidence. Listener records are configuration only: adding one never binds a network socket. Certificate endpoints store public metadata only and never accept a private key.
 
 ## Run locally
 

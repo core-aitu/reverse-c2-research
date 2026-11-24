@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "artifact": {
+    "name": "SpecterInsight.ApiClient.dll",
+    "version": "7.0.0.0",
+    "sha256": "5c658f03289e5804a692ee66ca7beff3883631f4a3d81b301bdade0e7fa45422",
+    "mvid": "25208fa6-b62b-46bd-b864-eea28025b41e"
+  },
+  "provenance": {
+    "kind": "static-managed-metadata",
+    "executed": false,
+    "evidence": [
+      "ev_92b4c01be83d404ed4a30833d18f8c0e808a857c7161bbe4122f52e6ebf73a84",
+      "ev_ea230181ffcd9ba9f70cc982feb949a41b39fd46b143b87671526a44564ec76e"
+    ]
+  },
+  "types": {
+    "AddWordlistRequest": ["name", "description", "tags", "content"],
+    "UpdateWordlistRequest": ["name", "description", "tags", "content"],
+    "WordlistResponse": ["id", "name", "description", "tags", "content", "entryCount", "createdAt", "updatedAt"],
+    "SpecterScript": ["identifier", "name", "description", "documentation", "scriptBlock", "version", "isPremium", "labels", "enabled"],
+    "Listener": ["prefix", "enabled", "certificateName", "webDavPath"],
+    "AddHttpListenerRequest": ["prefix", "certificateName", "webDavPath"],
+    "UpdateListenerRequest": ["prefix", "enabled"],
+    "CertificateInfo": ["name", "country", "state", "locality", "organization", "organizationalUnit", "commonName", "start", "end"],
+    "SpecterModuleInfo": ["name", "version", "runtimeVersion", "cmdlets"]
+  }
+}
