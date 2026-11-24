@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "transport": "/api/events",
+  "authentication": "single-use ticket from POST /api/events/ticket",
+  "cursor": "event.id",
+  "envelope": {
+    "required": ["id", "type", "occurredAt", "version", "payload"],
+    "version": 1
+  },
+  "implemented": [
+    {
+      "type": "EventNotification",
+      "payload": "AuditEvent",
+      "legacyEvidence": ["FND-013", "FND-058"]
+    },
+    { "type": "ResourceUpdated", "payload": "AuditEvent" },
+    { "type": "ResourceDeleted", "payload": "AuditEvent" },
+    { "type": "AdapterConfigured", "payload": "AuditEvent" },
+    { "type": "AdapterProbed", "payload": "AuditEvent" },
+    { "type": "PipelineUpdated", "payload": "AuditEvent" },
+    { "type": "PipelineJobCompleted", "payload": "AuditEvent" },
+    { "type": "AgentSimulatorRegistered", "payload": "AuditEvent" },
+    { "type": "SimulatorTaskQueued", "payload": "AuditEvent" },
+    { "type": "SimulatorTaskCompleted", "payload": "AuditEvent" }
+  ],
+  "indexedLegacySubscriptions": 25,
+  "status": "management plane, adapters, safe pipeline and protocol simulator"
+}

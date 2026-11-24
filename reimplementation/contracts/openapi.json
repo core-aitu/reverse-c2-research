@@ -1,0 +1,5236 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "SpecterInsight 7.0.0 clean-room compatibility contract",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/api/Accounts/authenticate": {
+      "post": {
+        "operationId": "AuthenticateAsync",
+        "tags": [
+          "Accounts"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [],
+        "x-specter-return-type": "AuthenticateResponse",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Accounts/refresh-token": {
+      "post": {
+        "operationId": "RefreshTokenAsync",
+        "tags": [
+          "Accounts"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [],
+        "x-specter-return-type": "AuthenticateResponse",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Accounts/revoke-token": {
+      "post": {
+        "operationId": "RevokeTokenAsync",
+        "tags": [
+          "Accounts"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Accounts": {
+      "get": {
+        "operationId": "AccountsAllAsync",
+        "tags": [
+          "Accounts"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<AccountResponse>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      },
+      "post": {
+        "operationId": "AccountsPOSTAsync",
+        "tags": [
+          "Accounts"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Accounts/{username}": {
+      "get": {
+        "operationId": "AccountsGETAsync",
+        "tags": [
+          "Accounts"
+        ],
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "AccountResponse",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      },
+      "delete": {
+        "operationId": "AccountsDELETEAsync",
+        "tags": [
+          "Accounts"
+        ],
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Accounts/{name}": {
+      "put": {
+        "operationId": "AccountsPUTAsync",
+        "tags": [
+          "Accounts"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/{controller}/Acme/acme-challenge/{token}": {
+      "get": {
+        "operationId": "AcmeChallengeAsync",
+        "tags": [
+          "{controller}"
+        ],
+        "parameters": [
+          {
+            "name": "controller",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "token",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/AcmeAccount": {
+      "get": {
+        "operationId": "AcmeAccountAllAsync",
+        "tags": [
+          "AcmeAccount"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<AcmeAccount>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      },
+      "put": {
+        "operationId": "AcmeAccountPUTAsync",
+        "tags": [
+          "AcmeAccount"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/AcmeAccount/AcmeAccount/{email}": {
+      "delete": {
+        "operationId": "AcmeAccountDELETEAsync",
+        "tags": [
+          "AcmeAccount"
+        ],
+        "parameters": [
+          {
+            "name": "email",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/AcmeAccount/AcmeAccount/registerdns?": {
+      "put": {
+        "operationId": "RegisterdnsAsync",
+        "tags": [
+          "AcmeAccount"
+        ],
+        "parameters": [
+          {
+            "name": "email",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "AcmeDnsAuthorizationResponse",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/AcmeAccount/AcmeAccount/validate": {
+      "put": {
+        "operationId": "ValidateAsync",
+        "tags": [
+          "AcmeAccount"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/AiAgentDefinitions": {
+      "get": {
+        "operationId": "AiAgentDefinitionsAllAsync",
+        "tags": [
+          "AiAgentDefinitions"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<AiAgentDefinition>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      },
+      "post": {
+        "operationId": "AiAgentDefinitionsPOSTAsync",
+        "tags": [
+          "AiAgentDefinitions"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/AiAgentDefinitions/{agentId}": {
+      "put": {
+        "operationId": "AiAgentDefinitionsPUTAsync",
+        "tags": [
+          "AiAgentDefinitions"
+        ],
+        "parameters": [
+          {
+            "name": "agentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      },
+      "delete": {
+        "operationId": "AiAgentDefinitionsDELETEAsync",
+        "tags": [
+          "AiAgentDefinitions"
+        ],
+        "parameters": [
+          {
+            "name": "agentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/AiFunctionDefinitions": {
+      "post": {
+        "operationId": "AiFunctionDefinitionsPOSTAsync",
+        "tags": [
+          "AiFunctionDefinitions"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      },
+      "get": {
+        "operationId": "AiFunctionDefinitionsAllAsync",
+        "tags": [
+          "AiFunctionDefinitions"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<AiFunctionDefinition>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/AiFunctionDefinitions/{funcId}": {
+      "put": {
+        "operationId": "AiFunctionDefinitionsPUTAsync",
+        "tags": [
+          "AiFunctionDefinitions"
+        ],
+        "parameters": [
+          {
+            "name": "funcId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      },
+      "delete": {
+        "operationId": "AiFunctionDefinitionsDELETEAsync",
+        "tags": [
+          "AiFunctionDefinitions"
+        ],
+        "parameters": [
+          {
+            "name": "funcId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/AiFunctionDefinitions/{funcId}/run": {
+      "post": {
+        "operationId": "RunAsync",
+        "tags": [
+          "AiFunctionDefinitions"
+        ],
+        "parameters": [
+          {
+            "name": "funcId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "RunAiFunctionResult",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/AiSessions/AiModelsList?": {
+      "get": {
+        "operationId": "AiModelsListAsync",
+        "tags": [
+          "AiSessions"
+        ],
+        "parameters": [
+          {
+            "name": "kind",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<string>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/AiSessions/AiModelsListAll": {
+      "get": {
+        "operationId": "AiModelsListAllAsync",
+        "tags": [
+          "AiSessions"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<AiModelList>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/AiSessions/NewAiSession": {
+      "post": {
+        "operationId": "NewAiSessionAsync",
+        "tags": [
+          "AiSessions"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "string",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/AiSessions/GetAiSessions": {
+      "get": {
+        "operationId": "GetAiSessionsAsync",
+        "tags": [
+          "AiSessions"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<AiSessionInfoWithSessionId>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/AiSessions/GetAiSessionBySessionId?": {
+      "get": {
+        "operationId": "GetAiSessionBySessionIdAsync",
+        "tags": [
+          "AiSessions"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "AiSessionInfoWithSessionId",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/AiSessions/DeleteAiSession?": {
+      "post": {
+        "operationId": "DeleteAiSessionAsync",
+        "tags": [
+          "AiSessions"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/AiSessions/GetAiMessagesBySessionId?": {
+      "get": {
+        "operationId": "GetAiMessagesBySessionIdAsync",
+        "tags": [
+          "AiSessions"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<AiMessage>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/AiSessions/NewUserMessage": {
+      "get": {
+        "operationId": "NewUserMessageAsync",
+        "tags": [
+          "AiSessions"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/AiSessions/ApproveOrDenyAiSessionTask?": {
+      "get": {
+        "operationId": "ApproveOrDenyAiSessionTaskAsync",
+        "tags": [
+          "AiSessions"
+        ],
+        "parameters": [
+          {
+            "name": "approved",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "toolCallId",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/AiSessions/GetAiFunctionCallResultsBySessionId?": {
+      "get": {
+        "operationId": "GetAiFunctionCallResultsBySessionIdAsync",
+        "tags": [
+          "AiSessions"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<AiFunctionCallResult>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/AiSessions/PauseAiSession?": {
+      "post": {
+        "operationId": "PauseAiSessionAsync",
+        "tags": [
+          "AiSessions"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/AiSessions/ResumeAiSession?": {
+      "post": {
+        "operationId": "ResumeAiSessionAsync",
+        "tags": [
+          "AiSessions"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/AiSessions/CancelAiSessionTask?": {
+      "get": {
+        "operationId": "CancelAiSessionTaskAsync",
+        "tags": [
+          "AiSessions"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/AiSessions/GetSessionStatus?": {
+      "get": {
+        "operationId": "GetSessionStatusAsync",
+        "tags": [
+          "AiSessions"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "AiStatusUpdateMessage",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Artifacts": {
+      "get": {
+        "operationId": "ArtifactsAllAsync",
+        "tags": [
+          "Artifacts"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<ArtifactInfo>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Artifacts/Artifacts/{host}": {
+      "get": {
+        "operationId": "ArtifactsAll2Async",
+        "tags": [
+          "Artifacts"
+        ],
+        "parameters": [
+          {
+            "name": "host",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<ArtifactInfo>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Artifacts/Artifacts/{host}/{name}": {
+      "get": {
+        "operationId": "ArtifactsGETAsync",
+        "tags": [
+          "Artifacts"
+        ],
+        "parameters": [
+          {
+            "name": "host",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          },
+          "206": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "FileResponse",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      },
+      "delete": {
+        "operationId": "ArtifactsDELETEAsync",
+        "tags": [
+          "Artifacts"
+        ],
+        "parameters": [
+          {
+            "name": "host",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Certificates": {
+      "get": {
+        "operationId": "CertificatesAllAsync",
+        "tags": [
+          "Certificates"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<CertificateInfo>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      },
+      "put": {
+        "operationId": "CertificatesPUTAsync",
+        "tags": [
+          "Certificates"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Certificates/Certificates/{name}": {
+      "delete": {
+        "operationId": "CertificatesDELETEAsync",
+        "tags": [
+          "Certificates"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Certificates/Certificates/import": {
+      "put": {
+        "operationId": "ImportAsync",
+        "tags": [
+          "Certificates"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Documentation": {
+      "get": {
+        "operationId": "DocumentationAsync",
+        "tags": [
+          "Documentation"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<DocumentationEntry>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Documentation/search": {
+      "post": {
+        "operationId": "SearchAsync",
+        "tags": [
+          "Documentation"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<DocumentationSearchResult>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Documentation/index-status": {
+      "get": {
+        "operationId": "IndexStatusAsync",
+        "tags": [
+          "Documentation"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "DocumentationIndexStatus",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Documentation/embedding-providers": {
+      "get": {
+        "operationId": "EmbeddingProvidersAsync",
+        "tags": [
+          "Documentation"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<EmbeddingProviderInfo>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Documentation/index": {
+      "post": {
+        "operationId": "IndexAsync",
+        "tags": [
+          "Documentation"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Downloads": {
+      "get": {
+        "operationId": "DownloadsAllAsync",
+        "tags": [
+          "Downloads"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<DownloadInfo>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      },
+      "put": {
+        "operationId": "DownloadsPUTAsync",
+        "tags": [
+          "Downloads"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "CreateDownloadResponse",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      },
+      "delete": {
+        "operationId": "DownloadsDELETEAsync",
+        "tags": [
+          "Downloads"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Downloads/Downloads/{identifier}": {
+      "delete": {
+        "operationId": "DownloadsDELETE2Async",
+        "tags": [
+          "Downloads"
+        ],
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/EmailAccounts?": {
+      "get": {
+        "operationId": "EmailAccountsAllAsync",
+        "tags": [
+          "EmailAccounts?"
+        ],
+        "parameters": [
+          {
+            "name": "personaId",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "provider",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<EmailAccountResponse>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/EmailAccounts": {
+      "post": {
+        "operationId": "EmailAccountsPOSTAsync",
+        "tags": [
+          "EmailAccounts"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "EmailAccountResponse",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/EmailAccounts/{id}": {
+      "get": {
+        "operationId": "EmailAccountsGETAsync",
+        "tags": [
+          "EmailAccounts"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "EmailAccountResponse",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      },
+      "put": {
+        "operationId": "EmailAccountsPUTAsync",
+        "tags": [
+          "EmailAccounts"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "EmailAccountResponse",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/EmailAccounts/{id}?": {
+      "delete": {
+        "operationId": "EmailAccountsDELETEAsync",
+        "tags": [
+          "EmailAccounts"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "removeFromProvider",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/EmailAccounts/Providers": {
+      "get": {
+        "operationId": "ProvidersAsync",
+        "tags": [
+          "EmailAccounts"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<string>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/EmailAccounts/Register": {
+      "post": {
+        "operationId": "RegisterAsync",
+        "tags": [
+          "EmailAccounts"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "EmailAccountResponse",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Events/Events/GetAllEvents": {
+      "get": {
+        "operationId": "GetAllEventsAsync",
+        "tags": [
+          "Events"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<Event>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Events/Events/GetLatestEvents?": {
+      "get": {
+        "operationId": "GetLatestEventsAsync",
+        "tags": [
+          "Events"
+        ],
+        "parameters": [
+          {
+            "name": "from",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<Event>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Identity": {
+      "get": {
+        "operationId": "IdentityAsync",
+        "tags": [
+          "Identity"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ServerIdentity",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/tasks/runscript": {
+      "post": {
+        "operationId": "RunscriptAsync",
+        "tags": [
+          "tasks"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "CreateImplantTaskResponse",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/tasks/runscript?": {
+      "get": {
+        "operationId": "RunscriptAllAsync",
+        "tags": [
+          "tasks"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sessionid",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<ImplantTaskResponse>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/License": {
+      "get": {
+        "operationId": "LicenseGETAsync",
+        "tags": [
+          "License"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "LicenseValidationInfoEx",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      },
+      "put": {
+        "operationId": "LicensePUTAsync",
+        "tags": [
+          "License"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "LicenseValidationInfoEx",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Listeners": {
+      "get": {
+        "operationId": "ListenersAllAsync",
+        "tags": [
+          "Listeners"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<Listener>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      },
+      "post": {
+        "operationId": "ListenersPOSTAsync",
+        "tags": [
+          "Listeners"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      },
+      "delete": {
+        "operationId": "ListenersDELETEAsync",
+        "tags": [
+          "Listeners"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      },
+      "put": {
+        "operationId": "ListenersPUTAsync",
+        "tags": [
+          "Listeners"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Loaders/{loaderId}/bundle/{platform}": {
+      "get": {
+        "operationId": "BundleAsync",
+        "tags": [
+          "Loaders"
+        ],
+        "parameters": [
+          {
+            "name": "loaderId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "platform",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Loaders/{loaderId}/flat-bundle/{platform}": {
+      "get": {
+        "operationId": "FlatBundleAsync",
+        "tags": [
+          "Loaders"
+        ],
+        "parameters": [
+          {
+            "name": "loaderId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "platform",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Loaders/{loaderId}/deps/{platform}": {
+      "get": {
+        "operationId": "DepsAsync",
+        "tags": [
+          "Loaders"
+        ],
+        "parameters": [
+          {
+            "name": "loaderId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "platform",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Loaders/{loaderId}/assembly/{platform}/{assemblyName}": {
+      "get": {
+        "operationId": "AssemblyGETAsync",
+        "tags": [
+          "Loaders"
+        ],
+        "parameters": [
+          {
+            "name": "loaderId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "platform",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "assemblyName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Loaders/{loaderId}/assembly-manifest/{platform}": {
+      "get": {
+        "operationId": "AssemblyManifestAsync",
+        "tags": [
+          "Loaders"
+        ],
+        "parameters": [
+          {
+            "name": "loaderId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "platform",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Modules": {
+      "get": {
+        "operationId": "ModulesAllAsync",
+        "tags": [
+          "Modules"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<SpecterModuleInfo>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      },
+      "post": {
+        "operationId": "ModulesPOSTAsync",
+        "tags": [
+          "Modules"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Modules/Modules/{name}": {
+      "get": {
+        "operationId": "ModulesGETAsync",
+        "tags": [
+          "Modules"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          },
+          "206": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "FileResponse",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      },
+      "delete": {
+        "operationId": "ModulesDELETEAsync",
+        "tags": [
+          "Modules"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/NetworkIntelligence/GetAllHosts": {
+      "get": {
+        "operationId": "GetAllHostsAsync",
+        "tags": [
+          "NetworkIntelligence"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<NetHost>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/NetworkIntelligence/GetHostById?": {
+      "get": {
+        "operationId": "GetHostByIdAsync",
+        "tags": [
+          "NetworkIntelligence"
+        ],
+        "parameters": [
+          {
+            "name": "hostId",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "NetHost",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/NetworkIntelligence/UpsertHost": {
+      "post": {
+        "operationId": "UpsertHostAsync",
+        "tags": [
+          "NetworkIntelligence"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "NetHost",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/NetworkIntelligence/DeleteHost?": {
+      "post": {
+        "operationId": "DeleteHostAsync",
+        "tags": [
+          "NetworkIntelligence"
+        ],
+        "parameters": [
+          {
+            "name": "hostId",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/NetworkIntelligence/GetIpAddressesByHostId?": {
+      "get": {
+        "operationId": "GetIpAddressesByHostIdAsync",
+        "tags": [
+          "NetworkIntelligence"
+        ],
+        "parameters": [
+          {
+            "name": "hostId",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<NetHostIpAddress>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/NetworkIntelligence/UpsertIpAddress": {
+      "post": {
+        "operationId": "UpsertIpAddressAsync",
+        "tags": [
+          "NetworkIntelligence"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/NetworkIntelligence/GetAllCredentials": {
+      "get": {
+        "operationId": "GetAllCredentialsAsync",
+        "tags": [
+          "NetworkIntelligence"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<NetCredential>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/NetworkIntelligence/GetCredentialsByHostId?": {
+      "get": {
+        "operationId": "GetCredentialsByHostIdAsync",
+        "tags": [
+          "NetworkIntelligence"
+        ],
+        "parameters": [
+          {
+            "name": "hostId",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<NetCredential>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/NetworkIntelligence/UpsertCredential": {
+      "post": {
+        "operationId": "UpsertCredentialAsync",
+        "tags": [
+          "NetworkIntelligence"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/NetworkIntelligence/GetOpenPortsByHostId?": {
+      "get": {
+        "operationId": "GetOpenPortsByHostIdAsync",
+        "tags": [
+          "NetworkIntelligence"
+        ],
+        "parameters": [
+          {
+            "name": "hostId",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<NetOpenPort>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/NetworkIntelligence/UpsertOpenPort": {
+      "post": {
+        "operationId": "UpsertOpenPortAsync",
+        "tags": [
+          "NetworkIntelligence"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/NetworkIntelligence/GetServicesByHostId?": {
+      "get": {
+        "operationId": "GetServicesByHostIdAsync",
+        "tags": [
+          "NetworkIntelligence"
+        ],
+        "parameters": [
+          {
+            "name": "hostId",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<NetService>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/NetworkIntelligence/UpsertService": {
+      "post": {
+        "operationId": "UpsertServiceAsync",
+        "tags": [
+          "NetworkIntelligence"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/NetworkIntelligence/GetProcessesByHostId?": {
+      "get": {
+        "operationId": "GetProcessesByHostIdAsync",
+        "tags": [
+          "NetworkIntelligence"
+        ],
+        "parameters": [
+          {
+            "name": "hostId",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<NetProcess>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/NetworkIntelligence/ReplaceProcessSnapshot?": {
+      "post": {
+        "operationId": "ReplaceProcessSnapshotAsync",
+        "tags": [
+          "NetworkIntelligence"
+        ],
+        "parameters": [
+          {
+            "name": "hostId",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/NetworkIntelligence/GetUsersByHostId?": {
+      "get": {
+        "operationId": "GetUsersByHostIdAsync",
+        "tags": [
+          "NetworkIntelligence"
+        ],
+        "parameters": [
+          {
+            "name": "hostId",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<NetUser>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/NetworkIntelligence/UpsertUser": {
+      "post": {
+        "operationId": "UpsertUserAsync",
+        "tags": [
+          "NetworkIntelligence"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/NetworkIntelligence/ResolveNetHostId?": {
+      "get": {
+        "operationId": "ResolveNetHostIdAsync",
+        "tags": [
+          "NetworkIntelligence"
+        ],
+        "parameters": [
+          {
+            "name": "fqdn",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ip",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "string",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/NetworkIntelligence/GetCachedFilesByHostId?": {
+      "get": {
+        "operationId": "GetCachedFilesByHostIdAsync",
+        "tags": [
+          "NetworkIntelligence"
+        ],
+        "parameters": [
+          {
+            "name": "hostId",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<NetCachedFile>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/NetworkIntelligence/GetCachedFileById?": {
+      "get": {
+        "operationId": "GetCachedFileByIdAsync",
+        "tags": [
+          "NetworkIntelligence"
+        ],
+        "parameters": [
+          {
+            "name": "fileId",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "NetCachedFile",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/NetworkIntelligence/DownloadCachedFileContent?": {
+      "get": {
+        "operationId": "DownloadCachedFileContentAsync",
+        "tags": [
+          "NetworkIntelligence"
+        ],
+        "parameters": [
+          {
+            "name": "fileId",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/NetworkIntelligence/UpsertCachedFile": {
+      "post": {
+        "operationId": "UpsertCachedFileAsync",
+        "tags": [
+          "NetworkIntelligence"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/NotebookFiles/{notebookId}": {
+      "get": {
+        "operationId": "NotebookFilesAllAsync",
+        "tags": [
+          "NotebookFiles"
+        ],
+        "parameters": [
+          {
+            "name": "notebookId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<NotebookFileInfo>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/NotebookFiles/{notebookId}/{filename}": {
+      "get": {
+        "operationId": "NotebookFilesGETAsync",
+        "tags": [
+          "NotebookFiles"
+        ],
+        "parameters": [
+          {
+            "name": "notebookId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filename",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      },
+      "delete": {
+        "operationId": "NotebookFilesDELETEAsync",
+        "tags": [
+          "NotebookFiles"
+        ],
+        "parameters": [
+          {
+            "name": "notebookId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filename",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/PayloadPipeline": {
+      "put": {
+        "operationId": "PayloadPipelinePUTAsync",
+        "tags": [
+          "PayloadPipeline"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/PayloadPipeline?": {
+      "get": {
+        "operationId": "PayloadPipelineAllAsync",
+        "tags": [
+          "PayloadPipeline?"
+        ],
+        "parameters": [
+          {
+            "name": "search",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<PayloadPipeline>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/PayloadPipeline/PayloadPipeline/{pipelineId}": {
+      "get": {
+        "operationId": "PayloadPipelineGETAsync",
+        "tags": [
+          "PayloadPipeline"
+        ],
+        "parameters": [
+          {
+            "name": "pipelineId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "PayloadPipeline",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      },
+      "delete": {
+        "operationId": "PayloadPipelineDELETEAsync",
+        "tags": [
+          "PayloadPipeline"
+        ],
+        "parameters": [
+          {
+            "name": "pipelineId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/PayloadPipeline/PayloadPipeline/{pipelineId}/run?": {
+      "get": {
+        "operationId": "PayloadPipelineRunAsync",
+        "tags": [
+          "PayloadPipeline"
+        ],
+        "parameters": [
+          {
+            "name": "pipelineId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "byte[]",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/PayloadPipeline/PayloadPipeline/{pipelineId}/run": {
+      "post": {
+        "operationId": "PayloadPipelineRunPostAsync",
+        "tags": [
+          "PayloadPipeline"
+        ],
+        "parameters": [
+          {
+            "name": "pipelineId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "byte[]",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/PayloadPipeline/PayloadPipeline/test?": {
+      "post": {
+        "operationId": "PayloadPipelineTestAsync",
+        "tags": [
+          "PayloadPipeline"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "PayloadPipelineTestResults",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/PayloadPipeline/PayloadPipeline/documentation": {
+      "get": {
+        "operationId": "PayloadPipelineDocumentationAsync",
+        "tags": [
+          "PayloadPipeline"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<CmdletDocumentation>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/PayloadPipeline/PayloadPipeline/clear": {
+      "post": {
+        "operationId": "PayloadPipelineClearCacheAsync",
+        "tags": [
+          "PayloadPipeline"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Payloads": {
+      "get": {
+        "operationId": "PayloadsAllAsync",
+        "tags": [
+          "Payloads"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<CreateImplantRequest>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      },
+      "post": {
+        "operationId": "PayloadsPOSTAsync",
+        "tags": [
+          "Payloads"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Payloads?": {
+      "delete": {
+        "operationId": "PayloadsDELETEAsync",
+        "tags": [
+          "Payloads?"
+        ],
+        "parameters": [
+          {
+            "name": "build",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Payloads/Payloads/{build}": {
+      "get": {
+        "operationId": "PayloadsGETAsync",
+        "tags": [
+          "Payloads"
+        ],
+        "parameters": [
+          {
+            "name": "build",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "CreateImplantRequest",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/download": {
+      "post": {
+        "operationId": "DownloadPOSTAsync",
+        "tags": [
+          "download"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          },
+          "206": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "FileResponse",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Personas": {
+      "get": {
+        "operationId": "PersonasAllAsync",
+        "tags": [
+          "Personas"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<PersonaResponse>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      },
+      "post": {
+        "operationId": "PersonasPOSTAsync",
+        "tags": [
+          "Personas"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "PersonaResponse",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Personas/{id}": {
+      "get": {
+        "operationId": "PersonasGETAsync",
+        "tags": [
+          "Personas"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "PersonaResponse",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      },
+      "put": {
+        "operationId": "PersonasPUTAsync",
+        "tags": [
+          "Personas"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "PersonaResponse",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      },
+      "delete": {
+        "operationId": "PersonasDELETEAsync",
+        "tags": [
+          "Personas"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Phishing/Send": {
+      "post": {
+        "operationId": "SendAsync",
+        "tags": [
+          "Phishing"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Phishing/Targets": {
+      "get": {
+        "operationId": "TargetsAsync",
+        "tags": [
+          "Phishing"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<Event>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/PowerShellNotebooks": {
+      "get": {
+        "operationId": "PowerShellNotebooksAllAsync",
+        "tags": [
+          "PowerShellNotebooks"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<PowerShellNotebook>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      },
+      "post": {
+        "operationId": "PowerShellNotebooksPOSTAsync",
+        "tags": [
+          "PowerShellNotebooks"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "PowerShellNotebook",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/PowerShellNotebooks/{notebookId}": {
+      "get": {
+        "operationId": "PowerShellNotebooksGETAsync",
+        "tags": [
+          "PowerShellNotebooks"
+        ],
+        "parameters": [
+          {
+            "name": "notebookId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "PowerShellNotebook",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      },
+      "put": {
+        "operationId": "PowerShellNotebooksPUTAsync",
+        "tags": [
+          "PowerShellNotebooks"
+        ],
+        "parameters": [
+          {
+            "name": "notebookId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      },
+      "delete": {
+        "operationId": "PowerShellNotebooksDELETEAsync",
+        "tags": [
+          "PowerShellNotebooks"
+        ],
+        "parameters": [
+          {
+            "name": "notebookId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/PowerShellNotebooks/upsert": {
+      "put": {
+        "operationId": "UpsertAsync",
+        "tags": [
+          "PowerShellNotebooks"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/PowerShellNotebooks/{notebookId}/session": {
+      "post": {
+        "operationId": "SessionPOSTAsync",
+        "tags": [
+          "PowerShellNotebooks"
+        ],
+        "parameters": [
+          {
+            "name": "notebookId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "PsSessionInfo",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      },
+      "delete": {
+        "operationId": "SessionDELETEAsync",
+        "tags": [
+          "PowerShellNotebooks"
+        ],
+        "parameters": [
+          {
+            "name": "notebookId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/PowerShellNotebooks/{notebookId}/session/reset": {
+      "post": {
+        "operationId": "ResetAsync",
+        "tags": [
+          "PowerShellNotebooks"
+        ],
+        "parameters": [
+          {
+            "name": "notebookId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "PsSessionInfo",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/PowerShellSessions": {
+      "get": {
+        "operationId": "PowerShellSessionsAllAsync",
+        "tags": [
+          "PowerShellSessions"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<PsSessionInfo>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      },
+      "post": {
+        "operationId": "PowerShellSessionsPOSTAsync",
+        "tags": [
+          "PowerShellSessions"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "string",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/PowerShellSessions/{sessionId}": {
+      "delete": {
+        "operationId": "PowerShellSessionsDELETEAsync",
+        "tags": [
+          "PowerShellSessions"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/PowerShellSessions/{sessionId}/run": {
+      "post": {
+        "operationId": "Run2Async",
+        "tags": [
+          "PowerShellSessions"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {},
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "PsOutputRecord",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Scripts": {
+      "get": {
+        "operationId": "ScriptsAllAsync",
+        "tags": [
+          "Scripts"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<SpecterScript>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      },
+      "put": {
+        "operationId": "ScriptsPUTAsync",
+        "tags": [
+          "Scripts"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Scripts?": {
+      "delete": {
+        "operationId": "ScriptsDELETEAsync",
+        "tags": [
+          "Scripts?"
+        ],
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Sessions": {
+      "get": {
+        "operationId": "SessionsAllAsync",
+        "tags": [
+          "Sessions"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<GetSessionsResponse>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Sessions?": {
+      "put": {
+        "operationId": "SessionsPUTAsync",
+        "tags": [
+          "Sessions?"
+        ],
+        "parameters": [
+          {
+            "name": "archived",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sessionId",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      },
+      "delete": {
+        "operationId": "SessionsDELETEAsync",
+        "tags": [
+          "Sessions?"
+        ],
+        "parameters": [
+          {
+            "name": "sessionid",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Sessions/SessionUpateNicknameAndNotes": {
+      "put": {
+        "operationId": "SessionUpateNicknameAndNotesAsync",
+        "tags": [
+          "Sessions"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Settings": {
+      "get": {
+        "operationId": "SettingsAllAsync",
+        "tags": [
+          "Settings"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<Setting>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      },
+      "put": {
+        "operationId": "SettingsAsync",
+        "tags": [
+          "Settings"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Settings/Settings/defaultsettings": {
+      "get": {
+        "operationId": "DefaultsettingsAsync",
+        "tags": [
+          "Settings"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<Setting>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/SshSessions": {
+      "get": {
+        "operationId": "SshSessionsAllAsync",
+        "tags": [
+          "SshSessions"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<SshSessionResponse>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      },
+      "post": {
+        "operationId": "SshSessionsPOSTAsync",
+        "tags": [
+          "SshSessions"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "SshSessionResponse",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/SshSessions/{sessionId}": {
+      "delete": {
+        "operationId": "SshSessionsDELETEAsync",
+        "tags": [
+          "SshSessions"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/SshSessions/{sessionId}/tasks?": {
+      "get": {
+        "operationId": "TasksAsync",
+        "tags": [
+          "SshSessions"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<SshTaskResponse>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/SshSessions/{sessionId}/command": {
+      "post": {
+        "operationId": "CommandAsync",
+        "tags": [
+          "SshSessions"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {},
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "SshOutputRecord",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/SshSessions/{sessionId}/upload": {
+      "post": {
+        "operationId": "UploadAsync",
+        "tags": [
+          "SshSessions"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/SshSessions/{sessionId}/download?": {
+      "get": {
+        "operationId": "DownloadGETAsync",
+        "tags": [
+          "SshSessions"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "remotePath",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/SshTunnels": {
+      "get": {
+        "operationId": "SshTunnelsAllAsync",
+        "tags": [
+          "SshTunnels"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<SshTunnelInfo>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      },
+      "post": {
+        "operationId": "SshTunnelsPOSTAsync",
+        "tags": [
+          "SshTunnels"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "SshTunnelInfo",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/SshTunnels/{id}": {
+      "delete": {
+        "operationId": "SshTunnelsDELETEAsync",
+        "tags": [
+          "SshTunnels"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Tor/start": {
+      "post": {
+        "operationId": "StartAsync",
+        "tags": [
+          "Tor"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "TorStatus",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Tor/stop": {
+      "post": {
+        "operationId": "StopAsync",
+        "tags": [
+          "Tor"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Tor/status": {
+      "get": {
+        "operationId": "StatusAsync",
+        "tags": [
+          "Tor"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "TorStatus",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Tor/exitnodes?": {
+      "get": {
+        "operationId": "ExitnodesAsync",
+        "tags": [
+          "Tor"
+        ],
+        "parameters": [
+          {
+            "name": "countryCode",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<TorExitNode>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Tor/exitcountry": {
+      "post": {
+        "operationId": "ExitcountryAsync",
+        "tags": [
+          "Tor"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Tor/exitnode": {
+      "post": {
+        "operationId": "ExitnodeAsync",
+        "tags": [
+          "Tor"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Tor/exit": {
+      "delete": {
+        "operationId": "ExitAsync",
+        "tags": [
+          "Tor"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Tor/rotate": {
+      "post": {
+        "operationId": "RotateAsync",
+        "tags": [
+          "Tor"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/TorTunnels": {
+      "get": {
+        "operationId": "TorTunnelsAllAsync",
+        "tags": [
+          "TorTunnels"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<TorTunnelInfo>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      },
+      "post": {
+        "operationId": "TorTunnelsPOSTAsync",
+        "tags": [
+          "TorTunnels"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "TorTunnelInfo",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/TorTunnels/{id}": {
+      "delete": {
+        "operationId": "TorTunnelsDELETEAsync",
+        "tags": [
+          "TorTunnels"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Tunnels": {
+      "get": {
+        "operationId": "TunnelsAllAsync",
+        "tags": [
+          "Tunnels"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<TunnelInitiatorInfo>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      },
+      "post": {
+        "operationId": "TunnelsPOSTAsync",
+        "tags": [
+          "Tunnels"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Tunnels/Tunnels/{lport}": {
+      "delete": {
+        "operationId": "TunnelsDELETEAsync",
+        "tags": [
+          "Tunnels"
+        ],
+        "parameters": [
+          {
+            "name": "lport",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Updates": {
+      "get": {
+        "operationId": "UpdatesGETAsync",
+        "tags": [
+          "Updates"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "SerializableVersion",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      },
+      "post": {
+        "operationId": "UpdatesPOSTAsync",
+        "tags": [
+          "Updates"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Updates/Updates/client": {
+      "get": {
+        "operationId": "ClientAsync",
+        "tags": [
+          "Updates"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          },
+          "206": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "FileResponse",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Updates/Updates/status": {
+      "get": {
+        "operationId": "Status2Async",
+        "tags": [
+          "Updates"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "UpdateJobInfo",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/serverversion": {
+      "get": {
+        "operationId": "ServerversionAsync",
+        "tags": [
+          "serverversion"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "SerializableVersion",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/WebDavFiles": {
+      "get": {
+        "operationId": "WebDavFilesAllAsync",
+        "tags": [
+          "WebDavFiles"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<WebDavFileResponse>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      },
+      "post": {
+        "operationId": "WebDavFilesPOSTAsync",
+        "tags": [
+          "WebDavFiles"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      },
+      "delete": {
+        "operationId": "WebDavFilesDELETEAsync",
+        "tags": [
+          "WebDavFiles"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/WebDavFiles/tree": {
+      "get": {
+        "operationId": "TreeAsync",
+        "tags": [
+          "WebDavFiles"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<WebDavFileResponse>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/WebDavFiles/directory": {
+      "post": {
+        "operationId": "DirectoryAsync",
+        "tags": [
+          "WebDavFiles"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/WinRmSessions": {
+      "get": {
+        "operationId": "WinRmSessionsAllAsync",
+        "tags": [
+          "WinRmSessions"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<WinRmSessionResponse>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      },
+      "post": {
+        "operationId": "WinRmSessionsPOSTAsync",
+        "tags": [
+          "WinRmSessions"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "WinRmSessionResponse",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/WinRmSessions/{sessionId}": {
+      "delete": {
+        "operationId": "WinRmSessionsDELETEAsync",
+        "tags": [
+          "WinRmSessions"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/WinRmSessions/{sessionId}/tasks?": {
+      "get": {
+        "operationId": "Tasks2Async",
+        "tags": [
+          "WinRmSessions"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<WinRmTaskResponse>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/WinRmSessions/{sessionId}/command": {
+      "post": {
+        "operationId": "Command2Async",
+        "tags": [
+          "WinRmSessions"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {},
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "WinRmOutputRecord",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/WinRmSessions/{sessionId}/upload": {
+      "post": {
+        "operationId": "Upload2Async",
+        "tags": [
+          "WinRmSessions"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/WinRmSessions/{sessionId}/download?": {
+      "get": {
+        "operationId": "DownloadGET2Async",
+        "tags": [
+          "WinRmSessions"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "remotePath",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/WinRmSessions/{sessionId}/services": {
+      "get": {
+        "operationId": "ServicesAsync",
+        "tags": [
+          "WinRmSessions"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<WinRmServiceEntry>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/WinRmSessions/{sessionId}/load/pscript": {
+      "post": {
+        "operationId": "PscriptAsync",
+        "tags": [
+          "WinRmSessions"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/WinRmSessions/{sessionId}/load/dll": {
+      "post": {
+        "operationId": "DllAsync",
+        "tags": [
+          "WinRmSessions"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/WinRmSessions/{sessionId}/load/assembly": {
+      "post": {
+        "operationId": "AssemblyPOSTAsync",
+        "tags": [
+          "WinRmSessions"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/WinRmSessions/{sessionId}/load/amsi": {
+      "post": {
+        "operationId": "AmsiAsync",
+        "tags": [
+          "WinRmSessions"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/WinRmSessions/{sessionId}/load/etw": {
+      "post": {
+        "operationId": "EtwAsync",
+        "tags": [
+          "WinRmSessions"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Wordlists?": {
+      "get": {
+        "operationId": "WordlistsAllAsync",
+        "tags": [
+          "Wordlists?"
+        ],
+        "parameters": [
+          {
+            "name": "tags",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "ICollection<WordlistResponse>",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Wordlists": {
+      "post": {
+        "operationId": "WordlistsPOSTAsync",
+        "tags": [
+          "Wordlists"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "WordlistResponse",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    },
+    "/api/Wordlists/{id}": {
+      "get": {
+        "operationId": "WordlistsGETAsync",
+        "tags": [
+          "Wordlists"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "WordlistResponse",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      },
+      "put": {
+        "operationId": "WordlistsPUTAsync",
+        "tags": [
+          "Wordlists"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "WordlistResponse",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      },
+      "delete": {
+        "operationId": "WordlistsDELETEAsync",
+        "tags": [
+          "Wordlists"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Observed success response"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "x-specter-return-type": "void",
+        "x-provenance": "normalized from pinned ApiClient.dll"
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  }
+}

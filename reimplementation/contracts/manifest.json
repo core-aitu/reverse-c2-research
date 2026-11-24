@@ -1,0 +1,2522 @@
+{
+  "schemaVersion": 1,
+  "product": "SpecterInsight 7.0.0",
+  "evidence": {
+    "kind": "normalized-clean-room-interface-facts",
+    "assemblySha256": "5c658f03289e5804a692ee66ca7beff3883631f4a3d81b301bdade0e7fa45422",
+    "source": "local ILSpy reconstruction; decompiled source is not retained",
+    "references": [
+      "FND-036",
+      "FND-040",
+      "FND-041"
+    ]
+  },
+  "operationCount": 202,
+  "operations": [
+    {
+      "operationId": "AuthenticateAsync",
+      "method": "POST",
+      "path": "/api/Accounts/authenticate",
+      "returnType": "AuthenticateResponse",
+      "parameters": "AuthenticateRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "public"
+    },
+    {
+      "operationId": "RefreshTokenAsync",
+      "method": "POST",
+      "path": "/api/Accounts/refresh-token",
+      "returnType": "AuthenticateResponse",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "public"
+    },
+    {
+      "operationId": "RevokeTokenAsync",
+      "method": "POST",
+      "path": "/api/Accounts/revoke-token",
+      "returnType": "void",
+      "parameters": "RevokeTokenRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "AccountsAllAsync",
+      "method": "GET",
+      "path": "/api/Accounts",
+      "returnType": "ICollection<AccountResponse>",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "AccountsPOSTAsync",
+      "method": "POST",
+      "path": "/api/Accounts",
+      "returnType": "void",
+      "parameters": "CreateAccountRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "AccountsGETAsync",
+      "method": "GET",
+      "path": "/api/Accounts/{username}",
+      "returnType": "AccountResponse",
+      "parameters": "string username",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "AccountsDELETEAsync",
+      "method": "DELETE",
+      "path": "/api/Accounts/{username}",
+      "returnType": "void",
+      "parameters": "string username",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "AccountsPUTAsync",
+      "method": "PUT",
+      "path": "/api/Accounts/{name}",
+      "returnType": "void",
+      "parameters": "string name, UpdateRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "AcmeChallengeAsync",
+      "method": "GET",
+      "path": "/api/{controller}/Acme/acme-challenge/{token}",
+      "returnType": "void",
+      "parameters": "string token, string controller",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "AcmeAccountAllAsync",
+      "method": "GET",
+      "path": "/api/AcmeAccount",
+      "returnType": "ICollection<AcmeAccount>",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "AcmeAccountPUTAsync",
+      "method": "PUT",
+      "path": "/api/AcmeAccount",
+      "returnType": "void",
+      "parameters": "AcmeNewAccountRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "AcmeAccountDELETEAsync",
+      "method": "DELETE",
+      "path": "/api/AcmeAccount/AcmeAccount/{email}",
+      "returnType": "void",
+      "parameters": "string email",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "RegisterdnsAsync",
+      "method": "PUT",
+      "path": "/api/AcmeAccount/AcmeAccount/registerdns?",
+      "returnType": "AcmeDnsAuthorizationResponse",
+      "parameters": "string email, CertificateInfo body",
+      "queryParameters": [
+        "email"
+      ],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "ValidateAsync",
+      "method": "PUT",
+      "path": "/api/AcmeAccount/AcmeAccount/validate",
+      "returnType": "void",
+      "parameters": "AcmeDnsValidationRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "AiAgentDefinitionsAllAsync",
+      "method": "GET",
+      "path": "/api/AiAgentDefinitions",
+      "returnType": "ICollection<AiAgentDefinition>",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "AiAgentDefinitionsPOSTAsync",
+      "method": "POST",
+      "path": "/api/AiAgentDefinitions",
+      "returnType": "void",
+      "parameters": "AiAgentDefinition body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "AiAgentDefinitionsPUTAsync",
+      "method": "PUT",
+      "path": "/api/AiAgentDefinitions/{agentId}",
+      "returnType": "void",
+      "parameters": "string agentId, AiAgentDefinition body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "AiAgentDefinitionsDELETEAsync",
+      "method": "DELETE",
+      "path": "/api/AiAgentDefinitions/{agentId}",
+      "returnType": "void",
+      "parameters": "string agentId",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "AiFunctionDefinitionsPOSTAsync",
+      "method": "POST",
+      "path": "/api/AiFunctionDefinitions",
+      "returnType": "void",
+      "parameters": "AiFunctionDefinition body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "AiFunctionDefinitionsAllAsync",
+      "method": "GET",
+      "path": "/api/AiFunctionDefinitions",
+      "returnType": "ICollection<AiFunctionDefinition>",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "AiFunctionDefinitionsPUTAsync",
+      "method": "PUT",
+      "path": "/api/AiFunctionDefinitions/{funcId}",
+      "returnType": "void",
+      "parameters": "string funcId, AiFunctionDefinition body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "AiFunctionDefinitionsDELETEAsync",
+      "method": "DELETE",
+      "path": "/api/AiFunctionDefinitions/{funcId}",
+      "returnType": "void",
+      "parameters": "string funcId",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "RunAsync",
+      "method": "POST",
+      "path": "/api/AiFunctionDefinitions/{funcId}/run",
+      "returnType": "RunAiFunctionResult",
+      "parameters": "string funcId, IDictionary<string, string> body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "AiModelsListAsync",
+      "method": "GET",
+      "path": "/api/AiSessions/AiModelsList?",
+      "returnType": "ICollection<string>",
+      "parameters": "LlmProvider? kind",
+      "queryParameters": [
+        "kind"
+      ],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "AiModelsListAllAsync",
+      "method": "GET",
+      "path": "/api/AiSessions/AiModelsListAll",
+      "returnType": "ICollection<AiModelList>",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "NewAiSessionAsync",
+      "method": "POST",
+      "path": "/api/AiSessions/NewAiSession",
+      "returnType": "string",
+      "parameters": "AiSessionInfo body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "GetAiSessionsAsync",
+      "method": "GET",
+      "path": "/api/AiSessions/GetAiSessions",
+      "returnType": "ICollection<AiSessionInfoWithSessionId>",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "GetAiSessionBySessionIdAsync",
+      "method": "GET",
+      "path": "/api/AiSessions/GetAiSessionBySessionId?",
+      "returnType": "AiSessionInfoWithSessionId",
+      "parameters": "string sessionId",
+      "queryParameters": [
+        "sessionId"
+      ],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "DeleteAiSessionAsync",
+      "method": "POST",
+      "path": "/api/AiSessions/DeleteAiSession?",
+      "returnType": "void",
+      "parameters": "string sessionId",
+      "queryParameters": [
+        "sessionId"
+      ],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "GetAiMessagesBySessionIdAsync",
+      "method": "GET",
+      "path": "/api/AiSessions/GetAiMessagesBySessionId?",
+      "returnType": "ICollection<AiMessage>",
+      "parameters": "string sessionId",
+      "queryParameters": [
+        "sessionId"
+      ],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "NewUserMessageAsync",
+      "method": "GET",
+      "path": "/api/AiSessions/NewUserMessage",
+      "returnType": "void",
+      "parameters": "AiMessage body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "ApproveOrDenyAiSessionTaskAsync",
+      "method": "GET",
+      "path": "/api/AiSessions/ApproveOrDenyAiSessionTask?",
+      "returnType": "void",
+      "parameters": "string toolCallId, bool? approved",
+      "queryParameters": [
+        "approved",
+        "toolCallId"
+      ],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "GetAiFunctionCallResultsBySessionIdAsync",
+      "method": "GET",
+      "path": "/api/AiSessions/GetAiFunctionCallResultsBySessionId?",
+      "returnType": "ICollection<AiFunctionCallResult>",
+      "parameters": "string sessionId",
+      "queryParameters": [
+        "sessionId"
+      ],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "PauseAiSessionAsync",
+      "method": "POST",
+      "path": "/api/AiSessions/PauseAiSession?",
+      "returnType": "void",
+      "parameters": "string sessionId",
+      "queryParameters": [
+        "sessionId"
+      ],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "ResumeAiSessionAsync",
+      "method": "POST",
+      "path": "/api/AiSessions/ResumeAiSession?",
+      "returnType": "void",
+      "parameters": "string sessionId",
+      "queryParameters": [
+        "sessionId"
+      ],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "CancelAiSessionTaskAsync",
+      "method": "GET",
+      "path": "/api/AiSessions/CancelAiSessionTask?",
+      "returnType": "void",
+      "parameters": "string sessionId",
+      "queryParameters": [
+        "sessionId"
+      ],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "GetSessionStatusAsync",
+      "method": "GET",
+      "path": "/api/AiSessions/GetSessionStatus?",
+      "returnType": "AiStatusUpdateMessage",
+      "parameters": "string sessionId",
+      "queryParameters": [
+        "sessionId"
+      ],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "ArtifactsAllAsync",
+      "method": "GET",
+      "path": "/api/Artifacts",
+      "returnType": "ICollection<ArtifactInfo>",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "ArtifactsAll2Async",
+      "method": "GET",
+      "path": "/api/Artifacts/Artifacts/{host}",
+      "returnType": "ICollection<ArtifactInfo>",
+      "parameters": "string host",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "ArtifactsGETAsync",
+      "method": "GET",
+      "path": "/api/Artifacts/Artifacts/{host}/{name}",
+      "returnType": "FileResponse",
+      "parameters": "string host, string name",
+      "queryParameters": [],
+      "successStatuses": [
+        200,
+        206
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "ArtifactsDELETEAsync",
+      "method": "DELETE",
+      "path": "/api/Artifacts/Artifacts/{host}/{name}",
+      "returnType": "void",
+      "parameters": "string host, string name",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "CertificatesAllAsync",
+      "method": "GET",
+      "path": "/api/Certificates",
+      "returnType": "ICollection<CertificateInfo>",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "CertificatesPUTAsync",
+      "method": "PUT",
+      "path": "/api/Certificates",
+      "returnType": "void",
+      "parameters": "CertificateInfo body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "CertificatesDELETEAsync",
+      "method": "DELETE",
+      "path": "/api/Certificates/Certificates/{name}",
+      "returnType": "void",
+      "parameters": "string name",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "ImportAsync",
+      "method": "PUT",
+      "path": "/api/Certificates/Certificates/import",
+      "returnType": "void",
+      "parameters": "byte[] body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "DocumentationAsync",
+      "method": "GET",
+      "path": "/api/Documentation",
+      "returnType": "ICollection<DocumentationEntry>",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "SearchAsync",
+      "method": "POST",
+      "path": "/api/Documentation/search",
+      "returnType": "ICollection<DocumentationSearchResult>",
+      "parameters": "DocumentationSearchRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "IndexStatusAsync",
+      "method": "GET",
+      "path": "/api/Documentation/index-status",
+      "returnType": "DocumentationIndexStatus",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "EmbeddingProvidersAsync",
+      "method": "GET",
+      "path": "/api/Documentation/embedding-providers",
+      "returnType": "ICollection<EmbeddingProviderInfo>",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "IndexAsync",
+      "method": "POST",
+      "path": "/api/Documentation/index",
+      "returnType": "void",
+      "parameters": "DocumentationIndexRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "DownloadsAllAsync",
+      "method": "GET",
+      "path": "/api/Downloads",
+      "returnType": "ICollection<DownloadInfo>",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "DownloadsPUTAsync",
+      "method": "PUT",
+      "path": "/api/Downloads",
+      "returnType": "CreateDownloadResponse",
+      "parameters": "byte[] body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "DownloadsDELETEAsync",
+      "method": "DELETE",
+      "path": "/api/Downloads",
+      "returnType": "void",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "DownloadsDELETE2Async",
+      "method": "DELETE",
+      "path": "/api/Downloads/Downloads/{identifier}",
+      "returnType": "void",
+      "parameters": "string identifier",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "EmailAccountsAllAsync",
+      "method": "GET",
+      "path": "/api/EmailAccounts?",
+      "returnType": "ICollection<EmailAccountResponse>",
+      "parameters": "int? personaId, string provider",
+      "queryParameters": [
+        "personaId",
+        "provider"
+      ],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "EmailAccountsPOSTAsync",
+      "method": "POST",
+      "path": "/api/EmailAccounts",
+      "returnType": "EmailAccountResponse",
+      "parameters": "AddEmailAccountRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "EmailAccountsGETAsync",
+      "method": "GET",
+      "path": "/api/EmailAccounts/{id}",
+      "returnType": "EmailAccountResponse",
+      "parameters": "int id",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "EmailAccountsPUTAsync",
+      "method": "PUT",
+      "path": "/api/EmailAccounts/{id}",
+      "returnType": "EmailAccountResponse",
+      "parameters": "int id, UpdateEmailAccountRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "EmailAccountsDELETEAsync",
+      "method": "DELETE",
+      "path": "/api/EmailAccounts/{id}?",
+      "returnType": "void",
+      "parameters": "int id, bool? removeFromProvider",
+      "queryParameters": [
+        "removeFromProvider"
+      ],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "ProvidersAsync",
+      "method": "GET",
+      "path": "/api/EmailAccounts/Providers",
+      "returnType": "ICollection<string>",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "RegisterAsync",
+      "method": "POST",
+      "path": "/api/EmailAccounts/Register",
+      "returnType": "EmailAccountResponse",
+      "parameters": "RegisterEmailAccountRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "GetAllEventsAsync",
+      "method": "GET",
+      "path": "/api/Events/Events/GetAllEvents",
+      "returnType": "ICollection<Event>",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "GetLatestEventsAsync",
+      "method": "GET",
+      "path": "/api/Events/Events/GetLatestEvents?",
+      "returnType": "ICollection<Event>",
+      "parameters": "DateTimeOffset? from",
+      "queryParameters": [
+        "from"
+      ],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "IdentityAsync",
+      "method": "GET",
+      "path": "/api/Identity",
+      "returnType": "ServerIdentity",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "RunscriptAsync",
+      "method": "POST",
+      "path": "/api/tasks/runscript",
+      "returnType": "CreateImplantTaskResponse",
+      "parameters": "CreateImplantTaskRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "RunscriptAllAsync",
+      "method": "GET",
+      "path": "/api/tasks/runscript?",
+      "returnType": "ICollection<ImplantTaskResponse>",
+      "parameters": "string sessionid, int? limit",
+      "queryParameters": [
+        "limit",
+        "sessionid"
+      ],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "LicenseGETAsync",
+      "method": "GET",
+      "path": "/api/License",
+      "returnType": "LicenseValidationInfoEx",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "LicensePUTAsync",
+      "method": "PUT",
+      "path": "/api/License",
+      "returnType": "LicenseValidationInfoEx",
+      "parameters": "LicenseInfo body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "ListenersAllAsync",
+      "method": "GET",
+      "path": "/api/Listeners",
+      "returnType": "ICollection<Listener>",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "ListenersPOSTAsync",
+      "method": "POST",
+      "path": "/api/Listeners",
+      "returnType": "void",
+      "parameters": "AddHttpListenerRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "ListenersDELETEAsync",
+      "method": "DELETE",
+      "path": "/api/Listeners",
+      "returnType": "void",
+      "parameters": "string body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "ListenersPUTAsync",
+      "method": "PUT",
+      "path": "/api/Listeners",
+      "returnType": "void",
+      "parameters": "UpdateListenerRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "BundleAsync",
+      "method": "GET",
+      "path": "/api/Loaders/{loaderId}/bundle/{platform}",
+      "returnType": "void",
+      "parameters": "string loaderId, string platform",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "FlatBundleAsync",
+      "method": "GET",
+      "path": "/api/Loaders/{loaderId}/flat-bundle/{platform}",
+      "returnType": "void",
+      "parameters": "string loaderId, string platform",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "DepsAsync",
+      "method": "GET",
+      "path": "/api/Loaders/{loaderId}/deps/{platform}",
+      "returnType": "void",
+      "parameters": "string loaderId, string platform",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "AssemblyGETAsync",
+      "method": "GET",
+      "path": "/api/Loaders/{loaderId}/assembly/{platform}/{assemblyName}",
+      "returnType": "void",
+      "parameters": "string loaderId, string platform, string assemblyName",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "AssemblyManifestAsync",
+      "method": "GET",
+      "path": "/api/Loaders/{loaderId}/assembly-manifest/{platform}",
+      "returnType": "void",
+      "parameters": "string loaderId, string platform",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "ModulesAllAsync",
+      "method": "GET",
+      "path": "/api/Modules",
+      "returnType": "ICollection<SpecterModuleInfo>",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "ModulesPOSTAsync",
+      "method": "POST",
+      "path": "/api/Modules",
+      "returnType": "void",
+      "parameters": "byte[] body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "ModulesGETAsync",
+      "method": "GET",
+      "path": "/api/Modules/Modules/{name}",
+      "returnType": "FileResponse",
+      "parameters": "string name",
+      "queryParameters": [],
+      "successStatuses": [
+        200,
+        206
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "ModulesDELETEAsync",
+      "method": "DELETE",
+      "path": "/api/Modules/Modules/{name}",
+      "returnType": "void",
+      "parameters": "string name",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "GetAllHostsAsync",
+      "method": "GET",
+      "path": "/api/NetworkIntelligence/GetAllHosts",
+      "returnType": "ICollection<NetHost>",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "GetHostByIdAsync",
+      "method": "GET",
+      "path": "/api/NetworkIntelligence/GetHostById?",
+      "returnType": "NetHost",
+      "parameters": "string hostId",
+      "queryParameters": [
+        "hostId"
+      ],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "UpsertHostAsync",
+      "method": "POST",
+      "path": "/api/NetworkIntelligence/UpsertHost",
+      "returnType": "NetHost",
+      "parameters": "UpsertHostRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "DeleteHostAsync",
+      "method": "POST",
+      "path": "/api/NetworkIntelligence/DeleteHost?",
+      "returnType": "void",
+      "parameters": "string hostId",
+      "queryParameters": [
+        "hostId"
+      ],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "GetIpAddressesByHostIdAsync",
+      "method": "GET",
+      "path": "/api/NetworkIntelligence/GetIpAddressesByHostId?",
+      "returnType": "ICollection<NetHostIpAddress>",
+      "parameters": "string hostId",
+      "queryParameters": [
+        "hostId"
+      ],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "UpsertIpAddressAsync",
+      "method": "POST",
+      "path": "/api/NetworkIntelligence/UpsertIpAddress",
+      "returnType": "void",
+      "parameters": "UpsertIpAddressRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "GetAllCredentialsAsync",
+      "method": "GET",
+      "path": "/api/NetworkIntelligence/GetAllCredentials",
+      "returnType": "ICollection<NetCredential>",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "GetCredentialsByHostIdAsync",
+      "method": "GET",
+      "path": "/api/NetworkIntelligence/GetCredentialsByHostId?",
+      "returnType": "ICollection<NetCredential>",
+      "parameters": "string hostId",
+      "queryParameters": [
+        "hostId"
+      ],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "UpsertCredentialAsync",
+      "method": "POST",
+      "path": "/api/NetworkIntelligence/UpsertCredential",
+      "returnType": "void",
+      "parameters": "UpsertCredentialRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "GetOpenPortsByHostIdAsync",
+      "method": "GET",
+      "path": "/api/NetworkIntelligence/GetOpenPortsByHostId?",
+      "returnType": "ICollection<NetOpenPort>",
+      "parameters": "string hostId",
+      "queryParameters": [
+        "hostId"
+      ],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "UpsertOpenPortAsync",
+      "method": "POST",
+      "path": "/api/NetworkIntelligence/UpsertOpenPort",
+      "returnType": "void",
+      "parameters": "UpsertOpenPortRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "GetServicesByHostIdAsync",
+      "method": "GET",
+      "path": "/api/NetworkIntelligence/GetServicesByHostId?",
+      "returnType": "ICollection<NetService>",
+      "parameters": "string hostId",
+      "queryParameters": [
+        "hostId"
+      ],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "UpsertServiceAsync",
+      "method": "POST",
+      "path": "/api/NetworkIntelligence/UpsertService",
+      "returnType": "void",
+      "parameters": "UpsertServiceRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "GetProcessesByHostIdAsync",
+      "method": "GET",
+      "path": "/api/NetworkIntelligence/GetProcessesByHostId?",
+      "returnType": "ICollection<NetProcess>",
+      "parameters": "string hostId",
+      "queryParameters": [
+        "hostId"
+      ],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "ReplaceProcessSnapshotAsync",
+      "method": "POST",
+      "path": "/api/NetworkIntelligence/ReplaceProcessSnapshot?",
+      "returnType": "void",
+      "parameters": "string hostId, IEnumerable<NetProcess> body",
+      "queryParameters": [
+        "hostId"
+      ],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "GetUsersByHostIdAsync",
+      "method": "GET",
+      "path": "/api/NetworkIntelligence/GetUsersByHostId?",
+      "returnType": "ICollection<NetUser>",
+      "parameters": "string hostId",
+      "queryParameters": [
+        "hostId"
+      ],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "UpsertUserAsync",
+      "method": "POST",
+      "path": "/api/NetworkIntelligence/UpsertUser",
+      "returnType": "void",
+      "parameters": "UpsertUserRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "ResolveNetHostIdAsync",
+      "method": "GET",
+      "path": "/api/NetworkIntelligence/ResolveNetHostId?",
+      "returnType": "string",
+      "parameters": "string fqdn, string ip",
+      "queryParameters": [
+        "fqdn",
+        "ip"
+      ],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "GetCachedFilesByHostIdAsync",
+      "method": "GET",
+      "path": "/api/NetworkIntelligence/GetCachedFilesByHostId?",
+      "returnType": "ICollection<NetCachedFile>",
+      "parameters": "string hostId",
+      "queryParameters": [
+        "hostId"
+      ],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "GetCachedFileByIdAsync",
+      "method": "GET",
+      "path": "/api/NetworkIntelligence/GetCachedFileById?",
+      "returnType": "NetCachedFile",
+      "parameters": "string fileId",
+      "queryParameters": [
+        "fileId"
+      ],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "DownloadCachedFileContentAsync",
+      "method": "GET",
+      "path": "/api/NetworkIntelligence/DownloadCachedFileContent?",
+      "returnType": "void",
+      "parameters": "string fileId",
+      "queryParameters": [
+        "fileId"
+      ],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "UpsertCachedFileAsync",
+      "method": "POST",
+      "path": "/api/NetworkIntelligence/UpsertCachedFile",
+      "returnType": "void",
+      "parameters": "UpsertCachedFileRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "NotebookFilesAllAsync",
+      "method": "GET",
+      "path": "/api/NotebookFiles/{notebookId}",
+      "returnType": "ICollection<NotebookFileInfo>",
+      "parameters": "string notebookId",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "NotebookFilesGETAsync",
+      "method": "GET",
+      "path": "/api/NotebookFiles/{notebookId}/{filename}",
+      "returnType": "void",
+      "parameters": "string notebookId, string filename",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "NotebookFilesDELETEAsync",
+      "method": "DELETE",
+      "path": "/api/NotebookFiles/{notebookId}/{filename}",
+      "returnType": "void",
+      "parameters": "string notebookId, string filename",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "PayloadPipelinePUTAsync",
+      "method": "PUT",
+      "path": "/api/PayloadPipeline",
+      "returnType": "void",
+      "parameters": "PayloadPipeline body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "PayloadPipelineAllAsync",
+      "method": "GET",
+      "path": "/api/PayloadPipeline?",
+      "returnType": "ICollection<PayloadPipeline>",
+      "parameters": "string search",
+      "queryParameters": [
+        "search"
+      ],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "PayloadPipelineGETAsync",
+      "method": "GET",
+      "path": "/api/PayloadPipeline/PayloadPipeline/{pipelineId}",
+      "returnType": "PayloadPipeline",
+      "parameters": "string pipelineId",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "PayloadPipelineDELETEAsync",
+      "method": "DELETE",
+      "path": "/api/PayloadPipeline/PayloadPipeline/{pipelineId}",
+      "returnType": "void",
+      "parameters": "string pipelineId",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "PayloadPipelineRunAsync",
+      "method": "GET",
+      "path": "/api/PayloadPipeline/PayloadPipeline/{pipelineId}/run?",
+      "returnType": "byte[]",
+      "parameters": "string pipelineId, IDictionary<string, string> args",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "PayloadPipelineRunPostAsync",
+      "method": "POST",
+      "path": "/api/PayloadPipeline/PayloadPipeline/{pipelineId}/run",
+      "returnType": "byte[]",
+      "parameters": "string pipelineId, IDictionary<string, string> body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "PayloadPipelineTestAsync",
+      "method": "POST",
+      "path": "/api/PayloadPipeline/PayloadPipeline/test?",
+      "returnType": "PayloadPipelineTestResults",
+      "parameters": "IDictionary<string, string> args, string body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "PayloadPipelineDocumentationAsync",
+      "method": "GET",
+      "path": "/api/PayloadPipeline/PayloadPipeline/documentation",
+      "returnType": "ICollection<CmdletDocumentation>",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "PayloadPipelineClearCacheAsync",
+      "method": "POST",
+      "path": "/api/PayloadPipeline/PayloadPipeline/clear",
+      "returnType": "void",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "PayloadsAllAsync",
+      "method": "GET",
+      "path": "/api/Payloads",
+      "returnType": "ICollection<CreateImplantRequest>",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "PayloadsPOSTAsync",
+      "method": "POST",
+      "path": "/api/Payloads",
+      "returnType": "void",
+      "parameters": "CreateImplantRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "PayloadsDELETEAsync",
+      "method": "DELETE",
+      "path": "/api/Payloads?",
+      "returnType": "void",
+      "parameters": "string build",
+      "queryParameters": [
+        "build"
+      ],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "PayloadsGETAsync",
+      "method": "GET",
+      "path": "/api/Payloads/Payloads/{build}",
+      "returnType": "CreateImplantRequest",
+      "parameters": "string build",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "DownloadPOSTAsync",
+      "method": "POST",
+      "path": "/api/download",
+      "returnType": "FileResponse",
+      "parameters": "DownloadImplantRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200,
+        206
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "PersonasAllAsync",
+      "method": "GET",
+      "path": "/api/Personas",
+      "returnType": "ICollection<PersonaResponse>",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "PersonasPOSTAsync",
+      "method": "POST",
+      "path": "/api/Personas",
+      "returnType": "PersonaResponse",
+      "parameters": "AddPersonaRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "PersonasGETAsync",
+      "method": "GET",
+      "path": "/api/Personas/{id}",
+      "returnType": "PersonaResponse",
+      "parameters": "int id",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "PersonasPUTAsync",
+      "method": "PUT",
+      "path": "/api/Personas/{id}",
+      "returnType": "PersonaResponse",
+      "parameters": "int id, UpdatePersonaRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "PersonasDELETEAsync",
+      "method": "DELETE",
+      "path": "/api/Personas/{id}",
+      "returnType": "void",
+      "parameters": "int id",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "SendAsync",
+      "method": "POST",
+      "path": "/api/Phishing/Send",
+      "returnType": "void",
+      "parameters": "PhishingEmailRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "TargetsAsync",
+      "method": "GET",
+      "path": "/api/Phishing/Targets",
+      "returnType": "ICollection<Event>",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "PowerShellNotebooksAllAsync",
+      "method": "GET",
+      "path": "/api/PowerShellNotebooks",
+      "returnType": "ICollection<PowerShellNotebook>",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "PowerShellNotebooksPOSTAsync",
+      "method": "POST",
+      "path": "/api/PowerShellNotebooks",
+      "returnType": "PowerShellNotebook",
+      "parameters": "CreateNotebookRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "PowerShellNotebooksGETAsync",
+      "method": "GET",
+      "path": "/api/PowerShellNotebooks/{notebookId}",
+      "returnType": "PowerShellNotebook",
+      "parameters": "string notebookId",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "PowerShellNotebooksPUTAsync",
+      "method": "PUT",
+      "path": "/api/PowerShellNotebooks/{notebookId}",
+      "returnType": "void",
+      "parameters": "string notebookId, UpdateNotebookRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "PowerShellNotebooksDELETEAsync",
+      "method": "DELETE",
+      "path": "/api/PowerShellNotebooks/{notebookId}",
+      "returnType": "void",
+      "parameters": "string notebookId",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "UpsertAsync",
+      "method": "PUT",
+      "path": "/api/PowerShellNotebooks/upsert",
+      "returnType": "void",
+      "parameters": "UpsertNotebookRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "SessionPOSTAsync",
+      "method": "POST",
+      "path": "/api/PowerShellNotebooks/{notebookId}/session",
+      "returnType": "PsSessionInfo",
+      "parameters": "string notebookId",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "SessionDELETEAsync",
+      "method": "DELETE",
+      "path": "/api/PowerShellNotebooks/{notebookId}/session",
+      "returnType": "void",
+      "parameters": "string notebookId",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "ResetAsync",
+      "method": "POST",
+      "path": "/api/PowerShellNotebooks/{notebookId}/session/reset",
+      "returnType": "PsSessionInfo",
+      "parameters": "string notebookId",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "PowerShellSessionsAllAsync",
+      "method": "GET",
+      "path": "/api/PowerShellSessions",
+      "returnType": "ICollection<PsSessionInfo>",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "PowerShellSessionsPOSTAsync",
+      "method": "POST",
+      "path": "/api/PowerShellSessions",
+      "returnType": "string",
+      "parameters": "CreatePsSessionRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "PowerShellSessionsDELETEAsync",
+      "method": "DELETE",
+      "path": "/api/PowerShellSessions/{sessionId}",
+      "returnType": "void",
+      "parameters": "string sessionId",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "Run2Async",
+      "method": "POST",
+      "path": "/api/PowerShellSessions/{sessionId}/run",
+      "returnType": "PsOutputRecord",
+      "parameters": "string sessionId, RunPsCommandRequest body",
+      "queryParameters": [],
+      "successStatuses": [],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "ScriptsAllAsync",
+      "method": "GET",
+      "path": "/api/Scripts",
+      "returnType": "ICollection<SpecterScript>",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "ScriptsPUTAsync",
+      "method": "PUT",
+      "path": "/api/Scripts",
+      "returnType": "void",
+      "parameters": "SpecterScript body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "ScriptsDELETEAsync",
+      "method": "DELETE",
+      "path": "/api/Scripts?",
+      "returnType": "void",
+      "parameters": "string identifier",
+      "queryParameters": [
+        "identifier"
+      ],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "SessionsAllAsync",
+      "method": "GET",
+      "path": "/api/Sessions",
+      "returnType": "ICollection<GetSessionsResponse>",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "SessionsPUTAsync",
+      "method": "PUT",
+      "path": "/api/Sessions?",
+      "returnType": "void",
+      "parameters": "string sessionId, bool? archived",
+      "queryParameters": [
+        "archived",
+        "sessionId"
+      ],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "SessionsDELETEAsync",
+      "method": "DELETE",
+      "path": "/api/Sessions?",
+      "returnType": "void",
+      "parameters": "string sessionid",
+      "queryParameters": [
+        "sessionid"
+      ],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "SessionUpateNicknameAndNotesAsync",
+      "method": "PUT",
+      "path": "/api/Sessions/SessionUpateNicknameAndNotes",
+      "returnType": "void",
+      "parameters": "UpdateSessionNicknameAndNotes body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "SettingsAllAsync",
+      "method": "GET",
+      "path": "/api/Settings",
+      "returnType": "ICollection<Setting>",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "SettingsAsync",
+      "method": "PUT",
+      "path": "/api/Settings",
+      "returnType": "void",
+      "parameters": "IEnumerable<Setting> body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "DefaultsettingsAsync",
+      "method": "GET",
+      "path": "/api/Settings/Settings/defaultsettings",
+      "returnType": "ICollection<Setting>",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "SshSessionsAllAsync",
+      "method": "GET",
+      "path": "/api/SshSessions",
+      "returnType": "ICollection<SshSessionResponse>",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "SshSessionsPOSTAsync",
+      "method": "POST",
+      "path": "/api/SshSessions",
+      "returnType": "SshSessionResponse",
+      "parameters": "CreateSshSessionRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "SshSessionsDELETEAsync",
+      "method": "DELETE",
+      "path": "/api/SshSessions/{sessionId}",
+      "returnType": "void",
+      "parameters": "Guid sessionId",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "TasksAsync",
+      "method": "GET",
+      "path": "/api/SshSessions/{sessionId}/tasks?",
+      "returnType": "ICollection<SshTaskResponse>",
+      "parameters": "Guid sessionId, int? limit",
+      "queryParameters": [
+        "limit"
+      ],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "CommandAsync",
+      "method": "POST",
+      "path": "/api/SshSessions/{sessionId}/command",
+      "returnType": "SshOutputRecord",
+      "parameters": "Guid sessionId, SshCommandRequest body",
+      "queryParameters": [],
+      "successStatuses": [],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "UploadAsync",
+      "method": "POST",
+      "path": "/api/SshSessions/{sessionId}/upload",
+      "returnType": "void",
+      "parameters": "Guid sessionId, FileParameter file, string remotePath",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "DownloadGETAsync",
+      "method": "GET",
+      "path": "/api/SshSessions/{sessionId}/download?",
+      "returnType": "void",
+      "parameters": "Guid sessionId, string remotePath",
+      "queryParameters": [
+        "remotePath"
+      ],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "SshTunnelsAllAsync",
+      "method": "GET",
+      "path": "/api/SshTunnels",
+      "returnType": "ICollection<SshTunnelInfo>",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "SshTunnelsPOSTAsync",
+      "method": "POST",
+      "path": "/api/SshTunnels",
+      "returnType": "SshTunnelInfo",
+      "parameters": "CreateSshTunnelRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "SshTunnelsDELETEAsync",
+      "method": "DELETE",
+      "path": "/api/SshTunnels/{id}",
+      "returnType": "void",
+      "parameters": "int id",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "StartAsync",
+      "method": "POST",
+      "path": "/api/Tor/start",
+      "returnType": "TorStatus",
+      "parameters": "StartTorRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "StopAsync",
+      "method": "POST",
+      "path": "/api/Tor/stop",
+      "returnType": "void",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "StatusAsync",
+      "method": "GET",
+      "path": "/api/Tor/status",
+      "returnType": "TorStatus",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "ExitnodesAsync",
+      "method": "GET",
+      "path": "/api/Tor/exitnodes?",
+      "returnType": "ICollection<TorExitNode>",
+      "parameters": "string countryCode",
+      "queryParameters": [
+        "countryCode"
+      ],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "ExitcountryAsync",
+      "method": "POST",
+      "path": "/api/Tor/exitcountry",
+      "returnType": "void",
+      "parameters": "SetExitCountryRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "ExitnodeAsync",
+      "method": "POST",
+      "path": "/api/Tor/exitnode",
+      "returnType": "void",
+      "parameters": "SetExitNodeRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "ExitAsync",
+      "method": "DELETE",
+      "path": "/api/Tor/exit",
+      "returnType": "void",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "RotateAsync",
+      "method": "POST",
+      "path": "/api/Tor/rotate",
+      "returnType": "void",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "TorTunnelsAllAsync",
+      "method": "GET",
+      "path": "/api/TorTunnels",
+      "returnType": "ICollection<TorTunnelInfo>",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "TorTunnelsPOSTAsync",
+      "method": "POST",
+      "path": "/api/TorTunnels",
+      "returnType": "TorTunnelInfo",
+      "parameters": "CreateTorTunnelRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "TorTunnelsDELETEAsync",
+      "method": "DELETE",
+      "path": "/api/TorTunnels/{id}",
+      "returnType": "void",
+      "parameters": "int id",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "TunnelsAllAsync",
+      "method": "GET",
+      "path": "/api/Tunnels",
+      "returnType": "ICollection<TunnelInitiatorInfo>",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "TunnelsPOSTAsync",
+      "method": "POST",
+      "path": "/api/Tunnels",
+      "returnType": "void",
+      "parameters": "StartTunnelRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "TunnelsDELETEAsync",
+      "method": "DELETE",
+      "path": "/api/Tunnels/Tunnels/{lport}",
+      "returnType": "void",
+      "parameters": "int lport",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "UpdatesGETAsync",
+      "method": "GET",
+      "path": "/api/Updates",
+      "returnType": "SerializableVersion",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "UpdatesPOSTAsync",
+      "method": "POST",
+      "path": "/api/Updates",
+      "returnType": "void",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "ClientAsync",
+      "method": "GET",
+      "path": "/api/Updates/Updates/client",
+      "returnType": "FileResponse",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200,
+        206
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "Status2Async",
+      "method": "GET",
+      "path": "/api/Updates/Updates/status",
+      "returnType": "UpdateJobInfo",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "ServerversionAsync",
+      "method": "GET",
+      "path": "/api/serverversion",
+      "returnType": "SerializableVersion",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "WebDavFilesAllAsync",
+      "method": "GET",
+      "path": "/api/WebDavFiles",
+      "returnType": "ICollection<WebDavFileResponse>",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "WebDavFilesPOSTAsync",
+      "method": "POST",
+      "path": "/api/WebDavFiles",
+      "returnType": "void",
+      "parameters": "RegisterWebDavFileRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "WebDavFilesDELETEAsync",
+      "method": "DELETE",
+      "path": "/api/WebDavFiles",
+      "returnType": "void",
+      "parameters": "string body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "TreeAsync",
+      "method": "GET",
+      "path": "/api/WebDavFiles/tree",
+      "returnType": "ICollection<WebDavFileResponse>",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "DirectoryAsync",
+      "method": "POST",
+      "path": "/api/WebDavFiles/directory",
+      "returnType": "void",
+      "parameters": "CreateWebDavDirectoryRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "WinRmSessionsAllAsync",
+      "method": "GET",
+      "path": "/api/WinRmSessions",
+      "returnType": "ICollection<WinRmSessionResponse>",
+      "parameters": "",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "WinRmSessionsPOSTAsync",
+      "method": "POST",
+      "path": "/api/WinRmSessions",
+      "returnType": "WinRmSessionResponse",
+      "parameters": "CreateWinRmSessionRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "WinRmSessionsDELETEAsync",
+      "method": "DELETE",
+      "path": "/api/WinRmSessions/{sessionId}",
+      "returnType": "void",
+      "parameters": "Guid sessionId",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "Tasks2Async",
+      "method": "GET",
+      "path": "/api/WinRmSessions/{sessionId}/tasks?",
+      "returnType": "ICollection<WinRmTaskResponse>",
+      "parameters": "Guid sessionId, int? limit",
+      "queryParameters": [
+        "limit"
+      ],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "Command2Async",
+      "method": "POST",
+      "path": "/api/WinRmSessions/{sessionId}/command",
+      "returnType": "WinRmOutputRecord",
+      "parameters": "Guid sessionId, WinRmCommandRequest body",
+      "queryParameters": [],
+      "successStatuses": [],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "Upload2Async",
+      "method": "POST",
+      "path": "/api/WinRmSessions/{sessionId}/upload",
+      "returnType": "void",
+      "parameters": "Guid sessionId, FileParameter file, string remotePath",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "DownloadGET2Async",
+      "method": "GET",
+      "path": "/api/WinRmSessions/{sessionId}/download?",
+      "returnType": "void",
+      "parameters": "Guid sessionId, string remotePath",
+      "queryParameters": [
+        "remotePath"
+      ],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "ServicesAsync",
+      "method": "GET",
+      "path": "/api/WinRmSessions/{sessionId}/services",
+      "returnType": "ICollection<WinRmServiceEntry>",
+      "parameters": "Guid sessionId",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "PscriptAsync",
+      "method": "POST",
+      "path": "/api/WinRmSessions/{sessionId}/load/pscript",
+      "returnType": "void",
+      "parameters": "Guid sessionId, LoadWinRmPayloadRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "DllAsync",
+      "method": "POST",
+      "path": "/api/WinRmSessions/{sessionId}/load/dll",
+      "returnType": "void",
+      "parameters": "Guid sessionId, LoadWinRmPayloadRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "AssemblyPOSTAsync",
+      "method": "POST",
+      "path": "/api/WinRmSessions/{sessionId}/load/assembly",
+      "returnType": "void",
+      "parameters": "Guid sessionId, LoadWinRmPayloadRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "AmsiAsync",
+      "method": "POST",
+      "path": "/api/WinRmSessions/{sessionId}/load/amsi",
+      "returnType": "void",
+      "parameters": "Guid sessionId, LoadWinRmPayloadRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "EtwAsync",
+      "method": "POST",
+      "path": "/api/WinRmSessions/{sessionId}/load/etw",
+      "returnType": "void",
+      "parameters": "Guid sessionId, LoadWinRmPayloadRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "WordlistsAllAsync",
+      "method": "GET",
+      "path": "/api/Wordlists?",
+      "returnType": "ICollection<WordlistResponse>",
+      "parameters": "string tags",
+      "queryParameters": [
+        "tags"
+      ],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "WordlistsPOSTAsync",
+      "method": "POST",
+      "path": "/api/Wordlists",
+      "returnType": "WordlistResponse",
+      "parameters": "AddWordlistRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "WordlistsGETAsync",
+      "method": "GET",
+      "path": "/api/Wordlists/{id}",
+      "returnType": "WordlistResponse",
+      "parameters": "int id",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "WordlistsPUTAsync",
+      "method": "PUT",
+      "path": "/api/Wordlists/{id}",
+      "returnType": "WordlistResponse",
+      "parameters": "int id, UpdateWordlistRequest body",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    },
+    {
+      "operationId": "WordlistsDELETEAsync",
+      "method": "DELETE",
+      "path": "/api/Wordlists/{id}",
+      "returnType": "void",
+      "parameters": "int id",
+      "queryParameters": [],
+      "successStatuses": [
+        200
+      ],
+      "auth": "required-by-reimplementation"
+    }
+  ]
+}
