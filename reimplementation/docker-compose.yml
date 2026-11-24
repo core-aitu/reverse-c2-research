@@ -1,0 +1,55 @@
+services:
+  postgres:
+    image: postgres:16.4-bookworm
+    environment:
+      POSTGRES_DB: specter
+      POSTGRES_USER: specter
+      POSTGRES_PASSWORD: specter
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U specter -d specter"]
+      interval: 2s
+      timeout: 3s
+      retries: 20
+    volumes:
+      - specter-postgres:/var/lib/postgresql/data
+    networks: [specter-lab]
+
+  server:
+    build: .
+    environment:
+      SPECTER_ADDR: :8080
+      SPECTER_DATABASE_URL: postgres://specter:specter@postgres:5432/specter?sslmode=disable
+      SPECTER_JWT_SECRET: ${SPECTER_JWT_SECRET:?set SPECTER_JWT_SECRET}
+      SPECTER_ADMIN_USERNAME: ${SPECTER_ADMIN_USERNAME:-admin}
+      SPECTER_ADMIN_PASSWORD: ${SPECTER_ADMIN_PASSWORD:?set SPECTER_ADMIN_PASSWORD}
+      SPECTER_ALLOWED_ORIGIN: http://localhost:3000
+      SPECTER_SECURE_COOKIES: "false"
+      SPECTER_ENABLE_FIXTURES: ${SPECTER_ENABLE_FIXTURES:-true}
+      SPECTER_ENABLE_REAL_ADAPTERS: ${SPECTER_ENABLE_REAL_ADAPTERS:-false}
+      SPECTER_MIGRATIONS_DIR: /app/migrations
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "--silent", "http://localhost:8080/readyz"]
+      interval: 10s
+      timeout: 2s
+      retries: 3
+      start_period: 10s
+    networks: [specter-lab]
+
+  web:
+    build: ./web
+    ports:
+      - "3000:8080"
+    depends_on:
+      - server
+    networks: [specter-edge, specter-lab]
+
+volumes:
+  specter-postgres:
+
+networks:
+  specter-edge:
+  specter-lab:
+    internal: true

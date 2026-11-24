@@ -1,0 +1,57 @@
+name: reimplementation
+
+on:
+  push:
+    paths: ["reimplementation/**", ".github/workflows/reimplementation.yml"]
+  pull_request:
+    paths: ["reimplementation/**", ".github/workflows/reimplementation.yml"]
+
+jobs:
+  contracts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.13" }
+      - run: python3 -m unittest discover -s reimplementation/tests -v
+
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v6
+        with: { go-version: "1.27.4" }
+      - working-directory: reimplementation
+        run: |
+          test -z "$(gofmt -l cmd internal)"
+          go vet ./...
+          go test -race ./...
+
+  web:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v6
+        with: { node-version: "26.13.0", cache: "pnpm", cache-dependency-path: reimplementation/web/pnpm-lock.yaml }
+      - run: npm install --global pnpm@11.25.0
+      - working-directory: reimplementation/web
+        run: |
+          pnpm install --frozen-lockfile
+          pnpm run check
+          pnpm run build
+
+  compose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v6
+        with: { node-version: "26.13.0" }
+      - working-directory: reimplementation
+        env:
+          SPECTER_JWT_SECRET: 01234567890123456789012345678901
+          SPECTER_ADMIN_PASSWORD: integration-test-password
+        run: |
+          docker compose config --quiet
+          docker compose up --build --wait
+          node tests/smoke.mjs
+          docker compose down --volumes
