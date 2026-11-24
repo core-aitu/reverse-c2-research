@@ -127,3 +127,45 @@ export type AgentTask = {
   createdAt: string;
   completedAt: string | null;
 };
+
+export type SpecterScript = {
+  identifier: string;
+  name: string;
+  description: string;
+  documentation: string;
+  scriptBlock: string;
+  version: number;
+  isPremium: boolean;
+  labels: string[];
+  enabled: boolean;
+};
+
+export type Wordlist = {
+  id: number;
+  name: string;
+  description: string;
+  tags: string[];
+  content: string;
+  entryCount: number;
+  createdAt: string;
+  updatedAt: string;
+};
+
+export type Listener = {
+  prefix: string;
+  enabled: boolean;
+  certificateName: string;
+  webDavPath: string;
+};
+
+export type CertificateInfo = {
+  name: string;
+  country: string;
+  state: string;
+  locality: string;
+  organization: string;
+  organizationalUnit: string;
+  commonName: string;
+  start: string;
+  end: string;
+};

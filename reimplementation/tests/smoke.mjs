@@ -56,12 +56,41 @@ const observed = await new Promise((resolve, reject) => {
   };
 });
 
-await json("/api/workflows/scripts", {
+await json("/api/Scripts", {
   method: "PUT", headers,
-  body: JSON.stringify({ key: "smoke-script", name: "Smoke script metadata", description: "No executable body", status: "ready", spec: { fixture: true } }),
+  body: JSON.stringify({ identifier: "smoke-script", name: "Smoke script metadata", description: "No executable body", documentation: "fixture", scriptBlock: "", version: 1, isPremium: false, labels: ["fixture", "smoke"], enabled: true }),
 });
-const scripts = await json("/api/workflows/scripts", { headers });
-if (!scripts.some((item) => item.key === "smoke-script")) throw new Error("resource workflow mismatch");
+const scripts = await json("/api/Scripts", { headers });
+if (!scripts.some((item) => item.identifier === "smoke-script" && item.labels.includes("fixture"))) throw new Error("typed script workflow mismatch");
+
+const wordlist = await json("/api/Wordlists", {
+  method: "POST", headers,
+  body: JSON.stringify({ name: "smoke-wordlist", description: "fixture", tags: ["smoke"], content: "alpha\n\nbeta\ngamma\n" }),
+});
+if (wordlist.entryCount !== 3) throw new Error("wordlist entryCount mismatch");
+const fetchedWordlist = await json(`/api/Wordlists/${wordlist.id}`, { headers });
+if (fetchedWordlist.name !== "smoke-wordlist") throw new Error("wordlist GET mismatch");
+
+await json("/api/Certificates", {
+  method: "PUT", headers,
+  body: JSON.stringify({ name: "smoke-cert", country: "US", state: "", locality: "", organization: "Research", organizationalUnit: "Fixture", commonName: "localhost", start: "2026-01-01T00:00:00Z", end: "2027-01-01T00:00:00Z" }),
+});
+const certificates = await json("/api/Certificates", { headers });
+if (!certificates.some((item) => item.name === "smoke-cert")) throw new Error("certificate metadata mismatch");
+
+await json("/api/Listeners", {
+  method: "POST", headers,
+  body: JSON.stringify({ prefix: "http://127.0.0.1:8080/", certificateName: "", webDavPath: "" }),
+});
+const listeners = await json("/api/Listeners", { headers });
+if (!listeners.some((item) => item.prefix === "http://127.0.0.1:8080/" && item.enabled)) throw new Error("listener config mismatch");
+const traversalListener = await fetch(`${baseURL}/api/Listeners`, {
+  method: "POST", headers,
+  body: JSON.stringify({ prefix: "http://127.0.0.1:8080/../admin/", certificateName: "", webDavPath: "" }),
+});
+if (traversalListener.status !== 400) throw new Error("listener traversal was not rejected");
+const anonymousScripts = await fetch(`${baseURL}/api/Scripts`);
+if (anonymousScripts.status !== 401) throw new Error("typed catalog anonymous access was not rejected");
 
 const adapters = await json("/api/adapters", { headers });
 if (adapters.length !== 10) throw new Error("adapter registry mismatch");
@@ -100,6 +129,9 @@ console.log(JSON.stringify({
   envelopeVersion: observed.version,
   cursor: observed.id,
   workflows: scripts.length,
+  wordlistEntries: wordlist.entryCount,
+  certificates: certificates.length,
+  listeners: listeners.length,
   adapters: adapters.length,
   pipelineJob: completedJob.status,
   simulator: simulator.id,

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Login, useAuth } from "./auth";
+import { CertificatesScreen, ListenersScreen, ScriptsScreen, WordlistsScreen } from "./Catalog";
 import { AdaptersScreen, AgentSimulatorScreen, JobsScreen, PipelinesScreen, ResourceScreen } from "./Management";
 import { useEvents } from "./useEvents";
 import type { Account, DocumentationEntry, SearchResult, Setting } from "./types";
@@ -80,6 +81,10 @@ function Screen({ id, item }: { id: string; item: NavItem }) {
   if (id === "sessions") return <AgentSimulatorScreen />;
   if (id === "workflows") return <JobsScreen />;
   if (id === "adapters") return <AdaptersScreen />;
+  if (id === "scripts") return <ScriptsScreen />;
+  if (id === "wordlists") return <WordlistsScreen />;
+  if (id === "listeners") return <ListenersScreen />;
+  if (id === "certificates") return <CertificatesScreen />;
   return <ResourceScreen kind={id} title={item.label} />;
 }
 
