@@ -36,6 +36,7 @@ func (s *Server) managementRoutes() {
 	s.mux.Handle("GET /api/adapters", s.protected(http.HandlerFunc(s.adapters)))
 	s.mux.Handle("PUT /api/adapters/{name}", s.requireRole("admin", http.HandlerFunc(s.putAdapter)))
 	s.mux.Handle("POST /api/adapters/{name}/probe", s.requireRole("admin", http.HandlerFunc(s.probeAdapter)))
+	s.mux.Handle("POST /api/adapters/{name}/fixture/{operation}", s.requireRole("admin", http.HandlerFunc(s.runAdapterFixture)))
 
 	s.mux.Handle("GET /api/jobs", s.protected(http.HandlerFunc(s.jobs)))
 	s.mux.Handle("POST /api/jobs/{id}/cancel", s.requireRole("admin", http.HandlerFunc(s.cancelJob)))
@@ -165,6 +166,29 @@ func (s *Server) probeAdapter(w http.ResponseWriter, r *http.Request) {
 	}
 	s.audit(r.Context(), principal(r).Username, "AdapterProbed", value.Name, status)
 	writeJSON(w, http.StatusOK, updated)
+}
+
+func (s *Server) runAdapterFixture(w http.ResponseWriter, r *http.Request) {
+	value, err := s.store.Adapter(r.Context(), r.PathValue("name"))
+	if err != nil {
+		writeError(w, http.StatusNotFound, "adapter not found")
+		return
+	}
+	if !s.cfg.FixturesEnabled || !value.Enabled || value.Mode != "fixture" {
+		writeError(w, http.StatusConflict, "fixture adapter is not enabled")
+		return
+	}
+	var input json.RawMessage
+	if !decodeJSON(w, r, &input) {
+		return
+	}
+	result, err := adapters.ExecuteFixture(value.Name, r.PathValue("operation"), input)
+	if err != nil {
+		writeError(w, http.StatusBadRequest, err.Error())
+		return
+	}
+	s.audit(r.Context(), principal(r).Username, "AdapterFixtureExecuted", value.Name, result.Operation+"; no external side effect")
+	writeJSON(w, http.StatusOK, result)
 }
 
 func (s *Server) jobs(w http.ResponseWriter, r *http.Request) {

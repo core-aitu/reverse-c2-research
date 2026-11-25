@@ -40,6 +40,8 @@ The data-plane Compose network is internal. The web proxy additionally joins a n
 
 Real adapter probes are disabled by default. Set `SPECTER_ENABLE_REAL_ADAPTERS=true` only in an isolated environment after configuring explicit adapter endpoints. Fixture adapters remain deterministic and require no external services.
 
+Fixture adapters also expose bounded operation-specific previews under `/api/adapters/{name}/fixture/{operation}`. SMTP and ACME operations return deterministic preview/order IDs without delivery or issuance; remote-session fixtures return empty inventories and never accept command execution.
+
 ## Verify
 
 ```bash

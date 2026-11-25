@@ -140,6 +140,14 @@ const adapters = await json("/api/adapters", { headers });
 if (adapters.length !== 10) throw new Error("adapter registry mismatch");
 const adapter = await json("/api/adapters/elasticsearch/probe", { method: "POST", headers });
 if (adapter.status !== "healthy") throw new Error("fixture adapter probe failed");
+const mailPreview = await json("/api/adapters/smtp/fixture/preview", {
+  method: "POST", headers, body: JSON.stringify({ to: "research@example.test", subject: "fixture preview" }),
+});
+if (mailPreview.output.delivered !== false || !mailPreview.output.previewId.startsWith("fixture-")) throw new Error("SMTP fixture operation mismatch");
+const forbiddenShellFixture = await fetch(`${baseURL}/api/adapters/ssh/fixture/shell`, {
+  method: "POST", headers, body: JSON.stringify({ command: "id" }),
+});
+if (forbiddenShellFixture.status !== 400) throw new Error("unsafe adapter fixture operation was not rejected");
 
 const pipelines = await json("/api/pipelines", { headers });
 const pipelineJob = await json(`/api/pipelines/${pipelines[0].id}/run`, {
