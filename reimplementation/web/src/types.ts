@@ -223,3 +223,8 @@ export type AiSession = {
   plan: Record<string, unknown>;
   status: "Running" | "Pausing" | "Paused" | "Starting" | "Stopped";
 };
+
+export type ArtifactInfo = { host: string; name: string; length: number; creationDate: string };
+export type SerializableVersion = { major: number; minor: number; build: number; revision: number };
+export type UpdateJobInfo = { version: SerializableVersion; status: string; statusDescription: string; lastUpdateResult: string; progress: number };
+export type LicenseValidation = { key: string; success: boolean; license: string; checksum: string; expires: string; customer_email: string };

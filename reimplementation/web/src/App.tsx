@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { AiFunctionsScreen, AiProfilesScreen, AiSessionsScreen } from "./AI";
+import { ArtifactsScreen, LicenseScreen, UpdatesScreen } from "./AdminCatalog";
 import { Login, useAuth } from "./auth";
 import { CertificatesScreen, ListenersScreen, ModulesScreen, NotebooksScreen, ScriptsScreen, WordlistsScreen } from "./Catalog";
 import { AdaptersScreen, AgentSimulatorScreen, JobsScreen, PipelinesScreen, ResourceScreen } from "./Management";
@@ -92,6 +93,9 @@ function Screen({ id, item }: { id: string; item: NavItem }) {
   if (id === "ai-functions") return <AiFunctionsScreen />;
   if (id === "ai-profiles") return <AiProfilesScreen />;
   if (id === "ai-sessions") return <AiSessionsScreen />;
+  if (id === "files") return <ArtifactsScreen />;
+  if (id === "updates") return <UpdatesScreen />;
+  if (id === "license") return <LicenseScreen />;
   return <ResourceScreen kind={id} title={item.label} />;
 }
 

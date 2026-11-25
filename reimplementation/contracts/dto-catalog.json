@@ -13,7 +13,9 @@
       "ev_92b4c01be83d404ed4a30833d18f8c0e808a857c7161bbe4122f52e6ebf73a84",
       "ev_ea230181ffcd9ba9f70cc982feb949a41b39fd46b143b87671526a44564ec76e",
       "ev_e16e7545376f7b34142d325f401cac6ba7daa5faffeb5c69c2df3e21a74d0884",
-      "ev_8810823eab16266e5028047a515cc1b98dcc599eeba982d2f23c5fc9a94d477f"
+      "ev_8810823eab16266e5028047a515cc1b98dcc599eeba982d2f23c5fc9a94d477f",
+      "ev_9e0b378f36a24eea63826e10d36afa0e4559454dde7aa2d265c8f24609478ed8",
+      "ev_11e8359481594eb6c88c9b69b7ab12f453e31fc932d4dd9ee7d9fe8d112e4da2"
     ]
   },
   "types": {
@@ -38,6 +40,11 @@
     "AiModelList": ["kind", "models"],
     "AiMessage": ["sessionId", "messageId", "timeCreated", "timeCompleted", "senderName", "senderType", "receiverName", "message", "summarizedText", "status"],
     "AiFunctionCallResult": ["sessionId", "toolCallId", "name", "description", "argumentsJson", "output", "error", "executedUtc", "status"],
-    "AiStatusUpdateMessage": ["sessionId", "sourceName", "message"]
+    "AiStatusUpdateMessage": ["sessionId", "sourceName", "message"],
+    "ArtifactInfo": ["host", "name", "length", "creationDate"],
+    "LicenseInfo": ["email", "key"],
+    "LicenseValidationInfoEx": ["key", "success", "license", "item_id", "item_name", "checksum", "expires", "payment_id", "customer_name", "customer_email", "license_limit", "site_count", "activations_left", "price_id"],
+    "SerializableVersion": ["major", "minor", "build", "revision"],
+    "UpdateJobInfo": ["version", "status", "statusDescription", "lastUpdateResult", "progress"]
   }
 }

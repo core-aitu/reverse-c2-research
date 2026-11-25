@@ -26,12 +26,12 @@ func (s *Server) managementRoutes() {
 	for path, kind := range map[string]string{
 		"Payloads": "implants", "Sessions": "sessions",
 		"WinRmSessions": "winrm", "Tunnels": "tunnels",
-		"Artifacts": "files", "Updates": "updates", "License": "license",
 	} {
 		s.registerResourceAlias(path, kind)
 	}
 	s.catalogRoutes()
 	s.aiRoutes()
+	s.adminCatalogRoutes()
 
 	s.mux.Handle("GET /api/adapters", s.protected(http.HandlerFunc(s.adapters)))
 	s.mux.Handle("PUT /api/adapters/{name}", s.requireRole("admin", http.HandlerFunc(s.putAdapter)))

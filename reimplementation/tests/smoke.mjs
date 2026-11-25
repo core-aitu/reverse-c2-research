@@ -149,6 +149,16 @@ const forbiddenShellFixture = await fetch(`${baseURL}/api/adapters/ssh/fixture/s
 });
 if (forbiddenShellFixture.status !== 400) throw new Error("unsafe adapter fixture operation was not rejected");
 
+const artifacts = await json("/api/Artifacts", { headers });
+if (!Array.isArray(artifacts)) throw new Error("artifact metadata contract mismatch");
+const license = await json("/api/License", {
+  method: "PUT", headers, body: JSON.stringify({ email: "research@example.test", key: "fixture-license-key" }),
+});
+if (license.success !== false || license.key.includes("license")) throw new Error("license digest boundary mismatch");
+await json("/api/Updates", { method: "POST", headers });
+const updateStatus = await json("/api/Updates/Updates/status", { headers });
+if (updateStatus.progress !== 100 || updateStatus.lastUpdateResult !== "NoUpdateAvailable") throw new Error("fixture update workflow mismatch");
+
 const pipelines = await json("/api/pipelines", { headers });
 const pipelineJob = await json(`/api/pipelines/${pipelines[0].id}/run`, {
   method: "POST", headers, body: JSON.stringify({ input: "specter" }),
@@ -190,6 +200,8 @@ console.log(JSON.stringify({
   aiFixture: aiRun.output,
   aiSession: aiSessionId,
   adapters: adapters.length,
+  artifacts: artifacts.length,
+  update: updateStatus.lastUpdateResult,
   pipelineJob: completedJob.status,
   simulator: simulator.id,
 }));

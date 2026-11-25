@@ -25,6 +25,8 @@ The typed catalog groups use the original paths and camel-case JSON representati
 
 AI sessions persist the legacy lifecycle, profile snapshot, plan, user messages, approvals and results. The only advertised model is `fixture-deterministic`; creating or resuming a session changes database state but never starts a model process or calls an external provider.
 
+Administration catalogs use typed `ArtifactInfo`, version, update-status and license DTOs. Artifact downloads return `404` when only metadata exists; fixture update checks never download or install packages. License keys are retained only as a SHA-256 digest and masked hint and are never externally validated.
+
 ## Run locally
 
 ```bash
