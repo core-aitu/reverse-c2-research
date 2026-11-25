@@ -192,6 +192,158 @@ func (s *Store) Accounts(ctx context.Context) ([]domain.Account, error) {
 	return accounts, rows.Err()
 }
 
+func (s *Store) AccountByUsername(ctx context.Context, username string) (domain.Account, error) {
+	var account domain.Account
+	err := s.pool.QueryRow(ctx, "SELECT id, username, enabled FROM account WHERE username=$1", username).
+		Scan(&account.ID, &account.Username, &account.Enabled)
+	if errors.Is(err, pgx.ErrNoRows) {
+		return domain.Account{}, ErrNotFound
+	}
+	if err != nil {
+		return domain.Account{}, err
+	}
+	account.Roles, err = s.roles(ctx, account.ID)
+	return account, err
+}
+
+func (s *Store) CreateAccount(ctx context.Context, username, password string, enabled bool, roles []string) (domain.Account, error) {
+	username = strings.TrimSpace(username)
+	if len(username) < 1 || len(username) > 32 || len(password) < 12 || len(password) > 256 {
+		return domain.Account{}, errors.New("username or password does not meet policy")
+	}
+	roles = normalizeRoles(roles)
+	hash, err := bcrypt.GenerateFromPassword([]byte(password), bcrypt.DefaultCost)
+	if err != nil {
+		return domain.Account{}, err
+	}
+	tx, err := s.pool.Begin(ctx)
+	if err != nil {
+		return domain.Account{}, err
+	}
+	defer tx.Rollback(ctx)
+	var id int64
+	if err := tx.QueryRow(ctx, "INSERT INTO account(username,hash,enabled) VALUES($1,$2,$3) RETURNING id", username, string(hash), enabled).Scan(&id); err != nil {
+		return domain.Account{}, err
+	}
+	for _, role := range roles {
+		if _, err := tx.Exec(ctx, "INSERT INTO app_account_roles(account_id,role) VALUES($1,$2)", id, role); err != nil {
+			return domain.Account{}, err
+		}
+	}
+	if err := tx.Commit(ctx); err != nil {
+		return domain.Account{}, err
+	}
+	return s.AccountByID(ctx, id)
+}
+
+func (s *Store) UpdateAccount(ctx context.Context, username string, password *string, enabled *bool, roles []string) (domain.Account, error) {
+	account, err := s.AccountByUsername(ctx, username)
+	if err != nil {
+		return domain.Account{}, err
+	}
+	normalizedRoles := roles
+	if roles != nil {
+		normalizedRoles = normalizeRoles(roles)
+	}
+	if account.Enabled && containsRole(account.Roles, "admin") &&
+		((enabled != nil && !*enabled) || (roles != nil && !containsRole(normalizedRoles, "admin"))) {
+		var admins int
+		if err := s.pool.QueryRow(ctx, `SELECT count(*) FROM account a JOIN app_account_roles r ON r.account_id=a.id
+			WHERE a.enabled=true AND r.role='admin'`).Scan(&admins); err != nil {
+			return domain.Account{}, err
+		}
+		if admins <= 1 {
+			return domain.Account{}, errors.New("cannot disable or demote the last enabled administrator")
+		}
+	}
+	tx, err := s.pool.Begin(ctx)
+	if err != nil {
+		return domain.Account{}, err
+	}
+	defer tx.Rollback(ctx)
+	if enabled != nil {
+		if _, err := tx.Exec(ctx, "UPDATE account SET enabled=$2 WHERE id=$1", account.ID, *enabled); err != nil {
+			return domain.Account{}, err
+		}
+	}
+	if password != nil {
+		if len(*password) < 12 || len(*password) > 256 {
+			return domain.Account{}, errors.New("password does not meet policy")
+		}
+		hash, err := bcrypt.GenerateFromPassword([]byte(*password), bcrypt.DefaultCost)
+		if err != nil {
+			return domain.Account{}, err
+		}
+		if _, err := tx.Exec(ctx, "UPDATE account SET hash=$2 WHERE id=$1", account.ID, string(hash)); err != nil {
+			return domain.Account{}, err
+		}
+	}
+	if roles != nil {
+		if _, err := tx.Exec(ctx, "DELETE FROM app_account_roles WHERE account_id=$1", account.ID); err != nil {
+			return domain.Account{}, err
+		}
+		for _, role := range normalizedRoles {
+			if _, err := tx.Exec(ctx, "INSERT INTO app_account_roles(account_id,role) VALUES($1,$2)", account.ID, role); err != nil {
+				return domain.Account{}, err
+			}
+		}
+	}
+	if err := tx.Commit(ctx); err != nil {
+		return domain.Account{}, err
+	}
+	return s.AccountByID(ctx, account.ID)
+}
+
+func containsRole(roles []string, expected string) bool {
+	for _, role := range roles {
+		if role == expected {
+			return true
+		}
+	}
+	return false
+}
+
+func (s *Store) DeleteAccount(ctx context.Context, username string) error {
+	var admins int
+	if err := s.pool.QueryRow(ctx, `SELECT count(*) FROM account a JOIN app_account_roles r ON r.account_id=a.id
+		WHERE a.enabled=true AND r.role='admin'`).Scan(&admins); err != nil {
+		return err
+	}
+	account, err := s.AccountByUsername(ctx, username)
+	if err != nil {
+		return err
+	}
+	if admins <= 1 {
+		for _, role := range account.Roles {
+			if role == "admin" {
+				return errors.New("cannot delete the last enabled administrator")
+			}
+		}
+	}
+	command, err := s.pool.Exec(ctx, "DELETE FROM account WHERE id=$1", account.ID)
+	if err == nil && command.RowsAffected() == 0 {
+		return ErrNotFound
+	}
+	return err
+}
+
+func normalizeRoles(roles []string) []string {
+	seen := map[string]bool{}
+	result := make([]string, 0, len(roles))
+	for _, role := range roles {
+		role = strings.ToLower(strings.TrimSpace(role))
+		if (role == "admin" || role == "operator" || role == "viewer") && !seen[role] {
+			seen[role] = true
+			result = append(result, role)
+		}
+	}
+	if len(result) == 0 {
+		result = append(result, "viewer")
+	}
+	sort.Strings(result)
+	return result
+}
+
 func tokenDigest(token string) string {
 	sum := sha256.Sum256([]byte(token))
 	return hex.EncodeToString(sum[:])

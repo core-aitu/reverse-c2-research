@@ -23,16 +23,11 @@ func (s *Server) managementRoutes() {
 	s.mux.Handle("PUT /api/workflows/{kind}", s.requireRole("admin", http.HandlerFunc(s.putResource)))
 	s.mux.Handle("DELETE /api/workflows/{kind}/{key}", s.requireRole("admin", http.HandlerFunc(s.deleteResource)))
 
-	for path, kind := range map[string]string{
-		"Payloads": "implants", "Sessions": "sessions",
-		"WinRmSessions": "winrm", "Tunnels": "tunnels",
-	} {
-		s.registerResourceAlias(path, kind)
-	}
 	s.catalogRoutes()
 	s.aiRoutes()
 	s.adminCatalogRoutes()
 	s.networkRoutes()
+	s.compatibilityRoutes()
 
 	s.mux.Handle("GET /api/adapters", s.protected(http.HandlerFunc(s.adapters)))
 	s.mux.Handle("PUT /api/adapters/{name}", s.requireRole("admin", http.HandlerFunc(s.putAdapter)))
@@ -49,9 +44,9 @@ func (s *Server) managementRoutes() {
 	s.mux.Handle("POST /api/pipelines/{id}/run", s.requireRole("admin", http.HandlerFunc(s.runPipeline)))
 	s.mux.Handle("GET /api/PayloadPipeline", s.protected(http.HandlerFunc(s.pipelines)))
 	s.mux.Handle("PUT /api/PayloadPipeline", s.requireRole("admin", http.HandlerFunc(s.putPipeline)))
-	s.mux.Handle("GET /api/PayloadPipeline/PayloadPipeline/{id}", s.protected(http.HandlerFunc(s.pipelineByID)))
-	s.mux.Handle("DELETE /api/PayloadPipeline/PayloadPipeline/{id}", s.requireRole("admin", http.HandlerFunc(s.deletePipeline)))
-	s.mux.Handle("POST /api/PayloadPipeline/PayloadPipeline/{id}/run", s.requireRole("admin", http.HandlerFunc(s.runPipeline)))
+	s.mux.Handle("GET /api/PayloadPipeline/PayloadPipeline/{pipelineId}", s.protected(http.HandlerFunc(s.pipelineByID)))
+	s.mux.Handle("DELETE /api/PayloadPipeline/PayloadPipeline/{pipelineId}", s.requireRole("admin", http.HandlerFunc(s.deletePipeline)))
+	s.mux.Handle("POST /api/PayloadPipeline/PayloadPipeline/{pipelineId}/run", s.requireRole("admin", http.HandlerFunc(s.runPipeline)))
 
 	s.mux.Handle("GET /api/gateway/sessions", s.protected(http.HandlerFunc(s.agentSessions)))
 	s.mux.Handle("POST /api/gateway/simulate/register", s.requireRole("admin", http.HandlerFunc(s.registerAgent)))
@@ -220,7 +215,7 @@ func (s *Server) pipelines(w http.ResponseWriter, r *http.Request) {
 }
 
 func (s *Server) pipelineByID(w http.ResponseWriter, r *http.Request) {
-	value, err := s.store.Pipeline(r.Context(), r.PathValue("id"))
+	value, err := s.store.Pipeline(r.Context(), pipelineID(r))
 	if err != nil {
 		writeError(w, http.StatusNotFound, "pipeline not found")
 		return
@@ -251,11 +246,12 @@ func (s *Server) putPipeline(w http.ResponseWriter, r *http.Request) {
 }
 
 func (s *Server) deletePipeline(w http.ResponseWriter, r *http.Request) {
-	if err := s.store.DeletePipeline(r.Context(), r.PathValue("id")); err != nil {
+	id := pipelineID(r)
+	if err := s.store.DeletePipeline(r.Context(), id); err != nil {
 		writeError(w, http.StatusNotFound, "pipeline not found")
 		return
 	}
-	s.audit(r.Context(), principal(r).Username, "PipelineDeleted", r.PathValue("id"), "definition removed")
+	s.audit(r.Context(), principal(r).Username, "PipelineDeleted", id, "definition removed")
 	w.WriteHeader(http.StatusNoContent)
 }
 
@@ -286,7 +282,7 @@ func (s *Server) runPipeline(w http.ResponseWriter, r *http.Request) {
 	if !decodeJSON(w, r, &request) {
 		return
 	}
-	definition, err := s.store.Pipeline(r.Context(), r.PathValue("id"))
+	definition, err := s.store.Pipeline(r.Context(), pipelineID(r))
 	if err != nil || !definition.Enabled {
 		writeError(w, http.StatusNotFound, "enabled pipeline not found")
 		return
@@ -301,6 +297,13 @@ func (s *Server) runPipeline(w http.ResponseWriter, r *http.Request) {
 	}
 	go s.executePipeline(job.ID, definition, request.Input)
 	writeJSON(w, http.StatusAccepted, job)
+}
+
+func pipelineID(r *http.Request) string {
+	if id := r.PathValue("pipelineId"); id != "" {
+		return id
+	}
+	return r.PathValue("id")
 }
 
 func (s *Server) executePipeline(jobID string, stored domain.PipelineDefinition, input string) {

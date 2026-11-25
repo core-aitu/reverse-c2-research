@@ -4,6 +4,7 @@ COPY go.mod go.sum ./
 RUN go mod download
 COPY cmd ./cmd
 COPY internal ./internal
+COPY contracts ./contracts
 RUN CGO_ENABLED=0 go build -trimpath -ldflags="-s -w" -o /out/specter-server ./cmd/server
 RUN CGO_ENABLED=0 go build -trimpath -ldflags="-s -w" -o /out/specter-worker ./cmd/worker
 

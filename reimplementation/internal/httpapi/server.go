@@ -44,6 +44,10 @@ func (s *Server) routes() {
 	s.mux.Handle("POST /api/Accounts/revoke-token", s.protected(http.HandlerFunc(s.revoke)))
 	s.mux.Handle("GET /api/Identity", s.protected(http.HandlerFunc(s.identity)))
 	s.mux.Handle("GET /api/Accounts", s.requireRole("admin", http.HandlerFunc(s.accounts)))
+	s.mux.Handle("POST /api/Accounts", s.requireRole("admin", http.HandlerFunc(s.createAccount)))
+	s.mux.Handle("GET /api/Accounts/{username}", s.requireRole("admin", http.HandlerFunc(s.account)))
+	s.mux.Handle("PUT /api/Accounts/{name}", s.requireRole("admin", http.HandlerFunc(s.updateAccount)))
+	s.mux.Handle("DELETE /api/Accounts/{username}", s.requireRole("admin", http.HandlerFunc(s.deleteAccount)))
 	s.mux.Handle("GET /api/Documentation", s.protected(http.HandlerFunc(s.documentation)))
 	s.mux.Handle("POST /api/Documentation/search", s.protected(http.HandlerFunc(s.searchDocumentation)))
 	s.mux.Handle("GET /api/Documentation/index-status", s.protected(http.HandlerFunc(s.documentationIndexStatus)))
@@ -133,6 +137,74 @@ func (s *Server) accounts(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	writeJSON(w, http.StatusOK, accounts)
+}
+
+type createAccountRequest struct {
+	Username string   `json:"username"`
+	Password string   `json:"password"`
+	Enabled  *bool    `json:"enabled"`
+	Roles    []string `json:"roles"`
+}
+
+func (s *Server) createAccount(w http.ResponseWriter, r *http.Request) {
+	var request createAccountRequest
+	if !decodeJSON(w, r, &request) {
+		return
+	}
+	enabled := true
+	if request.Enabled != nil {
+		enabled = *request.Enabled
+	}
+	account, err := s.store.CreateAccount(r.Context(), request.Username, request.Password, enabled, request.Roles)
+	if err != nil {
+		writeError(w, http.StatusBadRequest, err.Error())
+		return
+	}
+	s.audit(r.Context(), principal(r).Username, "AccountCreated", account.Username, strings.Join(account.Roles, ","))
+	writeJSON(w, http.StatusOK, account)
+}
+
+func (s *Server) account(w http.ResponseWriter, r *http.Request) {
+	account, err := s.store.AccountByUsername(r.Context(), r.PathValue("username"))
+	if err != nil {
+		writeError(w, http.StatusNotFound, "account not found")
+		return
+	}
+	writeJSON(w, http.StatusOK, account)
+}
+
+type updateAccountRequest struct {
+	Password *string  `json:"password"`
+	Enabled  *bool    `json:"enabled"`
+	Roles    []string `json:"roles"`
+}
+
+func (s *Server) updateAccount(w http.ResponseWriter, r *http.Request) {
+	var request updateAccountRequest
+	if !decodeJSON(w, r, &request) {
+		return
+	}
+	account, err := s.store.UpdateAccount(r.Context(), r.PathValue("name"), request.Password, request.Enabled, request.Roles)
+	if err != nil {
+		writeError(w, http.StatusBadRequest, err.Error())
+		return
+	}
+	s.audit(r.Context(), principal(r).Username, "AccountUpdated", account.Username, strings.Join(account.Roles, ","))
+	writeJSON(w, http.StatusOK, account)
+}
+
+func (s *Server) deleteAccount(w http.ResponseWriter, r *http.Request) {
+	username := r.PathValue("username")
+	if username == principal(r).Username {
+		writeError(w, http.StatusConflict, "cannot delete the current account")
+		return
+	}
+	if err := s.store.DeleteAccount(r.Context(), username); err != nil {
+		writeError(w, http.StatusConflict, err.Error())
+		return
+	}
+	s.audit(r.Context(), principal(r).Username, "AccountDeleted", username, "refresh sessions revoked by cascade")
+	writeJSON(w, http.StatusOK, map[string]bool{"deleted": true})
 }
 
 func (s *Server) documentation(w http.ResponseWriter, r *http.Request) {
