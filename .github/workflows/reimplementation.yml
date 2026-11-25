@@ -2,9 +2,9 @@ name: reimplementation
 
 on:
   push:
-    paths: ["reimplementation/**", ".github/workflows/reimplementation.yml"]
+    paths: ["reimplementation/**", "research/reports/**", ".github/workflows/reimplementation.yml"]
   pull_request:
-    paths: ["reimplementation/**", ".github/workflows/reimplementation.yml"]
+    paths: ["reimplementation/**", "research/reports/**", ".github/workflows/reimplementation.yml"]
 
 jobs:
   contracts:
@@ -38,6 +38,9 @@ jobs:
         run: |
           pnpm install --frozen-lockfile
           pnpm run check
+          pnpm run test:docs
+          pnpm run test:replay
+          pnpm run test:plugins
           pnpm run build
 
   compose:

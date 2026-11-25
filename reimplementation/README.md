@@ -51,7 +51,7 @@ Fixture adapters also expose bounded operation-specific previews under `/api/ada
 ```bash
 python3 -m unittest discover -s tests -v
 docker build --target test -t specter-reimplementation-test .
-cd web && pnpm install --frozen-lockfile && pnpm run check && pnpm run build
+cd web && pnpm install --frozen-lockfile && pnpm run check && pnpm run test:docs && pnpm run build
 ```
 
 The Go test target includes a runtime contract-coverage test. It loads the pinned manifest and verifies all 202 unique method/path pairs against the actual `http.ServeMux`; a manifest-only entry is not counted as implemented.
@@ -63,6 +63,12 @@ The same live path is available as a headless smoke test:
 ```bash
 SPECTER_ADMIN_PASSWORD='your configured password' node tests/smoke.mjs
 ```
+
+## Documentation viewer
+
+The web documentation viewer accepts both nested `name`/`contents`/`children` entries observed in the research and the current store's flat slash-separated paths. It supports collapsible navigation, explicit search loading/error/empty states, and reloads without clearing the last successfully loaded document. It aborts superseded requests on dependency changes and unmount. This is a deliberate web UX improvement over the response-order behavior documented in `../research/reports/documentation-ui-semantics.md`. Document content is displayed as escaped text with preserved line breaks, not rendered HTML or full Markdown. The REST contracts and database remain unchanged.
+
+Run the standalone tree/selection tests with `cd web && pnpm run test:docs` on the pinned Node version. On Node 22.16, use `node --experimental-strip-types --test tests/documentation.test.mjs` instead.
 
 ## Reproduce generated contracts
 
@@ -81,3 +87,31 @@ python3 tools/export_schema.py \
 ```
 
 The scripts fail if the expected 202-operation contract is not recovered. Temporary ILSpy output must not be copied into the repository.
+
+### Offline research reports and evidence integrity
+
+The standalone laboratory audit can be summarized, compared and rendered to static HTML using `tools/research_reports.py`. `tools/evidence_integrity.py` verifies the SHA-256 baseline for the research reports and ADR documents. Both are local-only Python standard-library utilities. See [the offline workflow](docs/offline-research-workflow.md) for commands, formats and verification limits.
+
+### Research Scenario Engine
+
+The independent **Research → Scenario Engine** runs fixed fictional measurement
+quality scenarios and persists results in PostgreSQL. See
+[the module documentation](docs/research-scenarios.md) for API, scenarios and
+validation. This extension is not part of the legacy compatibility manifest.
+
+### Offline measurement replay
+
+**Research → Measurement Replay** provides a browser-local timeline for two
+fictional measurement recordings, with stepwise playback, backward seeking and
+quality statistics. It is independent of the gateway and existing scenario API.
+See [the replay documentation](docs/measurement-replay.md).
+
+### Research journal
+
+The administrator-only Research Journal displays ordered, persisted events for fictional measurement scenario reports. See [research-journal.md](docs/research-journal.md) for migration, API, and verification details. It is separate from the operational event hub.
+
+### Research plugins
+
+**Research → Research Plugins** offers three built-in browser-local reports for
+fixed classroom measurement fixtures, with selection and tabular results. It is
+not a general-purpose plugin loader. See [research-plugins.md](docs/research-plugins.md).

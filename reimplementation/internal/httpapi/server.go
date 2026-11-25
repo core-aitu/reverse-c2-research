@@ -59,6 +59,8 @@ func (s *Server) routes() {
 	s.mux.Handle("GET /api/Settings", s.protected(http.HandlerFunc(s.settings)))
 	s.mux.Handle("PUT /api/Settings", s.requireRole("admin", http.HandlerFunc(s.putSettings)))
 	s.managementRoutes()
+	s.researchScenarioRoutes()
+	s.researchJournalRoutes()
 	if s.cfg.FixturesEnabled {
 		s.mux.Handle("POST /api/fixtures/event", s.requireRole("admin", http.HandlerFunc(s.fixtureEvent)))
 	}
