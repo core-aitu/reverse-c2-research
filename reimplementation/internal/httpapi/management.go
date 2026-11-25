@@ -15,6 +15,7 @@ import (
 	"github.com/research/specter-reimplementation/internal/domain"
 	"github.com/research/specter-reimplementation/internal/pipeline"
 	"github.com/research/specter-reimplementation/internal/store"
+	"github.com/research/specter-reimplementation/internal/worker"
 )
 
 func (s *Server) managementRoutes() {
@@ -287,7 +288,7 @@ func (s *Server) executePipeline(jobID string, stored domain.PipelineDefinition,
 	var output json.RawMessage
 	if err == nil {
 		var result pipeline.Result
-		result, err = pipeline.Execute(definition, input)
+		result, err = worker.ExecuteProcess(ctx, s.cfg.WorkerPath, worker.Request{Version: 1, Definition: definition, Input: input})
 		if err == nil {
 			output, err = json.Marshal(result)
 		}

@@ -20,6 +20,7 @@ type Config struct {
 	SecureCookies   bool
 	FixturesEnabled bool
 	RealAdapters    bool
+	WorkerPath      string
 	ShutdownTimeout time.Duration
 }
 
@@ -37,6 +38,7 @@ func Load() (Config, error) {
 		SecureCookies:   boolean("SPECTER_SECURE_COOKIES", false),
 		FixturesEnabled: boolean("SPECTER_ENABLE_FIXTURES", false),
 		RealAdapters:    boolean("SPECTER_ENABLE_REAL_ADAPTERS", false),
+		WorkerPath:      env("SPECTER_WORKER_PATH", "/app/specter-worker"),
 		ShutdownTimeout: duration("SPECTER_SHUTDOWN_TIMEOUT", 10*time.Second),
 	}
 	if len(cfg.JWTSecret) < 32 {

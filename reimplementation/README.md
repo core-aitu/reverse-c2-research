@@ -15,11 +15,11 @@ This directory contains the independent Go and TypeScript implementation describ
 - versioned CRUD resources for listeners, certificates, implants, scripts, wordlists, modules, notebooks, tunnels, WinRM, AI, network intelligence, files, updates and licensing;
 - persistent jobs with lifecycle, cancellation, attempts and audit events;
 - fixture-first ports for PostgreSQL, Elasticsearch, SMTP, ACME, WebDAV, AI, SSH, Tor, WinRM and updates;
-- a typed DAG pipeline limited to bounded, non-executable transforms;
-- a persistent agent/beacon protocol simulator covering register, check-in, dispatch and results;
+- a typed DAG pipeline limited to bounded, non-executable transforms, executed by a one-shot worker without management-plane environment variables;
+- a persistent agent/beacon protocol simulator covering register, check-in, dispatch and results, plus a bounded internal `SIR1` framing contract with golden vectors;
 - evidence-pinned legacy DTOs and database-backed endpoints for scripts, wordlists, listener configuration, certificate metadata, opaque modules, notebooks and AI definitions.
 
-The agent gateway is intentionally simulator-only in this service. It does not run a remote shell, load code or generate deployment payloads. Pipeline nodes are an allowlist of deterministic data transforms; shell, PowerShell, network and loader nodes are rejected. These boundaries preserve the orchestration contract while keeping execution isolated and reviewable.
+The agent gateway is intentionally simulator-only in this service. It does not run a remote shell, load code or generate deployment payloads. `SIR1` is an internal simulator framing contract, not a claim of compatibility with an unverified legacy wire format. Pipeline nodes are an allowlist of deterministic data transforms; shell, PowerShell, network and loader nodes are rejected. Jobs are passed over a versioned stdin/stdout contract to a one-shot worker process whose environment omits the management database URL and credentials. These boundaries preserve the orchestration contract while keeping execution isolated and reviewable.
 
 The typed catalog groups use the original paths and camel-case JSON representations. Their independently described field catalog is in `contracts/dto-catalog.json`, pinned to the ApiClient artifact SHA-256/MVID and static managed-metadata Evidence. Listener records are configuration only: adding one never binds a network socket. Certificate endpoints store public metadata only and never accept a private key. Uploaded modules are bounded opaque blobs and are never loaded, reflected or executed. Notebook cells are stored as data; the PowerShell session routes return `501` until an isolated worker is configured. AI function definitions use a versioned fixture DSL limited to deterministic `echo`, `concat` and `sha256` operations; unknown fields and execution-shaped operations are rejected.
 
