@@ -109,6 +109,26 @@ if (fetchedNotebook.name !== "smoke-notebook") throw new Error("notebook GET mis
 const unavailableSession = await fetch(`${baseURL}/api/PowerShellNotebooks/${notebook.notebookId}/session`, { method: "POST", headers });
 if (unavailableSession.status !== 501) throw new Error("PowerShell execution boundary mismatch");
 
+await json("/api/AiFunctionDefinitions", {
+  method: "POST", headers,
+  body: JSON.stringify({ functionId: "fixture-echo", name: "Fixture echo", description: "deterministic", documentation: "smoke", approvalLevel: "Low", definition: JSON.stringify({ version: 1, operation: "echo", argument: "text" }) }),
+});
+const aiRun = await json("/api/AiFunctionDefinitions/fixture-echo/run", {
+  method: "POST", headers, body: JSON.stringify({ text: "fixture-live-window" }),
+});
+if (!aiRun.succeeded || aiRun.output !== "fixture-live-window") throw new Error("AI fixture function mismatch");
+const unsafeAiFunction = await fetch(`${baseURL}/api/AiFunctionDefinitions`, {
+  method: "POST", headers,
+  body: JSON.stringify({ functionId: "unsafe-shell", name: "Unsafe", description: "must reject", documentation: "", approvalLevel: "High", definition: JSON.stringify({ version: 1, operation: "shell", argument: "command" }) }),
+});
+if (unsafeAiFunction.status !== 400) throw new Error("unsafe AI function was not rejected");
+await json("/api/AiAgentDefinitions", {
+  method: "POST", headers,
+  body: JSON.stringify({ agentId: "fixture-profile", name: "Fixture profile", description: "smoke", prompt: "Use fixture functions only.", includeSpecterScripts: false, accessibleFunctions: ["fixture-echo"] }),
+});
+const aiProfiles = await json("/api/AiAgentDefinitions", { headers });
+if (!aiProfiles.some((item) => item.agentId === "fixture-profile" && item.accessibleFunctions.includes("fixture-echo"))) throw new Error("AI profile mismatch");
+
 const adapters = await json("/api/adapters", { headers });
 if (adapters.length !== 10) throw new Error("adapter registry mismatch");
 const adapter = await json("/api/adapters/elasticsearch/probe", { method: "POST", headers });
@@ -151,6 +171,8 @@ console.log(JSON.stringify({
   listeners: listeners.length,
   modules: modules.length,
   notebook: notebook.notebookId,
+  aiProfiles: aiProfiles.length,
+  aiFixture: aiRun.output,
   adapters: adapters.length,
   pipelineJob: completedJob.status,
   simulator: simulator.id,

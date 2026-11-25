@@ -29,6 +29,9 @@
     "CreateNotebookRequest": ["name", "description", "cells"],
     "UpdateNotebookRequest": ["name", "description", "cells"],
     "PowerShellNotebook": ["id", "notebookId", "name", "description", "timeCreated", "timeUpdated", "cells"],
-    "PsSessionInfo": ["sessionId", "name", "createdAt", "isBusy"]
+    "PsSessionInfo": ["sessionId", "name", "createdAt", "isBusy"],
+    "AiAgentDefinition": ["id", "agentId", "name", "description", "prompt", "includeSpecterScripts", "accessibleFunctions"],
+    "AiFunctionDefinition": ["functionId", "name", "description", "documentation", "approvalLevel", "definition"],
+    "RunAiFunctionResult": ["succeeded", "output"]
   }
 }

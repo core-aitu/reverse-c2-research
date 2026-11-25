@@ -191,3 +191,24 @@ export type PowerShellNotebook = {
   timeUpdated: string;
   cells: NotebookCell[];
 };
+
+export type AiAgentDefinition = {
+  id: number;
+  agentId: string;
+  name: string;
+  description: string;
+  prompt: string;
+  includeSpecterScripts: boolean;
+  accessibleFunctions: string[];
+};
+
+export type AiFunctionDefinition = {
+  functionId: string;
+  name: string;
+  description: string;
+  documentation: string;
+  approvalLevel: "Low" | "Medium" | "High";
+  definition: string;
+};
+
+export type RunAiFunctionResult = { succeeded: boolean; output: string };
