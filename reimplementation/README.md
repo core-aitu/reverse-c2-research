@@ -27,6 +27,8 @@ AI sessions persist the legacy lifecycle, profile snapshot, plan, user messages,
 
 Administration catalogs use typed `ArtifactInfo`, version, update-status and license DTOs. Artifact downloads return `404` when only metadata exists; fixture update checks never download or install packages. License keys are retained only as a SHA-256 digest and masked hint and are never externally validated.
 
+Network Intelligence uses the legacy normalized host, IP-address and open-port tables with typed DTOs, validated IP/CIDR input and cascading host deletion. The web map reads these exact endpoints instead of the generic resource registry.
+
 ## Run locally
 
 ```bash

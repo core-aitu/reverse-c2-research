@@ -228,3 +228,5 @@ export type ArtifactInfo = { host: string; name: string; length: number; creatio
 export type SerializableVersion = { major: number; minor: number; build: number; revision: number };
 export type UpdateJobInfo = { version: SerializableVersion; status: string; statusDescription: string; lastUpdateResult: string; progress: number };
 export type LicenseValidation = { key: string; success: boolean; license: string; checksum: string; expires: string; customer_email: string };
+export type NetHost = { hostId: string; hostname: string; domain: string; osName: string; osVersion: string; osArchitecture: string; cidrNetwork: string; firstSeen: string; lastSeen: string };
+export type NetHostIpAddress = { ipId: string; hostId: string; ipAddress: string; isPrimary: boolean; interfaceName: string; macAddress: string; vendor: string };

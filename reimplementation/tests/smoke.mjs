@@ -92,6 +92,15 @@ if (traversalListener.status !== 400) throw new Error("listener traversal was no
 const anonymousScripts = await fetch(`${baseURL}/api/Scripts`);
 if (anonymousScripts.status !== 401) throw new Error("typed catalog anonymous access was not rejected");
 
+const netHost = await json("/api/NetworkIntelligence/UpsertHost", {
+  method: "POST", headers, body: JSON.stringify({ hostname: "fixture-host", domain: "example.test", osName: "Linux", osVersion: "fixture", osArchitecture: "x86_64", cidrNetwork: "192.0.2.0/24", knownIpAddresses: ["192.0.2.10"] }),
+});
+await json("/api/NetworkIntelligence/UpsertOpenPort", {
+  method: "POST", headers, body: JSON.stringify({ hostId: netHost.hostId, portNumber: 443, protocol: "tcp", state: "open", serviceName: "https", banner: "fixture" }),
+});
+const netPorts = await json(`/api/NetworkIntelligence/GetOpenPortsByHostId?hostId=${encodeURIComponent(netHost.hostId)}`, { headers });
+if (netPorts.length !== 1 || netPorts[0].portNumber !== 443) throw new Error("network intelligence mismatch");
+
 await json("/api/Modules", {
   method: "POST", headers,
   body: JSON.stringify(Buffer.from("clean-room opaque module fixture").toString("base64")),
@@ -202,6 +211,7 @@ console.log(JSON.stringify({
   adapters: adapters.length,
   artifacts: artifacts.length,
   update: updateStatus.lastUpdateResult,
+  networkHost: netHost.hostId,
   pipelineJob: completedJob.status,
   simulator: simulator.id,
 }));

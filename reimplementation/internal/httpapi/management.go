@@ -32,6 +32,7 @@ func (s *Server) managementRoutes() {
 	s.catalogRoutes()
 	s.aiRoutes()
 	s.adminCatalogRoutes()
+	s.networkRoutes()
 
 	s.mux.Handle("GET /api/adapters", s.protected(http.HandlerFunc(s.adapters)))
 	s.mux.Handle("PUT /api/adapters/{name}", s.requireRole("admin", http.HandlerFunc(s.putAdapter)))
