@@ -2,12 +2,16 @@ package store
 
 import (
 	"context"
+	"crypto/rand"
+	"encoding/json"
 	"errors"
+	"fmt"
 	"net/url"
 	"path"
 	"strings"
 
 	"github.com/jackc/pgx/v5"
+	"github.com/jackc/pgx/v5/pgconn"
 	"github.com/research/specter-reimplementation/internal/domain"
 )
 
@@ -297,4 +301,186 @@ func (s *Store) DeleteCertificate(ctx context.Context, name string) error {
 		return ErrNotFound
 	}
 	return err
+}
+
+func (s *Store) Modules(ctx context.Context) ([]domain.SpecterModuleInfo, error) {
+	rows, err := s.pool.Query(ctx, `SELECT name,version,runtime_version,cmdlets FROM app_modules ORDER BY name`)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	values := []domain.SpecterModuleInfo{}
+	for rows.Next() {
+		var value domain.SpecterModuleInfo
+		if err := rows.Scan(&value.Name, &value.Version, &value.RuntimeVersion, &value.Cmdlets); err != nil {
+			return nil, err
+		}
+		values = append(values, value)
+	}
+	return values, rows.Err()
+}
+
+func (s *Store) PutModule(ctx context.Context, name string, content []byte, digest string) error {
+	if strings.TrimSpace(name) == "" || len(name) > 256 || len(content) == 0 || len(content) > 4<<20 || len(digest) != 64 {
+		return errors.New("invalid module blob")
+	}
+	_, err := s.pool.Exec(ctx, `INSERT INTO app_modules(name,version,runtime_version,cmdlets,content_sha256,content)
+		VALUES($1,'opaque','not-inspected','{}',$2,$3)
+		ON CONFLICT(name) DO UPDATE SET content_sha256=excluded.content_sha256,content=excluded.content,
+		version=excluded.version,runtime_version=excluded.runtime_version,cmdlets=excluded.cmdlets,updated_at=now()`, name, digest, content)
+	return err
+}
+
+func (s *Store) ModuleContent(ctx context.Context, name string) ([]byte, string, error) {
+	var content []byte
+	var digest string
+	err := s.pool.QueryRow(ctx, `SELECT content,content_sha256 FROM app_modules WHERE name=$1`, name).Scan(&content, &digest)
+	if errors.Is(err, pgx.ErrNoRows) {
+		return nil, "", ErrNotFound
+	}
+	return content, digest, err
+}
+
+func (s *Store) DeleteModule(ctx context.Context, name string) error {
+	command, err := s.pool.Exec(ctx, "DELETE FROM app_modules WHERE name=$1", name)
+	if err == nil && command.RowsAffected() == 0 {
+		return ErrNotFound
+	}
+	return err
+}
+
+func (s *Store) Notebooks(ctx context.Context) ([]domain.PowerShellNotebook, error) {
+	rows, err := s.pool.Query(ctx, `SELECT id,notebookid,name,description,timecreated,timeupdated,cells
+		FROM powershellnotebooks ORDER BY name,notebookid`)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	values := []domain.PowerShellNotebook{}
+	for rows.Next() {
+		value, err := scanNotebook(rows)
+		if err != nil {
+			return nil, err
+		}
+		values = append(values, value)
+	}
+	return values, rows.Err()
+}
+
+func (s *Store) Notebook(ctx context.Context, notebookID string) (domain.PowerShellNotebook, error) {
+	value, err := scanNotebook(s.pool.QueryRow(ctx, `SELECT id,notebookid,name,description,timecreated,timeupdated,cells
+		FROM powershellnotebooks WHERE notebookid=$1`, notebookID))
+	if errors.Is(err, pgx.ErrNoRows) {
+		return domain.PowerShellNotebook{}, ErrNotFound
+	}
+	return value, err
+}
+
+func (s *Store) CreateNotebook(ctx context.Context, request domain.NotebookRequest) (domain.PowerShellNotebook, error) {
+	if err := validateNotebook(request); err != nil {
+		return domain.PowerShellNotebook{}, err
+	}
+	for attempt := 0; attempt < 3; attempt++ {
+		notebookID := randomStoreID("notebook")
+		cells, _ := json.Marshal(request.Cells)
+		_, err := s.pool.Exec(ctx, `INSERT INTO powershellnotebooks(notebookid,name,description,timecreated,timeupdated,cells)
+			VALUES($1,$2,$3,now(),now(),$4)`, notebookID, request.Name, request.Description, cells)
+		if err == nil {
+			return s.Notebook(ctx, notebookID)
+		}
+		if !isUniqueViolation(err) {
+			return domain.PowerShellNotebook{}, err
+		}
+	}
+	return domain.PowerShellNotebook{}, errors.New("could not allocate notebook id")
+}
+
+func (s *Store) UpdateNotebook(ctx context.Context, notebookID string, request domain.NotebookRequest) (domain.PowerShellNotebook, error) {
+	if err := validateNotebook(request); err != nil {
+		return domain.PowerShellNotebook{}, err
+	}
+	cells, _ := json.Marshal(request.Cells)
+	command, err := s.pool.Exec(ctx, `UPDATE powershellnotebooks SET name=$2,description=$3,cells=$4,timeupdated=now()
+		WHERE notebookid=$1`, notebookID, request.Name, request.Description, cells)
+	if err != nil {
+		return domain.PowerShellNotebook{}, err
+	}
+	if command.RowsAffected() == 0 {
+		return domain.PowerShellNotebook{}, ErrNotFound
+	}
+	return s.Notebook(ctx, notebookID)
+}
+
+func (s *Store) UpsertNotebook(ctx context.Context, notebookID string, request domain.NotebookRequest) (domain.PowerShellNotebook, error) {
+	if strings.TrimSpace(notebookID) == "" || len(notebookID) > 128 || strings.ContainsAny(notebookID, "/\\") {
+		return domain.PowerShellNotebook{}, errors.New("invalid notebook id")
+	}
+	if err := validateNotebook(request); err != nil {
+		return domain.PowerShellNotebook{}, err
+	}
+	cells, _ := json.Marshal(request.Cells)
+	_, err := s.pool.Exec(ctx, `INSERT INTO powershellnotebooks(notebookid,name,description,timecreated,timeupdated,cells)
+		VALUES($1,$2,$3,now(),now(),$4)
+		ON CONFLICT(notebookid) DO UPDATE SET name=excluded.name,description=excluded.description,
+		cells=excluded.cells,timeupdated=now()`, notebookID, request.Name, request.Description, cells)
+	if err != nil {
+		return domain.PowerShellNotebook{}, err
+	}
+	return s.Notebook(ctx, notebookID)
+}
+
+func (s *Store) DeleteNotebook(ctx context.Context, notebookID string) error {
+	command, err := s.pool.Exec(ctx, "DELETE FROM powershellnotebooks WHERE notebookid=$1", notebookID)
+	if err == nil && command.RowsAffected() == 0 {
+		return ErrNotFound
+	}
+	return err
+}
+
+type notebookScanner interface{ Scan(...any) error }
+
+func scanNotebook(row notebookScanner) (domain.PowerShellNotebook, error) {
+	var value domain.PowerShellNotebook
+	var cells []byte
+	err := row.Scan(&value.ID, &value.NotebookID, &value.Name, &value.Description, &value.TimeCreated, &value.TimeUpdated, &cells)
+	if err != nil {
+		return domain.PowerShellNotebook{}, err
+	}
+	if err := json.Unmarshal(cells, &value.Cells); err != nil {
+		return domain.PowerShellNotebook{}, err
+	}
+	if value.Cells == nil {
+		value.Cells = []json.RawMessage{}
+	}
+	return value, nil
+}
+
+func validateNotebook(value domain.NotebookRequest) error {
+	if strings.TrimSpace(value.Name) == "" || len(value.Name) > 256 || len(value.Description) > 4096 || len(value.Cells) > 256 {
+		return errors.New("invalid notebook")
+	}
+	total := 0
+	for _, cell := range value.Cells {
+		total += len(cell)
+		if !json.Valid(cell) || len(cell) > 256<<10 {
+			return errors.New("invalid notebook cell")
+		}
+	}
+	if total > 2<<20 {
+		return errors.New("notebook cells exceed 2 MiB")
+	}
+	return nil
+}
+
+func randomStoreID(prefix string) string {
+	var value [12]byte
+	if _, err := rand.Read(value[:]); err != nil {
+		return fmt.Sprintf("%s-%d", prefix, len(prefix))
+	}
+	return fmt.Sprintf("%s-%x", prefix, value[:])
+}
+
+func isUniqueViolation(err error) bool {
+	var postgresError *pgconn.PgError
+	return errors.As(err, &postgresError) && postgresError.Code == "23505"
 }

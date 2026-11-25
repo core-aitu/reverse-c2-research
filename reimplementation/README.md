@@ -11,17 +11,17 @@ This directory contains the independent Go and TypeScript implementation describ
 - users and roles, documentation/search/index, settings and event history;
 - authenticated WebSocket events with cursor replay after reconnect;
 - responsive React workflows for all 24 researched screens, including loading, empty, error and permission-aware states;
-- `fixture-live-window` path from PostgreSQL through Go and WebSocket to the browser.
+- `fixture-live-window` path from PostgreSQL through Go and WebSocket to the browser;
 - versioned CRUD resources for listeners, certificates, implants, scripts, wordlists, modules, notebooks, tunnels, WinRM, AI, network intelligence, files, updates and licensing;
 - persistent jobs with lifecycle, cancellation, attempts and audit events;
 - fixture-first ports for PostgreSQL, Elasticsearch, SMTP, ACME, WebDAV, AI, SSH, Tor, WinRM and updates;
 - a typed DAG pipeline limited to bounded, non-executable transforms;
-- a persistent agent/beacon protocol simulator covering register, check-in, dispatch and results.
-- evidence-pinned legacy DTOs and database-backed endpoints for scripts, wordlists, listener configuration and certificate metadata.
+- a persistent agent/beacon protocol simulator covering register, check-in, dispatch and results;
+- evidence-pinned legacy DTOs and database-backed endpoints for scripts, wordlists, listener configuration, certificate metadata, opaque modules and notebooks.
 
 The agent gateway is intentionally simulator-only in this service. It does not run a remote shell, load code or generate deployment payloads. Pipeline nodes are an allowlist of deterministic data transforms; shell, PowerShell, network and loader nodes are rejected. These boundaries preserve the orchestration contract while keeping execution isolated and reviewable.
 
-The first typed catalog group uses the original paths and camel-case JSON representations. Its independently described field catalog is in `contracts/dto-catalog.json`, pinned to the ApiClient artifact SHA-256/MVID and static managed-metadata Evidence. Listener records are configuration only: adding one never binds a network socket. Certificate endpoints store public metadata only and never accept a private key.
+The typed catalog groups use the original paths and camel-case JSON representations. Their independently described field catalog is in `contracts/dto-catalog.json`, pinned to the ApiClient artifact SHA-256/MVID and static managed-metadata Evidence. Listener records are configuration only: adding one never binds a network socket. Certificate endpoints store public metadata only and never accept a private key. Uploaded modules are bounded opaque blobs and are never loaded, reflected or executed. Notebook cells are stored as data; the PowerShell session routes return `501` until an isolated worker is configured.
 
 ## Run locally
 
@@ -42,8 +42,7 @@ Real adapter probes are disabled by default. Set `SPECTER_ENABLE_REAL_ADAPTERS=t
 
 ```bash
 python3 -m unittest discover -s tests -v
-docker run --rm -v "$PWD:/src:Z" -w /src golang:1.27.4-bookworm \
-  sh -c 'gofmt -w cmd internal && go test -race ./...'
+docker build --target test -t specter-reimplementation-test .
 cd web && pnpm install --frozen-lockfile && pnpm run check && pnpm run build
 ```
 

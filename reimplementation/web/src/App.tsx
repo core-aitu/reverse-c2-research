@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Login, useAuth } from "./auth";
-import { CertificatesScreen, ListenersScreen, ScriptsScreen, WordlistsScreen } from "./Catalog";
+import { CertificatesScreen, ListenersScreen, ModulesScreen, NotebooksScreen, ScriptsScreen, WordlistsScreen } from "./Catalog";
 import { AdaptersScreen, AgentSimulatorScreen, JobsScreen, PipelinesScreen, ResourceScreen } from "./Management";
 import { useEvents } from "./useEvents";
 import type { Account, DocumentationEntry, SearchResult, Setting } from "./types";
@@ -17,6 +17,7 @@ const navigation: NavItem[] = [
   { category: "Operations", label: "Scripts", id: "scripts", live: true },
   { category: "Operations", label: "Wordlists", id: "wordlists", live: true },
   { category: "Operations", label: "Modules", id: "modules", live: true },
+  { category: "Operations", label: "PowerShell Notebooks", id: "notebooks", live: true },
   { category: "Operations", label: "Events", id: "events", live: true },
   { category: "Operations", label: "Workflows & Jobs", id: "workflows", live: true },
   { category: "Operations", label: "WinRM Sessions", id: "winrm", live: true },
@@ -85,6 +86,8 @@ function Screen({ id, item }: { id: string; item: NavItem }) {
   if (id === "wordlists") return <WordlistsScreen />;
   if (id === "listeners") return <ListenersScreen />;
   if (id === "certificates") return <CertificatesScreen />;
+  if (id === "modules") return <ModulesScreen />;
+  if (id === "notebooks") return <NotebooksScreen />;
   return <ResourceScreen kind={id} title={item.label} />;
 }
 

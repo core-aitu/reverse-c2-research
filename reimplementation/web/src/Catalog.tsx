@@ -1,6 +1,6 @@
 import { type FormEvent, type ReactNode, useCallback, useEffect, useState } from "react";
 import { useAuth } from "./auth";
-import type { CertificateInfo, Listener, SpecterScript, Wordlist } from "./types";
+import type { CertificateInfo, Listener, PowerShellNotebook, SpecterModule, SpecterScript, Wordlist } from "./types";
 
 export function ScriptsScreen() {
   const { request } = useAuth();
@@ -91,9 +91,67 @@ export function CertificatesScreen() {
   </CatalogLayout>;
 }
 
+export function ModulesScreen() {
+  const { request, download } = useAuth();
+  const [values, setValues] = useState<SpecterModule[]>([]);
+  const [error, setError] = useState("");
+  const load = useCallback(() => request<SpecterModule[]>("/api/Modules").then(setValues), [request]);
+  useEffect(() => { void load().catch((cause) => setError(message(cause))); }, [load]);
+  async function upload(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault(); setError("");
+    const file = new FormData(event.currentTarget).get("module");
+    if (!(file instanceof File) || !file.size) return;
+    if (file.size > 4 * 1024 * 1024) { setError("Module blob exceeds 4 MiB."); return; }
+    try {
+      await request("/api/Modules", { method: "POST", body: JSON.stringify(await fileBase64(file)) });
+      event.currentTarget.reset(); await load();
+    } catch (cause) { setError(message(cause)); }
+  }
+  async function save(value: SpecterModule) {
+    try {
+      const blob = await download(`/api/Modules/Modules/${encodeURIComponent(value.name)}`);
+      const url = URL.createObjectURL(blob); const anchor = document.createElement("a");
+      anchor.href = url; anchor.download = value.name; anchor.click(); URL.revokeObjectURL(url);
+    } catch (cause) { setError(message(cause)); }
+  }
+  async function remove(name: string) { await request(`/api/Modules/Modules/${encodeURIComponent(name)}`, { method: "DELETE" }); await load(); }
+  return <CatalogLayout title="Module blobs" subtitle="Opaque compatibility storage; assemblies are never loaded, reflected, or executed" form={<form className="inline-form" onSubmit={upload}>
+    <label className="wide">Blob (max 4 MiB)<input name="module" type="file" required /></label><button className="primary">Store opaque blob</button>
+  </form>} error={error} empty={!values.length}>
+    {values.map((value) => <article className="resource-card" key={value.name}><div><span className="badge">opaque</span><small>never loaded</small></div><h3>{value.name}</h3><p>{value.runtimeVersion}</p><code>{value.version}</code><footer><button className="secondary" onClick={() => save(value)}>Download</button><button className="danger-link" onClick={() => remove(value.name)}>Delete</button></footer></article>)}
+  </CatalogLayout>;
+}
+
+export function NotebooksScreen() {
+  const { request } = useAuth();
+  const [values, setValues] = useState<PowerShellNotebook[]>([]);
+  const [error, setError] = useState("");
+  const load = useCallback(() => request<PowerShellNotebook[]>("/api/PowerShellNotebooks").then(setValues), [request]);
+  useEffect(() => { void load().catch((cause) => setError(message(cause))); }, [load]);
+  async function save(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault(); const data = new FormData(event.currentTarget);
+    try {
+      await request("/api/PowerShellNotebooks", { method: "POST", body: JSON.stringify({ name: String(data.get("name")), description: String(data.get("description")), cells: [{ type: "code", contents: String(data.get("contents")) }] }) });
+      event.currentTarget.reset(); await load();
+    } catch (cause) { setError(message(cause)); }
+  }
+  async function remove(id: string) { await request(`/api/PowerShellNotebooks/${encodeURIComponent(id)}`, { method: "DELETE" }); await load(); }
+  return <CatalogLayout title="PowerShell notebooks" subtitle="Notebook data is preserved; interpreter sessions require a separate isolated worker" form={<form className="inline-form catalog-form" onSubmit={save}>
+    <label>Name<input name="name" required /></label><label>Description<input name="description" /></label><label className="wide">Cell contents<textarea name="contents" rows={3} placeholder="Data only — not executed" /></label><button className="primary">Create notebook</button>
+  </form>} error={error} empty={!values.length}>
+    {values.map((value) => <article className="resource-card" key={value.notebookId}><div><span className="badge success">{value.cells.length} cells</span><small>{value.notebookId}</small></div><h3>{value.name}</h3><p>{value.description || "No description"}</p><code>execution unavailable in management plane</code><footer><time>{new Date(value.timeUpdated).toLocaleString()}</time><button className="danger-link" onClick={() => remove(value.notebookId)}>Delete</button></footer></article>)}
+  </CatalogLayout>;
+}
+
 function CatalogLayout({ title, subtitle, form, error, empty, children }: { title: string; subtitle: string; form: ReactNode; error: string; empty: boolean; children: ReactNode }) {
   return <section className="panel"><div className="panel-title"><div><h2>{title}</h2><p>{subtitle}</p></div><span className="badge success">typed legacy DTO</span></div>{form}{error && <div className="state error" role="alert">{error}</div>}{empty ? <div className="state empty">No records yet.</div> : <div className="resource-grid">{children}</div>}</section>;
 }
 
 function splitList(value: string) { return value.split(",").map((item) => item.trim()).filter(Boolean); }
 function message(cause: unknown) { return cause instanceof Error ? cause.message : "Request failed"; }
+async function fileBase64(file: File) {
+  const bytes = new Uint8Array(await file.arrayBuffer());
+  let binary = "";
+  for (let offset = 0; offset < bytes.length; offset += 0x8000) binary += String.fromCharCode(...bytes.subarray(offset, offset + 0x8000));
+  return btoa(binary);
+}

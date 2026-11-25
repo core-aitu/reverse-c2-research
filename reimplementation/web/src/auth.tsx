@@ -16,6 +16,7 @@ type AuthContextValue = {
   login: (username: string, password: string) => Promise<void>;
   logout: () => Promise<void>;
   request: <T>(path: string, init?: RequestInit) => Promise<T>;
+  download: (path: string) => Promise<Blob>;
 };
 
 const AuthContext = createContext<AuthContextValue | null>(null);
@@ -101,9 +102,23 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     [refresh, token],
   );
 
+  const download = useCallback(
+    async (path: string) => {
+      const perform = (accessToken: string) => fetch(path, {
+        credentials: "include",
+        headers: { Authorization: `Bearer ${accessToken}` },
+      });
+      let response = await perform(token);
+      if (response.status === 401) response = await perform(await refresh());
+      if (!response.ok) throw new Error(`Download failed (${response.status})`);
+      return response.blob();
+    },
+    [refresh, token],
+  );
+
   const value = useMemo(
-    () => ({ identity, loading, login, logout, request }),
-    [identity, loading, login, logout, request],
+    () => ({ identity, loading, login, logout, request, download }),
+    [identity, loading, login, logout, request, download],
   );
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }

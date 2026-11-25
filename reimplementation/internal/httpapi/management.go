@@ -23,9 +23,8 @@ func (s *Server) managementRoutes() {
 	s.mux.Handle("DELETE /api/workflows/{kind}/{key}", s.requireRole("admin", http.HandlerFunc(s.deleteResource)))
 
 	for path, kind := range map[string]string{
-		"Payloads": "implants", "Sessions": "sessions", "Modules": "modules",
-		"PowerShellNotebooks": "workflows", "WinRmSessions": "winrm", "Tunnels": "tunnels",
-		"AiAgentDefinitions": "ai-profiles", "AiFunctionDefinitions": "ai-functions",
+		"Payloads": "implants", "Sessions": "sessions",
+		"WinRmSessions": "winrm", "Tunnels": "tunnels",
 		"Artifacts": "files", "Updates": "updates", "License": "license",
 	} {
 		s.registerResourceAlias(path, kind)

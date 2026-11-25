@@ -92,6 +92,23 @@ if (traversalListener.status !== 400) throw new Error("listener traversal was no
 const anonymousScripts = await fetch(`${baseURL}/api/Scripts`);
 if (anonymousScripts.status !== 401) throw new Error("typed catalog anonymous access was not rejected");
 
+await json("/api/Modules", {
+  method: "POST", headers,
+  body: JSON.stringify(Buffer.from("clean-room opaque module fixture").toString("base64")),
+});
+const modules = await json("/api/Modules", { headers });
+if (!modules.some((item) => item.version === "opaque" && item.runtimeVersion === "not-inspected")) throw new Error("module metadata mismatch");
+
+const notebook = await json("/api/PowerShellNotebooks", {
+  method: "POST", headers,
+  body: JSON.stringify({ name: "smoke-notebook", description: "data-only fixture", cells: [{ type: "code", contents: "Write-Output 'not executed'" }] }),
+});
+if (notebook.cells.length !== 1 || !notebook.notebookId) throw new Error("notebook create mismatch");
+const fetchedNotebook = await json(`/api/PowerShellNotebooks/${notebook.notebookId}`, { headers });
+if (fetchedNotebook.name !== "smoke-notebook") throw new Error("notebook GET mismatch");
+const unavailableSession = await fetch(`${baseURL}/api/PowerShellNotebooks/${notebook.notebookId}/session`, { method: "POST", headers });
+if (unavailableSession.status !== 501) throw new Error("PowerShell execution boundary mismatch");
+
 const adapters = await json("/api/adapters", { headers });
 if (adapters.length !== 10) throw new Error("adapter registry mismatch");
 const adapter = await json("/api/adapters/elasticsearch/probe", { method: "POST", headers });
@@ -132,6 +149,8 @@ console.log(JSON.stringify({
   wordlistEntries: wordlist.entryCount,
   certificates: certificates.length,
   listeners: listeners.length,
+  modules: modules.length,
+  notebook: notebook.notebookId,
   adapters: adapters.length,
   pipelineJob: completedJob.status,
   simulator: simulator.id,

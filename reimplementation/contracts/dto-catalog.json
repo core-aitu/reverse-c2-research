@@ -11,7 +11,9 @@
     "executed": false,
     "evidence": [
       "ev_92b4c01be83d404ed4a30833d18f8c0e808a857c7161bbe4122f52e6ebf73a84",
-      "ev_ea230181ffcd9ba9f70cc982feb949a41b39fd46b143b87671526a44564ec76e"
+      "ev_ea230181ffcd9ba9f70cc982feb949a41b39fd46b143b87671526a44564ec76e",
+      "ev_e16e7545376f7b34142d325f401cac6ba7daa5faffeb5c69c2df3e21a74d0884",
+      "ev_8810823eab16266e5028047a515cc1b98dcc599eeba982d2f23c5fc9a94d477f"
     ]
   },
   "types": {
@@ -23,6 +25,10 @@
     "AddHttpListenerRequest": ["prefix", "certificateName", "webDavPath"],
     "UpdateListenerRequest": ["prefix", "enabled"],
     "CertificateInfo": ["name", "country", "state", "locality", "organization", "organizationalUnit", "commonName", "start", "end"],
-    "SpecterModuleInfo": ["name", "version", "runtimeVersion", "cmdlets"]
+    "SpecterModuleInfo": ["name", "version", "runtimeVersion", "cmdlets"],
+    "CreateNotebookRequest": ["name", "description", "cells"],
+    "UpdateNotebookRequest": ["name", "description", "cells"],
+    "PowerShellNotebook": ["id", "notebookId", "name", "description", "timeCreated", "timeUpdated", "cells"],
+    "PsSessionInfo": ["sessionId", "name", "createdAt", "isBusy"]
   }
 }

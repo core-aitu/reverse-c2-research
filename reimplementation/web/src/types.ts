@@ -169,3 +169,25 @@ export type CertificateInfo = {
   start: string;
   end: string;
 };
+
+export type SpecterModule = {
+  name: string;
+  version: string;
+  runtimeVersion: string;
+  cmdlets: string[];
+};
+
+export type NotebookCell = {
+  type: "markdown" | "code";
+  contents: string;
+};
+
+export type PowerShellNotebook = {
+  id: number;
+  notebookId: string;
+  name: string;
+  description: string;
+  timeCreated: string;
+  timeUpdated: string;
+  cells: NotebookCell[];
+};

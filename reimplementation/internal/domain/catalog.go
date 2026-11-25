@@ -1,6 +1,9 @@
 package domain
 
-import "time"
+import (
+	"encoding/json"
+	"time"
+)
 
 type SpecterScript struct {
 	Identifier    string   `json:"identifier"`
@@ -67,4 +70,20 @@ type SpecterModuleInfo struct {
 	Version        string   `json:"version"`
 	RuntimeVersion string   `json:"runtimeVersion"`
 	Cmdlets        []string `json:"cmdlets"`
+}
+
+type NotebookRequest struct {
+	Name        string            `json:"name"`
+	Description string            `json:"description"`
+	Cells       []json.RawMessage `json:"cells"`
+}
+
+type PowerShellNotebook struct {
+	ID          int64             `json:"id"`
+	NotebookID  string            `json:"notebookId"`
+	Name        string            `json:"name"`
+	Description string            `json:"description"`
+	TimeCreated time.Time         `json:"timeCreated"`
+	TimeUpdated time.Time         `json:"timeUpdated"`
+	Cells       []json.RawMessage `json:"cells"`
 }

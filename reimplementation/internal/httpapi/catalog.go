@@ -1,7 +1,10 @@
 package httpapi
 
 import (
+	"crypto/sha256"
+	"encoding/hex"
 	"errors"
+	"io"
 	"net/http"
 	"strconv"
 	"strings"
@@ -29,6 +32,21 @@ func (s *Server) catalogRoutes() {
 	s.mux.Handle("GET /api/Certificates", s.protected(http.HandlerFunc(s.certificates)))
 	s.mux.Handle("PUT /api/Certificates", s.requireRole("admin", http.HandlerFunc(s.putCertificate)))
 	s.mux.Handle("DELETE /api/Certificates/Certificates/{name}", s.requireRole("admin", http.HandlerFunc(s.deleteCertificate)))
+
+	s.mux.Handle("GET /api/Modules", s.protected(http.HandlerFunc(s.modules)))
+	s.mux.Handle("POST /api/Modules", s.requireRole("admin", http.HandlerFunc(s.putModule)))
+	s.mux.Handle("GET /api/Modules/Modules/{name}", s.protected(http.HandlerFunc(s.moduleContent)))
+	s.mux.Handle("DELETE /api/Modules/Modules/{name}", s.requireRole("admin", http.HandlerFunc(s.deleteModule)))
+
+	s.mux.Handle("GET /api/PowerShellNotebooks", s.protected(http.HandlerFunc(s.notebooks)))
+	s.mux.Handle("POST /api/PowerShellNotebooks", s.requireRole("admin", http.HandlerFunc(s.createNotebook)))
+	s.mux.Handle("PUT /api/PowerShellNotebooks/upsert", s.requireRole("admin", http.HandlerFunc(s.upsertNotebook)))
+	s.mux.Handle("GET /api/PowerShellNotebooks/{notebookId}", s.protected(http.HandlerFunc(s.notebook)))
+	s.mux.Handle("PUT /api/PowerShellNotebooks/{notebookId}", s.requireRole("admin", http.HandlerFunc(s.updateNotebook)))
+	s.mux.Handle("DELETE /api/PowerShellNotebooks/{notebookId}", s.requireRole("admin", http.HandlerFunc(s.deleteNotebook)))
+	s.mux.Handle("POST /api/PowerShellNotebooks/{notebookId}/session", s.requireRole("admin", http.HandlerFunc(s.powerShellSessionUnavailable)))
+	s.mux.Handle("DELETE /api/PowerShellNotebooks/{notebookId}/session", s.requireRole("admin", http.HandlerFunc(s.powerShellSessionUnavailable)))
+	s.mux.Handle("POST /api/PowerShellNotebooks/{notebookId}/session/reset", s.requireRole("admin", http.HandlerFunc(s.powerShellSessionUnavailable)))
 }
 
 func (s *Server) scripts(w http.ResponseWriter, r *http.Request) {
@@ -216,6 +234,157 @@ func (s *Server) deleteCertificate(w http.ResponseWriter, r *http.Request) {
 	}
 	s.audit(r.Context(), principal(r).Username, "CertificateMetadataDeleted", name, "metadata removed")
 	writeJSON(w, http.StatusOK, map[string]bool{"deleted": true})
+}
+
+func (s *Server) modules(w http.ResponseWriter, r *http.Request) {
+	values, err := s.store.Modules(r.Context())
+	if err != nil {
+		s.internalError(w, err)
+		return
+	}
+	writeJSON(w, http.StatusOK, values)
+}
+
+func (s *Server) putModule(w http.ResponseWriter, r *http.Request) {
+	// The generated legacy client represents byte[] as a JSON base64 string.
+	// The blob is retained for compatibility but is never loaded or executed.
+	r.Body = http.MaxBytesReader(w, r.Body, 6<<20)
+	var content []byte
+	if !decodeJSON(w, r, &content) {
+		return
+	}
+	if len(content) == 0 || len(content) > 4<<20 {
+		writeError(w, http.StatusBadRequest, "module content must be between 1 byte and 4 MiB")
+		return
+	}
+	digest := sha256.Sum256(content)
+	name := "module-" + hex.EncodeToString(digest[:6]) + ".bin"
+	if err := s.store.PutModule(r.Context(), name, content, hex.EncodeToString(digest[:])); err != nil {
+		writeError(w, http.StatusBadRequest, err.Error())
+		return
+	}
+	s.audit(r.Context(), principal(r).Username, "ModuleStored", name, "opaque blob; never loaded or executed")
+	writeJSON(w, http.StatusOK, map[string]bool{"saved": true})
+}
+
+func (s *Server) moduleContent(w http.ResponseWriter, r *http.Request) {
+	name := r.PathValue("name")
+	content, digest, err := s.store.ModuleContent(r.Context(), name)
+	if err != nil {
+		writeCatalogError(w, err, "module not found")
+		return
+	}
+	w.Header().Set("Content-Type", "application/octet-stream")
+	w.Header().Set("Content-Disposition", `attachment; filename="`+safeDownloadName(name)+`"`)
+	w.Header().Set("X-Content-SHA256", digest)
+	w.Header().Set("X-Content-Type-Options", "nosniff")
+	w.WriteHeader(http.StatusOK)
+	_, _ = w.Write(content)
+}
+
+func (s *Server) deleteModule(w http.ResponseWriter, r *http.Request) {
+	name := r.PathValue("name")
+	if err := s.store.DeleteModule(r.Context(), name); err != nil {
+		writeCatalogError(w, err, "module not found")
+		return
+	}
+	s.audit(r.Context(), principal(r).Username, "ModuleDeleted", name, "opaque blob removed")
+	writeJSON(w, http.StatusOK, map[string]bool{"deleted": true})
+}
+
+func safeDownloadName(name string) string {
+	name = strings.ReplaceAll(name, "\"", "_")
+	name = strings.ReplaceAll(name, "\\", "_")
+	name = strings.ReplaceAll(name, "/", "_")
+	return name
+}
+
+func (s *Server) notebooks(w http.ResponseWriter, r *http.Request) {
+	values, err := s.store.Notebooks(r.Context())
+	if err != nil {
+		s.internalError(w, err)
+		return
+	}
+	writeJSON(w, http.StatusOK, values)
+}
+
+func (s *Server) notebook(w http.ResponseWriter, r *http.Request) {
+	value, err := s.store.Notebook(r.Context(), r.PathValue("notebookId"))
+	if err != nil {
+		writeCatalogError(w, err, "notebook not found")
+		return
+	}
+	writeJSON(w, http.StatusOK, value)
+}
+
+func (s *Server) createNotebook(w http.ResponseWriter, r *http.Request) {
+	var request domain.NotebookRequest
+	if !decodeJSON(w, r, &request) {
+		return
+	}
+	value, err := s.store.CreateNotebook(r.Context(), request)
+	if err != nil {
+		writeError(w, http.StatusBadRequest, err.Error())
+		return
+	}
+	s.audit(r.Context(), principal(r).Username, "NotebookCreated", value.NotebookID, value.Name)
+	writeJSON(w, http.StatusOK, value)
+}
+
+func (s *Server) updateNotebook(w http.ResponseWriter, r *http.Request) {
+	var request domain.NotebookRequest
+	if !decodeJSON(w, r, &request) {
+		return
+	}
+	value, err := s.store.UpdateNotebook(r.Context(), r.PathValue("notebookId"), request)
+	if err != nil {
+		writeCatalogError(w, err, "notebook not found")
+		return
+	}
+	s.audit(r.Context(), principal(r).Username, "NotebookUpdated", value.NotebookID, value.Name)
+	writeJSON(w, http.StatusOK, map[string]bool{"saved": true})
+}
+
+func (s *Server) upsertNotebook(w http.ResponseWriter, r *http.Request) {
+	var value domain.PowerShellNotebook
+	if !decodeJSON(w, r, &value) {
+		return
+	}
+	request := domain.NotebookRequest{Name: value.Name, Description: value.Description, Cells: value.Cells}
+	if strings.TrimSpace(value.NotebookID) == "" {
+		created, err := s.store.CreateNotebook(r.Context(), request)
+		if err != nil {
+			writeError(w, http.StatusBadRequest, err.Error())
+			return
+		}
+		s.audit(r.Context(), principal(r).Username, "NotebookCreated", created.NotebookID, created.Name)
+		writeJSON(w, http.StatusOK, map[string]bool{"saved": true})
+		return
+	}
+	updated, err := s.store.UpsertNotebook(r.Context(), value.NotebookID, request)
+	if err != nil {
+		writeError(w, http.StatusBadRequest, err.Error())
+		return
+	}
+	s.audit(r.Context(), principal(r).Username, "NotebookUpserted", updated.NotebookID, updated.Name)
+	writeJSON(w, http.StatusOK, map[string]bool{"saved": true})
+}
+
+func (s *Server) deleteNotebook(w http.ResponseWriter, r *http.Request) {
+	id := r.PathValue("notebookId")
+	if err := s.store.DeleteNotebook(r.Context(), id); err != nil {
+		writeCatalogError(w, err, "notebook not found")
+		return
+	}
+	s.audit(r.Context(), principal(r).Username, "NotebookDeleted", id, "notebook removed")
+	writeJSON(w, http.StatusOK, map[string]bool{"deleted": true})
+}
+
+func (s *Server) powerShellSessionUnavailable(w http.ResponseWriter, r *http.Request) {
+	// Session routes are preserved, but this management-plane process never
+	// starts an interpreter. A future isolated worker can implement this port.
+	_, _ = io.Copy(io.Discard, http.MaxBytesReader(w, r.Body, 64<<10))
+	writeError(w, http.StatusNotImplemented, "PowerShell sessions require an isolated worker and are not available in the management plane")
 }
 
 func pathInt64(w http.ResponseWriter, r *http.Request, name string) (int64, bool) {
