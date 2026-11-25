@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { type FormEvent, useCallback, useEffect, useState } from "react";
 import { AiFunctionsScreen, AiProfilesScreen, AiSessionsScreen } from "./AI";
 import { ArtifactsScreen, LicenseScreen, UpdatesScreen } from "./AdminCatalog";
 import { NetworkScreen } from "./Network";
@@ -177,8 +177,40 @@ function Settings() {
 }
 
 function Users() {
-  const { request } = useAuth();
+  const { request, identity } = useAuth();
   const [accounts, setAccounts] = useState<Account[]>([]);
-  useEffect(() => { request<Account[]>("/api/Accounts").then(setAccounts); }, [request]);
-  return <section className="panel"><div className="panel-title"><div><h2>Accounts</h2><p>Role-aware identities stored in the compatible account schema.</p></div><span className="badge">{accounts.length} users</span></div><div className="card-grid">{accounts.map((account) => <article className="account-card" key={account.username}><div className="avatar">{account.username.slice(0,2).toUpperCase()}</div><div><strong>{account.username}</strong><span>{account.roles.join(", ")}</span></div><i className={account.enabled ? "enabled" : "disabled"}/></article>)}</div></section>;
+  const [showForm, setShowForm] = useState(false);
+  const [error, setError] = useState("");
+  const load = useCallback(() => request<Account[]>("/api/Accounts").then(setAccounts), [request]);
+  useEffect(() => { void load().catch((cause) => setError(cause instanceof Error ? cause.message : "Unable to load accounts")); }, [load]);
+
+  async function create(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault(); setError("");
+    const form = event.currentTarget;
+    const data = new FormData(form);
+    try {
+      await request("/api/Accounts", { method: "POST", body: JSON.stringify({
+        username: String(data.get("username")), password: String(data.get("password")),
+        enabled: true, roles: [String(data.get("role"))],
+      }) });
+      form.reset(); setShowForm(false); await load();
+    } catch (cause) { setError(cause instanceof Error ? cause.message : "Unable to create account"); }
+  }
+
+  async function remove(username: string) {
+    setError("");
+    try { await request(`/api/Accounts/${encodeURIComponent(username)}`, { method: "DELETE" }); await load(); }
+    catch (cause) { setError(cause instanceof Error ? cause.message : "Unable to delete account"); }
+  }
+
+  return <section className="panel"><div className="panel-title"><div><h2>Accounts</h2><p>Role-aware identities with password policy, self-delete prevention and last-admin protection.</p></div><div className="button-row"><span className="badge">{accounts.length} users</span><button className="primary" onClick={() => setShowForm((value) => !value)}>{showForm ? "Close" : "New account"}</button></div></div>
+    {showForm && <form className="inline-form" onSubmit={create}>
+      <label>Username<input name="username" required minLength={1} maxLength={32} autoComplete="off" /></label>
+      <label>Password<input name="password" type="password" required minLength={12} maxLength={256} autoComplete="new-password" /></label>
+      <label>Role<select name="role" defaultValue="viewer"><option value="viewer">Viewer</option><option value="operator">Operator</option><option value="admin">Administrator</option></select></label>
+      <button className="primary">Create</button>
+    </form>}
+    {error && <p className="error" role="alert">{error}</p>}
+    <div className="card-grid">{accounts.map((account) => <article className="account-card" key={account.username}><div className="avatar">{account.username.slice(0,2).toUpperCase()}</div><div><strong>{account.username}</strong><span>{account.roles.join(", ")}</span></div><i className={account.enabled ? "enabled" : "disabled"}/>{account.username !== identity?.username && <button className="danger-link" onClick={() => remove(account.username)}>Delete</button>}</article>)}</div>
+  </section>;
 }
