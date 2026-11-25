@@ -18,6 +18,21 @@ const auth = await json("/api/Accounts/authenticate", {
 const headers = { Authorization: `Bearer ${auth.jwtToken}`, "Content-Type": "application/json" };
 const identity = await json("/api/Identity", { headers });
 if (identity.username !== username) throw new Error("identity mismatch");
+
+const temporaryUsername = `smoke-${Date.now()}`;
+await json("/api/Accounts", {
+  method: "POST", headers,
+  body: JSON.stringify({ username: temporaryUsername, password: "fixture-password-2026", enabled: true, roles: ["viewer"] }),
+});
+const temporaryAccount = await json(`/api/Accounts/${temporaryUsername}`, { headers });
+if (!temporaryAccount.roles.includes("viewer")) throw new Error("account create/get mismatch");
+await json(`/api/Accounts/${temporaryUsername}`, {
+  method: "PUT", headers,
+  body: JSON.stringify({ enabled: true, roles: ["operator"] }),
+});
+const updatedAccount = await json(`/api/Accounts/${temporaryUsername}`, { headers });
+if (!updatedAccount.roles.includes("operator")) throw new Error("account update mismatch");
+await json(`/api/Accounts/${temporaryUsername}`, { method: "DELETE", headers });
 const search = await json("/api/Documentation/search", {
   method: "POST",
   headers,
@@ -118,6 +133,36 @@ if (fetchedNotebook.name !== "smoke-notebook") throw new Error("notebook GET mis
 const unavailableSession = await fetch(`${baseURL}/api/PowerShellNotebooks/${notebook.notebookId}/session`, { method: "POST", headers });
 if (unavailableSession.status !== 501) throw new Error("PowerShell execution boundary mismatch");
 
+const persona = await json("/api/Personas", {
+  method: "POST", headers, body: JSON.stringify({ name: "Fixture persona", description: "persistent compatibility metadata" }),
+});
+const fetchedPersona = await json(`/api/Personas/${encodeURIComponent(persona.id)}`, { headers });
+if (fetchedPersona.name !== "Fixture persona") throw new Error("compatibility resource mismatch");
+await json(`/api/Personas/${encodeURIComponent(persona.id)}`, { method: "DELETE", headers });
+
+const sshFixture = await json("/api/SshSessions", {
+  method: "POST", headers, body: JSON.stringify({ name: "fixture-ssh", hostname: "192.0.2.20", username: "fixture", password: "must-not-persist" }),
+});
+if (sshFixture.status !== "fixture" || sshFixture.password !== "[redacted]") throw new Error("SSH fixture/redaction mismatch");
+const blockedSshCommand = await fetch(`${baseURL}/api/SshSessions/${encodeURIComponent(sshFixture.id)}/command`, {
+  method: "POST", headers, body: JSON.stringify({ command: "id" }),
+});
+if (blockedSshCommand.status !== 501) throw new Error("SSH execution boundary mismatch");
+
+const torStarted = await json("/api/Tor/start", { method: "POST", headers, body: JSON.stringify({ name: "fixture-tor" }) });
+if (torStarted.status !== "fixture-running") throw new Error("Tor fixture start mismatch");
+const torStatus = await json("/api/Tor/status", { headers });
+if (torStatus.status !== "fixture-running") throw new Error("Tor fixture status mismatch");
+await json("/api/Tor/stop", { method: "POST", headers });
+
+const blockedPhishing = await fetch(`${baseURL}/api/Phishing/Send`, {
+  method: "POST", headers, body: JSON.stringify({ to: "nobody@example.test", subject: "blocked" }),
+});
+if (blockedPhishing.status !== 501) throw new Error("phishing delivery boundary mismatch");
+
+const pipelineDocumentation = await json("/api/PayloadPipeline/PayloadPipeline/documentation", { headers });
+if (!pipelineDocumentation.some((item) => item.name === "sha256")) throw new Error("pipeline compatibility documentation mismatch");
+
 await json("/api/AiFunctionDefinitions", {
   method: "POST", headers,
   body: JSON.stringify({ functionId: "fixture-echo", name: "Fixture echo", description: "deterministic", documentation: "smoke", approvalLevel: "Low", definition: JSON.stringify({ version: 1, operation: "echo", argument: "text" }) }),
@@ -214,4 +259,6 @@ console.log(JSON.stringify({
   networkHost: netHost.hostId,
   pipelineJob: completedJob.status,
   simulator: simulator.id,
+  routeCoverage: "202/202",
+  blockedCapabilities: ["ssh-command", "phishing-delivery"],
 }));

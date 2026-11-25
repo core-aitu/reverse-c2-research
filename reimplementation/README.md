@@ -4,22 +4,22 @@ This directory contains the independent Go and TypeScript implementation describ
 
 ## Implemented management plane
 
-- normalized manifest for all 202 generated REST client operations;
+- normalized manifest and registered router coverage for all 202 generated REST client operations;
 - OpenAPI 3.1 index generated from the pinned `ApiClient.dll` interface;
 - compatible PostgreSQL baseline: 36 tables, 10 enums and 81 observed indexes;
 - username/password authentication, JWT access tokens and rotating refresh cookies;
-- users and roles, documentation/search/index, settings and event history;
+- full user/role CRUD with last-admin protection, documentation/search/index, settings and event history;
 - authenticated WebSocket events with cursor replay after reconnect;
 - responsive React workflows for all 24 researched screens, including loading, empty, error and permission-aware states;
 - `fixture-live-window` path from PostgreSQL through Go and WebSocket to the browser;
 - versioned CRUD resources for listeners, certificates, implants, scripts, wordlists, modules, notebooks, tunnels, WinRM, AI, network intelligence, files, updates and licensing;
 - persistent jobs with lifecycle, cancellation, attempts and audit events;
-- fixture-first ports for PostgreSQL, Elasticsearch, SMTP, ACME, WebDAV, AI, SSH, Tor, WinRM and updates;
+- fixture-first ports for PostgreSQL, Elasticsearch, SMTP, ACME, WebDAV, AI, SSH, Tor, WinRM and updates, plus persistent compatibility metadata for the remaining safe legacy routes;
 - a typed DAG pipeline limited to bounded, non-executable transforms, executed by a one-shot worker without management-plane environment variables;
 - a persistent agent/beacon protocol simulator covering register, check-in, dispatch and results, plus a bounded internal `SIR1` framing contract with golden vectors;
 - evidence-pinned legacy DTOs and database-backed endpoints for scripts, wordlists, listener configuration, certificate metadata, opaque modules, notebooks and AI definitions.
 
-The agent gateway is intentionally simulator-only in this service. It does not run a remote shell, load code or generate deployment payloads. `SIR1` is an internal simulator framing contract, not a claim of compatibility with an unverified legacy wire format. Pipeline nodes are an allowlist of deterministic data transforms; shell, PowerShell, network and loader nodes are rejected. Jobs are passed over a versioned stdin/stdout contract to a one-shot worker process whose environment omits the management database URL and credentials. These boundaries preserve the orchestration contract while keeping execution isolated and reviewable.
+The agent gateway is intentionally simulator-only in this service. It does not run a remote shell, load code or generate deployment payloads. `SIR1` is an internal simulator framing contract, not a claim of compatibility with an unverified legacy wire format. Pipeline nodes are an allowlist of deterministic data transforms; shell, PowerShell, network and loader nodes are rejected. Jobs are passed over a versioned stdin/stdout contract to a one-shot worker process whose environment omits the management database URL and credentials. These boundaries preserve the orchestration contract while keeping execution isolated and reviewable. The complete list of intentionally blocked legacy capabilities and their safe alternatives is recorded in [`docs/adr/0001-safe-compatibility-boundary.md`](docs/adr/0001-safe-compatibility-boundary.md).
 
 The typed catalog groups use the original paths and camel-case JSON representations. Their independently described field catalog is in `contracts/dto-catalog.json`, pinned to the ApiClient artifact SHA-256/MVID and static managed-metadata Evidence. Listener records are configuration only: adding one never binds a network socket. Certificate endpoints store public metadata only and never accept a private key. Uploaded modules are bounded opaque blobs and are never loaded, reflected or executed. Notebook cells are stored as data; the PowerShell session routes return `501` until an isolated worker is configured. AI function definitions use a versioned fixture DSL limited to deterministic `echo`, `concat` and `sha256` operations; unknown fields and execution-shaped operations are rejected.
 
@@ -53,6 +53,8 @@ python3 -m unittest discover -s tests -v
 docker build --target test -t specter-reimplementation-test .
 cd web && pnpm install --frozen-lockfile && pnpm run check && pnpm run build
 ```
+
+The Go test target includes a runtime contract-coverage test. It loads the pinned manifest and verifies all 202 unique method/path pairs against the actual `http.ServeMux`; a manifest-only entry is not counted as implemented.
 
 For a full integration check, start Compose, authenticate, open **Events**, and use **Emit fixture-live-window**. The event must appear without refreshing the page. Restarting the server must reconnect and replay events after the browser's last cursor without duplicates.
 
