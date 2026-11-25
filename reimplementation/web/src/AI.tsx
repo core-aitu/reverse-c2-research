@@ -1,6 +1,6 @@
 import { type FormEvent, useCallback, useEffect, useState } from "react";
 import { useAuth } from "./auth";
-import type { AiAgentDefinition, AiFunctionDefinition, RunAiFunctionResult } from "./types";
+import type { AiAgentDefinition, AiFunctionDefinition, AiSession, RunAiFunctionResult } from "./types";
 
 export function AiFunctionsScreen() {
   const { request } = useAuth();
@@ -50,6 +50,35 @@ export function AiProfilesScreen() {
   return <section className="panel"><div className="panel-title"><div><h2>AI profiles</h2><p>Agent metadata and an explicit allowlist of deterministic fixture functions.</p></div><span className="badge success">typed legacy DTO</span></div>
     <form className="inline-form catalog-form" onSubmit={save}><label>Agent ID<input name="agentId" required pattern="[a-zA-Z0-9._-]+" /></label><label>Name<input name="name" required /></label><label>Description<input name="description" /></label><label>Allowed function IDs<input name="functions" placeholder="fixture-echo" /></label><label className="wide">Prompt<textarea name="prompt" rows={3} required /></label><button className="primary">Save profile</button></form>
     {error && <div className="state error" role="alert">{error}</div>}{!values.length ? <div className="state empty">No AI profiles yet.</div> : <div className="resource-grid">{values.map((value) => <article className="resource-card" key={value.agentId}><div><span className="badge">profile</span><small>{value.agentId}</small></div><h3>{value.name}</h3><p>{value.description}</p><code>{value.accessibleFunctions.join(" · ") || "no functions"}</code><footer><span>{value.includeSpecterScripts ? "scripts included" : "scripts excluded"}</span><button className="danger-link" onClick={() => remove(value.agentId)}>Delete</button></footer></article>)}</div>}
+  </section>;
+}
+
+export function AiSessionsScreen() {
+  const { request } = useAuth();
+  const [values, setValues] = useState<AiSession[]>([]);
+  const [profiles, setProfiles] = useState<AiAgentDefinition[]>([]);
+  const [error, setError] = useState("");
+  const load = useCallback(async () => {
+    const [sessions, agents] = await Promise.all([request<AiSession[]>("/api/AiSessions/GetAiSessions"), request<AiAgentDefinition[]>("/api/AiAgentDefinitions")]);
+    setValues(sessions); setProfiles(agents);
+  }, [request]);
+  useEffect(() => { void load().catch((cause) => setError(message(cause))); }, [load]);
+  async function save(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault(); const data = new FormData(event.currentTarget); const selected = String(data.get("agentId"));
+    const agents = profiles.filter((profile) => !selected || profile.agentId === selected);
+    try {
+      await request<string>("/api/AiSessions/NewAiSession", { method: "POST", body: JSON.stringify({ name: String(data.get("name")), agents, modelType: "fixture", modelName: "fixture-deterministic", toolApprovalPolicy: String(data.get("policy")), plan: { version: 1, steps: [] }, status: "Stopped" }) });
+      event.currentTarget.reset(); await load();
+    } catch (cause) { setError(message(cause)); }
+  }
+  async function status(value: AiSession) {
+    const action = value.status === "Running" ? "PauseAiSession" : "ResumeAiSession";
+    await request(`/api/AiSessions/${action}?sessionId=${encodeURIComponent(value.sessionId)}`, { method: "POST" }); await load();
+  }
+  async function remove(id: string) { await request(`/api/AiSessions/DeleteAiSession?sessionId=${encodeURIComponent(id)}`, { method: "POST" }); await load(); }
+  return <section className="panel"><div className="panel-title"><div><h2>AI fixture sessions</h2><p>Persistent lifecycle and messages without starting an external model runtime.</p></div><span className="badge success">fixture provider</span></div>
+    <form className="inline-form" onSubmit={save}><label>Name<input name="name" required /></label><label>Profile<select name="agentId"><option value="">No profile</option>{profiles.map((profile) => <option key={profile.agentId} value={profile.agentId}>{profile.name}</option>)}</select></label><label>Approval policy<select name="policy"><option>AutoApproveNone</option><option>AutoApproveLow</option><option>AutoApproveMedium</option><option>AutoApproveAll</option></select></label><button className="primary">Create session</button></form>
+    {error && <div className="state error" role="alert">{error}</div>}{!values.length ? <div className="state empty">No AI sessions yet.</div> : <div className="resource-grid">{values.map((value) => <article className="resource-card" key={value.sessionId}><div><span className={`badge ${value.status === "Running" ? "success" : ""}`}>{value.status}</span><small>{value.sessionId}</small></div><h3>{value.name}</h3><p>{value.modelType} / {value.modelName}</p><code>{value.agents.map((agent) => agent.agentId).join(" · ") || "no profiles"}</code><footer><button className="secondary" onClick={() => status(value)}>{value.status === "Running" ? "Pause" : "Resume state"}</button><button className="danger-link" onClick={() => remove(value.sessionId)}>Delete</button></footer></article>)}</div>}
   </section>;
 }
 

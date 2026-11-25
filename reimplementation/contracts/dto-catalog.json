@@ -32,6 +32,12 @@
     "PsSessionInfo": ["sessionId", "name", "createdAt", "isBusy"],
     "AiAgentDefinition": ["id", "agentId", "name", "description", "prompt", "includeSpecterScripts", "accessibleFunctions"],
     "AiFunctionDefinition": ["functionId", "name", "description", "documentation", "approvalLevel", "definition"],
-    "RunAiFunctionResult": ["succeeded", "output"]
+    "RunAiFunctionResult": ["succeeded", "output"],
+    "AiSessionInfo": ["name", "agents", "modelType", "modelName", "toolApprovalPolicy", "plan", "status"],
+    "AiSessionInfoWithSessionId": ["sessionId", "name", "agents", "modelType", "modelName", "toolApprovalPolicy", "plan", "status"],
+    "AiModelList": ["kind", "models"],
+    "AiMessage": ["sessionId", "messageId", "timeCreated", "timeCompleted", "senderName", "senderType", "receiverName", "message", "summarizedText", "status"],
+    "AiFunctionCallResult": ["sessionId", "toolCallId", "name", "description", "argumentsJson", "output", "error", "executedUtc", "status"],
+    "AiStatusUpdateMessage": ["sessionId", "sourceName", "message"]
   }
 }

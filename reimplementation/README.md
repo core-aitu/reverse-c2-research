@@ -23,6 +23,8 @@ The agent gateway is intentionally simulator-only in this service. It does not r
 
 The typed catalog groups use the original paths and camel-case JSON representations. Their independently described field catalog is in `contracts/dto-catalog.json`, pinned to the ApiClient artifact SHA-256/MVID and static managed-metadata Evidence. Listener records are configuration only: adding one never binds a network socket. Certificate endpoints store public metadata only and never accept a private key. Uploaded modules are bounded opaque blobs and are never loaded, reflected or executed. Notebook cells are stored as data; the PowerShell session routes return `501` until an isolated worker is configured. AI function definitions use a versioned fixture DSL limited to deterministic `echo`, `concat` and `sha256` operations; unknown fields and execution-shaped operations are rejected.
 
+AI sessions persist the legacy lifecycle, profile snapshot, plan, user messages, approvals and results. The only advertised model is `fixture-deterministic`; creating or resuming a session changes database state but never starts a model process or calls an external provider.
+
 ## Run locally
 
 ```bash

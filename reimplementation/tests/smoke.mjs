@@ -128,6 +128,13 @@ await json("/api/AiAgentDefinitions", {
 });
 const aiProfiles = await json("/api/AiAgentDefinitions", { headers });
 if (!aiProfiles.some((item) => item.agentId === "fixture-profile" && item.accessibleFunctions.includes("fixture-echo"))) throw new Error("AI profile mismatch");
+const aiSessionId = await json("/api/AiSessions/NewAiSession", {
+  method: "POST", headers,
+  body: JSON.stringify({ name: "fixture-session", agents: [aiProfiles.find((item) => item.agentId === "fixture-profile")], modelType: "fixture", modelName: "fixture-deterministic", toolApprovalPolicy: "AutoApproveNone", plan: { version: 1, steps: [] }, status: "Stopped" }),
+});
+await json(`/api/AiSessions/ResumeAiSession?sessionId=${encodeURIComponent(aiSessionId)}`, { method: "POST", headers });
+const aiSessionStatus = await json(`/api/AiSessions/GetSessionStatus?sessionId=${encodeURIComponent(aiSessionId)}`, { headers });
+if (!aiSessionStatus.message.startsWith("Running:")) throw new Error("AI session lifecycle mismatch");
 
 const adapters = await json("/api/adapters", { headers });
 if (adapters.length !== 10) throw new Error("adapter registry mismatch");
@@ -173,6 +180,7 @@ console.log(JSON.stringify({
   notebook: notebook.notebookId,
   aiProfiles: aiProfiles.length,
   aiFixture: aiRun.output,
+  aiSession: aiSessionId,
   adapters: adapters.length,
   pipelineJob: completedJob.status,
   simulator: simulator.id,

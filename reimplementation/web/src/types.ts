@@ -212,3 +212,14 @@ export type AiFunctionDefinition = {
 };
 
 export type RunAiFunctionResult = { succeeded: boolean; output: string };
+
+export type AiSession = {
+  sessionId: string;
+  name: string;
+  agents: AiAgentDefinition[];
+  modelType: string;
+  modelName: string;
+  toolApprovalPolicy: "AutoApproveAll" | "AutoApproveLow" | "AutoApproveMedium" | "AutoApproveNone";
+  plan: Record<string, unknown>;
+  status: "Running" | "Pausing" | "Paused" | "Starting" | "Stopped";
+};
