@@ -31,9 +31,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with: { version: "11.25.0" }
       - uses: actions/setup-node@v6
         with: { node-version: "26.13.0", cache: "pnpm", cache-dependency-path: reimplementation/web/pnpm-lock.yaml }
-      - run: npm install --global pnpm@11.25.0
       - working-directory: reimplementation/web
         run: |
           pnpm install --frozen-lockfile
@@ -45,16 +46,27 @@ jobs:
 
   compose:
     runs-on: ubuntu-latest
+    env:
+      SPECTER_JWT_SECRET: "01234567890123456789012345678901"
+      SPECTER_ADMIN_PASSWORD: "integration-test-password"
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v6
         with: { node-version: "26.13.0" }
-      - working-directory: reimplementation
-        env:
-          SPECTER_JWT_SECRET: 01234567890123456789012345678901
-          SPECTER_ADMIN_PASSWORD: integration-test-password
-        run: |
-          docker compose config --quiet
-          docker compose up --build --wait
-          node tests/smoke.mjs
-          docker compose down --volumes
+      - name: Validate Compose configuration
+        working-directory: reimplementation
+        run: docker compose config --quiet
+      - name: Start Compose stack
+        working-directory: reimplementation
+        run: docker compose up --build --wait
+      - name: Run Compose smoke test
+        working-directory: reimplementation
+        run: node tests/smoke.mjs
+      - name: Print Compose logs on failure
+        if: failure()
+        working-directory: reimplementation
+        run: docker compose logs --no-color
+      - name: Stop Compose stack
+        if: always()
+        working-directory: reimplementation
+        run: docker compose down --volumes
