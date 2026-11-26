@@ -1,0 +1,10 @@
+{
+  "schema": "lab-telemetry/v1",
+  "events": [
+    {"id":"e4","session":"lab-a","at":"2026-01-01T00:03:00Z","kind":"closed"},
+    {"id":"e1","session":"lab-a","at":"2026-01-01T00:00:00Z","kind":"opened"},
+    {"id":"e2","session":"lab-a","at":"2026-01-01T00:01:00Z","kind":"observed"},
+    {"id":"e3","session":"lab-b","at":"2026-01-01T00:02:00Z","kind":"observed"},
+    {"id":"e5","session":"lab-a","at":"2026-01-01T00:04:00Z","kind":"observed"}
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "research-document-inventory/v1",
+  "files": [
+    {
+      "path": "reimplementation/docs/adr/0001-safe-compatibility-boundary.md",
+      "bytes": 2655,
+      "sha256": "48dfc15d38f5bb8d7d0cb4cc5faeca9bc69ed6d2a44fb8484b7114a03bc4a256"
+    },
+    {
+      "path": "reimplementation/docs/adr/0001-security-compatibility.md",
+      "bytes": 779,
+      "sha256": "084c36ff747801a6d0b9c6f97eec50ba411c1ade5dbf2643ce5dac23d60a5fbe"
+    },
+    {
+      "path": "reimplementation/docs/adr/0002-execution-boundaries.md",
+      "bytes": 1911,
+      "sha256": "9007266a50980bcbfc25e77f37711630c777d89a3b5c25de8c67742fb81e9044"
+    },
+    {
+      "path": "research/reports/documentation-ui-semantics.md",
+      "bytes": 11766,
+      "sha256": "a37f270f3dcb279c9e1faf0cef090072312cd8f6e3bfda7c590f68bcc3de93c3"
+    },
+    {
+      "path": "research/reports/encrypted-archives.md",
+      "bytes": 16109,
+      "sha256": "43415b3bbfac3c555831659ff5bbe10ad32c80d209041e1a414bc89174944bd0"
+    },
+    {
+      "path": "research/reports/evidence-audit.md",
+      "bytes": 8253,
+      "sha256": "d05155f4f4e1885951299b69ec6f09296ca0ec83b78fcf27c18adec96142d74e"
+    },
+    {
+      "path": "research/reports/extended-findings.md",
+      "bytes": 15067,
+      "sha256": "16aa2a07eb81691f68104074e37318fbb71cebda9a73262966a53bc456bbcf62"
+    },
+    {
+      "path": "research/reports/final.md",
+      "bytes": 22419,
+      "sha256": "f299d728a29dc800ed35f5c138bdfb03c3c2c947c9c62f79170d7e9fa92263db"
+    },
+    {
+      "path": "research/reports/reproducibility.md",
+      "bytes": 10067,
+      "sha256": "915057e774acb67919c162eee53b9db653bf05df159f337787470e3d5e595493"
+    }
+  ]
+}

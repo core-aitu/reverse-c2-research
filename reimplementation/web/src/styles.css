@@ -83,11 +83,16 @@ textarea { resize: vertical; }
 .session-tabs button.selected { color: #071315; border-color: #62ead3; background: #62ead3; }
 .session-tabs span { font-size: .7rem; opacity: .72; }
 @keyframes pulse { from { opacity: .55; } to { opacity: 1; } }
-.doc-list > button { width: 100%; display: grid; gap: .3rem; padding: .85rem; color: #d1dfdf; border: 0; border-bottom: 1px solid #1b3439; background: transparent; text-align: left; }
-.doc-list > button span { color: #718e92; font-size: .76rem; }
-.doc-list > button.selected { background: #123036; border-radius: .45rem; }
-.document { min-height: 27rem; }
-.document p:last-child { max-width: 55rem; color: #abc0c1; line-height: 1.75; }
+.doc-tree { list-style: none; margin: 0; padding: 0; }
+.doc-tree .doc-tree { padding-left: 1rem; border-left: 1px solid #29474d; }
+.doc-tree summary { cursor: pointer; padding: .55rem .4rem; color: #b4cbcd; overflow-wrap: anywhere; }
+.doc-link { width: 100%; display: grid; gap: .25rem; padding: .65rem .75rem; color: #d1dfdf; border: 0; border-radius: .35rem; background: transparent; text-align: left; overflow-wrap: anywhere; }
+.doc-link:hover, .doc-link[aria-current="page"] { background: #123036; }
+.doc-link span, .doc-path { color: #8ca6a9; font-size: .78rem; overflow-wrap: anywhere; }
+.doc-search-header { display: flex; align-items: center; justify-content: space-between; gap: .6rem; margin-bottom: .7rem; overflow-wrap: anywhere; }
+.document { min-width: 0; min-height: 27rem; }
+.document .doc-content { max-width: 65rem; color: #abc0c1; line-height: 1.75; white-space: pre-wrap; overflow-wrap: anywhere; }
+.docs-layout > * { min-width: 0; }
 .narrow { max-width: 52rem; }
 pre { overflow-x: auto; padding: 1rem; color: #7fe9d8; background: #071216; border-radius: .45rem; font: .78rem ui-monospace, monospace; }
 .form-grid { display: grid; gap: 1rem; margin-bottom: 1rem; }
@@ -131,3 +136,7 @@ dt { color: #67868a; font-size: .75rem; } dd { margin: 0; color: #bdcdce; font-s
   .inline-form { grid-template-columns: 1fr; }
   .button-row { width: 100%; flex-wrap: wrap; }
 }
+
+.replay-stat { display: grid; gap: .35rem; padding: .9rem; border: 1px solid #29474d; border-radius: .5rem; }
+.replay-stat strong { font-size: 1.5rem; font-variant-numeric: tabular-nums; }
+.replay-stat span { color: #8ca6a9; font-size: .8rem; }

@@ -262,3 +262,30 @@ console.log(JSON.stringify({
   routeCoverage: "202/202",
   blockedCapabilities: ["ssh-command", "phishing-delivery"],
 }));
+
+// Independent fictional research scenario extension.
+const researchCatalog = await json("/api/research-scenarios", { headers });
+if (researchCatalog.length !== 5) throw new Error("research scenario catalog mismatch");
+const researchRun = await json("/api/research-scenarios/runs", {
+  method: "POST", headers, body: JSON.stringify({ scenarioId: "mixed-errors" }),
+});
+if (!researchRun.report.passed || researchRun.report.findings.length !== 3 || researchRun.actor !== username) {
+  throw new Error("research scenario result mismatch");
+}
+const researchHistory = await json("/api/research-scenarios/runs", { headers });
+if (!researchHistory.some(item => item.id === researchRun.id && item.report.passed)) {
+  throw new Error("research scenario history persistence mismatch");
+}
+const researchJournal = await json(`/api/research-scenarios/runs/${encodeURIComponent(researchRun.id)}/journal`, { headers });
+if (researchJournal.length !== researchRun.report.findings.length + 2 ||
+    researchJournal[0].kind !== "dataset.checked" ||
+    researchJournal.at(-1).kind !== "report.completed" || !researchJournal.at(-1).passed ||
+    researchJournal.some((entry, index) => entry.ordinal !== index + 1)) {
+  throw new Error("research journal sequence mismatch");
+}
+for (const [index, finding] of researchRun.report.findings.entries()) {
+  const entry = researchJournal[index + 1];
+  if (entry.kind !== "finding.recorded" || entry.code !== finding.code || entry.sequence !== finding.sequence) {
+    throw new Error("research journal finding mismatch");
+  }
+}

@@ -2,16 +2,25 @@ import { type FormEvent, useCallback, useEffect, useState } from "react";
 import { AiFunctionsScreen, AiProfilesScreen, AiSessionsScreen } from "./AI";
 import { ArtifactsScreen, LicenseScreen, UpdatesScreen } from "./AdminCatalog";
 import { NetworkScreen } from "./Network";
+import { Documentation } from "./Documentation";
+import { MeasurementReplay } from "./MeasurementReplay";
+import { ResearchPlugins } from "./ResearchPlugins";
+import { ResearchJournal } from "./ResearchJournal";
+import { ResearchScenarios } from "./ResearchScenarios";
 import { Login, useAuth } from "./auth";
 import { CertificatesScreen, ListenersScreen, ModulesScreen, NotebooksScreen, ScriptsScreen, WordlistsScreen } from "./Catalog";
 import { AdaptersScreen, AgentSimulatorScreen, JobsScreen, PipelinesScreen, ResourceScreen } from "./Management";
 import { useEvents } from "./useEvents";
-import type { Account, DocumentationEntry, SearchResult, Setting } from "./types";
+import type { Account, Setting } from "./types";
 
 type NavItem = { category: string; label: string; id: string; live?: boolean };
 
 const navigation: NavItem[] = [
   { category: "Overview", label: "Research status", id: "home", live: true },
+  { category: "Research", label: "Scenario Engine", id: "research-scenarios", live: true },
+  { category: "Research", label: "Research Plugins", id: "research-plugins", live: true },
+  { category: "Research", label: "Research Journal", id: "research-journal", live: true },
+  { category: "Research", label: "Measurement Replay", id: "measurement-replay", live: true },
   { category: "Operations", label: "Listeners", id: "listeners", live: true },
   { category: "Operations", label: "Certificates", id: "certificates", live: true },
   { category: "Operations", label: "Implants", id: "implants", live: true },
@@ -76,6 +85,10 @@ export default function App() {
 
 function Screen({ id, item }: { id: string; item: NavItem }) {
   if (id === "home") return <Overview />;
+  if (id === "research-scenarios") return <ResearchScenarios />;
+  if (id === "research-plugins") return <ResearchPlugins />;
+  if (id === "research-journal") return <ResearchJournal />;
+  if (id === "measurement-replay") return <MeasurementReplay />;
   if (id === "events") return <Events />;
   if (id === "docs" || id === "docs-home") return <Documentation />;
   if (id === "docs-index") return <DocumentationIndex />;
@@ -136,25 +149,6 @@ function Events() {
       {!events.length && <tr><td colSpan={5} className="empty">No events yet.</td></tr>}
     </tbody></table></div>
   </section>;
-}
-
-function Documentation() {
-  const { request } = useAuth();
-  const [entries, setEntries] = useState<DocumentationEntry[]>([]);
-  const [results, setResults] = useState<SearchResult[]>([]);
-  const [query, setQuery] = useState("");
-  const [selected, setSelected] = useState<DocumentationEntry | null>(null);
-  useEffect(() => { request<DocumentationEntry[]>("/api/Documentation").then((data) => { setEntries(data); setSelected(data[0] ?? null); }); }, [request]);
-  async function search() {
-    if (!query.trim()) { setResults([]); return; }
-    setResults(await request<SearchResult[]>("/api/Documentation/search", { method: "POST", body: JSON.stringify({ query, topK: 10, provider: "postgres", model: "trigram" }) }));
-  }
-  return <div className="docs-layout">
-    <section className="panel doc-list"><div className="search"><input value={query} onChange={(e) => setQuery(e.target.value)} onKeyDown={(e) => e.key === "Enter" && search()} placeholder="Search evidence-backed docs"/><button onClick={search}>Search</button></div>
-      {(results.length ? results.map((result) => ({ name: result.path, contents: result.content, children: [] })) : entries).map((entry) => <button className={selected?.name === entry.name ? "selected" : ""} key={entry.name} onClick={() => setSelected(entry)}><strong>{entry.name}</strong><span>{entry.contents.slice(0, 88)}</span></button>)}
-    </section>
-    <article className="panel document"><p className="eyebrow">Documentation entry</p><h2>{selected?.name ?? "Select a document"}</h2><p>{selected?.contents}</p></article>
-  </div>;
 }
 
 function DocumentationIndex() {
