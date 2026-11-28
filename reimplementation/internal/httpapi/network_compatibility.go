@@ -17,7 +17,7 @@ func (s *Server) networkCompatibilityRoutes() {
 	s.mux.Handle("POST /api/NetworkIntelligence/UpsertUser", s.requireRole("admin", s.resourcePut("network-users", "userId")))
 	s.mux.Handle("GET /api/NetworkIntelligence/GetCachedFilesByHostId", s.protected(s.filteredResources("network-cached-files", "hostId")))
 	s.mux.Handle("GET /api/NetworkIntelligence/GetCachedFileById", s.protected(s.resourceGet("network-cached-files", "fileId")))
-	s.mux.Handle("GET /api/NetworkIntelligence/DownloadCachedFileContent", s.requireRole("admin", s.blockedCapability("cached remote file download", "retain discovery metadata without remote retrieval")))
+	s.mux.Handle("GET /api/NetworkIntelligence/DownloadCachedFileContent", s.requireRole("admin", s.blockedCapability("cached-file-download", "retain discovery metadata without remote retrieval")))
 	s.mux.Handle("POST /api/NetworkIntelligence/UpsertCachedFile", s.requireRole("admin", s.resourcePut("network-cached-files", "fileId")))
 }
 

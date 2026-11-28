@@ -1,0 +1,22 @@
+{
+  "observedAtUtc": "2026-11-26T18:27:00Z",
+  "environment": "isolated Docker Compose network",
+  "scenario": {
+    "agentId": "lab-agent-01",
+    "enrollment": "single-use token consumed; only SHA-256 retained",
+    "beforeServerRestart": {
+      "cursor": 1,
+      "status": "completed",
+      "dispatchCount": 1,
+      "result": { "value": "before-restart" }
+    },
+    "afterServerRestart": {
+      "cursor": 2,
+      "status": "completed",
+      "dispatchCount": 1,
+      "result": { "value": "after-restart" }
+    },
+    "postRestartCheckinLive": true
+  },
+  "cleanup": "containers, network, and temporary PostgreSQL volume removed"
+}

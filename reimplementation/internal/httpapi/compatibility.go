@@ -7,6 +7,7 @@ import (
 	"strconv"
 	"strings"
 
+	"github.com/research/specter-reimplementation/internal/capability"
 	"github.com/research/specter-reimplementation/internal/domain"
 	"github.com/research/specter-reimplementation/internal/store"
 )
@@ -23,7 +24,7 @@ func (s *Server) compatibilityRoutes() {
 	s.mux.Handle("PUT /api/AcmeAccount/AcmeAccount/registerdns", s.requireRole("admin", http.HandlerFunc(s.acmeDNSFixture)))
 	s.mux.Handle("PUT /api/AcmeAccount/AcmeAccount/validate", s.requireRole("admin", http.HandlerFunc(s.acmeValidateFixture)))
 
-	s.mux.Handle("PUT /api/Certificates/Certificates/import", s.requireRole("admin", s.blockedCapability("certificate private-key import", "store certificate metadata with PUT /api/Certificates")))
+	s.mux.Handle("PUT /api/Certificates/Certificates/import", s.requireRole("admin", s.blockedCapability("certificate-private-key-import", "store certificate metadata with PUT /api/Certificates")))
 	s.mux.Handle("GET /api/Documentation/embedding-providers", s.protected(http.HandlerFunc(s.embeddingProviders)))
 	s.mux.Handle("GET /api/Events/Events/GetAllEvents", s.protected(http.HandlerFunc(s.allEvents)))
 	s.mux.Handle("GET /api/Settings/Settings/defaultsettings", s.protected(http.HandlerFunc(s.defaultSettings)))
@@ -42,10 +43,10 @@ func (s *Server) compatibilityRoutes() {
 	s.mux.Handle("GET /api/EmailAccounts/Providers", s.protected(http.HandlerFunc(s.emailProviders)))
 	s.mux.Handle("POST /api/EmailAccounts/Register", s.requireRole("admin", s.resourcePut("email-accounts", "")))
 
-	s.mux.Handle("POST /api/tasks/runscript", s.requireRole("admin", s.blockedCapability("agent script execution", "use the echo/inventory protocol simulator")))
+	s.mux.Handle("POST /api/tasks/runscript", s.requireRole("admin", s.blockedCapability("agent-script-execution", "use the echo/inventory protocol simulator")))
 	s.mux.Handle("GET /api/tasks/runscript", s.protected(s.resourceList("legacy-script-tasks")))
 
-	loader := s.blockedCapability("payload loader materialization", "inspect pipeline documentation and safe DAG output metadata")
+	loader := s.blockedCapability("loader-materialization", "inspect pipeline documentation and safe DAG output metadata")
 	s.mux.Handle("GET /api/Loaders/{loaderId}/bundle/{platform}", s.protected(loader))
 	s.mux.Handle("GET /api/Loaders/{loaderId}/flat-bundle/{platform}", s.protected(loader))
 	s.mux.Handle("GET /api/Loaders/{loaderId}/deps/{platform}", s.protected(loader))
@@ -58,7 +59,7 @@ func (s *Server) compatibilityRoutes() {
 	s.mux.Handle("GET /api/NotebookFiles/{notebookId}/{filename}", s.protected(http.HandlerFunc(s.notebookFile)))
 	s.mux.Handle("DELETE /api/NotebookFiles/{notebookId}/{filename}", s.requireRole("admin", http.HandlerFunc(s.deleteNotebookFile)))
 
-	s.mux.Handle("GET /api/PayloadPipeline/PayloadPipeline/{pipelineId}/run", s.requireRole("admin", s.blockedCapability("state-changing pipeline execution over GET", "POST the safe typed DAG to the run endpoint")))
+	s.mux.Handle("GET /api/PayloadPipeline/PayloadPipeline/{pipelineId}/run", s.requireRole("admin", s.blockedCapability("pipeline-get-execution", "POST the safe typed DAG to the run endpoint")))
 	s.mux.Handle("POST /api/PayloadPipeline/PayloadPipeline/test", s.protected(http.HandlerFunc(s.testPipelineCompatibility)))
 	s.mux.Handle("GET /api/PayloadPipeline/PayloadPipeline/documentation", s.protected(http.HandlerFunc(s.pipelineDocumentation)))
 	s.mux.Handle("POST /api/PayloadPipeline/PayloadPipeline/clear", s.requireRole("admin", http.HandlerFunc(s.clearPipelineCache)))
@@ -67,16 +68,16 @@ func (s *Server) compatibilityRoutes() {
 	s.mux.Handle("POST /api/Payloads", s.requireRole("admin", s.resourcePut("payload-definitions", "build")))
 	s.mux.Handle("DELETE /api/Payloads", s.requireRole("admin", s.resourceDelete("payload-definitions", "build")))
 	s.mux.Handle("GET /api/Payloads/Payloads/{build}", s.protected(s.resourceGet("payload-definitions", "build")))
-	s.mux.Handle("POST /api/download", s.requireRole("admin", s.blockedCapability("implant download", "use the protocol simulator or safe DAG result metadata")))
+	s.mux.Handle("POST /api/download", s.requireRole("admin", s.blockedCapability("implant-download", "use the protocol simulator or safe DAG result metadata")))
 
 	registerCRUD(s, "/api/Personas", "personas", "id")
-	s.mux.Handle("POST /api/Phishing/Send", s.requireRole("admin", s.blockedCapability("phishing delivery", "use the SMTP fixture adapter preview")))
+	s.mux.Handle("POST /api/Phishing/Send", s.requireRole("admin", s.blockedCapability("phishing-delivery", "use the SMTP fixture adapter preview")))
 	s.mux.Handle("GET /api/Phishing/Targets", s.protected(http.HandlerFunc(s.phishingTargets)))
 
 	s.mux.Handle("GET /api/PowerShellSessions", s.protected(s.resourceList("powershell-sessions")))
 	s.mux.Handle("POST /api/PowerShellSessions", s.requireRole("admin", s.fixtureSessionPut("powershell-sessions")))
 	s.mux.Handle("DELETE /api/PowerShellSessions/{sessionId}", s.requireRole("admin", s.resourceDelete("powershell-sessions", "sessionId")))
-	s.mux.Handle("POST /api/PowerShellSessions/{sessionId}/run", s.requireRole("admin", s.blockedCapability("PowerShell command execution", "use notebook metadata or the echo simulator")))
+	s.mux.Handle("POST /api/PowerShellSessions/{sessionId}/run", s.requireRole("admin", s.blockedCapability("powershell-command", "use notebook metadata or the echo simulator")))
 
 	s.mux.Handle("GET /api/Sessions", s.protected(s.resourceList("legacy-sessions")))
 	s.mux.Handle("PUT /api/Sessions", s.requireRole("admin", s.resourcePut("legacy-sessions", "sessionId")))
@@ -103,9 +104,9 @@ func (s *Server) sshCompatibilityRoutes() {
 	s.mux.Handle("POST /api/SshSessions", s.requireRole("admin", s.fixtureSessionPut("ssh-sessions")))
 	s.mux.Handle("DELETE /api/SshSessions/{sessionId}", s.requireRole("admin", s.resourceDelete("ssh-sessions", "sessionId")))
 	s.mux.Handle("GET /api/SshSessions/{sessionId}/tasks", s.protected(s.resourceList("ssh-tasks")))
-	s.mux.Handle("POST /api/SshSessions/{sessionId}/command", s.requireRole("admin", s.blockedCapability("SSH command execution", "use the SSH fixture adapter")))
-	s.mux.Handle("POST /api/SshSessions/{sessionId}/upload", s.requireRole("admin", s.blockedCapability("SSH upload", "use fixture metadata")))
-	s.mux.Handle("GET /api/SshSessions/{sessionId}/download", s.requireRole("admin", s.blockedCapability("SSH download", "use fixture metadata")))
+	s.mux.Handle("POST /api/SshSessions/{sessionId}/command", s.requireRole("admin", s.blockedCapability("ssh-command", "use the SSH fixture adapter")))
+	s.mux.Handle("POST /api/SshSessions/{sessionId}/upload", s.requireRole("admin", s.blockedCapability("ssh-upload", "use fixture metadata")))
+	s.mux.Handle("GET /api/SshSessions/{sessionId}/download", s.requireRole("admin", s.blockedCapability("ssh-download", "use fixture metadata")))
 	registerCollection(s, "/api/SshTunnels", "ssh-tunnels", "id", true)
 }
 
@@ -140,12 +141,12 @@ func (s *Server) winRMCompatibilityRoutes() {
 	s.mux.Handle("POST /api/WinRmSessions", s.requireRole("admin", s.fixtureSessionPut("winrm-sessions")))
 	s.mux.Handle("DELETE /api/WinRmSessions/{sessionId}", s.requireRole("admin", s.resourceDelete("winrm-sessions", "sessionId")))
 	s.mux.Handle("GET /api/WinRmSessions/{sessionId}/tasks", s.protected(s.resourceList("winrm-tasks")))
-	blockedCommand := s.blockedCapability("WinRM command execution", "use the WinRM fixture adapter")
+	blockedCommand := s.blockedCapability("winrm-command", "use the WinRM fixture adapter")
 	s.mux.Handle("POST /api/WinRmSessions/{sessionId}/command", s.requireRole("admin", blockedCommand))
-	s.mux.Handle("POST /api/WinRmSessions/{sessionId}/upload", s.requireRole("admin", s.blockedCapability("WinRM upload", "use fixture metadata")))
-	s.mux.Handle("GET /api/WinRmSessions/{sessionId}/download", s.requireRole("admin", s.blockedCapability("WinRM download", "use fixture metadata")))
+	s.mux.Handle("POST /api/WinRmSessions/{sessionId}/upload", s.requireRole("admin", s.blockedCapability("winrm-upload", "use fixture metadata")))
+	s.mux.Handle("GET /api/WinRmSessions/{sessionId}/download", s.requireRole("admin", s.blockedCapability("winrm-download", "use fixture metadata")))
 	s.mux.Handle("GET /api/WinRmSessions/{sessionId}/services", s.protected(s.resourceList("winrm-services")))
-	load := s.blockedCapability("WinRM in-memory payload loading", "use the protocol simulator and safe DAG")
+	load := s.blockedCapability("winrm-in-memory-load", "use the protocol simulator and safe DAG")
 	s.mux.Handle("POST /api/WinRmSessions/{sessionId}/load/pscript", s.requireRole("admin", load))
 	s.mux.Handle("POST /api/WinRmSessions/{sessionId}/load/dll", s.requireRole("admin", load))
 	s.mux.Handle("POST /api/WinRmSessions/{sessionId}/load/assembly", s.requireRole("admin", load))
@@ -396,18 +397,23 @@ func resourceRepresentation(value domain.Resource) any {
 	return body
 }
 
-func (s *Server) blockedCapability(capability, alternative string) http.Handler {
+func (s *Server) blockedCapability(id, alternative string) http.Handler {
+	definition, exists := capability.Get(id)
+	if !exists {
+		panic("unknown blocked capability: " + id)
+	}
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		event, err := s.store.AddEvent(r.Context(), domain.Event{
 			Identifier: newID("blocked"), Type: "CapabilityBlocked", Source: principal(r).Username,
-			Outcome: "Blocked", System: "clean-room-boundary", Message: capability,
+			Outcome: "Blocked", System: "clean-room-boundary", Message: definition.Title,
 			Details: "intentionally not reproduced; " + alternative,
 		})
 		if err == nil {
 			s.hub.Publish(event)
 		}
 		writeJSON(w, http.StatusNotImplemented, map[string]string{
-			"code": "CAPABILITY_NOT_IMPLEMENTED", "error": capability + " is intentionally unavailable", "safeAlternative": alternative,
+			"code": "CAPABILITY_NOT_IMPLEMENTED", "capabilityId": definition.ID, "state": string(definition.State),
+			"error": definition.Title + " is currently unavailable", "safeAlternative": alternative,
 		})
 	})
 }

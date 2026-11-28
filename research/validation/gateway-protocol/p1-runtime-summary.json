@@ -1,0 +1,19 @@
+{
+  "observedAtUtc": "2026-11-26T19:03:30Z",
+  "scope": "clean-room safe gateway P1; not legacy runtime compatibility",
+  "checks": {
+    "goPackages": "all passed in pinned Go Docker test target",
+    "taskHandlers": ["echo", "system-info", "sleep"],
+    "workerFailures": ["timeout", "cancellation", "panic", "oversized output", "unknown task"],
+    "transportNegative": ["signature tamper", "clock skew", "protocol downgrade", "untrusted certificate", "hostname mismatch", "nonce replay"],
+    "beaconResilience": ["network loss", "request timeout", "bounded backoff", "permanent authentication error", "restart cursor protection", "running sleep cancellation"],
+    "freshBinary": "embedded version validated; completed signed TLS enrollment, echo, acknowledgement, result and graceful SIGINT shutdown",
+    "postgresConcurrency": {
+      "parallelLeases": "two distinct tasks",
+      "duplicateResult": "one first submission and one idempotent replay",
+      "nonceReplay": "rejected"
+    },
+    "artifactTransfer": ["ordered chunks", "size and digest verification", "traversal rejection", "resume rejection", "orphan cleanup"]
+  },
+  "cleanup": "isolated Compose containers, network and PostgreSQL volume removed"
+}

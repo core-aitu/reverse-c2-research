@@ -7,22 +7,23 @@
     "dev": "vite --host 0.0.0.0",
     "build": "tsc -b && vite build",
     "check": "tsc -b --pretty false",
-    "test": "vitest run",
+    "test": "node --test tests/*.test.mjs",
     "test:docs": "node --test tests/documentation.test.mjs",
     "test:replay": "node --test tests/measurementReplay.test.mjs",
-    "test:plugins": "node --test tests/researchPlugins.test.mjs"
+    "test:plugins": "node --test tests/researchPlugins.test.mjs",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",
-    "vite": "latest",
-    "typescript": "latest",
     "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "react-dom": "19.3.0",
+    "typescript": "latest",
+    "vite": "latest"
   },
   "devDependencies": {
+    "@playwright/test": "^1.65.1",
     "@types/react": "latest",
-    "@types/react-dom": "latest",
-    "vitest": "latest"
+    "@types/react-dom": "latest"
   },
   "engines": {
     "node": ">=26.0.0"

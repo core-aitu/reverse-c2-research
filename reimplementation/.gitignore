@@ -1,7 +1,10 @@
 .env
 web/node_modules/
 web/dist/
+web/playwright-report/
+web/test-results/
 coverage/
+dist/
 *.log
 *.tsbuildinfo
 __pycache__/

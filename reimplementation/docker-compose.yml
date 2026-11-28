@@ -1,4 +1,36 @@
 services:
+  minio:
+    image: pgsty/minio@sha256:b6bfe7239bfc83fb90d31612d9704d86039dd714f7904b3f1ad68f211e602372
+    command: ["server", "/data", "--console-address", ":9001"]
+    environment:
+      MINIO_ROOT_USER: ${SPECTER_S3_ACCESS_KEY:-specter-minio}
+      MINIO_ROOT_PASSWORD: ${SPECTER_S3_SECRET_KEY:-specter-minio-development-secret}
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "--silent", "http://localhost:9000/minio/health/live"]
+      interval: 2s
+      timeout: 3s
+      retries: 20
+    volumes:
+      - specter-objects:/data
+    networks: [specter-lab]
+
+  minio-init:
+    image: pgsty/minio@sha256:b6bfe7239bfc83fb90d31612d9704d86039dd714f7904b3f1ad68f211e602372
+    depends_on:
+      minio:
+        condition: service_healthy
+    environment:
+      SPECTER_S3_ACCESS_KEY: ${SPECTER_S3_ACCESS_KEY:-specter-minio}
+      SPECTER_S3_SECRET_KEY: ${SPECTER_S3_SECRET_KEY:-specter-minio-development-secret}
+      SPECTER_S3_BUCKET: ${SPECTER_S3_BUCKET:-specter-objects}
+    entrypoint: ["/bin/sh", "-ec"]
+    command:
+      - |
+        mc alias set local http://minio:9000 "$$SPECTER_S3_ACCESS_KEY" "$$SPECTER_S3_SECRET_KEY"
+        mc mb --ignore-existing "local/$$SPECTER_S3_BUCKET"
+        mc anonymous set none "local/$$SPECTER_S3_BUCKET"
+    networks: [specter-lab]
+
   postgres:
     image: postgres:16.4-bookworm
     environment:
@@ -14,6 +46,24 @@ services:
       - specter-postgres:/var/lib/postgresql/data
     networks: [specter-lab]
 
+  cert-init:
+    build: .
+    user: "0:0"
+    entrypoint: ["/bin/sh", "-ec"]
+    command:
+      - |
+        if [ ! -s /certs/tls.crt ] || [ ! -s /certs/tls.key ]; then
+          openssl req -x509 -newkey rsa:3072 -nodes -days 3650 \
+            -keyout /certs/tls.key -out /certs/tls.crt \
+            -subj /CN=localhost -addext subjectAltName=DNS:localhost,DNS:server,IP:127.0.0.1
+          cp /certs/tls.crt /certs/ca.pem
+          chown 10001:10001 /certs/tls.key /certs/tls.crt /certs/ca.pem
+          chmod 0600 /certs/tls.key
+        fi
+    volumes:
+      - specter-agent-certs:/certs
+    networks: [specter-lab]
+
   server:
     build: .
     environment:
@@ -27,15 +77,36 @@ services:
       SPECTER_ENABLE_FIXTURES: ${SPECTER_ENABLE_FIXTURES:-true}
       SPECTER_ENABLE_REAL_ADAPTERS: ${SPECTER_ENABLE_REAL_ADAPTERS:-false}
       SPECTER_MIGRATIONS_DIR: /app/migrations
+      SPECTER_AGENT_ADDR: :8443
+      SPECTER_AGENT_PUBLIC_URL: https://localhost:8443
+      SPECTER_AGENT_TLS_CERT: /certs/tls.crt
+      SPECTER_AGENT_TLS_KEY: /certs/tls.key
+      SPECTER_AGENT_CA_BUNDLE: /certs/ca.pem
+      SPECTER_REQUIRE_SIGNED_RELEASES: ${SPECTER_REQUIRE_SIGNED_RELEASES:-false}
+      SPECTER_S3_ENDPOINT: http://minio:9000
+      SPECTER_S3_ACCESS_KEY: ${SPECTER_S3_ACCESS_KEY:-specter-minio}
+      SPECTER_S3_SECRET_KEY: ${SPECTER_S3_SECRET_KEY:-specter-minio-development-secret}
+      SPECTER_S3_BUCKET: ${SPECTER_S3_BUCKET:-specter-objects}
+      SPECTER_S3_REGION: ${SPECTER_S3_REGION:-us-east-1}
+      SPECTER_S3_PREFIX: ${SPECTER_S3_PREFIX:-}
+      SPECTER_S3_AUTO_CREATE: "false"
     depends_on:
       postgres:
         condition: service_healthy
+      minio-init:
+        condition: service_completed_successfully
+      cert-init:
+        condition: service_completed_successfully
     healthcheck:
       test: ["CMD", "curl", "--fail", "--silent", "http://localhost:8080/readyz"]
       interval: 10s
       timeout: 2s
       retries: 3
       start_period: 10s
+    ports:
+      - "8443:8443"
+    volumes:
+      - specter-agent-certs:/certs:ro
     networks: [specter-lab]
 
   web:
@@ -52,8 +123,42 @@ services:
       start_period: 5s
     networks: [specter-edge, specter-lab]
 
+  gateway-test:
+    build:
+      context: .
+      target: test
+    command: ["go", "test", "-timeout=${SPECTER_TEST_TIMEOUT:-10m}", "-race", "-p", "1", "-run", "TestConcurrentGatewayLeasingAndIdempotentResult|TestAgentFileTransferConcurrencyLimit|TestGatewayPostgresBeaconLifecycleAndRestarts|TestS3RoundTrip", "-count=1", "./internal/store", "./internal/httpapi", "./internal/objectstore"]
+    environment:
+      SPECTER_TEST_DATABASE_URL: postgres://specter:specter@postgres:5432/specter?sslmode=disable
+      SPECTER_TEST_S3_ENDPOINT: http://minio:9000
+      SPECTER_TEST_S3_ACCESS_KEY: ${SPECTER_S3_ACCESS_KEY:-specter-minio}
+      SPECTER_TEST_S3_SECRET_KEY: ${SPECTER_S3_SECRET_KEY:-specter-minio-development-secret}
+      SPECTER_TEST_S3_BUCKET: ${SPECTER_S3_BUCKET:-specter-objects}
+    depends_on:
+      postgres:
+        condition: service_healthy
+      minio-init:
+        condition: service_completed_successfully
+    profiles: [test]
+    networks: [specter-lab]
+
+  beacon-fixture:
+    build:
+      context: .
+      target: test
+    command: ["go", "run", "-tags", "e2e_fixture", "./tests/e2e_fixture.go"]
+    environment:
+      SPECTER_ADMIN_PASSWORD: ${SPECTER_ADMIN_PASSWORD:?set SPECTER_ADMIN_PASSWORD}
+    depends_on:
+      server:
+        condition: service_healthy
+    profiles: [e2e]
+    networks: [specter-lab]
+
 volumes:
   specter-postgres:
+  specter-objects:
+  specter-agent-certs:
 
 networks:
   specter-edge:

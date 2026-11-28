@@ -1,6 +1,6 @@
 import { type FormEvent, useCallback, useEffect, useState } from "react";
 import { useAuth } from "./auth";
-import type { Adapter, AgentSession, AgentTask, Job, PipelineDefinition, Resource } from "./types";
+import type { Adapter, Job, PipelineDefinition, Resource } from "./types";
 
 export function ResourceScreen({ kind, title }: { kind: string; title: string }) {
   const { request, identity } = useAuth();
@@ -121,44 +121,6 @@ function JobsTable({ jobs, refresh }: { jobs: Job[]; refresh: () => Promise<unkn
   return <section className="panel"><div className="panel-title"><div><h2>Persistent jobs</h2><p>Lifecycle, cancellation, bounded attempts and retained output.</p></div><span className="badge">{jobs.length} jobs</span></div>
     <div className="table-wrap"><table><thead><tr><th>Job</th><th>Kind</th><th>Status</th><th>Attempt</th><th>Output</th><th /></tr></thead><tbody>{jobs.map((job) => <tr key={job.id}><td><code>{job.id}</code></td><td>{job.kind}</td><td><span className={`badge ${job.status === "succeeded" ? "success" : job.status === "failed" ? "failure" : ""}`}>{job.status}</span></td><td>{job.attempt}/{job.maxAttempts}</td><td><code>{job.error || JSON.stringify(job.output ?? {}).slice(0, 90)}</code></td><td>{["queued", "running"].includes(job.status) && <button className="danger-link" onClick={() => cancel(job.id)}>Cancel</button>}</td></tr>)}{!jobs.length && <tr><td className="empty" colSpan={6}>No jobs have run.</td></tr>}</tbody></table></div>
   </section>;
-}
-
-export function AgentSimulatorScreen() {
-  const { request } = useAuth();
-  const [sessions, setSessions] = useState<AgentSession[]>([]);
-  const [tasks, setTasks] = useState<AgentTask[]>([]);
-  const [selected, setSelected] = useState("");
-  const [error, setError] = useState("");
-  const loadSessions = useCallback(async () => {
-    const values = await request<AgentSession[]>("/api/gateway/sessions"); setSessions(values);
-    if (!selected && values[0]) setSelected(values[0].id);
-  }, [request, selected]);
-  const loadTasks = useCallback(async () => { if (selected) setTasks(await request<AgentTask[]>(`/api/gateway/sessions/${selected}/tasks`)); }, [request, selected]);
-  useEffect(() => { void loadSessions().catch((cause) => setError(message(cause))); }, [loadSessions]);
-  useEffect(() => { void loadTasks().catch((cause) => setError(message(cause))); }, [loadTasks]);
-  async function register() {
-    try { const value = await request<AgentSession>("/api/gateway/simulate/register", { method: "POST", body: JSON.stringify({ name: `browser-simulator-${sessions.length + 1}`, metadata: { platform: "fixture", protocolVersion: 1 } }) }); setSelected(value.id); await loadSessions(); }
-    catch (cause) { setError(message(cause)); }
-  }
-  async function queue() {
-    try { await request(`/api/gateway/sessions/${selected}/tasks`, { method: "POST", body: JSON.stringify({ kind: "echo", payload: { text: "fixture-live-window" } }) }); await loadTasks(); }
-    catch (cause) { setError(message(cause)); }
-  }
-  async function checkin() {
-    try { const values = await request<AgentTask[]>(`/api/gateway/simulate/${selected}/checkin`, { method: "POST" }); setTasks(values); }
-    catch (cause) { setError(message(cause)); }
-  }
-  async function complete(task: AgentTask) {
-    try { await request(`/api/gateway/simulate/${selected}/tasks/${task.id}/result`, { method: "POST", body: JSON.stringify({ result: { echoed: task.payload.text, simulator: true }, error: "" }) }); await loadTasks(); }
-    catch (cause) { setError(message(cause)); }
-  }
-  return <div className="stack"><section className="hero-panel compact"><div><p className="eyebrow">Protocol boundary</p><h2>Agent / beacon simulator</h2><p>Persistent register, check-in, task dispatch and result flow. No remote process, shell or loader is started.</p></div><button className="primary" onClick={register}>Register simulator</button></section>
-    {error && <State kind="error" text={error} />}
-    <section className="panel"><div className="panel-title"><div><h2>Simulator sessions</h2><p>Versioned management-plane representation.</p></div><div className="button-row"><button className="secondary" disabled={!selected} onClick={queue}>Queue echo</button><button className="primary" disabled={!selected} onClick={checkin}>Check in</button></div></div>
-      <div className="session-tabs">{sessions.map((session) => <button className={selected === session.id ? "selected" : ""} onClick={() => setSelected(session.id)} key={session.id}><strong>{session.name}</strong><span>{session.status} · {session.transport}</span></button>)}</div>
-      {!sessions.length && <State kind="empty" text="Register a simulator to exercise the protocol lifecycle." />}
-      {!!tasks.length && <div className="table-wrap"><table><thead><tr><th>Task</th><th>Kind</th><th>Status</th><th>Payload</th><th /></tr></thead><tbody>{tasks.map((task) => <tr key={task.id}><td><code>{task.id}</code></td><td>{task.kind}</td><td><span className={`badge ${task.status === "completed" ? "success" : ""}`}>{task.status}</span></td><td><code>{JSON.stringify(task.payload)}</code></td><td>{task.status === "dispatched" && <button className="secondary" onClick={() => complete(task)}>Return result</button>}</td></tr>)}</tbody></table></div>}
-    </section></div>;
 }
 
 function State({ kind, text }: { kind: "loading" | "empty" | "error"; text: string }) {

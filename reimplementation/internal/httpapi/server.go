@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"strconv"
 	"strings"
+	"sync"
 	"time"
 
 	"github.com/coder/websocket"
@@ -17,23 +18,45 @@ import (
 	"github.com/research/specter-reimplementation/internal/domain"
 	"github.com/research/specter-reimplementation/internal/events"
 	"github.com/research/specter-reimplementation/internal/store"
+	"github.com/research/specter-reimplementation/internal/transfer"
 )
 
 type Server struct {
-	cfg   config.Config
-	store *store.Store
-	auth  *auth.Service
-	hub   *events.Hub
-	log   *slog.Logger
-	mux   *http.ServeMux
+	cfg           config.Config
+	store         *store.Store
+	auth          *auth.Service
+	hub           *events.Hub
+	log           *slog.Logger
+	mux           *http.ServeMux
+	agentMu       sync.Mutex
+	agentActive   map[string]bool
+	agentLast     map[string]time.Time
+	transfers     *transfer.Manager
+	outputMu      sync.RWMutex
+	outputSubs    map[string]map[chan domain.TaskOutputChunk]struct{}
+	outputTickets map[string]taskOutputTicket
 }
 
 type principalKey struct{}
 
 func New(cfg config.Config, store *store.Store, authService *auth.Service, hub *events.Hub, logger *slog.Logger) http.Handler {
-	server := &Server{cfg: cfg, store: store, auth: authService, hub: hub, log: logger, mux: http.NewServeMux()}
+	transferManager, err := transfer.New(cfg.TransferDir)
+	if err != nil {
+		logger.Error("artifact transfer storage unavailable", "error", err)
+	}
+	server := &Server{cfg: cfg, store: store, auth: authService, hub: hub, log: logger, mux: http.NewServeMux(), agentActive: map[string]bool{}, agentLast: map[string]time.Time{}, transfers: transferManager, outputSubs: map[string]map[chan domain.TaskOutputChunk]struct{}{}, outputTickets: map[string]taskOutputTicket{}}
 	server.routes()
-	return server.securityHeaders(server.logging(server.mux))
+	return server.securityHeaders(server.logging(server.requireAgentTLS(server.mux)))
+}
+
+func (s *Server) requireAgentTLS(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		if strings.HasPrefix(r.URL.Path, "/api/agent/") && r.TLS == nil {
+			writeError(w, http.StatusUpgradeRequired, "agent gateway requires TLS")
+			return
+		}
+		next.ServeHTTP(w, r)
+	})
 }
 
 func (s *Server) routes() {
@@ -58,6 +81,10 @@ func (s *Server) routes() {
 	s.mux.HandleFunc("GET /api/events", s.eventSocket)
 	s.mux.Handle("GET /api/Settings", s.protected(http.HandlerFunc(s.settings)))
 	s.mux.Handle("PUT /api/Settings", s.requireRole("admin", http.HandlerFunc(s.putSettings)))
+	s.mux.Handle("GET /api/capabilities", s.protected(http.HandlerFunc(s.capabilities)))
+	s.agentGatewayRoutes()
+	s.beaconBuildRoutes()
+	s.artifactTransferRoutes()
 	s.managementRoutes()
 	s.researchScenarioRoutes()
 	s.researchJournalRoutes()
@@ -76,6 +103,12 @@ func (s *Server) ready(w http.ResponseWriter, r *http.Request) {
 	if err := s.store.Ping(ctx); err != nil {
 		writeError(w, http.StatusServiceUnavailable, "database unavailable")
 		return
+	}
+	if s.store.HasObjectStore() {
+		if err := s.store.ObjectStoreReady(ctx); err != nil {
+			writeError(w, http.StatusServiceUnavailable, "object storage unavailable")
+			return
+		}
 	}
 	writeJSON(w, http.StatusOK, map[string]string{"status": "ready"})
 }
@@ -264,12 +297,35 @@ func (s *Server) latestEvents(w http.ResponseWriter, r *http.Request) {
 		}
 		from = &parsed
 	}
-	events, err := s.store.LatestEvents(r.Context(), from, 200)
+	beaconID, taskID := r.URL.Query().Get("beaconId"), r.URL.Query().Get("taskId")
+	if !validCorrelationID(beaconID) || !validCorrelationID(taskID) {
+		writeError(w, http.StatusBadRequest, "invalid correlation filter")
+		return
+	}
+	var events []domain.Event
+	var err error
+	if beaconID != "" || taskID != "" {
+		events, err = s.store.FilteredEvents(r.Context(), from, beaconID, taskID, 200)
+	} else {
+		events, err = s.store.LatestEvents(r.Context(), from, 200)
+	}
 	if err != nil {
 		s.internalError(w, err)
 		return
 	}
 	writeJSON(w, http.StatusOK, events)
+}
+
+func validCorrelationID(value string) bool {
+	if len(value) > 128 {
+		return false
+	}
+	for _, char := range value {
+		if !(char >= 'a' && char <= 'z' || char >= 'A' && char <= 'Z' || char >= '0' && char <= '9' || char == '-' || char == '_' || char == '.' || char == ':') {
+			return false
+		}
+	}
+	return true
 }
 
 func (s *Server) eventTicket(w http.ResponseWriter, r *http.Request) {

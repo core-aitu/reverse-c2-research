@@ -128,6 +128,140 @@ export type AgentTask = {
   completedAt: string | null;
 };
 
+export type RealAgent = {
+  id: string;
+  name: string;
+  source: "real";
+  protocolVersion: number;
+  buildVersion: string;
+  capabilities: string[];
+  architecture: string;
+  os: string;
+  generation: number;
+  enabled: boolean;
+  revokedAt?: string;
+  firstSeen: string;
+  lastCheckin: string;
+  nextExpectedCheckin: string;
+  health: "online" | "degraded" | "offline";
+  intervalMs: number;
+  lastSequence: number;
+  lastCursor: number;
+};
+
+export type GatewayListener = {
+  endpoint: string;
+  address: string;
+  tlsConfigured: boolean;
+  ready: boolean;
+  status: "online" | "degraded" | "offline";
+};
+
+export type GatewayTaskView = {
+  id: string;
+  agentId: string;
+  correlationId: string;
+  version: number;
+  idempotencyKey: string;
+  kind: "echo" | "system-info" | "sleep" | "exec" | "shell" | "file-download";
+  status: "queued" | "leased" | "running" | "completed" | "failed" | "cancelled";
+  leaseUntil?: string;
+  deadline: string;
+  timeoutMs: number;
+  cancelRequestedAt?: string;
+  startedAt?: string;
+  dispatchCount: number;
+  retries: number;
+  error?: { code: string; message: string; retryable: boolean };
+  createdAt: string;
+  completedAt?: string;
+};
+
+export type ObjectInfo = {
+  id: string;
+  kind: string;
+  name: string;
+  sha256: string;
+  mediaType: string;
+  size: number;
+  createdAt: string;
+};
+
+export type CommandResult = {
+  exitCode?: number;
+  durationMs?: number;
+  stdoutBytes?: number;
+  stderrBytes?: number;
+  truncated?: boolean;
+  stdoutObjectId?: string;
+  stderrObjectId?: string;
+  objectId?: string;
+  object?: ObjectInfo;
+};
+
+export type GatewayTaskDetail = GatewayTaskView & {
+  payload?: Record<string, unknown>;
+  result?: CommandResult;
+  outputs?: Array<{ stream: "stdout" | "stderr"; object: ObjectInfo; byteCount: number; truncated: boolean }>;
+};
+
+export type TaskOutputChunk = {
+  taskId: string;
+  stream: "stdout" | "stderr";
+  index: number;
+  sequence?: number;
+  text?: string;
+  data?: string;
+  encoding?: "utf8" | "base64";
+  eof?: boolean;
+  truncated?: boolean;
+};
+
+export type TaskOutputEnvelope = {
+  id?: number;
+  type?: string;
+  payload?: TaskOutputChunk;
+} & Partial<TaskOutputChunk>;
+
+export type BeaconRelease = {
+  id: string;
+  version: string;
+  os: "linux" | "windows" | "darwin";
+  architecture: "amd64" | "arm64";
+  sha256?: string;
+  size?: number;
+  signed: boolean;
+  signatureStatus?: "missing" | "present";
+  development?: boolean;
+  object?: ObjectInfo;
+  sbom?: ObjectInfo;
+  checksums?: ObjectInfo;
+  signature?: ObjectInfo;
+  createdAt: string;
+};
+
+export type BeaconBuild = {
+  id: string;
+  releaseId: string;
+  version: string;
+  os: string;
+  architecture: string;
+  sha256?: string;
+  createdBy?: string;
+  lastBundleAt?: string;
+  createdAt: string;
+};
+
+export type EnrollmentTokenInfo = {
+  id: string;
+  expiresAt: string;
+  usedAt?: string;
+  createdBy: string;
+  createdAt: string;
+};
+
+export type EnrollmentTokenCreated = EnrollmentTokenInfo & { token: string };
+
 export type SpecterScript = {
   identifier: string;
   name: string;
@@ -225,8 +359,11 @@ export type AiSession = {
 };
 
 export type ArtifactInfo = { host: string; name: string; length: number; creationDate: string };
+export type ArtifactContentInfo = ArtifactInfo & { sha256: string; mediaType: string };
 export type SerializableVersion = { major: number; minor: number; build: number; revision: number };
 export type UpdateJobInfo = { version: SerializableVersion; status: string; statusDescription: string; lastUpdateResult: string; progress: number };
+export type UpdatePackageInfo = { version: SerializableVersion; sha256: string; mediaType: string; length: number; active: boolean; createdAt: string };
 export type LicenseValidation = { key: string; success: boolean; license: string; checksum: string; expires: string; customer_email: string };
+export type CapabilityDefinition = { id: string; group: string; title: string; state: "registered" | "fixture" | "implemented" | "runtime-verified" | "evidence-blocked"; routes: string[]; evidence?: string };
 export type NetHost = { hostId: string; hostname: string; domain: string; osName: string; osVersion: string; osArchitecture: string; cidrNetwork: string; firstSeen: string; lastSeen: string };
 export type NetHostIpAddress = { ipId: string; hostId: string; ipAddress: string; isPrimary: boolean; interfaceName: string; macAddress: string; vendor: string };

@@ -1,6 +1,9 @@
 import { type FormEvent, useCallback, useEffect, useState } from "react";
 import { AiFunctionsScreen, AiProfilesScreen, AiSessionsScreen } from "./AI";
 import { ArtifactsScreen, LicenseScreen, UpdatesScreen } from "./AdminCatalog";
+import { AgentsScreen, EnrollmentTokensScreen } from "./Agents";
+import { BuildsScreen } from "./Builds";
+import { CapabilitiesScreen } from "./Capabilities";
 import { NetworkScreen } from "./Network";
 import { Documentation } from "./Documentation";
 import { MeasurementReplay } from "./MeasurementReplay";
@@ -9,7 +12,7 @@ import { ResearchJournal } from "./ResearchJournal";
 import { ResearchScenarios } from "./ResearchScenarios";
 import { Login, useAuth } from "./auth";
 import { CertificatesScreen, ListenersScreen, ModulesScreen, NotebooksScreen, ScriptsScreen, WordlistsScreen } from "./Catalog";
-import { AdaptersScreen, AgentSimulatorScreen, JobsScreen, PipelinesScreen, ResourceScreen } from "./Management";
+import { AdaptersScreen, JobsScreen, PipelinesScreen, ResourceScreen } from "./Management";
 import { useEvents } from "./useEvents";
 import type { Account, Setting } from "./types";
 
@@ -17,6 +20,7 @@ type NavItem = { category: string; label: string; id: string; live?: boolean };
 
 const navigation: NavItem[] = [
   { category: "Overview", label: "Research status", id: "home", live: true },
+  { category: "Overview", label: "Capability Matrix", id: "capabilities", live: true },
   { category: "Research", label: "Scenario Engine", id: "research-scenarios", live: true },
   { category: "Research", label: "Research Plugins", id: "research-plugins", live: true },
   { category: "Research", label: "Research Journal", id: "research-journal", live: true },
@@ -25,7 +29,8 @@ const navigation: NavItem[] = [
   { category: "Operations", label: "Certificates", id: "certificates", live: true },
   { category: "Operations", label: "Implants", id: "implants", live: true },
   { category: "Operations", label: "Payload Pipelines", id: "pipelines", live: true },
-  { category: "Operations", label: "Sessions", id: "sessions", live: true },
+  { category: "Operations", label: "Beacon Sessions", id: "sessions", live: true },
+  { category: "Operations", label: "Beacon Builds", id: "builds", live: true },
   { category: "Operations", label: "Scripts", id: "scripts", live: true },
   { category: "Operations", label: "Wordlists", id: "wordlists", live: true },
   { category: "Operations", label: "Modules", id: "modules", live: true },
@@ -47,6 +52,7 @@ const navigation: NavItem[] = [
   { category: "Administration", label: "Updates", id: "updates", live: true },
   { category: "Administration", label: "License", id: "license", live: true },
   { category: "Administration", label: "Settings", id: "settings", live: true },
+  { category: "Administration", label: "Enrollment", id: "enrollment", live: true },
 ];
 
 export default function App() {
@@ -85,6 +91,7 @@ export default function App() {
 
 function Screen({ id, item }: { id: string; item: NavItem }) {
   if (id === "home") return <Overview />;
+  if (id === "capabilities") return <CapabilitiesScreen />;
   if (id === "research-scenarios") return <ResearchScenarios />;
   if (id === "research-plugins") return <ResearchPlugins />;
   if (id === "research-journal") return <ResearchJournal />;
@@ -95,7 +102,9 @@ function Screen({ id, item }: { id: string; item: NavItem }) {
   if (id === "settings") return <Settings />;
   if (id === "users") return <Users />;
   if (id === "pipelines") return <PipelinesScreen />;
-  if (id === "sessions") return <AgentSimulatorScreen />;
+  if (id === "sessions") return <AgentsScreen />;
+  if (id === "builds") return <BuildsScreen />;
+  if (id === "enrollment") return <EnrollmentTokensScreen />;
   if (id === "workflows") return <JobsScreen />;
   if (id === "adapters") return <AdaptersScreen />;
   if (id === "scripts") return <ScriptsScreen />;
@@ -136,17 +145,31 @@ function Events() {
   const { request } = useAuth();
   const { events, status } = useEvents();
   const [error, setError] = useState("");
+  const [beaconFilter, setBeaconFilter] = useState("");
+  const [taskFilter, setTaskFilter] = useState("");
+  const [filtered, setFiltered] = useState<typeof events | null>(null);
   async function inject() {
     setError("");
     try { await request("/api/fixtures/event", { method: "POST" }); }
     catch (cause) { setError(cause instanceof Error ? cause.message : "Fixture failed"); }
   }
+  async function filter(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault(); setError("");
+    const query = new URLSearchParams();
+    if (beaconFilter) query.set("beaconId", beaconFilter);
+    if (taskFilter) query.set("taskId", taskFilter);
+    if (!query.toString()) { setFiltered(null); return; }
+    try { setFiltered(await request<typeof events>(`/api/events/latest?${query}`)); }
+    catch (cause) { setError(cause instanceof Error ? cause.message : "Audit filter failed"); }
+  }
+  const displayed = filtered ?? events;
   return <section className="panel">
-    <div className="panel-title"><div><h2>Audit stream</h2><p>{events.length} retained in this view · connection {status}</p></div><button className="secondary" onClick={inject}>Emit fixture-live-window</button></div>
+    <div className="panel-title"><div><h2>Audit stream</h2><p>{displayed.length} retained in this view · connection {status}</p></div><button className="secondary" onClick={inject}>Emit fixture-live-window</button></div>
+    <form className="inline-form audit-filter" onSubmit={filter}><label>Beacon correlation ID<input value={beaconFilter} onChange={(event) => setBeaconFilter(event.target.value)} pattern="[A-Za-z0-9._:-]*" maxLength={128} /></label><label>Task correlation ID<input value={taskFilter} onChange={(event) => setTaskFilter(event.target.value)} pattern="[A-Za-z0-9._:-]*" maxLength={128} /></label><button className="primary">Apply filter</button><button type="button" className="secondary" onClick={() => { setBeaconFilter(""); setTaskFilter(""); setFiltered(null); }}>Clear</button></form>
     {error && <p className="error">{error}</p>}
     <div className="table-wrap"><table><thead><tr><th>Time</th><th>Outcome</th><th>Source</th><th>Message</th><th>Details</th></tr></thead><tbody>
-      {events.map((event) => <tr key={event.id}><td>{new Date(event.timestamp).toLocaleString()}</td><td><span className={`badge ${event.outcome.toLowerCase()}`}>{event.outcome}</span></td><td>{event.source}</td><td>{event.message}</td><td>{event.details}</td></tr>)}
-      {!events.length && <tr><td colSpan={5} className="empty">No events yet.</td></tr>}
+      {displayed.map((event) => <tr key={event.id}><td>{new Date(event.timestamp).toLocaleString()}</td><td><span className={`badge ${event.outcome.toLowerCase()}`}>{event.outcome}</span></td><td>{event.source}</td><td>{event.message}</td><td>{event.details}</td></tr>)}
+      {!displayed.length && <tr><td colSpan={5} className="empty">No matching events.</td></tr>}
     </tbody></table></div>
   </section>;
 }

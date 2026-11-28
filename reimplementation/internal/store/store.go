@@ -15,13 +15,15 @@ import (
 	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgxpool"
 	"github.com/research/specter-reimplementation/internal/domain"
+	"github.com/research/specter-reimplementation/internal/objectstore"
 	"golang.org/x/crypto/bcrypt"
 )
 
 var ErrNotFound = errors.New("not found")
 
 type Store struct {
-	pool *pgxpool.Pool
+	pool    *pgxpool.Pool
+	objects objectstore.Store
 }
 
 func Open(ctx context.Context, databaseURL string) (*Store, error) {
@@ -37,6 +39,17 @@ func Open(ctx context.Context, databaseURL string) (*Store, error) {
 }
 
 func (s *Store) Close() { s.pool.Close() }
+
+func (s *Store) AttachObjectStore(objects objectstore.Store) { s.objects = objects }
+
+func (s *Store) HasObjectStore() bool { return s.objects != nil }
+
+func (s *Store) ObjectStoreReady(ctx context.Context) error {
+	if s.objects == nil {
+		return errors.New("object storage is not configured")
+	}
+	return s.objects.Ping(ctx)
+}
 
 func (s *Store) Ping(ctx context.Context) error { return s.pool.Ping(ctx) }
 
@@ -498,6 +511,30 @@ func (s *Store) LatestEvents(ctx context.Context, from *time.Time, limit int) ([
 		events = append(events, event)
 	}
 	return events, rows.Err()
+}
+
+func (s *Store) FilteredEvents(ctx context.Context, from *time.Time, beaconID, taskID string, limit int) ([]domain.Event, error) {
+	if limit < 1 || limit > 1000 {
+		limit = 200
+	}
+	rows, err := s.pool.Query(ctx, `SELECT id,identifier,timestamp,type,source,outcome,system,message,details FROM event
+		WHERE ($1::timestamptz IS NULL OR timestamp >= $1)
+		AND ($2='' OR message=$2 OR details=$2 OR details LIKE $2 || '; %')
+		AND ($3='' OR message=$3)
+		ORDER BY id DESC LIMIT $4`, from, beaconID, taskID, limit)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	values := []domain.Event{}
+	for rows.Next() {
+		var value domain.Event
+		if err := rows.Scan(&value.ID, &value.Identifier, &value.Timestamp, &value.Type, &value.Source, &value.Outcome, &value.System, &value.Message, &value.Details); err != nil {
+			return nil, err
+		}
+		values = append(values, value)
+	}
+	return values, rows.Err()
 }
 
 func (s *Store) Settings(ctx context.Context) ([]domain.Setting, error) {

@@ -1,6 +1,32 @@
 name: reimplementation
 
 on:
+  workflow_dispatch:
+    inputs:
+      run_soak:
+        description: Run the PostgreSQL/gateway/beacon soak gate
+        required: true
+        type: boolean
+        default: false
+      soak_duration:
+        description: Go duration for the soak gate
+        required: true
+        type: string
+        default: 4h
+      publish_release:
+        description: Publish a signed beacon matrix to the configured gateway
+        required: true
+        type: boolean
+        default: false
+      release_version:
+        description: Version embedded in and registered for the beacon matrix
+        required: true
+        type: string
+        default: dev
+      release_endpoint:
+        description: HTTPS management API origin used when publish_release is enabled
+        required: false
+        type: string
   push:
     paths: ["reimplementation/**", "research/reports/**", ".github/workflows/reimplementation.yml"]
   pull_request:
@@ -26,6 +52,27 @@ jobs:
           test -z "$(gofmt -l cmd internal)"
           go vet ./...
           go test -race ./...
+          go test -fuzz=FuzzDecodeGatewayFrames -fuzztime=10s ./internal/gateway
+          make beacon-build beacon-matrix sbom checksums verify-fresh verify-reproducible verify-matrix-reproducible integration-binary VERSION=ci
+      - uses: actions/upload-artifact@v4
+        with:
+          name: beacon-matrix
+          path: |
+            reimplementation/dist/specter-beacon-*
+            reimplementation/dist/specter-beacon.spdx.json
+            reimplementation/dist/SHA256SUMS
+
+  windows-beacon:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v6
+        with: { go-version: "1.27.4" }
+      - working-directory: reimplementation
+        run: |
+          go test -race ./internal/agentworker ./internal/beacon ./internal/gateway
+          go build -trimpath -buildvcs=false -ldflags "-s -w -buildid=" -o specter-beacon.exe ./cmd/beacon
+          go run ./tests/beacon_binary_integration.go -binary ./specter-beacon.exe -version dev
 
   web:
     runs-on: ubuntu-latest
@@ -53,15 +100,28 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v6
         with: { node-version: "26.13.0" }
+      - uses: pnpm/action-setup@v4
+        with: { version: "11.25.0" }
+      - name: Install browser test dependencies
+        working-directory: reimplementation/web
+        run: |
+          pnpm install --frozen-lockfile
+          pnpm exec playwright install --with-deps chromium
       - name: Validate Compose configuration
         working-directory: reimplementation
         run: docker compose config --quiet
+      - name: Run concurrent gateway integration tests
+        working-directory: reimplementation
+        run: docker compose --profile test run --build --rm gateway-test
       - name: Start Compose stack
         working-directory: reimplementation
-        run: docker compose up --build --wait
+        run: docker compose --profile e2e up --build --wait
       - name: Run Compose smoke test
         working-directory: reimplementation
         run: node tests/smoke.mjs
+      - name: Run browser end-to-end test
+        working-directory: reimplementation/web
+        run: pnpm run test:e2e
       - name: Print Compose logs on failure
         if: failure()
         working-directory: reimplementation
@@ -70,3 +130,44 @@ jobs:
         if: always()
         working-directory: reimplementation
         run: docker compose down --volumes
+
+  soak:
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.run_soak }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    env:
+      SPECTER_JWT_SECRET: "01234567890123456789012345678901"
+      SPECTER_ADMIN_PASSWORD: "soak-not-used-by-gateway-test"
+      SPECTER_TEST_TIMEOUT: "0"
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run continuous PostgreSQL, gateway and beacon validation
+        working-directory: reimplementation
+        run: docker compose --profile test run --build --rm -e SPECTER_SOAK_DURATION=${{ inputs.soak_duration }} gateway-test
+      - name: Stop soak services
+        if: always()
+        working-directory: reimplementation
+        run: docker compose down --volumes
+
+  publish-release:
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.publish_release }}
+    needs: [backend, windows-beacon]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v6
+        with: { go-version: "1.27.4" }
+      - name: Install cosign
+        uses: sigstore/cosign-installer@v3
+      - name: Build and sign release matrix
+        working-directory: reimplementation
+        env:
+          COSIGN_PRIVATE_KEY: ${{ secrets.SPECTER_COSIGN_PRIVATE_KEY }}
+        run: |
+          make beacon-matrix sbom checksums VERSION=${{ inputs.release_version }}
+          make sign COSIGN_PRIVATE_KEY="$COSIGN_PRIVATE_KEY"
+      - name: Publish release matrix
+        working-directory: reimplementation
+        env:
+          SPECTER_RELEASE_API_TOKEN: ${{ secrets.SPECTER_RELEASE_API_TOKEN }}
+        run: python3 tools/publish_beacon_release.py --endpoint '${{ inputs.release_endpoint }}' --token "$SPECTER_RELEASE_API_TOKEN" --version '${{ inputs.release_version }}'

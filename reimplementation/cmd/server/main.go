@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"crypto/tls"
 	"log/slog"
 	"net/http"
 	"os"
@@ -13,6 +14,7 @@ import (
 	"github.com/research/specter-reimplementation/internal/config"
 	"github.com/research/specter-reimplementation/internal/events"
 	"github.com/research/specter-reimplementation/internal/httpapi"
+	"github.com/research/specter-reimplementation/internal/objectstore"
 	"github.com/research/specter-reimplementation/internal/store"
 )
 
@@ -37,6 +39,17 @@ func main() {
 		logger.Error("migration failed", "error", err)
 		os.Exit(1)
 	}
+	if cfg.S3Endpoint != "" {
+		objects, err := objectstore.NewS3(ctx, objectstore.S3Config{
+			Endpoint: cfg.S3Endpoint, AccessKey: cfg.S3AccessKey, SecretKey: cfg.S3SecretKey,
+			Region: cfg.S3Region, Bucket: cfg.S3Bucket, Prefix: cfg.S3Prefix, AutoCreate: cfg.S3AutoCreate,
+		})
+		if err != nil {
+			logger.Error("object storage connection failed", "error", err)
+			os.Exit(1)
+		}
+		database.AttachObjectStore(objects)
+	}
 	if err := database.EnsureAdmin(ctx, cfg.AdminUsername, cfg.AdminPassword); err != nil {
 		logger.Error("admin bootstrap failed", "error", err)
 		os.Exit(1)
@@ -54,6 +67,7 @@ func main() {
 		ReadHeaderTimeout: 5 * time.Second,
 		IdleTimeout:       60 * time.Second,
 	}
+	var agentServer *http.Server
 	go func() {
 		logger.Info("server listening", "address", cfg.Addr)
 		if err := server.ListenAndServe(); err != nil && err != http.ErrServerClosed {
@@ -61,12 +75,33 @@ func main() {
 			stop()
 		}
 	}()
+	if cfg.AgentTLSCert != "" {
+		agentServer = &http.Server{
+			Addr:              cfg.AgentAddr,
+			Handler:           server.Handler,
+			ReadHeaderTimeout: 5 * time.Second,
+			IdleTimeout:       60 * time.Second,
+			TLSConfig:         &tls.Config{MinVersion: tls.VersionTLS13},
+		}
+		go func() {
+			logger.Info("agent TLS server listening", "address", cfg.AgentAddr)
+			if err := agentServer.ListenAndServeTLS(cfg.AgentTLSCert, cfg.AgentTLSKey); err != nil && err != http.ErrServerClosed {
+				logger.Error("agent TLS server stopped unexpectedly", "error", err)
+				stop()
+			}
+		}()
+	}
 
 	<-ctx.Done()
 	shutdown, cancel := context.WithTimeout(context.Background(), cfg.ShutdownTimeout)
 	defer cancel()
 	if err := server.Shutdown(shutdown); err != nil {
 		logger.Error("graceful shutdown failed", "error", err)
+	}
+	if agentServer != nil {
+		if err := agentServer.Shutdown(shutdown); err != nil {
+			logger.Error("agent TLS graceful shutdown failed", "error", err)
+		}
 	}
 }
 

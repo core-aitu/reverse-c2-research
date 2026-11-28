@@ -9,6 +9,12 @@ type ArtifactInfo struct {
 	CreationDate time.Time `json:"creationDate"`
 }
 
+type ArtifactContentInfo struct {
+	ArtifactInfo
+	SHA256    string `json:"sha256"`
+	MediaType string `json:"mediaType"`
+}
+
 type LicenseInfo struct {
 	Email string `json:"email"`
 	Key   string `json:"key"`
@@ -44,4 +50,13 @@ type UpdateJobInfo struct {
 	StatusDescription string              `json:"statusDescription"`
 	LastUpdateResult  string              `json:"lastUpdateResult"`
 	Progress          int                 `json:"progress"`
+}
+
+type UpdatePackageInfo struct {
+	Version   SerializableVersion `json:"version"`
+	SHA256    string              `json:"sha256"`
+	MediaType string              `json:"mediaType"`
+	Length    int64               `json:"length"`
+	Active    bool                `json:"active"`
+	CreatedAt time.Time           `json:"createdAt"`
 }

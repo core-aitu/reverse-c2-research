@@ -47,6 +47,15 @@ class GeneratedArtifactTests(unittest.TestCase):
             self.assertIn(f"CREATE TABLE {table}", migration)
         self.assertIn("fixture-safe-transform", migration)
 
+    def test_content_package_migration_enforces_bounds_and_digests(self) -> None:
+        migration = (ROOT / "migrations/008_content_packages.sql").read_text()
+        self.assertIn("CREATE TABLE app_artifact_contents", migration)
+        self.assertIn("CREATE TABLE app_update_packages", migration)
+        self.assertIn("octet_length(content) BETWEEN 1 AND 16777216", migration)
+        self.assertIn("octet_length(content) BETWEEN 1 AND 33554432", migration)
+        self.assertEqual(2, migration.count("sha256 ~ '^[0-9a-f]{64}$'"))
+        self.assertIn("app_update_packages_one_active", migration)
+
     def test_typed_catalog_dtos_are_pinned_to_managed_evidence(self) -> None:
         catalog = json.loads((ROOT / "contracts/dto-catalog.json").read_text())
         self.assertEqual(
@@ -60,6 +69,24 @@ class GeneratedArtifactTests(unittest.TestCase):
         )
         self.assertEqual(8, len(catalog["types"]["WordlistResponse"]))
         self.assertEqual(9, len(catalog["types"]["CertificateInfo"]))
+
+    def test_agent_p1_migration_pins_lifecycle_replay_and_rotation(self) -> None:
+        migration = (ROOT / "migrations/010_agent_gateway_p1.sql").read_text()
+        for state in ("queued", "leased", "running", "completed", "failed", "cancelled"):
+            self.assertIn(f"'{state}'", migration)
+        self.assertIn("UNIQUE (agent_id,idempotency_key)", migration)
+        self.assertIn("CREATE TABLE app_agent_request_nonces", migration)
+        self.assertIn("previous_identity_valid_until", migration)
+        self.assertIn("submission_digest", migration)
+
+    def test_beacon_release_targets_are_reproducible_and_versioned(self) -> None:
+        makefile = (ROOT / "Makefile").read_text()
+        self.assertIn("-trimpath -buildvcs=false", makefile)
+        self.assertIn("-buildid= -X main.buildVersion=$(VERSION)", makefile)
+        self.assertIn("verify-reproducible", makefile)
+        for target in ("linux-amd64", "linux-arm64", "windows-amd64.exe", "darwin-arm64"):
+            self.assertIn(target, makefile)
+        self.assertIn("specter-beacon.spdx.json", makefile)
 
 
 if __name__ == "__main__":

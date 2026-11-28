@@ -1,8 +1,13 @@
-# ADR 0001: Safe compatibility boundary
+# ADR 0001: Safe compatibility boundary (superseded)
 
-- Status: accepted
+- Status: superseded by [ADR 0003](0003-full-compatibility-execution-plane.md)
 - Date: 2026-11-25
 - Scope: SpecterInsight 7.0.0 clean-room management-plane contract
+
+This document records the boundary used to deliver the first management-plane
+slice. It is retained as decision history, but it is no longer the target state.
+The current completion target is full evidence-backed compatibility through
+isolated execution planes, as defined by ADR 0003.
 
 ## Decision
 
@@ -27,9 +32,14 @@ Listener, tunnel, remote-session, Tor, ACME, SMTP, WebDAV, AI-provider, and upda
 ## Consequences
 
 - Method, path, authentication, JSON handling, persistence, status/error handling, and audit behavior can be tested without creating an operational C2 or delivery system.
-- The internal `SIR1` protocol remains a simulator contract. It is not claimed to be the unverified legacy beacon protocol.
+- The former internal `SIR1` codec has been retired from the active gateway. The
+  legacy simulator HTTP routes remain test fixtures; the bounded safe gateway
+  is documented separately and is not claimed to be the unverified legacy
+  beacon protocol.
 - Safe payload pipelines are deterministic data DAGs in one-shot workers. They are not shell or compiler pipelines.
-- A future expansion requires a new ADR, an isolated execution design, explicit operator configuration, and tests proving that management credentials and the management database are unavailable to workers.
+- Expansion is governed by ADR 0003. Until a capability satisfies its worker,
+  isolation and runtime-verification gates, the historical fail-closed behavior
+  in this ADR remains the required implementation behavior.
 
 ## Verification
 

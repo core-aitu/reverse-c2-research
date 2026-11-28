@@ -1,0 +1,20 @@
+{
+  "artifact": {
+    "path": "server/SpecterInsight.exe",
+    "sha256": "d5e7e80c6e67939caa244f9f1b8736cafb4d1e5e906ee2668c34387c8067569d",
+    "mvid": "e10959e7-1725-4dc7-9ff7-d7dd25e9f0e8",
+    "reaEvidence": "ev_d79c955f675f326656ad1eb9c266be86912be35e13b6e623314f1ed0fbe64c45"
+  },
+  "controlledReplay": {
+    "configuration": "resource replaced with loopback-only URL and current expiration; code identity otherwise retained",
+    "runtime": ".NET 10 on Linux",
+    "observed": [
+      "beacon constructed POST /threads/{32-hex-session}/register",
+      "loopback TCP and TLS connections were established",
+      "connections closed before HTTP application bytes reached Kestrel",
+      "fixture observed zero registrations and zero callbacks"
+    ],
+    "status": "runtime-blocked-on-host-compatibility",
+    "limitation": "This run is not a real request/response trace and is not presented as one. A compatible .NET Framework/Windows or Mono laboratory remains required."
+  }
+}

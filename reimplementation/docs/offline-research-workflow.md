@@ -46,4 +46,4 @@ go test -race ./cmd/telemetry-audit
 
 Python tests include malformed documents, report invariants, comparison, local HTML and integrity checking. Go tests include both synthetic fixtures. The documentation tree tests are still separate (`cd web && pnpm run test:docs`).
 
-No changes to the network listener, agent gateway, task execution or database schemas are made by this workflow. The existing ADR boundaries continue to apply.
+No changes to the network listener, agent gateway, task execution or database schemas are made by this workflow. Capability expansion follows the worker isolation and enablement gates in [ADR 0003](adr/0003-full-compatibility-execution-plane.md).

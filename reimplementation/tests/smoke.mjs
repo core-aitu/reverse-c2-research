@@ -1,6 +1,9 @@
+import { createHash } from "node:crypto";
+
 const baseURL = process.env.SPECTER_BASE_URL ?? "http://localhost:3000";
 const username = process.env.SPECTER_ADMIN_USERNAME ?? "admin";
 const password = process.env.SPECTER_ADMIN_PASSWORD;
+const runId = Date.now().toString(36);
 
 if (!password) throw new Error("SPECTER_ADMIN_PASSWORD is required");
 
@@ -18,8 +21,24 @@ const auth = await json("/api/Accounts/authenticate", {
 const headers = { Authorization: `Bearer ${auth.jwtToken}`, "Content-Type": "application/json" };
 const identity = await json("/api/Identity", { headers });
 if (identity.username !== username) throw new Error("identity mismatch");
+const capabilities = await json("/api/capabilities", { headers });
+if (!capabilities.some(item => item.id === "artifact-content" && item.state === "runtime-verified") ||
+    !capabilities.some(item => item.id === "update-packages" && item.state === "runtime-verified")) {
+  throw new Error("capability registry mismatch");
+}
+const enrollment = await json("/api/gateway/enrollment-tokens", {
+  method: "POST", headers, body: JSON.stringify({ ttlSeconds: 600 }),
+});
+if (!enrollment.token || enrollment.token.length < 32) throw new Error("one-time enrollment secret missing");
+const enrollmentCatalog = await json("/api/gateway/enrollment-tokens", { headers });
+const enrollmentMetadata = enrollmentCatalog.find((item) => item.id === enrollment.id);
+if (!enrollmentMetadata || "token" in enrollmentMetadata || "tokenHash" in enrollmentMetadata || "hash" in enrollmentMetadata) {
+  throw new Error("enrollment catalog exposed or omitted token metadata");
+}
+const realAgents = await json("/api/gateway/agents", { headers });
+if (!Array.isArray(realAgents)) throw new Error("real agent operational catalog mismatch");
 
-const temporaryUsername = `smoke-${Date.now()}`;
+const temporaryUsername = `smoke-${runId}`;
 await json("/api/Accounts", {
   method: "POST", headers,
   body: JSON.stringify({ username: temporaryUsername, password: "fixture-password-2026", enabled: true, roles: ["viewer"] }),
@@ -80,11 +99,11 @@ if (!scripts.some((item) => item.identifier === "smoke-script" && item.labels.in
 
 const wordlist = await json("/api/Wordlists", {
   method: "POST", headers,
-  body: JSON.stringify({ name: "smoke-wordlist", description: "fixture", tags: ["smoke"], content: "alpha\n\nbeta\ngamma\n" }),
+  body: JSON.stringify({ name: `smoke-wordlist-${runId}`, description: "fixture", tags: ["smoke"], content: "alpha\n\nbeta\ngamma\n" }),
 });
 if (wordlist.entryCount !== 3) throw new Error("wordlist entryCount mismatch");
 const fetchedWordlist = await json(`/api/Wordlists/${wordlist.id}`, { headers });
-if (fetchedWordlist.name !== "smoke-wordlist") throw new Error("wordlist GET mismatch");
+if (fetchedWordlist.name !== `smoke-wordlist-${runId}`) throw new Error("wordlist GET mismatch");
 
 await json("/api/Certificates", {
   method: "PUT", headers,
@@ -95,10 +114,10 @@ if (!certificates.some((item) => item.name === "smoke-cert")) throw new Error("c
 
 await json("/api/Listeners", {
   method: "POST", headers,
-  body: JSON.stringify({ prefix: "http://127.0.0.1:8080/", certificateName: "", webDavPath: "" }),
+  body: JSON.stringify({ prefix: `http://127.0.0.1:8080/${runId}/`, certificateName: "", webDavPath: "" }),
 });
 const listeners = await json("/api/Listeners", { headers });
-if (!listeners.some((item) => item.prefix === "http://127.0.0.1:8080/" && item.enabled)) throw new Error("listener config mismatch");
+if (!listeners.some((item) => item.prefix === `http://127.0.0.1:8080/${runId}/` && item.enabled)) throw new Error("listener config mismatch");
 const traversalListener = await fetch(`${baseURL}/api/Listeners`, {
   method: "POST", headers,
   body: JSON.stringify({ prefix: "http://127.0.0.1:8080/../admin/", certificateName: "", webDavPath: "" }),
@@ -148,6 +167,8 @@ const blockedSshCommand = await fetch(`${baseURL}/api/SshSessions/${encodeURICom
   method: "POST", headers, body: JSON.stringify({ command: "id" }),
 });
 if (blockedSshCommand.status !== 501) throw new Error("SSH execution boundary mismatch");
+const blockedSshBody = await blockedSshCommand.json();
+if (blockedSshBody.capabilityId !== "ssh-command" || blockedSshBody.state !== "registered") throw new Error("SSH capability response mismatch");
 
 const torStarted = await json("/api/Tor/start", { method: "POST", headers, body: JSON.stringify({ name: "fixture-tor" }) });
 if (torStarted.status !== "fixture-running") throw new Error("Tor fixture start mismatch");
@@ -184,7 +205,7 @@ const aiProfiles = await json("/api/AiAgentDefinitions", { headers });
 if (!aiProfiles.some((item) => item.agentId === "fixture-profile" && item.accessibleFunctions.includes("fixture-echo"))) throw new Error("AI profile mismatch");
 const aiSessionId = await json("/api/AiSessions/NewAiSession", {
   method: "POST", headers,
-  body: JSON.stringify({ name: "fixture-session", agents: [aiProfiles.find((item) => item.agentId === "fixture-profile")], modelType: "fixture", modelName: "fixture-deterministic", toolApprovalPolicy: "AutoApproveNone", plan: { version: 1, steps: [] }, status: "Stopped" }),
+  body: JSON.stringify({ name: `fixture-session-${runId}`, agents: [aiProfiles.find((item) => item.agentId === "fixture-profile")], modelType: "fixture", modelName: "fixture-deterministic", toolApprovalPolicy: "AutoApproveNone", plan: { version: 1, steps: [] }, status: "Stopped" }),
 });
 await json(`/api/AiSessions/ResumeAiSession?sessionId=${encodeURIComponent(aiSessionId)}`, { method: "POST", headers });
 const aiSessionStatus = await json(`/api/AiSessions/GetSessionStatus?sessionId=${encodeURIComponent(aiSessionId)}`, { headers });
@@ -203,15 +224,33 @@ const forbiddenShellFixture = await fetch(`${baseURL}/api/adapters/ssh/fixture/s
 });
 if (forbiddenShellFixture.status !== 400) throw new Error("unsafe adapter fixture operation was not rejected");
 
+const artifactBytes = Buffer.from("content-addressed artifact fixture");
+const artifactUpload = await json("/api/artifacts/content/fixture-host/smoke-artifact.bin", {
+  method: "PUT", headers: { ...headers, "Content-Type": "application/octet-stream" }, body: artifactBytes,
+});
+if (artifactUpload.sha256 !== createHash("sha256").update(artifactBytes).digest("hex")) throw new Error("artifact digest mismatch");
+const artifactDownload = await fetch(`${baseURL}/api/Artifacts/Artifacts/fixture-host/smoke-artifact.bin`, { headers });
+if (!artifactDownload.ok || Buffer.compare(Buffer.from(await artifactDownload.arrayBuffer()), artifactBytes) !== 0) throw new Error("artifact content mismatch");
 const artifacts = await json("/api/Artifacts", { headers });
-if (!Array.isArray(artifacts)) throw new Error("artifact metadata contract mismatch");
+if (!artifacts.some(item => item.host === "fixture-host" && item.name === "smoke-artifact.bin")) throw new Error("artifact catalog mismatch");
 const license = await json("/api/License", {
   method: "PUT", headers, body: JSON.stringify({ email: "research@example.test", key: "fixture-license-key" }),
 });
 if (license.success !== false || license.key.includes("license")) throw new Error("license digest boundary mismatch");
+const updateBytes = Buffer.from("verified update package fixture");
+const updateDigest = createHash("sha256").update(updateBytes).digest("hex");
+const rejectedUpdate = await fetch(`${baseURL}/api/updates/packages/7.0.0.999`, {
+  method: "PUT", headers: { ...headers, "Content-Type": "application/octet-stream", "X-Content-SHA256": "0".repeat(64) }, body: updateBytes,
+});
+if (rejectedUpdate.status !== 400) throw new Error("update digest mismatch was not rejected");
+await json("/api/updates/packages/7.0.1.0", {
+  method: "PUT", headers: { ...headers, "Content-Type": "application/octet-stream", "X-Content-SHA256": updateDigest }, body: updateBytes,
+});
 await json("/api/Updates", { method: "POST", headers });
 const updateStatus = await json("/api/Updates/Updates/status", { headers });
-if (updateStatus.progress !== 100 || updateStatus.lastUpdateResult !== "NoUpdateAvailable") throw new Error("fixture update workflow mismatch");
+if (updateStatus.progress !== 100 || updateStatus.lastUpdateResult !== "UpdateAvailable") throw new Error("update catalog workflow mismatch");
+const updateDownload = await fetch(`${baseURL}/api/Updates/Updates/client`, { headers });
+if (!updateDownload.ok || updateDownload.headers.get("x-content-sha256") !== updateDigest || Buffer.compare(Buffer.from(await updateDownload.arrayBuffer()), updateBytes) !== 0) throw new Error("update package download mismatch");
 
 const pipelines = await json("/api/pipelines", { headers });
 const pipelineJob = await json(`/api/pipelines/${pipelines[0].id}/run`, {
@@ -237,6 +276,10 @@ if (!dispatched.some((task) => task.id === queuedTask.id && task.status === "dis
 await json(`/api/gateway/simulate/${simulator.id}/tasks/${queuedTask.id}/result`, {
   method: "POST", headers, body: JSON.stringify({ result: { echoed: "fixture-live-window" }, error: "" }),
 });
+const taskAudit = await json(`/api/events/latest?taskId=${encodeURIComponent(queuedTask.id)}`, { headers });
+if (!taskAudit.length || taskAudit.some((event) => event.message !== queuedTask.id)) throw new Error("task audit correlation filter mismatch");
+const invalidAuditFilter = await fetch(`${baseURL}/api/events/latest?taskId=${encodeURIComponent("../bad")}`, { headers });
+if (invalidAuditFilter.status !== 400) throw new Error("unsafe audit correlation filter was accepted");
 
 console.log(JSON.stringify({
   identity: identity.username,
@@ -259,7 +302,9 @@ console.log(JSON.stringify({
   networkHost: netHost.hostId,
   pipelineJob: completedJob.status,
   simulator: simulator.id,
+  enrollmentMetadataOnly: enrollmentMetadata.id,
   routeCoverage: "202/202",
+  capabilities: capabilities.length,
   blockedCapabilities: ["ssh-command", "phishing-delivery"],
 }));
 

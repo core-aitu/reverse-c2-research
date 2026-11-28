@@ -1,0 +1,50 @@
+{
+  "scope": "safe gateway v1 rejection corpus; not an observation of the legacy server",
+  "cases": [
+    {
+      "name": "not-gzip",
+      "base64": "bm90LWd6aXA=",
+      "expected": "malformed gateway frame: gzip"
+    },
+    {
+      "name": "truncated-gzip",
+      "derivation": "remove the final two bytes from any golden vector",
+      "expected": "malformed gateway frame: gzip body"
+    },
+    {
+      "name": "trailing-uncompressed-field",
+      "derivation": "append one byte inside the gzip member",
+      "expected": "malformed gateway frame: trailing bytes"
+    },
+    {
+      "name": "too-many-tasks",
+      "derivation": "set task count to 33",
+      "expected": "malformed gateway frame: too many tasks"
+    },
+    {
+      "name": "unknown-protocol-version",
+      "headers": { "X-Specter-Protocol-Version": "2" },
+      "expectedHttpStatus": 426
+    },
+    {
+      "name": "request-signature-tamper",
+      "derivation": "change route, sequence, nonce or body after HMAC-SHA256 signing",
+      "expectedHttpStatus": 401
+    },
+    {
+      "name": "timestamp-outside-clock-window",
+      "derivation": "set X-Specter-Timestamp more than five minutes from server time",
+      "expectedHttpStatus": 401
+    },
+    {
+      "name": "nonce-replay",
+      "derivation": "repeat an already accepted agent nonce",
+      "expectedHttpStatus": 409
+    },
+    {
+      "name": "tls-hostname-mismatch",
+      "derivation": "trust the issuing CA but connect with a hostname absent from the certificate SAN",
+      "expected": "permanent client-side TLS validation failure"
+    }
+  ]
+}

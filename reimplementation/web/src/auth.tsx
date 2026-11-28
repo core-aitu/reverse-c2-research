@@ -16,7 +16,7 @@ type AuthContextValue = {
   login: (username: string, password: string) => Promise<void>;
   logout: () => Promise<void>;
   request: <T>(path: string, init?: RequestInit) => Promise<T>;
-  download: (path: string) => Promise<Blob>;
+  download: (path: string, init?: RequestInit) => Promise<Blob>;
 };
 
 const AuthContext = createContext<AuthContextValue | null>(null);
@@ -103,10 +103,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   );
 
   const download = useCallback(
-    async (path: string) => {
+    async (path: string, init: RequestInit = {}) => {
       const perform = (accessToken: string) => fetch(path, {
+        ...init,
         credentials: "include",
-        headers: { Authorization: `Bearer ${accessToken}` },
+        headers: { ...init.headers, Authorization: `Bearer ${accessToken}` },
       });
       let response = await perform(token);
       if (response.status === 401) response = await perform(await refresh());

@@ -1,0 +1,12 @@
+{
+  "format": "specter-safe-gateway-v1",
+  "encoding": "gzip(.NET BinaryWriter-compatible little-endian fields)",
+  "vectors": {
+    "registration": "H4sIAAAAAAAE/2JPy6woKS1KZc/ILy7RNTBkjjAzUTAwNDI2MTUzt7BMTEpOSU1D53PnJCbppVYk5hbkpLL6ZOaVVrCUFqcWcevnF5ToJ6UmJufnaTFggi+MqAKMDAwMXxgZGBgWiJzZ4n3fAzAAh/M9N4wAAAA=",
+    "emptyCheckinResponse": "H4sIAAAAAAAE/wAUAOv/AQAAAAAAAAAAAAAAAAAAAAAAAAADAMugsmoUAAAA",
+    "multiTaskCheckinResponse": "H4sIAAAAAAAE/+JkgAAeMMnAwMTAwMDIwFaSWJyta8iWmZKaq2vIDZFiYElNzsjnZ2BgqFYqS8wpTVWyUsrPS1WqZfj3pG6r930PhlOzrMEKYQYYQQwwghmOxYCS8nwsBgAGAOZCCFyWAAAA",
+    "successResult": "H4sIAAAAAAAE/wAtANL/BnRhc2stMghzdWJtaXQtMQoAAAAAAAAAAQ8AAAB7InZhbHVlIjoidHdvIn0AAwDu2LAWLQAAAA=="
+  },
+  "identifiers": "fictional",
+  "containsSecrets": false
+}

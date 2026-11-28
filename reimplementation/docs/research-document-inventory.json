@@ -3,8 +3,8 @@
   "files": [
     {
       "path": "reimplementation/docs/adr/0001-safe-compatibility-boundary.md",
-      "bytes": 2655,
-      "sha256": "48dfc15d38f5bb8d7d0cb4cc5faeca9bc69ed6d2a44fb8484b7114a03bc4a256"
+      "bytes": 3155,
+      "sha256": "c7c71a675e2903e7cda5510e676b1e64f3bb287b1d501e325b41ee611e623a10"
     },
     {
       "path": "reimplementation/docs/adr/0001-security-compatibility.md",
@@ -13,8 +13,13 @@
     },
     {
       "path": "reimplementation/docs/adr/0002-execution-boundaries.md",
-      "bytes": 1911,
-      "sha256": "9007266a50980bcbfc25e77f37711630c777d89a3b5c25de8c67742fb81e9044"
+      "bytes": 2602,
+      "sha256": "bbd820a074ba30977d9669c5f4958408378e82fd43d953f1b17cde706e87c91c"
+    },
+    {
+      "path": "reimplementation/docs/adr/0003-full-compatibility-execution-plane.md",
+      "bytes": 7807,
+      "sha256": "aaecb7263316d814ca66ab51240e0122079b855b0d3fe5cbb2aba4c2f34301c2"
     },
     {
       "path": "research/reports/documentation-ui-semantics.md",

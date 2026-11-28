@@ -4,7 +4,6 @@ import (
 	"crypto/sha256"
 	"encoding/hex"
 	"errors"
-	"io"
 	"net/http"
 	"strconv"
 	"strings"
@@ -44,9 +43,10 @@ func (s *Server) catalogRoutes() {
 	s.mux.Handle("GET /api/PowerShellNotebooks/{notebookId}", s.protected(http.HandlerFunc(s.notebook)))
 	s.mux.Handle("PUT /api/PowerShellNotebooks/{notebookId}", s.requireRole("admin", http.HandlerFunc(s.updateNotebook)))
 	s.mux.Handle("DELETE /api/PowerShellNotebooks/{notebookId}", s.requireRole("admin", http.HandlerFunc(s.deleteNotebook)))
-	s.mux.Handle("POST /api/PowerShellNotebooks/{notebookId}/session", s.requireRole("admin", http.HandlerFunc(s.powerShellSessionUnavailable)))
-	s.mux.Handle("DELETE /api/PowerShellNotebooks/{notebookId}/session", s.requireRole("admin", http.HandlerFunc(s.powerShellSessionUnavailable)))
-	s.mux.Handle("POST /api/PowerShellNotebooks/{notebookId}/session/reset", s.requireRole("admin", http.HandlerFunc(s.powerShellSessionUnavailable)))
+	blockedNotebookSession := s.blockedCapability("notebook-powershell-session", "configure an isolated PowerShell worker")
+	s.mux.Handle("POST /api/PowerShellNotebooks/{notebookId}/session", s.requireRole("admin", blockedNotebookSession))
+	s.mux.Handle("DELETE /api/PowerShellNotebooks/{notebookId}/session", s.requireRole("admin", blockedNotebookSession))
+	s.mux.Handle("POST /api/PowerShellNotebooks/{notebookId}/session/reset", s.requireRole("admin", blockedNotebookSession))
 }
 
 func (s *Server) scripts(w http.ResponseWriter, r *http.Request) {
@@ -378,13 +378,6 @@ func (s *Server) deleteNotebook(w http.ResponseWriter, r *http.Request) {
 	}
 	s.audit(r.Context(), principal(r).Username, "NotebookDeleted", id, "notebook removed")
 	writeJSON(w, http.StatusOK, map[string]bool{"deleted": true})
-}
-
-func (s *Server) powerShellSessionUnavailable(w http.ResponseWriter, r *http.Request) {
-	// Session routes are preserved, but this management-plane process never
-	// starts an interpreter. A future isolated worker can implement this port.
-	_, _ = io.Copy(io.Discard, http.MaxBytesReader(w, r.Body, 64<<10))
-	writeError(w, http.StatusNotImplemented, "PowerShell sessions require an isolated worker and are not available in the management plane")
 }
 
 func pathInt64(w http.ResponseWriter, r *http.Request, name string) (int64, bool) {
